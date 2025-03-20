@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact - Pure Marketing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="contact-hero">
+    <nav class="main-nav">
+      <a href="contact.html">Contact</a>
+    </nav>
+    <img src="images/logo-small.png" alt="Company Logo" class="small-logo centered" />
+    <h1>Let's Get Growing Together</h1>
+  </header>
+  
+  <section class="contact-form-section">
+    <form id="contact-form">
+      <fieldset>
+        <legend>Service Focus</legend>
+        <div class="toggle-buttons">
+          <button type="button" class="toggle-btn" data-value="social-media">Social Media</button>
+          <button type="button" class="toggle-btn" data-value="seo">SEO</button>
+          <button type="button" class="toggle-btn" data-value="paid-ads">Paid Ads</button>
+        </div>
+      </fieldset>
+      
+      <fieldset>
+        <legend>Project Goals</legend>
+        <div class="toggle-buttons">
+          <button type="button" class="toggle-btn" data-value="brand-awareness">Brand Awareness</button>
+          <button type="button" class="toggle-btn" data-value="lead-generation">Lead Generation</button>
+          <button type="button" class="toggle-btn" data-value="conversion-optimization">Conversion Optimization</button>
+        </div>
+      </fieldset>
+      
+      <div class="form-group">
+        <label for="details">Project Details</label>
+        <textarea id="details" name="details" rows="4" placeholder="Tell us more about your project"></textarea>
+      </div>
+      
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required />
+      </div>
+      
+      <div class="form-group">
+        <label for="company">Company</label>
+        <input type="text" id="company" name="company" />
+      </div>
+      
+      <div class="form-group">
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone" />
+      </div>
+      
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      
+      <div class="form-group">
+        <label for="website">Website</label>
+        <input type="url" id="website" name="website" />
+      </div>
+      
+      <div class="form-group checkbox-group">
+        <input type="checkbox" id="updates" name="updates" />
+        <label for="updates">Opt-in for updates</label>
+      </div>
+      
+      <button type="submit" class="cta-button">I’m Ready!</button>
+    </form>
+  </section>
+  
+  <footer>
+    <p>Contact us: info@example.com | +1 234 567 890</p>
+  </footer>
+  
+  <script src="scripts.js"></script>
+</body>
+</html>
