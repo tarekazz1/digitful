@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const pageTitle = "Paid-Ads - Digitful";
+const pageDescription = "Reach Real Buyer with Digitful.";
+const pageCanonical = "https://digitful.ca/paid-ads/";
+---
+<BaseLayout title={pageTitle} description={pageDescription} canonicalUrl={pageCanonical}>
+    <main>
+        <section class="service-hero">
+          <h1>
+            <span class="material-symbols-outlined ads-icon large-icon">ads_click</span>
+            Paid Ads
+          </h1>
+          <p>Reach the Right People, Instantly.</p>
+        </section>
+    
+        <!-- Additional Paid Ads content can go here -->
+        <section class="service-info">
+          <h2>You've run ads. You're still not sure what they're doing.</h2>
+          <ul>
+            <li>Clicks are up. Conversions? Not so much.</li>
+            <li>Your leads are random—or totally unqualified.</li>
+            <li>You're spending more, but not seeing results.</li>
+          </ul>
+    
+          <p><em>We get it. Most ads are just expensive noise.</em></p>
+    
+          <p>We build campaigns that target real buyers, not just clickers. Clear messaging, precise targeting, and conversion-focused landing pages that actually work.</p>
+    
+          <p><strong>No chaos. No guesswork.</strong> Just the right message, to the right people, at the right moment.</p>
+    
+          <div class="cta-wrapper">
+            <a href="contact.html?service=paid-ads" class="btn btn-cta btn-center">Let's Talk Paid Ads</a>
+          </div>
+        </section>
+    </main>
+</BaseLayout>

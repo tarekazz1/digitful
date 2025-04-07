@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const pageTitle = "Thanks - Digitful";
+const pageDescription = "Thank you for contacting Digitful. We will get back to you soon.";
+const pageCanonical = "https://digitful.ca/thank-you/";
+---
+<BaseLayout title={pageTitle} description={pageDescription} canonicalUrl={pageCanonical}>
+    <main>
+        <section class="service-hero">
+          <h1>
+            <span class="material-symbols-outlined social-icon large-icon">share</span>
+            Social Media
+          </h1>
+          <p>Engage. Grow. Convert.</p>
+        </section>
+    
+        <!-- Additional Social Media content can go here -->
+        <section class="service-info">
+          <h2>You've been posting. Still not sure it's doing anything.</h2>
+    
+          <ul>
+            <li>Engagement looks fine—but sales haven't moved.</li>
+            <li>You're creating content, but it feels random.</li>
+            <li>You're spending time on platforms that don't convert.</li>
+          </ul>
+    
+          <p><em>We hear you. Most social media is just noise.</em></p>
+    
+          <p>We build social strategies that actually drive business: clear messaging, targeted content, and conversion-focused campaigns that turn followers into customers.</p>
+    
+          <p><strong>Show up with purpose.</strong> Build a brand people remember—and want to buy from.</p>
+    
+          <div class="cta-wrapper">
+            <a href="contact.html?service=social-media" class="btn btn-cta btn-center">Let's Talk Social Media</a>
+          </div>
+        </section>
+    </main>
+</BaseLayout>

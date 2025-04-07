@@ -1,0 +1,50 @@
+---
+// src/components/Header.astro
+import logoImage from '../assets/images/logo-small.webp';
+---
+<header class="site-header">
+  <div class="container">
+    <a href="/" class="site-logo"> {/* Changed href to root "/" */}
+      {/* Use imported image object */}
+      <img
+        src={logoImage.src}
+        alt="Digitful Logo"
+        width={logoImage.width}
+        height={logoImage.height}
+      />
+    </a>
+    {/* Empty desktop nav - consider removing if unused */}
+    <nav class="main-nav" role="navigation">
+    </nav>
+
+    {/* Hamburger Button */}
+    <button class="hamburger" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    {/* Mobile Nav Panel */}
+    <nav class="mobile-nav" id="mobileNav">
+      <ul class="nav-group">
+        <li><a href="/">Home</a></li> {/* Changed href to root "/" */}
+      </ul>
+
+      <hr class="nav-separator" />
+
+      <ul class="nav-group">
+        {/* Update hrefs to point to directory paths */}
+        <li><a href="/social-media/">Social Media</a></li>
+        <li><a href="/seo/">SEO</a></li>
+        <li><a href="/paid-ads/">Paid Ads</a></li>
+        <li><a href="/automation/">Automation</a></li>
+      </ul>
+
+      <hr class="nav-separator" />
+
+      <ul class="nav-group">
+        <li><a href="/contact/">Contact Us</a></li> {/* Changed href */}
+      </ul>
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,75 @@
+---
+// Import the components you created in Step 1
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../assets/styles.css';
+
+// Define props this layout can accept from pages using it
+// We'll start with a title, description, and canonical URL
+export interface Props {
+    title: string;
+    description: string;
+    canonicalUrl?: string; // Optional: add if needed per page
+}
+
+// Get the props passed in from the page (or set defaults)
+const {
+    title = 'Digitful - Real Growth', // Default title
+    description = 'Digitful delivers real growth with innovative digital strategies.', // Default description
+    canonicalUrl = Astro.url.href // Default canonical URL to the current page URL
+} = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {/* Use the props for dynamic meta tags */}
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+    <title>{title}</title> {/* Use the title prop */}
+
+    {/* Favicon (Example - adjust path if needed) */}
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    {/* Google Fonts */}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    {/* Font Awesome */}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    {/* Google Material Symbols (if used on multiple pages) */}
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+    {/* Link to your main CSS file - IMPORTANT: Path might change in Step 4 */}
+    {/* Assuming styles.css will be moved to src/assets/styles.css */}
+
+</head>
+<body>
+    {/* Particles.js container */}
+    <div id="particles-js"></div>
+
+    {/* Use the Header component */}
+    <Header />
+
+    {/* This is where unique page content will be inserted */}
+    <slot />
+
+    {/* Use the Footer component */}
+    <Footer />
+
+    {/* Include the JavaScript files */}
+    {/* Use is:inline for scripts that need immediate access to the DOM */}
+    {/* or manipulate elements created by Astro components */}
+
+    {/* Particles JS from CDN */}
+    <script is:inline src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    {/* Your custom script - IMPORTANT: Path might change in Step 4 */}
+    {/* Assuming scripts.js will be moved to src/assets/scripts.js */}
+    <script is:inline src="/scripts.js"></script>
+</body>
+</html>

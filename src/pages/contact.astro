@@ -1,0 +1,83 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const pageTitle = "Contact - Digitful";
+const pageDescription = "Contact Digitful for tailored digital solutions in Social Media, SEO, Paid Ads, and Automation.";
+const pageCanonical = "https://digitful.ca/contact/";
+---
+<BaseLayout title={pageTitle} description={pageDescription} canonicalUrl={pageCanonical}>
+    {/* === PASTE YOUR COPIED <main>...</main> HERE === */}
+    <main>
+        <section class="contact-hero">
+          <h1>Let's make this make sense!</h1>
+        </section>
+    
+        <section class="contact-form-section">
+          <form id="contact-form" action="https://formsubmit.co/73c5ec076cc55c4aefd536c5f88c3526" method="POST">
+            <input type="hidden" name="_next" value="https://digitful.ca/thank-you.html">
+            <input type="hidden" name="_subject" value="New submission!">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="help_with" id="help_with">
+            <input type="hidden" name="goals" id="goals">
+            <fieldset>
+              <legend>What do you need help with?</legend>
+              <small class="form-hint">(Pick one or more)</small>
+              <div class="toggle-buttons">
+                <button type="button" class="toggle-btn" data-value="social-media" aria-pressed="false">Social Media</button>
+                <button type="button" class="toggle-btn" data-value="seo" aria-pressed="false">SEO</button>
+                <button type="button" class="toggle-btn" data-value="paid-ads" aria-pressed="false">Paid Ads</button>
+                <button type="button" class="toggle-btn" data-value="automation" aria-pressed="false">Automation</button>
+              </div>
+            </fieldset>
+    
+            <fieldset>
+              <legend>What are you trying to improve?</legend>
+              <small class="form-hint">(Select anything that applies)</small>
+              <div class="toggle-buttons">
+                <button type="button" class="toggle-btn" data-value="awareness" aria-pressed="false">More Visibility</button>
+                <button type="button" class="toggle-btn" data-value="leads" aria-pressed="false">Better Leads</button>
+                <button type="button" class="toggle-btn" data-value="conversion" aria-pressed="false">More Conversions</button>
+                <button type="button" class="toggle-btn" data-value="workflow" aria-pressed="false">Less Manual Work</button>
+                <button type="button" class="toggle-btn" data-value="scaling" aria-pressed="false">Easier Scaling</button>
+              </div>
+            </fieldset>
+    
+            <div class="form-group">
+              <label for="details">Not sure what you need? That's okay.</label>
+              <textarea id="details" name="details" rows="4" placeholder="Tell us what's going on. We'll take it from there."></textarea>
+            </div>
+    
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+    
+            <div class="form-group">
+              <label for="company">Company</label>
+              <input type="text" id="company" name="company" />
+            </div>
+    
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+    
+            <div class="form-group checkbox-group">
+              <label>
+                <input type="checkbox" name="updates" />
+                Send me occasional updates—no spam.
+              </label>
+            </div>
+    
+            <p class="privacy-note">We'll never share your info. No spam. No shady stuff.</p>
+    
+            <button type="submit" class="btn btn-cta btn-block">Let's Talk</button>
+    
+            <p id="form-confirmation">
+              Thanks for reaching out. We'll get back to you within 1–2 business days.
+            </p>
+          </form>
+        </section>
+    </main>
+    {/* === END OF PASTED CONTENT === */}
+</BaseLayout>

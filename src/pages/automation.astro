@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const pageTitle = "Process Automation - Digitful";
+const pageDescription = "Process Automation services by Digitful. Work less, do more.";
+const pageCanonical = "https://digitful.ca/automation/";
+---
+<BaseLayout title={pageTitle} description={pageDescription} canonicalUrl={pageCanonical}>
+    {/* === PASTE YOUR COPIED <main>...</main> HERE === */}
+    <main>
+        <section class="service-hero">
+          <h1>
+            <span class="material-symbols-outlined automation-icon large-icon">settings</span>
+            Process Automation
+          </h1>
+          <p>Work Less, Do More.</p>
+        </section>
+    
+        <!-- Additional Process Automation content can go here -->
+        <section class="service-info">
+          <h2>You've got tools—but nothing's talking to each other.</h2>
+    
+          <ul>
+            <li>Leads come in—but no one's following up fast enough.</li>
+            <li>Your team is doing repetitive tasks that waste their talent.</li>
+            <li>You're using 10 tools that don't connect to each other.</li>
+          </ul>
+    
+          <p><em>We get it. Most workflows are just digital chaos.</em></p>
+    
+          <p>We build automation that actually works: seamless connections between your tools, workflows that make sense, and systems that scale with your business.</p>
+    
+          <p><strong>Less busywork. More brainpower.</strong> That's how teams grow faster—with less chaos.</p>
+    
+          <div class="cta-wrapper">
+            <a href="contact.html?service=automation" class="btn btn-cta btn-center">Let's Automate</a>
+          </div>
+        </section>
+    </main>
+    {/* === END OF PASTED CONTENT === */}
+</BaseLayout>

@@ -1,11 +1,76 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+// Import the BaseLayout component
+import BaseLayout from '../layouts/BaseLayout.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+// You can define page-specific variables here if needed later
+const pageTitle = "Digitful - Real Growth"; // Specific title for this page
+const pageDescription = "Digitful delivers real growth with innovative digital strategies."; // Specific description
+const pageCanonical = "https://digitful.ca/"; // Specific canonical URL
 ---
-
-<Layout>
-	<Welcome />
-</Layout>
+<BaseLayout title={pageTitle} description={pageDescription} canonicalUrl={pageCanonical}>
+    {/* === PASTE YOUR COPIED <main>...</main> HERE === */}
+	<main>
+		<section class="hero">
+		  <h1>Pure Marketing, Real Growth</h1>
+		  <h2 id="typewriter" class="subheadline">You've tried the Hacks. Guesswork ends here.</h2>
+		  <a href="#services" class="btn btn-cta btn-center btn-fit-width">See What's Possible</a>
+		</section>
+		<section class="about-us">
+		  <div class="overlay"></div>
+		  <div class="content">
+			<h2>About Us</h2>
+			<p class="about-intro">We don't outsource growth. We build it with you.</p>
+	
+			<div class="values">
+			  <div class="value-item">
+				<h3>Embedded</h3>
+				<p>We work inside your systems — not around them.</p>
+			  </div>
+			  <div class="value-item">
+				<h3>Direct</h3>
+				<p>We'll call what's not working. No ego, no delay.</p>
+			  </div>
+			  <div class="value-item">
+				<h3>Focused</h3>
+				<p>We don't do everything. We do what works.</p>
+			  </div>
+			</div>
+		  </div>
+		</section>
+	
+		<section id="services" class="services">
+		  <h2>Our Services</h2>
+		  <div class="service-cards">
+			<a href="social-media.html" class="card">
+			  <h3>
+				<span class="material-symbols-outlined social-icon">share</span>
+				Social Media
+			  </h3>
+			  <p>Stop posting. Start building.</p>
+			</a>
+			<a href="seo.html" class="card">
+			  <h3>
+				<span class="material-symbols-outlined seo-icon">trending_up</span>
+				SEO
+			  </h3>
+			  <p>Traffic’s not your problem. Relevance is.</p>
+			</a>
+			<a href="paid-ads.html" class="card">
+			  <h3>
+				<span class="material-symbols-outlined ads-icon">ads_click</span>
+				Paid Ads
+			  </h3>
+			  <p>Reach real buyers, not scroll zombies.</p>
+			</a>
+			<a href="automation.html" class="card">
+			  <h3>
+				<span class="material-symbols-outlined automation-icon">settings</span>
+				Process Automation
+			  </h3>
+			  <p>Automate the drag. Keep your edge.</p>
+			</a>
+		  </div>
+		</section>
+	  </main>
+    {/* === END OF PASTED CONTENT === */}
+</BaseLayout>

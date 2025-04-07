@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const pageTitle = "SEO Services - Digitful";
+const pageDescription = "Boost your search visibility with the most Digitful SEO.";
+const pageCanonical = "https://digitful.ca/seo/";
+---
+<BaseLayout title={pageTitle} description={pageDescription} canonicalUrl={pageCanonical}>
+    {/* === PASTE YOUR COPIED <main>...</main> HERE === */}
+    <main>
+        <section class="service-hero">
+          <h1>
+            <span class="material-symbols-outlined seo-icon large-icon">trending_up</span>
+            SEO
+          </h1>
+          <p>Get Found, Get Clicks, Get Customers.</p>
+        </section>
+    
+        <!-- Additional SEO content can go here -->
+        <section class="service-info">
+          <h2>You've done the SEO thing. Still waiting for it to pay off.</h2>
+    
+          <ul>
+            <li>You're ranking—but for stuff no one searches.</li>
+            <li>You're getting traffic, but not the right kind.</li>
+            <li>Your reports look good, but the inbox stays quiet.</li>
+          </ul>
+    
+          <p><em>Yeah, we've seen this before.</em></p>
+    
+          <p>Most SEO is just busywork. We focus on the 20% that actually drives business: clear site structure, content that answers real questions, and technical fixes that actually matter.</p>
+    
+          <p><strong>SEO isn't magic.</strong> It's structure, clarity, and compounding impact. Let's clean it up—and make it work.</p>
+    
+          <div class="cta-wrapper">
+            <a href="contact.html?service=seo" class="btn btn-cta btn-center">Let's Talk SEO</a>
+          </div>
+        </section>
+    </main>
+    {/* === END OF PASTED CONTENT === */}
+</BaseLayout>
