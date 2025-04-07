@@ -26,7 +26,7 @@ jobs:
           node-version: '20'
           cache: 'npm' # Use 'yarn' or 'pnpm' if you used those locally
       - name: Install dependencies
-        # Make sure this matches the command you use in IDX if different
+        # Make sure this matches the command u use in IDX if different
         run: npm install
       - name: Build your site
         # Make sure this matches the command you use in IDX if different
