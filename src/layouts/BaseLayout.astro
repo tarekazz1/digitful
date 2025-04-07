@@ -30,8 +30,18 @@ const {
     <link rel="canonical" href={canonicalUrl} />
     <title>{title}</title> {/* Use the title prop */}
 
-    {/* Favicon (Example - adjust path if needed) */}
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    {/* Basic Favicon */}
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    {/* Different size PNG favicons (optional but good practice) */}
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+    {/* Apple Touch Icon (for iOS home screen) */}
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"> {/* Adjust size if your file is different */}
+
+    {/* Link to Web App Manifest */}
+    <link rel="manifest" href="/site.webmanifest">
 
     {/* Google Fonts */}
     <link rel="preconnect" href="https://fonts.googleapis.com">
