@@ -5,30 +5,46 @@ import Footer from '../components/Footer.astro';
 import '../assets/styles.css';
 
 // Define props this layout can accept from pages using it
-// We'll start with a title, description, and canonical URL
 export interface Props {
     title: string;
     description: string;
-    canonicalUrl?: string; // Optional: add if needed per page
+    canonicalUrl?: string;
+    enableAnalytics?: boolean;
 }
 
 // Get the props passed in from the page (or set defaults)
 const {
-    title = 'Digitful - Real Growth', // Default title
-    description = 'Digitful delivers real growth with innovative digital strategies.', // Default description
-    canonicalUrl = Astro.url.href // Default canonical URL to the current page URL
+    title = 'Digitful - Real Growth',
+    description = 'Digitful delivers real growth with innovative digital strategies.',
+    canonicalUrl = Astro.url.href,
+    enableAnalytics = true
 } = Astro.props;
+
+// Real GTM ID as provided
+const GTM_ID = 'GTM-53THDCJH';
 ---
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {/* Google Tag Manager */}
+    {enableAnalytics && (
+      <script is:inline>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-53THDCJH');
+      </script>
+    )}
+    {/* End Google Tag Manager */}
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     {/* Use the props for dynamic meta tags */}
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalUrl} />
-    <title>{title}</title> {/* Use the title prop */}
+    <title>{title}</title>
 
     {/* Basic Favicon */}
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -59,6 +75,15 @@ const {
 
 </head>
 <body>
+    {/* Google Tag Manager (noscript) */}
+    {enableAnalytics && (
+      <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-53THDCJH"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe>
+      </noscript>
+    )}
+    {/* End Google Tag Manager (noscript) */}
+
     {/* Particles.js container */}
     <div id="particles-js"></div>
 
@@ -72,14 +97,7 @@ const {
     <Footer />
 
     {/* Include the JavaScript files */}
-    {/* Use is:inline for scripts that need immediate access to the DOM */}
-    {/* or manipulate elements created by Astro components */}
-
-    {/* Particles JS from CDN */}
     <script is:inline src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
-    {/* Your custom script - IMPORTANT: Path might change in Step 4 */}
-    {/* Assuming scripts.js will be moved to src/assets/scripts.js */}
     <script is:inline src="/scripts.js"></script>
 </body>
 </html>
