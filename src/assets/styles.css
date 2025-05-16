@@ -11,8 +11,9 @@
   --light-purple-overlay: rgba(101, 59, 156, 0.2);
   --taproot-light: #d5a90a;       /* Gold/yellow accent color - light variant */
   --taproot-dark: #9d7c05;        /* Gold/yellow accent color - dark variant */
-  --font-mono: 'Courier Prime', monospace;
-  --header-height: 60px;          /* Fixed header height for consistent spacing */
+  --font-headers: 'IBM Plex Sans', 'Segoe UI', Arial, sans-serif;
+  --font-body: 'IBM Plex Sans', 'Segoe UI', Arial, sans-serif;
+  --header-height: 60px;          /* Increased from 60px */
   --container-max-width: 1200px;  /* Standard container width */
   --card-text-color: #ffffff;      /* Brighter text for cards */
 }
@@ -21,7 +22,7 @@
    GLOBAL STYLES
    ====================================== */
 body {
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
   margin: 0;
   padding: 0;
   background-color: var(--background-color);
@@ -34,6 +35,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   font-weight: 700;
+  font-family: var(--font-headers);
 }
 
 /* Consistent section spacing */
@@ -52,7 +54,7 @@ a:hover, a:focus {
 }
 
 .mono {
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
 }
 
 /* Container for consistent layout */
@@ -94,11 +96,25 @@ main {
 .site-logo {
   display: flex;
   align-items: center;
+  background-color: var(--background-color);
 }
 
+/* Desktop logo size */
+.site-logo svg,
 .site-logo img {
-  height: 40px;
+  height: 60px;
   width: auto;
+  min-height: 60px;
+  min-width: 150px;
+}
+
+/* Mobile logo adjustments */
+@media (max-width: 600px) {
+  .site-logo img {
+    max-width: 105px;
+    height: auto;
+    min-height: 30px;
+  }
 }
 
 /* Main Navigation - Using BEM naming convention */
@@ -113,7 +129,7 @@ main {
 .hamburger {
   display: flex;
   position: absolute;
-  top: 18px;
+  top: 17px;  /* Adjusted to center in taller header */
   right: 20px;
   flex-direction: column;
   gap: 6px;
@@ -217,6 +233,25 @@ main {
   text-align: center;
   padding-left: 20px;
   padding-right: 20px;
+  position: relative; /* Add position relative for overlay positioning */
+}
+
+/* Add overlay for service hero sections */
+.service-hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--secondary-light); /* secondary-light with opacity */
+  z-index: 0;
+}
+
+/* Position content above overlay */
+.service-hero h1,
+.service-hero p {
+  position: relative;
+  z-index: 1;
 }
 
 .service-hero h1 {
@@ -290,7 +325,7 @@ main {
 .about-intro {
   font-size: 1.5rem;
   margin-bottom: 40px;
-  font-family: var(--font-mono);
+  font-family: var(--font-body);  /* Change from var(--font-headers) */
 }
 
 .values {
@@ -796,6 +831,11 @@ img {
   }
 
   /* Logo Adjustment for Mobile */
+  .site-logo {
+    min-width: 140px;
+    min-height: 40px;
+  }
+
   .site-logo img {
     max-width: 140px;
     height: auto;
