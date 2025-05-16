@@ -54,7 +54,7 @@ function initToggleButtons() {
       targetButton.setAttribute('aria-pressed', 'true');
     }
   }
-  
+
   // Add form submission handler to collect toggle button values
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
@@ -62,11 +62,11 @@ function initToggleButtons() {
       // Get all selected help_with buttons
       const helpWithButtons = document.querySelectorAll('fieldset:first-of-type .toggle-btn.selected');
       const helpWithValues = Array.from(helpWithButtons).map(btn => btn.dataset.value).join(', ');
-      
+
       // Get all selected goals buttons
       const goalsButtons = document.querySelectorAll('fieldset:nth-of-type(2) .toggle-btn.selected');
       const goalsValues = Array.from(goalsButtons).map(btn => btn.dataset.value).join(', ');
-      
+
       // Set the hidden input values
       document.getElementById('help_with').value = helpWithValues;
       document.getElementById('goals').value = goalsValues;
@@ -141,6 +141,39 @@ function initParticles() {
 }
 
 /**
+ * Initialize mobile navigation
+ */
+function initMobileNav() {
+  const hamburger = document.querySelector('.hamburger');
+  const mobileNav = document.getElementById('mobileNav');
+
+  if (hamburger && mobileNav) {
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      mobileNav.classList.toggle('active');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (
+        !hamburger.contains(e.target) &&
+        !mobileNav.contains(e.target) &&
+        mobileNav.classList.contains('active')
+      ) {
+        hamburger.classList.remove('active');
+        mobileNav.classList.remove('active');
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        hamburger.classList.remove('active');
+        mobileNav.classList.remove('active');
+      }
+    });
+  }
+}
+
+/**
  * Main initialization function
  * This is the entry point for all JavaScript functionality.
  * It ensures that all components are initialized after the DOM is fully loaded.
@@ -150,35 +183,7 @@ document.addEventListener('DOMContentLoaded', function() {
   initTypewriter();  // Initialize typewriter effect on the homepage
   initToggleButtons(); // Initialize toggle buttons on the contact form
   initParticles();   // Initialize particles.js background effect
+  initMobileNav();   // Initialize mobile navigation
 });
-
-// Mobile nav toggle
-const hamburger = document.querySelector('.hamburger');
-const mobileNav = document.getElementById('mobileNav');
-
-if (hamburger && mobileNav) {
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    mobileNav.classList.toggle('active');
-  });
-
-  document.addEventListener('click', (e) => {
-    if (
-      !hamburger.contains(e.target) &&
-      !mobileNav.contains(e.target) &&
-      mobileNav.classList.contains('active')
-    ) {
-      hamburger.classList.remove('active');
-      mobileNav.classList.remove('active');
-    }
-  });
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      hamburger.classList.remove('active');
-      mobileNav.classList.remove('active');
-    }
-  });
-}
 
 

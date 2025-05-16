@@ -1,39 +1,40 @@
 ---
 // src/components/Header.astro
-import logoImage from '../assets/images/logo-small.webp';
+import logoSvg from '../assets/images/logo.svg';
 ---
+
 <header class="site-header">
   <div class="container">
-    <a href="/" class="site-logo"> {/* Changed href to root "/" */}
-      {/* Use imported image object */}
+    <a href="/" class="site-logo">
       <img
-        src={logoImage.src}
+        src={logoSvg.src}
         alt="Digitful Logo"
-        width={logoImage.width}
-        height={logoImage.height}
+        width="150"
+        height="60"
       />
     </a>
-    {/* Empty desktop nav - consider removing if unused */}
+
+    <!-- Main Navigation (Desktop) - Currently empty but preserved for future desktop menu implementation -->
     <nav class="main-nav" role="navigation">
+      <!-- Desktop navigation items will go here -->
     </nav>
 
-    {/* Hamburger Button */}
-    <button class="hamburger" aria-label="Toggle menu">
+    <!-- Hamburger Button -->
+    <button class="hamburger" aria-label="Toggle menu" id="menuToggle">
       <span></span>
       <span></span>
       <span></span>
     </button>
 
-    {/* Mobile Nav Panel */}
+    <!-- Mobile Nav Panel -->
     <nav class="mobile-nav" id="mobileNav">
       <ul class="nav-group">
-        <li><a href="/">Home</a></li> {/* Changed href to root "/" */}
+        <li><a href="/">Home</a></li>
       </ul>
 
       <hr class="nav-separator" />
 
       <ul class="nav-group">
-        {/* Update hrefs to point to directory paths */}
         <li><a href="/social-media/">Social Media</a></li>
         <li><a href="/seo/">SEO</a></li>
         <li><a href="/paid-ads/">Paid Ads</a></li>
@@ -43,8 +44,10 @@ import logoImage from '../assets/images/logo-small.webp';
       <hr class="nav-separator" />
 
       <ul class="nav-group">
-        <li><a href="/contact/">Contact Us</a></li> {/* Changed href */}
+        <li><a href="/contact/">Contact Us</a></li>
       </ul>
     </nav>
   </div>
 </header>
+
+
