@@ -1,14 +1,63 @@
-<footer class="site-footer">
-    <div class="container">
-      <p>
-        Contact us:
-        <a href="mailto:ping@digitful.ca">ping@digitful.ca</a> |
-        <a href="tel:+15797797779">+1 579 779 7779</a>
-      </p>
-      <div class="social-icons">
-        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-dark py-5 mt-5">
+  <div class="container">
+    <div class="row g-4 align-items-start">
+      <div class="col-lg-4">
+        <img src="/assets/images/logo.svg" alt="Digitful Logo" height="40" class="mb-3">
+        <p class="text-light mb-3">Pure Marketing, Real Growth</p>
+        <div class="d-flex gap-3">
+          <a href="https://twitter.com/digitful" class="link-light text-decoration-none" aria-label="Twitter">
+            <i class="bi bi-twitter fs-5"></i>
+          </a>
+          <a href="https://linkedin.com/company/digitful" class="link-light text-decoration-none" aria-label="LinkedIn">
+            <i class="bi bi-linkedin fs-5"></i>
+          </a>
+          <a href="https://instagram.com/digitful" class="link-light text-decoration-none" aria-label="Instagram">
+            <i class="bi bi-instagram fs-5"></i>
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-4 col-6">
+        <h5 class="fs-6 text-light mb-3">Services</h5>
+        <ul class="list-unstyled mb-0">
+          <li><a href="/social-media/" class="link-light text-decoration-none">Social Media</a></li>
+          <li><a href="/seo/" class="link-light text-decoration-none">SEO</a></li>
+          <li><a href="/paid-ads/" class="link-light text-decoration-none">Paid Ads</a></li>
+          <li><a href="/automation/" class="link-light text-decoration-none">Automation</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-2 col-md-4 col-6">
+        <h5 class="fs-6 text-light mb-3">Company</h5>
+        <ul class="list-unstyled mb-0">
+          <li><a href="/about/" class="link-light text-decoration-none">About</a></li>
+          <li><a href="/contact/" class="link-light text-decoration-none">Contact</a></li>
+          <li><a href="/privacy/" class="link-light text-decoration-none">Privacy</a></li>
+          <li><a href="/terms/" class="link-light text-decoration-none">Terms</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4 col-md-4">
+        <h5 class="fs-6 text-light mb-3">Stay Updated</h5>
+        <p class="text-light mb-3">Get the latest marketing insights delivered to your inbox.</p>
+        <form>
+          <div class="input-group">
+            <input type="email" class="form-control bg-dark text-light" placeholder="Your email" aria-label="Email" aria-describedby="subscribe-btn">
+            <button class="btn btn-primary" type="submit" id="subscribe-btn">Subscribe</button>
+          </div>
+        </form>
       </div>
     </div>
+    <hr class="mt-4 mb-3 border-secondary">
+    <div class="row align-items-center">
+      <div class="col-md-6 text-center text-md-start">
+        <p class="text-light mb-0">&copy; {currentYear} Digitful. All rights reserved.</p>
+      </div>
+      <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+        <a href="/privacy/" class="link-light text-decoration-none me-3">Privacy Policy</a>
+        <a href="/terms/" class="link-light text-decoration-none">Terms of Service</a>
+      </div>
+    </div>
+  </div>
   </footer>

@@ -1,0 +1,17 @@
+// Entry point for custom Bootstrap build
+
+ // 1. Load Bootstrap functions
+ @import "bootstrap/scss/functions";
+ 
+ // 2. Load Bootstrap variables & mixins
+ @import "bootstrap/scss/variables";
+ @import "bootstrap/scss/mixins";
+ 
+ // 3. Override default variables (merge spacer utilities, theme colors, etc.)
+ @import "./_custom-variables";
+ 
+ // 4. Generate Bootstrap core (components, utilities)
+ @import "bootstrap/scss/bootstrap";
+
+// 5. Include additional custom CSS overrides
+@import "./_custom-overrides";

@@ -185,5 +185,3 @@ document.addEventListener('DOMContentLoaded', function() {
   initParticles();   // Initialize particles.js background effect
   initMobileNav();   // Initialize mobile navigation
 });
-
-

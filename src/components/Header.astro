@@ -1,53 +1,39 @@
 ---
-// src/components/Header.astro
-import logoSvg from '../assets/images/logo.svg';
+// Header component with Bootstrap navbar
 ---
 
-<header class="site-header">
-  <div class="container">
-    <a href="/" class="site-logo">
-      <img
-        src={logoSvg.src}
-        alt="Digitful Logo"
-        width="150"
-        height="60"
-      />
-    </a>
-
-    <!-- Main Navigation (Desktop) - Currently empty but preserved for future desktop menu implementation -->
-    <nav class="main-nav" role="navigation">
-      <!-- Desktop navigation items will go here -->
-    </nav>
-
-    <!-- Hamburger Button -->
-    <button class="hamburger" aria-label="Toggle menu" id="menuToggle">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
-    <!-- Mobile Nav Panel -->
-    <nav class="mobile-nav" id="mobileNav">
-      <ul class="nav-group">
-        <li><a href="/">Home</a></li>
-      </ul>
-
-      <hr class="nav-separator" />
-
-      <ul class="nav-group">
-        <li><a href="/social-media/">Social Media</a></li>
-        <li><a href="/seo/">SEO</a></li>
-        <li><a href="/paid-ads/">Paid Ads</a></li>
-        <li><a href="/automation/">Automation</a></li>
-      </ul>
-
-      <hr class="nav-separator" />
-
-      <ul class="nav-group">
-        <li><a href="/contact/">Contact Us</a></li>
-      </ul>
-    </nav>
-  </div>
+<header class="sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+<a class="navbar-brand" href="/">
+<img src="/assets/images/logo.svg" alt="Digitful Logo" height="50">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarMain">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="/about/">About</a>
+          </li>
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Services
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="servicesDropdown">
+              <li><a class="dropdown-item" href="/social-media/">Social Media</a></li>
+              <li><a class="dropdown-item" href="/seo/">SEO</a></li>
+              <li><a class="dropdown-item" href="/paid-ads/">Paid Ads</a></li>
+              <li><a class="dropdown-item" href="/automation/">Process Automation</a></li>
+            </ul>
+          </li>
+          
+          <li class="nav-item">
+<a class="btn btn-primary ms-lg-3 px-4" href="/contact/">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 </header>
-
-
