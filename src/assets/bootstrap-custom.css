@@ -1,0 +1,156 @@
+:root {
+  --bs-primary: #0d6efd;
+  --bs-secondary: #2a2d45;
+  --bs-success: #28a745;
+  --bs-info: #0dcaf0;
+  --bs-warning: #ffc107;
+  --bs-danger: #dc3545;
+  --bs-light: #f8f9fa;
+  --bs-dark: #1a1d2e;
+  --bs-indigo: #6610f2;
+
+  --bs-body-bg: var(--bs-dark);
+  --bs-body-color: #ffffff;
+  --bs-border-color: rgba(255, 255, 255, 0.1);
+  --bs-link-color: var(--bs-primary);
+  --bs-link-hover-color: #0f8a9d;
+
+  --bs-font-sans-serif: 'Inter', system-ui, -apple-system, sans-serif;
+  --bs-body-font-family: var(--bs-font-sans-serif);
+  --bs-body-font-size: 1rem;
+  --bs-body-font-weight: 400;
+  --bs-body-line-height: 1.5;
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  }
+
+  --bs-spacer: 1rem;
+  --bs-section-spacing: 5rem;
+
+  --background-color: #1a1d2e;
+  --primary-cyan: #17a2b8;
+  --cta-hover: #653b9c33;
+  --secondary-dark: #2a2d45;
+  --secondary-light: rgba(255, 193, 7, 0.3);
+  --text-color: #ffffff;
+  --light-purple-overlay: rgba(101, 59, 156, 0.2);
+  --taproot-light: #d5a90a;
+  --taproot-dark: #9d7c05;
+  --header-height: 60px;
+  --container-max-width: 1200px;
+}
+
+/* Custom utility classes */
+
+.section-spacing {
+  padding-top: var(--bs-section-spacing);
+  padding-bottom: var(--bs-section-spacing);
+}
+
+/* Particles background */
+.particles-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* Button styles */
+.btn-primary {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background-color: var(--bs-primary);
+  border-color: var(--cta-hover);
+}
+
+.btn-primary:hover {
+  background-color: var(--cta-hover);
+  border-color: var(--bs-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-outline-light {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.btn-outline-light:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.toggle-btn.selected {
+  background-color: var(--bs-primary);
+  color: var(--bs-white);
+  border-color: var(--bs-primary);
+}
+
+/* Card customization */
+.card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Form styling */
+.form-control, .form-select {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+.form-control:focus, .form-select:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: var(--bs-primary);
+  color: #fff;
+  box-shadow: 0 0 0 0.25rem rgba(23, 162, 184, 0.25);
+}
+
+/* Form elements grouping */
+fieldset {
+  border: 1px solid #444;
+  border-radius: 4px;
+  padding: 20px;
+  margin-bottom: 30px;
+  background-color: rgba(42, 45, 69, 0.5);
+}
+legend {
+  padding: 0 10px;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Typewriter effect */
+#typewriter {
+  min-height: 2.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+  :root {
+    --bs-body-font-size: 0.95rem;
+  }
+  h1, .h1 {
+    font-size: calc(1.325rem + 0.9vw);
+  }
+  .section {
+    padding: 3rem 0;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}

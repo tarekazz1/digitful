@@ -1,76 +1,154 @@
 ---
-// Import the BaseLayout component
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-// You can define page-specific variables here if needed later
-const pageTitle = "Digitful - Real Growth"; // Specific title for this page
-const pageDescription = "Digitful delivers real growth with innovative digital strategies."; // Specific description
-const pageCanonical = "https://digitful.ca/"; // Specific canonical URL
+const pageTitle = "Digitful - Real Growth";
+const pageDescription = "Digitful delivers real growth with innovative digital strategies.";
+const pageCanonical = "https://digitful.ca/";
 ---
 <BaseLayout title={pageTitle} description={pageDescription} canonicalUrl={pageCanonical}>
-    {/* === PASTE YOUR COPIED <main>...</main> HERE === */}
-	<main>
-		<section class="hero">
-		  <h1>Pure Marketing, Real Growth</h1>
-		  <h2 id="typewriter" class="subheadline">You've tried the Hacks. Guesswork ends here.</h2>
-		  <a href="#services" class="btn btn-cta btn-center btn-fit-width">See What's Possible</a>
-		</section>
-		<section class="about-us">
-		  <div class="overlay"></div>
-		  <div class="content">
-			<h2>About Us</h2>
-			<p class="about-intro">We don't outsource growth. We build it with you.</p>
-	
-			<div class="values">
-			  <div class="value-item">
-				<h3>Embedded</h3>
-				<p>We work inside your systems — not around them.</p>
-			  </div>
-			  <div class="value-item">
-				<h3>Direct</h3>
-				<p>We'll call what's not working. No ego, no delay.</p>
-			  </div>
-			  <div class="value-item">
-				<h3>Focused</h3>
-				<p>We don't do everything. We do what works.</p>
-			  </div>
-			</div>
-		  </div>
-		</section>
-	
-		<section id="services" class="services">
-		  <h2>Our Services</h2>
-		  <div class="service-cards">
-			<a href="/social-media/" class="card">
-			  <h3>
-				<span class="material-symbols-outlined social-icon">share</span>
-				Social Media
-			  </h3>
-			  <p>Stop posting. Start building.</p>
-			</a>
-			<a href="/seo/" class="card">
-			  <h3>
-				<span class="material-symbols-outlined seo-icon">trending_up</span>
-				SEO
-			  </h3>
-			  <p>Traffic’s not your problem. Relevance is.</p>
-			</a>
-			<a href="/paid-ads/" class="card">
-			  <h3>
-				<span class="material-symbols-outlined ads-icon">ads_click</span>
-				Paid Ads
-			  </h3>
-			  <p>Reach real buyers, not scroll zombies.</p>
-			</a>
-			<a href="/automation/" class="card">
-			  <h3>
-				<span class="material-symbols-outlined automation-icon">settings</span>
-				Process Automation
-			  </h3>
-			  <p>Automate the drag. Keep your edge.</p>
-			</a>
-		  </div>
-		</section>
-	  </main>
-    {/* === END OF PASTED CONTENT === */}
+    <main>
+<section class="hero py-6 d-flex align-items-center min-vh-75">
+          <div class="container text-center">
+            <h1 class="fs-1 fw-bold mb-3">Pure Marketing, Real Growth</h1>
+            <h2 id="typewriter" class="fs-5 fs-4 mb-4">You've tried the Hacks. Guesswork ends here.</h2>
+            <a href="#services" class="btn btn-primary btn-lg px-4 py-2">See What's Possible</a>
+          </div>
+        </section>
+        
+<section class="about-us py-6 bg-dark bg-gradient">
+          <div class="container text-center">
+            <div class="row align-items-center g-5">
+              <div class="col-lg-12">
+                <h2 class="mb-4">About Us</h2>
+                <p class="lead mb-3">We're not another agency selling you tactics. We're marketers who understand business.</p>
+                <p class="mb-3">Our approach is simple: we focus on what actually moves the needle for your business, not vanity metrics.</p>
+                <a href="/about/" class="btn btn-outline-light mt-3">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+<section id="services" class="services py-6">
+          <div class="container">
+            <h2 class="text-center mb-5">Our Services</h2>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+              <div class="col">
+<a href="/social-media/" class="card h-100 text-decoration-none text-white border-secondary rounded-lg shadow-sm hover-shadow-lg">
+                  <div class="card-body text-center p-4">
+                    <i class="bi bi-hand-thumbs-up fs-1 mb-3 text-info"></i>
+                    <h3 class="card-title h5 mb-2">Social Media</h3>
+                    <p class="card-text mb-0">Stop posting. Start building.</p>
+                  </div>
+                </a>
+              </div>
+              <div class="col">
+<a href="/seo/" class="card h-100 text-decoration-none text-white border-secondary rounded-lg shadow-sm hover-shadow-lg">
+                  <div class="card-body text-center p-4">
+                    <i class="bi bi-search fs-1 mb-3 text-success"></i>
+                    <h3 class="card-title h5 mb-2">SEO</h3>
+                    <p class="card-text mb-0">Traffic's not your problem. Relevance is.</p>
+                  </div>
+                </a>
+              </div>
+              <div class="col">
+<a href="/paid-ads/" class="card h-100 text-decoration-none text-white border-secondary rounded-lg shadow-sm hover-shadow-lg">
+                  <div class="card-body text-center p-4">
+                    <i class="bi bi-badge-ad fs-1 mb-3 text-warning"></i>
+                    <h3 class="card-title h5 mb-2">Paid Ads</h3>
+                    <p class="card-text mb-0">Reach real buyers, not scroll zombies.</p>
+                  </div>
+                </a>
+              </div>
+              <div class="col">
+<a href="/automation/" class="card h-100 text-decoration-none text-white border-secondary rounded-lg shadow-sm hover-shadow-lg">
+                  <div class="card-body text-center p-4">
+                    <i class="bi bi-gear fs-1 mb-3 text-danger"></i>
+                    <h3 class="card-title h5 mb-2">Process Automation</h3>
+                    <p class="card-text mb-0">Stop doing. Start automating.</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+<section class="cta py-6 bg-primary">
+          <div class="container text-center">
+            <h2 class="mb-4">Ready to grow your business?</h2>
+<p class="fs-5 mb-4">Let's talk about your goals and how we can help you achieve them.</p>
+            <a href="/contact/" class="btn btn-light btn-lg px-4">Get Started</a>
+          </div>
+        </section>
+        
+<section class="testimonials py-6">
+          <div class="container">
+            <h2 class="text-center mb-5">What Our Clients Say</h2>
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+              <div class="col-md-4">
+<div class="card h-100 border-secondary rounded-lg shadow-sm hover-shadow-lg">
+                  <div class="card-body p-4">
+                    <div class="d-flex mb-3">
+                      <i class="bi bi-star-fill text-warning me-1"></i>
+                      <i class="bi bi-star-fill text-warning me-1"></i>
+                      <i class="bi bi-star-fill text-warning me-1"></i>
+                      <i class="bi bi-star-fill text-warning me-1"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                    </div>
+                    <p class="card-text mb-3">"Digitful transformed our approach to digital marketing. Their focus on real results instead of vanity metrics made all the difference."</p>
+                    <div class="d-flex align-items-center mt-3">
+                      <img src="/testimonial-1.jpg" alt="Client" class="rounded-circle me-3" width="50" height="50">
+                      <div>
+                        <h5 class="mb-0 h6">Sarah Johnson</h5>
+                        <small class="text-muted">CEO, TechStart</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+<div class="card h-100 border-secondary rounded-lg shadow-sm hover-shadow-lg">
+                  <div class="card-body p-4">
+                    <div class="d-flex mb-3">
+                      <i class="bi bi-star-fill text-warning me-1"></i>
+                      <i class="bi bi-star-fill text-warning me-1"></i>
+                      <i class="bi bi-star-fill text-warning me-1"></i>
+                      <i class="bi bi-star-fill text-warning me-1"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                    </div>
+                    <p class="card-text mb-3">"We've worked with several agencies before, but Digitful's strategic approach and focus on ROI has been refreshing and effective."</p>
+                    <div class="d-flex align-items-center mt-3">
+                      <img src="/testimonial-2.jpg" alt="Client" class="rounded-circle me-3" width="50" height="50">
+                      <div>
+                        <h5 class="mb-0 h6">Michael Chen</h5>
+                        <small class="text-muted">Marketing Director, GrowthCo</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+<div class="card h-100 border-secondary rounded-lg shadow-sm hover-shadow-lg">
+                  <div class="card-body p-4">
+                    <div class="d-flex mb-3">
+                      <i class="bi bi-star-fill text-warning me-1"></i>
+                      <i class="bi bi-star-fill text-warning me-1"></i>
+                      <i class="bi bi-star-fill text-warning me-1"></i>
+                      <i class="bi bi-star-fill text-warning me-1"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                    </div>
+                    <p class="card-text mb-3">"The automation solutions Digitful implemented saved us countless hours and helped us scale our marketing efforts efficiently."</p>
+                    <div class="d-flex align-items-center mt-3">
+                      <img src="/testimonial-3.jpg" alt="Client" class="rounded-circle me-3" width="50" height="50">
+                      <div>
+                        <h5 class="mb-0 h6">Jessica Williams</h5>
+                        <small class="text-muted">Founder, EcoStyle</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+    </main>
 </BaseLayout>
