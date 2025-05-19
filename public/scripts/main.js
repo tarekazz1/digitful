@@ -1,7 +1,7 @@
-import { initTypewriter } from './typewriter';
-import { initToggleButtons } from './toggleButtons';
-import { initParticles } from './particles';
-import { initMobileNav } from './mobileNav';
+import { initTypewriter } from './typewriter.js';
+import { initToggleButtons } from './toggleButtons.js';
+import { initParticles } from './particles.js';
+import { initMobileNav } from './mobileNav.js';
 
 document.addEventListener('DOMContentLoaded', function() {
   initTypewriter();
