@@ -1,0 +1,54 @@
+---
+// Instant Growth Snapshot component
+---
+<section id="snapshot" class="py-6 border-top">
+  <div class="container text-center">
+    <h2 class="mb-4 fw-bold">Instant SEO Snapshot</h2>
+    <p class="lead mb-4">Right here, right now.</p>
+
+    <!-- ▼▼  FORM  ▼▼ -->
+    <form id="snapshot-form" class="row justify-content-center g-2">
+      <!-- URL input -->
+      <div class="col-md-6 col-8">
+        <input type="url"
+               id="snapshot-url"
+               class="form-control form-control-lg bg-dark text-white"
+               placeholder="https://yourwebsite.com"
+               required>
+      </div>
+
+      <!-- Submit -->
+      <div class="col-auto">
+        <button type="submit" class="btn btn-primary btn-lg px-4">Analyze&nbsp;Now</button>
+      </div>
+
+      <!-- Strategy toggle -->
+      <div class="w-100 text-center mt-3">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio"
+                 name="strategy" id="strategyMobile"
+                 value="mobile" checked>
+          <label class="form-check-label" for="strategyMobile">Mobile</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio"
+                 name="strategy" id="strategyDesktop"
+                 value="desktop">
+          <label class="form-check-label" for="strategyDesktop">Desktop</label>
+        </div>
+      </div>
+    </form>
+
+    <!-- Results slot -->
+    <div id="snapshot-result" aria-live="polite" class="mt-5"></div>
+  </div>
+
+  <!-- Client script -->
+  <script src="/scripts/snapshot.js" is:inline></script>
+</section>
+
+<style lang="scss">
+  .form-control::placeholder {
+    color: #a0a0a0;
+  }
+</style>
