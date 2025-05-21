@@ -11,7 +11,7 @@ export function initParticles() {
             }
           },
           "color": {
-            "value": "#ffffff"
+            "value": ["#ffffff", "#5e17eb", "#ff3e6c"]
           },
           "opacity": {
             "value": 0.2,
@@ -24,8 +24,8 @@ export function initParticles() {
           "line_linked": {
             "enable": true,
             "distance": 150,
-            "color": "#ffffff",
-            "opacity": 0.1,
+            "color": "#5e17eb",
+            "opacity": 0.15,
             "width": 1
           },
           "move": {
