@@ -13,7 +13,7 @@ export function initToggleButtons() {
   const urlParams = new URLSearchParams(window.location.search);
   const serviceParam = urlParams.get('service');
   if (serviceParam) {
-    const targetButton = document.querySelector(`.toggle-btn[data-value="${serviceParam}"]`);
+    const targetButton = document.querySelector(`.toggle-btn[data-service="${serviceParam}"]`);
     if (targetButton) {
       targetButton.classList.add('selected');
       targetButton.setAttribute('aria-pressed', 'true');
