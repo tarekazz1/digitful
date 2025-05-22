@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const pageTitle = "Privacy Policy - Digitful";
+const pageDescription = "Digitful's privacy policy and data protection practices.";
+const pageCanonical = "https://digitful.ca/privacy/";
+---
+<BaseLayout title={pageTitle} description={pageDescription} canonicalUrl={pageCanonical}>
+    <main>
+        <section class="hero py-6 bg-dark bg-gradient text-center">
+            <div class="container">
+                <h1 class="fs-1 mb-3">Privacy Policy</h1>
+                <p class="fs-5 mb-0">How we protect your data</p>
+            </div>
+        </section>
+        
+        <section class="privacy-content py-6">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="card bg-dark border-secondary rounded-lg shadow-sm">
+                            <div class="card-body p-4 p-md-5">
+                                <p class="text-muted mb-4">Last updated: {new Date().toLocaleDateString()}</p>
+                                
+                                <h2 class="mb-3">Information We Collect</h2>
+                                <p class="mb-4">
+                                    We collect information you provide directly to us, such as when you:
+                                </p>
+                                <ul class="mb-4">
+                                    <li>Fill out our contact form</li>
+                                    <li>Subscribe to our newsletter</li>
+                                    <li>Communicate with us via email or phone</li>
+                                </ul>
+                                
+                                <h2 class="mb-3">How We Use Your Information</h2>
+                                <p class="mb-4">
+                                    We use the information we collect to:
+                                </p>
+                                <ul class="mb-4">
+                                    <li>Respond to your inquiries and provide customer service</li>
+                                    <li>Send you marketing communications (with your consent)</li>
+                                    <li>Improve our website and services</li>
+                                    <li>Comply with legal obligations</li>
+                                </ul>
+                                
+                                <h2 class="mb-3">Data Protection</h2>
+                                <p class="mb-4">
+                                    We implement appropriate security measures to protect your personal information 
+                                    against unauthorized access, alteration, disclosure, or destruction.
+                                </p>
+                                
+                                <h2 class="mb-3">Contact Us</h2>
+                                <p class="mb-4">
+                                    If you have any questions about this Privacy Policy, please contact us at:
+                                    <a href="mailto:ping@digitful.ca" class="link-primary">ping@digitful.ca</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</BaseLayout>
