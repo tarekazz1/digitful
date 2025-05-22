@@ -1,0 +1,71 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const pageTitle = "Terms of Service - Digitful";
+const pageDescription = "Digitful's terms of service and conditions of use.";
+const pageCanonical = "https://digitful.ca/terms/";
+---
+<BaseLayout title={pageTitle} description={pageDescription} canonicalUrl={pageCanonical}>
+    <main>
+        <section class="hero py-6 bg-dark bg-gradient text-center">
+            <div class="container">
+                <h1 class="fs-1 mb-3">Terms of Service</h1>
+                <p class="fs-5 mb-0">Our terms and conditions</p>
+            </div>
+        </section>
+        
+        <section class="terms-content py-6">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="card bg-dark border-secondary rounded-lg shadow-sm">
+                            <div class="card-body p-4 p-md-5">
+                                <p class="text-muted mb-4">Last updated: {new Date().toLocaleDateString()}</p>
+                                
+                                <h2 class="mb-3">Acceptance of Terms</h2>
+                                <p class="mb-4">
+                                    By accessing and using Digitful's services, you accept and agree to be bound 
+                                    by the terms and provision of this agreement.
+                                </p>
+                                
+                                <h2 class="mb-3">Services</h2>
+                                <p class="mb-4">
+                                    Digitful provides digital marketing services including but not limited to:
+                                </p>
+                                <ul class="mb-4">
+                                    <li>Social Media Marketing</li>
+                                    <li>Search Engine Optimization (SEO)</li>
+                                    <li>Paid Advertising Management</li>
+                                    <li>Process Automation</li>
+                                </ul>
+                                
+                                <h2 class="mb-3">Client Responsibilities</h2>
+                                <p class="mb-4">
+                                    Clients are responsible for:
+                                </p>
+                                <ul class="mb-4">
+                                    <li>Providing accurate and timely information</li>
+                                    <li>Timely payment of invoices</li>
+                                    <li>Compliance with applicable laws and regulations</li>
+                                    <li>Providing necessary access to accounts and platforms</li>
+                                </ul>
+                                
+                                <h2 class="mb-3">Limitation of Liability</h2>
+                                <p class="mb-4">
+                                    Digitful shall not be liable for any indirect, incidental, special, 
+                                    consequential, or punitive damages arising out of your use of our services.
+                                </p>
+                                
+                                <h2 class="mb-3">Contact Information</h2>
+                                <p class="mb-4">
+                                    For questions about these Terms of Service, contact us at:
+                                    <a href="mailto:ping@digitful.ca" class="link-primary">ping@digitful.ca</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</BaseLayout>
