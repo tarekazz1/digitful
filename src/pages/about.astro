@@ -1,0 +1,56 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const pageTitle = "About Us - Digitful";
+const pageDescription = "Learn about Digitful's mission to deliver real growth through innovative digital marketing strategies.";
+const pageCanonical = "https://digitful.ca/about/";
+---
+<BaseLayout title={pageTitle} description={pageDescription} canonicalUrl={pageCanonical}>
+    <main>
+        <section class="hero py-6 bg-dark bg-gradient text-center">
+            <div class="container">
+                <h1 class="fs-1 mb-3">About Digitful</h1>
+                <p class="fs-5 mb-0">We're Not That Agency</p>
+            </div>
+        </section>
+        
+        <section class="about-content py-6">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="card bg-dark border-secondary rounded-lg shadow-sm">
+                            <div class="card-body p-4 p-md-5">
+                                <h2 class="mb-4">Our Mission</h2>
+                                <p class="lead mb-4">We Don't Sell Tactics. We Build Revenue Engines.</p>
+                                
+                                <p class="mb-4">
+                                    No fluff. No freelancers. No fake metrics.<br>
+                                    Just operators who grow businesses like it's their own.
+                                </p>
+                                
+                                <h3 class="mb-3">What Makes Us Different</h3>
+                                <ul class="mb-4">
+                                    <li class="mb-2">Real Strategy, Not Hacks</li>
+                                    <li class="mb-2">Focus on Revenue, Not Vanity Metrics</li>
+                                    <li class="mb-2">Transparent Reporting</li>
+                                    <li class="mb-2">No Long-Term Contracts</li>
+                                </ul>
+                                
+                                <h3 class="mb-3">Our Approach</h3>
+                                <p class="mb-4">
+                                    We believe in building sustainable growth engines that work long-term. 
+                                    Our team of experienced operators focuses on what actually moves the needle 
+                                    for your business - real customers, real revenue, real growth.
+                                </p>
+                                
+                                <div class="text-center mt-4">
+                                    <a href="/contact/" class="btn btn-primary btn-lg px-4">Work With Us</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</BaseLayout>

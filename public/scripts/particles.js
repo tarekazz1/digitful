@@ -1,3 +1,5 @@
+import { handleInitError } from './errorHandler.js';
+
 export function initParticles() {
   if (window.particlesJS && !window.matchMedia('(prefers-reduced-motion: reduce)').matches && window.innerWidth > 600) {
     try {
@@ -42,9 +44,9 @@ export function initParticles() {
           }
         }
       });
-      console.log('Particles.js initialized successfully');
+
     } catch (error) {
-      console.error('Failed to initialize Particles.js:', error);
+      handleInitError(error, 'Particles.js');
       const particlesContainer = document.getElementById('particles-js');
       if (particlesContainer) {
         particlesContainer.classList.add('particles-fallback');
