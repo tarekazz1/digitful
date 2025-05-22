@@ -1,3 +1,15 @@
+// Error handling utility for production
+function handleError(error, context = '') {
+  // Silent error handling for production
+  // In development, this could be connected to a monitoring service
+  if (typeof process !== 'undefined' && process.env?.NODE_ENV === 'development') {
+    // eslint-disable-next-line no-console
+    console.error(`Error${context ? ` in ${context}` : ''}:`, error);
+  }
+  // In production, could send to error tracking service
+  // Example: errorTracker.captureException(error, { context });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   const form      = document.getElementById('snapshot-form');
   const urlInput  = document.getElementById('snapshot-url');
@@ -110,9 +122,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     } catch (err) {
-      console.error(err);
+      handleError(err, 'PageSpeed API');
       resultDiv.innerHTML =
         '<div class="alert alert-danger">Sorry, we couldn’t analyze that site. Please check the URL and try again.</div>';
     }
   });
 });
+
