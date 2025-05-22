@@ -16,14 +16,14 @@
 /* Button styles */
 .btn-primary {
   font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-  background-color: map-get($theme-colors, "primary");
-  border-color: map-get($theme-colors, "primary");
+  background-color: #0d6efd;
+  border-color: #0d6efd;
 }
 .btn-primary:hover {
-  background-color: map-get($theme-colors, "secondary");
-  border-color: map-get($theme-colors, "primary");
+  background-color: #2a2d45;
+  border-color: #0d6efd;
   transform: translateY(-2px);
-  box-shadow: $box-shadow-lg;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
 
 .btn-outline-light {
@@ -37,9 +37,9 @@
 }
 
 .toggle-btn.selected {
-  background-color: map-get($theme-colors, "primary");
+  background-color: #0d6efd;
   color: #fff;
-  border-color: map-get($theme-colors, "primary");
+  border-color: #0d6efd;
 }
 
 
@@ -52,7 +52,7 @@
 }
 .form-control:focus, .form-select:focus {
   background-color: rgba(255, 255, 255, 0.1);
-  border-color: map-get($theme-colors, "primary");
+  border-color: #0d6efd;
   color: #fff;
   box-shadow: 0 0 0 0.25rem rgba(23, 162, 184, 0.25);
 }
@@ -63,7 +63,7 @@ fieldset {
   border-radius: 4px;
   padding: 20px;
   margin-bottom: 30px;
-  background-color: rgba(map-get($theme-colors, "secondary"), 0.5);
+  background-color: rgba(42, 45, 69, 0.5);
 }
 legend {
   padding: 0 10px;
