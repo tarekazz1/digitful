@@ -1,17 +1,51 @@
 // Entry point for custom Bootstrap build
 
- // 1. Load Bootstrap functions
- @import "bootstrap/scss/functions";
- 
- // 2. Load Bootstrap variables & mixins
- @import "bootstrap/scss/variables";
- @import "bootstrap/scss/mixins";
- 
- // 3. Override default variables (merge spacer utilities, theme colors, etc.)
- @import "./_custom-variables";
- 
- // 4. Generate Bootstrap core (components, utilities)
- @import "bootstrap/scss/bootstrap";
+// 1. Load Bootstrap functions first
+@use "bootstrap/scss/functions";
 
-// 5. Include additional custom CSS overrides
-@import "./_custom-overrides";
+// 2. Load custom variables (must be before Bootstrap variables)
+@use "./_custom-variables" as custom;
+
+// 3. Load Bootstrap with custom variables
+@use "bootstrap/scss/bootstrap" with (
+  // Theme colors
+  $theme-colors: custom.$theme-colors,
+
+  // Body and link colors
+  $body-bg: custom.$body-bg,
+  $body-color: custom.$body-color,
+  $link-color: custom.$link-color,
+  $link-hover-color: custom.$link-hover-color,
+
+  // Typography
+  $font-family-base: custom.$font-family-base,
+  $headings-font-family: custom.$headings-font-family,
+  $font-size-base: custom.$font-size-base,
+  $line-height-base: custom.$line-height-base,
+
+  // Enable gradients
+  $enable-gradients: custom.$enable-gradients,
+
+  // Typography scale
+  $font-sizes: custom.$font-sizes,
+
+  // Spacing
+  $spacer: custom.$spacer,
+  $spacers: custom.$spacers,
+
+  // Containers and grid
+  $container-max-widths: custom.$container-max-widths,
+  $grid-gutter-width: custom.$grid-gutter-width,
+
+  // Border and shadows
+  $border-color: custom.$border-color,
+  $border-width: custom.$border-width,
+  $border-radius: custom.$border-radius,
+  $border-radius-lg: custom.$border-radius-lg,
+  $box-shadow: custom.$box-shadow,
+  $box-shadow-sm: custom.$box-shadow-sm,
+  $box-shadow-lg: custom.$box-shadow-lg
+);
+
+// 4. Include additional custom CSS overrides
+@use "./_custom-overrides";
