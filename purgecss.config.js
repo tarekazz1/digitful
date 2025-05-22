@@ -4,8 +4,7 @@ module.exports = {
     './public/**/*.{html,js}',
   ],
   css: [
-    './src/assets/bootstrap-custom.css',
-    './dist/_astro/*.css', // Built CSS files
+    './dist/_astro/*.css', // Built CSS files from SCSS compilation
   ],
   safelist: [
     // Bootstrap dynamic classes
@@ -34,10 +33,10 @@ module.exports = {
     /^breadcrumb-/,
     /^list-group-/,
     /^table-/,
-    
+
     // Bootstrap icons
     /^bi-/,
-    
+
     // Custom classes that might be added dynamically
     'particles-fallback',
     'toggle-btn',
@@ -47,10 +46,10 @@ module.exports = {
     'fade',
     'collapse',
     'collapsing',
-    
+
     // Hover states
     /^hover-/,
-    
+
     // Animation classes
     /^animate-/,
     /^animation-/,

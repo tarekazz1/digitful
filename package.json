@@ -5,8 +5,10 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "build:analyze": "astro build --verbose",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "purge": "purgecss --config purgecss.config.js --output purged-css/"
   },
   "dependencies": {
     "astro": "^5.6.1",
