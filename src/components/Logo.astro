@@ -1,0 +1,26 @@
+---
+// Reusable Logo component
+export interface Props {
+  maxWidth?: string;
+  className?: string;
+  href?: string;
+}
+
+const { 
+  maxWidth = "150px", 
+  className = "", 
+  href = "/" 
+} = Astro.props;
+---
+
+<a
+  href={href}
+  class={`d-inline-block flex-grow-0 ${className}`}
+  style={`max-width:${maxWidth};`}
+>
+  <img
+    src="/assets/images/logo.svg"
+    alt="Digitful - Digital Marketing Agency"
+    class="img-fluid w-100"
+  />
+</a>

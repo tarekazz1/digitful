@@ -1,4 +1,6 @@
 ---
+import Logo from './Logo.astro';
+
 const currentYear = new Date().getFullYear();
 ---
 
@@ -6,17 +8,7 @@ const currentYear = new Date().getFullYear();
   <div class="container">
     <div class="row g-4 align-items-start">
       <div class="col-lg-4">
-        <a
-          href="/"
-          class="footer-logo d-inline-block flex-grow-0 mb-3"
-          style="max-width:100px;"
-        >
-          <img
-            src="/assets/images/logo.svg"
-            alt="Digitful - Digital Marketing Agency"
-            class="img-fluid w-100"
-          />
-        </a>
+        <Logo className="footer-logo mb-3" maxWidth="100px" />
         <p class="text-light mb-3">Pure Marketing, Real Growth</p>
         <div class="d-flex gap-3">
           <a href="https://twitter.com/digitful" class="link-light text-decoration-none" aria-label="Twitter">

@@ -1,21 +1,12 @@
 ---
 // Header component with Bootstrap navbar
+import Logo from './Logo.astro';
 ---
 
 <header class="sticky-top">
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-<a
-  href="/"
-  class="navbar-brand d-inline-block flex-grow-0"
-  style="max-width:150px;"
->
-  <img
-    src="/assets/images/logo.svg"
-    alt="Digitful - Digital Marketing Agency"
-    class="img-fluid w-100"
-    />
-  </a>
+<Logo className="navbar-brand" maxWidth="150px" />
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
