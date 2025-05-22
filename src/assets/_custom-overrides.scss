@@ -16,14 +16,14 @@
 /* Button styles */
 .btn-primary {
   font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-  background-color: #0d6efd;
-  border-color: #0d6efd;
+  background-color: var(--bs-primary);
+  border-color: var(--cta-hover);
 }
 .btn-primary:hover {
-  background-color: #2a2d45;
-  border-color: #0d6efd;
+  background-color: var(--cta-hover);
+  border-color: var(--bs-primary);
   transform: translateY(-2px);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .btn-outline-light {
@@ -37,11 +37,22 @@
 }
 
 .toggle-btn.selected {
-  background-color: #0d6efd;
-  color: #fff;
-  border-color: #0d6efd;
+  background-color: var(--bs-primary);
+  color: var(--bs-white);
+  border-color: var(--bs-primary);
 }
 
+/* Card customization */
+.card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
 
 /* Form styling */
 .form-control, .form-select {
@@ -52,7 +63,7 @@
 }
 .form-control:focus, .form-select:focus {
   background-color: rgba(255, 255, 255, 0.1);
-  border-color: #0d6efd;
+  border-color: var(--bs-primary);
   color: #fff;
   box-shadow: 0 0 0 0.25rem rgba(23, 162, 184, 0.25);
 }
@@ -78,8 +89,11 @@ legend {
 
 /* Responsive adjustments */
 @media (max-width: 767.98px) {
-  html {
-    font-size: 14px;
+  :root {
+    --bs-body-font-size: 0.95rem;
+  }
+  h1, .h1 {
+    font-size: calc(1.325rem + 0.9vw);
   }
   .section {
     padding: 3rem 0;
