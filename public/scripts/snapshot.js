@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         `?url=${encodeURIComponent(siteUrl)}` +
         `&strategy=${strategy}` +
         '&category=performance&category=seo&category=best-practices' +
-        '&key=' + (import.meta.env.PUBLIC_PAGESPEED_API_KEY || '');
+        '&key=' + (window.PAGESPEED_API_KEY || '');
 
       const response = await fetch(api);
       const data = await response.json();
