@@ -42,7 +42,7 @@ export function initParticles() {
           }
         }
       });
-      console.log('Particles.js initialized successfully');
+
     } catch (error) {
       console.error('Failed to initialize Particles.js:', error);
       const particlesContainer = document.getElementById('particles-js');
