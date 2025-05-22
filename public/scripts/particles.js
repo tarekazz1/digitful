@@ -1,14 +1,4 @@
-// Error handling utility for production
-function handleError(error, context = '') {
-  // Silent error handling for production
-  // In development, this could be connected to a monitoring service
-  if (typeof process !== 'undefined' && process.env?.NODE_ENV === 'development') {
-    // eslint-disable-next-line no-console
-    console.error(`Error${context ? ` in ${context}` : ''}:`, error);
-  }
-  // In production, could send to error tracking service
-  // Example: errorTracker.captureException(error, { context });
-}
+import { handleInitError } from './errorHandler.js';
 
 export function initParticles() {
   if (window.particlesJS && !window.matchMedia('(prefers-reduced-motion: reduce)').matches && window.innerWidth > 600) {
@@ -56,7 +46,7 @@ export function initParticles() {
       });
 
     } catch (error) {
-      handleError(error, 'Particles.js initialization');
+      handleInitError(error, 'Particles.js');
       const particlesContainer = document.getElementById('particles-js');
       if (particlesContainer) {
         particlesContainer.classList.add('particles-fallback');
