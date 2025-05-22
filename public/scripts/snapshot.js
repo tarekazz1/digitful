@@ -23,11 +23,11 @@ document.addEventListener('DOMContentLoaded', () => {
         `?url=${encodeURIComponent(siteUrl)}` +
         `&strategy=${strategy}` +
         '&category=performance&category=seo&category=best-practices' +
-        '&key=AIzaSyDHAY5_0FIVLxZxBfe1_faOcooCspKtgmU';
+        '&key=' + (import.meta.env.PUBLIC_PAGESPEED_API_KEY || '');
 
       const res  = await fetch(api);
       const data = await res.json();
-      console.log('PageSpeed raw response →', data);
+
 
       if (!data.lighthouseResult) throw new Error(data.error?.message || 'Invalid response');
 
