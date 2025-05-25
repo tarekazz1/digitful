@@ -100,6 +100,11 @@ legend {
   }
 }
 
+/* kill row gutter only on phones */
+@media (max-width: 575.98px) {
+  .container > .row { --bs-gutter-x: 0; }
+}
+
 /* Accessibility */
 @media (prefers-reduced-motion: reduce) {
   * {
@@ -115,3 +120,4 @@ legend {
     var(--bs-secondary)
   ) !important;
 }
+
