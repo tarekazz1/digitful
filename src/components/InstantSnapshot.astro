@@ -1,6 +1,5 @@
 ---
 // Instant Growth Snapshot component
-const API_KEY = import.meta.env.PUBLIC_PAGESPEED_API_KEY || '';
 ---
 <section id="snapshot" class="py-6 border-top">
   <div class="container text-center">
@@ -46,11 +45,6 @@ const API_KEY = import.meta.env.PUBLIC_PAGESPEED_API_KEY || '';
     <div id="snapshot-result" aria-live="polite" class="mt-5"></div>
   </div>
 
-  <!-- Client script -->
-  <script is:inline define:vars={{ API_KEY }}>
-    // Set the API key globally for the snapshot script
-    window.PAGESPEED_API_KEY = API_KEY;
-  </script>
   <script src="/scripts/snapshot.js" is:inline type="module"></script>
 </section>
 

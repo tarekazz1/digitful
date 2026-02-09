@@ -21,11 +21,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const strategy = document.querySelector('input[name="strategy"]:checked')?.value || 'mobile';
 
       const api =
-        'https://www.googleapis.com/pagespeedonline/v5/runPagespeed' +
+        'https://digitful-pagespeed-proxy.tarazzi.workers.dev' +
         `?url=${encodeURIComponent(siteUrl)}` +
-        `&strategy=${strategy}` +
-        '&category=performance&category=seo&category=best-practices' +
-        '&key=' + (window.PAGESPEED_API_KEY || '');
+        `&strategy=${strategy}`;
 
       const response = await fetch(api);
       const data = await response.json();
