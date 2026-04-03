@@ -521,11 +521,21 @@ a {
 
 .contact-form .form-control,
 .contact-form .form-select,
-.contact-form .form-check-input,
 .snapshot-shell .form-control {
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid var(--site-border);
   color: var(--site-text);
+}
+
+.contact-form .form-check-input {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--site-border);
+  color: var(--site-text);
+}
+
+.contact-form .form-check-input:checked {
+  background-color: var(--site-accent);
+  border-color: var(--site-accent);
 }
 
 .contact-form .form-control:focus,
