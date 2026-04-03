@@ -1,26 +1,24 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const pageTitle = "Thanks - Digitful";
-const pageDescription = "Thank you for contacting Digitful. We will get back to you soon.";
-const pageCanonical = "https://digitful.ca/thank-you/";
+const pageTitle = 'Thanks - Digitful';
+const pageDescription = 'Thank you for contacting Digitful. We will get back to you soon.';
+const pageCanonical = 'https://digitful.ca/thank-you/';
 ---
+
 <BaseLayout title={pageTitle} description={pageDescription} canonicalUrl={pageCanonical}>
-    <main>
-<section class="thank-you py-6 min-vh-75 d-flex align-items-center justify-content-center">
-            <div class="container text-center">
-                <div class="mb-4">
-                    <i class="bi bi-check-circle-fill text-primary display-1"></i>
-                </div>
-<h1 class="fs-2 mb-3">Thanks for reaching out.</h1>
-<p class="fs-5 mb-3">
-                    We'll review what you shared and get back to you within 1–2 business days.
-                </p>
-                <p class="mb-4">
-                    No pitch. No fluff. Just real feedback—and a clear next step.
-                </p>
-                <a href="/" class="btn btn-primary btn-lg">Back to Home</a>
-            </div>
-        </section>
-    </main>
+  <main>
+    <section class="thank-you py-6 d-flex align-items-center justify-content-center" style="min-height: 70vh;">
+      <div class="container text-center">
+        <div class="mb-4">
+          <i class="bi bi-check-circle-fill text-primary display-1"></i>
+        </div>
+        <span class="eyebrow mb-3">Message received</span>
+        <h1 class="mb-3">Thanks for reaching out.</h1>
+        <p class="lead mb-3">We will review what you shared and reply within 1 to 2 business days.</p>
+        <p class="text-muted-light mb-4">No fluff. Just clear feedback and a sensible next step.</p>
+        <a href="/" class="btn btn-primary btn-lg">Back To Home</a>
+      </div>
+    </section>
+  </main>
 </BaseLayout>

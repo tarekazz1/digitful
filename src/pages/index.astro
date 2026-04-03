@@ -1,174 +1,241 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import InstantSnapshot from '../components/InstantSnapshot.astro'; 
+import InstantSnapshot from '../components/InstantSnapshot.astro';
 
-const pageTitle = "Digitful - Real Growth";
-const pageDescription = "Digitful delivers real growth with innovative digital strategies.";
-const pageCanonical = "https://digitful.ca/";
+const pageTitle = 'Digitful - Real Growth Systems';
+const pageDescription =
+  'Digitful builds strategy, acquisition, and automation systems for businesses that want durable growth.';
+const pageCanonical = 'https://digitful.ca/';
 ---
-<BaseLayout title={pageTitle} description={pageDescription} canonicalUrl={pageCanonical}>
-    <main>
-<section class="hero py-6 d-flex align-items-center min-vh-75">
-          <div class="container text-center">
-            <h1 class="fs-1 fw-bold mb-3">Real Strategy. Real Growth. No Bullsh*t.</h1>
-            <h2 id="typewriter" class="fs-5 fs-4 mb-4">You've tried the Hacks. We build what works.</h2>
-            <a href="/what-we-build/" class="btn btn-primary btn-lg px-4 py-2">Show Me What Works</a>
-          </div>
-        </section>
-        
-<section class="about-us py-6 bg-dark bg-gradient">
-          <div class="container text-center">
-            <div class="row align-items-center gy-5 gx-md-5">
-              <div class="col-lg-12">
-                <h2 class="mb-4">We’re Not That Agency</h2>
-                <p class="lead mb-3">We Don’t Sell Tactics. We Build Revenue Engines.</p>
-                <p class="mb-3">
-                  No fluff. No freelancers. No fake metrics.<br>
-                  Just operators who grow businesses like it’s their own.
-                </p>
-                <a href="/about/" class="btn btn-outline-light mt-3">Learn How We Work</a>
-              </div>
-            </div>
-          </div>
-        </section>
-        
-<section id="services" class="services py-6">
-          <div class="container">
-            <h2 class="text-center mb-5">Our Services</h2>
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
-              <div class="col">
-<a href="/social-media/" class="card h-100 text-decoration-none text-white border-secondary rounded-lg shadow-sm hover-shadow-lg">
-                  <div class="card-body text-center p-4">
-                    <i class="bi bi-hand-thumbs-up fs-1 mb-3 text-info"></i>
-                    <h3 class="card-title h5 mb-2">Social Media</h3>
-                    <p class="card-text mb-0">Stop posting. Start building.</p>
-                  </div>
-                </a>
-              </div>
-              <div class="col">
-<a href="/seo/" class="card h-100 text-decoration-none text-white border-secondary rounded-lg shadow-sm hover-shadow-lg">
-                  <div class="card-body text-center p-4">
-                    <i class="bi bi-search fs-1 mb-3 text-success"></i>
-                    <h3 class="card-title h5 mb-2">SEO</h3>
-                    <p class="card-text mb-0">Traffic's not your problem. Relevance is.</p>
-                  </div>
-                </a>
-              </div>
-              <div class="col">
-<a href="/paid-ads/" class="card h-100 text-decoration-none text-white border-secondary rounded-lg shadow-sm hover-shadow-lg">
-                  <div class="card-body text-center p-4">
-                    <i class="bi bi-badge-ad fs-1 mb-3 text-warning"></i>
-                    <h3 class="card-title h5 mb-2">Paid Ads</h3>
-                    <p class="card-text mb-0">Reach real buyers, not scroll zombies.</p>
-                  </div>
-                </a>
-              </div>
-              <div class="col">
-<a href="/automation/" class="card h-100 text-decoration-none text-white border-secondary rounded-lg shadow-sm hover-shadow-lg">
-                  <div class="card-body text-center p-4">
-                    <i class="bi bi-gear fs-1 mb-3 text-danger"></i>
-                    <h3 class="card-title h5 mb-2">Process Automation</h3>
-                    <p class="card-text mb-0">Stop doing. Start automating.</p>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-        
-          <InstantSnapshot />
-          
-<section class="cta py-6 bg-primary">
-          <div class="container text-center">
-            <h2 class="mb-4">Ready to grow your business?</h2>
-<p class="fs-5 mb-4">Let's talk about your goals and how we can help you achieve them.</p>
-            <a href="/contact/" class="btn btn-light btn-lg px-4">Get Started</a>
-          </div>
-        </section>
-        
-<section class="testimonials py-6">
-          <div class="container">
-            <h2 class="text-center mb-5">What Our Clients Say</h2>
-<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-              <div class="col-md-4">
-<div class="card h-100 border-secondary rounded-lg shadow-sm hover-shadow-lg">
-                  <div class="card-body p-4">
-                    <div class="d-flex mb-3">
-                      <i class="bi bi-star-fill text-warning me-1"></i>
-                      <i class="bi bi-star-fill text-warning me-1"></i>
-                      <i class="bi bi-star-fill text-warning me-1"></i>
-                      <i class="bi bi-star-fill text-warning me-1"></i>
-                      <i class="bi bi-star-fill text-warning"></i>
-                    </div>
-                    <p class="card-text mb-3">"Digitful transformed our approach to digital marketing. Their focus on real results instead of vanity metrics made all the difference."</p>
-                    <div class="d-flex align-items-center mt-3">
-                      <div>
-                        <h5 class="mb-0 h6">Sarah Johnson</h5>
-                        <small class="text-muted-light">CEO, TechStart</small>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4">
-<div class="card h-100 border-secondary rounded-lg shadow-sm hover-shadow-lg">
-                  <div class="card-body p-4">
-                    <div class="d-flex mb-3">
-                      <i class="bi bi-star-fill text-warning me-1"></i>
-                      <i class="bi bi-star-fill text-warning me-1"></i>
-                      <i class="bi bi-star-fill text-warning me-1"></i>
-                      <i class="bi bi-star-fill text-warning me-1"></i>
-                      <i class="bi bi-star-fill text-warning"></i>
-                    </div>
-                    <p class="card-text mb-3">"We've worked with several agencies before, but Digitful's strategic approach and focus on ROI has been refreshing and effective."</p>
-                    <div class="d-flex align-items-center mt-3">
-                      <div>
-                        <h5 class="mb-0 h6">Michael Chen</h5>
-                        <small class="text-muted-light">Marketing Director, GrowthCo</small>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4">
-<div class="card h-100 border-secondary rounded-lg shadow-sm hover-shadow-lg">
-                  <div class="card-body p-4">
-                    <div class="d-flex mb-3">
-                      <i class="bi bi-star-fill text-warning me-1"></i>
-                      <i class="bi bi-star-fill text-warning me-1"></i>
-                      <i class="bi bi-star-fill text-warning me-1"></i>
-                      <i class="bi bi-star-fill text-warning me-1"></i>
-                      <i class="bi bi-star-fill text-warning"></i>
-                    </div>
-                    <p class="card-text mb-3">"The automation solutions Digitful implemented saved us countless hours and helped us scale our marketing efforts efficiently."</p>
-                    <div class="d-flex align-items-center mt-3">
-                      <div>
-                        <h5 class="mb-0 h6">Jessica Williams</h5>
-                        <small class="text-muted-light">Founder, EcoStyle</small>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
 
-        <section class="gpt-section py-6 text-center">
-          <div class="container">
-            <h2 class="mb-4">Need a Marketing Analyst on Call?</h2>
-            <div class="mb-4">
-              <a
-                href="https://chatgpt.com/g/g-DmZRaiTLa-digitful-marketing-analyst"
-                target="_blank"
-                rel="noopener"
-                class="btn btn-danger btn-lg px-4 py-2 text-white"
-              >
-                Digitful GPT
-              </a>
+<BaseLayout title={pageTitle} description={pageDescription} canonicalUrl={pageCanonical}>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="row align-items-center g-4 g-lg-5">
+          <div class="col-lg-7">
+            <div class="hero-copy">
+              <span class="eyebrow mb-4">Operator-led growth systems</span>
+              <h1 class="mb-4">Strategy, acquisition, and automation built to work together.</h1>
+              <p id="typewriter" class="lead mb-4">
+                We help teams replace scattered marketing activity with a clearer growth system.
+              </p>
+              <p class="mb-4">
+                Digitful connects positioning, acquisition, and automation so your team can stop
+                chasing activity and start compounding revenue.
+              </p>
+              <div class="hero-actions">
+                <a href="/contact/" class="btn btn-primary btn-lg px-4">Book A Strategy Call</a>
+                <a href="/what-we-build/" class="btn btn-outline-light btn-lg px-4">See What We Build</a>
+              </div>
             </div>
-            <p class="text-muted-light">Faster than any agency, sharper than your brother-in-law.<br>Get instant, honest answers—no BS.</p>
           </div>
-        </section>
-    </main>
+          <div class="col-lg-5">
+            <div class="hero-panel">
+              <div class="hero-panel__grid">
+                <div class="hero-panel__card">
+                  <strong>What we replace</strong>
+                  <span>Disconnected tactics, vanity reporting, and guesswork.</span>
+                </div>
+                <div class="hero-panel__card">
+                  <strong>What we build</strong>
+                  <span>Clear offers, acquisition systems, and automation that sticks.</span>
+                </div>
+                <div class="hero-panel__card">
+                  <strong>Who it fits</strong>
+                  <span>Founders and lean teams who need sharp execution without bloat.</span>
+                </div>
+                <div class="hero-panel__card">
+                  <strong>How it feels</strong>
+                  <span>Measured, honest, and focused on the numbers that actually matter.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-6">
+      <div class="container">
+        <div class="section-intro">
+          <span class="eyebrow mb-3">Why teams call us</span>
+          <h2 class="mb-3">Many growth problems start long before the campaign does.</h2>
+          <p class="mb-0">
+            If the message is vague, the funnel is messy, and follow-up is slow, better content or
+            more spend will not save it. We fix the chain, not one isolated link.
+          </p>
+        </div>
+
+        <div class="proof-grid">
+          <div class="metric-card">
+            <span class="metric-card__value">1</span>
+            <strong>Shared operating view</strong>
+            <span>Strategy, execution, and reporting aligned around revenue instead of activity.</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-card__value">2</span>
+            <strong>Qualified demand</strong>
+            <span>Acquisition designed to attract the right buyer, not just more traffic.</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-card__value">3</span>
+            <strong>Faster follow-through</strong>
+            <span>Automation that keeps leads moving while your team stays focused on high-value work.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-6">
+      <div class="container">
+        <div class="section-intro">
+          <span class="eyebrow mb-3">Core offers</span>
+          <h2 class="mb-3">Four levers. One growth system.</h2>
+          <p class="mb-0">
+            Each service can stand on its own, but the best results happen when strategy, traffic,
+            conversion, and operations stop working in isolation.
+          </p>
+        </div>
+
+        <div class="service-card-grid">
+          <a href="/social-media/" class="service-card service-card__link">
+            <span class="service-card__icon"><i class="bi bi-chat-square-text"></i></span>
+            <div>
+              <h3>Social Media</h3>
+              <p>Positioning and content systems that support pipeline instead of feeding the calendar.</p>
+            </div>
+            <div class="service-card__meta">
+              <span>Messaging + content</span>
+              <span>Explore</span>
+            </div>
+          </a>
+
+          <a href="/seo/" class="service-card service-card__link">
+            <span class="service-card__icon"><i class="bi bi-search"></i></span>
+            <div>
+              <h3>SEO</h3>
+              <p>Search visibility built around commercial intent, structural clarity, and conversion quality.</p>
+            </div>
+            <div class="service-card__meta">
+              <span>Demand capture</span>
+              <span>Explore</span>
+            </div>
+          </a>
+
+          <a href="/paid-ads/" class="service-card service-card__link">
+            <span class="service-card__icon"><i class="bi bi-bullseye"></i></span>
+            <div>
+              <h3>Paid Ads</h3>
+              <p>Paid acquisition with tighter targeting, clearer offers, and cleaner handoff into sales.</p>
+            </div>
+            <div class="service-card__meta">
+              <span>Acquisition scale</span>
+              <span>Explore</span>
+            </div>
+          </a>
+
+          <a href="/automation/" class="service-card service-card__link">
+            <span class="service-card__icon"><i class="bi bi-diagram-3"></i></span>
+            <div>
+              <h3>Process Automation</h3>
+              <p>Workflow design that buys back time, reduces lag, and keeps the growth engine moving.</p>
+            </div>
+            <div class="service-card__meta">
+              <span>Ops + enablement</span>
+              <span>Explore</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-6">
+      <div class="container">
+        <div class="section-intro">
+          <span class="eyebrow mb-3">How we work</span>
+          <h2 class="mb-3">We build the system before we try to scale it.</h2>
+          <p class="mb-0">
+            The process is intentionally simple: diagnose the real constraint, build the operating
+            system around it, then scale what proves itself.
+          </p>
+        </div>
+
+        <div class="process-grid">
+          <div class="process-step">
+            <span class="process-step__number">01</span>
+            <strong>Diagnose</strong>
+            <p>We audit messaging, funnel friction, reporting, and workflow lag to find the actual bottleneck.</p>
+          </div>
+          <div class="process-step">
+            <span class="process-step__number">02</span>
+            <strong>Build</strong>
+            <p>We tighten the offer, clean up the path to conversion, and connect the tools that should already be talking.</p>
+          </div>
+          <div class="process-step">
+            <span class="process-step__number">03</span>
+            <strong>Scale</strong>
+            <p>Once the system holds, we push distribution, automation, and iteration with a much better margin for error.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-6">
+      <div class="container">
+        <div class="section-intro">
+          <span class="eyebrow mb-3">Good fit</span>
+          <h2 class="mb-3">A strong fit for teams that need more clarity and less friction.</h2>
+          <p class="mb-0">
+            Digitful is strongest when the business already has momentum, ambition, and a reason to
+            get the operating system right.
+          </p>
+        </div>
+
+        <div class="story-grid">
+          <div class="story-card">
+            <span class="story-card__icon"><i class="bi bi-rocket-takeoff"></i></span>
+            <strong>You are growing</strong>
+            <p>There is demand, but your pipeline quality or follow-through is uneven.</p>
+          </div>
+          <div class="story-card">
+            <span class="story-card__icon"><i class="bi bi-graph-up-arrow"></i></span>
+            <strong>You need signal</strong>
+            <p>You want a smaller set of real indicators, not more dashboards with nicer colors.</p>
+          </div>
+          <div class="story-card">
+            <span class="story-card__icon"><i class="bi bi-lightning-charge"></i></span>
+            <strong>You need leverage</strong>
+            <p>You want strategy and systems that make the team faster, not busier.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <InstantSnapshot />
+
+    <section class="py-6">
+      <div class="container">
+        <div class="site-panel p-4 p-md-5 text-center">
+          <span class="eyebrow mb-3">Next step</span>
+          <h2 class="mb-3">If growth feels fragmented, we can help you make it clearer.</h2>
+          <p class="mx-auto mb-4" style="max-width: 38rem;">
+            Bring the current funnel, the current bottlenecks, and the current questions. We will
+            help you sort what is structural, what is fixable, and what is worth scaling.
+          </p>
+          <div class="hero-actions justify-content-center">
+            <a href="/contact/" class="btn btn-primary btn-lg px-4">Talk To Digitful</a>
+            <a
+              href="https://chatgpt.com/g/g-DmZRaiTLa-digitful-marketing-analyst"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-ghost btn-lg px-4"
+            >
+              Try The Digitful GPT
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 </BaseLayout>

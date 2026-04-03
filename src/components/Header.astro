@@ -1,37 +1,53 @@
 ---
-// Header component with Bootstrap navbar
 import Logo from './Logo.astro';
 ---
 
-<header class="sticky-top">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<header class="site-header">
+  <nav class="navbar navbar-expand-lg navbar-dark site-nav">
     <div class="container">
-<Logo className="navbar-brand" maxWidth="150px" />
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+      <Logo className="navbar-brand" maxWidth="146px" />
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarMain"
+        aria-controls="navbarMain"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarMain">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-end text-lg-start
-                   gap-2          <!-- 0.5 rem between items on all sizes -->
-                   gap-lg-4">     <!-- 1.5 rem from the lg breakpoint up -->
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-3 gap-lg-4">
           <li class="nav-item">
             <a class="nav-link" href="/about/">About</a>
           </li>
-
+          <li class="nav-item">
+            <a class="nav-link" href="/what-we-build/">What We Build</a>
+          </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="servicesDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
               Services
             </a>
-            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="servicesDropdown">
+            <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end" aria-labelledby="servicesDropdown">
               <li><a class="dropdown-item" href="/social-media/">Social Media</a></li>
               <li><a class="dropdown-item" href="/seo/">SEO</a></li>
               <li><a class="dropdown-item" href="/paid-ads/">Paid Ads</a></li>
               <li><a class="dropdown-item" href="/automation/">Process Automation</a></li>
             </ul>
           </li>
-
           <li class="nav-item">
-<a class="btn btn-primary ms-lg-3 px-4" href="/contact/">Let's Talk</a>
+            <a class="nav-link" href="/contact/">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-primary px-4" href="/contact/">Book A Strategy Call</a>
           </li>
         </ul>
       </div>

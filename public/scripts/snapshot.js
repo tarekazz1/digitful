@@ -1,25 +1,26 @@
 import { handleApiError } from './errorHandler.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  const form      = document.getElementById('snapshot-form');
-  const urlInput  = document.getElementById('snapshot-url');
+  const form = document.getElementById('snapshot-form');
+  const urlInput = document.getElementById('snapshot-url');
   const resultDiv = document.getElementById('snapshot-result');
+
+  if (!form || !urlInput || !resultDiv) {
+    return;
+  }
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    /* ───── 1  Clean URL ───── */
     let siteUrl = urlInput.value.trim();
-    if (!/^https?:\/\//i.test(siteUrl)) siteUrl = 'https://' + siteUrl;
     if (!siteUrl) return;
+    if (!/^https?:\/\//i.test(siteUrl)) siteUrl = `https://${siteUrl}`;
 
     resultDiv.innerHTML =
-      '<div class="spinner-border" role="status"><span class="visually-hidden">Loading…</span></div>';
+      '<div class="d-flex align-items-center gap-3 text-muted-light"><div class="spinner-border spinner-border-sm" role="status"><span class="visually-hidden">Loading...</span></div><span>Running snapshot...</span></div>';
 
     try {
-      /* ───── 2  API call ───── */
       const strategy = document.querySelector('input[name="strategy"]:checked')?.value || 'mobile';
-
       const api =
         'https://digitful-pagespeed-proxy.tarazzi.workers.dev' +
         `?url=${encodeURIComponent(siteUrl)}` +
@@ -28,92 +29,81 @@ document.addEventListener('DOMContentLoaded', () => {
       const response = await fetch(api);
       const data = await response.json();
 
-
       if (!data.lighthouseResult) throw new Error(data.error?.message || 'Invalid response');
 
-      /* ───── 3  Extract scores ───── */
       const categories = data.lighthouseResult.categories || {};
       const score = (category) => (category?.score != null ? Math.round(category.score * 100) : null);
 
-      const perfScore      = score(categories.performance);
-      const seoScore       = score(categories.seo);
-      const bestPractices  = score(categories['best-practices']);
+      const perfScore = score(categories.performance);
+      const seoScore = score(categories.seo);
+      const bestPractices = score(categories['best-practices']);
 
-      /* ───── 4  Helpers ───── */
-      const grade = (score) =>
-        score == null ? '–' :
-        score >= 90  ? 'A' :
-        score >= 75  ? 'B' :
-        score >= 50  ? 'C' :
-        score >= 30  ? 'D' : 'E';
+      const grade = (value) =>
+        value == null ? '-' : value >= 90 ? 'A' : value >= 75 ? 'B' : value >= 50 ? 'C' : value >= 30 ? 'D' : 'E';
 
-      const barClass = (score) =>
-        score == null ? 'bg-secondary' :
-        score >= 90  ? 'bg-success' :
-        score >= 75  ? 'bg-info'    :
-        score >= 50  ? 'bg-warning' : 'bg-danger';
+      const barClass = (value) =>
+        value == null
+          ? 'bg-secondary'
+          : value >= 90
+            ? 'bg-success'
+            : value >= 75
+              ? 'bg-info'
+              : value >= 50
+                ? 'bg-warning'
+                : 'bg-danger';
 
-      /* Tips */
       const tips = [];
-      if (perfScore      < 90) tips.push('Compress images & enable caching.');
-      if (seoScore       < 90) tips.push('Add meta descriptions & structured data.');
-      if (bestPractices  < 90) tips.push('Serve images in next-gen formats (WebP).');
-      if (!tips.length)        tips.push('Great work! You’re already ahead of the pack.');
+      if (perfScore != null && perfScore < 90) tips.push('Tighten image delivery and caching.');
+      if (seoScore != null && seoScore < 90) tips.push('Improve metadata, structure, and search intent alignment.');
+      if (bestPractices != null && bestPractices < 90) tips.push('Clean up technical issues that weaken trust and speed.');
+      if (!tips.length) tips.push('Strong baseline. The next wins are likely strategic, not technical.');
 
-      /* ───── 5  Render card ───── */
       resultDiv.innerHTML = `
-        <div class="card shadow-sm fade-in">
-          <div class="card-body">
-
-            <h4 class="card-title mb-4">
-              Snapshot Results
-              <span class="badge ${barClass(perfScore)} ms-2">
-                ${strategy === 'mobile' ? 'Mobile' : 'Desktop'}
-              </span>
-            </h4>
-
-            ${[
-              ['Performance',     perfScore     ],
-              ['SEO',             seoScore      ],
-              ['Best&nbsp;Practices', bestPractices]
-            ]
-              .map(([label, score]) => `
-                <div class="mb-3">
-                  <div class="d-flex justify-content-between">
-                    <span class="fw-bold">${label}</span>
-                    <span class="badge ${barClass(score)}">${grade(score)}</span>
-                  </div>
-                  <div class="progress">
-                    <div class="progress-bar ${barClass(score)}" style="width:${score ?? 0}%">
-                      ${score ?? '–'}
-                    </div>
-                  </div>
-                </div>
-              `)
-              .join('')}
-
-            <h5 class="mt-4">Quick Wins:</h5>
-            <ul>${tips.map((tip) => `<li>${tip}</li>`).join('')}</ul>
-
-            <div class="text-center mt-3">
-              <a href="/contact"
-                class="btn btn-outline-primary"
-                target="_blank"
-                rel="noopener"
-                id="snapshot-lead">
-                Get Your Full Report →
-              </a>
+        <div class="card">
+          <div class="card-body p-4">
+            <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-4">
+              <h3 class="h5 mb-0">Snapshot Results</h3>
+              <span class="badge ${barClass(perfScore)}">${strategy === 'mobile' ? 'Mobile' : 'Desktop'}</span>
             </div>
 
+            ${[
+              ['Performance', perfScore],
+              ['SEO', seoScore],
+              ['Best Practices', bestPractices]
+            ]
+              .map(
+                ([label, value]) => `
+                  <div class="mb-3">
+                    <div class="d-flex justify-content-between mb-2">
+                      <span class="fw-semibold">${label}</span>
+                      <span class="badge ${barClass(value)}">${grade(value)}</span>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar ${barClass(value)}" style="width:${value ?? 0}%">
+                        ${value ?? '-'}
+                      </div>
+                    </div>
+                  </div>
+                `
+              )
+              .join('')}
+
+            <div class="mt-4">
+              <h4 class="h6 mb-2">Quick Wins</h4>
+              <ul class="mb-0 text-muted-light">
+                ${tips.map((tip) => `<li>${tip}</li>`).join('')}
+              </ul>
+            </div>
+
+            <div class="mt-4">
+              <a href="/contact/" class="btn btn-outline-light">Get The Full Review</a>
+            </div>
           </div>
         </div>`;
-
-
     } catch (err) {
       handleApiError(err, 'PageSpeed');
       resultDiv.innerHTML =
-        '<div class="alert alert-danger">Sorry, we couldn’t analyze that site. Please check the URL and try again.</div>';
+        '<div class="alert alert-danger mb-0">Sorry, we could not analyze that site. Please check the URL and try again.</div>';
     }
   });
 });
-
