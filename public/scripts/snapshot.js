@@ -37,6 +37,13 @@ document.addEventListener('DOMContentLoaded', () => {
       const perfScore = score(categories.performance);
       const seoScore = score(categories.seo);
       const bestPractices = score(categories['best-practices']);
+      const hostname = (() => {
+        try {
+          return new URL(siteUrl).hostname.replace(/^www\./, '');
+        } catch {
+          return siteUrl;
+        }
+      })();
 
       const grade = (value) =>
         value == null ? '-' : value >= 90 ? 'A' : value >= 75 ? 'B' : value >= 50 ? 'C' : value >= 30 ? 'D' : 'E';
@@ -58,6 +65,11 @@ document.addEventListener('DOMContentLoaded', () => {
       if (bestPractices != null && bestPractices < 90) tips.push('Clean up technical issues that weaken trust and speed.');
       if (!tips.length) tips.push('Strong baseline. The next wins are likely strategic, not technical.');
 
+      const contactUrl = new URL('/contact/', window.location.origin);
+      contactUrl.searchParams.set('source', 'snapshot');
+      contactUrl.searchParams.set('siteUrl', siteUrl);
+      contactUrl.searchParams.set('strategy', strategy);
+
       resultDiv.innerHTML = `
         <div class="card">
           <div class="card-body p-4">
@@ -65,6 +77,8 @@ document.addEventListener('DOMContentLoaded', () => {
               <h3 class="h5 mb-0">Snapshot Results</h3>
               <span class="badge ${barClass(perfScore)}">${strategy === 'mobile' ? 'Mobile' : 'Desktop'}</span>
             </div>
+
+            <p class="text-muted-light mb-4">Initial read for ${hostname}. This is a quick technical pass, not the full growth diagnosis.</p>
 
             ${[
               ['Performance', perfScore],
@@ -96,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
 
             <div class="mt-4">
-              <a href="/contact/" class="btn btn-outline-light">Get The Full Review</a>
+              <a href="${contactUrl.toString()}" class="btn btn-outline-light">Get The Full Review</a>
             </div>
           </div>
         </div>`;
