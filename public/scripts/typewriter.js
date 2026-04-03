@@ -2,7 +2,7 @@ export function initTypewriter() {
   const typewriter = document.getElementById('typewriter');
   if (!typewriter) return;
 
-  const fullText = 'We help teams replace scattered marketing activity with a clearer growth system.';
+  const fullText = 'Turn scattered marketing into a clear system.';
 
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     typewriter.textContent = fullText;
