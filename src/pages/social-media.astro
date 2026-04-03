@@ -1,41 +1,60 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const pageTitle = "Contact - Digitful";
-const pageDescription = "Engage, grow, and convert with Digitful's Social Media Management.";
-const pageCanonical = "https://digitful.ca/social-media/";
+const pageTitle = 'Social Media - Digitful';
+const pageDescription = 'Digitful builds social media systems that support positioning, trust, and conversion.';
+const pageCanonical = 'https://digitful.ca/social-media/';
 ---
+
 <BaseLayout title={pageTitle} description={pageDescription} canonicalUrl={pageCanonical}>
-    <main>
-<section class="service-hero text-center py-6 position-relative bg-dark bg-gradient">
-<h1 class="fs-1 fw-bold mb-3 d-flex align-items-center justify-content-center gap-2">
-            <i class="bi bi-hand-thumbs-up fs-1 mb-3 text-info"></i>
-            Social Media
-          </h1>
-          <p class="fs-5 mb-4">Engage. Grow. Convert.</p>
-        </section>
-    
-        <!-- Additional Social Media content can go here -->
-<section class="service-info py-6">
-          <div class="container">
-<h2 class="fs-2 mb-4">You've been posting. Still not sure it's doing anything.</h2>
-      
-<ul class="list-unstyled mb-4">
-              <li class="mb-2">Engagement looks fine—but sales haven't moved.</li>
-              <li class="mb-2">You're creating content, but it feels random.</li>
-              <li class="mb-2">You're spending time on platforms that don't convert.</li>
-            </ul>
-      
-            <p class="mb-3"><em>We hear you. Most social media is just noise.</em></p>
-      
-            <p class="mb-3">We build social strategies that actually drive business: clear messaging, targeted content, and conversion-focused campaigns that turn followers into customers.</p>
-      
-            <p class="mb-4"><strong>Show up with purpose.</strong> Build a brand people remember—and want to buy from.</p>
-      
-<div class="text-center mt-6">
-            <a href="/contact/?service=social-media" class="btn btn-lg px-4 btn-primary">Let's Talk Social Media</a>
+  <main>
+    <section class="service-hero text-center">
+      <div class="container">
+        <span class="eyebrow mb-3">Social media</span>
+        <h1 class="mb-3">Social media that supports growth.</h1>
+        <p class="lead mb-0">
+          Social should clarify the brand and support demand.
+        </p>
+      </div>
+    </section>
+
+    <section class="service-info py-6">
+      <div class="container">
+        <div class="service-shell">
+          <h2 class="mb-3">What we solve</h2>
+          <ul>
+            <li>Engagement looks fine, but it is not moving pipeline or trust.</li>
+            <li>Content feels random because the positioning underneath it is weak.</li>
+            <li>The team is spending energy on channels that are not helping buyers decide.</li>
+          </ul>
+
+          <p class="service-copy">
+            We build social systems around message, relevance, and conversion.
+          </p>
+
+          <div class="process-grid mt-4">
+            <div class="process-step">
+              <span class="process-step__number">01</span>
+              <strong>Clarify the message</strong>
+              <p class="mb-0">Define what the brand should be known for.</p>
+            </div>
+            <div class="process-step">
+              <span class="process-step__number">02</span>
+              <strong>Build the system</strong>
+              <p class="mb-0">Create themes, rhythm, and calls to action.</p>
+            </div>
+            <div class="process-step">
+              <span class="process-step__number">03</span>
+              <strong>Measure what matters</strong>
+              <p class="mb-0">Track qualified attention and action.</p>
+            </div>
           </div>
-        </section>
-    </main>
-    {/* === END OF PASTED CONTENT === */}
+
+          <div class="mt-4">
+            <a href="/contact/?service=social-media" class="btn btn-primary btn-lg px-4">Talk Social</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 </BaseLayout>

@@ -1,12 +1,9 @@
 ---
-// Import components and styles
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '../assets/bootstrap.scss';
-import '../assets/bootstrap-custom.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
-// Props
 const { title, description, canonicalUrl } = Astro.props;
 ---
 
@@ -18,38 +15,48 @@ const { title, description, canonicalUrl } = Astro.props;
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalUrl} />
     <title>{title}</title>
-    <!-- Preload fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Favicon -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <!-- Google Tag Manager -->
     <script is:inline>
-    (function(w,d,s,l,i){w[l]=w[l]||[];
-      w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
-      var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
-      j.async=true; j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-      f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-53THDCJH');
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-53THDCJH');
     </script>
-    <!-- End Google Tag Manager -->
   </head>
-  <body class="bg-dark text-white">
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-53THDCJH"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <div class="particles-bg" id="particles-js"></div>
-    <Header />
-    <slot />
-    <Footer />
+  <body>
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-53THDCJH"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"
+      ></iframe>
+    </noscript>
+    <div class="site-shell">
+      <div class="page-glow page-glow--one" aria-hidden="true"></div>
+      <div class="page-glow page-glow--two" aria-hidden="true"></div>
+      <div class="page-glow page-glow--three" aria-hidden="true"></div>
+      <Header />
+      <slot />
+      <Footer />
+    </div>
 
-    <!-- Bootstrap JS Bundle with Popper -->
-    <script is:inline src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Particles.js -->
-    <script is:inline src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <!-- Custom scripts -->
+    <script
+      is:inline
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    ></script>
     <script is:inline type="module" src="/scripts/main.js"></script>
   </body>
 </html>

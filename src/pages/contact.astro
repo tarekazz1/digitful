@@ -1,148 +1,126 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const pageTitle = "Contact Us - Digitful";
-const pageDescription = "Get in touch with Digitful for innovative digital marketing solutions.";
-const pageCanonical = "https://digitful.ca/contact/";
+const pageTitle = 'Contact Digitful';
+const pageDescription = 'Start a conversation with Digitful about strategy, acquisition, or automation.';
+const pageCanonical = 'https://digitful.ca/contact/';
 ---
+
 <BaseLayout title={pageTitle} description={pageDescription} canonicalUrl={pageCanonical}>
-    <main>
-<section class="contact-hero py-6 bg-dark bg-gradient text-center">
-            <div class="container">
-<h1 class="fs-1 mb-3">Let's Talk Growth</h1>
-<p class="fs-5 mb-0">Tell us about your business and goals.</p>
-            </div>
-        </section>
-        
-<section class="contact-form py-6">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-<div class="card bg-dark border-secondary rounded-lg shadow-sm hover-shadow-lg">
-                            <div class="card-body p-4 p-md-5">
-<form action="https://formsubmit.co/73c5ec076cc55c4aefd536c5f88c3526" method="POST" id="contactForm">
-                                    <div class="row g-4">
-                                        <div class="col-md-6">
-                                            <div class="form-floating">
-                                                <input type="text" class="form-control bg-dark text-white" id="name" name="name" placeholder="Your Name" required>
-<label for="name" class="">Your Name</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-floating">
-                                                <input type="email" class="form-control bg-dark text-white" id="email" name="email" placeholder="name@example.com" required>
-<label for="email" class="">Email Address</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-12">
-                                            <div class="form-floating">
-                                                <input type="text" class="form-control bg-dark text-white" id="company" name="company" placeholder="Company Name">
-<label for="company" class="">Company Name</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-12">
-                                            <p class="mb-2">What services are you interested in?</p>
-                                            <div class="row g-2 mb-3 justify-content-md-center">
-                                            <div class="col-12 col-md-auto">
-                                                <button
-                                                type="button"
-                                                class="btn btn-outline-light btn-lg w-100 toggle-btn"
-                                                data-service="social-media"
-                                                >
-                                                Social Media
-                                                </button>
-                                            </div>
-                                            <div class="col-12 col-md-auto">
-                                                <button
-                                                type="button"
-                                                class="btn btn-outline-light btn-lg w-100 toggle-btn"
-                                                data-service="seo"
-                                                >
-                                                SEO
-                                                </button>
-                                            </div>
-                                            <div class="col-12 col-md-auto">
-                                                <button
-                                                type="button"
-                                                class="btn btn-outline-light btn-lg w-100 toggle-btn"
-                                                data-service="paid-ads"
-                                                >
-                                                Paid Ads
-                                                </button>
-                                            </div>
-                                            <div class="col-12 col-md-auto">
-                                                <button
-                                                type="button"
-                                                class="btn btn-outline-light btn-lg w-100 toggle-btn"
-                                                data-service="automation"
-                                                >
-                                                Automation
-                                                </button>
-                                            </div>
-                                            </div>
-                                            <input type="hidden" name="services" id="servicesInput">
-                                        </div>
-                                        <input type="hidden" name="_next" value="https://digitful.ca/thank-you/">
-                                        <input type="hidden" name="_captcha" value="false">
-                                        <input type="text"   name="_honey"  style="display:none">
-                                        <div class="col-12">
-                                            <div class="form-floating">
-                                                <textarea class="form-control bg-dark text-white" id="message" name="message" placeholder="Tell us about your goals" style="height: 150px" required></textarea>
-<label for="message" class="">Tell us about your goals</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-12">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" id="privacy" name="privacy" required>
-<label class="form-check-label " for="privacy">
-I agree to the <a href="/privacy/" class="link-primary text-decoration-none">Privacy Policy</a>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-12">
-                                            <button type="submit" class="btn btn-primary btn-lg w-100">Send Message</button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
+  <main>
+    <section class="contact-hero text-center">
+      <div class="container">
+        <span class="eyebrow mb-3">Contact</span>
+        <h1 class="mb-3">Tell us where growth feels stuck.</h1>
+        <p class="lead mb-0">
+          Share what is working, what is unclear, and what needs attention.
+        </p>
+      </div>
+    </section>
+
+    <section class="contact-form py-6">
+      <div class="container">
+        <div class="contact-shell">
+          <div class="section-intro">
+            <h2 class="mb-3">Start the conversation</h2>
+            <p class="contact-form__intro mb-0">
+              A little context helps.
+            </p>
+          </div>
+
+          <form action="https://formsubmit.co/73c5ec076cc55c4aefd536c5f88c3526" method="POST" id="contactForm">
+            <div class="row g-4">
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required />
+                  <label for="name">Your Name</label>
                 </div>
-            </div>
-        </section>
-        
-<section class="contact-info py-6 bg-dark bg-gradient">
-            <div class="container">
-<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center text-center">
-                    <div class="col-md-4">
-<div class="card h-100 bg-dark border-secondary rounded-lg shadow-sm hover-shadow-lg">
-                            <div class="card-body p-4">
-                                <i class="bi bi-envelope-fill text-primary fs-1 mb-3"></i>
-                                <h3 class="h5 mb-3">Email Us</h3>
-                                <p class="mb-0"><a href="mailto:ping@digitful.ca" class="link-light text-decoration-none">ping@digitful.ca</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-<div class="card h-100 bg-dark border-secondary rounded-lg shadow-sm hover-shadow-lg">
-                            <div class="card-body p-4">
-                                <i class="bi bi-telephone-fill text-primary fs-1 mb-3"></i>
-                                <h3 class="h5 mb-3">Call Us</h3>
-                                <p class="mb-0"><a href="tel:+15797797779" class="link-light text-decoration-none">+1 (579) 779-7779</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-<div class="card h-100 bg-dark border-secondary rounded-lg shadow-sm hover-shadow-lg">
-                            <div class="card-body p-4">
-                                <i class="bi bi-geo-alt-fill text-primary fs-1 mb-3"></i>
-                                <h3 class="h5 mb-3">Visit Us</h3>
-                                <p class="mb-0">Zero Bounce Boulevard,<br>Montreal, QC D1G 1TL</p>
-                            </div>
-                        </div>
-                    </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required />
+                  <label for="email">Email Address</label>
                 </div>
+              </div>
+              <div class="col-12">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="company" name="company" placeholder="Company Name" />
+                  <label for="company">Company Name</label>
+                </div>
+              </div>
+              <div class="col-12">
+                <p class="mb-2 text-muted-light">What services are you interested in?</p>
+                <div class="row g-2">
+                  <div class="col-12 col-md-auto">
+                    <button type="button" class="btn btn-outline-light btn-lg w-100 toggle-btn" data-service="social-media">Social Media</button>
+                  </div>
+                  <div class="col-12 col-md-auto">
+                    <button type="button" class="btn btn-outline-light btn-lg w-100 toggle-btn" data-service="seo">SEO</button>
+                  </div>
+                  <div class="col-12 col-md-auto">
+                    <button type="button" class="btn btn-outline-light btn-lg w-100 toggle-btn" data-service="paid-ads">Paid Ads</button>
+                  </div>
+                  <div class="col-12 col-md-auto">
+                    <button type="button" class="btn btn-outline-light btn-lg w-100 toggle-btn" data-service="automation">Automation</button>
+                  </div>
+                </div>
+                <input type="hidden" name="services" id="servicesInput" />
+              </div>
+              <input type="hidden" name="_next" value="https://digitful.ca/thank-you/" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="text" name="_honey" style="display:none" />
+              <div class="col-12">
+                <div class="form-floating">
+                  <textarea
+                    class="form-control"
+                    id="message"
+                    name="message"
+                    placeholder="Tell us about your goals"
+                    style="height: 170px"
+                    required
+                  ></textarea>
+                  <label for="message">Tell us about your goals</label>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="privacy" name="privacy" required />
+                  <label class="form-check-label" for="privacy">
+                    I agree to the <a href="/privacy/" class="link-primary text-decoration-none">Privacy Policy</a>
+                  </label>
+                </div>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary btn-lg w-100">Send Message</button>
+              </div>
             </div>
-        </section>
-    </main>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-6">
+      <div class="container">
+        <div class="service-shell service-shell--narrow">
+          <div class="contact-grid">
+            <div class="contact-card">
+              <span class="contact-card__icon"><i class="bi bi-envelope"></i></span>
+              <strong>Email</strong>
+              <p class="mb-0"><a href="mailto:ping@digitful.ca" class="link-light text-decoration-none">ping@digitful.ca</a></p>
+            </div>
+            <div class="contact-card">
+              <span class="contact-card__icon"><i class="bi bi-telephone"></i></span>
+              <strong>Call</strong>
+              <p class="mb-0"><a href="tel:+15797797779" class="link-light text-decoration-none">+1 (579) 779-7779</a></p>
+            </div>
+            <div class="contact-card">
+              <span class="contact-card__icon"><i class="bi bi-globe2"></i></span>
+              <strong>Location</strong>
+              <p class="mb-0">Remote-first, serving teams across Canada and beyond.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 </BaseLayout>

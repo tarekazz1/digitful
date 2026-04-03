@@ -1,77 +1,79 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const pageTitle = "What We Build - Digitful";
-const pageDescription = "Real Work, Real Results.";
-const pageCanonical = "https://digitful.ca/what-we-build/";
+const pageTitle = 'What We Build - Digitful';
+const pageDescription = 'Digitful builds growth systems that connect strategy, acquisition, and automation.';
+const pageCanonical = 'https://digitful.ca/what-we-build/';
 ---
+
 <BaseLayout title={pageTitle} description={pageDescription} canonicalUrl={pageCanonical}>
-    <main>
-        <section class="service-hero text-center py-6 position-relative bg-dark bg-gradient">
-            <h1 class="fs-1 fw-bold mb-3 d-flex align-items-center justify-content-center gap-2">
-                Growth Systems That Don’t Waste Your Time
-            </h1>
-        </section>
+  <main>
+    <section class="service-hero text-center">
+      <div class="container">
+        <span class="eyebrow mb-3">What we build</span>
+        <h1 class="mb-3">Systems built to work.</h1>
+        <p class="lead mb-0">
+          We build the structure behind the marketing so performance is easier to manage.
+        </p>
+      </div>
+    </section>
 
-        <section class="service-info py-6">
-            <div class="container">
-                <h2 class="mb-4">We Build Engines, Not Campaigns</h2>
-                <p class="mb-2">Tactics don’t win. Systems do.</p>
-                <p class="mb-2">We build smart, scalable marketing machines—no fluff, no endless content calendars, no interns guessing at hashtags.</p>
-                <p class="mb-4">We combine strategy, execution, and automation to drive real growth—measured in revenue, not retweets.</p>
+    <section class="service-info py-6">
+      <div class="container">
+        <div class="service-shell">
+          <div class="section-intro">
+            <h2 class="mb-3">We build systems, not disconnected campaigns.</h2>
+            <p class="mb-0">
+              The mix changes by business. The principle does not.
+            </p>
+          </div>
 
-                <ul class="list-unstyled mb-4">
-                    <li>Acquisition funnels that convert</li>
-                    <li>Content that gets seen *and* sells</li>
-                    <li>Paid media that scales without burning cash</li>
-                    <li>Automation that buys back your time</li>
-                </ul>
-
-                <h2 class="mb-4">Our Services</h2>
-                <div class="service-grid">
-                    <div class="service-item">
-                        <h3><i class="bi bi-hand-thumbs-up fs-4 mb-3 text-info"></i>
-                        Social Media
-                        </h3>
-                        <p>Stop posting. Start building systems that work while you sleep.</p>
-                        <p>Or skip it—we do if it doesn’t serve the goal.</p>
-                    </div>
-                    <div class="service-item">
-                        <h3><i class="bi bi-search fs-4 mb-3 text-success"></i>
-                        SEO
-                        </h3>
-                        <p>Traffic's not the game. Relevance and conversion are.</p>
-                    </div>
-                    <div class="service-item">
-                        <h3><i class="bi bi-badge-ad fs-4 mb-3 text-warning"></i>
-                        Paid Ads
-                        </h3>
-                        <p>No spray-and-pray. Just real buyers, real ROI.</p>
-                    </div>
-                    <div class="service-item">
-                        <h3><i class="bi bi-gear fs-4 mb-3 text-danger"></i>
-                        Process Automation
-                        </h3>
-                        <p>Stop doing. Start compounding results with less input.</p>
-                    </div>
-                </div>
-
-                <h2 class="mt-4 mb-4">How It Works</h2>
-                <ol class="mb-4">
-                    <li>Diagnose – We audit what’s working, what’s broken, and what’s missing.</li>
-                    <li>Build – We design and execute a custom growth system, not cookie-cutter tactics.</li>
-                    <li>Scale – We optimize, automate, and scale what works. Then step on the gas.</li>
-                </ol>
-
-                <h2 class="mb-4">Results, Not Promises</h2>
-                <blockquote class="mb-4">
-                    <p>We don’t make noise—we make outcomes. See what that looks like.</p>
-                </blockquote>
-
-                <div class="text-center mt-6">
-                    <a href="/contact/?service=what-we-build" class="btn btn-lg px-4 btn-primary">Let's Talk Growth Systems</a>
-                </div>
+          <div class="service-grid">
+            <div class="service-item p-4">
+              <h3><i class="bi bi-chat-square-text"></i> Messaging systems</h3>
+              <p class="mb-0">Offers and messaging that make the business easier to understand.</p>
             </div>
-        </section>
-    </main>
+            <div class="service-item p-4">
+              <h3><i class="bi bi-bullseye"></i> Acquisition systems</h3>
+              <p class="mb-0">Channels organized around qualified demand.</p>
+            </div>
+            <div class="service-item p-4">
+              <h3><i class="bi bi-funnel"></i> Conversion systems</h3>
+              <p class="mb-0">Clearer buyer journeys and stronger handoff.</p>
+            </div>
+            <div class="service-item p-4">
+              <h3><i class="bi bi-diagram-3"></i> Automation systems</h3>
+              <p class="mb-0">Workflow logic that reduces lag and protects follow-up.</p>
+            </div>
+          </div>
+
+          <div class="process-grid mt-4">
+            <div class="process-step">
+              <span class="process-step__number">01</span>
+              <strong>Audit the current chain</strong>
+              <p class="mb-0">Find the bottleneck.</p>
+            </div>
+            <div class="process-step">
+              <span class="process-step__number">02</span>
+              <strong>Design the operating model</strong>
+              <p class="mb-0">Clarify the handoffs and priorities.</p>
+            </div>
+            <div class="process-step">
+              <span class="process-step__number">03</span>
+              <strong>Build and refine</strong>
+              <p class="mb-0">Build the pages, workflows, and automations.</p>
+            </div>
+          </div>
+
+          <blockquote class="mt-4">
+            <p class="mb-0">The goal is a system the business can trust and scale.</p>
+          </blockquote>
+
+          <div class="mt-4">
+            <a href="/contact/?service=what-we-build" class="btn btn-primary btn-lg px-4">Discuss Your System</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 </BaseLayout>

@@ -1,55 +1,61 @@
 ---
-// Instant Growth Snapshot component
+// Instant growth snapshot component.
 ---
-<section id="snapshot" class="py-6 border-top">
-  <div class="container text-center">
-    <h2 class="mb-4 fw-bold">Instant Site Snapshot</h2>
-    <p class="lead mb-4">Performance and SEO—Right here, right now.</p>
 
-    <!-- ▼▼  FORM  ▼▼ -->
-    <form id="snapshot-form" class="row justify-content-center g-2">
-      <!-- URL input -->
-      <div class="col-md-6 col-8">
-        <label for="snapshot-url" class="visually-hidden">Website URL to analyze</label>
-        <input type="url"
-               id="snapshot-url"
-               class="form-control form-control-lg bg-dark text-white"
-               placeholder="https://yourwebsite.com"
-               aria-label="Website URL to analyze"
-               required>
-      </div>
-
-      <!-- Submit -->
-      <div class="col-auto">
-        <button type="submit" class="btn btn-primary btn-lg px-4">Analyze&nbsp;Now</button>
-      </div>
-
-      <!-- Strategy toggle -->
-      <div class="w-100 text-center mt-3">
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio"
-                 name="strategy" id="strategyMobile"
-                 value="mobile" checked>
-          <label class="form-check-label" for="strategyMobile">Mobile</label>
+<section id="snapshot" class="py-6">
+  <div class="container">
+    <div class="snapshot-shell">
+      <div class="row g-4 align-items-start">
+        <div class="col-lg-5">
+          <div class="section-intro mb-0">
+            <span class="eyebrow mb-3">Live diagnostic</span>
+            <h2 class="mb-3">Get a quick site read.</h2>
+            <p class="mb-0">
+              Check performance, SEO, and baseline best practices in one pass.
+            </p>
+          </div>
         </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio"
-                 name="strategy" id="strategyDesktop"
-                 value="desktop">
-          <label class="form-check-label" for="strategyDesktop">Desktop</label>
+
+        <div class="col-lg-7">
+          <form id="snapshot-form" class="d-flex flex-column gap-3">
+            <div>
+              <label for="snapshot-url" class="form-label">Website URL</label>
+              <input
+                type="url"
+                id="snapshot-url"
+                class="form-control form-control-lg"
+                placeholder="https://yourwebsite.com"
+                aria-label="Website URL to analyze"
+                required
+              />
+            </div>
+
+            <div class="d-flex flex-column flex-md-row align-items-md-end justify-content-between gap-3">
+              <div>
+                <label class="form-label d-block">Priority view</label>
+                <div class="d-flex flex-wrap gap-3 pt-2">
+                  <div class="form-check form-check-inline m-0">
+                    <input class="form-check-input" type="radio" name="strategy" id="strategyMobile" value="mobile" checked />
+                    <label class="form-check-label" for="strategyMobile">Mobile</label>
+                  </div>
+                  <div class="form-check form-check-inline m-0">
+                    <input class="form-check-input" type="radio" name="strategy" id="strategyDesktop" value="desktop" />
+                    <label class="form-check-label" for="strategyDesktop">Desktop</label>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <button type="submit" class="btn btn-primary btn-lg px-4">Analyze</button>
+              </div>
+            </div>
+          </form>
+
+          <div id="snapshot-result" aria-live="polite" class="mt-4"></div>
         </div>
       </div>
-    </form>
-
-    <!-- Results slot -->
-    <div id="snapshot-result" aria-live="polite" class="mt-5"></div>
+    </div>
   </div>
 
   <script src="/scripts/snapshot.js" is:inline type="module"></script>
 </section>
-
-<style lang="scss">
-  .form-control::placeholder {
-    color: #a0a0a0;
-  }
-</style>
