@@ -1,0 +1,64 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
+);
+const getPostSlug = (id: string) => id.replace(/\.md$/, '');
+const getCategoryChipClass = (category: string) => {
+  const normalizedCategory = category.toLowerCase();
+
+  if (normalizedCategory.includes('social')) return 'category-chip--social';
+  if (normalizedCategory.includes('seo') || normalizedCategory.includes('search')) return 'category-chip--seo';
+  if (normalizedCategory.includes('paid') || normalizedCategory.includes('ads')) return 'category-chip--paid';
+  if (normalizedCategory.includes('automation')) return 'category-chip--automation';
+
+  return 'category-chip--growth';
+};
+
+const pageTitle = 'Blog - Digitful';
+const pageDescription =
+  'Digitful articles on AI-era marketing strategy, qualified demand, SEO, paid acquisition, social trust, and automation systems.';
+const pageCanonical = 'https://digitful.ca/blog/';
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} canonicalUrl={pageCanonical}>
+  <main>
+    <section class="blog-hero text-center">
+      <div class="container">
+        <span class="eyebrow mb-3">Digitful Blog</span>
+        <h1 class="mb-3">Sharper thinking for growth systems.</h1>
+        <p class="lead mb-0">
+          Strategy, acquisition, AI, and automation notes for teams that want clearer revenue decisions.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-6">
+      <div class="container">
+        <div class="blog-index-grid">
+          {posts.map((post) => (
+            <a href={`/blog/${getPostSlug(post.id)}/`} class="blog-card">
+              <span class={`category-chip ${getCategoryChipClass(post.data.category)}`}>{post.data.category}</span>
+              <div>
+                <h2>{post.data.title}</h2>
+                <p>{post.data.excerpt}</p>
+              </div>
+              <div class="blog-card__meta">
+                <time datetime={post.data.publishDate.toISOString()}>
+                  {post.data.publishDate.toLocaleDateString('en-CA', {
+                    month: 'long',
+                    day: 'numeric',
+                    year: 'numeric'
+                  })}
+                </time>
+                <span>{post.data.readingTime}</span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

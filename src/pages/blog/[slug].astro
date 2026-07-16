@@ -1,0 +1,142 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+
+  return posts.map((post) => ({
+    params: { slug: post.id.replace(/\.md$/, '') },
+    props: { post }
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const slug = post.id.replace(/\.md$/, '');
+const canonicalUrl = `https://digitful.ca/blog/${slug}/`;
+const title = post.data.seoTitle ?? `${post.data.title} | Digitful`;
+const publishedTime = post.data.publishDate.toISOString();
+const modifiedTime = (post.data.updatedDate ?? post.data.publishDate).toISOString();
+const ctaHeading = post.data.cta.heading ?? 'Before you add more tools, find the real bottleneck.';
+const getCategoryChipClass = (category: string) => {
+  const normalizedCategory = category.toLowerCase();
+
+  if (normalizedCategory.includes('social')) return 'category-chip--social';
+  if (normalizedCategory.includes('seo') || normalizedCategory.includes('search')) return 'category-chip--seo';
+  if (normalizedCategory.includes('paid') || normalizedCategory.includes('ads')) return 'category-chip--paid';
+  if (normalizedCategory.includes('automation')) return 'category-chip--automation';
+
+  return 'category-chip--growth';
+};
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: post.data.title,
+  description: post.data.description,
+  datePublished: publishedTime,
+  dateModified: modifiedTime,
+  inLanguage: 'en-CA',
+  mainEntityOfPage: canonicalUrl,
+  articleSection: post.data.category,
+  keywords: post.data.tags.join(', '),
+  author: {
+    '@type': 'Organization',
+    name: 'Digitful',
+    url: 'https://digitful.ca/'
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Digitful',
+    url: 'https://digitful.ca/'
+  }
+};
+const faqSchema = post.data.faqs.length
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: post.data.faqs.map((faq) => ({
+        '@type': 'Question',
+        name: faq.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: faq.answer
+        }
+      }))
+    }
+  : null;
+---
+
+<BaseLayout
+  title={title}
+  description={post.data.description}
+  canonicalUrl={canonicalUrl}
+  ogType="article"
+  publishedTime={publishedTime}
+  modifiedTime={modifiedTime}
+  structuredData={[articleSchema, faqSchema]}
+>
+  <main class="blog-article-page">
+    <section class="blog-article-hero">
+      <div class="container">
+        <div class="blog-article-hero__inner">
+          <a class="blog-back-link" href="/blog/">Blog</a>
+          <span class={`category-chip ${getCategoryChipClass(post.data.category)}`}>{post.data.category}</span>
+          <h1>{post.data.title}</h1>
+          <div class="blog-article-meta">
+            <time datetime={publishedTime}>
+              {post.data.publishDate.toLocaleDateString('en-CA', {
+                month: 'long',
+                day: 'numeric',
+                year: 'numeric'
+              })}
+            </time>
+            <span>{post.data.readingTime}</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pb-6">
+      <div class="container">
+        <div class="blog-layout">
+          <article class="blog-article">
+            <Content />
+          </article>
+        </div>
+      </div>
+    </section>
+
+    {post.data.faqs.length > 0 && (
+      <section class="blog-faq-section pb-6">
+        <div class="container">
+          <div class="blog-faq">
+            <span class="eyebrow mb-3">FAQ</span>
+            <h2>Common questions</h2>
+            <div class="blog-faq__grid">
+              {post.data.faqs.map((faq) => (
+                <details>
+                  <summary>{faq.question}</summary>
+                  <p>{faq.answer}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+    )}
+
+    <section class="pb-6">
+      <div class="container">
+        <div class="blog-cta-panel text-center">
+          <span class="eyebrow mb-3">Next step</span>
+          <h2 class="mb-3">{ctaHeading}</h2>
+          <p class="mx-auto mb-4">
+            {post.data.cta.text}
+          </p>
+          <a href={post.data.cta.href} class="btn btn-primary btn-lg px-4">{post.data.cta.label}</a>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
