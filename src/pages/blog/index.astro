@@ -16,6 +16,16 @@ const getCategoryChipClass = (category: string) => {
 
   return 'category-chip--growth';
 };
+const getCategoryFilter = (category: string) => {
+  const normalizedCategory = category.toLowerCase();
+
+  if (normalizedCategory.includes('social')) return 'social';
+  if (normalizedCategory.includes('seo') || normalizedCategory.includes('search')) return 'seo';
+  if (normalizedCategory.includes('paid') || normalizedCategory.includes('ads')) return 'paid';
+  if (normalizedCategory.includes('automation')) return 'automation';
+
+  return 'growth';
+};
 
 const pageTitle = 'Blog - Digitful';
 const pageDescription =
@@ -32,6 +42,23 @@ const pageCanonical = 'https://digitful.ca/blog/';
         <p class="lead mb-0">
           Strategy, acquisition, AI, and automation notes for teams that want clearer revenue decisions.
         </p>
+        <div class="blog-filters" role="group" aria-label="Filter articles by service">
+          <button class="blog-filter category-chip category-chip--growth is-active" type="button" data-blog-filter="all" aria-pressed="true">
+            All
+          </button>
+          <button class="blog-filter category-chip category-chip--social" type="button" data-blog-filter="social" aria-pressed="false">
+            Social Media
+          </button>
+          <button class="blog-filter category-chip category-chip--seo" type="button" data-blog-filter="seo" aria-pressed="false">
+            SEO
+          </button>
+          <button class="blog-filter category-chip category-chip--paid" type="button" data-blog-filter="paid" aria-pressed="false">
+            Paid Ads
+          </button>
+          <button class="blog-filter category-chip category-chip--automation" type="button" data-blog-filter="automation" aria-pressed="false">
+            Automation
+          </button>
+        </div>
       </div>
     </section>
 
@@ -39,7 +66,7 @@ const pageCanonical = 'https://digitful.ca/blog/';
       <div class="container">
         <div class="blog-index-grid">
           {posts.map((post) => (
-            <a href={`/blog/${getPostSlug(post.id)}/`} class="blog-card">
+            <a href={`/blog/${getPostSlug(post.id)}/`} class="blog-card" data-blog-category={getCategoryFilter(post.data.category)}>
               <span class={`category-chip ${getCategoryChipClass(post.data.category)}`}>{post.data.category}</span>
               <div>
                 <h2>{post.data.title}</h2>
@@ -58,7 +85,40 @@ const pageCanonical = 'https://digitful.ca/blog/';
             </a>
           ))}
         </div>
+        <p class="blog-filter-empty" data-blog-empty hidden>No articles in this service yet. Check back soon.</p>
+        <p class="visually-hidden" data-blog-filter-status aria-live="polite"></p>
       </div>
     </section>
   </main>
 </BaseLayout>
+
+<script>
+  const filterButtons = Array.from(document.querySelectorAll<HTMLButtonElement>('[data-blog-filter]'));
+  const articleCards = Array.from(document.querySelectorAll<HTMLElement>('[data-blog-category]'));
+  const emptyState = document.querySelector<HTMLElement>('[data-blog-empty]');
+  const filterStatus = document.querySelector<HTMLElement>('[data-blog-filter-status]');
+
+  filterButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const selectedFilter = button.dataset.blogFilter ?? 'all';
+      let visibleCount = 0;
+
+      filterButtons.forEach((filterButton) => {
+        const isActive = filterButton === button;
+        filterButton.classList.toggle('is-active', isActive);
+        filterButton.setAttribute('aria-pressed', String(isActive));
+      });
+
+      articleCards.forEach((card) => {
+        const isVisible = selectedFilter === 'all' || card.dataset.blogCategory === selectedFilter;
+        card.hidden = !isVisible;
+        if (isVisible) visibleCount += 1;
+      });
+
+      if (emptyState) emptyState.hidden = visibleCount !== 0;
+      if (filterStatus) {
+        filterStatus.textContent = `${visibleCount} ${visibleCount === 1 ? 'article' : 'articles'} shown.`;
+      }
+    });
+  });
+</script>
