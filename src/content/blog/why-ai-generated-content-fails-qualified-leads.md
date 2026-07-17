@@ -142,9 +142,9 @@ It avoids a real stance. It lists benefits. It explains concepts. It uses clean 
 
 That is a trust problem.
 
-Digitful's point of view is not "AI can help your marketing."
+[Digitful's point of view](/blog/ai-is-making-marketing-faster/) is not "AI can help your marketing."
 
-The sharper view is: [AI can scale the wrong message just as easily as the right one](/blog/ai-is-making-marketing-faster/). Strategy decides which one happens.
+The sharper view is: AI can scale the wrong message just as easily as the right one. Strategy decides which one happens.
 
 That kind of stance gives the reader something to remember.
 
@@ -193,7 +193,7 @@ If someone reads about AI-generated content failing to bring qualified leads, th
 
 - Read the broader [AI growth systems article](/blog/ai-is-making-marketing-faster/).
 - Review the [SEO service path](/seo/).
-- Look at [what to automate and what to keep human](/blog/what-to-automate-in-marketing/) if the issue is workflow.
+- Look at the [automation article](/blog/what-to-automate-in-marketing/) if the issue is workflow.
 - Contact Digitful for a content or growth systems diagnosis.
 
 Internal links are not decoration. They are part of the buyer journey.
@@ -262,6 +262,21 @@ That is the difference between content that fills a calendar and content that cr
 Qualified content does not have to sell aggressively. It has to make the problem clearer.
 
 Clarity is what creates the commercial opening.
+
+## How To Measure Whether Content Is Pulling Qualified Demand
+
+Do not judge AI-assisted content only by publish count, impressions, or keyword movement. Those can improve while the pipeline stays soft.
+
+Look for evidence closer to the buyer decision:
+
+- Are readers moving from the article to the relevant service page?
+- Are inquiries referencing the problem the article explains?
+- Are leads from the topic accepted by sales, or rejected as bad fit?
+- Are sales teams reusing the article to answer objections?
+- Are assisted conversions attached to the service path the article was built to support?
+- Are internal links moving the reader to a useful next step, or just spreading them across more blog posts?
+
+This is not a perfect attribution model. It is a diagnostic check. If content gets visibility but never helps a qualified buyer understand the problem, trust the business, or take the next step, the issue is probably not production speed.
 
 ## The AI Content Quality Test
 
@@ -337,7 +352,7 @@ If the article does not answer objections, it may educate without moving the buy
 
 The article should connect naturally to a service path.
 
-For this topic, the path is [SEO and content strategy](/seo/), AI content workflow, or a broader growth systems diagnosis.
+For this topic, the path is [SEO/content strategy](/seo/), AI content workflow, or a broader growth systems diagnosis.
 
 If the content cannot connect to a service without forcing it, the topic may not belong near the front of the cluster.
 
@@ -376,8 +391,6 @@ But the strongest parts of content still need human judgment:
 - Cutting generic sections.
 - Connecting the article to a service path.
 - Deciding whether the article should exist at all.
-
-The same distinction applies across the wider workflow: [automate repeatable work, let AI assist judgment-heavy work, and keep strategic decisions human](/blog/what-to-automate-in-marketing/).
 
 AI can help write. It should not be allowed to lower the bar for publishing.
 
@@ -445,14 +458,14 @@ AI can help the team move faster. Good.
 
 But faster content is only useful when the content is aimed at the right buyer and doing a real commercial job.
 
-Digitful helps teams turn content from output into qualified demand: sharper SEO strategy, stronger briefs, better internal paths, and AI workflows that support judgment instead of replacing it.
+[Digitful helps teams turn content from output into qualified demand](/seo/): sharper SEO strategy, stronger briefs, better internal paths, and AI workflows that support judgment instead of replacing it.
 
-Start with an [SEO and content strategy review](/contact/) before publishing another batch of posts.
+Start with an [SEO/content strategy review](/contact/) or an AI content workflow audit before publishing another batch of posts.
 
 ## Sources And Evidence Notes
 
-- [Google's guide to optimizing for generative AI features](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide)
-- [Google's guidance on creating helpful, reliable, people-first content](https://developers.google.com/search/docs/fundamentals/creating-helpful-content)
-- [Google's spam policies for web search](https://developers.google.com/search/docs/essentials/spam-policies)
-- [Grossman et al., "How Generative AI Disrupts Search"](https://arxiv.org/abs/2604.27790)
-- [Xu, Iqbal, and Montgomery, "Measuring Google AI Overviews"](https://arxiv.org/abs/2605.14021)
+- Google Search Central: generative AI search features are rooted in core Search ranking and quality systems, and Google recommends valuable, non-commodity, people-first content. Source: [source](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide)
+- Google Search Central: scaled content abuse includes generating many pages, including with generative AI, without adding value for users. Source: [source](https://developers.google.com/search/docs/essentials/spam-policies)
+- Google Search Central: helpful content guidance emphasizes who created the content, how it was produced, and why it was created. Source: [source](https://developers.google.com/search/docs/fundamentals/creating-helpful-content)
+- Grossman et al. (2026): empirical study of 11,500 queries found AI Overviews for 51.5% of representative real-user queries and low source overlap between traditional Google results, AI Overviews, and Gemini. Source: [source](https://arxiv.org/abs/2604.27790)
+- Xu, Iqbal, and Montgomery (2026): longitudinal study of 55,393 trending queries found AI Overview activation of 13.7% overall and 64.7% for question-form queries. Source: [source](https://arxiv.org/abs/2605.14021)

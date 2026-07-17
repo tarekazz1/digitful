@@ -81,13 +81,19 @@ Before you automate, answer the boring questions:
 
 If those answers are vague, the automation is not ready.
 
+There is one exception worth naming.
+
+If a narrow task is already understood and plainly wasteful, it may not need a full growth-system diagnosis before automation. Transcription, call summaries, recurring report assembly, basic CRM cleanup, and data entry can earn their place through local ROI. The test is smaller: does it save real time, reduce obvious errors, protect a repeatable handoff, or remove work nobody should be doing by hand?
+
+That is local efficiency. Useful, but not the same as fixing acquisition or lead quality.
+
 ## What Should Be Automated
 
 Good automation removes repetitive work from a process that already makes sense. It reduces lag, protects consistency, and makes the team less dependent on memory. It should not hide confusion.
 
 ### Lead Routing
 
-If someone requests an SEO review, they should not land in the same path as a newsletter subscriber. If someone asks about paid ads and mentions an active budget, that should be treated differently from a low-intent resource download.
+If someone requests an [SEO review](/seo/), they should not land in the same path as a newsletter subscriber. If someone asks about paid ads and mentions an active budget, that should be treated differently from a low-intent resource download.
 
 The routing rules do not need to be complicated. They need to be explicit:
 
@@ -168,7 +174,7 @@ Use AI to get unstuck, summarize context, or propose structure. Let a human deci
 
 ### Content Briefs
 
-AI can gather [search intent](/seo/), buyer questions, objections, competitor angles, and possible headings. The risk is a brief that looks complete but has no commercial spine.
+AI can gather search intent, buyer questions, objections, competitor angles, and possible headings. The risk is a brief that looks complete but has no commercial spine.
 
 A good brief should make choices:
 
@@ -183,7 +189,7 @@ AI can organize the raw material. Strategy decides what belongs.
 
 ### Ad Angle Generation
 
-AI is useful for generating [paid ad](/paid-ads/) hypotheses:
+AI is useful for generating ad hypotheses:
 
 - Pain-led angles.
 - Offer-led angles.
@@ -229,7 +235,7 @@ The offer determines what the buyer thinks they are buying: promise, scope, entr
 
 AI can draft, edit, repurpose, and suggest structure. Final approval should stay human because content carries the brand's judgment. A technically clean article can still be strategically soft, too generic, too absolute, or aimed at the wrong reader.
 
-The question is not only "Is this written well?"
+The question is bigger than "Is this written well?"
 
 The better question is "Would the right buyer trust us more after reading this?"
 
@@ -378,6 +384,10 @@ Automation should make a good process faster, clearer, and easier to run. It sho
 
 Before you automate another workflow, check the handoff. Check the data. Check the owner. Check the message. Check what happens when the lead is high intent. Check what happens when the lead is not a fit.
 
+If the goal is local efficiency, name the local measure: hours removed, backlog reduced, errors avoided, response time improved, or reporting assembly made faster. If the goal is growth-system improvement, use a harder measure: qualified inquiries, sales acceptance, booked calls, close quality, service-page movement, or speed-to-lead.
+
+The measure tells you whether the automation is solving a real constraint or just making the workflow look more sophisticated.
+
 Then decide what belongs in three lanes:
 
 - Automate the repetitive parts.
@@ -388,4 +398,4 @@ That is how automation becomes part of a [growth system](/blog/ai-is-making-mark
 
 [Digitful helps teams clean up the system first](/what-we-build/): strategy, acquisition, automation, and follow-up working together instead of creating more disconnected activity.
 
-Start with an [automation review](/contact/) before building another workflow.
+Start with an [automation review](/contact/) or a [growth systems diagnosis](/contact/) before building another workflow.

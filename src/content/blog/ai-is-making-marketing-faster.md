@@ -56,7 +56,7 @@ It cannot tell you which buyer is worth pursuing. It cannot make a vague offer s
 
 Those are business decisions.
 
-This is where companies get into trouble. They treat AI as if it sits above the marketing system, when it actually sits inside it. The quality of the output depends on the quality of the inputs: positioning, audience, offer, channel logic, conversion path, follow-up, and measurement.
+The trouble starts when companies treat AI as if it sits above the marketing system, when it actually sits inside it. The quality of the output depends on the quality of the inputs: positioning, audience, offer, channel logic, conversion path, follow-up, and measurement.
 
 If those pieces are weak, AI usually makes the weakness louder.
 
@@ -120,6 +120,8 @@ AI can help route, summarize, personalize, and draft. The [workflow still needs 
 The point is not that AI is overhyped or optional. It is neither.
 
 The point is that AI works best when it improves a defined workflow.
+
+Here is where it can be useful.
 
 ### Researching Buyer Questions
 
@@ -262,9 +264,9 @@ Search is no longer only about ranking pages. Buyers are using search engines, A
 
 That makes weak content easier to ignore.
 
-[SEO still needs the fundamentals](/seo/): technical health, clear structure, search intent, useful content, and conversion paths. But the content also needs stronger judgment. It should answer real buyer questions, show proof, and make the next step clear.
+[SEO](/seo/) still needs the fundamentals: technical health, clear structure, search intent, useful content, and conversion paths. But the content also needs stronger judgment. It should answer real buyer questions, show proof, and make the next step clear.
 
-For Google specifically, AI search does not require a separate bag of tricks. Google's own guidance is that generative AI features are still rooted in core Search ranking and quality systems. The practical work is still strong SEO: helpful content, a clear technical structure, crawlable pages, useful media where it makes sense, and content built for people instead of content created to chase every possible AI query variation. Google's guidance on [AI features and your website](https://developers.google.com/search/docs/appearance/ai-overviews) and [people-first content](https://developers.google.com/search/docs/fundamentals/creating-helpful-content) is a useful baseline.
+For Google specifically, AI search does not require a separate bag of tricks. Google's own guidance is that generative AI features are still rooted in core Search ranking and quality systems. The practical work is still strong SEO: helpful content, a clear technical structure, crawlable pages, useful media where it makes sense, and content built for people instead of content created to chase every possible AI query variation.
 
 Traffic that does not create relevant demand is still a bad investment.
 
@@ -272,7 +274,7 @@ Traffic that does not create relevant demand is still a bad investment.
 
 AI can help with creative production, testing, bidding, and campaign management. That can reduce manual work and increase testing speed.
 
-But [paid ads still depend on the basics](/paid-ads/):
+But [paid ads](/paid-ads/) still depend on the basics:
 
 - A clear buyer.
 - A strong offer.
@@ -306,13 +308,15 @@ If the question is "What happened?" AI can summarize.
 
 If the question is "What should we fix first?" the team needs strategy, context, and commercial judgment.
 
-This matters for AI search measurement too. Google does not give site owners a clean separate "AI search" report inside Search Console for AI Overviews or AI Mode. Those appearances are included in the normal Search Console performance data for web search. So the practical measurement job is still to combine Search Console, analytics, conversions, and lead quality instead of chasing one isolated AI visibility number.
+This matters for AI search measurement too. Google introduced dedicated generative-AI performance reporting in Search Console in June 2026, with availability starting on a subset of sites. Where the report is available, it can help show visibility in Google generative AI features such as AI Overviews and AI Mode.
+
+That still does not give the business a complete buyer-journey picture. Search Console can show visibility and clicks. Analytics can show sessions. Conversion data can show inquiries. Sales feedback can show whether those inquiries were worth pursuing. The practical measurement job is to connect those views instead of treating one AI visibility number as the answer.
 
 ## What Digitful Would Fix First
 
 The fix is not to add AI everywhere.
 
-The fix is to find the highest-value bottleneck and use AI where that bottleneck becomes easier to solve.
+The fix is to find the highest-value bottleneck and use AI where it makes that bottleneck easier to solve.
 
 A practical sequence looks like this:
 
@@ -348,6 +352,12 @@ If the reporting does not guide decisions, fix the measurement.
 
 Then use AI to move faster.
 
-[Digitful helps turn scattered marketing into a clearer growth system](/): strategy, acquisition, and automation working together instead of pulling in different directions.
+[Digitful helps turn scattered marketing into a clearer growth system](/what-we-build/): strategy, acquisition, and automation working together instead of pulling in different directions.
 
 Start with a [growth systems diagnosis](/contact/) or an AI marketing audit before you add another tool to the stack.
+
+## Sources And Evidence Notes
+
+- [Google Search Central, "Introducing Search Generative AI performance reports in Search Console"](https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports)
+
+Evidence note: Search Console reporting availability, report labels, and generative-AI feature names can change. Recheck this source before publication.

@@ -43,7 +43,7 @@ That is the real pressure AI search creates.
 
 The issue is not whether you have discovered the latest GEO tactic. It is whether your business can be understood, trusted, and selected while the buyer moves across search results, AI-generated answers, review sites, social proof, and your own website.
 
-AI search does not eliminate SEO. It raises the standard for being understood, trusted, and selected.
+AI search does not eliminate [SEO](/seo/). It raises the standard for being understood, trusted, and selected.
 
 ## The Buyer May Compare You Before Visiting You
 
@@ -70,8 +70,6 @@ Google's position is direct: its generative AI features are rooted in its core S
 Google also says you do not need an `llms.txt` file, special AI markup, forced "chunking," or pages rewritten specifically for AI to appear in its generative search features. It warns against creating large numbers of pages for every possible query variation.
 
 This does not mean nothing has changed. Search interfaces, source selection, query expansion, click behavior, and measurement are changing. It means the fundamentals still carry the load: crawlable pages, clear site structure, useful content, accurate business information, and evidence that helps people make decisions.
-
-That fits the wider growth-system principle: [AI changes speed and pressure, but it does not replace strategic clarity](/blog/ai-is-making-marketing-faster/).
 
 New label. Higher pressure. Same need for substance.
 
@@ -148,7 +146,7 @@ Selection content should help a serious prospect answer practical questions:
 - What should we expect next?
 - Is there a clear way to ask a specific question?
 
-This is where many content strategies leak. They optimize for discovery, publish educational material, and then send every reader to a generic homepage or contact form.
+Many content strategies leak at this point. They optimize for discovery, publish educational material, and then send every reader to a generic homepage or contact form.
 
 Trust without a decision path creates interest that goes nowhere.
 
@@ -220,7 +218,7 @@ Do not add special files or markup because someone promises they are a shortcut 
 
 Do not rewrite useful human content into stiff, fragmented copy because it supposedly helps a language model read it.
 
-And do not duplicate the same generic answer across dozens of pages. [Generic AI content is much easier to ignore](/blog/why-ai-generated-content-fails-qualified-leads/). The winning move is not more pages. It is sharper usefulness.
+And do not duplicate the same generic answer across dozens of pages. [Generic content is much easier to ignore](/blog/why-ai-generated-content-fails-qualified-leads/). The winning move is not more pages. It is sharper usefulness.
 
 The practical work is less theatrical: make the business legible, support its claims, remove contradictions, build useful comparison material, and connect discovery to a sensible next step.
 
@@ -240,4 +238,4 @@ Start with an [AI search visibility review](/contact/).
 - [OpenAI Help Center, "Publishers and Developers - FAQ"](https://help.openai.com/en/articles/12627856-publishers-and-developers-faq)
 - [OpenAI Help Center, "ChatGPT Search"](https://help.openai.com/en/articles/9237897-chatgpt-search)
 
-Platform features, reporting access, crawler guidance, and measurement options can change. Recheck these sources when updating this article.
+Evidence note: Platform features, reporting access, crawler guidance, and measurement options can change. Recheck these sources immediately before publication.
