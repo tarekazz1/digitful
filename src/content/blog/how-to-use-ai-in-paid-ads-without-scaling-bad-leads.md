@@ -163,6 +163,7 @@ Digitful reviews paid acquisition as a connected commercial system, with the acc
 - [Google Ads Help, "About text customization in Search campaigns"](https://support.google.com/google-ads/answer/11259373?hl=en)
 - [Google Ads Help, "About qualified leads and converted leads"](https://support.google.com/google-ads/answer/11459091?hl=en)
 - [Google Ads Help, "About offline conversion imports"](https://support.google.com/google-ads/answer/2998031?hl=en)
+
 Evidence note: Platform documentation proves that these features and goal types exist. It does not prove that they improve lead quality or commercial performance for every advertiser.
 
 Scenario note: The campaign comparison and service-business examples are hypothetical. They do not claim client results or industry benchmarks.
