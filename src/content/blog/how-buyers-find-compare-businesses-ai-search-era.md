@@ -216,14 +216,14 @@ Being present in every generated answer is neither realistic nor necessary. The 
 
 Digitful can review how your services, expertise, evidence, and search presence work together across traditional and AI-assisted discovery.
 
-**Review Your AI Search Visibility**
+Start with an [AI search visibility review](/contact/).
 
 ## Sources And Evidence Notes
 
-- Google Search Central, "Optimizing your website for generative AI features on Google Search": `https://developers.google.com/search/docs/fundamentals/ai-optimization-guide`
-- Google Search Central, "Introducing Search Generative AI performance reports in Search Console": `https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports`
-- Pew Research Center, "Google users are less likely to click on links when an AI summary appears in the results": `https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/`
-- OpenAI Help Center, "Publishers and Developers - FAQ": `https://help.openai.com/en/articles/12627856-publishers-and-developers-faq`
-- OpenAI Help Center, "ChatGPT Search": `https://help.openai.com/en/articles/9237897-chatgpt-search`
+- [Google Search Central, "Optimizing your website for generative AI features on Google Search"](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide)
+- [Google Search Central, "Introducing Search Generative AI performance reports in Search Console"](https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports)
+- [Pew Research Center, "Google users are less likely to click on links when an AI summary appears in the results"](https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/)
+- [OpenAI Help Center, "Publishers and Developers - FAQ"](https://help.openai.com/en/articles/12627856-publishers-and-developers-faq)
+- [OpenAI Help Center, "ChatGPT Search"](https://help.openai.com/en/articles/9237897-chatgpt-search)
 
 Evidence note: Platform features, reporting access, crawler guidance, and measurement options can change. Recheck these sources immediately before publication.
