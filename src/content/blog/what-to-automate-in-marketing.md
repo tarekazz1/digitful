@@ -138,7 +138,3 @@ The result may be a simple rules-based automation, an AI-assisted preparation st
 - [National Institute of Standards and Technology, "Artificial Intelligence Risk Management Framework (AI RMF 1.0)"](https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10)
 - [UK Government, "Data and AI Ethics Framework"](https://www.gov.uk/government/publications/data-ethics-framework/data-and-ai-ethics-framework)
 
-- The three-lane model, handoff controls, exception design, and measurement guidance are Digitful's operating framework. They are presented as strategic judgment rather than universal measured facts.
-- The SEO inquiry and lead summary are illustrative scenarios. They do not claim client results or benchmark performance.
-- No productivity, response-time, conversion, CAC, pipeline, or revenue benchmark is claimed.
-
