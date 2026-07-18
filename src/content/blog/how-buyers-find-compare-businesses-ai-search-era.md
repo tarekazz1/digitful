@@ -226,4 +226,5 @@ Start with an [AI search visibility review](/contact/).
 - [OpenAI Help Center, "Publishers and Developers - FAQ"](https://help.openai.com/en/articles/12627856-publishers-and-developers-faq)
 - [OpenAI Help Center, "ChatGPT Search"](https://help.openai.com/en/articles/9237897-chatgpt-search)
 
-Evidence note: Platform features, reporting access, crawler guidance, and measurement options can change. Recheck these sources immediately before publication.
+Evidence note: The linked documentation establishes the cited platform capabilities, crawler guidance, and measurement options. It does not establish that AI-search visibility, traffic, or qualified demand will improve for every site.
+
