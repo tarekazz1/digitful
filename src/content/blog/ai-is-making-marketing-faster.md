@@ -360,5 +360,3 @@ Start with a [growth systems diagnosis](/contact/) or an AI marketing audit befo
 
 - [Google Search Central, "Introducing Search Generative AI performance reports in Search Console"](https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports)
 
-Evidence note: Google's documentation supports the availability and stated scope of the Search Console generative AI performance report. It does not establish downstream lead quality, pipeline, or revenue impact.
-
