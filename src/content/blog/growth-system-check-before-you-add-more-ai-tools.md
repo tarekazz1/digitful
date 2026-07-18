@@ -176,6 +176,9 @@ Digitful helps teams turn scattered marketing into a clearer operating system ac
 
 ## Sources And Evidence Notes
 
+- [National Institute of Standards and Technology, "Artificial Intelligence Risk Management Framework (AI RMF 1.0)"](https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10)
+- [UK Government, "Data and AI Ethics Framework"](https://www.gov.uk/government/publications/data-ethics-framework/data-and-ai-ethics-framework)
+
 - The bottleneck hypothesis, system map, purchase gate, and local efficiency exception are Digitful's operating framework. They are presented as strategic guidance, not universal measured facts.
 - The worked content example is hypothetical and is labeled accordingly. It does not claim client results or a benchmark.
 - No productivity, conversion, CAC, revenue-lift, ranking, citation, or platform-performance benchmark is claimed.
