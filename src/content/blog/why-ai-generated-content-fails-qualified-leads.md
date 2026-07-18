@@ -197,8 +197,8 @@ Digitful helps teams turn content production into qualified demand through [shar
 
 ## Sources And Evidence Notes
 
-- Google Search Central: generative AI search features are rooted in core Search ranking and quality systems, and Google recommends valuable, non-commodity, people-first content. Source: [source](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide)
-- Google Search Central: scaled content abuse includes generating many pages, including with generative AI, without adding value for users. Source: [source](https://developers.google.com/search/docs/essentials/spam-policies)
-- Google Search Central: helpful content guidance emphasizes who created the content, how it was produced, and why it was created. Source: [source](https://developers.google.com/search/docs/fundamentals/creating-helpful-content)
-- Grossman et al. (2026): empirical study of 11,500 queries found AI Overviews for 51.5% of representative real-user queries and low source overlap between traditional Google results, AI Overviews, and Gemini. Source: [source](https://arxiv.org/abs/2604.27790)
-- Xu, Iqbal, and Montgomery (2026): longitudinal study of 55,393 trending queries found AI Overview activation of 13.7% overall and 64.7% for question-form queries. Source: [source](https://arxiv.org/abs/2605.14021)
+- [Google Search Central, "Optimizing your website for generative AI features on Google Search"](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide)
+- [Google Search Central, "Spam policies for Google web search"](https://developers.google.com/search/docs/essentials/spam-policies)
+- [Google Search Central, "Creating helpful, reliable, people-first content"](https://developers.google.com/search/docs/fundamentals/creating-helpful-content)
+- [Grossman et al., "How Generative AI Disrupts Search: An Empirical Study of Google Search, Gemini, and AI Overviews"](https://arxiv.org/abs/2604.27790)
+- [Xu, Iqbal, and Montgomery, "Measuring Google AI Overviews: Activation, Source Quality, Claim Fidelity, and Publisher Impact"](https://arxiv.org/abs/2605.14021)
