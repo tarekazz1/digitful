@@ -9,7 +9,7 @@ const pageCanonical = 'https://digitful.ca/';
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription} canonicalUrl={pageCanonical}>
-  <main>
+  <main class="home-page">
     <section class="hero">
       <div class="container">
         <div class="row justify-content-center">
@@ -17,7 +17,7 @@ const pageCanonical = 'https://digitful.ca/';
             <div class="hero-copy hero-copy--centered text-center">
               <span class="eyebrow mb-4">Growth systems</span>
               <h1 class="mb-4">Strategy, acquisition, and automation that work together.</h1>
-              <p id="typewriter" class="lead mb-4">
+              <p class="lead mb-4">
                 Turn scattered marketing into a clear system.
               </p>
               <div class="hero-actions justify-content-center">
@@ -69,7 +69,7 @@ const pageCanonical = 'https://digitful.ca/';
 
         <div class="service-card-grid service-card-grid--offers">
           <a href="/social-media/" class="service-card service-card__link service-card--social">
-            <span class="service-card__icon"><i class="bi bi-chat-square-text"></i></span>
+            <span class="service-card__icon"><i class="bi bi-chat-square-text" aria-hidden="true"></i></span>
             <div>
               <h3>Social Media</h3>
               <p>Content and positioning that support pipeline.</p>
@@ -77,7 +77,7 @@ const pageCanonical = 'https://digitful.ca/';
           </a>
 
           <a href="/seo/" class="service-card service-card__link service-card--seo">
-            <span class="service-card__icon"><i class="bi bi-search"></i></span>
+            <span class="service-card__icon"><i class="bi bi-search" aria-hidden="true"></i></span>
             <div>
               <h3>SEO</h3>
               <p>Search built around intent and conversion.</p>
@@ -85,7 +85,7 @@ const pageCanonical = 'https://digitful.ca/';
           </a>
 
           <a href="/paid-ads/" class="service-card service-card__link service-card--paid">
-            <span class="service-card__icon"><i class="bi bi-bullseye"></i></span>
+            <span class="service-card__icon"><i class="bi bi-bullseye" aria-hidden="true"></i></span>
             <div>
               <h3>Paid Ads</h3>
               <p>Paid acquisition with tighter targeting.</p>
@@ -93,7 +93,7 @@ const pageCanonical = 'https://digitful.ca/';
           </a>
 
           <a href="/automation/" class="service-card service-card__link service-card--automation">
-            <span class="service-card__icon"><i class="bi bi-diagram-3"></i></span>
+            <span class="service-card__icon"><i class="bi bi-diagram-3" aria-hidden="true"></i></span>
             <div>
               <h3>Process Automation</h3>
               <p>Workflow design that removes lag and buys back time.</p>
@@ -115,17 +115,17 @@ const pageCanonical = 'https://digitful.ca/';
 
         <div class="story-grid">
           <div class="story-card">
-            <span class="story-card__icon"><i class="bi bi-rocket-takeoff"></i></span>
+            <span class="story-card__icon"><i class="bi bi-rocket-takeoff" aria-hidden="true"></i></span>
             <strong>You already have demand</strong>
             <p>Interest exists, but the system around it is uneven.</p>
           </div>
           <div class="story-card">
-            <span class="story-card__icon"><i class="bi bi-graph-up-arrow"></i></span>
+            <span class="story-card__icon"><i class="bi bi-graph-up-arrow" aria-hidden="true"></i></span>
             <strong>You need clearer priorities</strong>
             <p>You want signal, not more moving parts.</p>
           </div>
           <div class="story-card">
-            <span class="story-card__icon"><i class="bi bi-lightning-charge"></i></span>
+            <span class="story-card__icon"><i class="bi bi-lightning-charge" aria-hidden="true"></i></span>
             <strong>You want systems your team can run</strong>
             <p>You need fewer manual gaps and cleaner follow-through.</p>
           </div>

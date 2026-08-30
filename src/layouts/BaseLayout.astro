@@ -99,8 +99,11 @@ const schemas = [organizationSchema, websiteSchema, ...pageSchemas].filter(Boole
       <div class="page-glow page-glow--one" aria-hidden="true"></div>
       <div class="page-glow page-glow--two" aria-hidden="true"></div>
       <div class="page-glow page-glow--three" aria-hidden="true"></div>
+      <a class="skip-link" href="#main-content">Skip to main content</a>
       <Header />
-      <slot />
+      <div id="main-content" tabindex="-1">
+        <slot />
+      </div>
       <Footer />
     </div>
 

@@ -15,12 +15,14 @@ const {
 
 <a
   href={href}
-  class={`d-inline-block flex-grow-0 ${className}`}
-  style={`max-width:${maxWidth};`}
+  class={`site-logo d-inline-block flex-grow-0 ${className}`}
+  style={`max-width: var(--logo-max-width, ${maxWidth});`}
 >
   <img
     src="/assets/images/logo.svg"
     alt="Digitful - Digital Marketing Agency"
     class="img-fluid w-100"
+    width="400"
+    height="160"
   />
 </a>
