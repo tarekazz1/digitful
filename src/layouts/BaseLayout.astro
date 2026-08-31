@@ -50,7 +50,69 @@ const schemas = [organizationSchema, websiteSchema, ...pageSchemas].filter(Boole
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
     <meta name="robots" content="index,follow" />
-    <meta name="theme-color" content={themeColor} />
+    <meta name="theme-color" content={themeColor} data-theme-color />
+    <script is:inline>
+      (() => {
+        const storageKey = 'digitful-theme';
+        const systemTheme = window.matchMedia('(prefers-color-scheme: light)');
+
+        const readStoredTheme = () => {
+          try {
+            const storedTheme = localStorage.getItem(storageKey);
+            return storedTheme === 'light' || storedTheme === 'dark' ? storedTheme : null;
+          } catch {
+            return null;
+          }
+        };
+
+        const applyTheme = (theme, persist = false) => {
+          const nextTheme = theme === 'light' ? 'light' : 'dark';
+          const switchTo = nextTheme === 'light' ? 'dark' : 'light';
+          const toggle = document.querySelector('[data-theme-toggle]');
+
+          document.documentElement.dataset.theme = nextTheme;
+          document.documentElement.style.colorScheme = nextTheme;
+          document.querySelector('[data-theme-color]')?.setAttribute(
+            'content',
+            nextTheme === 'light' ? '#f4f2ec' : '#171c24'
+          );
+
+          if (toggle) {
+            toggle.setAttribute('aria-label', `Switch to ${switchTo} mode`);
+            toggle.setAttribute('title', `Switch to ${switchTo} mode`);
+          }
+
+          if (persist) {
+            try {
+              localStorage.setItem(storageKey, nextTheme);
+            } catch {
+              // The selection still applies for this page if storage is unavailable.
+            }
+          }
+        };
+
+        const storedTheme = readStoredTheme();
+        applyTheme(storedTheme || (systemTheme.matches ? 'light' : 'dark'));
+
+        document.addEventListener('DOMContentLoaded', () => {
+          const toggle = document.querySelector('[data-theme-toggle]');
+          applyTheme(document.documentElement.dataset.theme);
+
+          toggle?.addEventListener('click', () => {
+            const currentTheme = document.documentElement.dataset.theme === 'light'
+              ? 'light'
+              : 'dark';
+            applyTheme(currentTheme === 'light' ? 'dark' : 'light', true);
+          });
+        }, { once: true });
+
+        systemTheme.addEventListener?.('change', (event) => {
+          if (!readStoredTheme()) {
+            applyTheme(event.matches ? 'light' : 'dark');
+          }
+        });
+      })();
+    </script>
     <link rel="canonical" href={canonicalUrl} />
     <link rel="manifest" href="/site.webmanifest" />
     <title>{title}</title>
