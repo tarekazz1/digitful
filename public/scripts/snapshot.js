@@ -35,8 +35,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const score = (category) => (category?.score != null ? Math.round(category.score * 100) : null);
 
       const perfScore = score(categories.performance);
+      const accessibilityScore = score(categories.accessibility);
       const seoScore = score(categories.seo);
       const bestPractices = score(categories['best-practices']);
+      const agenticBrowsing = score(categories['agentic-browsing']);
       const hostname = (() => {
         try {
           return new URL(siteUrl).hostname.replace(/^www\./, '');
@@ -61,8 +63,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const tips = [];
       if (perfScore != null && perfScore < 90) tips.push('Tighten image delivery and caching.');
+      if (accessibilityScore != null && accessibilityScore < 90)
+        tips.push('Fix contrast, labels, and keyboard access.');
       if (seoScore != null && seoScore < 90) tips.push('Improve metadata, structure, and search intent alignment.');
       if (bestPractices != null && bestPractices < 90) tips.push('Clean up technical issues that weaken trust and speed.');
+      if (agenticBrowsing != null && agenticBrowsing < 90)
+        tips.push('Make key content and interactions easier for browsing agents to understand.');
       if (!tips.length) tips.push('Strong baseline. The next wins are likely strategic, not technical.');
 
       const contactUrl = new URL('/contact/', window.location.origin);
@@ -82,8 +88,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
             ${[
               ['Performance', perfScore],
+              ['Accessibility', accessibilityScore],
+              ['Best Practices', bestPractices],
               ['SEO', seoScore],
-              ['Best Practices', bestPractices]
+              ['Agentic Browsing', agenticBrowsing]
             ]
               .map(
                 ([label, value]) => `
