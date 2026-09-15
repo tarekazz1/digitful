@@ -24,6 +24,12 @@ Working voice principle:
 
 > We found the part that’s making this harder. Here’s what to do about it.
 
+Homepage density rule:
+
+> **One headline + one layer of supporting information. Not two.**
+
+Do not add redundant benefit strips or summary copy when the section items already explain the point.
+
 ---
 
 ## Header CTA
@@ -66,9 +72,7 @@ Where things usually go wrong
 
 More traffic won’t fix a messy system.
 
-**Body**
-
-If the message is unclear, the handoff is clunky, or follow-up takes too long, adding more traffic just gives the problem more visitors.
+Do **not** add a separate section-summary paragraph below this headline on the homepage. The three issue blurbs provide the supporting layer.
 
 ### Unclear message
 
@@ -94,9 +98,7 @@ What we actually do
 
 Four parts. One growth system.
 
-**Body**
-
-Use one, combine a few, or connect all four. The point is not more activity. It is less friction.
+Do **not** add a separate section-summary paragraph below this headline on the homepage. The four offer descriptions provide the supporting layer.
 
 ### Social Media
 
@@ -126,9 +128,7 @@ Probably a good fit if...
 
 The business is moving. The system is lagging behind.
 
-**Body**
-
-Digitful is most useful when demand already exists, but the marketing and operations around it are harder than they need to be.
+Do **not** add a separate section-summary paragraph below this headline on the homepage. The three fit points provide the supporting layer.
 
 ### You already have demand
 
@@ -201,6 +201,17 @@ Try the Digitful GPT
 
 ---
 
+## Removed homepage copy
+
+Do not reintroduce the decorative/summary strip:
+- `Clearer`
+- `More efficient`
+- `Built for real business`
+
+The homepage should feel like it knows what to say and stops once it has said it.
+
+---
+
 ## Implementation note
 
-These words are approved as the working homepage copy for the redesign. Minor line breaks may change for responsive layout, but wording should not be rewritten during visual implementation without a new explicit content decision.
+These words and content-density decisions are approved for the homepage redesign. Minor line breaks may change for responsive layout, but wording or hierarchy should not be rewritten during visual implementation without a new explicit content decision.
