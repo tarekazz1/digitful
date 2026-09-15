@@ -1,15 +1,14 @@
 ---
-// Reusable Logo component
 export interface Props {
   maxWidth?: string;
   className?: string;
   href?: string;
 }
 
-const { 
-  maxWidth = "150px", 
-  className = "", 
-  href = "/" 
+const {
+  maxWidth = "150px",
+  className = "",
+  href = "/"
 } = Astro.props;
 ---
 
@@ -20,18 +19,18 @@ const {
   aria-label="Digitful home"
 >
   <img
-    src="/assets/images/logo.svg"
-    alt="Digitful - Digital Marketing Agency"
+    src="/assets/brand/digitful-wordmark-on-dark.svg"
+    alt="Digitful"
     class="site-logo__image site-logo__image--dark img-fluid w-100"
-    width="400"
-    height="160"
+    width="1809"
+    height="515"
   />
   <img
-    src="/assets/images/logo-light.svg"
+    src="/assets/brand/digitful-wordmark-on-light.svg"
     alt=""
     aria-hidden="true"
     class="site-logo__image site-logo__image--light img-fluid w-100"
-    width="400"
-    height="160"
+    width="1809"
+    height="515"
   />
 </a>
