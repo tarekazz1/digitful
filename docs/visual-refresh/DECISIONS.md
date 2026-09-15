@@ -372,9 +372,9 @@ Preview run: `34989464135` — build and deploy successful.
 ---
 
 ## D028 — Extract a reusable design system before adapting more page types
-**Status:** Approved roadmap decision
+**Status:** Approved — KEEP
 
-After the homepage is approved, consolidate the visual language that proved successful into reusable design-system primitives **before** rebuilding the service/contact/blog page types.
+Consolidate the visual language that proved successful on the homepage into reusable design-system primitives **before** rebuilding the service/contact/blog page types.
 
 Centralize identity-level decisions such as:
 - colour/theme tokens
@@ -387,14 +387,23 @@ Centralize identity-level decisions such as:
 - editorial ruled rows/lists
 - shared interaction/motion timing
 
-Do **not** turn every homepage composition into a rigid component. The design system should centralize identity and repeated behaviour while leaving page composition flexible enough for services, contact and editorial/blog pages to have different structures.
+Do **not** turn every homepage composition into a rigid component. The design system centralizes identity and repeated behaviour while leaving page composition flexible enough for services, contact and editorial/blog pages to have different structures.
 
-Only extract patterns that have been visually validated; do not prematurely abstract one-off decoration. The goal is that future site-wide changes to colours, typography, rules, controls, icon treatments and motion can be made centrally instead of element by element.
+Implementation kept the safe ownership boundaries established during review:
+- preserved `_editorial-foundations.scss` rather than renaming/restructuring it
+- added `_design-system.scss` for proven repeated mechanics and visual-parity adoption
+- kept `HomeIcon.astro` homepage-specific until another page proves the same reuse need
+- left D031 jokes and their expressive timing bespoke
+- did not change homepage markup or composition as part of D028
+- Snapshot and homepage interaction styles consume shared mechanics without changing their behaviour
 
-Timing: immediately after final homepage KEEP, before the service-page implementation pass.
+D028 implementation source: `d4850dc1b521350b0c8795270fd2fee6d3ccf5f6`.
+Initial D028 preview run: `35009136933` — build and deploy successful.
 
-Final approved homepage rendered source after the hero-copy trim: `c914f6252ec30d99a4adf3979cd5593b5f6ca68d`.
-Preview run: `34992817965` — build and deploy successful.
+Final reviewed homepage source, including the later approved hero-support copy refinement: `637d4cc84c1452ef1cdbfecda505e8f6bb9ae0ba`.
+Final review preview run: `35012284588` — build and deploy successful.
+
+Production remains untouched.
 
 ---
 
@@ -496,7 +505,22 @@ Production remains untouched.
 
 ---
 
+## D033 — Clarify the homepage hero support line
+**Status:** Approved — KEEP
+
+Keep the headline `Marketing works better when the parts talk to each other.` and replace the supporting line with concrete, client-readable language rather than repeating the same idea through the more marketing-specific phrase `whole journey`.
+
+Approved support line:
+`What people see, where they find you, what they do next, and how you follow up.`
+
+This change does not alter the homepage structure, system map, CTA hierarchy, or D028 design-system implementation.
+
+Implementation source: `637d4cc84c1452ef1cdbfecda505e8f6bb9ae0ba`.
+Preview run: `35012284588` — build and deploy successful.
+Production remains untouched.
+
+---
+
 ## Current pending decisions
-- Exact production token values after browser/accessibility testing.
 - Exact section compositions for non-home page types.
 - Final implementation choices for deferred blog/mobile/tablet layout observations.
