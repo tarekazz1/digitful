@@ -213,6 +213,29 @@ Implementation may tune exact token values, spacing and line breaks in-browser f
 
 ---
 
+## D020 — Upgrade Astro before typography work
+**Status:** Approved and implemented on `visual-refresh`; preview validation successful
+
+Upgrade the redesign branch from Astro `5.6.1` to Astro `7.3.2` before selecting the new display typeface.
+
+Reasons:
+- use the current Astro generation before deeper redesign work
+- prepare for Astro's newer font tooling when testing the display typeface
+- avoid rebuilding the typography pipeline twice
+- keep the framework upgrade isolated from homepage composition, logo replacement and font selection
+
+Implementation rules:
+- Node 22 for source and preview builds
+- refreshed `package-lock.json`
+- `npm ci` for reproducible GitHub Pages builds
+- no visual redesign bundled into the framework upgrade
+
+Upgrade package commit: `7d5f709337204c960a4444e905bc9d59bec2f6f8`.
+Previewed source: `ea8162f396f103cd7844f40b58ef1850ef07b884`.
+Preview run: `34972381758` — build and deploy successful.
+
+---
+
 ## Current pending decisions
 - Exact display typeface after browser testing.
 - Final SVG logo masters and minimum-size/clear-space rules.
