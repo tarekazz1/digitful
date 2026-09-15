@@ -111,12 +111,12 @@ const pageCanonical = 'https://digitful.ca/contact/';
             <div class="contact-card">
               <span class="contact-card__icon"><i class="bi bi-envelope" aria-hidden="true"></i></span>
               <strong>Email</strong>
-              <p class="mb-0"><a href="mailto:ping@digitful.ca" class="link-light text-decoration-none">ping@digitful.ca</a></p>
+              <p class="mb-0"><a href="mailto:ping@digitful.ca" class="contact-card__link text-decoration-none">ping@digitful.ca</a></p>
             </div>
             <div class="contact-card">
               <span class="contact-card__icon"><i class="bi bi-telephone" aria-hidden="true"></i></span>
               <strong>Call</strong>
-              <p class="mb-0"><a href="tel:+15797797779" class="link-light text-decoration-none">+1 (579) 779-7779</a></p>
+              <p class="mb-0"><a href="tel:+15797797779" class="contact-card__link text-decoration-none">+1 (579) 779-7779</a></p>
             </div>
             <div class="contact-card">
               <span class="contact-card__icon"><i class="bi bi-globe2" aria-hidden="true"></i></span>
@@ -129,3 +129,14 @@ const pageCanonical = 'https://digitful.ca/contact/';
     </section>
   </main>
 </BaseLayout>
+
+<style>
+  .contact-card__link {
+    color: var(--site-text);
+  }
+
+  .contact-card__link:hover,
+  .contact-card__link:focus {
+    color: var(--site-accent-soft);
+  }
+</style>
