@@ -147,12 +147,12 @@ These PNG concepts are reference assets, not final production masters. Final sit
 
 ---
 
-## D017 — Homepage copy voice and wording
+## D017 — Homepage copy voice, wording, and density
 **Status:** Approved
 
 Lock the new non-blog homepage copy before implementation. The tone is plainspoken, useful, concise, lightly witty when it helps the point, and confident without agency chest-thumping.
 
-Use `docs/brand/HOMEPAGE-COPY.md` as the source of truth for the approved homepage wording.
+Use `docs/brand/HOMEPAGE-COPY.md` as the source of truth for the approved homepage wording and content hierarchy.
 
 Key approved choices include:
 - Header CTA: `Talk to Digitful`
@@ -164,15 +164,36 @@ Key approved choices include:
 - Instant Snapshot: `See what your website is making harder than it should be.`
 - Final CTA: `Bring the messy version.`
 
+Homepage density rule: **one headline + one layer of supporting information, not two**. Do not add separate summary paragraphs under `What we fix`, `Core offers`, or `Good fit` when their item blurbs already provide the supporting layer. Remove the decorative `Clearer / More efficient / Built for real business` strip.
+
 Avoid generic agency language such as `drive growth`, `unlock potential`, `scale smarter`, `transform your business`, and `results-driven`.
 
-Minor line breaks may change responsively, but wording should not be rewritten during implementation without another explicit content decision.
+Minor line breaks may change responsively, but wording/hierarchy should not be rewritten during implementation without another explicit content decision.
+
+---
+
+## D018 — Mobile homepage design specimen
+**Status:** Approved
+
+The mobile homepage specimen is approved as the working mobile design direction.
+
+Approved mobile principles:
+- same visual identity as desktop, not a stripped generic mobile theme
+- strong single-column hierarchy
+- less text and fewer simultaneous focal points
+- touch-friendly controls and CTAs
+- retained paper/ink/coral/teal/mustard identity
+- selective annotations rather than decorative clutter
+- real homepage content and Instant Snapshot remain intact
+- sections stack and simplify rather than merely shrink the desktop layout
+
+This approval validates the visual constitution on mobile. It does not yet authorize implementation; dark-mode validation remains before the homepage design direction is frozen.
 
 ---
 
 ## Current pending decisions
+- Dark-mode homepage specimen and final dark-mode token values.
 - Exact display typeface after browser testing.
 - Final SVG logo masters and minimum-size/clear-space rules.
-- Final dark-mode token values after visual test.
-- Exact section compositions for each page type.
+- Exact section compositions for non-home page types.
 - Final implementation choices for deferred blog/mobile/tablet layout observations.
