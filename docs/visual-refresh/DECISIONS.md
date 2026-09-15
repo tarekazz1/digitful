@@ -95,6 +95,21 @@ This file records approved or working decisions so the rationale survives across
 
 ---
 
+## D010 — Logo links have a stable accessible name
+**Status:** Approved — KEEP
+
+**Decision:** Add `aria-label="Digitful home"` to the reusable logo link in `src/components/Logo.astro`.
+
+**Why:** The site swaps between two logo images for dark/light themes. The accessible name should remain stable regardless of which visual logo is shown. This addresses the Lighthouse/Agentic discernible-link issue without changing the visible design or navigation destination.
+
+**Reviewed source commit:** `b9f1d47898b0481bb1cadf346c46fd49dfba1033`
+
+**Preview deployment run:** `34956432099` — successful.
+
+**User decision:** KEEP after live preview review on `preview.digitful.ca`.
+
+---
+
 ## Pending decisions
 The following are NOT approved design changes yet. They are experiments to test visually:
 - Degree of glow removal.
