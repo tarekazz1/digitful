@@ -1,0 +1,88 @@
+/*
+ * Digitful reusable design-system mechanics.
+ *
+ * D028 deliberately leaves validated global shell/control behaviour in
+ * _editorial-foundations.scss. This layer owns repeated visual mechanics that
+ * page compositions can consume without forcing them into shared templates.
+ */
+
+:root {
+  /* Stable brand aliases used when a component needs an invariant ink/paper value. */
+  --brand-ink: #191a1b;
+  --brand-paper: #f0e7d5;
+
+  /* Typography roles. Astro supplies the actual font-family variables. */
+  --type-body: var(--font-body, 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif);
+  --type-display: var(--font-display, 'Arial Narrow', sans-serif);
+  --type-display-weight: 800;
+  --type-display-xl: clamp(4rem, 7vw, 7rem);
+  --type-display-lg: clamp(3rem, 5.25vw, 5.25rem);
+  --type-title-lg: clamp(1.55rem, 2.3vw, 2.25rem);
+  --type-annotation-size: 0.82rem;
+
+  /* Structural rules. */
+  --ds-rule-width: 2px;
+  --ds-rule-thin-width: 1px;
+  --ds-rule-strong: var(--ds-rule-width) solid var(--site-border);
+  --ds-rule-subtle: var(--ds-rule-thin-width) solid var(--site-border-subtle);
+
+  /* Shared spacing roles, not page templates. */
+  --space-section: clamp(3.8rem, 6vw, 5.75rem);
+  --space-section-wide: clamp(4rem, 6.5vw, 6rem);
+  --space-editorial-gap: clamp(2.25rem, 5vw, 5rem);
+
+  /* Mechanical motion. Bespoke interaction durations remain page-local. */
+  --motion-fast: 160ms;
+  --motion-medium: 180ms;
+  --motion-standard: 220ms;
+  --motion-ease: ease;
+
+  /* Focus treatment. */
+  --focus-width: 3px;
+  --focus-offset: 3px;
+  --focus-offset-roomy: 4px;
+
+  /* Technical panel / print mechanics. */
+  --technical-grid-size: 30px;
+  --technical-grid-lines:
+    linear-gradient(var(--site-border-subtle) 1px, transparent 1px),
+    linear-gradient(90deg, var(--site-border-subtle) 1px, transparent 1px);
+  --print-offset-lg: 8px 8px 0;
+  --print-offset-sm: 5px 5px 0;
+
+  /* Validated icon-disc geometry. The icon artwork itself remains page-owned. */
+  --icon-disc-size: clamp(4rem, 5vw, 4.75rem);
+  --icon-disc-size-mobile: 3.75rem;
+}
+
+body {
+  font-family: var(--type-body);
+}
+
+h1,
+h2,
+h3,
+.h1,
+.h2,
+.h3,
+.hero-copy h1,
+.service-hero h1,
+.contact-hero h1,
+.blog-hero h1,
+.blog-article-hero h1,
+.section-intro h2,
+.about-content h2,
+.service-info h2,
+.testimonials h2,
+.gpt-section h2 {
+  font-family: var(--type-display);
+  font-weight: var(--type-display-weight);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion-fast: 0ms;
+    --motion-medium: 0ms;
+    --motion-standard: 0ms;
+  }
+}
