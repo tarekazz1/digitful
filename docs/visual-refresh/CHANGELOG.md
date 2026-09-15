@@ -118,25 +118,26 @@ Chronological record of setup and implementation changes for the visual-refresh 
 - Decision: D020.
 
 ### Typography browser test — Astro Fonts API
-- Status: **PENDING USER REVIEW**.
-- Replaced the external Google Fonts stylesheet for Inter on the candidate branch with Astro 7's built-in Fonts API; Inter remains the body/site font, so this changes delivery rather than visual choice.
-- Astro now downloads/caches the configured fonts at build time and serves them from the site output.
-- Added temporary comparison page: `/type-test/`.
-- Comparison uses real approved homepage language and keeps body copy in Inter while testing display treatment.
-- Candidates:
-  - baseline: Inter
-  - Candidate 1: Barlow Condensed
-  - Candidate 2: IBM Plex Sans Condensed
-  - Candidate 3: Archivo Black
-- Candidate display fonts are only injected on the typography comparison page; they are not yet applied site-wide.
-- Source commit pinned for review: `3508f01f363d69f04d15136ce23ab35f7ddd4abe`.
+- Compared the current Inter baseline with Barlow Condensed, IBM Plex Sans Condensed and Archivo Black using real approved homepage language on `/type-test/`.
+- Body copy stayed in Inter for every specimen.
+- Source used for the comparison: `3508f01f363d69f04d15136ce23ab35f7ddd4abe`.
 - Preview run `34973409207`: build **success**, deploy **success**.
+- User selected **Barlow Condensed**.
+
+### Typography locked — Barlow Condensed
+- **APPROVED**.
+- Barlow Condensed 800 is now the display/headline face.
+- Inter remains the body/interface face.
+- Both are delivered through Astro's Fonts API; no external Google Fonts stylesheet is required for the selected system.
+- Applied Barlow Condensed to primary display headings in the shared layout.
+- Implementation source: `12ad2246ad73344bbf33674bf8eb2585e7d10b2e`.
+- Preview run `34974525550`: build **success**, deploy **success**.
+- Decision: D021.
 - Production remains untouched.
 
 ### Current preview source
-- `3508f01f363d69f04d15136ce23ab35f7ddd4abe`
+- `12ad2246ad73344bbf33674bf8eb2585e7d10b2e`
 
 ### Next action
-- Review `https://preview.digitful.ca/type-test/` on desktop/mobile and light/dark.
-- Choose the display direction from the four specimens, or request an adjustment/another candidate before locking typography.
-- After the display face is approved: finalize the `digitful.` SVG logo system against it, then rebuild the homepage structure and remove the old generic card-heavy layout.
+- Finalize the `digitful.` SVG logo system against the approved Barlow Condensed + Inter typography system.
+- After logo approval, rebuild the homepage structure and remove the old generic card-heavy layout.
