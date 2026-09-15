@@ -4,6 +4,10 @@
  * D028 deliberately leaves validated global shell/control behaviour in
  * _editorial-foundations.scss. This layer owns repeated visual mechanics that
  * page compositions can consume without forcing them into shared templates.
+ *
+ * Existing homepage class names stay intact during this pass. Compatibility
+ * selectors below make the approved homepage consume the same mechanics while
+ * neutral primitive names are available to later page types.
  */
 
 :root {
@@ -77,6 +81,138 @@ h3,
 .gpt-section h2 {
   font-family: var(--type-display);
   font-weight: var(--type-display-weight);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: var(--focus-width) solid var(--site-accent);
+  outline-offset: var(--focus-offset);
+}
+
+/* Neutral primitives + homepage compatibility. */
+.icon-disc,
+.home-icon-disc {
+  display: inline-grid;
+  width: var(--icon-disc-size);
+  height: var(--icon-disc-size);
+  place-items: center;
+  flex: 0 0 auto;
+  color: var(--brand-ink);
+  border: var(--ds-rule-strong);
+  border-radius: 50%;
+  transition: transform var(--motion-fast) var(--motion-ease);
+}
+
+.icon-disc--coral,
+.home-icon-disc--coral {
+  background: var(--site-accent);
+}
+
+.icon-disc--mustard,
+.home-icon-disc--mustard {
+  background: var(--site-mustard);
+}
+
+.icon-disc--teal,
+.home-icon-disc--teal {
+  background: var(--site-teal);
+}
+
+.editorial-row,
+.home-editorial-row {
+  display: grid;
+  align-items: end;
+  gap: var(--space-editorial-gap);
+}
+
+.technical-grid,
+.home-system-map,
+.home-snapshot__copy {
+  background:
+    var(--technical-grid-lines),
+    var(--site-surface);
+  background-size: var(--technical-grid-size) var(--technical-grid-size);
+}
+
+.technical-panel-offset,
+.home-system-map {
+  box-shadow: var(--print-offset-lg) var(--site-mustard);
+}
+
+.technical-annotation,
+.home-hero__scribble,
+.home-fit__scribble {
+  color: var(--site-text);
+  font-size: var(--type-annotation-size);
+  font-style: italic;
+  font-weight: 750;
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+/* Homepage adoption bridge: values remain visually identical to the approved source. */
+.home-page {
+  --home-rule: var(--ds-rule-strong);
+  --home-thin-rule: var(--ds-rule-subtle);
+}
+
+.home-hero__copy h1 {
+  font-size: var(--type-display-xl);
+}
+
+.home-section,
+.home-fit {
+  padding-block: var(--space-section);
+}
+
+.home-snapshot {
+  padding-block: var(--space-section-wide);
+}
+
+.home-section__head h2,
+.home-fit__intro h2,
+.home-snapshot__copy h2,
+.home-cta h2 {
+  font-size: var(--type-display-lg);
+}
+
+.home-issue h3,
+.home-service h3 {
+  font-size: var(--type-title-lg);
+}
+
+.home-service {
+  transition:
+    background-color var(--motion-fast) var(--motion-ease),
+    color var(--motion-fast) var(--motion-ease);
+}
+
+.home-service__arrow,
+.home-system-map__node::after {
+  transition: transform var(--motion-fast) var(--motion-ease);
+}
+
+.home-system-map {
+  transition: transform var(--motion-medium) var(--motion-ease);
+}
+
+@media (max-width: 767.98px) {
+  .technical-panel-offset,
+  .home-system-map {
+    box-shadow: var(--print-offset-sm) var(--site-mustard);
+  }
+}
+
+@media (max-width: 575.98px) {
+  .icon-disc,
+  .home-icon-disc {
+    width: var(--icon-disc-size-mobile);
+    height: var(--icon-disc-size-mobile);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
