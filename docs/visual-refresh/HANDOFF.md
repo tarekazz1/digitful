@@ -46,11 +46,6 @@ Main performance findings remain: render-blocking CSS/Google Fonts, Bootstrap Ic
 3. Footer copyright contrast — KEEP — `51c3f18531cd49b26df6d65b18807d9bc5867baf`
 4. Thank-you / short-page footer position — KEEP — `939a771c5ed93cf6ca80a1de1046ddcaed247f44`
 
-Current preview still pins the last approved rendered source:
-`939a771c5ed93cf6ca80a1de1046ddcaed247f44`
-
-Docs/brand commits after that are intentionally not previewed because they do not change the rendered site.
-
 ## Approved visual direction
 Decision D015:
 
@@ -155,29 +150,57 @@ The homepage direction is now frozen across desktop, mobile, light and dark mode
 
 Implementation may tune exact colour values, spacing, line-height and responsive line breaks for accessibility and browser fit without reopening the design. Material visual changes require a new decision.
 
-## Immediate next step — implementation begins
-Start the redesign on `visual-refresh` with one isolated foundational implementation step:
+## Current preview candidate — editorial foundations
+Status: **PENDING USER REVIEW**.
 
-1. translate the visual constitution into design tokens/foundational CSS
-2. apply the shared shell/header/footer/typography/colour treatment needed by the approved system
-3. preserve all existing functional behaviour
-4. build successfully
-5. pin the preview repo to the exact resulting source SHA
-6. deploy to `preview.digitful.ca`
-7. review light/dark + desktop/mobile before continuing
+Preview source:
+`8f30106882e3e0b659865c1187f0aa5dc50ec96a`
 
-Do **not** rebuild all homepage sections in the same first commit. The homepage content/layout rebuild follows only after the foundations are reviewed.
+Preview run:
+`34969653064` — build success, deploy success.
+
+What changed:
+- added `src/assets/_editorial-foundations.scss` after the legacy overrides
+- applied approved light/dark palette tokens
+- flattened the global background and removed page-glow markup
+- reduced radii and removed soft/glass shadows
+- strengthened border/rule treatment
+- restyled shared navigation, dropdown, theme toggle, buttons, forms, footer and generic legacy surfaces
+- changed header CTA to approved wording `Talk to Digitful`
+- kept Inter for this foundation pass; exact display typeface remains pending browser testing
+
+Important: the homepage has **not** yet been rebuilt to match the approved specimen. Its old section structure/content remains while inheriting the new foundation layer.
+
+Production `main` / `digitful.ca` remain untouched.
+
+## Immediate next step
+User reviews `preview.digitful.ca` for this foundation pass.
+
+Review light + dark and desktop + mobile, focusing on:
+- header/nav/dropdown/theme toggle
+- overall paper/ink palette and contrast
+- button treatment
+- generic surfaces and forms
+- footer
+- readability and obvious regressions
+
+Do not judge homepage composition against the final mockup yet; that comes after the foundation pass is accepted.
+
+After user says KEEP:
+1. record the foundation decision
+2. rebuild homepage against the approved specimen and locked copy
+3. deploy exact source SHA to preview
+4. review homepage before adapting other page types
 
 ## Later implementation sequence
-After foundations are approved:
-1. rebuild homepage against the approved specimen and locked copy
-2. adapt service page type
-3. adapt contact and thank-you page types
-4. adapt blog index/article while preserving editorial reading priority
-5. resolve deferred responsive/composition observations within those page types
-6. full desktop/mobile dark/light QA
-7. freeze visual baseline
-8. performance work: SVG icon migration, JS scoping, CSS/Bootstrap dependency map, safe CSS reduction, re-measure, then fonts/GTM/caching as justified
+After homepage foundations are approved:
+1. adapt service page type
+2. adapt contact and thank-you page types
+3. adapt blog index/article while preserving editorial reading priority
+4. resolve deferred responsive/composition observations within those page types
+5. full desktop/mobile dark/light QA
+6. freeze visual baseline
+7. performance work: SVG icon migration, JS scoping, CSS/Bootstrap dependency map, safe CSS reduction, re-measure, then fonts/GTM/caching as justified
 
 ## Functional behaviours that must not break
 Mobile navbar, Services dropdown, theme toggle, navigation, blog filters, homepage diagnostic, diagnostic→Contact handoff, contact toggles/hidden fields, production FormSubmit/thank-you redirect, logos, responsive layouts, production GTM/GA, SEO output and CLS stability.
