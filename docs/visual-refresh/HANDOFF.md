@@ -133,17 +133,18 @@ Security-header hardening is explicitly out of scope for this performance/visual
 ## Preview environment
 DNS provider: Namecheap.
 
-A new DNS record has been added:
+A DNS record has been added:
 - Type: CNAME
 - Host: `preview`
 - Value: `tarekazz1.github.io`
-- Resulting intended hostname: `preview.digitful.ca`
+- Hostname: `preview.digitful.ca`
 
 Preview repo: `tarekazz1/digitful-preview`
 
 GitHub Pages source in preview repo is set to **GitHub Actions**.
-
-Preview deployment workflow exists and has completed successfully (green check).
+Custom domain is set to `preview.digitful.ca`.
+GitHub DNS check succeeded and HTTPS is enabled.
+The preview site loads successfully at `https://preview.digitful.ca`.
 
 The preview repo currently pins the source checkout to:
 `c8fac4f78295d2576af0e92b04329f4e938c7b6f`
@@ -154,6 +155,18 @@ Preview safeguards implemented by the preview deployment:
 - Production GTM loader is stripped from the preview build so preview traffic does not pollute production analytics.
 - FormSubmit submissions are blocked on preview.
 - Preview build contains `CNAME` for `preview.digitful.ca`.
+
+### Preview infrastructure issue already encountered
+The first live preview loaded but the light/dark theme switch did not work.
+
+Cause:
+- The original preview-only GTM-removal regex was too broad and removed the inline theme-switch script together with the GTM script.
+
+Fix:
+- Preview repo commit `1d0d972211ca0a1dc551adff22a1463d39ef9260` changes post-processing so each script block is examined independently and only blocks containing `GTM-53THDCJH` are removed.
+- GTM noscript is removed separately.
+- The theme script is preserved.
+- Production source was never affected by this preview-only defect.
 
 ## Review / approval process
 For every material change:
@@ -195,11 +208,12 @@ Performance improvement alone is never enough to accept a change. Existing navig
 - Local desktop/mobile visual QA: complete.
 - Visual refresh plan: defined.
 - Namecheap preview CNAME: added.
-- Preview repo: created.
-- Preview GitHub Actions deployment: green/successful.
+- Preview custom domain / DNS / HTTPS: complete.
+- Preview site loads successfully.
+- Preview theme-toggle infrastructure defect: identified and fixed in preview repo; re-verification pending.
 - Production code changes: NONE.
 - Approved visual fixes implemented: NONE yet.
 
 ## Immediate next step
-1. Confirm `preview.digitful.ca` is serving the baseline preview correctly and is visually equivalent to production.
-2. Once baseline preview is validated, begin the first isolated fix: Contact light-mode links.
+1. Re-check `preview.digitful.ca` after the preview-infrastructure fix and confirm the light/dark switch works.
+2. Once baseline preview parity is confirmed, begin the first isolated fix: Contact light-mode links.
