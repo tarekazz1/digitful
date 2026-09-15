@@ -117,10 +117,26 @@ Chronological record of setup and implementation changes for the visual-refresh 
 - No homepage composition, logo, font or production-site changes were bundled into this upgrade.
 - Decision: D020.
 
+### Typography browser test — Astro Fonts API
+- Status: **PENDING USER REVIEW**.
+- Replaced the external Google Fonts stylesheet for Inter on the candidate branch with Astro 7's built-in Fonts API; Inter remains the body/site font, so this changes delivery rather than visual choice.
+- Astro now downloads/caches the configured fonts at build time and serves them from the site output.
+- Added temporary comparison page: `/type-test/`.
+- Comparison uses real approved homepage language and keeps body copy in Inter while testing display treatment.
+- Candidates:
+  - baseline: Inter
+  - Candidate 1: Barlow Condensed
+  - Candidate 2: IBM Plex Sans Condensed
+  - Candidate 3: Archivo Black
+- Candidate display fonts are only injected on the typography comparison page; they are not yet applied site-wide.
+- Source commit pinned for review: `3508f01f363d69f04d15136ce23ab35f7ddd4abe`.
+- Preview run `34973409207`: build **success**, deploy **success**.
+- Production remains untouched.
+
 ### Current preview source
-- `ea8162f396f103cd7844f40b58ef1850ef07b884`
+- `3508f01f363d69f04d15136ce23ab35f7ddd4abe`
 
 ### Next action
-- The framework upgrade is validated by CI and preview deployment.
-- Next design task: browser-test candidate display typefaces using the Astro 7 font pipeline, then lock the display font before final SVG logo work and homepage structural rebuild.
-- The editorial foundation layer itself remains the current visual candidate; the old homepage card-heavy composition is still intentionally present until the structural rebuild.
+- Review `https://preview.digitful.ca/type-test/` on desktop/mobile and light/dark.
+- Choose the display direction from the four specimens, or request an adjustment/another candidate before locking typography.
+- After the display face is approved: finalize the `digitful.` SVG logo system against it, then rebuild the homepage structure and remove the old generic card-heavy layout.
