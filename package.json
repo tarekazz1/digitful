@@ -11,7 +11,7 @@
     "purge": "purgecss --config purgecss.config.js --output purged-css/"
   },
   "dependencies": {
-    "astro": "^5.6.1",
+    "astro": "7.3.2",
     "bootstrap": "^5.3.6",
     "bootstrap-icons": "^1.13.1"
   },
