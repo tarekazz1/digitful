@@ -55,7 +55,7 @@ Important caveat:
 - Do NOT approve pixel-level icon weight/alignment decisions from those local screenshots alone. Icon changes must be checked on the real preview site.
 
 Confirmed / actionable visual findings:
-1. Contact page, light mode: email and phone links become nearly invisible because they use `link-light`.
+1. Contact page, light mode: email and phone links become nearly invisible because they use `link-light`. **Fixed on `visual-refresh`, previewed, and approved KEEP.**
 2. Logo accessible-name bug: visible light-mode logo is decorative/empty-alt while the meaningful dark logo is hidden; add a stable accessible name to the link.
 3. Footer copyright text has insufficient contrast.
 4. Thank-you page: short content leaves footer floating above the viewport bottom; consider site-shell flex layout with main filling remaining height.
@@ -88,7 +88,7 @@ Do NOT batch these subjective changes. Each must be independently previewed, rev
 
 ## Fix / design sequence
 ### Phase 1 — objective / low-risk fixes
-1. Contact light-mode links.
+1. Contact light-mode links. **APPROVED — KEEP**
 2. Logo accessible name.
 3. Footer contrast.
 4. Thank-you short-page/footer layout.
@@ -147,7 +147,7 @@ GitHub DNS check succeeded and HTTPS is enabled.
 The preview site loads successfully at `https://preview.digitful.ca`.
 
 The preview repo currently pins the source checkout to:
-`c8fac4f78295d2576af0e92b04329f4e938c7b6f`
+`2ebd6614be8c7ea1c0f7d841fe8111ff3ec0cc92`
 
 Preview safeguards implemented by the preview deployment:
 - `noindex,nofollow,noarchive` meta directive added to built HTML.
@@ -204,6 +204,14 @@ Performance improvement alone is never enough to accept a change. Existing navig
 - Homepage/site use Bootstrap classes dynamically as well as statically; do not blindly enable current PurgeCSS.
 - Stable public scripts/logos should not receive immutable caching unless fingerprinted/versioned.
 
+## Approved source changes so far
+### Fix 1 — Contact light-mode links
+- Decision: **KEEP**.
+- Source commit reviewed: `2ebd6614be8c7ea1c0f7d841fe8111ff3ec0cc92`.
+- Change: Contact email/phone links now use a theme-aware contact link style instead of Bootstrap `link-light`.
+- Preview deployment run: `34955869009` — successful.
+- Production: untouched.
+
 ## Current status
 - Read-only technical/PageSpeed audit: complete.
 - Local desktop/mobile visual QA: complete.
@@ -214,8 +222,8 @@ Performance improvement alone is never enough to accept a change. Existing navig
 - Preview theme-toggle infrastructure defect: fixed and user-verified.
 - Preview environment: ready for controlled source changes.
 - Full page-by-page baseline parity has not been manually rechecked; relevant pages will be verified during each isolated review.
+- Approved visual fixes: 1 (Contact light-mode links).
 - Production code changes: NONE.
-- Approved visual fixes implemented: NONE yet.
 
 ## Immediate next step
-Begin the first isolated source fix on `visual-refresh`: Contact light-mode email/phone link visibility. Deploy only that exact working commit to preview and review desktop/mobile + dark/light before deciding KEEP / ADJUST / REJECT.
+Begin Fix 2 on `visual-refresh`: add a stable accessible name to the header logo link. Keep the change isolated, deploy only that exact commit to preview, verify header/logo behaviour in dark/light mode and desktop/mobile, then decide KEEP / ADJUST / REJECT.
