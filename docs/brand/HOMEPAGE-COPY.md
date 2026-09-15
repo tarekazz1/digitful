@@ -46,7 +46,7 @@ Use this four-part model:
 
 1. **Say the right thing**
 2. **Reach the right people**
-3. **Make action easy**
+3. **Make the next step clear**
 4. **Follow through**
 
 The four visible work areas — Social Media, SEO, Paid Ads, and Process Automation — are **not** the four stages of the growth system. They are practical capabilities Digitful uses to improve different parts of that system.
@@ -81,14 +81,14 @@ Marketing works better when the whole journey works together.
    - Message + priorities
 2. Reach the right people
    - Search + social + paid
-3. Make action easy
-   - Clear next steps
+3. Make the next step clear
+   - Easy to act on
 4. Follow through
    - Fewer manual gaps
 
 **Primary CTA**
 
-Talk through the problem
+Tell us what’s stuck
 
 **Secondary CTA**
 
@@ -106,7 +106,7 @@ Where things usually go wrong
 
 More traffic won’t fix a messy system.
 
-Do **not** add a separate section-summary paragraph below this headline on the homepage. The three issue blurbs provide the supporting layer.
+Do **not** add a separate section-summary paragraph below this headline on the homepage. The three problem labels and optional interactions provide the supporting layer.
 
 ### Unclear message
 
