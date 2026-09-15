@@ -158,22 +158,22 @@ Chronological record of setup and implementation changes for the visual-refresh 
 - Preview run `34978624652`: build **success**, deploy **success**.
 - Global `Logo.astro`, legacy logo assets, manifest and favicon path were restored on `visual-refresh` so the rejected candidate is no longer wired into the shared site shell.
 
-### Logo production candidate 2 — traced from approved concept
-- Status: **PENDING USER REVIEW**.
-- Rebuilt the core logo vectors by tracing the approved concept artwork itself rather than deriving lettering from Barlow or another substitute typeface.
-- Candidate assets are isolated under `public/assets/brand/candidate-2/`.
-- Candidate wordmark preserves the wider/rounder concept proportions and coral terminal dot; standalone `d.` is traced from its approved concept artwork.
-- Temporary generation workflow completed successfully and was removed after the assets were committed.
-- `/logo-test/` now reviews only the corrected light/dark wordmarks, standalone marks and basic interface-size legibility.
-- Global header/footer logo and favicon/app derivatives are deliberately **not** switched to candidate 2 yet.
+### Logo production candidate 2 — approved and finalized
+- **APPROVED — KEEP**.
+- Candidate 2 was traced from the approved concept artwork rather than generated from Barlow Condensed.
+- The approved geometry is now promoted to the primary SVG master paths under `public/assets/brand/`.
+- Added monochrome variants using the same approved geometry.
+- Shared `Logo.astro` now uses the approved wordmark for light/dark themes.
+- Generated a new favicon plus 180, 192 and 512 px touch/app derivatives from the approved standalone `d.` mark.
+- Updated `site.webmanifest` to the final ink/paper brand colours and approved app icons.
+- Updated `docs/brand/LOGO-SYSTEM.md` with final usage, clear-space and working minimum-size rules.
+- Removed the temporary `/logo-test/` review route after approval.
 - Decision: D024.
 - Production remains untouched.
 
 ### Current preview source
-- Pending pin of the exact candidate-2 review SHA.
+- Pending pin of the exact finalized-logo source SHA.
 
 ### Next action
-- Deploy the exact candidate-2 review source SHA to `preview.digitful.ca`.
-- Review `/logo-test/` and mark the corrected core logo shapes KEEP / ADJUST / REJECT.
-- Only after KEEP: wire the logo into shared header/footer, regenerate favicon/app derivatives, and finalize clear-space/minimum-size rules.
+- Deploy the finalized logo source to `preview.digitful.ca` and verify header/footer + favicon in real site context.
 - Then rebuild the homepage structure and remove the old generic card-heavy layout.

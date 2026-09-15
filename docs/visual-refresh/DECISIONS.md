@@ -286,29 +286,29 @@ Rejected implementation assets may remain temporarily on `visual-refresh` as his
 
 ---
 
-## D024 — Concept-faithful vector logo candidate 2
-**Status:** Candidate — pending preview KEEP / ADJUST / REJECT
+## D024 — Concept-faithful vector logo system
+**Status:** Approved — KEEP
 
-The second vector candidate is traced from the approved concept artwork itself instead of being regenerated from Barlow Condensed.
+Candidate 2 is the approved Digitful logo system. It is traced from the approved concept artwork itself rather than regenerated from Barlow Condensed or another substitute typeface.
 
-Review scope is intentionally limited to the core shapes:
-- primary wordmark on light
-- primary wordmark on dark
-- standalone `d.` mark on light/dark
-- basic legibility at representative interface sizes
+Approved system:
+- lowercase `digitful.` wordmark with coral terminal dot
+- wider, rounder, softer custom proportions from the approved concept
+- ink-on-light and cream-on-dark primary wordmarks
+- monochrome variants using the same geometry
+- standalone `d.` mark for small contexts
+- favicon and touch/app derivatives generated from the approved standalone mark
+- shared `Logo.astro` uses the approved wordmark
 
-The global site logo, favicon/app derivatives, clear-space rules and minimum-size rules remain unapproved and are not part of this candidate review. Those are finalized only after the core shapes receive KEEP.
+Barlow Condensed remains the site display/headline face only; it is not the logo lettering.
 
-Candidate assets live under:
-`public/assets/brand/candidate-2/`
+Production masters and usage rules are documented in `docs/brand/LOGO-SYSTEM.md`.
 
-Temporary review route:
-`/logo-test/`
+The temporary `/logo-test/` review route was removed after approval.
 
 ---
 
 ## Current pending decisions
-- Concept-faithful logo candidate 2: preview KEEP / ADJUST / REJECT.
 - Exact production token values after browser/accessibility testing.
 - Exact section compositions for non-home page types.
 - Final implementation choices for deferred blog/mobile/tablet layout observations.

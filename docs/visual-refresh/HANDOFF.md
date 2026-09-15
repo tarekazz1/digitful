@@ -92,45 +92,32 @@ Decision D021:
 - Typography implementation source: `12ad2246ad73344bbf33674bf8eb2585e7d10b2e`.
 - Preview run `34974525550`: build success, deploy success.
 
-## Logo direction
-### Candidate 1 — rejected
-Decision D023: **REJECTED**.
+## Logo system — approved
+Decision D024: **KEEP**.
 
-The first production-vector candidate derived the logo from Barlow Condensed and did not match the approved concept closely enough.
+Source of truth:
+`docs/brand/LOGO-SYSTEM.md`
 
-Locked correction:
-- Barlow Condensed is approved for site headings only.
-- Logo lettering is a separate brand decision.
-- Do not substitute another typeface for the logo.
-- Preserve the approved concept's wider, rounder, softer proportions, distinctive `d` / `g` / `u`, heavier standalone `d.` and larger/integral coral terminal dot.
-
-The rejected assets and `docs/brand/LOGO-SYSTEM.md` may remain temporarily as historical implementation material only. They are not production masters.
-
-### Candidate 2 — pending review
-Decision D024: **PENDING USER REVIEW**.
-
-Candidate 2 is traced from the approved concept artwork itself rather than regenerated from Barlow.
-
-Candidate assets:
-`public/assets/brand/candidate-2/`
-
-Review route:
-`https://preview.digitful.ca/logo-test/`
-
-Review scope:
-- wordmark on light
-- wordmark on dark
-- standalone `d.` on light/dark
-- basic legibility at representative interface sizes
+Approved system:
+- concept-faithful lowercase `digitful.` wordmark
+- coral terminal dot `#E95849`
+- ink `#191A1B` on light surfaces
+- cream `#F0E7D5` on dark surfaces
+- monochrome variants
+- standalone `d.` mark for favicons/app icons/small contexts
+- shared `Logo.astro` now uses the approved SVG masters
+- favicon + 180 / 192 / 512 px derivatives generated from the approved mark
 
 Important:
-- shared `Logo.astro` still uses the old stable logo during this review
-- favicon/app derivatives are not switched to candidate 2 yet
-- clear-space and minimum-size rules are not final yet
-- only wire candidate 2 into shared brand surfaces after explicit KEEP
+- candidate 1 (Barlow-derived) remains rejected
+- Barlow Condensed is the site heading face only, not the logo lettering
+- do not redraw or substitute the approved mark with a font
 
-Reference concepts remain in:
-`docs/brand/logo-concepts/2026-09-retro-direction/`
+Approved masters:
+`public/assets/brand/digitful-wordmark-on-light.svg`
+`public/assets/brand/digitful-wordmark-on-dark.svg`
+`public/assets/brand/digitful-mark-on-light.svg`
+`public/assets/brand/digitful-mark-on-dark.svg`
 
 ## Approved homepage copy and density
 Decision D017.
@@ -222,31 +209,14 @@ Use the canonical `GoogleCloudPlatform/open-knowledge-format` project, not the f
 Do not implement OKF while page copy/URLs are moving. Add a small Digitful knowledge bundle after the homepage and primary service/page architecture is stable, then validate it before the final agent/SEO/QA pass. It complements rather than replaces semantic HTML, Schema.org, sitemap and normal SEO metadata.
 
 ## Preview state
-After candidate 1 was rejected, preview was rolled back to:
-`12ad2246ad73344bbf33674bf8eb2585e7d10b2e`
+The concept-faithful logo candidate received KEEP. Final logo assets are now wired into the shared site shell on `visual-refresh`; the next preview pin should validate the approved logo in the real header/footer plus the finalized favicon/app derivatives.
 
-Rollback preview run:
-`34978624652` — build success, deploy success.
-
-Candidate 2 should now be previewed as a review-page-only change. Do not replace shared site logos until KEEP.
+Production `main` remains untouched.
 
 ## Immediate next step
-Pin the exact candidate-2 review source SHA and deploy it to preview.
+Deploy the finalized approved-logo source SHA to preview and verify the real header/footer in light/dark and desktop/mobile.
 
-User reviews:
-- `/logo-test/`
-- desktop/mobile
-- light/dark panels
-
-User response: KEEP / ADJUST / REJECT for candidate 2 core shapes.
-
-After logo KEEP:
-1. replace shared header/footer logo with the approved candidate
-2. regenerate favicon/app derivatives from the approved mark
-3. finalize clear-space/minimum-size rules
-4. rebuild homepage against the approved specimen and locked copy
-5. remove the old generic card-heavy homepage composition
-6. deploy exact source SHA and review before adapting other page types
+After that, begin the homepage structural rebuild against the approved specimen and locked copy. The old generic card-heavy homepage composition should be removed in that pass.
 
 ## Later implementation sequence
 1. rebuild homepage
