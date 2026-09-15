@@ -252,8 +252,46 @@ Preview run: `34974525550` — build and deploy successful.
 
 ---
 
+## D022 — Open Knowledge Format belongs after page architecture stabilizes
+**Status:** Approved roadmap decision
+
+Add a small Digitful Open Knowledge Format (OKF) knowledge layer later in the redesign, using the canonical `GoogleCloudPlatform/open-knowledge-format` specification rather than the frozen copy under `knowledge-catalog/okf`.
+
+Role:
+- machine- and human-readable knowledge about Digitful, its services, tools and related concepts
+- versioned Markdown + YAML frontmatter that can carry provenance, trust and freshness metadata
+- complementary to the public site, not a replacement for semantic HTML, Schema.org, sitemap, SEO metadata or accessibility
+
+Timing:
+- do **not** build the OKF bundle while page copy/URLs are still moving
+- first stabilize the homepage and primary service/page architecture
+- then create the OKF bundle from those canonical concepts and URLs
+- validate discovery/agent use before the final site-wide agent/SEO/QA pass
+
+---
+
+## D023 — Production-candidate `digitful.` vector logo system
+**Status:** Candidate — pending preview KEEP / ADJUST / REJECT
+
+Use an outlined vector wordmark derived from **Barlow Condensed ExtraBold / 800** so the logo aligns with the approved display typography without depending on a runtime font file.
+
+Candidate system:
+- lowercase `digitful.`
+- ink `#191A1B` or paper/cream `#F0E7D5` letters depending on background
+- coral terminal dot `#E95849`
+- monochrome wordmark variants
+- standalone `d.` mark for genuinely small contexts
+- new favicon / app icon derivatives based on the `d.` mark
+- tagline lockup excluded from v1 because no exact tagline text is separately approved
+
+Usage and sizing rules are documented in `docs/brand/LOGO-SYSTEM.md`.
+
+The old blue-underline logo is replaced only on the preview candidate until this receives an explicit KEEP.
+
+---
+
 ## Current pending decisions
-- Final SVG logo masters and minimum-size/clear-space rules.
+- Logo production candidate: KEEP / ADJUST / REJECT after preview review.
 - Exact production token values after browser/accessibility testing.
 - Exact section compositions for non-home page types.
 - Final implementation choices for deferred blog/mobile/tablet layout observations.
