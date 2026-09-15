@@ -125,6 +125,21 @@ This file records approved or working decisions so the rationale survives across
 
 ---
 
+## D012 — Short pages keep the footer at the viewport bottom
+**Status:** Approved — KEEP
+
+**Decision:** Use a vertical flex layout on the shared `.site-shell` and let `#main-content` grow into unused viewport height.
+
+**Why:** The Thank-you page is short, so the footer previously floated above the bottom of the viewport. The shared flex-shell correction fixes short-page layout without changing footer styling or page copy, while long pages continue to flow normally.
+
+**Reviewed source commit:** `939a771c5ed93cf6ca80a1de1046ddcaed247f44`
+
+**Preview deployment run:** `34957902972` — successful.
+
+**User decision:** KEEP after live preview review on `preview.digitful.ca`.
+
+---
+
 ## Pending decisions
 The following are NOT approved design changes yet. They are experiments to test visually:
 - Degree of glow removal.
