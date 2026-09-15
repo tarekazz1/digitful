@@ -50,7 +50,7 @@ Marketing works better when the parts talk to each other.
 
 **Body**
 
-Strategy, acquisition, and automation built as one system instead of a pile of disconnected tactics.
+Strategy, acquisition, and automation built to work together.
 
 **Primary CTA**
 
