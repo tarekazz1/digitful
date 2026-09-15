@@ -1,6 +1,7 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import { Font } from 'astro:assets';
 import '../assets/bootstrap.scss';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
@@ -11,7 +12,8 @@ const {
   ogType = 'website',
   structuredData = [],
   publishedTime,
-  modifiedTime
+  modifiedTime,
+  fontSpecimen = false
 } = Astro.props;
 const siteName = 'Digitful';
 const themeColor = '#191a1b';
@@ -127,12 +129,25 @@ const schemas = [organizationSchema, websiteSchema, ...pageSchemas].filter(Boole
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
+    <Font
+      cssVariable="--font-inter"
+      preload={[
+        { weight: 400, style: 'normal', subset: 'latin' },
+        { weight: 600, style: 'normal', subset: 'latin' }
+      ]}
     />
+    {fontSpecimen && <Font cssVariable="--font-barlow-condensed" />}
+    {fontSpecimen && <Font cssVariable="--font-ibm-plex-condensed" />}
+    {fontSpecimen && <Font cssVariable="--font-archivo-black" />}
+    <style is:global>
+      :root {
+        --bs-body-font-family: var(--font-inter);
+      }
+
+      body {
+        font-family: var(--font-inter);
+      }
+    </style>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     {schemas.map((schema) => <script type="application/ld+json" set:html={JSON.stringify(schema)}></script>)}
     <script is:inline>
