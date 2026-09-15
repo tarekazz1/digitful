@@ -1,7 +1,7 @@
 # Digitful Visual Refresh — Handoff
 
 ## New-chat instruction
-> Continue the Digitful visual-refresh project. Read `docs/visual-refresh/HANDOFF.md`, `docs/visual-refresh/DECISIONS.md`, `docs/visual-refresh/CHANGELOG.md`, and `docs/brand/VISUAL-CONSTITUTION.md` on branch `visual-refresh` before doing anything. Do not modify production until the documented approval process says to do so.
+> Continue the Digitful visual-refresh project. Read `docs/visual-refresh/HANDOFF.md`, `docs/visual-refresh/DECISIONS.md`, `docs/visual-refresh/CHANGELOG.md`, `docs/brand/VISUAL-CONSTITUTION.md`, and `docs/brand/HOMEPAGE-COPY.md` on branch `visual-refresh` before doing anything. Do not modify production until the documented approval process says to do so.
 
 ## Working rules
 - Production/source repo: `tarekazz1/digitful`
@@ -87,8 +87,6 @@ Explicitly avoid glassmorphism, blue/purple AI gradients, neon glows, generic be
 Full source of truth:
 `docs/brand/VISUAL-CONSTITUTION.md`
 
-`DESIGN.md` now points to that constitution; the old dark-SaaS design direction is superseded on `visual-refresh`.
-
 ## Working logo direction
 Decision D016:
 - refined lowercase `digitful.` wordmark
@@ -100,23 +98,50 @@ Concepts live at:
 
 These PNGs are not final production logo masters. Final assets should be clean approved SVGs after visual validation.
 
+## Approved homepage copy
+Decision D017.
+
+Source of truth:
+`docs/brand/HOMEPAGE-COPY.md`
+
+Tone:
+- plainspoken
+- useful
+- concise
+- lightly witty when useful
+- not salesy
+
+Key locked lines:
+- `Marketing works better when the parts talk to each other.`
+- `More traffic won’t fix a messy system.`
+- `If the next step relies on memory, it probably needs a system.`
+- `Four parts. One growth system.`
+- `The business is moving. The system is lagging behind.`
+- `See what your website is making harder than it should be.`
+- `Bring the messy version.`
+
+Header CTA becomes `Talk to Digitful`.
+
+The blog was explicitly excluded from this copy pass.
+
 ## Immediate next step
 Do **not** implement the redesign in code yet.
 
-Create a cleaner homepage design specimen/mockup that:
+Create and review a cleaner homepage design specimen/mockup that:
 - follows `docs/brand/VISUAL-CONSTITUTION.md`
-- uses the approved mockup's visual identity
-- reduces density/noise
-- uses the current site's real content and functional structure as the basis
-- demonstrates how the system works on a realistic production homepage
+- uses the approved wording from `docs/brand/HOMEPAGE-COPY.md`
+- uses the current homepage’s real functional structure
+- includes the Instant Snapshot diagnostic
+- preserves the approved retro/editorial identity
+- reduces density, competing elements and gratuitous annotations
 
-Review that specimen before translating the visual system into CSS/components.
+After the specimen is approved, translate the visual system into CSS/components and begin preview implementation.
 
 ## Later implementation sequence
 After the design specimen is approved:
 1. translate constitution into design tokens and foundational CSS
 2. implement shared shell/header/footer/typography/colour system
-3. rebuild homepage against the approved specimen
+3. rebuild homepage against the approved specimen and locked copy
 4. adapt service, blog, contact and thank-you page types
 5. resolve deferred responsive/composition observations as part of those layouts
 6. full desktop/mobile dark/light QA
