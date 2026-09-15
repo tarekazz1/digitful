@@ -46,19 +46,12 @@ Main performance findings remain: render-blocking CSS/Google Fonts, Bootstrap Ic
 3. Footer copyright contrast — KEEP — `51c3f18531cd49b26df6d65b18807d9bc5867baf`
 4. Thank-you / short-page footer position — KEEP — `939a771c5ed93cf6ca80a1de1046ddcaed247f44`
 
-Current preview still pins the last approved visual source:
+Current preview still pins the last approved rendered source:
 `939a771c5ed93cf6ca80a1de1046ddcaed247f44`
 
 Docs/brand commits after that are intentionally not previewed because they do not change the rendered site.
 
-## Phase transition
-The objective-fix phase ended after Fix 4 (D013).
-
-Blog hero spacing, mobile section spacing, mobile blog-card height and tablet `2 + 1` grids are redesign decisions unless they prove to be functional defects.
-
-D014: define the complete design vision before subjective implementation. Do not start with isolated cleanup/facelifts.
-
-## Approved working visual direction
+## Approved visual direction
 Decision D015:
 
 **Graphic technical editorial + analog-print edge.**
@@ -66,12 +59,10 @@ Decision D015:
 Core tension:
 **technical precision + human imperfection.**
 
-The approved homepage mockup is the **style north star, not the structural wireframe**.
-
 Production target:
 **same identity, less clutter.**
 
-The visual system should use:
+The approved reference system uses:
 - warm paper neutrals
 - dark ink
 - flat coral / teal / mustard accents
@@ -98,7 +89,7 @@ Concepts live at:
 
 These PNGs are not final production logo masters. Final assets should be clean approved SVGs after visual validation.
 
-## Approved homepage copy
+## Approved homepage copy and density
 Decision D017.
 
 Source of truth:
@@ -122,31 +113,55 @@ Key locked lines:
 
 Header CTA becomes `Talk to Digitful`.
 
+Homepage content-density rule:
+**one headline + one layer of supporting information, not two.**
+
+Therefore:
+- no decorative `Clearer / More efficient / Built for real business` strip
+- no separate summary paragraph beneath `What we fix`
+- no separate summary paragraph beneath `Core offers`
+- no separate summary paragraph beneath `Good fit`
+- keep short explanatory copy where it is functionally useful: hero, Instant Snapshot, final CTA
+
 The blog was explicitly excluded from this copy pass.
 
+## Homepage design validation
+### Mobile
+Decision D018: **approved**.
+
+The mobile specimen confirms:
+- same brand identity as desktop
+- single-column hierarchy instead of compressed desktop layout
+- reduced clutter
+- readable/touch-friendly controls
+- selective annotation use
+- real homepage sections preserved
+- Instant Snapshot remains part of the homepage structure
+
+### Dark mode
+Not yet approved.
+
+Dark mode must be validated before the homepage design direction is frozen. It should feel like the same editorial/print identity in night mode: dark ink/charcoal base, warm cream type, flat coral/teal/mustard accents, strong rules, and restrained texture. It must **not** drift back into glowing SaaS/cyber styling.
+
 ## Immediate next step
-Do **not** implement the redesign in code yet.
+Create and review a **dark-mode homepage specimen** using the approved homepage hierarchy, copy density, logo direction and visual constitution.
 
-Create and review a cleaner homepage design specimen/mockup that:
-- follows `docs/brand/VISUAL-CONSTITUTION.md`
-- uses the approved wording from `docs/brand/HOMEPAGE-COPY.md`
-- uses the current homepage’s real functional structure
-- includes the Instant Snapshot diagnostic
-- preserves the approved retro/editorial identity
-- reduces density, competing elements and gratuitous annotations
-
-After the specimen is approved, translate the visual system into CSS/components and begin preview implementation.
+After dark mode is approved:
+1. freeze the homepage design direction
+2. translate the constitution into design tokens/foundational CSS
+3. implement shared shell/header/footer/typography/colour system on `visual-refresh`
+4. rebuild the homepage against the approved design
+5. deploy exact source SHA to `preview.digitful.ca` and review before continuing
 
 ## Later implementation sequence
-After the design specimen is approved:
-1. translate constitution into design tokens and foundational CSS
-2. implement shared shell/header/footer/typography/colour system
-3. rebuild homepage against the approved specimen and locked copy
-4. adapt service, blog, contact and thank-you page types
-5. resolve deferred responsive/composition observations as part of those layouts
-6. full desktop/mobile dark/light QA
-7. freeze visual baseline
-8. performance work: SVG icon migration, JS scoping, CSS/Bootstrap dependency map, safe CSS reduction, re-measure, then fonts/GTM/caching as justified
+After homepage foundations are approved:
+1. adapt service page type
+2. adapt contact and thank-you page types
+3. adapt blog index/article while preserving editorial reading priority
+4. resolve deferred responsive/composition observations within those page types
+5. full desktop/mobile dark/light QA
+6. freeze visual baseline
+7. performance work: SVG icon migration, JS scoping, CSS/Bootstrap dependency map, safe CSS reduction, re-measure, then fonts/GTM/caching as justified
 
 ## Functional behaviours that must not break
 Mobile navbar, Services dropdown, theme toggle, navigation, blog filters, homepage diagnostic, diagnostic→Contact handoff, contact toggles/hidden fields, production FormSubmit/thank-you redirect, logos, responsive layouts, production GTM/GA, SEO output and CLS stability.
