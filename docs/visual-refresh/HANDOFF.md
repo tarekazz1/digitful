@@ -62,37 +62,48 @@ The following earlier observations are **not** separate pre-design fixes unless 
 - Mobile blog-card height.
 - Tablet three-item `2 + 1` grid behaviour.
 
-They are now design-shift decisions because they depend on the eventual typography, spacing, surface/card, and composition system. This is recorded as D013 in `DECISIONS.md`.
+They are design-shift decisions because they depend on the eventual typography, spacing, surface/card, and composition system. This is recorded as D013 in `DECISIONS.md`.
 
-## Current design direction
-Digitful should feel like a modern consulting / technical practice rather than a generic AI/SaaS startup.
+## Design process — vision before implementation
+The broad direction remains:
+**Digitful should feel like a modern consulting / technical practice rather than a generic AI/SaaS startup.**
 
-Treat the redesign as subtraction:
-- fewer decorative glows/background effects
-- less cardification and fewer nested surfaces
-- more restrained radius and colour use
-- fewer boxed icons
-- stronger hierarchy from typography and spacing
-- more deliberate, page-specific composition
+However, this direction is intentionally **not** treated as an implementation-ready design system.
 
-Do not batch subjective changes. Each experiment must be isolated, previewed, and accepted/rejected before the next.
+User decision (D014): settle the overall design vision/style before making subjective visual changes. Do not begin with isolated facelifts such as glow removal, card reduction, radius adjustments, or typography tweaks.
+
+Before implementation, the design vision must define:
+- intended brand impression/personality
+- visual references and anti-references
+- typography character and hierarchy
+- dark/light colour strategy
+- surface, border, radius, shadow and depth philosophy
+- icon, illustration and image language
+- page layout and composition principles
+- how page types differ without becoming inconsistent
+- motion/interaction restraint
+- the recognisable design cues that make the site feel specifically like Digitful
+
+Only after one coherent direction is selected should it be translated into tokens/components/layout rules and then implemented through the preview process.
 
 ## Immediate next step
-Start the first design-shift experiment: **background/glow simplification**.
+Do **design-direction work only**. No subjective source-code changes yet.
 
-Scope only the decorative page background treatment. Do not simultaneously change cards, radii, icons, category colours, typography, or page layout.
+The next deliverable should be a concise design brief with a small number of distinct candidate directions (or one direction if already strongly justified), each described as a complete visual system rather than a list of component tweaks. The user should approve the direction before implementation begins.
 
-Review the resulting preview on representative desktop/mobile pages in both dark and light mode, then decide KEEP / ADJUST / REJECT.
-
-## Later design experiments
-After the background/glow decision, proceed one at a time through:
-1. Card/surface reduction.
-2. Radius system.
-3. Colour simplification.
-4. Icon treatment.
-5. Section-spacing/composition, including deferred mobile spacing, blog hero, blog-card height, and tablet grid behaviour.
-6. Typography refinement.
-7. Service-page differentiation.
+## Deferred design decisions
+These remain unresolved until the overall vision is settled:
+- Background/glow treatment.
+- Card/surface philosophy.
+- Radius/border/shadow/depth system.
+- Colour/category-accent strategy.
+- Icon/illustration treatment.
+- Typography system.
+- Section-spacing system and mobile rhythm.
+- Blog article hero composition.
+- Blog-card height on mobile.
+- Tablet three-item grid behaviour.
+- Page-composition rules and service-page differentiation.
 
 ## Later performance sequence
 After the visual baseline is approved: Bootstrap Icons → SVG; scope local JS; build a site-wide CSS/Bootstrap dependency map; reduce CSS safely; re-measure; then review fonts, GTM/GA, and caching. Security-header hardening is separate.
