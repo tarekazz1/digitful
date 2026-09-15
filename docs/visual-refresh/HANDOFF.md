@@ -1,7 +1,7 @@
 # Digitful Visual Refresh — Handoff
 
 ## New-chat instruction
-> Continue the Digitful visual-refresh project. Read `docs/visual-refresh/HANDOFF.md`, `docs/visual-refresh/DECISIONS.md`, `docs/visual-refresh/CHANGELOG.md`, `docs/brand/VISUAL-CONSTITUTION.md`, `docs/brand/HOMEPAGE-COPY.md`, and `docs/brand/LOGO-SYSTEM.md` on branch `visual-refresh` before doing anything. Do not modify production until the documented approval process says to do so.
+> Continue the Digitful visual-refresh project. Read `docs/visual-refresh/HANDOFF.md`, `docs/visual-refresh/DECISIONS.md`, `docs/visual-refresh/CHANGELOG.md`, `docs/brand/VISUAL-CONSTITUTION.md`, and `docs/brand/HOMEPAGE-COPY.md` on branch `visual-refresh` before doing anything. Do not modify production until the documented approval process says to do so.
 
 ## Working rules
 - Production/source repo: `tarekazz1/digitful`
@@ -92,28 +92,33 @@ Decision D021:
 - Typography implementation source: `12ad2246ad73344bbf33674bf8eb2585e7d10b2e`.
 - Preview run `34974525550`: build success, deploy success.
 
-## Logo production candidate — pending review
-Decision D023.
+## Logo direction — first production candidate rejected
+Decision D023: **REJECTED**.
 
-Source of truth:
-`docs/brand/LOGO-SYSTEM.md`
+The earlier approved concept remains the visual target:
+- lowercase `digitful.` wordmark
+- coral terminal dot
+- wider, rounder, softer, more custom character than the rejected Barlow-derived candidate
+- distinctive rounded `d`, `g` and `u`
+- heavier standalone `d.` mark
+- larger/integral coral dot
 
-Candidate system:
-- lowercase outlined `digitful.` wordmark derived from Barlow Condensed ExtraBold / 800
-- coral terminal dot `#E95849`
-- ink `#191A1B` version for light backgrounds
-- cream `#F0E7D5` version for dark backgrounds
-- monochrome wordmark variants
-- standalone `d.` mark for favicon/app/small contexts
-- SVG masters under `public/assets/brand/`
-- new favicon plus 180 / 192 / 512 px raster derivatives
-- shared `Logo.astro` now uses the new primary masters
-- no tagline lockup in v1 because exact tagline text has not been approved
+Important correction:
+- Barlow Condensed is approved for site headings only.
+- The logo does not need to use Barlow.
+- Do not generate the next mark by substituting another font.
+- Recreate the approved concept shapes faithfully as clean vector artwork.
 
-Review page:
-`https://preview.digitful.ca/logo-test/` once the candidate is pinned and deployed.
+Reference assets:
+`docs/brand/logo-concepts/2026-09-retro-direction/`
 
-Do not mark the logo final for production until user says KEEP.
+The rejected Barlow-derived SVG assets and `docs/brand/LOGO-SYSTEM.md` may remain temporarily on `visual-refresh` as historical implementation material only. They are **not** approved production masters and are not the logo source of truth.
+
+Preview has been rolled back to the last approved pre-logo source:
+`12ad2246ad73344bbf33674bf8eb2585e7d10b2e`
+
+Rollback preview run:
+`34978624652` — build success, deploy success.
 
 ## Approved homepage copy and density
 Decision D017.
@@ -205,20 +210,19 @@ Use the canonical `GoogleCloudPlatform/open-knowledge-format` project, not the f
 Do not implement OKF while page copy/URLs are moving. Add a small Digitful knowledge bundle after the homepage and primary service/page architecture is stable, then validate it before the final agent/SEO/QA pass. It complements rather than replaces semantic HTML, Schema.org, sitemap and normal SEO metadata.
 
 ## Immediate next step
-Deploy the exact current logo-candidate SHA to preview and review:
-- real header and footer
-- `/logo-test/`
-- desktop + mobile
-- light + dark
-- favicon/app mark at small sizes
+Create the corrected logo vectors from the **approved concept artwork**, not from Barlow.
 
-User response should be KEEP / ADJUST / REJECT for the logo system.
+Review the corrected core shapes first:
+- primary wordmark on light background
+- primary wordmark on dark background
+- standalone `d.` mark
+
+Only after those shapes receive KEEP should we regenerate favicon/app derivatives and finalize clear-space/minimum-size rules.
 
 After logo KEEP:
-1. record final logo approval and remove temporary review route later
-2. rebuild homepage against the approved specimen and locked copy
-3. remove the old generic card-heavy homepage composition
-4. deploy exact source SHA and review before adapting other page types
+1. rebuild homepage against the approved specimen and locked copy
+2. remove the old generic card-heavy homepage composition
+3. deploy exact source SHA and review before adapting other page types
 
 ## Later implementation sequence
 1. rebuild homepage
