@@ -10,124 +10,160 @@ const pageCanonical = 'https://digitful.ca/';
 
 <BaseLayout title={pageTitle} description={pageDescription} canonicalUrl={pageCanonical}>
   <main class="home-page">
-    <section class="hero">
+    <section class="home-hero">
       <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-xl-9 col-lg-10">
-            <div class="hero-copy hero-copy--centered text-center">
-              <span class="eyebrow mb-4">Growth systems</span>
-              <h1 class="mb-4">Strategy, acquisition, and automation that work together.</h1>
-              <p class="lead mb-4">
-                Turn scattered marketing into a clear system.
-              </p>
-              <div class="hero-actions justify-content-center">
-                <a href="/contact/" class="btn btn-primary btn-lg px-4">Book A Strategy Call</a>
-                <a href="/what-we-build/" class="btn btn-link-quiet">See What We Build</a>
+        <div class="home-hero__grid">
+          <div class="home-hero__copy">
+            <span class="eyebrow">Growth systems</span>
+            <h1>Marketing works better when the parts talk to each other.</h1>
+            <p class="lead">
+              Strategy, acquisition, and automation built as one system instead of a pile of disconnected tactics.
+            </p>
+            <div class="home-hero__actions">
+              <a href="/contact/" class="btn btn-primary btn-lg px-4">Talk through the problem</a>
+              <a href="/what-we-build/" class="btn btn-link-quiet btn-lg">See what we build</a>
+            </div>
+          </div>
+
+          <div class="home-hero__visual" aria-hidden="true">
+            <div class="home-system-map">
+              <div class="home-system-map__meta">
+                <span>Growth system / signal map</span>
+                <span>01—04</span>
+              </div>
+              <div class="home-system-map__flow">
+                <div class="home-system-map__node">
+                  <span class="home-system-map__number">01</span>
+                  <strong>Strategy</strong>
+                  <small>Message + priorities</small>
+                </div>
+                <div class="home-system-map__node">
+                  <span class="home-system-map__number">02</span>
+                  <strong>Acquisition</strong>
+                  <small>Search + social + paid</small>
+                </div>
+                <div class="home-system-map__node">
+                  <span class="home-system-map__number">03</span>
+                  <strong>Handoff</strong>
+                  <small>Clear next steps</small>
+                </div>
+                <div class="home-system-map__node home-system-map__node--accent">
+                  <span class="home-system-map__number">04</span>
+                  <strong>Automation</strong>
+                  <small>Fewer manual gaps</small>
+                </div>
               </div>
             </div>
+            <span class="home-hero__note">less friction between the parts</span>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="py-6">
+    <section class="home-section" aria-labelledby="home-fix-heading">
       <div class="container">
-        <div class="section-intro">
-          <span class="eyebrow mb-3">What we fix</span>
-          <h2 class="mb-3">More traffic will not fix a broken system.</h2>
-          <p class="mb-0">
-            Weak message, messy conversion paths, and slow follow-up keep growth expensive.
-          </p>
-        </div>
+        <header class="home-section__head">
+          <span class="eyebrow">Where things usually go wrong</span>
+          <h2 id="home-fix-heading">More traffic won’t fix a messy system.</h2>
+        </header>
 
-        <div class="detail-grid">
-          <div class="detail-card">
-            <strong>Weak message</strong>
-            <p class="mb-0">If the offer is unclear, everything downstream gets harder.</p>
-          </div>
-          <div class="detail-card">
-            <strong>Leaky conversion path</strong>
-            <p class="mb-0">Traffic does not help much when the next step feels vague.</p>
-          </div>
-          <div class="detail-card">
-            <strong>Slow follow-up</strong>
-            <p class="mb-0">Manual handoffs create lag, missed leads, and wasted energy.</p>
-          </div>
+        <div class="home-issue-grid" role="list">
+          <article class="home-issue" role="listitem">
+            <span class="home-item-number">01</span>
+            <h3>Unclear message</h3>
+            <p>People shouldn’t need a committee meeting to understand what you do.</p>
+          </article>
+          <article class="home-issue" role="listitem">
+            <span class="home-item-number">02</span>
+            <h3>Leaky conversion path</h3>
+            <p>Interest is useful. A clear next step is better.</p>
+          </article>
+          <article class="home-issue" role="listitem">
+            <span class="home-item-number">03</span>
+            <h3>Slow follow-up</h3>
+            <p>If the next step relies on memory, it probably needs a system.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="py-6">
+    <section class="home-section home-services" aria-labelledby="home-services-heading">
       <div class="container">
-        <div class="section-intro">
-          <span class="eyebrow mb-3">Core offers</span>
-          <h2 class="mb-3">Four ways we help.</h2>
-          <p class="mb-0">
-            Social, SEO, paid ads, and automation.
-          </p>
-        </div>
+        <header class="home-section__head">
+          <span class="eyebrow">What we actually do</span>
+          <h2 id="home-services-heading">Four parts. One growth system.</h2>
+        </header>
 
-        <div class="service-card-grid service-card-grid--offers">
-          <a href="/social-media/" class="service-card service-card__link service-card--social">
-            <span class="service-card__icon"><i class="bi bi-chat-square-text" aria-hidden="true"></i></span>
+        <div class="home-services-grid">
+          <a href="/social-media/" class="home-service">
+            <span class="home-service__number">01</span>
             <div>
               <h3>Social Media</h3>
-              <p>Content and positioning that support pipeline.</p>
+              <p>Make the brand clearer, more useful, and easier to remember.</p>
             </div>
+            <span class="home-service__arrow" aria-hidden="true">↗</span>
           </a>
 
-          <a href="/seo/" class="service-card service-card__link service-card--seo">
-            <span class="service-card__icon"><i class="bi bi-search" aria-hidden="true"></i></span>
+          <a href="/seo/" class="home-service">
+            <span class="home-service__number">02</span>
             <div>
               <h3>SEO</h3>
-              <p>Search built around intent and conversion.</p>
+              <p>Show up for the searches that can actually turn into business.</p>
             </div>
+            <span class="home-service__arrow" aria-hidden="true">↗</span>
           </a>
 
-          <a href="/paid-ads/" class="service-card service-card__link service-card--paid">
-            <span class="service-card__icon"><i class="bi bi-bullseye" aria-hidden="true"></i></span>
+          <a href="/paid-ads/" class="home-service">
+            <span class="home-service__number">03</span>
             <div>
               <h3>Paid Ads</h3>
-              <p>Paid acquisition with tighter targeting.</p>
+              <p>Put budget behind the right message, audience, and next step.</p>
             </div>
+            <span class="home-service__arrow" aria-hidden="true">↗</span>
           </a>
 
-          <a href="/automation/" class="service-card service-card__link service-card--automation">
-            <span class="service-card__icon"><i class="bi bi-diagram-3" aria-hidden="true"></i></span>
+          <a href="/automation/" class="home-service">
+            <span class="home-service__number">04</span>
             <div>
               <h3>Process Automation</h3>
-              <p>Workflow design that removes lag and buys back time.</p>
+              <p>Remove the repetitive handoffs that slow people down and lose leads.</p>
             </div>
+            <span class="home-service__arrow" aria-hidden="true">↗</span>
           </a>
         </div>
       </div>
     </section>
 
-    <section class="py-6">
+    <section class="home-fit" aria-labelledby="home-fit-heading">
       <div class="container">
-        <div class="section-intro">
-          <span class="eyebrow mb-3">Good fit</span>
-          <h2 class="mb-3">A good fit for teams that need more clarity.</h2>
-          <p class="mb-0">
-            Best for businesses with momentum and operational drag.
-          </p>
-        </div>
+        <div class="home-fit__grid">
+          <header class="home-fit__intro">
+            <span class="eyebrow">Probably a good fit if...</span>
+            <h2 id="home-fit-heading">The business is moving. The system is lagging behind.</h2>
+          </header>
 
-        <div class="story-grid">
-          <div class="story-card">
-            <span class="story-card__icon"><i class="bi bi-rocket-takeoff" aria-hidden="true"></i></span>
-            <strong>You already have demand</strong>
-            <p>Interest exists, but the system around it is uneven.</p>
-          </div>
-          <div class="story-card">
-            <span class="story-card__icon"><i class="bi bi-graph-up-arrow" aria-hidden="true"></i></span>
-            <strong>You need clearer priorities</strong>
-            <p>You want signal, not more moving parts.</p>
-          </div>
-          <div class="story-card">
-            <span class="story-card__icon"><i class="bi bi-lightning-charge" aria-hidden="true"></i></span>
-            <strong>You want systems your team can run</strong>
-            <p>You need fewer manual gaps and cleaner follow-through.</p>
+          <div class="home-fit__list" role="list">
+            <article class="home-fit__item" role="listitem">
+              <span class="home-item-number">01</span>
+              <div>
+                <h3>You already have demand</h3>
+                <p>The problem is not whether people care. It is what happens next.</p>
+              </div>
+            </article>
+            <article class="home-fit__item" role="listitem">
+              <span class="home-item-number">02</span>
+              <div>
+                <h3>Priorities keep competing</h3>
+                <p>Too many channels, tools, and “urgent” ideas. Not enough signal.</p>
+              </div>
+            </article>
+            <article class="home-fit__item" role="listitem">
+              <span class="home-item-number">03</span>
+              <div>
+                <h3>Manual work keeps multiplying</h3>
+                <p>If the same task happens every week, someone should ask why.</p>
+              </div>
+            </article>
           </div>
         </div>
       </div>
@@ -135,24 +171,28 @@ const pageCanonical = 'https://digitful.ca/';
 
     <InstantSnapshot />
 
-    <section class="py-6">
+    <section class="home-cta" aria-labelledby="home-cta-heading">
       <div class="container">
-        <div class="site-panel p-4 p-md-5 text-center">
-          <span class="eyebrow mb-3">Next step</span>
-          <h2 class="mb-3">Need a clearer growth system?</h2>
-          <p class="mx-auto mb-4" style="max-width: 38rem;">
-            Bring the funnel, the bottlenecks, and the questions. We will help you decide what to fix first.
-          </p>
-          <div class="hero-actions justify-content-center">
-            <a href="/contact/" class="btn btn-primary btn-lg px-4">Talk To Digitful</a>
-            <a
-              href="https://chatgpt.com/g/g-DmZRaiTLa-digitful-marketing-analyst"
-              target="_blank"
-              rel="noopener"
-              class="btn btn-ghost btn-lg px-4"
-            >
-              Try The Digitful GPT
-            </a>
+        <div class="home-cta__grid">
+          <header>
+            <span class="eyebrow">Next move</span>
+            <h2 id="home-cta-heading">Bring the messy version.</h2>
+          </header>
+          <div>
+            <p>
+              The funnel, the tools, the bottlenecks, the things nobody has had time to fix. We’ll help you work out what matters first.
+            </p>
+            <div class="home-cta__actions">
+              <a href="/contact/" class="btn btn-primary btn-lg px-4">Talk to Digitful</a>
+              <a
+                href="https://chatgpt.com/g/g-DmZRaiTLa-digitful-marketing-analyst"
+                target="_blank"
+                rel="noopener"
+                class="btn btn-ghost btn-lg px-4"
+              >
+                Try the Digitful GPT
+              </a>
+            </div>
           </div>
         </div>
       </div>
