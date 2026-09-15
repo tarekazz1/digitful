@@ -1,0 +1,288 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const candidates = [
+  {
+    id: 'inter',
+    label: 'Baseline — Inter',
+    note: 'Current site type. Neutral and readable, but not very distinctive as a display face.',
+    family: 'var(--font-inter)',
+    weight: 700
+  },
+  {
+    id: 'barlow',
+    label: 'Candidate 1 — Barlow Condensed',
+    note: 'Compressed, graphic and technical. Strong poster energy without becoming novelty typography.',
+    family: 'var(--font-barlow-condensed)',
+    weight: 800
+  },
+  {
+    id: 'ibm',
+    label: 'Candidate 2 — IBM Plex Sans Condensed',
+    note: 'Technical and controlled. More editorial and restrained than Barlow Condensed.',
+    family: 'var(--font-ibm-plex-condensed)',
+    weight: 700
+  },
+  {
+    id: 'archivo',
+    label: 'Candidate 3 — Archivo Black',
+    note: 'Heavy grotesk with strong print-poster character. Less condensed, more blunt and graphic.',
+    family: 'var(--font-archivo-black)',
+    weight: 400
+  }
+];
+---
+
+<BaseLayout
+  title="Digitful display type test"
+  description="Temporary display typography comparison for the Digitful visual refresh."
+  canonicalUrl="https://digitful.ca/type-test/"
+  fontSpecimen={true}
+>
+  <main class="type-test">
+    <section class="type-test__intro container">
+      <p class="type-test__kicker">Typography test / visual-refresh</p>
+      <h1>Same words. Different voice.</h1>
+      <p class="type-test__intro-copy">
+        Compare the approved homepage language in the current Inter baseline and three display candidates.
+        Body copy stays in Inter in every specimen.
+      </p>
+    </section>
+
+    <div class="type-test__specimens">
+      {candidates.map((candidate, index) => (
+        <section
+          class="type-specimen"
+          style={`--specimen-font: ${candidate.family}; --specimen-weight: ${candidate.weight};`}
+        >
+          <div class="container">
+            <div class="type-specimen__meta">
+              <span class="type-specimen__number">0{index + 1}</span>
+              <div>
+                <h2>{candidate.label}</h2>
+                <p>{candidate.note}</p>
+              </div>
+            </div>
+
+            <div class="type-specimen__hero">
+              <p class="type-specimen__eyebrow">Growth systems</p>
+              <h3>Marketing works better when the parts talk to each other.</h3>
+              <p class="type-specimen__body">
+                Strategy, acquisition, and automation built as one system instead of a pile of disconnected tactics.
+              </p>
+              <div class="type-specimen__actions">
+                <span class="type-specimen__button type-specimen__button--primary">Talk through the problem</span>
+                <span class="type-specimen__button">See what we build</span>
+              </div>
+            </div>
+
+            <div class="type-specimen__secondary">
+              <div>
+                <p class="type-specimen__eyebrow">Where things usually go wrong</p>
+                <h4>More traffic won’t fix a messy system.</h4>
+              </div>
+              <div>
+                <p class="type-specimen__eyebrow">What we actually do</p>
+                <h4>Four parts. One growth system.</h4>
+              </div>
+              <div>
+                <p class="type-specimen__eyebrow">Next move</p>
+                <h4>Bring the messy version.</h4>
+              </div>
+            </div>
+
+            <div class="type-specimen__glyphs" aria-label="Character sample">
+              Aa Bb Cc 0123456789 &amp; / . , — ? !
+            </div>
+          </div>
+        </section>
+      ))}
+    </div>
+  </main>
+</BaseLayout>
+
+<style>
+  .type-test {
+    padding-bottom: 4rem;
+  }
+
+  .type-test__intro {
+    padding-top: clamp(3rem, 8vw, 6rem);
+    padding-bottom: clamp(2.5rem, 6vw, 4.5rem);
+  }
+
+  .type-test__kicker,
+  .type-specimen__eyebrow {
+    margin: 0 0 0.8rem;
+    color: var(--site-text-muted);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .type-test__intro h1 {
+    max-width: 12ch;
+    margin: 0;
+    font-size: clamp(3rem, 9vw, 6.5rem);
+    font-weight: 700;
+    line-height: 0.92;
+    letter-spacing: -0.055em;
+  }
+
+  .type-test__intro-copy {
+    max-width: 42rem;
+    margin: 1.5rem 0 0;
+    color: var(--site-text-muted);
+    font-size: 1.05rem;
+  }
+
+  .type-test__specimens {
+    border-top: 2px solid var(--site-text);
+  }
+
+  .type-specimen {
+    padding-block: clamp(3rem, 7vw, 5rem);
+    border-bottom: 2px solid var(--site-text);
+  }
+
+  .type-specimen:nth-child(even) {
+    background: var(--site-surface-soft);
+  }
+
+  .type-specimen__meta {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 1rem;
+    align-items: start;
+    margin-bottom: clamp(2.5rem, 6vw, 4rem);
+  }
+
+  .type-specimen__number {
+    display: inline-grid;
+    min-width: 2.75rem;
+    min-height: 2.75rem;
+    place-items: center;
+    border: 2px solid var(--site-text);
+    font-weight: 800;
+  }
+
+  .type-specimen__meta h2 {
+    margin: 0 0 0.3rem;
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .type-specimen__meta p {
+    max-width: 44rem;
+    margin: 0;
+    color: var(--site-text-muted);
+  }
+
+  .type-specimen__hero {
+    max-width: 62rem;
+  }
+
+  .type-specimen__hero h3,
+  .type-specimen__secondary h4,
+  .type-specimen__glyphs {
+    font-family: var(--specimen-font);
+    font-weight: var(--specimen-weight);
+  }
+
+  .type-specimen__hero h3 {
+    max-width: 13ch;
+    margin: 0;
+    font-size: clamp(3.2rem, 8vw, 7.25rem);
+    line-height: 0.86;
+    letter-spacing: -0.035em;
+  }
+
+  .type-specimen__body {
+    max-width: 40rem;
+    margin: 1.5rem 0 0;
+    color: var(--site-text-muted);
+    font-size: clamp(1rem, 2vw, 1.2rem);
+  }
+
+  .type-specimen__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+  }
+
+  .type-specimen__button {
+    display: inline-flex;
+    min-height: 3rem;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--site-text);
+    font-weight: 700;
+  }
+
+  .type-specimen__button--primary {
+    background: var(--site-coral, #e95849);
+    color: #191a1b;
+  }
+
+  .type-specimen__secondary {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0;
+    margin-top: clamp(3rem, 8vw, 6rem);
+    border-block: 2px solid var(--site-text);
+  }
+
+  .type-specimen__secondary > div {
+    padding: 1.25rem 1.25rem 1.5rem 0;
+  }
+
+  .type-specimen__secondary > div + div {
+    padding-left: 1.25rem;
+    border-left: 2px solid var(--site-text);
+  }
+
+  .type-specimen__secondary h4 {
+    margin: 0;
+    font-size: clamp(1.8rem, 4vw, 3.4rem);
+    line-height: 0.94;
+    letter-spacing: -0.025em;
+  }
+
+  .type-specimen__glyphs {
+    margin-top: 1.5rem;
+    font-size: clamp(1.4rem, 4vw, 2.5rem);
+    line-height: 1.1;
+    letter-spacing: 0.01em;
+  }
+
+  @media (max-width: 767.98px) {
+    .type-test__intro h1 {
+      font-size: clamp(2.8rem, 15vw, 4.6rem);
+    }
+
+    .type-specimen__hero h3 {
+      max-width: none;
+      font-size: clamp(3rem, 15vw, 5rem);
+      line-height: 0.88;
+    }
+
+    .type-specimen__secondary {
+      grid-template-columns: 1fr;
+    }
+
+    .type-specimen__secondary > div,
+    .type-specimen__secondary > div + div {
+      padding: 1.25rem 0;
+      border-left: 0;
+    }
+
+    .type-specimen__secondary > div + div {
+      border-top: 2px solid var(--site-text);
+    }
+  }
+</style>
