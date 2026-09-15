@@ -9,6 +9,15 @@ document.addEventListener('DOMContentLoaded', () => {
     return;
   }
 
+  const isPreview = window.location.hostname === 'preview.digitful.ca';
+  const escapeHtml = (value) =>
+    String(value)
+      .replaceAll('&', '&amp;')
+      .replaceAll('<', '&lt;')
+      .replaceAll('>', '&gt;')
+      .replaceAll('"', '&quot;')
+      .replaceAll("'", '&#039;');
+
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
@@ -26,10 +35,33 @@ document.addEventListener('DOMContentLoaded', () => {
         `?url=${encodeURIComponent(siteUrl)}` +
         `&strategy=${strategy}`;
 
-      const response = await fetch(api);
-      const data = await response.json();
+      let response;
+      try {
+        response = await fetch(api);
+      } catch (networkError) {
+        throw new Error(
+          `Could not reach the audit service${networkError?.message ? `: ${networkError.message}` : '.'}`
+        );
+      }
 
-      if (!data.lighthouseResult) throw new Error(data.error?.message || 'Invalid response');
+      const rawBody = await response.text();
+      let data = null;
+      try {
+        data = rawBody ? JSON.parse(rawBody) : null;
+      } catch {
+        // Keep the raw body so preview can expose a useful diagnostic.
+      }
+
+      if (!response.ok) {
+        const upstreamMessage =
+          data?.error?.message || data?.message || rawBody || `HTTP ${response.status}`;
+        throw new Error(`Audit service returned HTTP ${response.status}: ${upstreamMessage}`);
+      }
+
+      if (!data?.lighthouseResult) {
+        const upstreamMessage = data?.error?.message || data?.message || rawBody || 'Invalid response';
+        throw new Error(`Audit service did not return Lighthouse results: ${upstreamMessage}`);
+      }
 
       const categories = data.lighthouseResult.categories || {};
       const score = (category) => (category?.score != null ? Math.round(category.score * 100) : null);
@@ -124,8 +156,14 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>`;
     } catch (err) {
       handleApiError(err, 'PageSpeed');
-      resultDiv.innerHTML =
-        '<div class="alert alert-danger mb-0">Sorry, we could not analyze that site. Please check the URL and try again.</div>';
+      const previewDetail = isPreview && err?.message
+        ? `<details class="mt-3"><summary>Preview diagnostic</summary><code class="d-block mt-2 text-break">${escapeHtml(err.message)}</code></details>`
+        : '';
+      resultDiv.innerHTML = `
+        <div class="alert alert-danger mb-0">
+          Sorry, we could not analyze that site. Please check the URL and try again.
+          ${previewDetail}
+        </div>`;
     }
   });
 });
