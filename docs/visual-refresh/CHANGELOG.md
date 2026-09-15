@@ -48,9 +48,16 @@ Chronological record of setup and implementation changes for the visual-refresh 
 - User reviewed the live preview and chose **KEEP**.
 - Production `main` / `digitful.ca` remain untouched.
 
+### Phase transition — objective fixes complete
+- User and assistant agreed not to implement the remaining layout observations as standalone pre-design fixes.
+- Blog hero metadata spacing, mobile section spacing, mobile blog-card height, and tablet `2 + 1` grid behaviour are deferred to the design-shift phase unless an actual functional break is found.
+- Reason: these are composition/visual-system decisions and should be judged alongside typography, spacing, card treatment, and page composition to avoid rework.
+- Decision recorded as D013 in `DECISIONS.md`.
+
 ### Current preview source
 - `939a771c5ed93cf6ca80a1de1046ddcaed247f44`
 
 ### Next action
-- Begin Fix 5: Blog article hero metadata spacing.
-- Keep the change isolated, deploy the exact source commit to preview, then review before deciding KEEP / ADJUST / REJECT.
+- Begin the visual design-shift phase with one isolated experiment: simplify the site background/glow treatment.
+- Do not change cards, radii, icons, colour coding, typography, or page layouts in the same experiment.
+- Deploy the exact source commit to preview and review dark/light plus representative desktop/mobile pages before deciding KEEP / ADJUST / REJECT.
