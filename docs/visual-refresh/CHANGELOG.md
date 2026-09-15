@@ -70,11 +70,19 @@ Chronological record of setup and implementation changes for the visual-refresh 
 - `DESIGN.md` now points to the constitution and no longer carries the superseded dark-SaaS design system.
 - No production-facing visual code changed as part of this work.
 
+### Homepage copy locked
+- Added `docs/brand/HOMEPAGE-COPY.md` as the source of truth for the approved non-blog homepage copy.
+- Tone: plainspoken, useful, concise, lightly witty, not salesy.
+- Approved lines include `Marketing works better when the parts talk to each other.`, `More traffic won’t fix a messy system.`, `Four parts. One growth system.`, `The business is moving. The system is lagging behind.`, and `Bring the messy version.`
+- Slow follow-up wording approved as: `If the next step relies on memory, it probably needs a system.`
+- Decision: D017.
+- No rendered-site code changed.
+
 ### Current preview source
 - `939a771c5ed93cf6ca80a1de1046ddcaed247f44`
 
 ### Next action
-- Create a **cleaner homepage design specimen/mockup** from the visual constitution.
-- Use the current site's real content/functions as the structural basis.
-- Keep the approved mockup's identity, but reduce competing elements and visual noise.
-- Review the design specimen before translating the system into code.
+- Create the cleaner homepage design specimen/mockup using `VISUAL-CONSTITUTION.md` + `HOMEPAGE-COPY.md`.
+- Use the current homepage’s real functional structure, including the Instant Snapshot.
+- Keep the approved identity while reducing visual noise and competing focal points.
+- Review the specimen before translating the design system into code.
