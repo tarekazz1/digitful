@@ -134,15 +134,23 @@ Tone:
 
 Key locked lines:
 - `Marketing works better when the parts talk to each other.`
-- Hero support: `Strategy, acquisition, and automation built to work together.`
+- Hero support: `Marketing works better when the whole journey works together.`
 - `More traffic won’t fix a messy system.`
 - `If the next step relies on memory, it probably needs a system.`
-- `Four parts. One growth system.`
+- Work-area headline: `This is where we usually get involved.`
 - `The business is moving. The system is lagging behind.`
 - `See what your website is making harder than it should be.`
 - `Bring the messy version.`
 
 Header CTA: `Talk to Digitful`.
+
+Approved public growth-system model (D029):
+- `Say the right thing`
+- `Reach the right people`
+- `Make action easy`
+- `Follow through`
+
+Social Media, SEO, Paid Ads, and Process Automation are work areas/capabilities used to improve that system; they are not the system stages. Avoid `acquisition`, `conversion`, and `handoff` as the primary public taxonomy.
 
 Homepage content-density rule:
 **one headline + one layer of supporting information, not two.**
@@ -237,9 +245,9 @@ Build the reusable **Digitful design system layer** from the patterns that survi
 Homepage status:
 - whole-page composition refinement: **APPROVED — KEEP** (D027)
 - Instant Snapshot result-state treatment: **APPROVED — KEEP** (D026)
-- final hero support line: `Strategy, acquisition, and automation built to work together.`
-- final approved rendered source: `c914f6252ec30d99a4adf3979cd5593b5f6ca68d`
-- preview run `34992817965`: build success, deploy success
+- final hero support line: `Marketing works better when the whole journey works together.`
+- current approved messaging source: `18eca69a226fa4dc82aa08f581cbd1b5b008e4e0`
+- messaging preview run `34998050345`: build/deploy validation
 - production remains untouched
 
 Design-system goal (D028):

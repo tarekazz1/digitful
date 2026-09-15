@@ -158,7 +158,7 @@ Key approved choices include:
 - Hero: `Marketing works better when the parts talk to each other.`
 - What we fix: `More traffic won’t fix a messy system.`
 - Slow follow-up line: `If the next step relies on memory, it probably needs a system.`
-- Core offers: `Four parts. One growth system.`
+- Core work areas: `This is where we usually get involved.`
 - Good fit: `The business is moving. The system is lagging behind.`
 - Instant Snapshot: `See what your website is making harder than it should be.`
 - Final CTA: `Bring the messy version.`
@@ -395,6 +395,33 @@ Timing: immediately after final homepage KEEP, before the service-page implement
 
 Final approved homepage rendered source after the hero-copy trim: `c914f6252ec30d99a4adf3979cd5593b5f6ca68d`.
 Preview run: `34992817965` — build and deploy successful.
+
+---
+
+## D029 — Plain-language public growth-system model
+**Status:** Approved
+
+The homepage had two competing definitions of the growth system: the hero used `strategy / acquisition / handoff / automation`, while the work-area section implied that Social Media / SEO / Paid Ads / Process Automation were the four parts of the system. That ambiguity is removed.
+
+Public-facing system model:
+1. **Say the right thing**
+2. **Reach the right people**
+3. **Make action easy**
+4. **Follow through**
+
+Messaging rules:
+- Social Media, SEO, Paid Ads, and Process Automation are practical **work areas/capabilities**, not the four stages of the system.
+- Do not use `acquisition`, `conversion`, or `handoff` as the main public-facing taxonomy when clearer language is available.
+- Keep `What we actually do` as the work-area eyebrow; it is clearer and less generic than `Our services`.
+- Work-area headline: `This is where we usually get involved.`
+- Hero support line: `Marketing works better when the whole journey works together.`
+- The hero system map carries the four-part plain-language model above.
+
+`docs/brand/HOMEPAGE-COPY.md` is updated as the copy source of truth.
+
+Implementation source: `18eca69a226fa4dc82aa08f581cbd1b5b008e4e0`.
+Preview run: `34998050345`.
+Production remains untouched.
 
 ---
 

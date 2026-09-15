@@ -253,3 +253,14 @@ Chronological record of setup and implementation changes for the visual-refresh 
 - Added D028: before adapting service/contact/blog page types, extract the validated homepage visual language into reusable design-system primitives.
 - The design system should centralize identity-level tokens/patterns while keeping page composition flexible; avoid turning every homepage section into a rigid reusable component.
 - Production remains untouched.
+
+### Homepage messaging model clarified
+- **APPROVED** plain-language system model: `Say the right thing → Reach the right people → Make action easy → Follow through`.
+- Removed the conflicting public taxonomy `Strategy / Acquisition / Handoff / Automation` from the hero map.
+- Clarified that Social Media, SEO, Paid Ads and Process Automation are work areas/capabilities, not the four stages of the system.
+- Replaced `Four parts. One growth system.` with `This is where we usually get involved.` under `What we actually do`.
+- Hero support is now `Marketing works better when the whole journey works together.`
+- Updated the homepage meta description to use the same plain-language framing.
+- Updated `docs/brand/HOMEPAGE-COPY.md` as the source of truth.
+- Source: `18eca69a226fa4dc82aa08f581cbd1b5b008e4e0`. Preview run `34998050345`.
+- Production remains untouched.
