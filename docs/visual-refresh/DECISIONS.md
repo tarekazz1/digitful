@@ -110,6 +110,21 @@ This file records approved or working decisions so the rationale survives across
 
 ---
 
+## D011 — Footer copyright uses stronger muted text contrast
+**Status:** Approved — KEEP
+
+**Decision:** Give only the footer copyright text a dedicated class using `color: var(--site-text-muted)`.
+
+**Why:** The previous `var(--site-text-dim)` treatment was too low-contrast. This corrects the accessibility issue without redesigning the footer or changing its layout, links, logo, spacing, background, or structure.
+
+**Reviewed source commit:** `51c3f18531cd49b26df6d65b18807d9bc5867baf`
+
+**Preview deployment run:** `34957277115` — successful.
+
+**User decision:** KEEP after live preview review on `preview.digitful.ca`.
+
+---
+
 ## Pending decisions
 The following are NOT approved design changes yet. They are experiments to test visually:
 - Degree of glow removal.
