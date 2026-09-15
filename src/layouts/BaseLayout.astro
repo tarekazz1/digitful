@@ -173,7 +173,6 @@ const schemas = [organizationSchema, websiteSchema, ...pageSchemas].filter(Boole
       }
     </style>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     {schemas.map((schema) => <script type="application/ld+json" set:html={JSON.stringify(schema)}></script>)}
     <script is:inline>
       (function (w, d, s, l, i) {
