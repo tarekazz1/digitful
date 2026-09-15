@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import InstantSnapshot from '../components/InstantSnapshot.astro';
 import HomeIcon from '../components/HomeIcon.astro';
+import '../assets/_homepage-interactions.scss';
 
 const pageTitle = 'Digitful - Real Growth Systems';
 const pageDescription =
@@ -77,18 +78,68 @@ const pageCanonical = 'https://digitful.ca/';
           <div class="home-issue-grid" role="list">
             <article class="home-issue" role="listitem">
               <span class="home-icon-disc home-icon-disc--coral"><HomeIcon name="message" /></span>
-              <h3>Unclear message</h3>
+              <h3>
+                <button
+                  type="button"
+                  class="home-issue__trigger"
+                  aria-expanded="false"
+                  aria-controls="home-issue-unclear-reveal"
+                  data-issue-trigger="unclear"
+                >
+                  <span>Unclear message</span>
+                  <span class="home-issue__cue" aria-hidden="true">+</span>
+                </button>
+              </h3>
               <p>People shouldn’t need a committee meeting to understand what you do.</p>
+              <div id="home-issue-unclear-reveal" class="home-issue__reveal" hidden>
+                <p class="home-issue__punchline">Exactly. Just like this one.</p>
+              </div>
             </article>
             <article class="home-issue" role="listitem">
               <span class="home-icon-disc home-icon-disc--mustard"><HomeIcon name="funnel" /></span>
-              <h3>Leaky conversion path</h3>
+              <h3>
+                <button
+                  type="button"
+                  class="home-issue__trigger"
+                  aria-expanded="false"
+                  aria-controls="home-issue-leaky-reveal"
+                  data-issue-trigger="leaky"
+                >
+                  <span>Leaky conversion path</span>
+                  <span class="home-issue__cue" aria-hidden="true">+</span>
+                </button>
+              </h3>
               <p>Interest is useful. A clear next step is better.</p>
+              <div id="home-issue-leaky-reveal" class="home-issue__reveal home-issue__reveal--leaky" hidden>
+                <div class="home-issue__path-demo" aria-hidden="true">
+                  <span class="home-issue__path-line"></span>
+                  <span class="home-issue__path-dot"></span>
+                  <span class="home-issue__path-target"></span>
+                </div>
+                <p class="home-issue__punchline">It was almost there.</p>
+              </div>
             </article>
             <article class="home-issue" role="listitem">
               <span class="home-icon-disc home-icon-disc--teal"><HomeIcon name="clock" /></span>
-              <h3>Slow follow-up</h3>
+              <h3>
+                <button
+                  type="button"
+                  class="home-issue__trigger"
+                  aria-expanded="false"
+                  aria-controls="home-issue-slow-reveal"
+                  data-issue-trigger="slow"
+                >
+                  <span>Slow follow-up</span>
+                  <span class="home-issue__cue" aria-hidden="true">+</span>
+                </button>
+              </h3>
               <p>If the next step relies on memory, it probably needs a system.</p>
+              <div id="home-issue-slow-reveal" class="home-issue__reveal" hidden>
+                <span class="home-issue__timer" data-followup-timer aria-hidden="true">0.000s</span>
+                <p class="home-issue__punchline" data-followup-message hidden>That was only a second.</p>
+                <span class="home-issue__aside" data-followup-message hidden>Some leads wait days.</span>
+                <span class="home-issue__sr-status" data-followup-status role="status" aria-live="polite"></span>
+              </div>
             </article>
           </div>
         </div>
@@ -209,4 +260,5 @@ const pageCanonical = 'https://digitful.ca/';
       </div>
     </section>
   </main>
+  <script is:inline src="/scripts/home-issue-interactions.js"></script>
 </BaseLayout>
