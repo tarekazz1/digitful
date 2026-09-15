@@ -152,6 +152,15 @@ Approved public growth-system model (D029):
 
 Social Media, SEO, Paid Ads, and Process Automation are work areas/capabilities used to improve that system; they are not the system stages. Avoid `acquisition`, `conversion`, and `handoff` as the primary public taxonomy.
 
+Approved interaction-wit principle (D030):
+- keep important copy clear and visible
+- use interface behaviour itself as the joke, selectively
+- `Unclear message` expands to `Exactly. Just like this one.`
+- `Leaky conversion path` visually stops short
+- `Slow follow-up` runs a ~1.25 second millisecond timer, then reveals `That was only a second.` / `Some leads wait days.`
+- preserve semantic disclosure controls, keyboard access, screen-reader clarity and reduced-motion fallbacks
+- keep the joke bespoke; only shared accessibility/motion mechanics belong in the design system
+
 Homepage content-density rule:
 **one headline + one layer of supporting information, not two.**
 
@@ -245,9 +254,10 @@ Build the reusable **Digitful design system layer** from the patterns that survi
 Homepage status:
 - whole-page composition refinement: **APPROVED — KEEP** (D027)
 - Instant Snapshot result-state treatment: **APPROVED — KEEP** (D026)
+- situational homepage interaction wit: **APPROVED — KEEP** (D030)
 - final hero support line: `Marketing works better when the whole journey works together.`
-- current approved messaging source: `18eca69a226fa4dc82aa08f581cbd1b5b008e4e0`
-- messaging preview run `34998050345`: build/deploy validation
+- current approved homepage source: `6f4d8bba8b1d76b63c2d9938cecff399553b3700`
+- current homepage preview run `35000985503`: build success, deploy success
 - production remains untouched
 
 Design-system goal (D028):

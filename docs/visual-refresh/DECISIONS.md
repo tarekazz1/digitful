@@ -425,6 +425,30 @@ Production remains untouched.
 
 ---
 
+## D030 — Situational interaction wit in the homepage problem section
+**Status:** Approved — KEEP
+
+Use selective self-aware interface behaviour to add personality where the interaction itself demonstrates the problem. Keep the core explanation clear and visible; the joke is optional reinforcement, not required information.
+
+Approved homepage interactions:
+- `Unclear message` is a real button that expands to `Exactly. Just like this one.`
+- `Leaky conversion path` runs a small visual path that stops short of its target, then reveals `It was almost there.`
+- `Slow follow-up` starts a short millisecond timer for about 1.25 seconds, then reveals `That was only a second.` and `Some leads wait days.`
+
+Interaction rules:
+- use semantic buttons with `aria-expanded` / `aria-controls`
+- keep the normal explanatory blurbs visible without interaction
+- `prefers-reduced-motion` skips the counting/path animation and presents the final state
+- the changing millisecond counter is hidden from screen readers; announce only the final message
+- keep these expressions bespoke and selective rather than making every section interactive
+- the design system may centralize accessible disclosure/motion mechanics, but the jokes themselves are page-specific
+
+Implementation source: `6f4d8bba8b1d76b63c2d9938cecff399553b3700`.
+Preview run: `35000985503` — build and deploy successful.
+Production remains untouched.
+
+---
+
 ## Current pending decisions
 - Exact production token values after browser/accessibility testing.
 - Exact section compositions for non-home page types.

@@ -264,3 +264,15 @@ Chronological record of setup and implementation changes for the visual-refresh 
 - Updated `docs/brand/HOMEPAGE-COPY.md` as the source of truth.
 - Source: `18eca69a226fa4dc82aa08f581cbd1b5b008e4e0`. Preview run `34998050345`.
 - Production remains untouched.
+
+### Homepage situational interaction wit
+- **APPROVED — KEEP**.
+- Principle: clarity stays in the main copy; wit can live in the interaction when the interface itself demonstrates the problem.
+- `Unclear message` now expands to `Exactly. Just like this one.`
+- `Leaky conversion path` demonstrates a path that stops short and reveals `It was almost there.`
+- `Slow follow-up` runs a short millisecond timer (~1.25 seconds), then reveals `That was only a second.` / `Some leads wait days.`
+- Added `public/scripts/home-issue-interactions.js` and `src/assets/_homepage-interactions.scss`; kept this behaviour homepage-scoped.
+- Preserved visible explanatory copy, semantic buttons, `aria-expanded` / `aria-controls`, keyboard focus, screen-reader final-state announcement and reduced-motion fallback.
+- These jokes remain bespoke; reusable disclosure/motion mechanics may be extracted during the D028 design-system pass.
+- Source: `6f4d8bba8b1d76b63c2d9938cecff399553b3700`. Preview run `35000985503`: build **success**, deploy **success**.
+- Production remains untouched.
