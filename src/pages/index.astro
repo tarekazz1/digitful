@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import InstantSnapshot from '../components/InstantSnapshot.astro';
+import HomeIcon from '../components/HomeIcon.astro';
 
 const pageTitle = 'Digitful - Real Growth Systems';
 const pageDescription =
@@ -26,6 +27,9 @@ const pageCanonical = 'https://digitful.ca/';
           </div>
 
           <div class="home-hero__visual" aria-hidden="true">
+            <span class="home-hero__orb"></span>
+            <span class="home-hero__scribble home-hero__scribble--top">less manual work<br />more progress</span>
+
             <div class="home-system-map">
               <div class="home-system-map__meta">
                 <span>Growth system / signal map</span>
@@ -54,82 +58,88 @@ const pageCanonical = 'https://digitful.ca/';
                 </div>
               </div>
             </div>
+
+            <span class="home-hero__sticker">fix → improve → grow</span>
             <span class="home-hero__note">less friction between the parts</span>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="home-section" aria-labelledby="home-fix-heading">
+    <section class="home-section home-section--issues" aria-labelledby="home-fix-heading">
       <div class="container">
-        <header class="home-section__head">
-          <span class="eyebrow">Where things usually go wrong</span>
-          <h2 id="home-fix-heading">More traffic won’t fix a messy system.</h2>
-        </header>
+        <div class="home-editorial-row home-editorial-row--issues">
+          <header class="home-section__head home-section__head--compact">
+            <span class="eyebrow">Where things usually go wrong</span>
+            <h2 id="home-fix-heading">More traffic won’t fix a messy system.</h2>
+          </header>
 
-        <div class="home-issue-grid" role="list">
-          <article class="home-issue" role="listitem">
-            <span class="home-item-number">01</span>
-            <h3>Unclear message</h3>
-            <p>People shouldn’t need a committee meeting to understand what you do.</p>
-          </article>
-          <article class="home-issue" role="listitem">
-            <span class="home-item-number">02</span>
-            <h3>Leaky conversion path</h3>
-            <p>Interest is useful. A clear next step is better.</p>
-          </article>
-          <article class="home-issue" role="listitem">
-            <span class="home-item-number">03</span>
-            <h3>Slow follow-up</h3>
-            <p>If the next step relies on memory, it probably needs a system.</p>
-          </article>
+          <div class="home-issue-grid" role="list">
+            <article class="home-issue" role="listitem">
+              <span class="home-icon-disc home-icon-disc--coral"><HomeIcon name="message" /></span>
+              <h3>Unclear message</h3>
+              <p>People shouldn’t need a committee meeting to understand what you do.</p>
+            </article>
+            <article class="home-issue" role="listitem">
+              <span class="home-icon-disc home-icon-disc--mustard"><HomeIcon name="funnel" /></span>
+              <h3>Leaky conversion path</h3>
+              <p>Interest is useful. A clear next step is better.</p>
+            </article>
+            <article class="home-issue" role="listitem">
+              <span class="home-icon-disc home-icon-disc--teal"><HomeIcon name="clock" /></span>
+              <h3>Slow follow-up</h3>
+              <p>If the next step relies on memory, it probably needs a system.</p>
+            </article>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="home-section home-services" aria-labelledby="home-services-heading">
       <div class="container">
-        <header class="home-section__head">
-          <span class="eyebrow">What we actually do</span>
-          <h2 id="home-services-heading">Four parts. One growth system.</h2>
-        </header>
+        <div class="home-editorial-row home-editorial-row--services">
+          <header class="home-section__head home-section__head--compact">
+            <span class="eyebrow">What we actually do</span>
+            <h2 id="home-services-heading">Four parts. One growth system.</h2>
+          </header>
 
-        <div class="home-services-grid">
-          <a href="/social-media/" class="home-service">
-            <span class="home-service__number">01</span>
-            <div>
-              <h3>Social Media</h3>
-              <p>Make the brand clearer, more useful, and easier to remember.</p>
-            </div>
-            <span class="home-service__arrow" aria-hidden="true">↗</span>
-          </a>
+          <div class="home-services-grid">
+            <a href="/social-media/" class="home-service">
+              <span class="home-icon-disc home-icon-disc--teal"><HomeIcon name="megaphone" /></span>
+              <div>
+                <h3>Social Media</h3>
+                <p>Make the brand clearer, more useful, and easier to remember.</p>
+              </div>
+              <span class="home-service__arrow" aria-hidden="true">↗</span>
+            </a>
 
-          <a href="/seo/" class="home-service">
-            <span class="home-service__number">02</span>
-            <div>
-              <h3>SEO</h3>
-              <p>Show up for the searches that can actually turn into business.</p>
-            </div>
-            <span class="home-service__arrow" aria-hidden="true">↗</span>
-          </a>
+            <a href="/seo/" class="home-service">
+              <span class="home-icon-disc home-icon-disc--mustard"><HomeIcon name="search" /></span>
+              <div>
+                <h3>SEO</h3>
+                <p>Show up for the searches that can actually turn into business.</p>
+              </div>
+              <span class="home-service__arrow" aria-hidden="true">↗</span>
+            </a>
 
-          <a href="/paid-ads/" class="home-service">
-            <span class="home-service__number">03</span>
-            <div>
-              <h3>Paid Ads</h3>
-              <p>Put budget behind the right message, audience, and next step.</p>
-            </div>
-            <span class="home-service__arrow" aria-hidden="true">↗</span>
-          </a>
+            <a href="/paid-ads/" class="home-service">
+              <span class="home-icon-disc home-icon-disc--coral"><HomeIcon name="cursor" /></span>
+              <div>
+                <h3>Paid Ads</h3>
+                <p>Put budget behind the right message, audience, and next step.</p>
+              </div>
+              <span class="home-service__arrow" aria-hidden="true">↗</span>
+            </a>
 
-          <a href="/automation/" class="home-service">
-            <span class="home-service__number">04</span>
-            <div>
-              <h3>Process Automation</h3>
-              <p>Remove the repetitive handoffs that slow people down and lose leads.</p>
-            </div>
-            <span class="home-service__arrow" aria-hidden="true">↗</span>
-          </a>
+            <a href="/automation/" class="home-service">
+              <span class="home-icon-disc home-icon-disc--teal"><HomeIcon name="gear" /></span>
+              <div>
+                <h3>Process Automation</h3>
+                <p>Remove the repetitive handoffs that slow people down and lose leads.</p>
+              </div>
+              <span class="home-service__arrow" aria-hidden="true">↗</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -140,25 +150,26 @@ const pageCanonical = 'https://digitful.ca/';
           <header class="home-fit__intro">
             <span class="eyebrow">Probably a good fit if...</span>
             <h2 id="home-fit-heading">The business is moving. The system is lagging behind.</h2>
+            <span class="home-fit__scribble" aria-hidden="true">signal first.<br />friction second.</span>
           </header>
 
           <div class="home-fit__list" role="list">
             <article class="home-fit__item" role="listitem">
-              <span class="home-item-number">01</span>
+              <span class="home-icon-disc home-icon-disc--mustard"><HomeIcon name="chart" /></span>
               <div>
                 <h3>You already have demand</h3>
                 <p>The problem is not whether people care. It is what happens next.</p>
               </div>
             </article>
             <article class="home-fit__item" role="listitem">
-              <span class="home-item-number">02</span>
+              <span class="home-icon-disc home-icon-disc--coral"><HomeIcon name="nodes" /></span>
               <div>
                 <h3>Priorities keep competing</h3>
                 <p>Too many channels, tools, and “urgent” ideas. Not enough signal.</p>
               </div>
             </article>
             <article class="home-fit__item" role="listitem">
-              <span class="home-item-number">03</span>
+              <span class="home-icon-disc home-icon-disc--teal"><HomeIcon name="clipboard" /></span>
               <div>
                 <h3>Manual work keeps multiplying</h3>
                 <p>If the same task happens every week, someone should ask why.</p>
