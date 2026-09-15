@@ -1,48 +1,15 @@
 # Digitful Design Direction
 
-This project should feel sharp, credible, and dark-mode-native.
+The previous dark SaaS-oriented design direction in this file is superseded on the `visual-refresh` branch.
 
-## Atmosphere
+The current design source of truth is:
 
-- Near-black canvas with subtle indigo glow.
-- Product-grade precision, not agency flashiness.
-- Calm, high-contrast surfaces that let the copy feel confident.
+`docs/brand/VISUAL-CONSTITUTION.md`
 
-## Colors
+The approved working direction is a **graphic technical editorial system with an analog-print edge**: warm paper neutrals, dark ink, flat accent colour, strong rules, bold typography, restrained print texture, selective hand-drawn technical annotations, and disciplined asymmetry.
 
-- Background: `#08090a`
-- Elevated surface: `#111215`
-- Secondary surface: `#181a1f`
-- Primary text: `#f5f7fb`
-- Secondary text: `#a7afc0`
-- Border: `rgba(255, 255, 255, 0.08)`
-- Accent: `#5e6ad2`
-- Accent hover: `#737ef0`
-- Success: `#10b981`
+Important implementation rule:
 
-Use the indigo accent for primary actions and active states only.
+> The approved homepage mockup is a **style north star, not a structural wireframe**. The production site should preserve the identity while reducing clutter and keeping the existing site's real content, functions and usability requirements.
 
-## Typography
-
-- Use Inter consistently for headings, body text, labels, and buttons.
-- Headlines should feel compressed and deliberate.
-- Avoid overly bold weights; prefer 400, 500, and 600.
-
-## Components
-
-- Cards should use translucent dark surfaces with thin borders.
-- Buttons should feel compact and precise, never loud or rounded by default.
-- Forms should feel structured and premium, with strong focus states.
-
-## Layout
-
-- Let whitespace do more of the work than decoration.
-- Prefer clean grids, content blocks, and proof-driven sections.
-- Every section should have a clear purpose: promise, proof, process, offer, CTA.
-
-## Guardrails
-
-- Avoid rainbow accents and category colors.
-- Avoid generic Bootstrap-style gradients and heavy shadows.
-- Avoid fake-growth visual tricks that weaken trust.
-- Keep motion subtle and optional.
+Do not implement broad subjective visual changes until the constitution has been visually validated with a cleaner homepage design specimen/mockup.
