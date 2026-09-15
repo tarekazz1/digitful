@@ -143,27 +143,20 @@ Chronological record of setup and implementation changes for the visual-refresh 
 - This work belongs before the final site-wide agent/SEO/QA pass, not during the current visual/logo phase.
 - Decision: D022.
 
-### Logo production candidate — outlined SVG system
-- Status: **PENDING USER REVIEW**.
-- Generated clean SVG outlines from Barlow Condensed ExtraBold / 800, matching the approved display direction without requiring the logo SVG itself to load a font.
-- Final-candidate wordmark: lowercase `digitful.` with coral `#E95849` terminal dot.
-- Created light/dark and monochrome wordmark masters plus standalone `d.` mark variants under `public/assets/brand/`.
-- Replaced the old blue-underline preview logo through the shared `Logo.astro` component.
-- Updated the reusable logo dimensions to the new `600 × 160` wordmark viewBox and simplified alt text to `Digitful` while retaining the approved `Digitful home` link name.
-- Replaced the favicon with an ink/cream/coral `d.` mark and generated 180, 192 and 512 px raster derivatives for touch/app contexts.
-- Updated `site.webmanifest` to the new ink theme/background and app icons.
-- Added `docs/brand/LOGO-SYSTEM.md` with usage, clear-space and minimum-size rules.
-- Added temporary review page: `/logo-test/`.
-- One-time GitHub Actions generator succeeded, then was removed from the branch.
-- Tagline lockup is intentionally not part of v1 because no exact tagline text is separately approved.
+### Logo production candidate 1 — Barlow-derived outlined SVG system
+- **REJECTED**.
+- The first candidate used SVG outlines derived directly from Barlow Condensed ExtraBold / 800.
+- It included light/dark and monochrome wordmarks, standalone `d.` marks, favicon/app derivatives, a review page and a temporary logo-system document.
+- Preview review showed that the result did **not** match the earlier approved concept closely enough: it was too condensed and typographic and lost the wider, rounder, softer, more custom personality of the reference.
+- Correction locked: Barlow remains the site headline face only; it is not the required logo lettering.
+- Next logo candidate must recreate the earlier approved concept itself as clean vector artwork, preserving its proportions, distinctive rounded letters, heavier `d.` mark and larger/integral coral dot.
 - Decision: D023.
-- Production remains untouched.
+- Production remained untouched.
 
 ### Current preview source
-- Pending final logo-candidate SHA pin after documentation update.
+- Rolling back to the last approved pre-logo source: `12ad2246ad73344bbf33674bf8eb2585e7d10b2e`.
 
 ### Next action
-- Deploy the exact logo-candidate source SHA to `preview.digitful.ca`.
-- Review the real header/footer plus `/logo-test/` on desktop/mobile and light/dark.
-- Mark the logo system KEEP / ADJUST / REJECT.
+- Recreate the earlier approved `digitful.` concept faithfully as SVG vectors rather than derive the logo from Barlow.
+- Preview the corrected wordmark and `d.` mark before generating/locking final favicon/app derivatives.
 - After logo KEEP, rebuild the homepage structure and remove the old generic card-heavy layout.
