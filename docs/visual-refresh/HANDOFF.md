@@ -48,10 +48,10 @@ Decision D020 is implemented on `visual-refresh`:
 - source GitHub Pages workflow on `visual-refresh` updated to Node 22 + `npm ci`
 - preview workflow updated to Node 22 + `npm ci`
 - upgrade package commit: `7d5f709337204c960a4444e905bc9d59bec2f6f8`
-- previewed source: `ea8162f396f103cd7844f40b58ef1850ef07b884`
+- validated preview source: `ea8162f396f103cd7844f40b58ef1850ef07b884`
 - preview run `34972381758`: build success, deploy success
 
-No font, logo or homepage composition change was bundled into the framework upgrade.
+No logo or homepage composition change was bundled into the framework upgrade.
 
 ## Approved objective fixes
 1. Contact light-mode links — KEEP — `2ebd6614be8c7ea1c0f7d841fe8111ff3ec0cc92`
@@ -163,14 +163,8 @@ The homepage direction is now frozen across desktop, mobile, light and dark mode
 
 Implementation may tune exact colour values, spacing, line-height and responsive line breaks for accessibility and browser fit without reopening the design. Material visual changes require a new decision.
 
-## Current preview candidate — editorial foundations + Astro 7
+## Editorial foundation candidate
 Visual foundation status: **PENDING USER REVIEW**.
-
-Current preview source:
-`ea8162f396f103cd7844f40b58ef1850ef07b884`
-
-Current framework validation run:
-`34972381758` — build success, deploy success.
 
 Foundation changes already present:
 - `src/assets/_editorial-foundations.scss` loaded after legacy overrides
@@ -180,22 +174,43 @@ Foundation changes already present:
 - stronger border/rule treatment
 - shared navigation, dropdown, theme toggle, buttons, forms and footer restyled
 - header CTA changed to `Talk to Digitful`
-- Inter is still the active body + heading font for now
 
 Important: the homepage has **not** yet been rebuilt to match the approved specimen. Its old card-heavy section structure remains while inheriting the new foundation layer.
+
+## Current typography comparison candidate
+Status: **PENDING USER REVIEW**.
+
+Current preview source:
+`3508f01f363d69f04d15136ce23ab35f7ddd4abe`
+
+Preview run:
+`34973409207` — build success, deploy success.
+
+Review page:
+`https://preview.digitful.ca/type-test/`
+
+What changed:
+- Astro 7 Fonts API now delivers Inter from the built site instead of using the old external Google Fonts stylesheet.
+- Inter remains the normal site/body font for this test, so normal pages should keep the same typographic appearance.
+- The temporary `/type-test/` page compares real approved Digitful copy in four display treatments:
+  1. Inter baseline
+  2. Barlow Condensed — 800
+  3. IBM Plex Sans Condensed — 700
+  4. Archivo Black — 400
+- Body copy stays in Inter for every specimen.
+- Candidate display fonts are injected only on the comparison page; none is applied site-wide yet.
 
 Production `main` / `digitful.ca` remain untouched.
 
 ## Immediate next step
-Browser-test candidate display typefaces on the Astro 7 foundation before finalizing the logo or rebuilding the homepage.
+User reviews `/type-test/` in light/dark and desktop/mobile and chooses the display direction, or asks for another candidate/adjustment.
 
-The display-font test should:
-1. keep body copy on a neutral readable sans unless a better reason emerges
-2. test a small shortlist of bold/compact editorial display faces against real Digitful headings
-3. use the Astro 7 font pipeline/self-hosting path rather than adding another external Google Fonts request
-4. compare desktop/mobile and light/dark
-5. choose one display system, then finalize the `digitful.` SVG logo family against it
-6. only then rebuild the homepage structure and remove the old generic cards
+After typography approval:
+1. record the display-font decision
+2. apply the chosen display font cleanly through Astro Fonts API
+3. finalize the `digitful.` SVG logo family against the chosen type system
+4. rebuild the homepage structure and remove the old generic cards
+5. preview/review before adapting other page types
 
 ## Later implementation sequence
 After display font + logo are approved:
