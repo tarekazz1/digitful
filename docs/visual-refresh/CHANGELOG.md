@@ -37,6 +37,13 @@ Chronological record of setup and implementation changes for the visual-refresh 
   - Unrelated inline scripts, including the theme switcher, are preserved.
 - Preview repo fix commit: `1d0d972211ca0a1dc551adff22a1463d39ef9260`.
 - This was a preview-infrastructure fix only; production source was not changed.
+- User re-tested `preview.digitful.ca` after redeployment and confirmed the light/dark switch works.
+
+### Baseline preview validation
+- Preview domain loads normally over HTTPS.
+- Light/dark switching now works on the live preview.
+- The preview environment is considered ready for controlled visual-refresh work.
+- Full page-by-page parity has not yet been manually rechecked; relevant pages will be verified as each isolated fix is reviewed.
 
 ### Production impact
 - No production code changes.
@@ -47,5 +54,5 @@ Chronological record of setup and implementation changes for the visual-refresh 
 - Exact pinned source SHA: `c8fac4f78295d2576af0e92b04329f4e938c7b6f`
 
 ### Next action
-- Re-check `preview.digitful.ca` after the preview-infrastructure fix and confirm the light/dark switch now works.
-- If baseline parity is confirmed, begin the first isolated source fix: Contact light-mode links.
+- Begin the first isolated source fix on `visual-refresh`: Contact page light-mode email/phone link visibility.
+- Deploy only that exact working commit to preview, then review dark/light and desktop/mobile before deciding KEEP / ADJUST / REJECT.
