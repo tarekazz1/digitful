@@ -70,14 +70,15 @@ Chronological record of setup and implementation changes for the visual-refresh 
 - Production `main` and `digitful.ca` remain unchanged.
 
 ### Fix 3 — Footer copyright contrast
-- Status: **PENDING USER REVIEW**.
+- Status: **APPROVED — KEEP**.
 - Working-branch source commit: `51c3f18531cd49b26df6d65b18807d9bc5867baf`.
 - Changed only `src/components/Footer.astro`.
 - Added a `footer-copyright` class to the copyright span and changed only its text colour to `var(--site-text-muted)`.
 - No footer layout, spacing, links, logo, background, radius, or other design treatment was changed.
 - Purpose: raise the copyright text contrast while leaving the footer design itself for the later design-shift phase.
-- Preview repo is pinned to the exact source commit above.
-- Preview deployment run: `34957277115`.
+- Preview repo was pinned to the exact source commit above.
+- Preview deployment run `34957277115` completed successfully.
+- User reviewed the live preview and chose **KEEP**.
 - Production `main` and `digitful.ca` remain unchanged.
 
 ### Production impact
@@ -89,5 +90,5 @@ Chronological record of setup and implementation changes for the visual-refresh 
 - Exact pinned source SHA: `51c3f18531cd49b26df6d65b18807d9bc5867baf`
 
 ### Next action
-- Review the footer copyright on `preview.digitful.ca` in dark and light mode, ideally desktop and mobile.
-- Record the decision as KEEP / ADJUST / REJECT before starting Fix 4.
+- Begin Fix 4: Thank-you page short-content/footer layout.
+- Keep the layout correction isolated, deploy the exact commit to preview, then review dark/light and desktop/mobile before deciding KEEP / ADJUST / REJECT.
