@@ -32,6 +32,23 @@ Do not add redundant benefit strips or summary copy when the section items alrea
 
 ---
 
+## Homepage messaging model
+
+The public-facing growth system should be expressed in plain business language, not internal marketing-operations terminology.
+
+Use this four-part model:
+
+1. **Say the right thing**
+2. **Reach the right people**
+3. **Make action easy**
+4. **Follow through**
+
+The four visible work areas — Social Media, SEO, Paid Ads, and Process Automation — are **not** the four stages of the growth system. They are practical capabilities Digitful uses to improve different parts of that system.
+
+Avoid presenting `strategy / acquisition / handoff / automation` as the public-facing system taxonomy. Terms such as `acquisition`, `conversion`, and `handoff` may be useful internally but should not carry the main homepage message when clearer language is available.
+
+---
+
 ## Header CTA
 
 **Talk to Digitful**
@@ -50,7 +67,18 @@ Marketing works better when the parts talk to each other.
 
 **Body**
 
-Strategy, acquisition, and automation built to work together.
+Marketing works better when the whole journey works together.
+
+**System map**
+
+1. Say the right thing
+   - Message + priorities
+2. Reach the right people
+   - Search + social + paid
+3. Make action easy
+   - Clear next steps
+4. Follow through
+   - Fewer manual gaps
 
 **Primary CTA**
 
@@ -88,7 +116,7 @@ If the next step relies on memory, it probably needs a system.
 
 ---
 
-## Core offers
+## Core work areas
 
 **Eyebrow**
 
@@ -96,9 +124,9 @@ What we actually do
 
 **Headline**
 
-Four parts. One growth system.
+This is where we usually get involved.
 
-Do **not** add a separate section-summary paragraph below this headline on the homepage. The four offer descriptions provide the supporting layer.
+Do **not** add a separate section-summary paragraph below this headline on the homepage. The four work-area descriptions provide the supporting layer.
 
 ### Social Media
 
@@ -207,6 +235,8 @@ Do not reintroduce the decorative/summary strip:
 - `Clearer`
 - `More efficient`
 - `Built for real business`
+
+Do not reintroduce `Four parts. One growth system.` as the work-area heading; it incorrectly implies that Social Media, SEO, Paid Ads, and Process Automation are the four stages of the system.
 
 The homepage should feel like it knows what to say and stops once it has said it.
 
