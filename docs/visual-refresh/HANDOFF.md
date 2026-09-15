@@ -209,7 +209,7 @@ Use the canonical `GoogleCloudPlatform/open-knowledge-format` project, not the f
 Do not implement OKF while page copy/URLs are moving. Add a small Digitful knowledge bundle after the homepage and primary service/page architecture is stable, then validate it before the final agent/SEO/QA pass. It complements rather than replaces semantic HTML, Schema.org, sitemap and normal SEO metadata.
 
 ## Preview state
-Homepage structural rebuild candidate is deployed for review.
+Homepage structural rebuild is **APPROVED — KEEP**.
 
 Reviewed source:
 `0c828a806093e7b287b4228170d60a6602cf14b7`
@@ -231,20 +231,22 @@ What changed in this candidate:
 Production `main` remains untouched.
 
 ## Immediate next step
-User reviews `https://preview.digitful.ca/` on desktop/mobile and light/dark.
+Resolve the Quick Site Check preview failure before moving to the next page type.
 
-Review scope:
-- overall structure and section order
-- hero scale/composition
-- whether open grids feel sufficiently non-card-like
-- teal Good fit section
-- Instant Snapshot layout and functional check
-- final mustard CTA
-- spacing/readability on phone and laptop
+Current evidence:
+- user approved the homepage structural rebuild
+- direct navigation to the Cloudflare Worker with `https://digitful.ca` returns a full PageSpeed JSON payload including `lighthouseResult`
+- browser `fetch()` from `https://preview.digitful.ca` fails with `TypeError: Failed to fetch`
+- Google API key is restricted to the PageSpeed Insights API but has **no application restriction**, so the key itself is not blocked by preview referrer/IP rules
+- this strongly points to a Worker CORS/origin-policy issue between preview and the Worker rather than a Google PageSpeed API failure
 
-Response: KEEP / ADJUST / REJECT for the homepage structural rebuild.
+Diagnostic preview source:
+`73cf73e4d9a2b0a9e937158614891192c48f2148`
 
-Do not adapt service/contact/blog page types until this homepage candidate is reviewed.
+Diagnostic preview run:
+`34984708246` — build success, deploy success.
+
+Next check: inspect the Cloudflare Worker CORS/allowed-origin logic and allow `https://preview.digitful.ca` alongside production without weakening the production secret/API-key model.
 
 ## Later implementation sequence
 1. rebuild homepage

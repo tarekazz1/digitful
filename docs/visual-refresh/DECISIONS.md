@@ -308,8 +308,8 @@ The temporary `/logo-test/` review route was removed after approval.
 
 ---
 
-## D025 — Homepage structural rebuild candidate
-**Status:** Candidate — pending preview KEEP / ADJUST / REJECT
+## D025 — Homepage structural rebuild
+**Status:** Approved — KEEP
 
 Rebuild the homepage composition against the approved desktop/mobile/dark-mode direction and locked homepage copy.
 
@@ -329,7 +329,6 @@ Preview run: `34983063215` — build and deploy successful.
 ---
 
 ## Current pending decisions
-- Homepage structural rebuild candidate: preview KEEP / ADJUST / REJECT.
 - Exact production token values after browser/accessibility testing.
 - Exact section compositions for non-home page types.
 - Final implementation choices for deferred blog/mobile/tablet layout observations.

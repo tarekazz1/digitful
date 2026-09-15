@@ -197,3 +197,18 @@ Chronological record of setup and implementation changes for the visual-refresh 
 - Review homepage on desktop/mobile and light/dark.
 - Confirm Snapshot still runs and diagnostic-to-Contact handoff still works.
 - Mark the homepage structural candidate KEEP / ADJUST / REJECT before adapting other page types.
+
+### Homepage structural rebuild approved
+- **APPROVED — KEEP** after desktop/mobile and light/dark review.
+- Reviewed source remains `0c828a806093e7b287b4228170d60a6602cf14b7`.
+- Decision D025 is now approved.
+- Production remains untouched.
+
+### Quick Site Check diagnostic
+- User tested `https://digitful.ca` with both mobile and desktop and the preview returned a generic analysis failure.
+- Added temporary preview diagnostics in source `73cf73e4d9a2b0a9e937158614891192c48f2148`; preview run `34984708246` built and deployed successfully.
+- Browser diagnostic: `Could not reach the audit service: Failed to fetch`.
+- Opening the Worker endpoint directly returns a valid full PageSpeed response with `lighthouseResult`, so Worker → Google PageSpeed is functioning.
+- Google API key is limited to PageSpeed Insights API but has no application restriction.
+- Current leading diagnosis: CORS/origin policy on the Cloudflare Worker does not allow `https://preview.digitful.ca`.
+- Resolve this functional issue before moving to the next page type.
