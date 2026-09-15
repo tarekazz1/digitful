@@ -329,7 +329,7 @@ Preview run: `34983063215` — build and deploy successful.
 ---
 
 ## D026 — Instant Snapshot result-state visual alignment
-**Status:** Candidate — pending preview KEEP / ADJUST / REJECT
+**Status:** Approved — KEEP
 
 After the homepage structure was approved, the live Snapshot result revealed that its dynamically injected Bootstrap card/badges/progress bars still looked like the legacy site. Replace only the dynamic result/loading/error states with the approved technical-editorial instrument language.
 
@@ -349,7 +349,7 @@ Preview run: `34987792106` — build and deploy successful.
 ---
 
 ## D027 — Homepage whole-page composition refinement
-**Status:** Candidate — pending preview KEEP / ADJUST / REJECT
+**Status:** Approved — KEEP
 
 After zoomed-out desktop review, keep the approved homepage structure and reduced copy but move the implementation closer to the approved visual references. The first structural build was too static, too vertically stretched, and repeated square ruled layouts too mechanically.
 
@@ -371,9 +371,34 @@ Preview run: `34989464135` — build and deploy successful.
 
 ---
 
+## D028 — Extract a reusable design system before adapting more page types
+**Status:** Approved roadmap decision
+
+After the homepage is approved, consolidate the visual language that proved successful into reusable design-system primitives **before** rebuilding the service/contact/blog page types.
+
+Centralize identity-level decisions such as:
+- colour/theme tokens
+- Barlow Condensed / Inter typography roles and scale
+- spacing rhythm, rule weights and border treatments
+- buttons, form controls, focus treatment and reduced-motion behaviour
+- reusable icon-disc treatment and inline SVG icon conventions
+- graph-paper / technical-panel treatment
+- restrained handwritten-style annotations
+- editorial ruled rows/lists
+- shared interaction/motion timing
+
+Do **not** turn every homepage composition into a rigid component. The design system should centralize identity and repeated behaviour while leaving page composition flexible enough for services, contact and editorial/blog pages to have different structures.
+
+Only extract patterns that have been visually validated; do not prematurely abstract one-off decoration. The goal is that future site-wide changes to colours, typography, rules, controls, icon treatments and motion can be made centrally instead of element by element.
+
+Timing: immediately after final homepage KEEP, before the service-page implementation pass.
+
+Final approved homepage rendered source after the hero-copy trim: `c914f6252ec30d99a4adf3979cd5593b5f6ca68d`.
+Preview run: `34992817965` — build and deploy successful.
+
+---
+
 ## Current pending decisions
-- Homepage whole-page composition refinement: preview KEEP / ADJUST / REJECT.
-- Instant Snapshot result-state visual alignment: preview KEEP / ADJUST / REJECT.
 - Exact production token values after browser/accessibility testing.
 - Exact section compositions for non-home page types.
 - Final implementation choices for deferred blog/mobile/tablet layout observations.

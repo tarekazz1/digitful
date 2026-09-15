@@ -242,3 +242,14 @@ Chronological record of setup and implementation changes for the visual-refresh 
 - Locked reduced homepage copy remains unchanged; removed summary paragraphs and the decorative benefit strip were not reintroduced.
 - Snapshot Worker/API behaviour and the D026 result-state treatment remain unchanged.
 - Production remains untouched.
+
+### Homepage final KEEP + design-system roadmap
+- **APPROVED — KEEP** for the whole-page composition refinement (D027).
+- **APPROVED — KEEP** for the Instant Snapshot dynamic result-state treatment (D026).
+- Shortened the hero support line to `Strategy, acquisition, and automation built to work together.` to avoid repeating the immediately adjacent Strategy / Acquisition / Handoff / Automation system map.
+- Final approved rendered source: `c914f6252ec30d99a4adf3979cd5593b5f6ca68d`.
+- Preview run `34992817965`: build **success**, deploy **success**.
+- Updated `docs/brand/HOMEPAGE-COPY.md` so the shorter hero line is now the copy source of truth.
+- Added D028: before adapting service/contact/blog page types, extract the validated homepage visual language into reusable design-system primitives.
+- The design system should centralize identity-level tokens/patterns while keeping page composition flexible; avoid turning every homepage section into a rigid reusable component.
+- Production remains untouched.

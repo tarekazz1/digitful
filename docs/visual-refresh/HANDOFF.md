@@ -134,6 +134,7 @@ Tone:
 
 Key locked lines:
 - `Marketing works better when the parts talk to each other.`
+- Hero support: `Strategy, acquisition, and automation built to work together.`
 - `More traffic won’t fix a messy system.`
 - `If the next step relies on memory, it probably needs a system.`
 - `Four parts. One growth system.`
@@ -185,8 +186,8 @@ The homepage direction is frozen across desktop, mobile, light and dark modes.
 
 Implementation may tune exact colour values, spacing, line-height and responsive line breaks for accessibility and browser fit without reopening the design. Material visual changes require a new decision.
 
-## Editorial foundation candidate
-Visual foundation status: **PENDING USER REVIEW**.
+## Editorial foundation
+The shared foundation is now part of the **approved homepage system**. Exact token consolidation and reusable primitives are the next design-system pass (D028).
 
 Foundation changes already present:
 - `src/assets/_editorial-foundations.scss` loaded after legacy overrides
@@ -231,34 +232,26 @@ What changed in this candidate:
 Production `main` remains untouched.
 
 ## Immediate next step
-Review the **whole homepage composition refinement** at `https://preview.digitful.ca/` before moving to another page type.
+Build the reusable **Digitful design system layer** from the patterns that survived homepage review, before adapting another page type.
 
-Why this pass exists:
-- zoomed-out desktop review showed excessive vertical dead space and too much repeated ruled-box geometry
-- the approved references have more graphic rhythm: circular icons, accent shapes, annotations, visual movement and more open editorial columns
-- the user explicitly wants to keep the current technical grid language while restoring those missing cues
+Homepage status:
+- whole-page composition refinement: **APPROVED — KEEP** (D027)
+- Instant Snapshot result-state treatment: **APPROVED — KEEP** (D026)
+- final hero support line: `Strategy, acquisition, and automation built to work together.`
+- final approved rendered source: `c914f6252ec30d99a4adf3979cd5593b5f6ca68d`
+- preview run `34992817965`: build success, deploy success
+- production remains untouched
 
-Candidate changes:
-- tighter hero and section rhythm
-- larger/more graphic hero system-map treatment with coral/mustard accents and annotations
-- inline SVG icon discs for What we fix, Services and Good fit
-- open ruled columns rather than repeated enclosing boxes
-- Good fit remains a teal split moment but is tighter and more graphic
-- mobile converts these sections to icon-led editorial rows
-- restrained hover movement with reduced-motion fallback
-- locked reduced copy remains unchanged
-- Instant Snapshot functionality and the D026 result state remain intact
+Design-system goal (D028):
+- centralize colours/themes, typography roles, spacing/rules, buttons/forms/focus states, icon-disc treatment, graph-paper panels, editorial rows, annotations and motion timing
+- extract only validated/repeated patterns
+- keep page composition flexible rather than forcing every page into homepage components
+- make later brand/system edits centralized instead of element-by-element
 
-Candidate source:
-`4f7651731bad87fc9ca3b97aa0a24c2905c78517`
-
-Preview run:
-`34989464135` — build success, deploy success.
-
-Review desktop/mobile and light/dark, preferably including a zoomed-out desktop view. Final homepage KEEP should close both this composition pass and the still-pending D026 Snapshot result-state visual treatment.
+After that systemization pass is previewed and validated, adapt the service page type using those shared primitives.
 
 ## Later implementation sequence
-1. rebuild homepage
+1. extract and validate reusable design-system primitives from the approved homepage
 2. adapt service page type
 3. adapt contact and thank-you page types
 4. adapt blog index/article while preserving editorial reading priority
