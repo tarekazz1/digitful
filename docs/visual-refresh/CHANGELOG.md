@@ -212,3 +212,4 @@ Chronological record of setup and implementation changes for the visual-refresh 
 - Google API key is limited to PageSpeed Insights API but has no application restriction.
 - Current leading diagnosis: CORS/origin policy on the Cloudflare Worker does not allow `https://preview.digitful.ca`.
 - Resolve this functional issue before moving to the next page type.
+
