@@ -50,11 +50,14 @@
 // 4. Legacy site-specific overrides remain in place while page layouts are rebuilt.
 @use "./_custom-overrides";
 
-// 5. Approved visual-refresh foundation layer.
+// 5. Approved visual-refresh foundation layer: global shell, controls and legacy bridging.
 @use "./_editorial-foundations";
 
-// 6. Approved homepage composition. Scoped to .home-page.
+// 6. D028 reusable identity/mechanics. Does not prescribe page composition.
+@use "./_design-system";
+
+// 7. Approved homepage composition. Scoped to .home-page.
 @use "./_homepage";
 
-// 7. Interactive Snapshot result states. Scoped to the homepage instrument.
+// 8. Interactive Snapshot result states. Scoped to the homepage instrument.
 @use "./_snapshot-results";
