@@ -112,7 +112,7 @@ Do not begin the redesign with isolated facelifts such as glow removal, radius t
 ---
 
 ## D015 — Graphic technical editorial + analog-print direction
-**Status:** Approved working direction
+**Status:** Approved
 
 Digitful's redesign will use a **graphic technical editorial system with an analog-print edge**.
 
@@ -187,13 +187,35 @@ Approved mobile principles:
 - real homepage content and Instant Snapshot remain intact
 - sections stack and simplify rather than merely shrink the desktop layout
 
-This approval validates the visual constitution on mobile. It does not yet authorize implementation; dark-mode validation remains before the homepage design direction is frozen.
+---
+
+## D019 — Dark-mode homepage specimen and homepage design freeze
+**Status:** Approved
+
+The dark-mode homepage specimen is approved. The homepage visual direction is now frozen for implementation across desktop, mobile, light mode and dark mode.
+
+Dark-mode rules:
+- charcoal/ink base with warm cream typography
+- same coral / teal / mustard accents as light mode
+- flat fills, strong rules and restrained print grain
+- same editorial hierarchy and selective annotations
+- no glow, glassmorphism, blue/purple gradients, cyber styling or translucent SaaS surfaces
+
+The approved homepage system now consists of:
+- visual constitution
+- refined `digitful.` logo direction
+- locked homepage copy and density rules
+- approved desktop visual direction
+- approved mobile specimen
+- approved dark-mode specimen
+
+Implementation may tune exact token values, spacing and line breaks in-browser for accessibility and responsive fit without reopening the design direction. Material visual changes still require a new explicit decision.
 
 ---
 
 ## Current pending decisions
-- Dark-mode homepage specimen and final dark-mode token values.
 - Exact display typeface after browser testing.
 - Final SVG logo masters and minimum-size/clear-space rules.
+- Exact production token values after browser/accessibility testing.
 - Exact section compositions for non-home page types.
 - Final implementation choices for deferred blog/mobile/tablet layout observations.
