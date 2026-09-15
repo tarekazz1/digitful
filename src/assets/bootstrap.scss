@@ -55,3 +55,6 @@
 
 // 6. Approved homepage composition. Scoped to .home-page.
 @use "./_homepage";
+
+// 7. Interactive Snapshot result states. Scoped to the homepage instrument.
+@use "./_snapshot-results";
