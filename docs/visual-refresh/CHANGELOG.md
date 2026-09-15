@@ -177,3 +177,23 @@ Chronological record of setup and implementation changes for the visual-refresh 
 ### Next action
 - Deploy the finalized logo source to `preview.digitful.ca` and verify header/footer + favicon in real site context.
 - Then rebuild the homepage structure and remove the old generic card-heavy layout.
+
+### Homepage structural rebuild candidate
+- Status: **PENDING USER REVIEW**.
+- Reviewed source: `0c828a806093e7b287b4228170d60a6602cf14b7`.
+- Preview run `34983063215`: build **success**, deploy **success**.
+- Replaced the old homepage card-heavy composition with the approved editorial structure and locked copy.
+- Added `src/assets/_homepage.scss`, scoped to `.home-page`, and loaded it after the shared editorial foundation layer.
+- Hero is now asymmetric with a technical system-map graphic and approved CTA wording.
+- What we fix uses a three-column ruled editorial list rather than cards.
+- Core offers uses a two-by-two open ruled service grid rather than legacy service cards.
+- Good fit uses a flat teal intro field plus a ruled list.
+- Instant Snapshot is now a bordered technical instrument panel; existing form IDs, radio values, result container and `snapshot.js` integration are preserved.
+- Final CTA is a flat mustard band using the approved `Bring the messy version.` copy.
+- Added single-column mobile adaptations and preserved reduced-motion behaviour.
+- Production remains untouched.
+
+### Next action
+- Review homepage on desktop/mobile and light/dark.
+- Confirm Snapshot still runs and diagnostic-to-Contact handoff still works.
+- Mark the homepage structural candidate KEEP / ADJUST / REJECT before adapting other page types.

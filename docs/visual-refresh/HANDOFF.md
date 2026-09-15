@@ -209,14 +209,42 @@ Use the canonical `GoogleCloudPlatform/open-knowledge-format` project, not the f
 Do not implement OKF while page copy/URLs are moving. Add a small Digitful knowledge bundle after the homepage and primary service/page architecture is stable, then validate it before the final agent/SEO/QA pass. It complements rather than replaces semantic HTML, Schema.org, sitemap and normal SEO metadata.
 
 ## Preview state
-The concept-faithful logo candidate received KEEP. Final logo assets are now wired into the shared site shell on `visual-refresh`; the next preview pin should validate the approved logo in the real header/footer plus the finalized favicon/app derivatives.
+Homepage structural rebuild candidate is deployed for review.
+
+Reviewed source:
+`0c828a806093e7b287b4228170d60a6602cf14b7`
+
+Preview run:
+`34983063215` — build success, deploy success.
+
+What changed in this candidate:
+- old homepage card grids removed from What we fix, Core offers and Good fit
+- hero rebuilt as an asymmetric editorial layout with a technical system-map graphic
+- approved locked homepage wording applied
+- service section rebuilt as an open ruled grid
+- Good fit rebuilt as a teal split section + ruled list
+- Instant Snapshot rebuilt as a technical instrument panel while preserving functional IDs/values
+- final CTA rebuilt as a flat mustard editorial band
+- responsive mobile stacking added
+- dark mode continues to use the same flat editorial system
 
 Production `main` remains untouched.
 
 ## Immediate next step
-Deploy the finalized approved-logo source SHA to preview and verify the real header/footer in light/dark and desktop/mobile.
+User reviews `https://preview.digitful.ca/` on desktop/mobile and light/dark.
 
-After that, begin the homepage structural rebuild against the approved specimen and locked copy. The old generic card-heavy homepage composition should be removed in that pass.
+Review scope:
+- overall structure and section order
+- hero scale/composition
+- whether open grids feel sufficiently non-card-like
+- teal Good fit section
+- Instant Snapshot layout and functional check
+- final mustard CTA
+- spacing/readability on phone and laptop
+
+Response: KEEP / ADJUST / REJECT for the homepage structural rebuild.
+
+Do not adapt service/contact/blog page types until this homepage candidate is reviewed.
 
 ## Later implementation sequence
 1. rebuild homepage

@@ -308,7 +308,28 @@ The temporary `/logo-test/` review route was removed after approval.
 
 ---
 
+## D025 — Homepage structural rebuild candidate
+**Status:** Candidate — pending preview KEEP / ADJUST / REJECT
+
+Rebuild the homepage composition against the approved desktop/mobile/dark-mode direction and locked homepage copy.
+
+Candidate rules:
+- remove the old generic card-heavy homepage structure
+- preserve the approved copy and one-headline/one-support-layer density rule
+- use open editorial grids/rules for What we fix and Core offers
+- use a flat teal split composition for Good fit
+- treat Instant Snapshot as a bounded technical instrument rather than a generic SaaS card
+- use the approved concept-faithful logo, Barlow Condensed headings, Inter body copy and paper/ink/coral/teal/mustard system
+- preserve Snapshot form IDs, strategy radio values and diagnostic-to-Contact handoff behaviour
+- production remains untouched
+
+Reviewed source: `0c828a806093e7b287b4228170d60a6602cf14b7`.
+Preview run: `34983063215` — build and deploy successful.
+
+---
+
 ## Current pending decisions
+- Homepage structural rebuild candidate: preview KEEP / ADJUST / REJECT.
 - Exact production token values after browser/accessibility testing.
 - Exact section compositions for non-home page types.
 - Final implementation choices for deferred blog/mobile/tablet layout observations.
