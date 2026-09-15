@@ -57,7 +57,7 @@ Important caveat:
 Confirmed / actionable visual findings:
 1. Contact page, light mode: email and phone links become nearly invisible because they use `link-light`. **Fixed, previewed, and approved KEEP.**
 2. Logo accessible-name bug: visible light-mode logo is decorative/empty-alt while the meaningful dark logo is hidden. **Fixed, previewed, and approved KEEP.**
-3. Footer copyright text has insufficient contrast. **Candidate Fix 3 deployed to preview; pending KEEP / ADJUST / REJECT.**
+3. Footer copyright text has insufficient contrast. **Fixed, previewed, and approved KEEP.**
 4. Thank-you page: short content leaves footer floating above the viewport bottom; consider site-shell flex layout with main filling remaining height.
 5. Blog article hero: back-link/category/meta grouping is cramped, especially mobile.
 6. Internal mobile pages use looser section spacing than the homepage because homepage has special mobile `py-6` reduction.
@@ -90,7 +90,7 @@ Do NOT batch these subjective changes. Each must be independently previewed, rev
 ### Phase 1 — objective / low-risk fixes
 1. Contact light-mode links. **APPROVED — KEEP**
 2. Logo accessible name. **APPROVED — KEEP**
-3. Footer contrast. **PENDING USER REVIEW**
+3. Footer contrast. **APPROVED — KEEP**
 4. Thank-you short-page/footer layout.
 5. Blog hero metadata spacing.
 6. Mobile section-spacing consistency.
@@ -219,13 +219,11 @@ Performance improvement alone is never enough to accept a change. Existing navig
 - Preview deployment run: `34956432099` — successful.
 - Production: untouched.
 
-## Current candidate
 ### Fix 3 — Footer copyright contrast
-- Decision: **PENDING USER REVIEW**.
-- Source commit: `51c3f18531cd49b26df6d65b18807d9bc5867baf`.
+- Decision: **KEEP**.
+- Source commit reviewed: `51c3f18531cd49b26df6d65b18807d9bc5867baf`.
 - Change: `src/components/Footer.astro` gives only the copyright span a dedicated class with `color: var(--site-text-muted)`.
-- Expected visible result: copyright text is slightly clearer/easier to read; no layout or broader footer redesign.
-- Preview deployment run: `34957277115`.
+- Preview deployment run: `34957277115` — successful.
 - Production: untouched.
 
 ## Current status
@@ -238,9 +236,8 @@ Performance improvement alone is never enough to accept a change. Existing navig
 - Preview theme-toggle infrastructure defect: fixed and user-verified.
 - Preview environment: ready for controlled source changes.
 - Full page-by-page baseline parity has not been manually rechecked; relevant pages will be verified during each isolated review.
-- Approved fixes: 2 (Contact light-mode links; Logo accessible name).
-- Candidate fix under review: Fix 3 (Footer copyright contrast).
+- Approved fixes: 3 (Contact light-mode links; Logo accessible name; Footer copyright contrast).
 - Production code changes: NONE.
 
 ## Immediate next step
-Review Fix 3 on `preview.digitful.ca`: confirm the copyright text is readable but still visually secondary in dark and light mode, ideally desktop and mobile. Then decide KEEP / ADJUST / REJECT before starting Fix 4 (Thank-you short-page/footer layout).
+Begin Fix 4 on `visual-refresh`: correct the Thank-you page short-content/footer layout so the footer reaches the bottom of short pages. Keep the change isolated, deploy only that exact commit to preview, verify dark/light and desktop/mobile, then decide KEEP / ADJUST / REJECT.
