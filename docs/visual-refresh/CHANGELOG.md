@@ -45,8 +45,8 @@ Chronological record of setup and implementation changes for the visual-refresh 
 - The preview environment is considered ready for controlled visual-refresh work.
 - Full page-by-page parity has not yet been manually rechecked; relevant pages will be verified as each isolated fix is reviewed.
 
-### Candidate fix 1 — Contact light-mode links
-- Status: **PENDING USER REVIEW**.
+### Fix 1 — Contact light-mode links
+- Status: **APPROVED — KEEP**.
 - Working-branch source commit: `2ebd6614be8c7ea1c0f7d841fe8111ff3ec0cc92`.
 - Changed only `src/pages/contact.astro`.
 - Replaced the forced Bootstrap `link-light` treatment on the email and phone links with a contact-specific theme-aware link class.
@@ -54,6 +54,7 @@ Chronological record of setup and implementation changes for the visual-refresh 
 - No form fields, form action, contact workflow JavaScript, navigation, or other pages were changed.
 - Preview repo was pinned to the exact source commit above.
 - Preview deployment run `34955869009` completed successfully.
+- User reviewed the live preview and chose **KEEP**.
 - Production `main` and `digitful.ca` remain unchanged.
 
 ### Production impact
@@ -65,5 +66,5 @@ Chronological record of setup and implementation changes for the visual-refresh 
 - Exact pinned source SHA: `2ebd6614be8c7ea1c0f7d841fe8111ff3ec0cc92`
 
 ### Next action
-- Review the Contact page on `preview.digitful.ca` in light and dark mode, ideally on both desktop and mobile.
-- Record the decision as KEEP / ADJUST / REJECT before starting the next fix.
+- Begin Fix 2: add a stable accessible name to the header logo link.
+- Isolate that change, deploy the exact commit to preview, then verify header/logo behaviour in dark/light mode and desktop/mobile before deciding KEEP / ADJUST / REJECT.
