@@ -167,6 +167,7 @@ Fix:
 - GTM noscript is removed separately.
 - The theme script is preserved.
 - Production source was never affected by this preview-only defect.
+- User re-tested the live preview after redeployment and confirmed the theme switch works.
 
 ## Review / approval process
 For every material change:
@@ -210,10 +211,11 @@ Performance improvement alone is never enough to accept a change. Existing navig
 - Namecheap preview CNAME: added.
 - Preview custom domain / DNS / HTTPS: complete.
 - Preview site loads successfully.
-- Preview theme-toggle infrastructure defect: identified and fixed in preview repo; re-verification pending.
+- Preview theme-toggle infrastructure defect: fixed and user-verified.
+- Preview environment: ready for controlled source changes.
+- Full page-by-page baseline parity has not been manually rechecked; relevant pages will be verified during each isolated review.
 - Production code changes: NONE.
 - Approved visual fixes implemented: NONE yet.
 
 ## Immediate next step
-1. Re-check `preview.digitful.ca` after the preview-infrastructure fix and confirm the light/dark switch works.
-2. Once baseline preview parity is confirmed, begin the first isolated fix: Contact light-mode links.
+Begin the first isolated source fix on `visual-refresh`: Contact light-mode email/phone link visibility. Deploy only that exact working commit to preview and review desktop/mobile + dark/light before deciding KEEP / ADJUST / REJECT.
