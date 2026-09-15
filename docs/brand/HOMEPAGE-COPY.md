@@ -73,7 +73,7 @@ Marketing works better when the parts talk to each other.
 
 **Body**
 
-Marketing works better when the whole journey works together.
+What people see, where they find you, what they do next, and how you follow up.
 
 **System map**
 
@@ -257,3 +257,7 @@ The homepage should feel like it knows what to say and stops once it has said it
 ## Implementation note
 
 These words and content-density decisions are approved for the homepage redesign. Minor line breaks may change for responsive layout, but wording or hierarchy should not be rewritten during visual implementation without a new explicit content decision.
+
+Latest approved hero-support implementation:
+- Rendered source: `637d4cc84c1452ef1cdbfecda505e8f6bb9ae0ba`
+- Preview run `35012284588`: build and deploy succeeded.
