@@ -50,5 +50,8 @@
 // 4. Legacy site-specific overrides remain in place while page layouts are rebuilt.
 @use "./_custom-overrides";
 
-// 5. Approved visual-refresh foundation layer. This intentionally loads last.
+// 5. Approved visual-refresh foundation layer.
 @use "./_editorial-foundations";
+
+// 6. Approved homepage composition. Scoped to .home-page.
+@use "./_homepage";
