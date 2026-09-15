@@ -95,7 +95,7 @@ Chronological record of setup and implementation changes for the visual-refresh 
 
 ### Candidate implementation 1 — editorial foundations
 - Status: **PENDING USER REVIEW**.
-- Source commit pinned for preview: `8f30106882e3e0b659865c1187f0aa5dc50ec96a`.
+- Source commit initially pinned for preview: `8f30106882e3e0b659865c1187f0aa5dc50ec96a`.
 - Added `src/assets/_editorial-foundations.scss` and loaded it after the legacy overrides.
 - Introduced the approved paper/ink/coral/teal/mustard token system for light and dark modes.
 - Flattened the global background, removed page-glow markup, reduced radii, removed soft shadows/glass treatment, strengthened borders/rules, and restyled shared buttons, navigation, dropdowns, forms, footer, and generic legacy surfaces.
@@ -105,10 +105,22 @@ Chronological record of setup and implementation changes for the visual-refresh 
 - Preview run `34969653064`: build **success**, deploy **success**.
 - Production `main` / `digitful.ca` untouched.
 
+### Framework upgrade — Astro 7.3.2
+- User approved upgrading the framework before display-font selection after reviewing Astro 7.3 and earlier release improvements.
+- Upgraded `astro` from `^5.6.1` to exact `7.3.2` and regenerated `package-lock.json`.
+- Upgrade package commit: `7d5f709337204c960a4444e905bc9d59bec2f6f8`.
+- Temporary lockfile-upgrade workflow verified `npm run build` successfully on Node 22, then was removed.
+- Updated source GitHub Pages workflow on `visual-refresh` to Node 22 and `npm ci`.
+- Updated preview workflow to Node 22 while retaining `npm ci`.
+- Preview source pinned to `ea8162f396f103cd7844f40b58ef1850ef07b884`.
+- Preview run `34972381758`: build **success**, deploy **success**.
+- No homepage composition, logo, font or production-site changes were bundled into this upgrade.
+- Decision: D020.
+
 ### Current preview source
-- `8f30106882e3e0b659865c1187f0aa5dc50ec96a`
+- `ea8162f396f103cd7844f40b58ef1850ef07b884`
 
 ### Next action
-- User reviews the editorial foundation layer on `preview.digitful.ca` in light/dark and desktop/mobile.
-- Check shared shell/header/footer, theme switching, navigation/dropdown, buttons/forms and general readability; the homepage is intentionally still using its old section structure.
-- Mark the foundation pass KEEP / ADJUST / REJECT before rebuilding the homepage against the approved specimen.
+- The framework upgrade is validated by CI and preview deployment.
+- Next design task: browser-test candidate display typefaces using the Astro 7 font pipeline, then lock the display font before final SVG logo work and homepage structural rebuild.
+- The editorial foundation layer itself remains the current visual candidate; the old homepage card-heavy composition is still intentionally present until the structural rebuild.
