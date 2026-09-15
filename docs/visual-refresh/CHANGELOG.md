@@ -294,3 +294,14 @@ Chronological record of setup and implementation changes for the visual-refresh 
 - Header and final CTA remain `Talk to Digitful`.
 - Source: `383ccfa90f67ad62b9fafb98492332e25cb180e2`. Preview run `35005971482`: build **success**, deploy **success**.
 - Production remains untouched.
+
+### D028 design-system KEEP + final homepage copy
+- **APPROVED — KEEP** for D028.
+- Preserved `_editorial-foundations.scss`; added `_design-system.scss` for proven shared mechanics and a visual-parity adoption bridge rather than restructuring the validated foundation layer.
+- Kept `HomeIcon.astro` homepage-specific and kept D031 interaction jokes bespoke.
+- D028 implementation source: `d4850dc1b521350b0c8795270fd2fee6d3ccf5f6`; preview run `35009136933`: build **success**, deploy **success**.
+- Final hero support copy approved as D033: `What people see, where they find you, what they do next, and how you follow up.`
+- Final reviewed rendered source: `637d4cc84c1452ef1cdbfecda505e8f6bb9ae0ba`; preview run `35012284588`: build **success**, deploy **success**.
+- Preview remains pinned to that exact rendered source; later documentation commits are intentionally not preview pins.
+- Next implementation phase: inspect and adapt the representative service-page type using D028 primitives only where they genuinely fit.
+- Production remains untouched.
