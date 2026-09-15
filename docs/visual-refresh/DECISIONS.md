@@ -236,8 +236,23 @@ Preview run: `34972381758` — build and deploy successful.
 
 ---
 
+## D021 — Barlow Condensed display typography
+**Status:** Approved and implemented as the current preview candidate
+
+After browser comparison against Inter, IBM Plex Sans Condensed and Archivo Black, use **Barlow Condensed** as Digitful's display/headline face.
+
+Typography system:
+- Barlow Condensed 800 for primary display headings
+- Inter remains the neutral body/interface face
+- both are delivered through Astro's Fonts API rather than the previous external Google Fonts stylesheet
+- expressive display typography stays out of long body copy
+
+Implementation source: `12ad2246ad73344bbf33674bf8eb2585e7d10b2e`.
+Preview run: `34974525550` — build and deploy successful.
+
+---
+
 ## Current pending decisions
-- Exact display typeface after browser testing.
 - Final SVG logo masters and minimum-size/clear-space rules.
 - Exact production token values after browser/accessibility testing.
 - Exact section compositions for non-home page types.
