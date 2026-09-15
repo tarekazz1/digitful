@@ -45,14 +45,25 @@ Chronological record of setup and implementation changes for the visual-refresh 
 - The preview environment is considered ready for controlled visual-refresh work.
 - Full page-by-page parity has not yet been manually rechecked; relevant pages will be verified as each isolated fix is reviewed.
 
+### Candidate fix 1 — Contact light-mode links
+- Status: **PENDING USER REVIEW**.
+- Working-branch source commit: `2ebd6614be8c7ea1c0f7d841fe8111ff3ec0cc92`.
+- Changed only `src/pages/contact.astro`.
+- Replaced the forced Bootstrap `link-light` treatment on the email and phone links with a contact-specific theme-aware link class.
+- New contact-link colour uses `var(--site-text)` so it stays readable in both dark and light themes; hover/focus uses `var(--site-accent-soft)`.
+- No form fields, form action, contact workflow JavaScript, navigation, or other pages were changed.
+- Preview repo was pinned to the exact source commit above.
+- Preview deployment run `34955869009` completed successfully.
+- Production `main` and `digitful.ca` remain unchanged.
+
 ### Production impact
 - No production code changes.
 - No merge to `main`.
 - No production deployment triggered by this project.
 
 ### Current source used by preview
-- Exact pinned source SHA: `c8fac4f78295d2576af0e92b04329f4e938c7b6f`
+- Exact pinned source SHA: `2ebd6614be8c7ea1c0f7d841fe8111ff3ec0cc92`
 
 ### Next action
-- Begin the first isolated source fix on `visual-refresh`: Contact page light-mode email/phone link visibility.
-- Deploy only that exact working commit to preview, then review dark/light and desktop/mobile before deciding KEEP / ADJUST / REJECT.
+- Review the Contact page on `preview.digitful.ca` in light and dark mode, ideally on both desktop and mobile.
+- Record the decision as KEEP / ADJUST / REJECT before starting the next fix.
