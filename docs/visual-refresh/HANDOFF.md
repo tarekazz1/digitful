@@ -120,7 +120,7 @@ Approved masters:
 `public/assets/brand/digitful-mark-on-dark.svg`
 
 ## Approved homepage copy and density
-Decision D017.
+Decision D017, with later refinements through D033.
 
 Source of truth:
 `docs/brand/HOMEPAGE-COPY.md`
@@ -134,7 +134,7 @@ Tone:
 
 Key locked lines:
 - `Marketing works better when the parts talk to each other.`
-- Hero support: `Marketing works better when the whole journey works together.`
+- Hero support: `What people see, where they find you, what they do next, and how you follow up.`
 - `More traffic won’t fix a messy system.`
 - `No clear next step`
 - Work-area headline: `This is where we usually get involved.`
@@ -145,7 +145,7 @@ Key locked lines:
 Header CTA: `Talk to Digitful`.
 Hero primary CTA: `Tell us what’s stuck`.
 
-Approved public growth-system model (D029):
+Approved public growth-system model:
 - `Say the right thing`
 - `Reach the right people`
 - `Make the next step clear`
@@ -204,19 +204,28 @@ The homepage direction is frozen across desktop, mobile, light and dark modes.
 
 Implementation may tune exact colour values, spacing, line-height and responsive line breaks for accessibility and browser fit without reopening the design. Material visual changes require a new decision.
 
-## Editorial foundation
-The shared foundation is now part of the **approved homepage system**. Exact token consolidation and reusable primitives are the next design-system pass (D028).
+## Design system — approved
+Decision D028: **APPROVED — KEEP**.
 
-Foundation changes already present:
-- `src/assets/_editorial-foundations.scss` loaded after legacy overrides
-- approved light/dark palette tokens
-- flattened global background and removed page glows
-- reduced radii and removed soft/glass shadows
-- stronger border/rule treatment
-- shared navigation, dropdown, theme toggle, buttons, forms and footer restyled
-- header CTA changed to `Talk to Digitful`
+The shared foundation remains in `src/assets/_editorial-foundations.scss`; D028 did not rename or restructure it merely for architecture cleanliness.
 
-The homepage has now moved beyond this foundation-only state: the structural rebuild candidate is deployed and documented below. The foundation layer remains part of that candidate.
+D028 added `src/assets/_design-system.scss` for proven repeated mechanics and visual-parity adoption, including:
+- typography roles and display/body ownership
+- rule weights and editorial spacing
+- focus treatment and reduced-motion timing
+- technical grid and hard print-offset mechanics
+- icon-disc geometry
+- editorial rows and restrained technical annotations
+- neutral primitives plus compatibility selectors for the validated homepage
+
+Important ownership rules:
+- do not turn homepage compositions into rigid site-wide components
+- `HomeIcon.astro` stays homepage-specific until another page proves the exact reuse need
+- D031 jokes and expressive timing remain bespoke
+- centralize a pattern only when another page will need it or centralization prevents inconsistent future changes
+
+D028 implementation source: `d4850dc1b521350b0c8795270fd2fee6d3ccf5f6`.
+Initial D028 preview run: `35009136933` — build success, deploy success.
 
 Production `main` / `digitful.ca` remain untouched.
 
@@ -227,58 +236,43 @@ Use the canonical `GoogleCloudPlatform/open-knowledge-format` project, not the f
 
 Do not implement OKF while page copy/URLs are moving. Add a small Digitful knowledge bundle after the homepage and primary service/page architecture is stable, then validate it before the final agent/SEO/QA pass. It complements rather than replaces semantic HTML, Schema.org, sitemap and normal SEO metadata.
 
-## Preview state
-Homepage structural rebuild is **APPROVED — KEEP**.
+## Current preview state
+Homepage + D028 are **APPROVED — KEEP**.
 
-Reviewed source:
-`0c828a806093e7b287b4228170d60a6602cf14b7`
+Current approved rendered source:
+`637d4cc84c1452ef1cdbfecda505e8f6bb9ae0ba`
 
-Preview run:
-`34983063215` — build success, deploy success.
+Current validated preview run:
+`35012284588` — build success, deploy success.
 
-What changed in this candidate:
-- old homepage card grids removed from What we fix, Core offers and Good fit
-- hero rebuilt as an asymmetric editorial layout with a technical system-map graphic
-- approved locked homepage wording applied
-- service section rebuilt as an open ruled grid
-- Good fit rebuilt as a teal split section + ruled list
-- Instant Snapshot rebuilt as a technical instrument panel while preserving functional IDs/values
-- final CTA rebuilt as a flat mustard editorial band
-- responsive mobile stacking added
-- dark mode continues to use the same flat editorial system
+The preview repo remains intentionally pinned to the rendered source SHA rather than later docs-only commits.
+
+Current approved hero pair:
+- Headline: `Marketing works better when the parts talk to each other.`
+- Support: `What people see, where they find you, what they do next, and how you follow up.`
 
 Production `main` remains untouched.
 
 ## Immediate next step
-Build the reusable **Digitful design system layer** from the patterns that survived homepage review, before adapting another page type.
+Begin the **service-page type** pass.
 
-Homepage status:
-- whole-page composition refinement: **APPROVED — KEEP** (D027)
-- Instant Snapshot result-state treatment: **APPROVED — KEEP** (D026)
-- compact situational homepage interaction wit: **APPROVED — KEEP** (D031)
-- final hero support line: `Marketing works better when the whole journey works together.`
-- current approved homepage source: `383ccfa90f67ad62b9fafb98492332e25cb180e2`
-- current homepage preview run `35005971482`: build success, deploy success
-- production remains untouched
-
-Design-system goal (D028):
-- centralize colours/themes, typography roles, spacing/rules, buttons/forms/focus states, icon-disc treatment, graph-paper panels, editorial rows, annotations and motion timing
-- extract only validated/repeated patterns
-- keep page composition flexible rather than forcing every page into homepage components
-- make later brand/system edits centralized instead of element-by-element
-
-After that systemization pass is previewed and validated, adapt the service page type using those shared primitives.
+Before changing code:
+- inspect the current service-page routes and shared structure (`social-media`, `seo`, `paid-ads`, `automation`)
+- determine what is truly shared versus page-specific
+- choose the first representative service page for adaptation
+- consume D028 neutral primitives where they genuinely fit; do not force homepage composition onto service pages
+- generalize `HomeIcon.astro` only if the service-page work proves the same SVG/icon treatment is actually shared
+- discuss the proposed service-page structure/copy direction before implementation; then use the same exact-SHA preview → KEEP / ADJUST / REJECT process
 
 ## Later implementation sequence
-1. extract and validate reusable design-system primitives from the approved homepage
-2. adapt service page type
-3. adapt contact and thank-you page types
-4. adapt blog index/article while preserving editorial reading priority
-5. once homepage + primary service/page architecture and canonical URLs are stable, add the Digitful OKF bundle
-6. resolve deferred responsive/composition observations within page types
-7. full desktop/mobile dark/light + agent/SEO QA
-8. freeze visual baseline
-9. performance work: SVG icon migration, JS scoping, CSS/Bootstrap dependency map, safe CSS reduction, re-measure, then remaining GTM/caching work as justified
+1. adapt and validate the service page type
+2. adapt contact and thank-you page types
+3. adapt blog index/article while preserving editorial reading priority
+4. once homepage + primary service/page architecture and canonical URLs are stable, add the Digitful OKF bundle
+5. resolve deferred responsive/composition observations within page types
+6. full desktop/mobile dark/light + agent/SEO QA
+7. freeze visual baseline
+8. performance work: SVG icon migration, JS scoping, CSS/Bootstrap dependency map, safe CSS reduction, re-measure, then remaining GTM/caching work as justified
 
 ## Functional behaviours that must not break
 Mobile navbar, Services dropdown, theme toggle, navigation, blog filters, homepage diagnostic, diagnostic→Contact handoff, contact toggles/hidden fields, production FormSubmit/thank-you redirect, logos, responsive layouts, production GTM/GA, SEO output and CLS stability.
