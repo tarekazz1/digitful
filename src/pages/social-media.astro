@@ -1,8 +1,9 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import HomeIcon from '../components/HomeIcon.astro';
 
 const pageTitle = 'Social Media - Digitful';
-const pageDescription = 'Digitful helps businesses build social media around a clear point of view, a recognizable voice, and content for the right people.';
+const pageDescription = 'Digitful helps businesses build recognizable social media around a clear point of view, the right audience, and a useful content system.';
 const pageCanonical = 'https://digitful.ca/social-media/';
 ---
 
@@ -13,9 +14,11 @@ const pageCanonical = 'https://digitful.ca/social-media/';
         <div class="social-hero__copy">
           <span class="eyebrow">Social media</span>
           <h1>Social media should give people a reason to pay attention.</h1>
-          <p class="lead">
-            A clear point of view, a recognizable voice, and content built for the people you actually want to reach.
-          </p>
+          <p class="lead">A clear point of view, a recognizable voice, and content built for the people you actually want to reach.</p>
+          <div class="social-hero__actions">
+            <a href="/contact/?service=social-media" class="btn btn-primary btn-lg px-4">Tell us what’s stuck</a>
+            <a href="/what-we-build/" class="btn btn-link-quiet btn-lg">See what we build</a>
+          </div>
         </div>
 
         <div class="social-hero__collage" aria-hidden="true">
@@ -37,137 +40,163 @@ const pageCanonical = 'https://digitful.ca/social-media/';
               <path d="M426 271 L467 301" />
             </g>
           </svg>
-
-          <span class="social-hero__annotation technical-annotation">Make it recognizable</span>
-          <span class="social-hero__label social-hero__label--one">Point of view</span>
-          <span class="social-hero__label social-hero__label--two">Voice</span>
-          <span class="social-hero__label social-hero__label--three">Right people</span>
         </div>
       </div>
     </section>
 
-    <section class="social-section social-problems">
+    <section class="social-section social-problems" aria-labelledby="social-problems-heading">
       <div class="container">
-        <div class="social-section__head">
+        <header class="social-section__head social-section__head--problems">
           <span class="eyebrow">Where it usually gets stuck</span>
-          <h2>Being active is not the same as being memorable.</h2>
-        </div>
+          <h2 id="social-problems-heading">Being active is not the same as being memorable.</h2>
+        </header>
 
-        <div class="social-problems__grid">
-          <article class="social-problem">
-            <span class="social-problem__mark" aria-hidden="true">01</span>
-            <h3>The brand could be anyone</h3>
-            <p>The content looks polished, but there is nothing distinctive enough to remember.</p>
-          </article>
-          <article class="social-problem">
-            <span class="social-problem__mark" aria-hidden="true">02</span>
-            <h3>The message keeps changing</h3>
-            <p>Every post says something different, so the brand never becomes clear.</p>
-          </article>
-          <article class="social-problem">
-            <span class="social-problem__mark" aria-hidden="true">03</span>
-            <h3>You are talking to everyone</h3>
-            <p>The content gets seen, but not necessarily by the people you want more of.</p>
-          </article>
-          <article class="social-problem">
-            <span class="social-problem__mark" aria-hidden="true">04</span>
-            <h3>Posting becomes the goal</h3>
-            <p>The calendar stays full, but it is hard to explain what all that activity is actually doing for the business.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="social-good">
-      <div class="container social-good__grid">
-        <div class="social-good__intro">
-          <span class="eyebrow">What good social media should do</span>
-          <h2>Make the brand easier to recognize and harder to forget.</h2>
-        </div>
-
-        <div class="social-good__list">
-          <article class="social-good__item">
-            <span aria-hidden="true">01</span>
+        <div class="social-problems__field" role="list">
+          <article class="social-problem social-problem--one" role="listitem">
+            <span class="icon-disc icon-disc--mustard social-problem__icon"><HomeIcon name="message" /></span>
             <div>
-              <h3>Make the brand recognizable</h3>
-              <p>People should start to recognize how you think, what you value, and why the business feels different.</p>
+              <h3>The brand could be anyone</h3>
+              <p>Polished content is not enough if there is nothing distinctive to remember.</p>
             </div>
           </article>
-          <article class="social-good__item">
-            <span aria-hidden="true">02</span>
+
+          <article class="social-problem social-problem--two" role="listitem">
+            <span class="icon-disc icon-disc--teal social-problem__icon"><HomeIcon name="clipboard" /></span>
             <div>
-              <h3>Speak to the right people</h3>
-              <p>Good content reflects the questions, priorities, and problems your audience actually has.</p>
+              <h3>The message keeps changing</h3>
+              <p>Every post says something different, so the brand never becomes clear.</p>
             </div>
           </article>
-          <article class="social-good__item">
-            <span aria-hidden="true">03</span>
+
+          <article class="social-problem social-problem--three" role="listitem">
+            <span class="icon-disc icon-disc--coral social-problem__icon"><HomeIcon name="nodes" /></span>
             <div>
-              <h3>Build familiarity over time</h3>
-              <p>Most people are not ready to act today. Good social gives them a reason to remember you later.</p>
+              <h3>You are talking to everyone</h3>
+              <p>The content gets seen, but not necessarily by the people you want more of.</p>
             </div>
           </article>
-          <article class="social-good__item">
-            <span aria-hidden="true">04</span>
+
+          <article class="social-problem social-problem--four" role="listitem">
+            <span class="icon-disc icon-disc--mustard social-problem__icon"><HomeIcon name="clock" /></span>
             <div>
-              <h3>Give attention somewhere to go</h3>
-              <p>Attention should lead naturally to a useful next step.</p>
+              <h3>Posting becomes the goal</h3>
+              <p>The calendar stays full, but it is hard to say what all that activity is doing for the business.</p>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="social-section social-method">
+    <section class="social-good" aria-labelledby="social-good-heading">
       <div class="container">
-        <div class="social-section__head social-section__head--method">
-          <span class="eyebrow">How we work on it</span>
-          <h2>A useful social system starts before the first post.</h2>
-        </div>
+        <header class="social-good__head">
+          <span class="eyebrow">What good social media should do</span>
+          <h2 id="social-good-heading">Give people something to recognize, remember, and act on.</h2>
+        </header>
 
-        <div class="social-method__grid">
-          <article class="social-method__step">
+        <div class="social-good__path" role="list">
+          <svg class="social-good__line" viewBox="0 0 1000 180" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M25 105 C150 55 245 140 365 95 S590 55 700 90 S855 80 975 38" />
+            <path class="social-good__arrow" d="M955 25 L980 38 L963 58" />
+          </svg>
+
+          <article class="social-good__stage social-good__stage--one" role="listitem">
+            <span class="social-good__dot" aria-hidden="true"></span>
+            <h3>Build recognition</h3>
+            <p>People should start to recognize how you think and what makes the business different.</p>
+          </article>
+
+          <article class="social-good__stage social-good__stage--two" role="listitem">
+            <span class="social-good__dot" aria-hidden="true"></span>
+            <h3>Reach the right people</h3>
+            <p>Good content reflects what your audience actually cares about.</p>
+          </article>
+
+          <article class="social-good__stage social-good__stage--three" role="listitem">
+            <span class="social-good__dot" aria-hidden="true"></span>
+            <h3>Build familiarity</h3>
+            <p>Not everyone is ready today. Give people a reason to remember you later.</p>
+          </article>
+
+          <article class="social-good__stage social-good__stage--four" role="listitem">
+            <span class="social-good__dot" aria-hidden="true"></span>
+            <h3>Create a next step</h3>
+            <p>Attention should lead naturally somewhere useful.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="social-section social-method" aria-labelledby="social-method-heading">
+      <div class="container">
+        <header class="social-section__head social-section__head--method">
+          <span class="eyebrow">How we work on it</span>
+          <h2 id="social-method-heading">A useful social system starts before the first post.</h2>
+        </header>
+
+        <div class="social-method__flow" role="list">
+          <article class="social-method__step social-method__step--one" role="listitem">
             <span class="social-method__number">01</span>
             <div>
               <h3>Get the message clear</h3>
-              <p>Define what the business needs to be known for, how the brand should sound, and what is worth repeating.</p>
+              <p>Define what the business should be known for and what is worth repeating.</p>
             </div>
           </article>
-          <article class="social-method__step">
+
+          <article class="social-method__step social-method__step--two" role="listitem">
             <span class="social-method__number">02</span>
             <div>
               <h3>Focus on the right people</h3>
-              <p>Shape the content around the people you actually want to reach and what matters to them.</p>
+              <p>Shape the content around who you actually want to reach.</p>
             </div>
           </article>
-          <article class="social-method__step">
+
+          <article class="social-method__step social-method__step--three" role="listitem">
             <span class="social-method__number">03</span>
             <div>
               <h3>Build the content system</h3>
-              <p>Turn the message into repeatable themes, formats, and a publishing rhythm the team can realistically maintain.</p>
+              <p>Create repeatable themes, formats, and a publishing rhythm the team can maintain.</p>
             </div>
           </article>
-          <article class="social-method__step">
+
+          <article class="social-method__step social-method__step--four" role="listitem">
             <span class="social-method__number">04</span>
             <div>
               <h3>Learn from the response</h3>
-              <p>Look beyond likes and reach to see what earns attention, creates interest, and helps move the right people closer.</p>
+              <p>Look beyond likes and reach. See what earns attention and creates real interest.</p>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="social-cta">
+    <section class="social-cta" aria-labelledby="social-cta-heading">
       <div class="container social-cta__grid">
-        <div>
+        <div class="social-cta__copy-block">
           <span class="eyebrow">The next step</span>
-          <h2>Social media should not end at the post.</h2>
-        </div>
-        <div class="social-cta__copy">
-          <p class="social-cta__lead">It should reinforce the message, reach the right people, and make the next step easier.</p>
-          <p>If the content feels generic, inconsistent, or busy without much purpose, we can help fix the system behind it.</p>
+          <h2 id="social-cta-heading">Social media should not end at the post.</h2>
+          <p>If the content feels generic, inconsistent, or busy without a clear purpose, we can help fix the system behind it.</p>
           <a href="/contact/?service=social-media" class="btn btn-primary btn-lg px-4">Tell us what’s not working</a>
+        </div>
+
+        <div class="social-cta__visual" aria-hidden="true">
+          <span class="social-cta__orb"></span>
+          <svg viewBox="0 0 460 280" focusable="false">
+            <g class="social-cta__binocular-body">
+              <rect x="105" y="92" width="102" height="84" rx="32" transform="rotate(-8 105 92)" />
+              <rect x="249" y="92" width="102" height="84" rx="32" transform="rotate(8 249 92)" />
+              <rect x="194" y="111" width="72" height="42" rx="18" />
+            </g>
+            <g class="social-cta__binocular-lens">
+              <ellipse cx="133" cy="171" rx="51" ry="38" transform="rotate(-8 133 171)" />
+              <ellipse cx="327" cy="171" rx="51" ry="38" transform="rotate(8 327 171)" />
+            </g>
+            <g class="social-cta__rays">
+              <path d="M72 70 L43 46" />
+              <path d="M82 111 L42 105" />
+              <path d="M381 70 L410 46" />
+            </g>
+          </svg>
         </div>
       </div>
     </section>
@@ -176,36 +205,35 @@ const pageCanonical = 'https://digitful.ca/social-media/';
 
 <style>
   .social-page {
-    --social-accent: var(--site-accent);
     --social-rule: var(--ds-rule-strong);
     overflow: clip;
   }
 
   .social-hero {
-    padding-block: clamp(4rem, 8vw, 7.5rem) var(--space-section);
+    padding-block: clamp(3.75rem, 7vw, 6.75rem) var(--space-section);
     border-bottom: var(--social-rule);
   }
 
   .social-hero__grid {
     display: grid;
-    grid-template-columns: minmax(0, 1.16fr) minmax(19rem, 0.84fr);
-    gap: clamp(2.75rem, 7vw, 7rem);
+    grid-template-columns: minmax(0, 1.12fr) minmax(20rem, 0.88fr);
+    gap: clamp(2.5rem, 6vw, 6rem);
     align-items: center;
   }
 
   .social-hero__copy {
-    max-width: 50rem;
+    max-width: 52rem;
   }
 
   .social-hero__copy .eyebrow,
   .social-section__head .eyebrow,
-  .social-good__intro .eyebrow,
+  .social-good__head .eyebrow,
   .social-cta .eyebrow {
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.1rem;
   }
 
   .social-hero h1 {
-    max-width: 12ch;
+    max-width: 11ch;
     margin: 0;
     font-size: var(--type-display-xl);
     line-height: 0.91;
@@ -213,21 +241,28 @@ const pageCanonical = 'https://digitful.ca/social-media/';
   }
 
   .social-hero .lead {
-    max-width: 42rem;
-    margin: 1.75rem 0 0;
-    font-size: clamp(1.1rem, 1.7vw, 1.35rem);
-    line-height: 1.55;
+    max-width: 41rem;
+    margin: 1.55rem 0 0;
+    font-size: clamp(1.05rem, 1.6vw, 1.3rem);
+    line-height: 1.52;
+  }
+
+  .social-hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1rem;
+    margin-top: 1.6rem;
   }
 
   .social-hero__collage {
     position: relative;
-    min-height: 27rem;
+    min-height: 29rem;
     isolation: isolate;
   }
 
   .social-hero__paper {
     position: absolute;
-    inset: 12% 10% 14% 14%;
+    inset: 13% 8% 12% 17%;
     z-index: -2;
     background:
       linear-gradient(var(--site-border-subtle) 1px, transparent 1px),
@@ -236,7 +271,7 @@ const pageCanonical = 'https://digitful.ca/social-media/';
     background-size: var(--technical-grid-size) var(--technical-grid-size);
     border: var(--social-rule);
     box-shadow: var(--print-offset-lg) var(--site-mustard);
-    transform: rotate(-1.4deg);
+    transform: rotate(-1.6deg);
   }
 
   .social-hero__bubble {
@@ -251,31 +286,31 @@ const pageCanonical = 'https://digitful.ca/social-media/';
   .social-hero__bubble--coral {
     width: clamp(7rem, 12vw, 10rem);
     height: clamp(7rem, 12vw, 10rem);
-    top: 3%;
-    left: 12%;
+    top: 2%;
+    right: 7%;
     background: var(--site-accent);
     animation-delay: 30ms;
   }
 
   .social-hero__bubble--teal {
-    width: clamp(6rem, 10vw, 8.25rem);
-    height: clamp(6rem, 10vw, 8.25rem);
-    right: 7%;
-    bottom: 7%;
+    width: clamp(5.75rem, 9vw, 7.75rem);
+    height: clamp(5.75rem, 9vw, 7.75rem);
+    left: 4%;
+    bottom: 10%;
     background: var(--site-teal);
     animation-delay: 90ms;
   }
 
   .social-hero__megaphone {
     position: absolute;
-    width: 82%;
-    max-width: 31rem;
-    left: 8%;
-    top: 4%;
+    width: 88%;
+    max-width: 34rem;
+    left: 5%;
+    top: 5%;
     z-index: 1;
     overflow: visible;
-    filter: drop-shadow(0.45rem 0.55rem 0 var(--brand-ink));
-    transform: rotate(-4deg);
+    filter: drop-shadow(0.42rem 0.5rem 0 var(--brand-ink));
+    transform: rotate(-5deg);
     transition: transform var(--motion-standard) var(--motion-ease);
     animation: social-collage-in var(--motion-standard) var(--motion-ease) both;
   }
@@ -307,46 +342,8 @@ const pageCanonical = 'https://digitful.ca/social-media/';
     stroke-linecap: round;
   }
 
-  .social-hero__annotation {
-    position: absolute;
-    top: 7%;
-    right: 0;
-    z-index: 3;
-    transform: rotate(3deg);
-    transition: transform var(--motion-fast) var(--motion-ease);
-  }
-
-  .social-hero__label {
-    position: absolute;
-    z-index: 3;
-    padding: 0.38rem 0.5rem;
-    color: var(--site-text);
-    background: var(--site-surface);
-    border-bottom: var(--ds-rule-thin-width) solid var(--site-border);
-    font-size: 0.72rem;
-    font-weight: 800;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    transition: transform var(--motion-fast) var(--motion-ease);
-  }
-
-  .social-hero__label--one {
-    top: 20%;
-    right: 0;
-  }
-
-  .social-hero__label--two {
-    top: 49%;
-    right: 3%;
-  }
-
-  .social-hero__label--three {
-    right: 0;
-    bottom: 14%;
-  }
-
   .social-hero__collage:hover .social-hero__megaphone {
-    transform: rotate(-2deg) translate(0.25rem, -0.1rem);
+    transform: rotate(-2.5deg) translate(0.3rem, -0.1rem);
   }
 
   .social-hero__collage:hover .social-hero__bubble--coral {
@@ -357,62 +354,36 @@ const pageCanonical = 'https://digitful.ca/social-media/';
     transform: translate(-0.4rem, 0.3rem);
   }
 
-  .social-hero__collage:hover .social-hero__annotation {
-    transform: rotate(1deg) translateX(-0.2rem);
-  }
-
-  .social-hero__collage:hover .social-hero__label--one {
-    transform: translateX(-0.3rem);
-  }
-
-  .social-hero__collage:hover .social-hero__label--two {
-    transform: translateX(-0.45rem);
-  }
-
-  .social-hero__collage:hover .social-hero__label--three {
-    transform: translateX(-0.25rem);
-  }
-
   @keyframes social-bubble-in {
-    from {
-      opacity: 0;
-      transform: scale(0.86);
-    }
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
+    from { opacity: 0; transform: scale(0.86); }
+    to { opacity: 1; transform: scale(1); }
   }
 
   @keyframes social-collage-in {
-    from {
-      opacity: 0;
-      transform: rotate(-6deg) translateY(0.5rem);
-    }
-    to {
-      opacity: 1;
-      transform: rotate(-4deg) translateY(0);
-    }
+    from { opacity: 0; transform: rotate(-7deg) translateY(0.55rem); }
+    to { opacity: 1; transform: rotate(-5deg) translateY(0); }
   }
 
   .social-section {
     padding-block: var(--space-section);
   }
 
-  .social-section__head {
+  .social-section__head,
+  .social-good__head {
     display: grid;
-    grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
+    grid-template-columns: minmax(0, 0.62fr) minmax(0, 1.38fr);
     gap: var(--space-editorial-gap);
     align-items: end;
-    margin-bottom: clamp(2.5rem, 5vw, 4.75rem);
+    margin-bottom: clamp(2.4rem, 5vw, 4.5rem);
   }
 
-  .social-section__head .eyebrow {
+  .social-section__head .eyebrow,
+  .social-good__head .eyebrow {
     align-self: start;
   }
 
   .social-section__head h2,
-  .social-good__intro h2,
+  .social-good__head h2,
   .social-cta h2 {
     margin: 0;
     font-size: var(--type-display-lg);
@@ -420,61 +391,92 @@ const pageCanonical = 'https://digitful.ca/social-media/';
     letter-spacing: -0.035em;
   }
 
-  .social-problems__grid {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    border-top: var(--social-rule);
+  .social-problems__field {
+    position: relative;
+    min-height: 39rem;
   }
 
   .social-problem {
-    position: relative;
-    padding: clamp(1.6rem, 2.5vw, 2.35rem) clamp(1.25rem, 2vw, 2rem) 0;
-    transition:
-      transform var(--motion-fast) var(--motion-ease),
-      border-color var(--motion-fast) var(--motion-ease);
+    position: absolute;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 1.1rem;
+    align-items: start;
+    width: min(45%, 34rem);
+    padding-top: 1rem;
+    border-top: var(--social-rule);
   }
 
-  .social-problem + .social-problem {
-    border-left: var(--social-rule);
-  }
-
-  .social-problem:hover {
-    transform: translateY(-0.18rem);
-  }
-
-  .social-problem__mark {
-    display: inline-block;
-    margin-bottom: 2rem;
-    color: var(--social-accent);
+  .social-problem::after {
+    content: '↘';
+    position: absolute;
+    color: var(--site-text);
     font-family: var(--type-display);
-    font-size: 1.15rem;
-    font-weight: var(--type-display-weight);
-    letter-spacing: 0.06em;
-    transition: transform var(--motion-fast) var(--motion-ease);
+    font-size: clamp(1.7rem, 2.5vw, 2.35rem);
+    font-weight: 800;
+    line-height: 1;
   }
 
-  .social-problem:hover .social-problem__mark {
-    transform: translateX(0.25rem);
+  .social-problem--one {
+    top: 0;
+    left: 2%;
+  }
+
+  .social-problem--one::after {
+    right: -12%;
+    bottom: -28%;
+    transform: rotate(18deg);
+  }
+
+  .social-problem--two {
+    top: 6.5rem;
+    right: 1%;
+  }
+
+  .social-problem--two::after {
+    left: -12%;
+    bottom: -26%;
+    transform: rotate(108deg);
+  }
+
+  .social-problem--three {
+    left: 10%;
+    bottom: 3.5rem;
+  }
+
+  .social-problem--three::after {
+    right: -10%;
+    bottom: -25%;
+    transform: rotate(15deg);
+  }
+
+  .social-problem--four {
+    right: 5%;
+    bottom: 0;
+  }
+
+  .social-problem__icon {
+    margin-top: -0.4rem;
   }
 
   .social-problem h3,
-  .social-good__item h3,
+  .social-good__stage h3,
   .social-method__step h3 {
-    margin: 0 0 0.75rem;
+    margin: 0 0 0.55rem;
     font-size: var(--type-title-lg);
     line-height: 1;
   }
 
   .social-problem p,
-  .social-good__item p,
+  .social-good__stage p,
   .social-method__step p,
   .social-cta p {
     margin: 0;
-    line-height: 1.6;
+    line-height: 1.55;
   }
 
   .social-problem p {
-    max-width: 31rem;
+    max-width: 29rem;
   }
 
   .social-good {
@@ -491,98 +493,118 @@ const pageCanonical = 'https://digitful.ca/social-media/';
     color: var(--brand-ink);
   }
 
-  .social-good__grid {
-    display: grid;
-    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
-    gap: clamp(3rem, 7vw, 7rem);
-    align-items: start;
+  .social-good__head {
+    grid-template-columns: minmax(0, 0.55fr) minmax(0, 1.45fr);
+    margin-bottom: clamp(3.25rem, 6vw, 5.5rem);
   }
 
-  .social-good__intro {
-    position: sticky;
-    top: 7rem;
-  }
-
-  .social-good__list {
-    border-top: var(--ds-rule-width) solid var(--brand-ink);
-  }
-
-  .social-good__item {
+  .social-good__path {
     position: relative;
     display: grid;
-    grid-template-columns: 3rem minmax(0, 1fr);
-    gap: 1.25rem;
-    padding-block: 1.6rem;
-    padding-right: 1.25rem;
-    border-bottom: var(--ds-rule-width) solid var(--brand-ink);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: clamp(1.2rem, 3vw, 2.6rem);
+    min-height: 18rem;
+    padding-top: 4.2rem;
   }
 
-  .social-good__item::after {
-    content: '';
+  .social-good__line {
     position: absolute;
-    width: 0.58rem;
-    height: 0.58rem;
-    right: 0;
-    top: 50%;
-    border: var(--ds-rule-thin-width) solid var(--brand-ink);
-    border-radius: 50%;
+    inset: 0 0 auto;
+    width: 100%;
+    height: 8.5rem;
+    overflow: visible;
+    fill: none;
+    stroke: var(--brand-ink);
+    stroke-width: 7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .social-good__stage {
+    position: relative;
+    padding-top: 1.1rem;
+  }
+
+  .social-good__stage:nth-of-type(2) { margin-top: 1rem; }
+  .social-good__stage:nth-of-type(3) { margin-top: 0.25rem; }
+  .social-good__stage:nth-of-type(4) { margin-top: -1.15rem; }
+
+  .social-good__dot {
+    position: absolute;
+    top: -1.55rem;
+    left: 0.25rem;
+    width: 1.35rem;
+    height: 1.35rem;
     background: var(--site-accent);
-    transform: translateY(-50%);
+    border: 3px solid var(--brand-ink);
+    border-radius: 50%;
     transition: transform var(--motion-fast) var(--motion-ease);
   }
 
-  .social-good__item:hover::after {
-    transform: translate(-0.7rem, -50%);
+  .social-good__stage--two .social-good__dot { background: var(--site-mustard); }
+  .social-good__stage--three .social-good__dot { background: var(--site-teal); }
+  .social-good__stage--four .social-good__dot { background: var(--site-accent); }
+
+  .social-good__stage:hover .social-good__dot {
+    transform: translateX(0.35rem);
   }
 
-  .social-good__item > span {
-    padding-top: 0.1rem;
-    color: var(--site-accent);
-    font-family: var(--type-display);
-    font-size: 1.2rem;
-    font-weight: var(--type-display-weight);
+  .social-good__stage p {
+    max-width: 16rem;
+    font-size: 0.98rem;
   }
 
-  .social-good__item p {
-    max-width: 40rem;
-    opacity: 0.88;
-  }
-
-  .social-section__head--method {
-    margin-bottom: clamp(3rem, 5vw, 5rem);
-  }
-
-  .social-method__grid {
+  .social-method__flow {
+    position: relative;
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    column-gap: clamp(2rem, 5vw, 5rem);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: clamp(1.35rem, 3vw, 3rem);
+  }
+
+  .social-method__flow::before {
+    content: '';
+    position: absolute;
+    top: 2.65rem;
+    right: 3%;
+    left: 3%;
     border-top: var(--social-rule);
+    z-index: -1;
   }
 
   .social-method__step {
-    display: grid;
-    grid-template-columns: minmax(5rem, 0.32fr) minmax(0, 1fr);
-    gap: 1.5rem;
-    min-height: 15rem;
-    padding-block: clamp(1.75rem, 3vw, 2.6rem);
-    border-bottom: var(--social-rule);
+    position: relative;
+    padding-top: 6.1rem;
   }
 
   .social-method__number {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: grid;
+    width: 5.3rem;
+    height: 5.3rem;
+    place-items: center;
+    color: var(--brand-ink);
+    background: var(--site-accent);
+    border: var(--social-rule);
+    border-radius: 50%;
     font-family: var(--type-display);
-    font-size: clamp(3.2rem, 5vw, 5rem);
+    font-size: 2.2rem;
     font-weight: var(--type-display-weight);
-    line-height: 0.8;
-    color: var(--social-accent);
+    line-height: 1;
     transition: transform var(--motion-fast) var(--motion-ease);
   }
 
+  .social-method__step--two .social-method__number { background: var(--site-mustard); }
+  .social-method__step--three .social-method__number { background: var(--site-teal); }
+  .social-method__step--four .social-method__number { background: var(--site-accent); }
+
   .social-method__step:hover .social-method__number {
-    transform: translateX(0.2rem);
+    transform: translateY(-0.25rem) rotate(-2deg);
   }
 
   .social-method__step p {
-    max-width: 34rem;
+    max-width: 18rem;
   }
 
   .social-cta {
@@ -600,159 +622,333 @@ const pageCanonical = 'https://digitful.ca/social-media/';
 
   .social-cta__grid {
     display: grid;
-    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
-    gap: clamp(3rem, 7vw, 7rem);
-    align-items: end;
+    grid-template-columns: minmax(0, 1.05fr) minmax(18rem, 0.7fr);
+    gap: clamp(2.5rem, 7vw, 7rem);
+    align-items: center;
   }
 
-  .social-cta__copy {
+  .social-cta__copy-block {
     display: grid;
-    gap: 1.25rem;
     justify-items: start;
+    gap: 1.2rem;
   }
 
-  .social-cta__lead {
-    font-size: clamp(1.15rem, 1.8vw, 1.4rem);
-    font-weight: 700;
+  .social-cta__copy-block .eyebrow {
+    margin-bottom: 0;
   }
 
-  .social-cta .btn-primary {
-    margin-top: 0.5rem;
+  .social-cta__copy-block p {
+    max-width: 37rem;
+    font-size: clamp(1.05rem, 1.5vw, 1.25rem);
   }
 
-  @media (max-width: 1199.98px) {
-    .social-problems__grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
+  .social-cta__visual {
+    position: relative;
+    min-height: 17rem;
+  }
 
-    .social-problem:nth-child(odd) {
-      border-left: 0;
-    }
+  .social-cta__orb {
+    position: absolute;
+    width: 10.5rem;
+    height: 10.5rem;
+    top: 0.5rem;
+    right: 8%;
+    background: var(--site-accent);
+    border: var(--social-rule);
+    border-radius: 50%;
+  }
 
-    .social-problem:nth-child(n + 3) {
-      margin-top: 2rem;
-      padding-top: 2rem;
-      border-top: var(--social-rule);
-    }
+  .social-cta__visual svg {
+    position: absolute;
+    inset: 1rem 0 auto;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+    filter: drop-shadow(0.35rem 0.42rem 0 var(--brand-ink));
+    transition: transform var(--motion-standard) var(--motion-ease);
+  }
+
+  .social-cta__visual:hover svg {
+    transform: rotate(-2deg) translateX(-0.2rem);
+  }
+
+  .social-cta__binocular-body {
+    fill: var(--brand-paper);
+    stroke: var(--brand-ink);
+    stroke-width: 9;
+  }
+
+  .social-cta__binocular-lens {
+    fill: var(--brand-ink);
+    stroke: var(--brand-ink);
+    stroke-width: 9;
+  }
+
+  .social-cta__rays {
+    fill: none;
+    stroke: var(--brand-ink);
+    stroke-width: 8;
+    stroke-linecap: round;
   }
 
   @media (max-width: 991.98px) {
     .social-hero__grid,
-    .social-good__grid,
     .social-cta__grid {
       grid-template-columns: 1fr;
     }
 
     .social-hero__collage {
-      min-height: 23rem;
-      max-width: 40rem;
+      min-height: 24rem;
+      max-width: 39rem;
+      width: 100%;
     }
 
-    .social-section__head {
+    .social-section__head,
+    .social-good__head {
       grid-template-columns: 1fr;
       gap: 1rem;
     }
 
-    .social-good__intro {
-      position: static;
+    .social-problems__field {
+      min-height: 44rem;
+    }
+
+    .social-method__flow {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      row-gap: 3rem;
+    }
+
+    .social-method__flow::before {
+      display: none;
+    }
+
+    .social-cta__visual {
+      max-width: 31rem;
+      width: 100%;
     }
   }
 
   @media (max-width: 767.98px) {
     .social-hero {
-      padding-top: 3.5rem;
+      padding-top: 3.2rem;
     }
 
     .social-hero h1 {
-      font-size: clamp(3rem, 13vw, 4.6rem);
+      max-width: 9.5ch;
+      font-size: clamp(3rem, 13vw, 4.8rem);
     }
 
-    .social-problems__grid,
-    .social-method__grid {
+    .social-hero__actions {
+      display: grid;
       grid-template-columns: 1fr;
+      width: 100%;
     }
 
-    .social-problem,
-    .social-problem:nth-child(n + 3) {
-      margin-top: 0;
-      padding: 1.65rem 0 1.9rem;
-      border-left: 0;
-      border-top: var(--social-rule);
+    .social-hero__actions .btn {
+      width: 100%;
+      justify-content: center;
     }
 
-    .social-problems__grid {
+    .social-hero__collage {
+      min-height: 21rem;
+      margin-top: 0.5rem;
+    }
+
+    .social-hero__paper {
+      inset: 16% 6% 8% 14%;
+      box-shadow: var(--print-offset-sm) var(--site-mustard);
+    }
+
+    .social-hero__bubble--coral {
+      width: 7.3rem;
+      height: 7.3rem;
+      right: 1%;
+    }
+
+    .social-hero__bubble--teal {
+      width: 5.8rem;
+      height: 5.8rem;
+      left: 1%;
+    }
+
+    .social-problems__field {
+      display: grid;
+      gap: 2.4rem;
+      min-height: 0;
+    }
+
+    .social-problem {
+      position: relative;
+      top: auto;
+      right: auto;
+      bottom: auto;
+      left: auto;
+      width: 100%;
+      padding-top: 0;
       border-top: 0;
     }
 
-    .social-problem__mark {
-      margin-bottom: 1.5rem;
+    .social-problem:nth-child(even) {
+      grid-template-columns: minmax(0, 1fr) auto;
+      text-align: right;
+    }
+
+    .social-problem:nth-child(even) .social-problem__icon {
+      grid-column: 2;
+      grid-row: 1;
+    }
+
+    .social-problem:nth-child(even) > div {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .social-problem::before {
+      content: '';
+      position: absolute;
+      right: 14%;
+      bottom: -1.15rem;
+      left: 19%;
+      border-bottom: var(--social-rule);
+      transform: rotate(-1deg);
+    }
+
+    .social-problem:nth-child(even)::before {
+      right: 19%;
+      left: 14%;
+      transform: rotate(1deg);
+    }
+
+    .social-problem:last-child::before {
+      display: none;
+    }
+
+    .social-problem::after {
+      right: 6%;
+      bottom: -1.8rem;
+      font-size: 1.65rem;
+    }
+
+    .social-problem:nth-child(even)::after {
+      right: auto;
+      left: 6%;
+      transform: rotate(135deg);
+    }
+
+    .social-problem:last-child::after {
+      display: none;
+    }
+
+    .social-good__path {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.65rem;
+      min-height: 0;
+      padding: 0 0 0 3.25rem;
+    }
+
+    .social-good__line {
+      top: 0.15rem;
+      left: 0.1rem;
+      width: 2.3rem;
+      height: calc(100% - 0.3rem);
+      transform: none;
+    }
+
+    .social-good__line path:first-child {
+      d: path('M 25 5 C 5 80 45 155 22 235 S 45 400 22 505 S 35 650 25 795');
+    }
+
+    .social-good__arrow {
+      display: none;
+    }
+
+    .social-good__stage,
+    .social-good__stage:nth-of-type(2),
+    .social-good__stage:nth-of-type(3),
+    .social-good__stage:nth-of-type(4) {
+      margin-top: 0;
+      padding-top: 0;
+    }
+
+    .social-good__dot {
+      top: 0.2rem;
+      left: -3rem;
+    }
+
+    .social-good__stage p {
+      max-width: 29rem;
+    }
+
+    .social-method__flow {
+      grid-template-columns: 1fr;
+      gap: 0;
     }
 
     .social-method__step {
+      display: grid;
       grid-template-columns: 4.5rem minmax(0, 1fr);
+      gap: 1rem;
       min-height: 0;
+      padding: 0 0 2.4rem;
+    }
+
+    .social-method__step::after {
+      content: '↓';
+      position: absolute;
+      left: 1.7rem;
+      bottom: 0.25rem;
+      font-family: var(--type-display);
+      font-size: 1.8rem;
+      font-weight: 800;
+    }
+
+    .social-method__step:last-child::after {
+      display: none;
+    }
+
+    .social-method__number {
+      position: static;
+      width: 4.2rem;
+      height: 4.2rem;
+      font-size: 1.7rem;
+    }
+
+    .social-method__step p {
+      max-width: 28rem;
+    }
+
+    .social-cta__visual {
+      min-height: 14rem;
+      max-width: 24rem;
+      margin-inline: auto;
+    }
+
+    .social-cta__orb {
+      width: 8.5rem;
+      height: 8.5rem;
+      right: 4%;
     }
   }
 
   @media (max-width: 575.98px) {
     .social-hero__collage {
-      min-height: 19rem;
+      min-height: 18.5rem;
     }
 
-    .social-hero__paper {
-      inset: 11% 4% 14% 6%;
-      box-shadow: var(--print-offset-sm) var(--site-mustard);
+    .social-problem {
+      grid-template-columns: 4rem minmax(0, 1fr);
+      gap: 0.9rem;
     }
 
-    .social-hero__megaphone {
-      width: 88%;
-      left: 1%;
-      top: 3%;
+    .social-problem:nth-child(even) {
+      grid-template-columns: minmax(0, 1fr) 4rem;
     }
 
-    .social-hero__bubble--coral {
-      left: 2%;
-    }
-
-    .social-hero__bubble--teal {
-      right: 0;
-      bottom: 6%;
-    }
-
-    .social-hero__annotation {
-      top: 2%;
-      right: 0;
-      font-size: 0.68rem;
-    }
-
-    .social-hero__label {
-      font-size: 0.62rem;
-    }
-
-    .social-hero__label--one {
-      top: 19%;
-    }
-
-    .social-hero__label--two {
-      top: 47%;
-    }
-
-    .social-hero__label--three {
-      bottom: 11%;
-    }
-
-    .social-good__item {
-      grid-template-columns: 2.25rem minmax(0, 1fr);
-      gap: 0.85rem;
-    }
-
-    .social-method__step {
-      grid-template-columns: 1fr;
-      gap: 1rem;
-    }
-
-    .social-method__number {
-      font-size: 3.5rem;
+    .social-good__head h2,
+    .social-section__head h2,
+    .social-cta h2 {
+      font-size: clamp(2.65rem, 12vw, 4rem);
     }
   }
 
@@ -762,15 +958,12 @@ const pageCanonical = 'https://digitful.ca/social-media/';
       animation: none;
     }
 
-    .social-hero__collage:hover .social-hero__megaphone,
-    .social-hero__collage:hover .social-hero__bubble,
-    .social-hero__collage:hover .social-hero__annotation,
-    .social-hero__collage:hover .social-hero__label,
-    .social-problem:hover,
-    .social-problem:hover .social-problem__mark,
-    .social-good__item:hover::after,
-    .social-method__step:hover .social-method__number {
-      transform: none;
+    .social-hero__bubble,
+    .social-hero__megaphone,
+    .social-good__dot,
+    .social-method__number,
+    .social-cta__visual svg {
+      transition: none;
     }
   }
 </style>
