@@ -1,0 +1,173 @@
+name: Apply homepage issue interactions
+
+on:
+  push:
+    branches: [visual-refresh]
+    paths:
+      - '.github/workflows/apply-home-issue-interactions.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: visual-refresh
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Apply approved interactions
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          p = Path('src/pages/index.astro')
+          s = p.read_text()
+
+          if "import '../assets/_homepage-interactions.scss';" not in s:
+              s = s.replace(
+                  "import HomeIcon from '../components/HomeIcon.astro';\n",
+                  "import HomeIcon from '../components/HomeIcon.astro';\nimport '../assets/_homepage-interactions.scss';\n",
+                  1,
+              )
+
+          old = '''            <article class="home-issue" role="listitem">
+              <span class="home-icon-disc home-icon-disc--coral"><HomeIcon name="message" /></span>
+              <h3>Unclear message</h3>
+              <p>People shouldn’t need a committee meeting to understand what you do.</p>
+            </article>
+            <article class="home-issue" role="listitem">
+              <span class="home-icon-disc home-icon-disc--mustard"><HomeIcon name="funnel" /></span>
+              <h3>Leaky conversion path</h3>
+              <p>Interest is useful. A clear next step is better.</p>
+            </article>
+            <article class="home-issue" role="listitem">
+              <span class="home-icon-disc home-icon-disc--teal"><HomeIcon name="clock" /></span>
+              <h3>Slow follow-up</h3>
+              <p>If the next step relies on memory, it probably needs a system.</p>
+            </article>'''
+
+          new = '''            <article class="home-issue" role="listitem">
+              <span class="home-icon-disc home-icon-disc--coral"><HomeIcon name="message" /></span>
+              <h3>
+                <button
+                  type="button"
+                  class="home-issue__trigger"
+                  aria-expanded="false"
+                  aria-controls="home-issue-unclear-reveal"
+                  data-issue-trigger="unclear"
+                >
+                  <span>Unclear message</span>
+                  <span class="home-issue__cue" aria-hidden="true">+</span>
+                </button>
+              </h3>
+              <p>People shouldn’t need a committee meeting to understand what you do.</p>
+              <div id="home-issue-unclear-reveal" class="home-issue__reveal" hidden>
+                <p class="home-issue__punchline">Exactly. Just like this one.</p>
+              </div>
+            </article>
+            <article class="home-issue" role="listitem">
+              <span class="home-icon-disc home-icon-disc--mustard"><HomeIcon name="funnel" /></span>
+              <h3>
+                <button
+                  type="button"
+                  class="home-issue__trigger"
+                  aria-expanded="false"
+                  aria-controls="home-issue-leaky-reveal"
+                  data-issue-trigger="leaky"
+                >
+                  <span>Leaky conversion path</span>
+                  <span class="home-issue__cue" aria-hidden="true">+</span>
+                </button>
+              </h3>
+              <p>Interest is useful. A clear next step is better.</p>
+              <div id="home-issue-leaky-reveal" class="home-issue__reveal home-issue__reveal--leaky" hidden>
+                <div class="home-issue__path-demo" aria-hidden="true">
+                  <span class="home-issue__path-line"></span>
+                  <span class="home-issue__path-dot"></span>
+                  <span class="home-issue__path-target"></span>
+                </div>
+                <p class="home-issue__punchline">It was almost there.</p>
+              </div>
+            </article>
+            <article class="home-issue" role="listitem">
+              <span class="home-icon-disc home-icon-disc--teal"><HomeIcon name="clock" /></span>
+              <h3>
+                <button
+                  type="button"
+                  class="home-issue__trigger"
+                  aria-expanded="false"
+                  aria-controls="home-issue-slow-reveal"
+                  data-issue-trigger="slow"
+                >
+                  <span>Slow follow-up</span>
+                  <span class="home-issue__cue" aria-hidden="true">+</span>
+                </button>
+              </h3>
+              <p>If the next step relies on memory, it probably needs a system.</p>
+              <div id="home-issue-slow-reveal" class="home-issue__reveal" hidden>
+                <span class="home-issue__timer" data-followup-timer aria-hidden="true">0.000s</span>
+                <p class="home-issue__punchline" data-followup-message hidden>That was only a second.</p>
+                <span class="home-issue__aside" data-followup-message hidden>Some leads wait days.</span>
+                <span class="home-issue__sr-status" data-followup-status role="status" aria-live="polite"></span>
+              </div>
+            </article>'''
+
+          if old not in s:
+              raise SystemExit('Expected homepage issue block not found; refusing to guess.')
+          s = s.replace(old, new, 1)
+
+          if '/scripts/home-issue-interactions.js' not in s:
+              s = s.replace(
+                  '</BaseLayout>\n',
+                  '  <script is:inline src="/scripts/home-issue-interactions.js"></script>\n</BaseLayout>\n',
+                  1,
+              )
+
+          p.write_text(s)
+
+          p = Path('docs/brand/HOMEPAGE-COPY.md')
+          s = p.read_text()
+          marker = '''### Slow follow-up
+
+If the next step relies on memory, it probably needs a system.
+'''
+          addition = '''### Slow follow-up
+
+If the next step relies on memory, it probably needs a system.
+
+### Approved interaction wit for this section
+
+Keep the core problem copy clear and useful. The wit comes from optional, accessible interaction rather than replacing the explanation:
+- `Unclear message` expands to: `Exactly. Just like this one.`
+- `Leaky conversion path` demonstrates a path that stops short, then reveals: `It was almost there.`
+- `Slow follow-up` starts a short millisecond timer (about 1.25 seconds), then reveals: `That was only a second.` / `Some leads wait days.`
+
+The normal explanatory blurbs remain visible without interaction. Reduced-motion users get the final state without waiting for animation.
+'''
+          if '### Approved interaction wit for this section' not in s:
+              if marker not in s:
+                  raise SystemExit('Homepage copy marker not found; refusing to guess.')
+              s = s.replace(marker, addition, 1)
+          p.write_text(s)
+          PY
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Commit implementation
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/pages/index.astro docs/brand/HOMEPAGE-COPY.md
+          git commit -m "feat: add situational wit to homepage issues [skip ci]"
+          git push origin visual-refresh
