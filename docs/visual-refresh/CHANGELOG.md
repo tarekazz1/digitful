@@ -75,14 +75,22 @@ Chronological record of setup and implementation changes for the visual-refresh 
 - Tone: plainspoken, useful, concise, lightly witty, not salesy.
 - Approved lines include `Marketing works better when the parts talk to each other.`, `More traffic won’t fix a messy system.`, `Four parts. One growth system.`, `The business is moving. The system is lagging behind.`, and `Bring the messy version.`
 - Slow follow-up wording approved as: `If the next step relies on memory, it probably needs a system.`
+- Homepage density rule locked: one headline + one layer of support, not two.
+- Removed separate summary paragraphs beneath `What we fix`, `Core offers`, and `Good fit` from the intended homepage layout, and removed the decorative `Clearer / More efficient / Built for real business` strip.
 - Decision: D017.
+- No rendered-site code changed.
+
+### Mobile homepage specimen
+- Created a mobile-first homepage design specimen using the approved visual constitution and real homepage content.
+- User approved the specimen.
+- Mobile direction keeps the same identity as desktop while simplifying hierarchy, reducing competing elements, and preserving touch-friendly controls and the Instant Snapshot.
+- Decision: D018.
 - No rendered-site code changed.
 
 ### Current preview source
 - `939a771c5ed93cf6ca80a1de1046ddcaed247f44`
 
 ### Next action
-- Create the cleaner homepage design specimen/mockup using `VISUAL-CONSTITUTION.md` + `HOMEPAGE-COPY.md`.
-- Use the current homepage’s real functional structure, including the Instant Snapshot.
-- Keep the approved identity while reducing visual noise and competing focal points.
-- Review the specimen before translating the design system into code.
+- Validate the homepage direction in **dark mode**.
+- Dark mode must feel like the same paper/ink editorial identity inverted for night use—not a return to glow, glassmorphism, or cyber/SaaS styling.
+- After dark-mode approval, freeze the homepage design direction and begin implementation foundations on `visual-refresh`.
