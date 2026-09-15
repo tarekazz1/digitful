@@ -39,6 +39,19 @@ Main performance findings remain: render-blocking CSS/Google Fonts, Bootstrap Ic
 - production GTM stripped
 - FormSubmit blocked
 - theme-switch preview bug fixed in preview repo commit `1d0d972211ca0a1dc551adff22a1463d39ef9260`
+- preview build now uses Node 22 + `npm ci`
+
+## Framework state
+Decision D020 is implemented on `visual-refresh`:
+- Astro upgraded from `^5.6.1` to exact `7.3.2`
+- lockfile regenerated on Node 22
+- source GitHub Pages workflow on `visual-refresh` updated to Node 22 + `npm ci`
+- preview workflow updated to Node 22 + `npm ci`
+- upgrade package commit: `7d5f709337204c960a4444e905bc9d59bec2f6f8`
+- previewed source: `ea8162f396f103cd7844f40b58ef1850ef07b884`
+- preview run `34972381758`: build success, deploy success
+
+No font, logo or homepage composition change was bundled into the framework upgrade.
 
 ## Approved objective fixes
 1. Contact light-mode links — KEEP — `2ebd6614be8c7ea1c0f7d841fe8111ff3ec0cc92`
@@ -150,57 +163,50 @@ The homepage direction is now frozen across desktop, mobile, light and dark mode
 
 Implementation may tune exact colour values, spacing, line-height and responsive line breaks for accessibility and browser fit without reopening the design. Material visual changes require a new decision.
 
-## Current preview candidate — editorial foundations
-Status: **PENDING USER REVIEW**.
+## Current preview candidate — editorial foundations + Astro 7
+Visual foundation status: **PENDING USER REVIEW**.
 
-Preview source:
-`8f30106882e3e0b659865c1187f0aa5dc50ec96a`
+Current preview source:
+`ea8162f396f103cd7844f40b58ef1850ef07b884`
 
-Preview run:
-`34969653064` — build success, deploy success.
+Current framework validation run:
+`34972381758` — build success, deploy success.
 
-What changed:
-- added `src/assets/_editorial-foundations.scss` after the legacy overrides
-- applied approved light/dark palette tokens
-- flattened the global background and removed page-glow markup
+Foundation changes already present:
+- `src/assets/_editorial-foundations.scss` loaded after legacy overrides
+- approved light/dark palette tokens
+- flattened global background and removed page glows
 - reduced radii and removed soft/glass shadows
-- strengthened border/rule treatment
-- restyled shared navigation, dropdown, theme toggle, buttons, forms, footer and generic legacy surfaces
-- changed header CTA to approved wording `Talk to Digitful`
-- kept Inter for this foundation pass; exact display typeface remains pending browser testing
+- stronger border/rule treatment
+- shared navigation, dropdown, theme toggle, buttons, forms and footer restyled
+- header CTA changed to `Talk to Digitful`
+- Inter is still the active body + heading font for now
 
-Important: the homepage has **not** yet been rebuilt to match the approved specimen. Its old section structure/content remains while inheriting the new foundation layer.
+Important: the homepage has **not** yet been rebuilt to match the approved specimen. Its old card-heavy section structure remains while inheriting the new foundation layer.
 
 Production `main` / `digitful.ca` remain untouched.
 
 ## Immediate next step
-User reviews `preview.digitful.ca` for this foundation pass.
+Browser-test candidate display typefaces on the Astro 7 foundation before finalizing the logo or rebuilding the homepage.
 
-Review light + dark and desktop + mobile, focusing on:
-- header/nav/dropdown/theme toggle
-- overall paper/ink palette and contrast
-- button treatment
-- generic surfaces and forms
-- footer
-- readability and obvious regressions
-
-Do not judge homepage composition against the final mockup yet; that comes after the foundation pass is accepted.
-
-After user says KEEP:
-1. record the foundation decision
-2. rebuild homepage against the approved specimen and locked copy
-3. deploy exact source SHA to preview
-4. review homepage before adapting other page types
+The display-font test should:
+1. keep body copy on a neutral readable sans unless a better reason emerges
+2. test a small shortlist of bold/compact editorial display faces against real Digitful headings
+3. use the Astro 7 font pipeline/self-hosting path rather than adding another external Google Fonts request
+4. compare desktop/mobile and light/dark
+5. choose one display system, then finalize the `digitful.` SVG logo family against it
+6. only then rebuild the homepage structure and remove the old generic cards
 
 ## Later implementation sequence
-After homepage foundations are approved:
-1. adapt service page type
-2. adapt contact and thank-you page types
-3. adapt blog index/article while preserving editorial reading priority
-4. resolve deferred responsive/composition observations within those page types
-5. full desktop/mobile dark/light QA
-6. freeze visual baseline
-7. performance work: SVG icon migration, JS scoping, CSS/Bootstrap dependency map, safe CSS reduction, re-measure, then fonts/GTM/caching as justified
+After display font + logo are approved:
+1. rebuild homepage against the approved specimen and locked copy
+2. adapt service page type
+3. adapt contact and thank-you page types
+4. adapt blog index/article while preserving editorial reading priority
+5. resolve deferred responsive/composition observations within those page types
+6. full desktop/mobile dark/light QA
+7. freeze visual baseline
+8. performance work: SVG icon migration, JS scoping, CSS/Bootstrap dependency map, safe CSS reduction, re-measure, then remaining font/GTM/caching work as justified
 
 ## Functional behaviours that must not break
 Mobile navbar, Services dropdown, theme toggle, navigation, blog filters, homepage diagnostic, diagnostic→Contact handoff, contact toggles/hidden fields, production FormSubmit/thank-you redirect, logos, responsive layouts, production GTM/GA, SEO output and CLS stability.
