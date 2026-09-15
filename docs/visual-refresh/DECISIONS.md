@@ -93,7 +93,6 @@ Preview run: `34957277115`.
 Use a vertical flex layout on `.site-shell` and let `#main-content` grow into unused viewport height.
 
 Reviewed source: `939a771c5ed93cf6ca80a1de1046ddcaed247f44`.
-Preview run: `34957902972`.
 
 ---
 
@@ -270,28 +269,25 @@ Timing:
 
 ---
 
-## D023 — Production-candidate `digitful.` vector logo system
-**Status:** Candidate — pending preview KEEP / ADJUST / REJECT
+## D023 — First production-vector logo candidate
+**Status:** REJECTED
 
-Use an outlined vector wordmark derived from **Barlow Condensed ExtraBold / 800** so the logo aligns with the approved display typography without depending on a runtime font file.
+The first SVG production candidate derived the `digitful.` lettering directly from **Barlow Condensed ExtraBold / 800**.
 
-Candidate system:
-- lowercase `digitful.`
-- ink `#191A1B` or paper/cream `#F0E7D5` letters depending on background
-- coral terminal dot `#E95849`
-- monochrome wordmark variants
-- standalone `d.` mark for genuinely small contexts
-- new favicon / app icon derivatives based on the `d.` mark
-- tagline lockup excluded from v1 because no exact tagline text is separately approved
+The user rejected it after preview review because it did not match the earlier approved concept closely enough. It became too condensed and typographic and lost the wider, rounder, softer, more custom character of the concept.
 
-Usage and sizing rules are documented in `docs/brand/LOGO-SYSTEM.md`.
+Correction:
+- Barlow Condensed remains approved for site headings only.
+- The logo lettering is a separate brand decision and does **not** need to use Barlow.
+- The next candidate must faithfully recreate the earlier approved concept shapes as clean vectors rather than substitute a font-derived approximation.
+- Preserve the concept's wider/rounder proportions, distinctive `d` / `g` / `u` character, heavier standalone `d.` mark, and more integral/larger coral terminal dot.
 
-The old blue-underline logo is replaced only on the preview candidate until this receives an explicit KEEP.
+Rejected implementation assets may remain temporarily on `visual-refresh` as history, but they are not approved for production and must not be treated as the logo source of truth.
 
 ---
 
 ## Current pending decisions
-- Logo production candidate: KEEP / ADJUST / REJECT after preview review.
+- Corrected logo vectors faithful to the approved concept: preview KEEP / ADJUST / REJECT.
 - Exact production token values after browser/accessibility testing.
 - Exact section compositions for non-home page types.
 - Final implementation choices for deferred blog/mobile/tablet layout observations.
