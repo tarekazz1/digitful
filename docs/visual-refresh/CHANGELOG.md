@@ -153,10 +153,27 @@ Chronological record of setup and implementation changes for the visual-refresh 
 - Decision: D023.
 - Production remained untouched.
 
+### Preview rollback after logo rejection
+- Preview was pinned back to the last approved pre-logo source: `12ad2246ad73344bbf33674bf8eb2585e7d10b2e`.
+- Preview run `34978624652`: build **success**, deploy **success**.
+- Global `Logo.astro`, legacy logo assets, manifest and favicon path were restored on `visual-refresh` so the rejected candidate is no longer wired into the shared site shell.
+
+### Logo production candidate 2 — traced from approved concept
+- Status: **PENDING USER REVIEW**.
+- Rebuilt the core logo vectors by tracing the approved concept artwork itself rather than deriving lettering from Barlow or another substitute typeface.
+- Candidate assets are isolated under `public/assets/brand/candidate-2/`.
+- Candidate wordmark preserves the wider/rounder concept proportions and coral terminal dot; standalone `d.` is traced from its approved concept artwork.
+- Temporary generation workflow completed successfully and was removed after the assets were committed.
+- `/logo-test/` now reviews only the corrected light/dark wordmarks, standalone marks and basic interface-size legibility.
+- Global header/footer logo and favicon/app derivatives are deliberately **not** switched to candidate 2 yet.
+- Decision: D024.
+- Production remains untouched.
+
 ### Current preview source
-- Rolling back to the last approved pre-logo source: `12ad2246ad73344bbf33674bf8eb2585e7d10b2e`.
+- Pending pin of the exact candidate-2 review SHA.
 
 ### Next action
-- Recreate the earlier approved `digitful.` concept faithfully as SVG vectors rather than derive the logo from Barlow.
-- Preview the corrected wordmark and `d.` mark before generating/locking final favicon/app derivatives.
-- After logo KEEP, rebuild the homepage structure and remove the old generic card-heavy layout.
+- Deploy the exact candidate-2 review source SHA to `preview.digitful.ca`.
+- Review `/logo-test/` and mark the corrected core logo shapes KEEP / ADJUST / REJECT.
+- Only after KEEP: wire the logo into shared header/footer, regenerate favicon/app derivatives, and finalize clear-space/minimum-size rules.
+- Then rebuild the homepage structure and remove the old generic card-heavy layout.
