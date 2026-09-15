@@ -286,8 +286,29 @@ Rejected implementation assets may remain temporarily on `visual-refresh` as his
 
 ---
 
+## D024 — Concept-faithful vector logo candidate 2
+**Status:** Candidate — pending preview KEEP / ADJUST / REJECT
+
+The second vector candidate is traced from the approved concept artwork itself instead of being regenerated from Barlow Condensed.
+
+Review scope is intentionally limited to the core shapes:
+- primary wordmark on light
+- primary wordmark on dark
+- standalone `d.` mark on light/dark
+- basic legibility at representative interface sizes
+
+The global site logo, favicon/app derivatives, clear-space rules and minimum-size rules remain unapproved and are not part of this candidate review. Those are finalized only after the core shapes receive KEEP.
+
+Candidate assets live under:
+`public/assets/brand/candidate-2/`
+
+Temporary review route:
+`/logo-test/`
+
+---
+
 ## Current pending decisions
-- Corrected logo vectors faithful to the approved concept: preview KEEP / ADJUST / REJECT.
+- Concept-faithful logo candidate 2: preview KEEP / ADJUST / REJECT.
 - Exact production token values after browser/accessibility testing.
 - Exact section compositions for non-home page types.
 - Final implementation choices for deferred blog/mobile/tablet layout observations.
