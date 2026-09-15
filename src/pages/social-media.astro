@@ -2,55 +2,560 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const pageTitle = 'Social Media - Digitful';
-const pageDescription = 'Digitful builds social media systems that support positioning, trust, and conversion.';
+const pageDescription = 'Digitful helps businesses build social media around a clear point of view, a recognizable voice, and content for the right people.';
 const pageCanonical = 'https://digitful.ca/social-media/';
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription} canonicalUrl={pageCanonical}>
-  <main class="page-theme page-theme--social">
-    <section class="service-hero text-center">
-      <div class="container">
-        <span class="eyebrow mb-3">Social media</span>
-        <h1 class="mb-3">Social media that supports growth.</h1>
-        <p class="lead mb-0">
-          Social should clarify the brand and support demand.
-        </p>
+  <main class="page-theme page-theme--social social-page">
+    <section class="social-hero">
+      <div class="container social-hero__grid">
+        <div class="social-hero__copy">
+          <span class="eyebrow">Social media</span>
+          <h1>Social media should give people a reason to pay attention.</h1>
+          <p class="lead">
+            A clear point of view, a recognizable voice, and content built for the people you actually want to reach.
+          </p>
+        </div>
+
+        <div class="social-hero__signal technical-grid technical-panel-offset" aria-hidden="true">
+          <span class="social-hero__annotation technical-annotation">Build recognition</span>
+          <div class="social-hero__signal-line social-hero__signal-line--one"></div>
+          <div class="social-hero__signal-line social-hero__signal-line--two"></div>
+          <div class="social-hero__signal-line social-hero__signal-line--three"></div>
+          <span class="social-hero__signal-dot social-hero__signal-dot--one"></span>
+          <span class="social-hero__signal-dot social-hero__signal-dot--two"></span>
+          <span class="social-hero__signal-dot social-hero__signal-dot--three"></span>
+          <span class="social-hero__signal-label social-hero__signal-label--one">Point of view</span>
+          <span class="social-hero__signal-label social-hero__signal-label--two">Voice</span>
+          <span class="social-hero__signal-label social-hero__signal-label--three">Right people</span>
+        </div>
       </div>
     </section>
 
-    <section class="service-info py-6">
+    <section class="social-section social-problems">
       <div class="container">
-        <div class="service-shell">
-          <h2 class="mb-3">What we solve</h2>
-          <ul>
-            <li>Engagement looks fine, but it is not moving pipeline or trust.</li>
-            <li>Content feels random because the positioning underneath it is weak.</li>
-            <li>The team is spending energy on channels that are not helping buyers decide.</li>
-          </ul>
+        <div class="social-section__head">
+          <span class="eyebrow">Where it usually gets stuck</span>
+          <h2>Being active is not the same as being memorable.</h2>
+        </div>
 
-          <div class="process-grid mt-4">
-            <div class="process-step">
-              <span class="process-step__number">01</span>
-              <strong>Clarify the message</strong>
-              <p class="mb-0">Define what the brand should be known for.</p>
-            </div>
-            <div class="process-step">
-              <span class="process-step__number">02</span>
-              <strong>Build the system</strong>
-              <p class="mb-0">Create themes, rhythm, and calls to action.</p>
-            </div>
-            <div class="process-step">
-              <span class="process-step__number">03</span>
-              <strong>Measure what matters</strong>
-              <p class="mb-0">Track qualified attention and action.</p>
-            </div>
-          </div>
+        <div class="social-problems__grid">
+          <article class="social-problem">
+            <span class="social-problem__mark" aria-hidden="true">01</span>
+            <h3>The brand could be anyone</h3>
+            <p>The content looks polished, but there is nothing distinctive enough to remember.</p>
+          </article>
+          <article class="social-problem">
+            <span class="social-problem__mark" aria-hidden="true">02</span>
+            <h3>The message keeps changing</h3>
+            <p>Every post says something different, so the brand never becomes clear.</p>
+          </article>
+          <article class="social-problem">
+            <span class="social-problem__mark" aria-hidden="true">03</span>
+            <h3>You are talking to everyone</h3>
+            <p>The content gets seen, but not necessarily by the people you want more of.</p>
+          </article>
+          <article class="social-problem">
+            <span class="social-problem__mark" aria-hidden="true">04</span>
+            <h3>Posting becomes the goal</h3>
+            <p>The calendar stays full, but it is hard to explain what all that activity is actually doing for the business.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-          <div class="mt-4">
-            <a href="/contact/?service=social-media" class="btn btn-primary btn-lg px-4">Talk Social</a>
-          </div>
+    <section class="social-good">
+      <div class="container social-good__grid">
+        <div class="social-good__intro">
+          <span class="eyebrow">What good social media should do</span>
+          <h2>Make the brand easier to recognize and harder to forget.</h2>
+        </div>
+
+        <div class="social-good__list">
+          <article class="social-good__item">
+            <span aria-hidden="true">01</span>
+            <div>
+              <h3>Make the brand recognizable</h3>
+              <p>People should start to recognize how you think, what you value, and why the business feels different.</p>
+            </div>
+          </article>
+          <article class="social-good__item">
+            <span aria-hidden="true">02</span>
+            <div>
+              <h3>Speak to the right people</h3>
+              <p>Good content reflects the questions, priorities, and problems your audience actually has.</p>
+            </div>
+          </article>
+          <article class="social-good__item">
+            <span aria-hidden="true">03</span>
+            <div>
+              <h3>Build familiarity over time</h3>
+              <p>Most people are not ready to act today. Good social gives them a reason to remember you later.</p>
+            </div>
+          </article>
+          <article class="social-good__item">
+            <span aria-hidden="true">04</span>
+            <div>
+              <h3>Give attention somewhere to go</h3>
+              <p>Attention should lead naturally to a useful next step.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="social-section social-method">
+      <div class="container">
+        <div class="social-section__head social-section__head--method">
+          <span class="eyebrow">How we work on it</span>
+          <h2>A useful social system starts before the first post.</h2>
+        </div>
+
+        <div class="social-method__grid">
+          <article class="social-method__step">
+            <span class="social-method__number">01</span>
+            <div>
+              <h3>Get the message clear</h3>
+              <p>Define what the business needs to be known for, how the brand should sound, and what is worth repeating.</p>
+            </div>
+          </article>
+          <article class="social-method__step">
+            <span class="social-method__number">02</span>
+            <div>
+              <h3>Focus on the right people</h3>
+              <p>Shape the content around the people you actually want to reach and what matters to them.</p>
+            </div>
+          </article>
+          <article class="social-method__step">
+            <span class="social-method__number">03</span>
+            <div>
+              <h3>Build the content system</h3>
+              <p>Turn the message into repeatable themes, formats, and a publishing rhythm the team can realistically maintain.</p>
+            </div>
+          </article>
+          <article class="social-method__step">
+            <span class="social-method__number">04</span>
+            <div>
+              <h3>Learn from the response</h3>
+              <p>Look beyond likes and reach to see what earns attention, creates interest, and helps move the right people closer.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="social-cta">
+      <div class="container social-cta__grid">
+        <div>
+          <span class="eyebrow">The next step</span>
+          <h2>Social media should not end at the post.</h2>
+        </div>
+        <div class="social-cta__copy">
+          <p class="social-cta__lead">It should reinforce the message, reach the right people, and make the next step easier.</p>
+          <p>If the content feels generic, inconsistent, or busy without much purpose, we can help fix the system behind it.</p>
+          <a href="/contact/?service=social-media" class="btn btn-primary btn-lg px-4">Tell us what’s not working</a>
         </div>
       </div>
     </section>
   </main>
 </BaseLayout>
+
+<style>
+  .social-page {
+    --social-accent: var(--site-accent);
+    --social-rule: var(--ds-rule-strong);
+    overflow: clip;
+  }
+
+  .social-hero {
+    padding-block: clamp(4rem, 8vw, 7.5rem) var(--space-section);
+    border-bottom: var(--social-rule);
+  }
+
+  .social-hero__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(18rem, 0.8fr);
+    gap: clamp(2.5rem, 7vw, 7rem);
+    align-items: center;
+  }
+
+  .social-hero__copy {
+    max-width: 50rem;
+  }
+
+  .social-hero__copy .eyebrow,
+  .social-section__head .eyebrow,
+  .social-good__intro .eyebrow,
+  .social-cta .eyebrow {
+    margin-bottom: 1.25rem;
+  }
+
+  .social-hero h1 {
+    max-width: 12ch;
+    margin: 0;
+    font-size: clamp(3.7rem, 7vw, 6.8rem);
+    line-height: 0.91;
+    letter-spacing: -0.045em;
+  }
+
+  .social-hero .lead {
+    max-width: 42rem;
+    margin: 1.75rem 0 0;
+    font-size: clamp(1.1rem, 1.7vw, 1.35rem);
+    line-height: 1.55;
+  }
+
+  .social-hero__signal {
+    position: relative;
+    min-height: 25rem;
+    border: var(--social-rule);
+    overflow: hidden;
+  }
+
+  .social-hero__annotation {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    transform: rotate(3deg);
+  }
+
+  .social-hero__signal-line {
+    position: absolute;
+    left: 16%;
+    right: 16%;
+    height: var(--ds-rule-width);
+    background: var(--site-border);
+    transform-origin: left center;
+  }
+
+  .social-hero__signal-line--one {
+    top: 31%;
+    transform: rotate(11deg);
+  }
+
+  .social-hero__signal-line--two {
+    top: 52%;
+    transform: rotate(-8deg);
+  }
+
+  .social-hero__signal-line--three {
+    top: 68%;
+    transform: rotate(7deg);
+  }
+
+  .social-hero__signal-dot {
+    position: absolute;
+    width: 3.4rem;
+    height: 3.4rem;
+    border: var(--social-rule);
+    border-radius: 50%;
+    background: var(--social-accent);
+  }
+
+  .social-hero__signal-dot--one {
+    top: 22%;
+    left: 14%;
+  }
+
+  .social-hero__signal-dot--two {
+    top: 45%;
+    right: 18%;
+    background: var(--site-mustard);
+  }
+
+  .social-hero__signal-dot--three {
+    bottom: 14%;
+    left: 34%;
+    background: var(--site-teal);
+  }
+
+  .social-hero__signal-label {
+    position: absolute;
+    padding: 0.3rem 0.45rem;
+    color: var(--site-text);
+    background: var(--site-surface);
+    border: var(--ds-rule-thin-width) solid var(--site-border);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .social-hero__signal-label--one {
+    top: 21%;
+    left: 30%;
+  }
+
+  .social-hero__signal-label--two {
+    top: 48%;
+    right: 35%;
+  }
+
+  .social-hero__signal-label--three {
+    bottom: 16%;
+    left: 50%;
+  }
+
+  .social-section {
+    padding-block: var(--space-section);
+  }
+
+  .social-section__head {
+    display: grid;
+    grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
+    gap: var(--space-editorial-gap);
+    align-items: end;
+    margin-bottom: clamp(2.5rem, 5vw, 4.75rem);
+  }
+
+  .social-section__head .eyebrow {
+    align-self: start;
+  }
+
+  .social-section__head h2,
+  .social-good__intro h2,
+  .social-cta h2 {
+    margin: 0;
+    font-size: var(--type-display-lg);
+    line-height: 0.95;
+    letter-spacing: -0.035em;
+  }
+
+  .social-problems__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    border-top: var(--social-rule);
+    border-left: var(--social-rule);
+  }
+
+  .social-problem {
+    position: relative;
+    min-height: 16rem;
+    padding: clamp(1.5rem, 3vw, 2.5rem);
+    border-right: var(--social-rule);
+    border-bottom: var(--social-rule);
+  }
+
+  .social-problem__mark {
+    display: inline-block;
+    margin-bottom: 2.75rem;
+    color: var(--social-accent);
+    font-family: var(--type-display);
+    font-size: 1.15rem;
+    font-weight: var(--type-display-weight);
+    letter-spacing: 0.06em;
+  }
+
+  .social-problem h3,
+  .social-good__item h3,
+  .social-method__step h3 {
+    margin: 0 0 0.75rem;
+    font-size: var(--type-title-lg);
+    line-height: 1;
+  }
+
+  .social-problem p,
+  .social-good__item p,
+  .social-method__step p,
+  .social-cta p {
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  .social-problem p {
+    max-width: 35rem;
+  }
+
+  .social-good {
+    padding-block: var(--space-section-wide);
+    color: var(--brand-ink);
+    background: var(--social-accent);
+    border-block: var(--social-rule);
+  }
+
+  .social-good :global(.eyebrow),
+  .social-good h2,
+  .social-good h3,
+  .social-good p {
+    color: var(--brand-ink);
+  }
+
+  .social-good__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    gap: clamp(3rem, 7vw, 7rem);
+    align-items: start;
+  }
+
+  .social-good__intro {
+    position: sticky;
+    top: 7rem;
+  }
+
+  .social-good__list {
+    border-top: var(--ds-rule-width) solid var(--brand-ink);
+  }
+
+  .social-good__item {
+    display: grid;
+    grid-template-columns: 3rem minmax(0, 1fr);
+    gap: 1.25rem;
+    padding-block: 1.6rem;
+    border-bottom: var(--ds-rule-width) solid var(--brand-ink);
+  }
+
+  .social-good__item > span {
+    padding-top: 0.1rem;
+    font-family: var(--type-display);
+    font-size: 1.2rem;
+    font-weight: var(--type-display-weight);
+  }
+
+  .social-good__item p {
+    max-width: 40rem;
+    opacity: 0.85;
+  }
+
+  .social-section__head--method {
+    margin-bottom: clamp(3rem, 5vw, 5rem);
+  }
+
+  .social-method__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: clamp(2rem, 5vw, 5rem);
+    border-top: var(--social-rule);
+  }
+
+  .social-method__step {
+    display: grid;
+    grid-template-columns: minmax(5rem, 0.32fr) minmax(0, 1fr);
+    gap: 1.5rem;
+    min-height: 15rem;
+    padding-block: clamp(1.75rem, 3vw, 2.6rem);
+    border-bottom: var(--social-rule);
+  }
+
+  .social-method__number {
+    font-family: var(--type-display);
+    font-size: clamp(3.2rem, 5vw, 5rem);
+    font-weight: var(--type-display-weight);
+    line-height: 0.8;
+    color: var(--social-accent);
+  }
+
+  .social-method__step p {
+    max-width: 34rem;
+  }
+
+  .social-cta {
+    padding-block: var(--space-section-wide);
+    color: var(--brand-ink);
+    background: var(--site-mustard);
+    border-block: var(--social-rule);
+  }
+
+  .social-cta :global(.eyebrow),
+  .social-cta h2,
+  .social-cta p {
+    color: var(--brand-ink);
+  }
+
+  .social-cta__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    gap: clamp(3rem, 7vw, 7rem);
+    align-items: end;
+  }
+
+  .social-cta__copy {
+    display: grid;
+    gap: 1.25rem;
+    justify-items: start;
+  }
+
+  .social-cta__lead {
+    font-size: clamp(1.15rem, 1.8vw, 1.4rem);
+    font-weight: 700;
+  }
+
+  .social-cta .btn-primary {
+    margin-top: 0.5rem;
+  }
+
+  @media (max-width: 991.98px) {
+    .social-hero__grid,
+    .social-good__grid,
+    .social-cta__grid {
+      grid-template-columns: 1fr;
+    }
+
+    .social-hero__signal {
+      min-height: 21rem;
+      max-width: 38rem;
+    }
+
+    .social-section__head {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .social-good__intro {
+      position: static;
+    }
+  }
+
+  @media (max-width: 767.98px) {
+    .social-hero {
+      padding-top: 3.5rem;
+    }
+
+    .social-hero h1 {
+      font-size: clamp(3rem, 13vw, 4.6rem);
+    }
+
+    .social-problems__grid,
+    .social-method__grid {
+      grid-template-columns: 1fr;
+    }
+
+    .social-problem {
+      min-height: 0;
+    }
+
+    .social-problem__mark {
+      margin-bottom: 2rem;
+    }
+
+    .social-method__step {
+      grid-template-columns: 4.5rem minmax(0, 1fr);
+      min-height: 0;
+    }
+  }
+
+  @media (max-width: 575.98px) {
+    .social-hero__signal {
+      min-height: 18rem;
+    }
+
+    .social-hero__signal-dot {
+      width: 2.75rem;
+      height: 2.75rem;
+    }
+
+    .social-good__item {
+      grid-template-columns: 2.25rem minmax(0, 1fr);
+      gap: 0.85rem;
+    }
+
+    .social-method__step {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .social-method__number {
+      font-size: 3.5rem;
+    }
+  }
+</style>
