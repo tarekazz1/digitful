@@ -1,0 +1,206 @@
+# Digitful Homepage Copy — Approved
+
+Status: **Approved working homepage copy for the redesign.**
+
+This file locks the approved non-blog homepage wording for the visual-refresh redesign. The blog is outside this copy pass.
+
+## Voice
+
+Digitful should sound:
+- plainspoken
+- useful
+- concise
+- lightly witty when it helps the point
+- confident without chest-thumping
+
+Avoid generic agency language such as:
+- drive growth
+- unlock potential
+- scale smarter
+- transform your business
+- results-driven
+
+Working voice principle:
+
+> We found the part that’s making this harder. Here’s what to do about it.
+
+---
+
+## Header CTA
+
+**Talk to Digitful**
+
+---
+
+## Hero
+
+**Eyebrow**
+
+Growth systems
+
+**Headline**
+
+Marketing works better when the parts talk to each other.
+
+**Body**
+
+Strategy, acquisition, and automation built as one system instead of a pile of disconnected tactics.
+
+**Primary CTA**
+
+Talk through the problem
+
+**Secondary CTA**
+
+See what we build
+
+---
+
+## What we fix
+
+**Eyebrow**
+
+Where things usually go wrong
+
+**Headline**
+
+More traffic won’t fix a messy system.
+
+**Body**
+
+If the message is unclear, the handoff is clunky, or follow-up takes too long, adding more traffic just gives the problem more visitors.
+
+### Unclear message
+
+People shouldn’t need a committee meeting to understand what you do.
+
+### Leaky conversion path
+
+Interest is useful. A clear next step is better.
+
+### Slow follow-up
+
+If the next step relies on memory, it probably needs a system.
+
+---
+
+## Core offers
+
+**Eyebrow**
+
+What we actually do
+
+**Headline**
+
+Four parts. One growth system.
+
+**Body**
+
+Use one, combine a few, or connect all four. The point is not more activity. It is less friction.
+
+### Social Media
+
+Make the brand clearer, more useful, and easier to remember.
+
+### SEO
+
+Show up for the searches that can actually turn into business.
+
+### Paid Ads
+
+Put budget behind the right message, audience, and next step.
+
+### Process Automation
+
+Remove the repetitive handoffs that slow people down and lose leads.
+
+---
+
+## Good fit
+
+**Eyebrow**
+
+Probably a good fit if...
+
+**Headline**
+
+The business is moving. The system is lagging behind.
+
+**Body**
+
+Digitful is most useful when demand already exists, but the marketing and operations around it are harder than they need to be.
+
+### You already have demand
+
+The problem is not whether people care. It is what happens next.
+
+### Priorities keep competing
+
+Too many channels, tools, and “urgent” ideas. Not enough signal.
+
+### Manual work keeps multiplying
+
+If the same task happens every week, someone should ask why.
+
+---
+
+## Instant Snapshot
+
+**Eyebrow**
+
+Quick site check
+
+**Headline**
+
+See what your website is making harder than it should be.
+
+**Body**
+
+Run a quick check across performance, accessibility, SEO, best practices, and agentic browsing.
+
+**Field label**
+
+Website URL
+
+**Priority label**
+
+Check for
+
+**Options**
+
+- Mobile
+- Desktop
+
+**Button**
+
+Run the check
+
+---
+
+## Final CTA
+
+**Eyebrow**
+
+Next move
+
+**Headline**
+
+Bring the messy version.
+
+**Body**
+
+The funnel, the tools, the bottlenecks, the things nobody has had time to fix. We’ll help you work out what matters first.
+
+**Primary CTA**
+
+Talk to Digitful
+
+**Secondary CTA**
+
+Try the Digitful GPT
+
+---
+
+## Implementation note
+
+These words are approved as the working homepage copy for the redesign. Minor line breaks may change for responsive layout, but wording should not be rewritten during visual implementation without a new explicit content decision.
