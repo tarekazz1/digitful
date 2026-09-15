@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
     return;
   }
 
-  const isPreview = window.location.hostname === 'preview.digitful.ca';
   const escapeHtml = (value) =>
     String(value)
       .replaceAll('&', '&amp;')
@@ -18,6 +17,45 @@ document.addEventListener('DOMContentLoaded', () => {
       .replaceAll('"', '&quot;')
       .replaceAll("'", '&#039;');
 
+  const grade = (value) =>
+    value == null ? '—' : value >= 90 ? 'A' : value >= 75 ? 'B' : value >= 50 ? 'C' : value >= 30 ? 'D' : 'E';
+
+  const metricTone = (value) =>
+    value == null
+      ? 'snapshot-metric--neutral'
+      : value >= 90
+        ? 'snapshot-metric--strong'
+        : value >= 75
+          ? 'snapshot-metric--watch'
+          : 'snapshot-metric--weak';
+
+  const renderMetric = (label, value) => {
+    const scoreText = value == null ? '—' : String(value);
+    const progress = value == null ? 0 : Math.max(0, Math.min(100, value));
+    const ariaValue = value == null ? '' : ` aria-valuenow="${progress}"`;
+
+    return `
+      <div class="snapshot-metric ${metricTone(value)}">
+        <div class="snapshot-metric__head">
+          <span class="snapshot-metric__label">${label}</span>
+          <span class="snapshot-metric__reading">
+            <strong>${scoreText}</strong>
+            <span class="snapshot-metric__denominator">/100</span>
+            <span class="snapshot-metric__grade" aria-label="Grade ${grade(value)}">${grade(value)}</span>
+          </span>
+        </div>
+        <div
+          class="snapshot-metric__track"
+          role="progressbar"
+          aria-label="${label} score"
+          aria-valuemin="0"
+          aria-valuemax="100"${ariaValue}
+        >
+          <span class="snapshot-metric__fill" style="width:${progress}%"></span>
+        </div>
+      </div>`;
+  };
+
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
@@ -25,8 +63,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!siteUrl) return;
     if (!/^https?:\/\//i.test(siteUrl)) siteUrl = `https://${siteUrl}`;
 
-    resultDiv.innerHTML =
-      '<div class="d-flex align-items-center gap-3 text-muted-light"><div class="spinner-border spinner-border-sm" role="status"><span class="visually-hidden">Loading...</span></div><span>Running snapshot...</span></div>';
+    resultDiv.innerHTML = `
+      <div class="snapshot-state snapshot-state--loading" role="status">
+        <span class="snapshot-state__indicator" aria-hidden="true"></span>
+        <span>Running technical pass…</span>
+      </div>`;
 
     try {
       const strategy = document.querySelector('input[name="strategy"]:checked')?.value || 'mobile';
@@ -49,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
       try {
         data = rawBody ? JSON.parse(rawBody) : null;
       } catch {
-        // Keep the raw body so preview can expose a useful diagnostic.
+        // Preserve the raw response for the internal error path below.
       }
 
       if (!response.ok) {
@@ -79,20 +120,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       })();
 
-      const grade = (value) =>
-        value == null ? '-' : value >= 90 ? 'A' : value >= 75 ? 'B' : value >= 50 ? 'C' : value >= 30 ? 'D' : 'E';
-
-      const barClass = (value) =>
-        value == null
-          ? 'bg-secondary'
-          : value >= 90
-            ? 'bg-success'
-            : value >= 75
-              ? 'bg-info'
-              : value >= 50
-                ? 'bg-warning'
-                : 'bg-danger';
-
       const tips = [];
       if (perfScore != null && perfScore < 90) tips.push('Tighten image delivery and caching.');
       if (accessibilityScore != null && accessibilityScore < 90)
@@ -109,15 +136,20 @@ document.addEventListener('DOMContentLoaded', () => {
       contactUrl.searchParams.set('strategy', strategy);
 
       resultDiv.innerHTML = `
-        <div class="card">
-          <div class="card-body p-4">
-            <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-4">
-              <h3 class="h5 mb-0">Snapshot Results</h3>
-              <span class="badge ${barClass(perfScore)}">${strategy === 'mobile' ? 'Mobile' : 'Desktop'}</span>
+        <section class="snapshot-report" aria-label="Snapshot results for ${escapeHtml(hostname)}">
+          <div class="snapshot-report__head">
+            <div>
+              <span class="snapshot-report__eyebrow">Snapshot results</span>
+              <h3>${escapeHtml(hostname)}</h3>
             </div>
+            <span class="snapshot-report__mode">${strategy === 'mobile' ? 'Mobile' : 'Desktop'}</span>
+          </div>
 
-            <p class="text-muted-light mb-4">Initial read for ${hostname}. This is a quick technical pass, not the full growth diagnosis.</p>
+          <p class="snapshot-report__summary">
+            Initial technical read. These scores are useful signals, not the full growth diagnosis.
+          </p>
 
+          <div class="snapshot-report__metrics">
             ${[
               ['Performance', perfScore],
               ['Accessibility', accessibilityScore],
@@ -125,44 +157,27 @@ document.addEventListener('DOMContentLoaded', () => {
               ['SEO', seoScore],
               ['Agentic Browsing', agenticBrowsing]
             ]
-              .map(
-                ([label, value]) => `
-                  <div class="mb-3">
-                    <div class="d-flex justify-content-between mb-2">
-                      <span class="fw-semibold">${label}</span>
-                      <span class="badge ${barClass(value)}">${grade(value)}</span>
-                    </div>
-                    <div class="progress">
-                      <div class="progress-bar ${barClass(value)}" style="width:${value ?? 0}%">
-                        ${value ?? '-'}
-                      </div>
-                    </div>
-                  </div>
-                `
-              )
+              .map(([label, value]) => renderMetric(label, value))
               .join('')}
-
-            <div class="mt-4">
-              <h4 class="h6 mb-2">Quick Wins</h4>
-              <ul class="mb-0 text-muted-light">
-                ${tips.map((tip) => `<li>${tip}</li>`).join('')}
-              </ul>
-            </div>
-
-            <div class="mt-4">
-              <a href="${contactUrl.toString()}" class="btn btn-outline-light">Get The Full Review</a>
-            </div>
           </div>
-        </div>`;
+
+          <div class="snapshot-report__wins">
+            <span class="snapshot-report__eyebrow">Quick wins</span>
+            <ul>
+              ${tips.map((tip) => `<li>${tip}</li>`).join('')}
+            </ul>
+          </div>
+
+          <div class="snapshot-report__action">
+            <a href="${contactUrl.toString()}" class="btn btn-primary">Get the full review →</a>
+          </div>
+        </section>`;
     } catch (err) {
       handleApiError(err, 'PageSpeed');
-      const previewDetail = isPreview && err?.message
-        ? `<details class="mt-3"><summary>Preview diagnostic</summary><code class="d-block mt-2 text-break">${escapeHtml(err.message)}</code></details>`
-        : '';
       resultDiv.innerHTML = `
-        <div class="alert alert-danger mb-0">
-          Sorry, we could not analyze that site. Please check the URL and try again.
-          ${previewDetail}
+        <div class="snapshot-state snapshot-state--error" role="alert">
+          <strong>Audit unavailable.</strong>
+          <span>We could not run the check just now. Please try again in a moment.</span>
         </div>`;
     }
   });
