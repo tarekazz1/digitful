@@ -140,12 +140,25 @@ This file records approved or working decisions so the rationale survives across
 
 ---
 
-## Pending decisions
-The following are NOT approved design changes yet. They are experiments to test visually:
-- Degree of glow removal.
-- Final radius scale.
+## D013 — End the objective-fix phase after Fix 4
+**Status:** Approved
+
+**Decision:** Do not treat blog hero spacing, mobile section spacing, mobile blog-card height, or tablet `2 + 1` grids as standalone objective fixes unless they reveal an actual functional break such as overflow or unusable controls. Review them during the design-shift phase instead.
+
+**Why:** These are primarily composition and visual-system judgments. Changing them before typography, spacing, card treatment, and page composition are reconsidered would likely create duplicate work and muddy the design decision trail.
+
+---
+
+## Pending design decisions
+The following are NOT approved visual changes yet. They are experiments to test one at a time:
+- Degree of glow/background simplification.
 - Which cards/surfaces should be removed.
+- Final radius scale.
 - Whether service/category colour coding should be reduced or retained.
 - Final SVG/icon treatment.
+- Section-spacing system, including mobile consistency.
+- Blog article hero composition and metadata spacing.
+- Blog-card height on mobile.
+- Tablet three-item grid behaviour.
 - Final typography refinements.
 - Final page-composition differences among service pages.
