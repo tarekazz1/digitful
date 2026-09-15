@@ -1,6 +1,6 @@
 # Digitful Visual Constitution
 
-Status: **Design direction v1 — approved as the working visual system, pending visual validation before implementation.**
+Status: **Approved visual system — implementation in progress on `visual-refresh`.**
 
 This document defines the visual identity for the Digitful redesign. It is the design source of truth for the `visual-refresh` branch.
 
@@ -194,19 +194,28 @@ Dark mode should feel like **inked paper at night**, not a cyber interface.
 
 Typography should carry more of the identity than decorative UI.
 
-### Display / headline character
-Headlines should feel:
-- heavy
-- graphic
-- compressed or compact
-- direct
-- poster-like
-- highly legible
+### Display / headline face
+**Barlow Condensed** is the approved display typeface.
 
-The exact display typeface is **not yet locked**. It should be selected through browser testing against the approved mockup. The target is a bold grotesk / condensed display face, not a cartoon or novelty font.
+Use:
+- Barlow Condensed 800 for primary display headings
+- heavy, graphic, compressed treatment
+- direct, poster-like hierarchy
+- expressive type for headings, not long-form copy
 
-### Body character
-Body text should remain neutral, highly readable and modern. Inter may remain a strong candidate because it is already integrated and works well for dense information.
+The browser comparison tested Inter, Barlow Condensed, IBM Plex Sans Condensed and Archivo Black against real approved Digitful copy. Barlow Condensed was selected because it best balanced technical clarity, compactness and graphic character without feeling like novelty typography.
+
+### Body / interface face
+**Inter** remains the body and interface typeface.
+
+Use Inter for:
+- body copy
+- form labels and controls
+- navigation and utility UI unless a specific display treatment is justified
+- dense information where readability matters more than personality
+
+### Delivery
+Both Barlow Condensed and Inter use Astro's Fonts API and are served from the built site output rather than the previous external Google Fonts stylesheet.
 
 ### Hierarchy rules
 - H1s may be very bold and visually dominant.
@@ -505,7 +514,7 @@ The identity should become recognisable through a small number of repeated cues 
 Primary recurring cues:
 1. warm paper + dark ink contrast
 2. refined lowercase `digitful.` wordmark with coral dot
-3. bold compact headline typography
+3. Barlow Condensed display headlines
 4. strong dark rules/outlines
 5. flat coral / teal / mustard accents used selectively
 6. occasional hand-drawn technical annotations
@@ -529,15 +538,16 @@ If an element exists only to make the page look more designed, it is a removal c
 
 ---
 
-## 22. Implementation gate
+## 22. Implementation state
 
-Do not begin broad visual implementation solely from this written document.
+The desktop, mobile and dark-mode homepage direction has been approved and implementation is underway through the existing `visual-refresh` → exact-SHA preview workflow.
 
-Next validation step:
-- create a **cleaner homepage design specimen/mockup** using this constitution
-- keep the approved visual identity from the original mockup
-- reduce visual density and competing elements
-- preserve the current site's real content/functions as the structural basis
-- review desktop and mobile direction before translating the system into code
+Current sequence:
+- shared editorial foundations
+- Astro 7.3.2 / Node 22 infrastructure
+- Barlow Condensed + Inter typography system
+- finalize clean `digitful.` SVG logo masters
+- rebuild homepage composition against the approved specimen and locked copy
+- adapt remaining page types only after homepage review
 
-Only after that specimen is approved should the redesign be implemented through the existing `visual-refresh` → exact-SHA preview workflow.
+Material visual departures from this constitution still require a new explicit decision.
