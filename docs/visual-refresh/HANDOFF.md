@@ -28,7 +28,7 @@ Production baseline used for audit/initial preview:
 - Preview safeguards: noindex/nofollow/noarchive, robots disallow-all, production GTM stripped, FormSubmit blocked, preview CNAME written.
 - Preview-only GTM-strip bug previously removed the theme script; fixed in preview repo commit `1d0d972211ca0a1dc551adff22a1463d39ef9260`. Theme switch was user-verified afterward.
 
-## Approved fixes
+## Approved objective fixes
 1. **Contact light-mode links — KEEP**
    - Source commit reviewed: `2ebd6614be8c7ea1c0f7d841fe8111ff3ec0cc92`
    - Contact email/phone links use theme-aware colour instead of forced `link-light`.
@@ -53,17 +53,46 @@ Production baseline used for audit/initial preview:
 ## Current preview source
 `939a771c5ed93cf6ca80a1de1046ddcaed247f44`
 
-## Remaining Phase 1 items
-5. Blog article hero metadata spacing.
-6. Mobile section-spacing consistency.
-7. Mobile blog-card height.
-8. Tablet `2 + 1` grid behaviour.
+## Phase transition
+The objective-fix phase stops after Fix 4.
+
+The following earlier observations are **not** separate pre-design fixes unless they reveal a real functional problem such as overflow or unusable controls:
+- Blog article hero metadata spacing.
+- Mobile section-spacing consistency.
+- Mobile blog-card height.
+- Tablet three-item `2 + 1` grid behaviour.
+
+They are now design-shift decisions because they depend on the eventual typography, spacing, surface/card, and composition system. This is recorded as D013 in `DECISIONS.md`.
+
+## Current design direction
+Digitful should feel like a modern consulting / technical practice rather than a generic AI/SaaS startup.
+
+Treat the redesign as subtraction:
+- fewer decorative glows/background effects
+- less cardification and fewer nested surfaces
+- more restrained radius and colour use
+- fewer boxed icons
+- stronger hierarchy from typography and spacing
+- more deliberate, page-specific composition
+
+Do not batch subjective changes. Each experiment must be isolated, previewed, and accepted/rejected before the next.
 
 ## Immediate next step
-Begin Fix 5 on `visual-refresh`: improve Blog article hero metadata spacing, especially on mobile. Keep it isolated, deploy the exact source commit to preview, and review it before deciding KEEP / ADJUST / REJECT.
+Start the first design-shift experiment: **background/glow simplification**.
 
-## Later design direction
-Working direction: Digitful should feel like a modern consulting / technical practice rather than a generic AI/SaaS startup. Treat the redesign as subtraction: fewer glows, fewer boxed cards/icons, more restrained radius/colour, stronger typography/spacing/composition. Test each subjective change separately.
+Scope only the decorative page background treatment. Do not simultaneously change cards, radii, icons, category colours, typography, or page layout.
+
+Review the resulting preview on representative desktop/mobile pages in both dark and light mode, then decide KEEP / ADJUST / REJECT.
+
+## Later design experiments
+After the background/glow decision, proceed one at a time through:
+1. Card/surface reduction.
+2. Radius system.
+3. Colour simplification.
+4. Icon treatment.
+5. Section-spacing/composition, including deferred mobile spacing, blog hero, blog-card height, and tablet grid behaviour.
+6. Typography refinement.
+7. Service-page differentiation.
 
 ## Later performance sequence
 After the visual baseline is approved: Bootstrap Icons → SVG; scope local JS; build a site-wide CSS/Bootstrap dependency map; reduce CSS safely; re-measure; then review fonts, GTM/GA, and caching. Security-header hardening is separate.
