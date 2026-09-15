@@ -58,14 +58,15 @@ Chronological record of setup and implementation changes for the visual-refresh 
 - Production `main` and `digitful.ca` remain unchanged.
 
 ### Fix 2 — Logo accessible name
-- Status: **PENDING USER REVIEW**.
+- Status: **APPROVED — KEEP**.
 - Working-branch source commit: `b9f1d47898b0481bb1cadf346c46fd49dfba1033`.
 - Changed only `src/components/Logo.astro`.
 - Added `aria-label="Digitful home"` to the reusable logo link so it has a stable accessible name in both dark and light themes.
 - No image files, dimensions, CSS classes, layout, navigation destination, or visible styling were changed.
 - Because the same Logo component is used in the header and footer, both logo links gain the stable accessible name.
-- Preview repo is pinned to the exact source commit above.
-- Preview deployment run: `34956432099`.
+- Preview repo was pinned to the exact source commit above.
+- Preview deployment run `34956432099` completed successfully.
+- User reviewed the live preview and chose **KEEP**.
 - Production `main` and `digitful.ca` remain unchanged.
 
 ### Production impact
@@ -77,6 +78,5 @@ Chronological record of setup and implementation changes for the visual-refresh 
 - Exact pinned source SHA: `b9f1d47898b0481bb1cadf346c46fd49dfba1033`
 
 ### Next action
-- Review the header and footer logo on `preview.digitful.ca` in dark and light mode, and spot-check desktop/mobile.
-- Since this is a semantic accessibility fix, the expected visible result is **no visual change**.
-- Record the decision as KEEP / ADJUST / REJECT before starting Fix 3.
+- Begin Fix 3: footer copyright contrast.
+- Isolate the contrast change, deploy the exact commit to preview, then review dark/light and desktop/mobile before deciding KEEP / ADJUST / REJECT.
