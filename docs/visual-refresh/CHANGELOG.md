@@ -87,10 +87,20 @@ Chronological record of setup and implementation changes for the visual-refresh 
 - Decision: D018.
 - No rendered-site code changed.
 
+### Dark-mode homepage specimen and design freeze
+- Created a dark-mode specimen for desktop and mobile using the same editorial/print system.
+- User approved the dark-mode direction.
+- Dark mode uses charcoal/ink, warm cream type, flat coral/teal/mustard accents, strong rules and subtle grain without glow/glass/cyber styling.
+- Homepage design direction is now frozen across desktop, mobile, light and dark modes.
+- Decision: D019.
+- Exact production token values may still be tuned during browser/accessibility testing without changing the approved direction.
+- No rendered-site code changed.
+
 ### Current preview source
 - `939a771c5ed93cf6ca80a1de1046ddcaed247f44`
 
 ### Next action
-- Validate the homepage direction in **dark mode**.
-- Dark mode must feel like the same paper/ink editorial identity inverted for night use—not a return to glow, glassmorphism, or cyber/SaaS styling.
-- After dark-mode approval, freeze the homepage design direction and begin implementation foundations on `visual-refresh`.
+- Begin implementation foundations on `visual-refresh`.
+- First implementation step: translate the approved visual constitution into design tokens/foundational CSS and shared shell/header/footer/typography/colour treatment.
+- Keep this first code change isolated, deploy its exact source SHA to `preview.digitful.ca`, and review before rebuilding the homepage sections.
+- Production remains untouched.
