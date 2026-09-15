@@ -136,18 +136,19 @@ Key locked lines:
 - `Marketing works better when the parts talk to each other.`
 - Hero support: `Marketing works better when the whole journey works together.`
 - `More traffic won’t fix a messy system.`
-- `If the next step relies on memory, it probably needs a system.`
+- `No clear next step`
 - Work-area headline: `This is where we usually get involved.`
 - `The business is moving. The system is lagging behind.`
 - `See what your website is making harder than it should be.`
 - `Bring the messy version.`
 
 Header CTA: `Talk to Digitful`.
+Hero primary CTA: `Tell us what’s stuck`.
 
 Approved public growth-system model (D029):
 - `Say the right thing`
 - `Reach the right people`
-- `Make action easy`
+- `Make the next step clear`
 - `Follow through`
 
 Social Media, SEO, Paid Ads, and Process Automation are work areas/capabilities used to improve that system; they are not the system stages. Avoid `acquisition`, `conversion`, and `handoff` as the primary public taxonomy.
@@ -256,8 +257,8 @@ Homepage status:
 - Instant Snapshot result-state treatment: **APPROVED — KEEP** (D026)
 - compact situational homepage interaction wit: **APPROVED — KEEP** (D031)
 - final hero support line: `Marketing works better when the whole journey works together.`
-- current approved homepage source: `6f4d8bba8b1d76b63c2d9938cecff399553b3700`
-- current homepage preview run `35000985503`: build success, deploy success
+- current approved homepage source: `383ccfa90f67ad62b9fafb98492332e25cb180e2`
+- current homepage preview run `35005971482`: build success, deploy success
 - production remains untouched
 
 Design-system goal (D028):

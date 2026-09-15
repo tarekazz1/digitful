@@ -285,3 +285,12 @@ Chronological record of setup and implementation changes for the visual-refresh 
 - Reduced reveal footprint, removed the heavy boxed disclosure cue, shrank the path demo and timer, and kept the timer as the strongest interaction.
 - Accessibility and reduced-motion behaviour remain intact.
 - Production remains untouched.
+
+### Homepage system-step + hero CTA refinement
+- **APPROVED — KEEP** as D032.
+- Third public system step changed from `Make action easy` to `Make the next step clear`.
+- Third map support label changed from `Clear next steps` to `Easy to act on`.
+- Hero primary CTA changed from `Talk through the problem` to `Tell us what’s stuck`.
+- Header and final CTA remain `Talk to Digitful`.
+- Source: `383ccfa90f67ad62b9fafb98492332e25cb180e2`. Preview run `35005971482`: build **success**, deploy **success**.
+- Production remains untouched.

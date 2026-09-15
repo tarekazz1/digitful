@@ -472,6 +472,30 @@ Production remains untouched.
 
 ---
 
+## D032 — Refine the third system step and hero CTA
+**Status:** Approved — KEEP
+
+Refine two homepage labels after final messaging review without changing the underlying four-part system or page structure.
+
+Approved changes:
+- third public system stage: `Make action easy` → `Make the next step clear`
+- third system-map support label: `Clear next steps` → `Easy to act on`
+- hero primary CTA: `Talk through the problem` → `Tell us what’s stuck`
+
+Current public growth-system model:
+1. **Say the right thing**
+2. **Reach the right people**
+3. **Make the next step clear**
+4. **Follow through**
+
+The header and final CTA remain `Talk to Digitful`; this decision only changes the hero primary CTA.
+
+Implementation source: `383ccfa90f67ad62b9fafb98492332e25cb180e2`.
+Preview run: `35005971482` — build and deploy successful.
+Production remains untouched.
+
+---
+
 ## Current pending decisions
 - Exact production token values after browser/accessibility testing.
 - Exact section compositions for non-home page types.
