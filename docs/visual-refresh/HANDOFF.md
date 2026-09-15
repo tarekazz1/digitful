@@ -197,7 +197,7 @@ Foundation changes already present:
 - shared navigation, dropdown, theme toggle, buttons, forms and footer restyled
 - header CTA changed to `Talk to Digitful`
 
-Important: the homepage has **not** yet been rebuilt to match the approved specimen. Its old card-heavy section structure remains while inheriting the new foundation layer.
+The homepage has now moved beyond this foundation-only state: the structural rebuild candidate is deployed and documented below. The foundation layer remains part of that candidate.
 
 Production `main` / `digitful.ca` remain untouched.
 
