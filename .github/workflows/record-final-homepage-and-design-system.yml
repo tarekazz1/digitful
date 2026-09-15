@@ -1,0 +1,86 @@
+name: Record final homepage and design system roadmap
+
+on:
+  push:
+    branches: [visual-refresh]
+    paths:
+      - '.github/workflows/record-final-homepage-and-design-system.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  record:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: visual-refresh
+
+      - name: Update project records
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          final_source = 'c914f6252ec30d99a4adf3979cd5593b5f6ca68d'
+          preview_run = '34992817965'
+
+          # Decisions: close homepage candidates and add design-system roadmap decision.
+          p = Path('docs/visual-refresh/DECISIONS.md')
+          s = p.read_text()
+          s = s.replace(
+              '## D026 — Instant Snapshot result-state visual alignment\n**Status:** Candidate — pending preview KEEP / ADJUST / REJECT',
+              '## D026 — Instant Snapshot result-state visual alignment\n**Status:** Approved — KEEP',
+              1,
+          )
+          s = s.replace(
+              '## D027 — Homepage whole-page composition refinement\n**Status:** Candidate — pending preview KEEP / ADJUST / REJECT',
+              '## D027 — Homepage whole-page composition refinement\n**Status:** Approved — KEEP',
+              1,
+          )
+          marker = '---\n\n## Current pending decisions'
+          if '## D028 — Extract a reusable design system before adapting more page types' not in s:
+              block = f'''---\n\n## D028 — Extract a reusable design system before adapting more page types\n**Status:** Approved roadmap decision\n\nAfter the homepage is approved, consolidate the visual language that proved successful into reusable design-system primitives **before** rebuilding the service/contact/blog page types.\n\nCentralize identity-level decisions such as:\n- colour/theme tokens\n- Barlow Condensed / Inter typography roles and scale\n- spacing rhythm, rule weights and border treatments\n- buttons, form controls, focus treatment and reduced-motion behaviour\n- reusable icon-disc treatment and inline SVG icon conventions\n- graph-paper / technical-panel treatment\n- restrained handwritten-style annotations\n- editorial ruled rows/lists\n- shared interaction/motion timing\n\nDo **not** turn every homepage composition into a rigid component. The design system should centralize identity and repeated behaviour while leaving page composition flexible enough for services, contact and editorial/blog pages to have different structures.\n\nOnly extract patterns that have been visually validated; do not prematurely abstract one-off decoration. The goal is that future site-wide changes to colours, typography, rules, controls, icon treatments and motion can be made centrally instead of element by element.\n\nTiming: immediately after final homepage KEEP, before the service-page implementation pass.\n\nFinal approved homepage rendered source after the hero-copy trim: `{final_source}`.\nPreview run: `{preview_run}` — build and deploy successful.\n\n'''
+              s = s.replace(marker, block + marker, 1)
+          s = s.replace('- Homepage whole-page composition refinement: preview KEEP / ADJUST / REJECT.\n', '', 1)
+          s = s.replace('- Instant Snapshot result-state visual alignment: preview KEEP / ADJUST / REJECT.\n', '', 1)
+          p.write_text(s)
+
+          # Handoff: final homepage state + design-system next step.
+          p = Path('docs/visual-refresh/HANDOFF.md')
+          s = p.read_text()
+          s = s.replace(
+              '- `Marketing works better when the parts talk to each other.`\n',
+              '- `Marketing works better when the parts talk to each other.`\n- Hero support: `Strategy, acquisition, and automation built to work together.`\n',
+              1,
+          )
+          s = s.replace(
+              '## Editorial foundation candidate\nVisual foundation status: **PENDING USER REVIEW**.',
+              '## Editorial foundation\nThe shared foundation is now part of the **approved homepage system**. Exact token consolidation and reusable primitives are the next design-system pass (D028).',
+              1,
+          )
+          old_start = '## Immediate next step\n'
+          start = s.index(old_start)
+          end = s.index('## Later implementation sequence', start)
+          new_state = f'''## Immediate next step\nBuild the reusable **Digitful design system layer** from the patterns that survived homepage review, before adapting another page type.\n\nHomepage status:\n- whole-page composition refinement: **APPROVED — KEEP** (D027)\n- Instant Snapshot result-state treatment: **APPROVED — KEEP** (D026)\n- final hero support line: `Strategy, acquisition, and automation built to work together.`\n- final approved rendered source: `{final_source}`\n- preview run `{preview_run}`: build success, deploy success\n- production remains untouched\n\nDesign-system goal (D028):\n- centralize colours/themes, typography roles, spacing/rules, buttons/forms/focus states, icon-disc treatment, graph-paper panels, editorial rows, annotations and motion timing\n- extract only validated/repeated patterns\n- keep page composition flexible rather than forcing every page into homepage components\n- make later brand/system edits centralized instead of element-by-element\n\nAfter that systemization pass is previewed and validated, adapt the service page type using those shared primitives.\n\n'''
+          s = s[:start] + new_state + s[end:]
+          old_seq = '''## Later implementation sequence\n1. rebuild homepage\n2. adapt service page type\n3. adapt contact and thank-you page types\n4. adapt blog index/article while preserving editorial reading priority\n5. once homepage + primary service/page architecture and canonical URLs are stable, add the Digitful OKF bundle\n6. resolve deferred responsive/composition observations within page types\n7. full desktop/mobile dark/light + agent/SEO QA\n8. freeze visual baseline\n9. performance work: SVG icon migration, JS scoping, CSS/Bootstrap dependency map, safe CSS reduction, re-measure, then remaining GTM/caching work as justified\n'''
+          new_seq = '''## Later implementation sequence\n1. extract and validate reusable design-system primitives from the approved homepage\n2. adapt service page type\n3. adapt contact and thank-you page types\n4. adapt blog index/article while preserving editorial reading priority\n5. once homepage + primary service/page architecture and canonical URLs are stable, add the Digitful OKF bundle\n6. resolve deferred responsive/composition observations within page types\n7. full desktop/mobile dark/light + agent/SEO QA\n8. freeze visual baseline\n9. performance work: SVG icon migration, JS scoping, CSS/Bootstrap dependency map, safe CSS reduction, re-measure, then remaining GTM/caching work as justified\n'''
+          s = s.replace(old_seq, new_seq, 1)
+          p.write_text(s)
+
+          # Changelog: append final approval and roadmap state.
+          p = Path('docs/visual-refresh/CHANGELOG.md')
+          s = p.read_text().rstrip() + '\n\n'
+          if '### Homepage final KEEP + design-system roadmap' not in s:
+              s += f'''### Homepage final KEEP + design-system roadmap\n- **APPROVED — KEEP** for the whole-page composition refinement (D027).\n- **APPROVED — KEEP** for the Instant Snapshot dynamic result-state treatment (D026).\n- Shortened the hero support line to `Strategy, acquisition, and automation built to work together.` to avoid repeating the immediately adjacent Strategy / Acquisition / Handoff / Automation system map.\n- Final approved rendered source: `{final_source}`.\n- Preview run `{preview_run}`: build **success**, deploy **success**.\n- Updated `docs/brand/HOMEPAGE-COPY.md` so the shorter hero line is now the copy source of truth.\n- Added D028: before adapting service/contact/blog page types, extract the validated homepage visual language into reusable design-system primitives.\n- The design system should centralize identity-level tokens/patterns while keeping page composition flexible; avoid turning every homepage section into a rigid reusable component.\n- Production remains untouched.\n'''
+          p.write_text(s)
+          PY
+
+      - name: Commit records
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/visual-refresh/DECISIONS.md docs/visual-refresh/HANDOFF.md docs/visual-refresh/CHANGELOG.md
+          git commit -m "docs: record final homepage KEEP and design system roadmap [skip ci]"
+          git push origin visual-refresh
