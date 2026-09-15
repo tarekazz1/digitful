@@ -47,5 +47,8 @@
   $box-shadow-lg: custom.$box-shadow-lg
 );
 
-// 4. Include additional custom CSS overrides
+// 4. Legacy site-specific overrides remain in place while page layouts are rebuilt.
 @use "./_custom-overrides";
+
+// 5. Approved visual-refresh foundation layer. This intentionally loads last.
+@use "./_editorial-foundations";
