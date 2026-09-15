@@ -44,34 +44,23 @@ Production baseline used for audit/initial preview:
    - Only copyright text colour changed to `var(--site-text-muted)`.
    - Preview run `34957277115` succeeded.
 
-## Current candidate — Fix 4
-**Thank-you / short-page footer position — PENDING USER REVIEW**
+4. **Thank-you / short-page footer position — KEEP**
+   - Source commit reviewed: `939a771c5ed93cf6ca80a1de1046ddcaed247f44`
+   - Shared `.site-shell` uses `d-flex flex-column`; `#main-content` uses `flex-grow-1`.
+   - Short pages keep the footer at the bottom of the viewport; long-page flow remains normal.
+   - Preview run `34957902972` succeeded.
 
-- Source commit: `939a771c5ed93cf6ca80a1de1046ddcaed247f44`
-- Changed only `src/layouts/BaseLayout.astro`.
-- `site-shell` now also uses Bootstrap `d-flex flex-column`.
-- `#main-content` now also uses `flex-grow-1`.
-- Existing `.site-shell { min-height: 100vh; }` remains unchanged.
-- Purpose: on short pages, unused vertical space is absorbed by the main-content wrapper so the footer sits at the bottom of the viewport instead of floating above it.
-- No page copy, footer styling, header styling, route, JS, form, or theme logic was changed.
-- This is global shell behaviour, so long pages must also be spot-checked for regression.
-- Preview repo is pinned to the exact source commit above.
-- Preview deployment run `34957902972` completed successfully.
-- Production remains untouched.
+## Current preview source
+`939a771c5ed93cf6ca80a1de1046ddcaed247f44`
 
-## What to review now
-On `https://preview.digitful.ca/thank-you/`:
-- Desktop: footer should sit naturally at the bottom of the viewport on the short page.
-- Mobile: page should still scroll/fit normally.
-- Dark + light themes: no unexpected visual change.
-- Spot-check one long page (homepage is enough): footer/content flow should remain normal.
-- Then decide KEEP / ADJUST / REJECT.
-
-## Remaining Phase 1 items after Fix 4
+## Remaining Phase 1 items
 5. Blog article hero metadata spacing.
 6. Mobile section-spacing consistency.
 7. Mobile blog-card height.
 8. Tablet `2 + 1` grid behaviour.
+
+## Immediate next step
+Begin Fix 5 on `visual-refresh`: improve Blog article hero metadata spacing, especially on mobile. Keep it isolated, deploy the exact source commit to preview, and review it before deciding KEEP / ADJUST / REJECT.
 
 ## Later design direction
 Working direction: Digitful should feel like a modern consulting / technical practice rather than a generic AI/SaaS startup. Treat the redesign as subtraction: fewer glows, fewer boxed cards/icons, more restrained radius/colour, stronger typography/spacing/composition. Test each subjective change separately.
