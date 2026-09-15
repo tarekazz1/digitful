@@ -125,7 +125,7 @@ Therefore:
 
 The blog was explicitly excluded from this copy pass.
 
-## Homepage design validation
+## Homepage design validation — complete
 ### Mobile
 Decision D018: **approved**.
 
@@ -139,29 +139,45 @@ The mobile specimen confirms:
 - Instant Snapshot remains part of the homepage structure
 
 ### Dark mode
-Not yet approved.
+Decision D019: **approved**.
 
-Dark mode must be validated before the homepage design direction is frozen. It should feel like the same editorial/print identity in night mode: dark ink/charcoal base, warm cream type, flat coral/teal/mustard accents, strong rules, and restrained texture. It must **not** drift back into glowing SaaS/cyber styling.
+Approved dark-mode character:
+- charcoal/ink background
+- warm cream typography
+- flat coral/teal/mustard accents
+- strong rules
+- restrained print texture
+- same editorial hierarchy as light mode
+- no glow, glassmorphism, cyber styling or blue/purple SaaS gradients
 
-## Immediate next step
-Create and review a **dark-mode homepage specimen** using the approved homepage hierarchy, copy density, logo direction and visual constitution.
+### Homepage design freeze
+The homepage direction is now frozen across desktop, mobile, light and dark modes.
 
-After dark mode is approved:
-1. freeze the homepage design direction
-2. translate the constitution into design tokens/foundational CSS
-3. implement shared shell/header/footer/typography/colour system on `visual-refresh`
-4. rebuild the homepage against the approved design
-5. deploy exact source SHA to `preview.digitful.ca` and review before continuing
+Implementation may tune exact colour values, spacing, line-height and responsive line breaks for accessibility and browser fit without reopening the design. Material visual changes require a new decision.
+
+## Immediate next step — implementation begins
+Start the redesign on `visual-refresh` with one isolated foundational implementation step:
+
+1. translate the visual constitution into design tokens/foundational CSS
+2. apply the shared shell/header/footer/typography/colour treatment needed by the approved system
+3. preserve all existing functional behaviour
+4. build successfully
+5. pin the preview repo to the exact resulting source SHA
+6. deploy to `preview.digitful.ca`
+7. review light/dark + desktop/mobile before continuing
+
+Do **not** rebuild all homepage sections in the same first commit. The homepage content/layout rebuild follows only after the foundations are reviewed.
 
 ## Later implementation sequence
-After homepage foundations are approved:
-1. adapt service page type
-2. adapt contact and thank-you page types
-3. adapt blog index/article while preserving editorial reading priority
-4. resolve deferred responsive/composition observations within those page types
-5. full desktop/mobile dark/light QA
-6. freeze visual baseline
-7. performance work: SVG icon migration, JS scoping, CSS/Bootstrap dependency map, safe CSS reduction, re-measure, then fonts/GTM/caching as justified
+After foundations are approved:
+1. rebuild homepage against the approved specimen and locked copy
+2. adapt service page type
+3. adapt contact and thank-you page types
+4. adapt blog index/article while preserving editorial reading priority
+5. resolve deferred responsive/composition observations within those page types
+6. full desktop/mobile dark/light QA
+7. freeze visual baseline
+8. performance work: SVG icon migration, JS scoping, CSS/Bootstrap dependency map, safe CSS reduction, re-measure, then fonts/GTM/caching as justified
 
 ## Functional behaviours that must not break
 Mobile navbar, Services dropdown, theme toggle, navigation, blog filters, homepage diagnostic, diagnostic→Contact handoff, contact toggles/hidden fields, production FormSubmit/thank-you redirect, logos, responsive layouts, production GTM/GA, SEO output and CLS stability.
