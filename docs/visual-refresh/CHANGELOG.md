@@ -87,20 +87,28 @@ Chronological record of setup and implementation changes for the visual-refresh 
 - Decision: D018.
 - No rendered-site code changed.
 
-### Dark-mode homepage specimen and design freeze
-- Created a dark-mode specimen for desktop and mobile using the same editorial/print system.
-- User approved the dark-mode direction.
-- Dark mode uses charcoal/ink, warm cream type, flat coral/teal/mustard accents, strong rules and subtle grain without glow/glass/cyber styling.
-- Homepage design direction is now frozen across desktop, mobile, light and dark modes.
-- Decision: D019.
-- Exact production token values may still be tuned during browser/accessibility testing without changing the approved direction.
-- No rendered-site code changed.
+### Dark-mode homepage specimen
+- Created a dark-mode desktop + mobile specimen using the same approved visual language.
+- User approved the specimen.
+- Dark mode is now validated as the same editorial/print identity at night: charcoal/ink base, warm cream type, flat coral/teal/mustard accents, strong rules, restrained texture, and no glow/glass/cyber treatment.
+- Homepage design direction is now frozen across desktop/mobile and light/dark.
+
+### Candidate implementation 1 — editorial foundations
+- Status: **PENDING USER REVIEW**.
+- Source commit pinned for preview: `8f30106882e3e0b659865c1187f0aa5dc50ec96a`.
+- Added `src/assets/_editorial-foundations.scss` and loaded it after the legacy overrides.
+- Introduced the approved paper/ink/coral/teal/mustard token system for light and dark modes.
+- Flattened the global background, removed page-glow markup, reduced radii, removed soft shadows/glass treatment, strengthened borders/rules, and restyled shared buttons, navigation, dropdowns, forms, footer, and generic legacy surfaces.
+- Kept Inter for this foundation pass; exact display typeface remains a later browser-test decision.
+- Header CTA changed from `Book A Strategy Call` to approved wording `Talk to Digitful`.
+- Homepage section composition/copy has **not** been rebuilt yet; this is foundations only.
+- Preview run `34969653064`: build **success**, deploy **success**.
+- Production `main` / `digitful.ca` untouched.
 
 ### Current preview source
-- `939a771c5ed93cf6ca80a1de1046ddcaed247f44`
+- `8f30106882e3e0b659865c1187f0aa5dc50ec96a`
 
 ### Next action
-- Begin implementation foundations on `visual-refresh`.
-- First implementation step: translate the approved visual constitution into design tokens/foundational CSS and shared shell/header/footer/typography/colour treatment.
-- Keep this first code change isolated, deploy its exact source SHA to `preview.digitful.ca`, and review before rebuilding the homepage sections.
-- Production remains untouched.
+- User reviews the editorial foundation layer on `preview.digitful.ca` in light/dark and desktop/mobile.
+- Check shared shell/header/footer, theme switching, navigation/dropdown, buttons/forms and general readability; the homepage is intentionally still using its old section structure.
+- Mark the foundation pass KEEP / ADJUST / REJECT before rebuilding the homepage against the approved specimen.
