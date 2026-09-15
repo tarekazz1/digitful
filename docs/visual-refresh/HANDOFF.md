@@ -55,8 +55,8 @@ Important caveat:
 - Do NOT approve pixel-level icon weight/alignment decisions from those local screenshots alone. Icon changes must be checked on the real preview site.
 
 Confirmed / actionable visual findings:
-1. Contact page, light mode: email and phone links become nearly invisible because they use `link-light`. **Fixed on `visual-refresh`, previewed, and approved KEEP.**
-2. Logo accessible-name bug: visible light-mode logo is decorative/empty-alt while the meaningful dark logo is hidden. **Candidate Fix 2 deployed to preview; pending KEEP / ADJUST / REJECT.**
+1. Contact page, light mode: email and phone links become nearly invisible because they use `link-light`. **Fixed, previewed, and approved KEEP.**
+2. Logo accessible-name bug: visible light-mode logo is decorative/empty-alt while the meaningful dark logo is hidden. **Fixed, previewed, and approved KEEP.**
 3. Footer copyright text has insufficient contrast.
 4. Thank-you page: short content leaves footer floating above the viewport bottom; consider site-shell flex layout with main filling remaining height.
 5. Blog article hero: back-link/category/meta grouping is cramped, especially mobile.
@@ -89,7 +89,7 @@ Do NOT batch these subjective changes. Each must be independently previewed, rev
 ## Fix / design sequence
 ### Phase 1 — objective / low-risk fixes
 1. Contact light-mode links. **APPROVED — KEEP**
-2. Logo accessible name. **PENDING USER REVIEW**
+2. Logo accessible name. **APPROVED — KEEP**
 3. Footer contrast.
 4. Thank-you short-page/footer layout.
 5. Blog hero metadata spacing.
@@ -212,14 +212,11 @@ Performance improvement alone is never enough to accept a change. Existing navig
 - Preview deployment run: `34955869009` — successful.
 - Production: untouched.
 
-## Current candidate
 ### Fix 2 — Logo accessible name
-- Decision: **PENDING USER REVIEW**.
-- Source commit: `b9f1d47898b0481bb1cadf346c46fd49dfba1033`.
-- Change: `src/components/Logo.astro` adds `aria-label="Digitful home"` to the reusable logo link.
-- Expected visible result: no visual change.
-- Scope: the reusable Logo component is used in both header and footer, so both logo links receive the stable accessible name.
-- Preview deployment run: `34956432099`.
+- Decision: **KEEP**.
+- Source commit reviewed: `b9f1d47898b0481bb1cadf346c46fd49dfba1033`.
+- Change: `src/components/Logo.astro` adds `aria-label="Digitful home"` to the reusable logo link; no intended visual change.
+- Preview deployment run: `34956432099` — successful.
 - Production: untouched.
 
 ## Current status
@@ -232,9 +229,8 @@ Performance improvement alone is never enough to accept a change. Existing navig
 - Preview theme-toggle infrastructure defect: fixed and user-verified.
 - Preview environment: ready for controlled source changes.
 - Full page-by-page baseline parity has not been manually rechecked; relevant pages will be verified during each isolated review.
-- Approved visual fixes: 1 (Contact light-mode links).
-- Candidate fix under review: Fix 2 (Logo accessible name).
+- Approved fixes: 2 (Contact light-mode links; Logo accessible name).
 - Production code changes: NONE.
 
 ## Immediate next step
-Review Fix 2 on `preview.digitful.ca`: confirm header and footer logos still look/behave normally in dark and light mode, ideally desktop and mobile. Then decide KEEP / ADJUST / REJECT before starting Fix 3 (footer contrast).
+Begin Fix 3 on `visual-refresh`: improve footer copyright contrast. Keep the change isolated, deploy only that exact commit to preview, verify the footer in dark/light mode and desktop/mobile, then decide KEEP / ADJUST / REJECT.
