@@ -47,44 +47,70 @@ jobs:
           CREAM = '#F0E7D5'
           CORAL = '#E95849'
 
-          def remove_edge_component(mask):
-              n, labels, stats, _ = cv2.connectedComponentsWithStats(mask.astype(np.uint8), 8)
+          def clean(mask, min_area=300, discard_edge=False):
+              mask = mask.astype(np.uint8)
+              n, labels, stats, _ = cv2.connectedComponentsWithStats(mask, 8)
               out = np.zeros_like(mask, dtype=np.uint8)
               h, w = mask.shape
               for i in range(1, n):
                   x, y, cw, ch, area = stats[i]
                   touches_edge = x == 0 or y == 0 or x + cw >= w or y + ch >= h
-                  if area >= 300 and not touches_edge:
+                  if area >= min_area and not (discard_edge and touches_edge):
                       out[labels == i] = 255
-              return out
-
-          def clean(mask, min_area=300, discard_edge=False):
-              mask = mask.astype(np.uint8)
-              if discard_edge:
-                  out = remove_edge_component(mask)
-              else:
-                  n, labels, stats, _ = cv2.connectedComponentsWithStats(mask, 8)
-                  out = np.zeros_like(mask, dtype=np.uint8)
-                  for i in range(1, n):
-                      if stats[i, cv2.CC_STAT_AREA] >= min_area:
-                          out[labels == i] = 255
               return cv2.morphologyEx(out, cv2.MORPH_CLOSE, np.ones((3,3), np.uint8), iterations=1)
+
+          def component_count(mask):
+              n, _, stats, _ = cv2.connectedComponentsWithStats(mask.astype(np.uint8), 8)
+              return sum(1 for i in range(1, n) if stats[i, cv2.CC_STAT_AREA] >= 300)
+
+          def choose_body(arr, coral, mode):
+              a = arr[...,3]
+              rgb = arr[...,:3]
+              brightness = rgb.mean(axis=2)
+              non_coral = ~coral.astype(bool)
+
+              bright = clean((a > 80) & non_coral & (brightness > 150), 300, discard_edge=True)
+              dark = clean((a > 80) & non_coral & (brightness < 120), 300, discard_edge=True)
+
+              # If transparency is clean, edge-discard and normal-clean are equivalent.
+              # If an opaque backdrop exists, edge-discard removes it while retaining the mark.
+              bright_area = int((bright > 0).sum())
+              dark_area = int((dark > 0).sum())
+              bright_components = component_count(bright)
+              dark_components = component_count(dark)
+
+              if mode == 'wordmark':
+                  # A wordmark should contain several disconnected letter/dot components.
+                  candidates = [
+                      (bright_components >= 4, bright_area, bright),
+                      (dark_components >= 4, dark_area, dark),
+                  ]
+              else:
+                  candidates = [
+                      (bright_components >= 1, bright_area, bright),
+                      (dark_components >= 1, dark_area, dark),
+                  ]
+
+              valid = [item for item in candidates if item[0] and item[1] > 1000]
+              if not valid:
+                  # Fallback for fully transparent artwork where edge filtering is unnecessary.
+                  bright = clean((a > 80) & non_coral & (brightness > 150), 300, discard_edge=False)
+                  dark = clean((a > 80) & non_coral & (brightness < 120), 300, discard_edge=False)
+                  options = [(int((bright>0).sum()), bright), (int((dark>0).sum()), dark)]
+                  return max(options, key=lambda item: item[0])[1]
+              return max(valid, key=lambda item: item[1])[2]
 
           def load_masks(path, mode):
               arr = np.array(Image.open(path).convert('RGBA'))
               a = arr[..., 3]
               rgb = arr[..., :3]
-              brightness = rgb.mean(axis=2)
               coral = (rgb[...,0] > 170) & (rgb[...,1] < 155) & (rgb[...,2] < 140) & (a > 40)
-              coral = clean(coral, 300)
-
-              if mode == 'wordmark':
-                  body = (a > 80) & (~coral.astype(bool)) & (brightness > 150)
-                  body = clean(body, 300)
-              else:
-                  body = (a > 80) & (~coral.astype(bool)) & (brightness < 120)
-                  body_no_edge = clean(body, 300, discard_edge=True)
-                  body = body_no_edge if body_no_edge.sum() > 1000 else clean(body, 300)
+              coral = clean(coral, 300, discard_edge=True)
+              body = choose_body(arr, coral, mode)
+              if int((body > 0).sum()) < 1000:
+                  raise RuntimeError(f'Body trace failed for {path}')
+              if int((coral > 0).sum()) < 300:
+                  raise RuntimeError(f'Coral trace failed for {path}')
               return body, coral
 
           def bbox_union(*masks, pad=18):
@@ -120,6 +146,8 @@ jobs:
               w, h = x1-x0, y1-y0
               body_path = to_path(body, (x0,y0))
               coral_path = to_path(coral, (x0,y0))
+              if not body_path or not coral_path:
+                  raise RuntimeError(f'Empty path generated for {path}')
               transform = ''
               if square:
                   side = max(w,h)
@@ -163,5 +191,5 @@ jobs:
             echo "No changes to commit."
             exit 0
           fi
-          git commit -m "feat: add concept-faithful logo candidate 2 [skip ci]"
+          git commit -m "feat: regenerate concept-faithful logo candidate 2 [skip ci]"
           git push origin HEAD:visual-refresh
