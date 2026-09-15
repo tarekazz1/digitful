@@ -25,7 +25,7 @@ jobs:
           python-version: '3.13'
 
       - name: Install vector tooling
-        run: python -m pip install --disable-pip-version-check fonttools
+        run: python -m pip install --disable-pip-version-check fonttools cairosvg
 
       - name: Fetch Barlow Condensed ExtraBold source font
         run: |
@@ -118,15 +118,31 @@ jobs:
           for name, svg in variants.items():
               (OUT / name).write_text(svg, encoding='utf-8')
 
-          # Keep the existing component paths stable while replacing the old blue-underline logo.
           Path('public/assets/images/logo.svg').write_text(variants['digitful-wordmark-on-dark.svg'], encoding='utf-8')
           Path('public/assets/images/logo-light.svg').write_text(variants['digitful-wordmark-on-light.svg'], encoding='utf-8')
 
-          # Universal tab icon: ink field, cream d, coral terminal dot.
           Path('public/favicon.svg').write_text(
               render_svg('d.', 160, 160, CREAM, CORAL, 24, 24, background=INK, radius=10),
               encoding='utf-8'
           )
+          PY
+
+      - name: Generate app icon PNGs
+        shell: bash
+        run: |
+          python - <<'PY'
+          import cairosvg
+          for size, output in [
+              (192, 'public/android-chrome-192x192.png'),
+              (512, 'public/android-chrome-512x512.png'),
+              (180, 'public/apple-touch-icon.png'),
+          ]:
+              cairosvg.svg2png(
+                  url='public/favicon.svg',
+                  write_to=output,
+                  output_width=size,
+                  output_height=size,
+              )
           PY
 
       - name: Commit generated logo masters
@@ -134,10 +150,17 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/assets/brand public/assets/images/logo.svg public/assets/images/logo-light.svg public/favicon.svg
+          git add \
+            public/assets/brand \
+            public/assets/images/logo.svg \
+            public/assets/images/logo-light.svg \
+            public/favicon.svg \
+            public/android-chrome-192x192.png \
+            public/android-chrome-512x512.png \
+            public/apple-touch-icon.png
           if git diff --cached --quiet; then
             echo "No logo changes to commit."
             exit 0
           fi
-          git commit -m "feat: add final Digitful SVG logo masters [skip ci]"
+          git commit -m "feat: add Digitful logo raster derivatives [skip ci]"
           git push origin HEAD:visual-refresh
