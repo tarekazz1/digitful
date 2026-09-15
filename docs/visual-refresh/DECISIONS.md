@@ -147,6 +147,29 @@ These PNG concepts are reference assets, not final production masters. Final sit
 
 ---
 
+## D017 — Homepage copy voice and wording
+**Status:** Approved
+
+Lock the new non-blog homepage copy before implementation. The tone is plainspoken, useful, concise, lightly witty when it helps the point, and confident without agency chest-thumping.
+
+Use `docs/brand/HOMEPAGE-COPY.md` as the source of truth for the approved homepage wording.
+
+Key approved choices include:
+- Header CTA: `Talk to Digitful`
+- Hero: `Marketing works better when the parts talk to each other.`
+- What we fix: `More traffic won’t fix a messy system.`
+- Slow follow-up line: `If the next step relies on memory, it probably needs a system.`
+- Core offers: `Four parts. One growth system.`
+- Good fit: `The business is moving. The system is lagging behind.`
+- Instant Snapshot: `See what your website is making harder than it should be.`
+- Final CTA: `Bring the messy version.`
+
+Avoid generic agency language such as `drive growth`, `unlock potential`, `scale smarter`, `transform your business`, and `results-driven`.
+
+Minor line breaks may change responsively, but wording should not be rewritten during implementation without another explicit content decision.
+
+---
+
 ## Current pending decisions
 - Exact display typeface after browser testing.
 - Final SVG logo masters and minimum-size/clear-space rules.
