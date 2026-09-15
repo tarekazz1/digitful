@@ -14,7 +14,7 @@ const {
   modifiedTime
 } = Astro.props;
 const siteName = 'Digitful';
-const themeColor = '#171c24';
+const themeColor = '#191a1b';
 const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
@@ -74,7 +74,7 @@ const schemas = [organizationSchema, websiteSchema, ...pageSchemas].filter(Boole
           document.documentElement.style.colorScheme = nextTheme;
           document.querySelector('[data-theme-color]')?.setAttribute(
             'content',
-            nextTheme === 'light' ? '#f4f2ec' : '#171c24'
+            nextTheme === 'light' ? '#f0e7d5' : '#191a1b'
           );
 
           if (toggle) {
@@ -158,9 +158,6 @@ const schemas = [organizationSchema, websiteSchema, ...pageSchemas].filter(Boole
       ></iframe>
     </noscript>
     <div class="site-shell d-flex flex-column">
-      <div class="page-glow page-glow--one" aria-hidden="true"></div>
-      <div class="page-glow page-glow--two" aria-hidden="true"></div>
-      <div class="page-glow page-glow--three" aria-hidden="true"></div>
       <a class="skip-link" href="#main-content">Skip to main content</a>
       <Header />
       <div id="main-content" class="flex-grow-1" tabindex="-1">
