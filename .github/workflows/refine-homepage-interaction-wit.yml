@@ -20,6 +20,8 @@ jobs:
         with:
           node-version: 22
           cache: npm
+      - name: Normalize current copy block
+        run: python scripts/prepare-d031-copy.py
       - name: Apply D031
         run: python scripts/apply-d031.py
       - name: Install dependencies
