@@ -54,10 +54,18 @@ Chronological record of setup and implementation changes for the visual-refresh 
 - Reason: these are composition/visual-system decisions and should be judged alongside typography, spacing, card treatment, and page composition to avoid rework.
 - Decision recorded as D013 in `DECISIONS.md`.
 
+### Design-process correction — vision before facelifts
+- User explicitly rejected starting the design shift with isolated cosmetic edits such as glow removal.
+- New rule: settle the overall Digitful design vision/style before any subjective visual implementation.
+- Broad direction (`modern consulting / technical practice, not generic AI/SaaS`) remains useful but is not specific enough to build from yet.
+- Design vision must first define brand impression, visual references/anti-references, typography, colour, surfaces/depth, icon/image language, composition, motion, and the elements that make the site recognisably Digitful.
+- No visual-source experiment was made as part of this decision; the preview remains on the last approved objective-fix source.
+- Decision recorded as D014 in `DECISIONS.md`.
+
 ### Current preview source
 - `939a771c5ed93cf6ca80a1de1046ddcaed247f44`
 
 ### Next action
-- Begin the visual design-shift phase with one isolated experiment: simplify the site background/glow treatment.
-- Do not change cards, radii, icons, colour coding, typography, or page layouts in the same experiment.
-- Deploy the exact source commit to preview and review dark/light plus representative desktop/mobile pages before deciding KEEP / ADJUST / REJECT.
+- Do **not** implement glow/card/radius/typography changes yet.
+- First develop and approve a coherent design vision/style for Digitful.
+- After the vision is approved, translate it into the visual system and page-composition rules, then implement against the preview one controlled step at a time.
