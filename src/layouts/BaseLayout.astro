@@ -157,13 +157,13 @@ const schemas = [organizationSchema, websiteSchema, ...pageSchemas].filter(Boole
         style="display:none;visibility:hidden"
       ></iframe>
     </noscript>
-    <div class="site-shell">
+    <div class="site-shell d-flex flex-column">
       <div class="page-glow page-glow--one" aria-hidden="true"></div>
       <div class="page-glow page-glow--two" aria-hidden="true"></div>
       <div class="page-glow page-glow--three" aria-hidden="true"></div>
       <a class="skip-link" href="#main-content">Skip to main content</a>
       <Header />
-      <div id="main-content" tabindex="-1">
+      <div id="main-content" class="flex-grow-1" tabindex="-1">
         <slot />
       </div>
       <Footer />
