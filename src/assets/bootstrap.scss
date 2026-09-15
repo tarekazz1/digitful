@@ -53,11 +53,11 @@
 // 5. Approved visual-refresh foundation layer: global shell, controls and legacy bridging.
 @use "./_editorial-foundations";
 
-// 6. D028 reusable identity/mechanics. Does not prescribe page composition.
-@use "./_design-system";
-
-// 7. Approved homepage composition. Scoped to .home-page.
+// 6. Approved homepage composition. Scoped to .home-page.
 @use "./_homepage";
+
+// 7. D028 reusable identity/mechanics + visual-parity adoption bridge.
+@use "./_design-system";
 
 // 8. Interactive Snapshot result states. Scoped to the homepage instrument.
 @use "./_snapshot-results";
