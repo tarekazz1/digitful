@@ -1,7 +1,7 @@
 # Digitful Visual Refresh — Handoff
 
 ## New-chat instruction
-> Continue the Digitful visual-refresh project. Read `docs/visual-refresh/HANDOFF.md`, `docs/visual-refresh/DECISIONS.md`, `docs/visual-refresh/CHANGELOG.md`, `docs/brand/VISUAL-CONSTITUTION.md`, and `docs/brand/HOMEPAGE-COPY.md` on branch `visual-refresh` before doing anything. Do not modify production until the documented approval process says to do so.
+> Continue the Digitful visual-refresh project. Read `docs/visual-refresh/HANDOFF.md`, `docs/visual-refresh/DECISIONS.md`, `docs/visual-refresh/CHANGELOG.md`, `docs/brand/VISUAL-CONSTITUTION.md`, `docs/brand/HOMEPAGE-COPY.md`, and `docs/brand/LOGO-SYSTEM.md` on branch `visual-refresh` before doing anything. Do not modify production until the documented approval process says to do so.
 
 ## Working rules
 - Production/source repo: `tarekazz1/digitful`
@@ -28,7 +28,7 @@ Mobile PSI baseline:
 - CLS 0
 - Speed Index 4.9s
 
-Main performance findings remain: render-blocking CSS/Google Fonts, Bootstrap Icons font (~132 KiB), Google tag JS, text LCP. Preserve CLS 0.
+Main performance findings remain: render-blocking CSS/legacy font path, Bootstrap Icons font (~132 KiB), Google tag JS, text LCP. Preserve CLS 0.
 
 ## Preview environment
 - Namecheap CNAME: `preview` → `tarekazz1.github.io`
@@ -45,8 +45,7 @@ Main performance findings remain: render-blocking CSS/Google Fonts, Bootstrap Ic
 Decision D020 is implemented on `visual-refresh`:
 - Astro upgraded from `^5.6.1` to exact `7.3.2`
 - lockfile regenerated on Node 22
-- source GitHub Pages workflow on `visual-refresh` updated to Node 22 + `npm ci`
-- preview workflow updated to Node 22 + `npm ci`
+- source and preview build workflows use Node 22 + `npm ci`
 - upgrade package commit: `7d5f709337204c960a4444e905bc9d59bec2f6f8`
 - validated preview source: `ea8162f396f103cd7844f40b58ef1850ef07b884`
 - preview run `34972381758`: build success, deploy success
@@ -93,19 +92,28 @@ Decision D021:
 - Typography implementation source: `12ad2246ad73344bbf33674bf8eb2585e7d10b2e`.
 - Preview run `34974525550`: build success, deploy success.
 
-The current preview is pinned to:
-`12ad2246ad73344bbf33674bf8eb2585e7d10b2e`
+## Logo production candidate — pending review
+Decision D023.
 
-## Working logo direction
-Decision D016:
-- refined lowercase `digitful.` wordmark
-- coral terminal dot
-- dark/light/monochrome/tagline/standalone `d.` concepts
+Source of truth:
+`docs/brand/LOGO-SYSTEM.md`
 
-Concepts live at:
-`docs/brand/logo-concepts/2026-09-retro-direction/`
+Candidate system:
+- lowercase outlined `digitful.` wordmark derived from Barlow Condensed ExtraBold / 800
+- coral terminal dot `#E95849`
+- ink `#191A1B` version for light backgrounds
+- cream `#F0E7D5` version for dark backgrounds
+- monochrome wordmark variants
+- standalone `d.` mark for favicon/app/small contexts
+- SVG masters under `public/assets/brand/`
+- new favicon plus 180 / 192 / 512 px raster derivatives
+- shared `Logo.astro` now uses the new primary masters
+- no tagline lockup in v1 because exact tagline text has not been approved
 
-These PNGs are not final production logo masters. Final assets should be clean approved SVGs after visual validation.
+Review page:
+`https://preview.digitful.ca/logo-test/` once the candidate is pinned and deployed.
+
+Do not mark the logo final for production until user says KEEP.
 
 ## Approved homepage copy and density
 Decision D017.
@@ -189,27 +197,39 @@ Important: the homepage has **not** yet been rebuilt to match the approved speci
 
 Production `main` / `digitful.ca` remain untouched.
 
-## Immediate next step
-Finalize the `digitful.` SVG logo family against the approved Barlow Condensed + Inter typography system.
+## OKF roadmap
+Decision D022.
 
-Logo work should:
-1. preserve the approved lowercase `digitful.` direction with coral terminal dot
-2. produce clean SVG masters for dark, light and monochrome use
-3. produce the standalone `d.` mark for genuinely small contexts
-4. set practical sizing / clear-space rules
-5. replace the old preview logo only after the new SVG family is visually checked
-6. then rebuild the homepage structure and remove the old generic cards
+Use the canonical `GoogleCloudPlatform/open-knowledge-format` project, not the frozen `knowledge-catalog/okf` snapshot.
+
+Do not implement OKF while page copy/URLs are moving. Add a small Digitful knowledge bundle after the homepage and primary service/page architecture is stable, then validate it before the final agent/SEO/QA pass. It complements rather than replaces semantic HTML, Schema.org, sitemap and normal SEO metadata.
+
+## Immediate next step
+Deploy the exact current logo-candidate SHA to preview and review:
+- real header and footer
+- `/logo-test/`
+- desktop + mobile
+- light + dark
+- favicon/app mark at small sizes
+
+User response should be KEEP / ADJUST / REJECT for the logo system.
+
+After logo KEEP:
+1. record final logo approval and remove temporary review route later
+2. rebuild homepage against the approved specimen and locked copy
+3. remove the old generic card-heavy homepage composition
+4. deploy exact source SHA and review before adapting other page types
 
 ## Later implementation sequence
-After logo approval:
-1. rebuild homepage against the approved specimen and locked copy
+1. rebuild homepage
 2. adapt service page type
 3. adapt contact and thank-you page types
 4. adapt blog index/article while preserving editorial reading priority
-5. resolve deferred responsive/composition observations within those page types
-6. full desktop/mobile dark/light QA
-7. freeze visual baseline
-8. performance work: SVG icon migration, JS scoping, CSS/Bootstrap dependency map, safe CSS reduction, re-measure, then remaining GTM/caching work as justified
+5. once homepage + primary service/page architecture and canonical URLs are stable, add the Digitful OKF bundle
+6. resolve deferred responsive/composition observations within page types
+7. full desktop/mobile dark/light + agent/SEO QA
+8. freeze visual baseline
+9. performance work: SVG icon migration, JS scoping, CSS/Bootstrap dependency map, safe CSS reduction, re-measure, then remaining GTM/caching work as justified
 
 ## Functional behaviours that must not break
 Mobile navbar, Services dropdown, theme toggle, navigation, blog filters, homepage diagnostic, diagnostic→Contact handoff, contact toggles/hidden fields, production FormSubmit/thank-you redirect, logos, responsive layouts, production GTM/GA, SEO output and CLS stability.
