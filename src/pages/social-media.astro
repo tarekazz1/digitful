@@ -16,7 +16,9 @@ const pageCanonical = 'https://digitful.ca/social-media/';
           <h1>Social media should give people a reason to pay attention.</h1>
           <p class="lead">A clear point of view, a recognizable voice, and content built for the people you actually want to reach.</p>
           <div class="social-hero__actions">
-            <a href="/contact/?service=social-media" class="btn btn-primary btn-lg px-4">Tell us what’s stuck</a>
+            <a href="/contact/?service=social-media" class="btn btn-primary btn-lg px-4">
+              <span>Tell us what’s stuck</span><span class="social-button-arrow" aria-hidden="true">→</span>
+            </a>
             <a href="/what-we-build/" class="btn btn-link-quiet btn-lg">See what we build</a>
           </div>
         </div>
@@ -176,25 +178,30 @@ const pageCanonical = 'https://digitful.ca/social-media/';
           <span class="eyebrow">The next step</span>
           <h2 id="social-cta-heading">Social media should not end at the post.</h2>
           <p>If the content feels generic, inconsistent, or busy without a clear purpose, we can help fix the system behind it.</p>
-          <a href="/contact/?service=social-media" class="btn btn-primary btn-lg px-4">Tell us what’s not working</a>
+          <a href="/contact/?service=social-media" class="btn btn-primary btn-lg px-4">
+            <span>Tell us what’s not working</span><span class="social-button-arrow" aria-hidden="true">→</span>
+          </a>
         </div>
 
         <div class="social-cta__visual" aria-hidden="true">
           <span class="social-cta__orb"></span>
-          <svg viewBox="0 0 460 280" focusable="false">
-            <g class="social-cta__binocular-body">
-              <rect x="105" y="92" width="102" height="84" rx="32" transform="rotate(-8 105 92)" />
-              <rect x="249" y="92" width="102" height="84" rx="32" transform="rotate(8 249 92)" />
-              <rect x="194" y="111" width="72" height="42" rx="18" />
+          <svg viewBox="0 0 500 300" focusable="false">
+            <g class="social-cta__barrels">
+              <path d="M95 108 L178 79 L221 190 L125 221 Z" />
+              <path d="M405 108 L322 79 L279 190 L375 221 Z" />
             </g>
-            <g class="social-cta__binocular-lens">
-              <ellipse cx="133" cy="171" rx="51" ry="38" transform="rotate(-8 133 171)" />
-              <ellipse cx="327" cy="171" rx="51" ry="38" transform="rotate(8 327 171)" />
+            <g class="social-cta__bridge">
+              <rect x="199" y="105" width="102" height="56" rx="20" />
+              <rect x="224" y="83" width="52" height="44" rx="14" />
+            </g>
+            <g class="social-cta__lenses">
+              <ellipse cx="119" cy="218" rx="62" ry="43" transform="rotate(-9 119 218)" />
+              <ellipse cx="381" cy="218" rx="62" ry="43" transform="rotate(9 381 218)" />
             </g>
             <g class="social-cta__rays">
-              <path d="M72 70 L43 46" />
-              <path d="M82 111 L42 105" />
-              <path d="M381 70 L410 46" />
+              <path d="M69 82 L34 55" />
+              <path d="M72 127 L27 121" />
+              <path d="M431 82 L466 55" />
             </g>
           </svg>
         </div>
@@ -207,6 +214,17 @@ const pageCanonical = 'https://digitful.ca/social-media/';
   .social-page {
     --social-rule: var(--ds-rule-strong);
     overflow: clip;
+  }
+
+  .social-button-arrow {
+    display: inline-block;
+    margin-left: 0.65rem;
+    font-weight: 900;
+    transition: transform var(--motion-fast) var(--motion-ease);
+  }
+
+  .btn:hover .social-button-arrow {
+    transform: translateX(0.2rem);
   }
 
   .social-hero {
@@ -417,46 +435,24 @@ const pageCanonical = 'https://digitful.ca/social-media/';
     line-height: 1;
   }
 
-  .social-problem--one {
-    top: 0;
-    left: 2%;
-  }
-
-  .social-problem--one::after {
-    right: -12%;
-    bottom: -28%;
-    transform: rotate(18deg);
-  }
-
-  .social-problem--two {
-    top: 6.5rem;
-    right: 1%;
-  }
-
-  .social-problem--two::after {
-    left: -12%;
-    bottom: -26%;
-    transform: rotate(108deg);
-  }
-
-  .social-problem--three {
-    left: 10%;
-    bottom: 3.5rem;
-  }
-
-  .social-problem--three::after {
-    right: -10%;
-    bottom: -25%;
-    transform: rotate(15deg);
-  }
-
-  .social-problem--four {
-    right: 5%;
-    bottom: 0;
-  }
+  .social-problem--one { top: 0; left: 2%; }
+  .social-problem--one::after { right: -12%; bottom: -28%; transform: rotate(18deg); }
+  .social-problem--two { top: 6.5rem; right: 1%; }
+  .social-problem--two::after { left: -12%; bottom: -26%; transform: rotate(108deg); }
+  .social-problem--three { left: 10%; bottom: 3.5rem; }
+  .social-problem--three::after { right: -10%; bottom: -25%; transform: rotate(15deg); }
+  .social-problem--four { right: 5%; bottom: 0; }
 
   .social-problem__icon {
-    margin-top: -0.4rem;
+    width: 4.75rem;
+    height: 4.75rem;
+    margin-top: -0.55rem;
+    border: var(--social-rule);
+  }
+
+  .social-problem__icon :global(svg) {
+    width: 2.2rem;
+    height: 2.2rem;
   }
 
   .social-problem h3,
@@ -525,9 +521,9 @@ const pageCanonical = 'https://digitful.ca/social-media/';
     padding-top: 1.1rem;
   }
 
-  .social-good__stage:nth-of-type(2) { margin-top: 1rem; }
-  .social-good__stage:nth-of-type(3) { margin-top: 0.25rem; }
-  .social-good__stage:nth-of-type(4) { margin-top: -1.15rem; }
+  .social-good__stage--two { margin-top: 1rem; }
+  .social-good__stage--three { margin-top: 0.25rem; }
+  .social-good__stage--four { margin-top: -1.15rem; }
 
   .social-good__dot {
     position: absolute;
@@ -651,8 +647,8 @@ const pageCanonical = 'https://digitful.ca/social-media/';
     position: absolute;
     width: 10.5rem;
     height: 10.5rem;
-    top: 0.5rem;
-    right: 8%;
+    top: 0.25rem;
+    right: 3%;
     background: var(--site-accent);
     border: var(--social-rule);
     border-radius: 50%;
@@ -660,25 +656,27 @@ const pageCanonical = 'https://digitful.ca/social-media/';
 
   .social-cta__visual svg {
     position: absolute;
-    inset: 1rem 0 auto;
+    inset: 0.4rem 0 auto;
     width: 100%;
     height: auto;
     overflow: visible;
-    filter: drop-shadow(0.35rem 0.42rem 0 var(--brand-ink));
+    filter: drop-shadow(0.32rem 0.38rem 0 var(--brand-ink));
     transition: transform var(--motion-standard) var(--motion-ease);
   }
 
   .social-cta__visual:hover svg {
-    transform: rotate(-2deg) translateX(-0.2rem);
+    transform: rotate(-1.5deg) translateX(-0.2rem);
   }
 
-  .social-cta__binocular-body {
+  .social-cta__barrels,
+  .social-cta__bridge {
     fill: var(--brand-paper);
     stroke: var(--brand-ink);
     stroke-width: 9;
+    stroke-linejoin: round;
   }
 
-  .social-cta__binocular-lens {
+  .social-cta__lenses {
     fill: var(--brand-ink);
     stroke: var(--brand-ink);
     stroke-width: 9;
@@ -730,18 +728,29 @@ const pageCanonical = 'https://digitful.ca/social-media/';
 
   @media (max-width: 767.98px) {
     .social-hero {
-      padding-top: 3.2rem;
+      padding-top: 2.75rem;
+      padding-bottom: 3.5rem;
     }
 
     .social-hero h1 {
-      max-width: 9.5ch;
-      font-size: clamp(3rem, 13vw, 4.8rem);
+      max-width: none;
+      font-size: clamp(3rem, 14.2vw, 4.25rem);
+      line-height: 0.9;
+      text-wrap: balance;
+    }
+
+    .social-hero .lead {
+      max-width: 34rem;
+      margin-top: 1.25rem;
+      font-size: 1rem;
+      line-height: 1.5;
     }
 
     .social-hero__actions {
       display: grid;
       grid-template-columns: 1fr;
       width: 100%;
+      margin-top: 1.35rem;
     }
 
     .social-hero__actions .btn {
@@ -750,18 +759,19 @@ const pageCanonical = 'https://digitful.ca/social-media/';
     }
 
     .social-hero__collage {
-      min-height: 21rem;
-      margin-top: 0.5rem;
+      min-height: 20rem;
+      margin-top: 1.45rem;
     }
 
     .social-hero__paper {
-      inset: 16% 6% 8% 14%;
+      inset: 14% 6% 8% 13%;
       box-shadow: var(--print-offset-sm) var(--site-mustard);
     }
 
     .social-hero__bubble--coral {
-      width: 7.3rem;
-      height: 7.3rem;
+      width: 7.6rem;
+      height: 7.6rem;
+      top: 1%;
       right: 1%;
     }
 
@@ -769,11 +779,27 @@ const pageCanonical = 'https://digitful.ca/social-media/';
       width: 5.8rem;
       height: 5.8rem;
       left: 1%;
+      bottom: 7%;
+    }
+
+    .social-hero__megaphone {
+      width: 91%;
+      left: 2%;
+      top: 2%;
+    }
+
+    .social-section {
+      padding-block: 3.6rem;
+    }
+
+    .social-section__head,
+    .social-good__head {
+      margin-bottom: 2.6rem;
     }
 
     .social-problems__field {
       display: grid;
-      gap: 2.4rem;
+      gap: 2.65rem;
       min-height: 0;
     }
 
@@ -783,13 +809,21 @@ const pageCanonical = 'https://digitful.ca/social-media/';
       right: auto;
       bottom: auto;
       left: auto;
-      width: 100%;
-      padding-top: 0;
+      width: 92%;
+      padding: 0 0 1.2rem;
       border-top: 0;
+      border-bottom: var(--social-rule);
+      grid-template-columns: 4.9rem minmax(0, 1fr);
+      gap: 1rem;
     }
 
+    .social-problem--one { margin-left: 0; }
+    .social-problem--two { margin-left: 8%; }
+    .social-problem--three { margin-left: 1.5%; }
+    .social-problem--four { margin-left: 7%; }
+
     .social-problem:nth-child(even) {
-      grid-template-columns: minmax(0, 1fr) auto;
+      grid-template-columns: minmax(0, 1fr) 4.9rem;
       text-align: right;
     }
 
@@ -803,104 +837,128 @@ const pageCanonical = 'https://digitful.ca/social-media/';
       grid-row: 1;
     }
 
-    .social-problem::before {
-      content: '';
-      position: absolute;
-      right: 14%;
-      bottom: -1.15rem;
-      left: 19%;
-      border-bottom: var(--social-rule);
-      transform: rotate(-1deg);
-    }
-
-    .social-problem:nth-child(even)::before {
-      right: 19%;
-      left: 14%;
-      transform: rotate(1deg);
-    }
-
-    .social-problem:last-child::before {
-      display: none;
+    .social-problem__icon {
+      width: 4.75rem;
+      height: 4.75rem;
+      margin-top: -0.35rem;
     }
 
     .social-problem::after {
       right: 6%;
-      bottom: -1.8rem;
-      font-size: 1.65rem;
+      bottom: -2.15rem;
+      font-size: 1.8rem;
+      transform: rotate(18deg);
     }
 
     .social-problem:nth-child(even)::after {
       right: auto;
-      left: 6%;
-      transform: rotate(135deg);
+      left: 5%;
+      transform: rotate(125deg);
     }
 
     .social-problem:last-child::after {
       display: none;
     }
 
+    .social-good {
+      padding-block: 3.7rem 4.1rem;
+    }
+
+    .social-good__head {
+      margin-bottom: 2.6rem;
+    }
+
+    .social-good__head h2 {
+      max-width: 10ch;
+    }
+
     .social-good__path {
       display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.65rem;
-      min-height: 0;
-      padding: 0 0 0 3.25rem;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 0.65rem;
+      min-height: 17.5rem;
+      padding-top: 4rem;
     }
 
     .social-good__line {
-      top: 0.15rem;
-      left: 0.1rem;
-      width: 2.3rem;
-      height: calc(100% - 0.3rem);
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5.5rem;
       transform: none;
-    }
-
-    .social-good__line path:first-child {
-      d: path('M 25 5 C 5 80 45 155 22 235 S 45 400 22 505 S 35 650 25 795');
-    }
-
-    .social-good__arrow {
-      display: none;
+      stroke-width: 8;
     }
 
     .social-good__stage,
-    .social-good__stage:nth-of-type(2),
-    .social-good__stage:nth-of-type(3),
-    .social-good__stage:nth-of-type(4) {
-      margin-top: 0;
-      padding-top: 0;
+    .social-good__stage--two,
+    .social-good__stage--three,
+    .social-good__stage--four {
+      padding-top: 0.6rem;
     }
 
+    .social-good__stage--one { margin-top: 0.45rem; }
+    .social-good__stage--two { margin-top: 1.35rem; }
+    .social-good__stage--three { margin-top: 0.65rem; }
+    .social-good__stage--four { margin-top: -0.2rem; }
+
     .social-good__dot {
-      top: 0.2rem;
-      left: -3rem;
+      top: -1rem;
+      left: 0;
+      width: 1rem;
+      height: 1rem;
+      border-width: 2px;
+    }
+
+    .social-good__stage h3 {
+      margin-bottom: 0.4rem;
+      font-size: clamp(1.05rem, 4.2vw, 1.25rem);
+      line-height: 0.96;
     }
 
     .social-good__stage p {
-      max-width: 29rem;
+      max-width: none;
+      font-size: clamp(0.72rem, 2.65vw, 0.88rem);
+      line-height: 1.42;
     }
 
     .social-method__flow {
       grid-template-columns: 1fr;
       gap: 0;
+      max-width: 34rem;
+      margin-inline: auto;
     }
 
     .social-method__step {
       display: grid;
-      grid-template-columns: 4.5rem minmax(0, 1fr);
+      grid-template-columns: 4.9rem minmax(0, 1fr);
       gap: 1rem;
       min-height: 0;
-      padding: 0 0 2.4rem;
+      padding: 0 0 2.55rem;
     }
 
+    .social-method__step--two { margin-left: 1.5rem; }
+    .social-method__step--three { margin-left: 0.35rem; }
+    .social-method__step--four { margin-left: 1.75rem; }
+
     .social-method__step::after {
-      content: '↓';
+      content: '↘';
       position: absolute;
-      left: 1.7rem;
-      bottom: 0.25rem;
+      left: 1.25rem;
+      bottom: 0.2rem;
       font-family: var(--type-display);
-      font-size: 1.8rem;
+      font-size: 2rem;
       font-weight: 800;
+      transform: rotate(18deg);
+    }
+
+    .social-method__step--two::after {
+      left: 0.9rem;
+      transform: rotate(108deg);
+    }
+
+    .social-method__step--three::after {
+      left: 1.35rem;
+      transform: rotate(20deg);
     }
 
     .social-method__step:last-child::after {
@@ -909,46 +967,128 @@ const pageCanonical = 'https://digitful.ca/social-media/';
 
     .social-method__number {
       position: static;
-      width: 4.2rem;
-      height: 4.2rem;
-      font-size: 1.7rem;
+      width: 4.65rem;
+      height: 4.65rem;
+      font-size: 1.85rem;
     }
 
     .social-method__step p {
-      max-width: 28rem;
+      max-width: 26rem;
+    }
+
+    .social-cta {
+      position: relative;
+      padding-block: 3.7rem 3.4rem;
+    }
+
+    .social-cta__grid {
+      position: relative;
+      display: block;
+      min-height: 29rem;
+    }
+
+    .social-cta__copy-block {
+      position: relative;
+      z-index: 2;
+      max-width: 23rem;
+      gap: 1rem;
+    }
+
+    .social-cta__copy-block p {
+      max-width: 22rem;
+      font-size: 1rem;
+    }
+
+    .social-cta__copy-block .btn {
+      margin-top: 0.25rem;
     }
 
     .social-cta__visual {
-      min-height: 14rem;
-      max-width: 24rem;
-      margin-inline: auto;
+      position: absolute;
+      right: -1rem;
+      bottom: -1.1rem;
+      width: min(62vw, 16rem);
+      min-height: 11rem;
+      margin: 0;
     }
 
     .social-cta__orb {
-      width: 8.5rem;
-      height: 8.5rem;
-      right: 4%;
+      width: 7.8rem;
+      height: 7.8rem;
+      top: -0.25rem;
+      right: 0;
+    }
+
+    .social-cta__visual svg {
+      top: 0.4rem;
     }
   }
 
   @media (max-width: 575.98px) {
+    .social-hero h1 {
+      font-size: clamp(2.9rem, 13.4vw, 3.7rem);
+    }
+
     .social-hero__collage {
-      min-height: 18.5rem;
-    }
-
-    .social-problem {
-      grid-template-columns: 4rem minmax(0, 1fr);
-      gap: 0.9rem;
-    }
-
-    .social-problem:nth-child(even) {
-      grid-template-columns: minmax(0, 1fr) 4rem;
+      min-height: 18rem;
     }
 
     .social-good__head h2,
     .social-section__head h2,
     .social-cta h2 {
       font-size: clamp(2.65rem, 12vw, 4rem);
+    }
+
+    .social-problem {
+      width: 96%;
+    }
+
+    .social-problem--two,
+    .social-problem--four {
+      margin-left: 4%;
+    }
+
+    .social-good__path {
+      gap: 0.45rem;
+    }
+
+    .social-good__stage h3 {
+      font-size: clamp(0.98rem, 4.35vw, 1.15rem);
+    }
+
+    .social-good__stage p {
+      font-size: clamp(0.68rem, 2.85vw, 0.82rem);
+    }
+
+    .social-cta__grid {
+      min-height: 28rem;
+    }
+
+    .social-cta__visual {
+      width: min(66vw, 15.5rem);
+    }
+  }
+
+  @media (max-width: 390px) {
+    .social-good__path {
+      gap: 0.32rem;
+    }
+
+    .social-good__stage h3 {
+      font-size: 0.98rem;
+    }
+
+    .social-good__stage p {
+      font-size: 0.7rem;
+    }
+
+    .social-cta__copy-block {
+      max-width: 19rem;
+    }
+
+    .social-cta__visual {
+      right: -1.4rem;
+      width: 14.25rem;
     }
   }
 
@@ -958,6 +1098,7 @@ const pageCanonical = 'https://digitful.ca/social-media/';
       animation: none;
     }
 
+    .social-button-arrow,
     .social-hero__bubble,
     .social-hero__megaphone,
     .social-good__dot,
