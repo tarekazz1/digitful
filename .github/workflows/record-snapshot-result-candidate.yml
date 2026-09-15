@@ -1,0 +1,61 @@
+name: Record snapshot result candidate
+
+on:
+  push:
+    branches: [visual-refresh]
+    paths:
+      - '.github/workflows/record-snapshot-result-candidate.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  record:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: visual-refresh
+
+      - name: Update project records
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          source = 'a0d4f2cd123077f9bfa87aa71dc9c46a16382eb4'
+          preview_run = '34987792106'
+
+          p = Path('docs/visual-refresh/DECISIONS.md')
+          s = p.read_text()
+          marker = '---\n\n## Current pending decisions'
+          if '## D026 — Instant Snapshot result-state visual alignment' not in s:
+              block = f'''---\n\n## D026 — Instant Snapshot result-state visual alignment\n**Status:** Candidate — pending preview KEEP / ADJUST / REJECT\n\nAfter the homepage structure was approved, the live Snapshot result revealed that its dynamically injected Bootstrap card/badges/progress bars still looked like the legacy site. Replace only the dynamic result/loading/error states with the approved technical-editorial instrument language.\n\nRules:\n- no nested SaaS card inside the Snapshot instrument\n- use open rules, square status markers and flat coral/teal/mustard score bands\n- keep numeric scores and letter grades so colour is not the sole state indicator\n- preserve the existing Worker, PageSpeed categories, form IDs, radio values and Contact handoff\n- remove the temporary preview-only diagnostic disclosure now that CORS is resolved\n- production remains untouched\n\nThe Cloudflare Worker itself was not changed in this repository. The user added `https://preview.digitful.ca` to its explicit `allowedOrigins`, after which the preview audit worked.\n\nCandidate source: `{source}`.\nPreview run: `{preview_run}` — build and deploy successful.\n\n'''
+              s = s.replace(marker, block + marker, 1)
+          pending = '## Current pending decisions\n'
+          line = '- Instant Snapshot result-state visual alignment: preview KEEP / ADJUST / REJECT.\n'
+          if line not in s:
+              s = s.replace(pending, pending + line, 1)
+          p.write_text(s)
+
+          p = Path('docs/visual-refresh/HANDOFF.md')
+          s = p.read_text()
+          start = s.index('## Immediate next step')
+          end = s.index('## Later implementation sequence', start)
+          state = f'''## Immediate next step\nReview the updated Instant Snapshot **result state** on `https://preview.digitful.ca/`.\n\nCurrent state:\n- homepage structural rebuild is approved KEEP\n- Quick Site Check CORS failure is resolved: the Worker allowlist now explicitly includes `https://preview.digitful.ca`\n- user confirmed the audit returns PageSpeed results from the preview\n- the legacy Bootstrap result card/badges/progress bars were identified as visually inconsistent with the approved design\n- dynamic loading/result/error markup has now been restyled as part of the technical-editorial instrument\n- temporary preview diagnostic disclosure was removed\n\nCandidate source:\n`{source}`\n\nPreview run:\n`{preview_run}` — build success, deploy success.\n\nReview target: run one audit and mark the **result-state visual treatment** KEEP / ADJUST / REJECT. Do not move to the next page type until this small homepage state is closed.\n\n'''
+          s = s[:start] + state + s[end:]
+          p.write_text(s)
+
+          p = Path('docs/visual-refresh/CHANGELOG.md')
+          s = p.read_text().rstrip() + '\n\n'
+          if '### Quick Site Check CORS resolved' not in s:
+              s += f'''### Quick Site Check CORS resolved\n- Root cause confirmed: the Cloudflare Worker `allowedOrigins` did not include `https://preview.digitful.ca`.\n- User added the preview origin to the Worker allowlist and confirmed the audit now returns results.\n- Google PageSpeed API key configuration did not need changing.\n\n### Instant Snapshot result-state visual candidate\n- Status: **PENDING USER REVIEW**.\n- Candidate source: `{source}`.\n- Preview run `{preview_run}`: build **success**, deploy **success**.\n- Replaced the dynamically injected legacy Bootstrap result card, coloured badges and blue progress bars with an open technical-editorial report state.\n- Added square mode/grade markers, numeric `/100` scores, flat coral/teal/mustard score tracks, ruled Quick Wins and a consistent primary CTA.\n- Restyled loading/error states and removed the temporary preview diagnostic disclosure.\n- Existing Worker URL, PageSpeed categories, form IDs, strategy values and diagnostic-to-Contact handoff remain unchanged.\n- Production remains untouched.\n'''
+          p.write_text(s)
+          PY
+
+      - name: Commit records
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/visual-refresh/DECISIONS.md docs/visual-refresh/HANDOFF.md docs/visual-refresh/CHANGELOG.md
+          git commit -m "docs: record snapshot result candidate [skip ci]"
+          git push origin visual-refresh
