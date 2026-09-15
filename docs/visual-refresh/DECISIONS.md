@@ -82,6 +82,19 @@ This file records approved or working decisions so the rationale survives across
 
 ---
 
+## D009 — Contact links use theme-aware colour
+**Status:** Approved — KEEP
+
+**Decision:** Replace the forced Bootstrap `link-light` class on the Contact page email and phone links with a contact-specific theme-aware link style using `var(--site-text)` and `var(--site-accent-soft)` for hover/focus.
+
+**Why:** The old forced-white links became nearly invisible in light mode. The previewed change keeps them readable in both themes without changing the contact workflow.
+
+**Reviewed source commit:** `2ebd6614be8c7ea1c0f7d841fe8111ff3ec0cc92`
+
+**User decision:** KEEP after live preview review on `preview.digitful.ca`.
+
+---
+
 ## Pending decisions
 The following are NOT approved design changes yet. They are experiments to test visually:
 - Degree of glow removal.
