@@ -231,22 +231,23 @@ What changed in this candidate:
 Production `main` remains untouched.
 
 ## Immediate next step
-Resolve the Quick Site Check preview failure before moving to the next page type.
+Review the updated Instant Snapshot **result state** on `https://preview.digitful.ca/`.
 
-Current evidence:
-- user approved the homepage structural rebuild
-- direct navigation to the Cloudflare Worker with `https://digitful.ca` returns a full PageSpeed JSON payload including `lighthouseResult`
-- browser `fetch()` from `https://preview.digitful.ca` fails with `TypeError: Failed to fetch`
-- Google API key is restricted to the PageSpeed Insights API but has **no application restriction**, so the key itself is not blocked by preview referrer/IP rules
-- this strongly points to a Worker CORS/origin-policy issue between preview and the Worker rather than a Google PageSpeed API failure
+Current state:
+- homepage structural rebuild is approved KEEP
+- Quick Site Check CORS failure is resolved: the Worker allowlist now explicitly includes `https://preview.digitful.ca`
+- user confirmed the audit returns PageSpeed results from the preview
+- the legacy Bootstrap result card/badges/progress bars were identified as visually inconsistent with the approved design
+- dynamic loading/result/error markup has now been restyled as part of the technical-editorial instrument
+- temporary preview diagnostic disclosure was removed
 
-Diagnostic preview source:
-`73cf73e4d9a2b0a9e937158614891192c48f2148`
+Candidate source:
+`a0d4f2cd123077f9bfa87aa71dc9c46a16382eb4`
 
-Diagnostic preview run:
-`34984708246` — build success, deploy success.
+Preview run:
+`34987792106` — build success, deploy success.
 
-Next check: inspect the Cloudflare Worker CORS/allowed-origin logic and allow `https://preview.digitful.ca` alongside production without weakening the production secret/API-key model.
+Review target: run one audit and mark the **result-state visual treatment** KEEP / ADJUST / REJECT. Do not move to the next page type until this small homepage state is closed.
 
 ## Later implementation sequence
 1. rebuild homepage

@@ -213,3 +213,17 @@ Chronological record of setup and implementation changes for the visual-refresh 
 - Current leading diagnosis: CORS/origin policy on the Cloudflare Worker does not allow `https://preview.digitful.ca`.
 - Resolve this functional issue before moving to the next page type.
 
+### Quick Site Check CORS resolved
+- Root cause confirmed: the Cloudflare Worker `allowedOrigins` did not include `https://preview.digitful.ca`.
+- User added the preview origin to the Worker allowlist and confirmed the audit now returns results.
+- Google PageSpeed API key configuration did not need changing.
+
+### Instant Snapshot result-state visual candidate
+- Status: **PENDING USER REVIEW**.
+- Candidate source: `a0d4f2cd123077f9bfa87aa71dc9c46a16382eb4`.
+- Preview run `34987792106`: build **success**, deploy **success**.
+- Replaced the dynamically injected legacy Bootstrap result card, coloured badges and blue progress bars with an open technical-editorial report state.
+- Added square mode/grade markers, numeric `/100` scores, flat coral/teal/mustard score tracks, ruled Quick Wins and a consistent primary CTA.
+- Restyled loading/error states and removed the temporary preview diagnostic disclosure.
+- Existing Worker URL, PageSpeed categories, form IDs, strategy values and diagnostic-to-Contact handoff remain unchanged.
+- Production remains untouched.

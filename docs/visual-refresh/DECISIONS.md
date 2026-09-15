@@ -328,7 +328,28 @@ Preview run: `34983063215` — build and deploy successful.
 
 ---
 
+## D026 — Instant Snapshot result-state visual alignment
+**Status:** Candidate — pending preview KEEP / ADJUST / REJECT
+
+After the homepage structure was approved, the live Snapshot result revealed that its dynamically injected Bootstrap card/badges/progress bars still looked like the legacy site. Replace only the dynamic result/loading/error states with the approved technical-editorial instrument language.
+
+Rules:
+- no nested SaaS card inside the Snapshot instrument
+- use open rules, square status markers and flat coral/teal/mustard score bands
+- keep numeric scores and letter grades so colour is not the sole state indicator
+- preserve the existing Worker, PageSpeed categories, form IDs, radio values and Contact handoff
+- remove the temporary preview-only diagnostic disclosure now that CORS is resolved
+- production remains untouched
+
+The Cloudflare Worker itself was not changed in this repository. The user added `https://preview.digitful.ca` to its explicit `allowedOrigins`, after which the preview audit worked.
+
+Candidate source: `a0d4f2cd123077f9bfa87aa71dc9c46a16382eb4`.
+Preview run: `34987792106` — build and deploy successful.
+
+---
+
 ## Current pending decisions
+- Instant Snapshot result-state visual alignment: preview KEEP / ADJUST / REJECT.
 - Exact production token values after browser/accessibility testing.
 - Exact section compositions for non-home page types.
 - Final implementation choices for deferred blog/mobile/tablet layout observations.
