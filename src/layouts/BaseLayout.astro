@@ -144,32 +144,9 @@ const schemas = [organizationSchema, websiteSchema, ...pageSchemas].filter(Boole
     {fontSpecimen && <Font cssVariable="--font-archivo-black" />}
     <style is:global>
       :root {
-        --bs-body-font-family: var(--font-inter);
+        --font-body: var(--font-inter);
         --font-display: var(--font-barlow-condensed);
-      }
-
-      body {
-        font-family: var(--font-inter);
-      }
-
-      h1,
-      h2,
-      h3,
-      .h1,
-      .h2,
-      .h3,
-      .hero-copy h1,
-      .service-hero h1,
-      .contact-hero h1,
-      .blog-hero h1,
-      .blog-article-hero h1,
-      .section-intro h2,
-      .about-content h2,
-      .service-info h2,
-      .testimonials h2,
-      .gpt-section h2 {
-        font-family: var(--font-display), 'Arial Narrow', sans-serif;
-        font-weight: 800;
+        --bs-body-font-family: var(--font-body);
       }
     </style>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
