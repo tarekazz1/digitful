@@ -1,0 +1,281 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const wordmarks = [
+  {
+    label: 'Primary / on light',
+    src: '/assets/brand/digitful-wordmark-on-light.svg',
+    surface: 'light'
+  },
+  {
+    label: 'Primary / on dark',
+    src: '/assets/brand/digitful-wordmark-on-dark.svg',
+    surface: 'dark'
+  },
+  {
+    label: 'Monochrome / ink',
+    src: '/assets/brand/digitful-wordmark-mono-ink.svg',
+    surface: 'light'
+  },
+  {
+    label: 'Monochrome / cream',
+    src: '/assets/brand/digitful-wordmark-mono-cream.svg',
+    surface: 'dark'
+  }
+];
+---
+
+<BaseLayout
+  title="Digitful logo review"
+  description="Temporary review page for the Digitful logo system."
+  canonicalUrl="https://digitful.ca/logo-test/"
+>
+  <main class="logo-test container">
+    <header class="logo-test__intro">
+      <p class="eyebrow">Brand system / logo review</p>
+      <h1>One wordmark. Two modes. One small mark.</h1>
+      <p>
+        Final production-candidate vectors using the approved Barlow Condensed direction,
+        with the coral terminal dot retained as the brand accent.
+      </p>
+    </header>
+
+    <section class="logo-test__section" aria-labelledby="wordmark-heading">
+      <div class="logo-test__section-head">
+        <p class="logo-test__number">01</p>
+        <div>
+          <h2 id="wordmark-heading">Primary wordmark</h2>
+          <p>Use the full `digitful.` wordmark in normal navigation and brand contexts.</p>
+        </div>
+      </div>
+
+      <div class="logo-test__grid">
+        {wordmarks.map((item) => (
+          <figure class={`logo-swatch logo-swatch--${item.surface}`}>
+            <img src={item.src} alt="Digitful" width="600" height="160" />
+            <figcaption>{item.label}</figcaption>
+          </figure>
+        ))}
+      </div>
+    </section>
+
+    <section class="logo-test__section" aria-labelledby="mark-heading">
+      <div class="logo-test__section-head">
+        <p class="logo-test__number">02</p>
+        <div>
+          <h2 id="mark-heading">Standalone mark</h2>
+          <p>Reserved for favicons, app icons and genuinely small contexts.</p>
+        </div>
+      </div>
+
+      <div class="logo-test__mark-grid">
+        <figure class="logo-swatch logo-swatch--light logo-swatch--mark">
+          <img src="/assets/brand/digitful-mark-on-light.svg" alt="Digitful d mark" width="160" height="160" />
+          <figcaption>On light</figcaption>
+        </figure>
+        <figure class="logo-swatch logo-swatch--dark logo-swatch--mark">
+          <img src="/assets/brand/digitful-mark-on-dark.svg" alt="Digitful d mark" width="160" height="160" />
+          <figcaption>On dark</figcaption>
+        </figure>
+        <figure class="logo-swatch logo-swatch--icon logo-swatch--mark">
+          <img src="/favicon.svg" alt="Digitful app icon" width="160" height="160" />
+          <figcaption>Favicon / app icon</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="logo-test__section" aria-labelledby="size-heading">
+      <div class="logo-test__section-head">
+        <p class="logo-test__number">03</p>
+        <div>
+          <h2 id="size-heading">Real interface sizes</h2>
+          <p>Check legibility rather than judging the logo only at presentation scale.</p>
+        </div>
+      </div>
+
+      <div class="logo-size-test">
+        <div>
+          <span>160 px</span>
+          <img src="/assets/brand/digitful-wordmark-on-light.svg" alt="" width="160" height="43" />
+        </div>
+        <div>
+          <span>146 px</span>
+          <img src="/assets/brand/digitful-wordmark-on-light.svg" alt="" width="146" height="39" />
+        </div>
+        <div>
+          <span>104 px</span>
+          <img src="/assets/brand/digitful-wordmark-on-light.svg" alt="" width="104" height="28" />
+        </div>
+        <div>
+          <span>96 px minimum</span>
+          <img src="/assets/brand/digitful-wordmark-on-light.svg" alt="" width="96" height="26" />
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .logo-test {
+    padding-block: clamp(3rem, 7vw, 6.5rem);
+  }
+
+  .logo-test__intro {
+    max-width: 56rem;
+    margin-bottom: clamp(3rem, 7vw, 6rem);
+  }
+
+  .logo-test__intro h1 {
+    max-width: 12ch;
+    margin-top: 0.7rem;
+    font-size: clamp(3.3rem, 8vw, 7rem);
+    line-height: 0.88;
+    letter-spacing: -0.045em;
+  }
+
+  .logo-test__intro > p:last-child,
+  .logo-test__section-head p:last-child {
+    max-width: 44rem;
+    color: var(--site-text-muted);
+  }
+
+  .logo-test__section {
+    padding-block: clamp(2.5rem, 6vw, 5rem);
+    border-top: 2px solid var(--site-border);
+  }
+
+  .logo-test__section-head {
+    display: grid;
+    grid-template-columns: 4rem minmax(0, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .logo-test__section-head h2 {
+    margin: 0 0 0.35rem;
+    font-size: clamp(2.3rem, 5vw, 4.5rem);
+    line-height: 0.9;
+  }
+
+  .logo-test__number {
+    margin: 0;
+    font-family: var(--font-display), 'Arial Narrow', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--site-accent);
+  }
+
+  .logo-test__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    border: 2px solid var(--site-border);
+  }
+
+  .logo-swatch {
+    min-width: 0;
+    margin: 0;
+    padding: clamp(1.25rem, 4vw, 3rem);
+    border: 0;
+  }
+
+  .logo-swatch:nth-child(odd) {
+    border-right: 2px solid #191a1b;
+  }
+
+  .logo-swatch:nth-child(-n + 2) {
+    border-bottom: 2px solid #191a1b;
+  }
+
+  .logo-swatch img {
+    display: block;
+    width: min(100%, 34rem);
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .logo-swatch figcaption {
+    margin-top: 1.5rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+  }
+
+  .logo-swatch--light {
+    color: #191a1b;
+    background: #f0e7d5;
+  }
+
+  .logo-swatch--dark,
+  .logo-swatch--icon {
+    color: #f0e7d5;
+    background: #191a1b;
+  }
+
+  .logo-test__mark-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    border: 2px solid var(--site-border);
+  }
+
+  .logo-test__mark-grid .logo-swatch {
+    border-right: 2px solid #191a1b;
+  }
+
+  .logo-test__mark-grid .logo-swatch:last-child {
+    border-right: 0;
+  }
+
+  .logo-swatch--mark img {
+    width: min(10rem, 68%);
+  }
+
+  .logo-size-test {
+    display: grid;
+    gap: 1.25rem;
+    max-width: 30rem;
+  }
+
+  .logo-size-test > div {
+    display: grid;
+    grid-template-columns: 8rem 1fr;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--site-border-subtle);
+  }
+
+  .logo-size-test span {
+    color: var(--site-text-muted);
+    font-size: 0.82rem;
+    font-weight: 700;
+  }
+
+  html[data-theme='dark'] .logo-size-test img,
+  :global(html:not([data-theme='light'])) .logo-size-test img {
+    background: #f0e7d5;
+    padding: 0.25rem;
+  }
+
+  @media (max-width: 767.98px) {
+    .logo-test__section-head {
+      grid-template-columns: 2.5rem minmax(0, 1fr);
+    }
+
+    .logo-test__grid,
+    .logo-test__mark-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .logo-swatch:nth-child(odd),
+    .logo-test__mark-grid .logo-swatch {
+      border-right: 0;
+    }
+
+    .logo-swatch,
+    .logo-swatch:nth-child(-n + 2),
+    .logo-test__mark-grid .logo-swatch:not(:last-child) {
+      border-bottom: 2px solid #191a1b;
+    }
+  }
+</style>
