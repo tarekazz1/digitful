@@ -39,7 +39,7 @@ Main performance findings remain: render-blocking CSS/Google Fonts, Bootstrap Ic
 - production GTM stripped
 - FormSubmit blocked
 - theme-switch preview bug fixed in preview repo commit `1d0d972211ca0a1dc551adff22a1463d39ef9260`
-- preview build now uses Node 22 + `npm ci`
+- preview build uses Node 22 + `npm ci`
 
 ## Framework state
 Decision D020 is implemented on `visual-refresh`:
@@ -50,8 +50,6 @@ Decision D020 is implemented on `visual-refresh`:
 - upgrade package commit: `7d5f709337204c960a4444e905bc9d59bec2f6f8`
 - validated preview source: `ea8162f396f103cd7844f40b58ef1850ef07b884`
 - preview run `34972381758`: build success, deploy success
-
-No logo or homepage composition change was bundled into the framework upgrade.
 
 ## Approved objective fixes
 1. Contact light-mode links — KEEP — `2ebd6614be8c7ea1c0f7d841fe8111ff3ec0cc92`
@@ -86,6 +84,18 @@ Explicitly avoid glassmorphism, blue/purple AI gradients, neon glows, generic be
 Full source of truth:
 `docs/brand/VISUAL-CONSTITUTION.md`
 
+## Typography — approved
+Decision D021:
+- **Barlow Condensed 800** is the display/headline face.
+- **Inter** remains the body/interface face.
+- Both use Astro's Fonts API/self-hosted build output rather than the former external Google Fonts stylesheet.
+- Display typography stays focused on headings rather than long copy.
+- Typography implementation source: `12ad2246ad73344bbf33674bf8eb2585e7d10b2e`.
+- Preview run `34974525550`: build success, deploy success.
+
+The current preview is pinned to:
+`12ad2246ad73344bbf33674bf8eb2585e7d10b2e`
+
 ## Working logo direction
 Decision D016:
 - refined lowercase `digitful.` wordmark
@@ -119,7 +129,7 @@ Key locked lines:
 - `See what your website is making harder than it should be.`
 - `Bring the messy version.`
 
-Header CTA becomes `Talk to Digitful`.
+Header CTA: `Talk to Digitful`.
 
 Homepage content-density rule:
 **one headline + one layer of supporting information, not two.**
@@ -159,7 +169,7 @@ Approved dark-mode character:
 - no glow, glassmorphism, cyber styling or blue/purple SaaS gradients
 
 ### Homepage design freeze
-The homepage direction is now frozen across desktop, mobile, light and dark modes.
+The homepage direction is frozen across desktop, mobile, light and dark modes.
 
 Implementation may tune exact colour values, spacing, line-height and responsive line breaks for accessibility and browser fit without reopening the design. Material visual changes require a new decision.
 
@@ -177,43 +187,21 @@ Foundation changes already present:
 
 Important: the homepage has **not** yet been rebuilt to match the approved specimen. Its old card-heavy section structure remains while inheriting the new foundation layer.
 
-## Current typography comparison candidate
-Status: **PENDING USER REVIEW**.
-
-Current preview source:
-`3508f01f363d69f04d15136ce23ab35f7ddd4abe`
-
-Preview run:
-`34973409207` — build success, deploy success.
-
-Review page:
-`https://preview.digitful.ca/type-test/`
-
-What changed:
-- Astro 7 Fonts API now delivers Inter from the built site instead of using the old external Google Fonts stylesheet.
-- Inter remains the normal site/body font for this test, so normal pages should keep the same typographic appearance.
-- The temporary `/type-test/` page compares real approved Digitful copy in four display treatments:
-  1. Inter baseline
-  2. Barlow Condensed — 800
-  3. IBM Plex Sans Condensed — 700
-  4. Archivo Black — 400
-- Body copy stays in Inter for every specimen.
-- Candidate display fonts are injected only on the comparison page; none is applied site-wide yet.
-
 Production `main` / `digitful.ca` remain untouched.
 
 ## Immediate next step
-User reviews `/type-test/` in light/dark and desktop/mobile and chooses the display direction, or asks for another candidate/adjustment.
+Finalize the `digitful.` SVG logo family against the approved Barlow Condensed + Inter typography system.
 
-After typography approval:
-1. record the display-font decision
-2. apply the chosen display font cleanly through Astro Fonts API
-3. finalize the `digitful.` SVG logo family against the chosen type system
-4. rebuild the homepage structure and remove the old generic cards
-5. preview/review before adapting other page types
+Logo work should:
+1. preserve the approved lowercase `digitful.` direction with coral terminal dot
+2. produce clean SVG masters for dark, light and monochrome use
+3. produce the standalone `d.` mark for genuinely small contexts
+4. set practical sizing / clear-space rules
+5. replace the old preview logo only after the new SVG family is visually checked
+6. then rebuild the homepage structure and remove the old generic cards
 
 ## Later implementation sequence
-After display font + logo are approved:
+After logo approval:
 1. rebuild homepage against the approved specimen and locked copy
 2. adapt service page type
 3. adapt contact and thank-you page types
@@ -221,7 +209,7 @@ After display font + logo are approved:
 5. resolve deferred responsive/composition observations within those page types
 6. full desktop/mobile dark/light QA
 7. freeze visual baseline
-8. performance work: SVG icon migration, JS scoping, CSS/Bootstrap dependency map, safe CSS reduction, re-measure, then remaining font/GTM/caching work as justified
+8. performance work: SVG icon migration, JS scoping, CSS/Bootstrap dependency map, safe CSS reduction, re-measure, then remaining GTM/caching work as justified
 
 ## Functional behaviours that must not break
 Mobile navbar, Services dropdown, theme toggle, navigation, blog filters, homepage diagnostic, diagnostic→Contact handoff, contact toggles/hidden fields, production FormSubmit/thank-you redirect, logos, responsive layouts, production GTM/GA, SEO output and CLS stability.
