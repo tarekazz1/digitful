@@ -32,7 +32,7 @@ This file records approved or working decisions so the rationale survives across
 ---
 
 ## D004 — Design direction
-**Status:** Working direction approved for testing
+**Status:** Working direction only — not yet specific enough to implement
 
 **Decision:** Move Digitful away from generic AI/SaaS styling and toward a modern consulting / technical-practice feel.
 
@@ -44,12 +44,12 @@ This file records approved or working decisions so the rationale survives across
 - More hierarchy from typography, spacing and composition.
 - More deliberate page-specific composition.
 
-**What this does NOT mean:** A full redesign from scratch or wholesale visual changes without preview approval.
+**Important:** This is a broad intent, not an approved visual system. It must be refined into a specific design vision before subjective implementation work begins.
 
 ---
 
 ## D005 — Treat visual simplification as subtraction
-**Status:** Approved
+**Status:** Approved principle
 
 **Decision:** Prefer removing unnecessary decorative treatment before adding new visual elements.
 
@@ -149,16 +149,39 @@ This file records approved or working decisions so the rationale survives across
 
 ---
 
+## D014 — Settle the design vision before any subjective visual implementation
+**Status:** Approved
+
+**Decision:** Pause visual implementation experiments until the overall design vision/style is defined and approved. Do not begin with isolated facelifts such as glow removal, card reduction, radius changes, or typography tweaks before the visual system is settled.
+
+**Why:** Individual cosmetic edits can produce a cleaner version of the current style without answering the more important question of what Digitful should actually look and feel like. The visual refresh should be driven by a coherent design system and page-composition philosophy, not a sequence of disconnected cleanups.
+
+**Required design-vision work before implementation:**
+- Define the intended brand impression and personality.
+- Define the visual references and anti-references.
+- Define typography character and hierarchy.
+- Define colour strategy for dark and light modes.
+- Define surface, border, radius, shadow and depth philosophy.
+- Define icon/illustration/image language.
+- Define layout/composition principles and how pages differ from one another.
+- Define motion/interaction restraint.
+- Define what specifically makes the design feel like Digitful rather than a generic SaaS/AI template.
+- Select and approve one coherent direction before changing production-facing visual styles.
+
+---
+
 ## Pending design decisions
-The following are NOT approved visual changes yet. They are experiments to test one at a time:
-- Degree of glow/background simplification.
-- Which cards/surfaces should be removed.
-- Final radius scale.
-- Whether service/category colour coding should be reduced or retained.
-- Final SVG/icon treatment.
-- Section-spacing system, including mobile consistency.
-- Blog article hero composition and metadata spacing.
+These remain unresolved until the design vision is settled:
+- Exact visual style / design language.
+- Typography system.
+- Dark/light colour strategy.
+- Background treatment.
+- Card/surface philosophy.
+- Radius/border/shadow/depth system.
+- Service/category colour treatment.
+- Icon and illustration language.
+- Section-spacing system.
+- Blog article hero composition.
 - Blog-card height on mobile.
 - Tablet three-item grid behaviour.
-- Final typography refinements.
-- Final page-composition differences among service pages.
+- Page-composition rules and service-page differentiation.
