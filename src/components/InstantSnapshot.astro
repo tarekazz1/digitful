@@ -2,22 +2,26 @@
 // Instant growth snapshot component.
 ---
 
-<section id="snapshot" class="py-6">
+<section id="snapshot" class="home-snapshot">
   <div class="container">
     <div class="snapshot-shell">
-      <div class="row g-4 align-items-start">
-        <div class="col-lg-5">
-          <div class="section-intro mb-0">
-            <span class="eyebrow mb-3">Live diagnostic</span>
-            <h2 class="mb-3">Get a quick site read.</h2>
-            <p class="mb-0">
-              Check performance, accessibility, best practices, SEO, and agentic browsing in one pass.
-            </p>
-          </div>
+      <div class="home-snapshot__grid">
+        <div class="home-snapshot__copy">
+          <span class="eyebrow">Quick site check</span>
+          <h2>See what your website is making harder than it should be.</h2>
+          <p>
+            Run a quick check across performance, accessibility, SEO, best practices, and agentic browsing.
+          </p>
+          <span class="home-snapshot__annotation" aria-hidden="true">Technical pass / one URL</span>
         </div>
 
-        <div class="col-lg-7">
-          <form id="snapshot-form" class="d-flex flex-column gap-3">
+        <div class="home-snapshot__instrument">
+          <div class="home-snapshot__instrument-head" aria-hidden="true">
+            <span>Instant Snapshot</span>
+            <span>Instrument 01</span>
+          </div>
+
+          <form id="snapshot-form">
             <div>
               <label for="snapshot-url" class="form-label">Website URL</label>
               <input
@@ -30,24 +34,22 @@
               />
             </div>
 
-            <div class="d-flex flex-column flex-md-row align-items-md-end justify-content-between gap-3">
+            <div class="home-snapshot__controls">
               <div>
-                <label class="form-label d-block">Priority view</label>
-                <div class="d-flex flex-wrap gap-3 pt-2">
-                  <div class="form-check form-check-inline m-0">
+                <label class="form-label d-block">Check for</label>
+                <div class="home-snapshot__options">
+                  <div class="form-check m-0">
                     <input class="form-check-input" type="radio" name="strategy" id="strategyMobile" value="mobile" checked />
                     <label class="form-check-label" for="strategyMobile">Mobile</label>
                   </div>
-                  <div class="form-check form-check-inline m-0">
+                  <div class="form-check m-0">
                     <input class="form-check-input" type="radio" name="strategy" id="strategyDesktop" value="desktop" />
                     <label class="form-check-label" for="strategyDesktop">Desktop</label>
                   </div>
                 </div>
               </div>
 
-              <div>
-                <button type="submit" class="btn btn-primary btn-lg px-4">Analyze</button>
-              </div>
+              <button type="submit" class="btn btn-primary btn-lg px-4">Run the check</button>
             </div>
           </form>
 
