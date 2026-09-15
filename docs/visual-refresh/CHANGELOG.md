@@ -38,21 +38,19 @@ Chronological record of setup and implementation changes for the visual-refresh 
 - Production untouched.
 
 ### Fix 4 — Thank-you / short-page footer position
-- Status: **PENDING USER REVIEW**.
+- Status: **APPROVED — KEEP**.
 - Source commit: `939a771c5ed93cf6ca80a1de1046ddcaed247f44`.
 - Changed only `src/layouts/BaseLayout.astro`.
 - Added Bootstrap `d-flex flex-column` to `.site-shell` and `flex-grow-1` to `#main-content`.
 - Existing `.site-shell` min-height remains 100vh.
-- Purpose: short pages use remaining viewport height before the footer, keeping the footer at the bottom without changing page-specific copy or footer styling.
-- Because this affects the shared layout, a long page must be spot-checked for normal flow as part of review.
-- Preview repo pinned to the exact source commit above.
+- Short pages now use remaining viewport height before the footer, while long pages retain normal flow.
 - Preview run `34957902972` succeeded.
+- User reviewed the live preview and chose **KEEP**.
 - Production `main` / `digitful.ca` remain untouched.
 
 ### Current preview source
 - `939a771c5ed93cf6ca80a1de1046ddcaed247f44`
 
 ### Next action
-- Review Fix 4 on `preview.digitful.ca/thank-you/` in dark/light and desktop/mobile.
-- Spot-check one long page for normal flow.
-- Record KEEP / ADJUST / REJECT before starting Fix 5.
+- Begin Fix 5: Blog article hero metadata spacing.
+- Keep the change isolated, deploy the exact source commit to preview, then review before deciding KEEP / ADJUST / REJECT.
