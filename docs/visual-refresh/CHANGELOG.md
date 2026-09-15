@@ -135,9 +135,35 @@ Chronological record of setup and implementation changes for the visual-refresh 
 - Decision: D021.
 - Production remains untouched.
 
+### Future agent knowledge layer — OKF
+- User asked whether Google's Open Knowledge Format should be incorporated during the redesign.
+- The linked `knowledge-catalog/okf` copy is frozen; the canonical project is `GoogleCloudPlatform/open-knowledge-format`.
+- Decision: add a small Digitful OKF bundle **after the homepage and primary service/page architecture is stable**, when canonical concepts and URLs are known.
+- OKF will complement semantic HTML, Schema.org, sitemap and normal SEO metadata rather than replace them.
+- This work belongs before the final site-wide agent/SEO/QA pass, not during the current visual/logo phase.
+- Decision: D022.
+
+### Logo production candidate — outlined SVG system
+- Status: **PENDING USER REVIEW**.
+- Generated clean SVG outlines from Barlow Condensed ExtraBold / 800, matching the approved display direction without requiring the logo SVG itself to load a font.
+- Final-candidate wordmark: lowercase `digitful.` with coral `#E95849` terminal dot.
+- Created light/dark and monochrome wordmark masters plus standalone `d.` mark variants under `public/assets/brand/`.
+- Replaced the old blue-underline preview logo through the shared `Logo.astro` component.
+- Updated the reusable logo dimensions to the new `600 × 160` wordmark viewBox and simplified alt text to `Digitful` while retaining the approved `Digitful home` link name.
+- Replaced the favicon with an ink/cream/coral `d.` mark and generated 180, 192 and 512 px raster derivatives for touch/app contexts.
+- Updated `site.webmanifest` to the new ink theme/background and app icons.
+- Added `docs/brand/LOGO-SYSTEM.md` with usage, clear-space and minimum-size rules.
+- Added temporary review page: `/logo-test/`.
+- One-time GitHub Actions generator succeeded, then was removed from the branch.
+- Tagline lockup is intentionally not part of v1 because no exact tagline text is separately approved.
+- Decision: D023.
+- Production remains untouched.
+
 ### Current preview source
-- `12ad2246ad73344bbf33674bf8eb2585e7d10b2e`
+- Pending final logo-candidate SHA pin after documentation update.
 
 ### Next action
-- Finalize the `digitful.` SVG logo system against the approved Barlow Condensed + Inter typography system.
-- After logo approval, rebuild the homepage structure and remove the old generic card-heavy layout.
+- Deploy the exact logo-candidate source SHA to `preview.digitful.ca`.
+- Review the real header/footer plus `/logo-test/` on desktop/mobile and light/dark.
+- Mark the logo system KEEP / ADJUST / REJECT.
+- After logo KEEP, rebuild the homepage structure and remove the old generic card-heavy layout.
