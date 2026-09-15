@@ -231,23 +231,31 @@ What changed in this candidate:
 Production `main` remains untouched.
 
 ## Immediate next step
-Review the updated Instant Snapshot **result state** on `https://preview.digitful.ca/`.
+Review the **whole homepage composition refinement** at `https://preview.digitful.ca/` before moving to another page type.
 
-Current state:
-- homepage structural rebuild is approved KEEP
-- Quick Site Check CORS failure is resolved: the Worker allowlist now explicitly includes `https://preview.digitful.ca`
-- user confirmed the audit returns PageSpeed results from the preview
-- the legacy Bootstrap result card/badges/progress bars were identified as visually inconsistent with the approved design
-- dynamic loading/result/error markup has now been restyled as part of the technical-editorial instrument
-- temporary preview diagnostic disclosure was removed
+Why this pass exists:
+- zoomed-out desktop review showed excessive vertical dead space and too much repeated ruled-box geometry
+- the approved references have more graphic rhythm: circular icons, accent shapes, annotations, visual movement and more open editorial columns
+- the user explicitly wants to keep the current technical grid language while restoring those missing cues
+
+Candidate changes:
+- tighter hero and section rhythm
+- larger/more graphic hero system-map treatment with coral/mustard accents and annotations
+- inline SVG icon discs for What we fix, Services and Good fit
+- open ruled columns rather than repeated enclosing boxes
+- Good fit remains a teal split moment but is tighter and more graphic
+- mobile converts these sections to icon-led editorial rows
+- restrained hover movement with reduced-motion fallback
+- locked reduced copy remains unchanged
+- Instant Snapshot functionality and the D026 result state remain intact
 
 Candidate source:
-`a0d4f2cd123077f9bfa87aa71dc9c46a16382eb4`
+`4f7651731bad87fc9ca3b97aa0a24c2905c78517`
 
 Preview run:
-`34987792106` — build success, deploy success.
+`34989464135` — build success, deploy success.
 
-Review target: run one audit and mark the **result-state visual treatment** KEEP / ADJUST / REJECT. Do not move to the next page type until this small homepage state is closed.
+Review desktop/mobile and light/dark, preferably including a zoomed-out desktop view. Final homepage KEEP should close both this composition pass and the still-pending D026 Snapshot result-state visual treatment.
 
 ## Later implementation sequence
 1. rebuild homepage

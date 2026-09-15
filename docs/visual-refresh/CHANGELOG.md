@@ -227,3 +227,18 @@ Chronological record of setup and implementation changes for the visual-refresh 
 - Restyled loading/error states and removed the temporary preview diagnostic disclosure.
 - Existing Worker URL, PageSpeed categories, form IDs, strategy values and diagnostic-to-Contact handoff remain unchanged.
 - Production remains untouched.
+
+### Homepage whole-page composition refinement candidate
+- Status: **PENDING USER REVIEW**.
+- Candidate source: `4f7651731bad87fc9ca3b97aa0a24c2905c78517`.
+- Preview run `34989464135`: build **success**, deploy **success**.
+- Trigger: zoomed-out desktop review showed too much dead vertical space, overly mechanical repeated ruled boxes, a hero visual that was too small/UI-like, and insufficient icon/annotation/colour rhythm compared with the approved references.
+- Added `src/components/HomeIcon.astro` with lightweight inline SVG icons for homepage editorial markers.
+- Kept the current graph-paper system-map and Snapshot grid language, but strengthened the hero with accent geometry, annotations and a hard printed offset.
+- Reworked What we fix and Services into tighter open editorial rows with circular coral/mustard/teal icons and rules rather than enclosing every item.
+- Tightened Good fit and converted its supporting items to icon-led columns while retaining the teal split identity.
+- Added restrained mechanical hover movement and preserved reduced-motion behaviour.
+- Mobile now uses icon-led editorial rows rather than miniature desktop grids.
+- Locked reduced homepage copy remains unchanged; removed summary paragraphs and the decorative benefit strip were not reintroduced.
+- Snapshot Worker/API behaviour and the D026 result-state treatment remain unchanged.
+- Production remains untouched.

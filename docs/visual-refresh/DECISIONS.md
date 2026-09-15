@@ -348,7 +348,31 @@ Preview run: `34987792106` — build and deploy successful.
 
 ---
 
+## D027 — Homepage whole-page composition refinement
+**Status:** Candidate — pending preview KEEP / ADJUST / REJECT
+
+After zoomed-out desktop review, keep the approved homepage structure and reduced copy but move the implementation closer to the approved visual references. The first structural build was too static, too vertically stretched, and repeated square ruled layouts too mechanically.
+
+Candidate direction:
+- keep the technical graph-paper grid language in the hero system map and Instant Snapshot
+- tighten section height and vertical rhythm
+- restore flat coral / mustard / teal circular icon markers
+- use open columns and rules instead of enclosing every item
+- strengthen the hero visual with accent geometry, handwritten-style annotations and a printed-mechanical offset treatment
+- introduce restrained mechanical hover movement while preserving `prefers-reduced-motion`
+- preserve the locked reduced-copy hierarchy; do not reintroduce the removed summary paragraphs or decorative benefit strip
+- preserve all Snapshot functionality and the D026 result-state treatment
+- production remains untouched
+
+Implementation includes a small reusable inline-SVG homepage icon component rather than adding new icon-font dependencies.
+
+Candidate source: `4f7651731bad87fc9ca3b97aa0a24c2905c78517`.
+Preview run: `34989464135` — build and deploy successful.
+
+---
+
 ## Current pending decisions
+- Homepage whole-page composition refinement: preview KEEP / ADJUST / REJECT.
 - Instant Snapshot result-state visual alignment: preview KEEP / ADJUST / REJECT.
 - Exact production token values after browser/accessibility testing.
 - Exact section compositions for non-home page types.
