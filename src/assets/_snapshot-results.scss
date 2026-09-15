@@ -7,7 +7,7 @@
   .snapshot-report {
     margin-top: 2rem;
     padding-top: 1.75rem;
-    border-top: 2px solid var(--site-border);
+    border-top: var(--ds-rule-strong);
   }
 
   .snapshot-report__head {
@@ -29,9 +29,9 @@
 
   .snapshot-report__head h3 {
     margin: 0;
-    font-family: var(--font-display), 'Arial Narrow', sans-serif;
+    font-family: var(--type-display);
     font-size: clamp(1.9rem, 3vw, 2.5rem);
-    font-weight: 800;
+    font-weight: var(--type-display-weight);
     line-height: 0.95;
     letter-spacing: -0.035em;
   }
@@ -39,9 +39,9 @@
   .snapshot-report__mode {
     flex: 0 0 auto;
     padding: 0.4rem 0.58rem;
-    color: #191a1b;
+    color: var(--brand-ink);
     background: var(--site-accent);
-    border: 2px solid var(--site-border);
+    border: var(--ds-rule-strong);
     font-size: 0.67rem;
     font-weight: 800;
     letter-spacing: 0.08em;
@@ -56,12 +56,12 @@
   }
 
   .snapshot-report__metrics {
-    border-top: 1px solid var(--site-border-subtle);
+    border-top: var(--ds-rule-subtle);
   }
 
   .snapshot-metric {
     padding: 1rem 0;
-    border-bottom: 1px solid var(--site-border-subtle);
+    border-bottom: var(--ds-rule-subtle);
   }
 
   .snapshot-metric__head {
@@ -99,8 +99,8 @@
     height: 1.7rem;
     margin-left: 0.45rem;
     place-items: center;
-    color: #191a1b;
-    border: 1px solid var(--site-border);
+    color: var(--brand-ink);
+    border: var(--ds-rule-thin-width) solid var(--site-border);
     font-size: 0.72rem;
     font-weight: 850;
     line-height: 1;
@@ -110,7 +110,7 @@
     height: 0.62rem;
     overflow: hidden;
     background: transparent;
-    border: 1px solid var(--site-border);
+    border: var(--ds-rule-thin-width) solid var(--site-border);
   }
 
   .snapshot-metric__fill {
@@ -143,7 +143,7 @@
   .snapshot-report__wins {
     padding-top: 1.5rem;
     margin-top: 1.75rem;
-    border-top: 2px solid var(--site-border);
+    border-top: var(--ds-rule-strong);
   }
 
   .snapshot-report__wins ul {
@@ -167,8 +167,8 @@
     align-items: center;
     margin-top: 1.75rem;
     padding: 1rem 0;
-    border-top: 2px solid var(--site-border);
-    border-bottom: 1px solid var(--site-border-subtle);
+    border-top: var(--ds-rule-strong);
+    border-bottom: var(--ds-rule-subtle);
     color: var(--site-text-muted);
   }
 
@@ -187,7 +187,7 @@
     height: 0.75rem;
     flex: 0 0 auto;
     background: var(--site-accent);
-    border: 1px solid var(--site-border);
+    border: var(--ds-rule-thin-width) solid var(--site-border);
     animation: snapshot-pulse 900ms steps(2, end) infinite;
   }
 }
