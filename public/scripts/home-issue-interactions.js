@@ -3,28 +3,36 @@ document.addEventListener('DOMContentLoaded', () => {
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const activeTimers = new Map();
 
+  const setFollowUpMessagesHidden = (reveal, hidden) => {
+    reveal.querySelectorAll('[data-followup-message]').forEach((message) => {
+      message.hidden = hidden;
+    });
+  };
+
   const resetSlowFollowUp = (reveal) => {
     const timer = reveal.querySelector('[data-followup-timer]');
-    const message = reveal.querySelector('[data-followup-message]');
     const status = reveal.querySelector('[data-followup-status]');
 
     if (timer) timer.textContent = '0.000s';
-    if (message) message.hidden = true;
+    setFollowUpMessagesHidden(reveal, true);
     if (status) status.textContent = '';
+  };
+
+  const finishSlowFollowUp = (reveal) => {
+    const status = reveal.querySelector('[data-followup-status]');
+    setFollowUpMessagesHidden(reveal, false);
+    if (status) status.textContent = 'That was only a second. Some leads wait days.';
   };
 
   const runSlowFollowUp = (reveal) => {
     const timer = reveal.querySelector('[data-followup-timer]');
-    const message = reveal.querySelector('[data-followup-message]');
-    const status = reveal.querySelector('[data-followup-status]');
     const duration = 1250;
 
     resetSlowFollowUp(reveal);
 
     if (reducedMotion.matches) {
       if (timer) timer.textContent = '1.250s';
-      if (message) message.hidden = false;
-      if (status) status.textContent = 'That was only a second. Some leads wait days.';
+      finishSlowFollowUp(reveal);
       return;
     }
 
@@ -41,8 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       activeTimers.delete(reveal);
-      if (message) message.hidden = false;
-      if (status) status.textContent = 'That was only a second. Some leads wait days.';
+      finishSlowFollowUp(reveal);
     };
 
     const frame = requestAnimationFrame(tick);
