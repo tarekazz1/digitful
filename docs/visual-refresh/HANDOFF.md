@@ -57,7 +57,7 @@ Important caveat:
 Confirmed / actionable visual findings:
 1. Contact page, light mode: email and phone links become nearly invisible because they use `link-light`. **Fixed, previewed, and approved KEEP.**
 2. Logo accessible-name bug: visible light-mode logo is decorative/empty-alt while the meaningful dark logo is hidden. **Fixed, previewed, and approved KEEP.**
-3. Footer copyright text has insufficient contrast.
+3. Footer copyright text has insufficient contrast. **Candidate Fix 3 deployed to preview; pending KEEP / ADJUST / REJECT.**
 4. Thank-you page: short content leaves footer floating above the viewport bottom; consider site-shell flex layout with main filling remaining height.
 5. Blog article hero: back-link/category/meta grouping is cramped, especially mobile.
 6. Internal mobile pages use looser section spacing than the homepage because homepage has special mobile `py-6` reduction.
@@ -90,7 +90,7 @@ Do NOT batch these subjective changes. Each must be independently previewed, rev
 ### Phase 1 — objective / low-risk fixes
 1. Contact light-mode links. **APPROVED — KEEP**
 2. Logo accessible name. **APPROVED — KEEP**
-3. Footer contrast.
+3. Footer contrast. **PENDING USER REVIEW**
 4. Thank-you short-page/footer layout.
 5. Blog hero metadata spacing.
 6. Mobile section-spacing consistency.
@@ -147,7 +147,7 @@ GitHub DNS check succeeded and HTTPS is enabled.
 The preview site loads successfully at `https://preview.digitful.ca`.
 
 The preview repo currently pins the source checkout to:
-`b9f1d47898b0481bb1cadf346c46fd49dfba1033`
+`51c3f18531cd49b26df6d65b18807d9bc5867baf`
 
 Preview safeguards implemented by the preview deployment:
 - `noindex,nofollow,noarchive` meta directive added to built HTML.
@@ -219,6 +219,15 @@ Performance improvement alone is never enough to accept a change. Existing navig
 - Preview deployment run: `34956432099` — successful.
 - Production: untouched.
 
+## Current candidate
+### Fix 3 — Footer copyright contrast
+- Decision: **PENDING USER REVIEW**.
+- Source commit: `51c3f18531cd49b26df6d65b18807d9bc5867baf`.
+- Change: `src/components/Footer.astro` gives only the copyright span a dedicated class with `color: var(--site-text-muted)`.
+- Expected visible result: copyright text is slightly clearer/easier to read; no layout or broader footer redesign.
+- Preview deployment run: `34957277115`.
+- Production: untouched.
+
 ## Current status
 - Read-only technical/PageSpeed audit: complete.
 - Local desktop/mobile visual QA: complete.
@@ -230,7 +239,8 @@ Performance improvement alone is never enough to accept a change. Existing navig
 - Preview environment: ready for controlled source changes.
 - Full page-by-page baseline parity has not been manually rechecked; relevant pages will be verified during each isolated review.
 - Approved fixes: 2 (Contact light-mode links; Logo accessible name).
+- Candidate fix under review: Fix 3 (Footer copyright contrast).
 - Production code changes: NONE.
 
 ## Immediate next step
-Begin Fix 3 on `visual-refresh`: improve footer copyright contrast. Keep the change isolated, deploy only that exact commit to preview, verify the footer in dark/light mode and desktop/mobile, then decide KEEP / ADJUST / REJECT.
+Review Fix 3 on `preview.digitful.ca`: confirm the copyright text is readable but still visually secondary in dark and light mode, ideally desktop and mobile. Then decide KEEP / ADJUST / REJECT before starting Fix 4 (Thank-you short-page/footer layout).
