@@ -426,7 +426,7 @@ Production remains untouched.
 ---
 
 ## D030 — Situational interaction wit in the homepage problem section
-**Status:** Approved — KEEP
+**Status:** Superseded by D031 for presentation details
 
 Use selective self-aware interface behaviour to add personality where the interaction itself demonstrates the problem. Keep the core explanation clear and visible; the joke is optional reinforcement, not required information.
 
@@ -445,6 +445,29 @@ Interaction rules:
 
 Implementation source: `6f4d8bba8b1d76b63c2d9938cecff399553b3700`.
 Preview run: `35000985503` — build and deploy successful.
+Production remains untouched.
+
+---
+
+## D031 — Compact problem interactions after mobile review
+**Status:** Approved — KEEP
+
+Mobile review showed that the first D030 implementation made the jokes more visually important than the problems. Keep the situational-interaction concept, but compress it substantially.
+
+Approved final problem set:
+- `Unclear message` → `Exactly. Just like this one.`
+- `No clear next step` → small path stops short → `And… now what?`
+- `Slow follow-up` → compact ~1.25s millisecond timer → `That was only a second. Some leads wait days.`
+
+Presentation rules:
+- remove the standalone explanatory paragraphs from these three homepage items
+- each heading must make sense without tapping
+- the reveal is a small reward beneath the heading, not a second mini-section
+- use quiet disclosure cues; no large diamond `+ / ×` controls
+- give the timer the strongest expressive role, but keep it compact
+- preserve semantic buttons, keyboard access, screen-reader final-state announcement and reduced-motion behaviour
+- keep the jokes bespoke; shared disclosure/motion mechanics may later enter the D028 design system
+
 Production remains untouched.
 
 ---

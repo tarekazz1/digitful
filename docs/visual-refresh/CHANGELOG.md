@@ -276,3 +276,12 @@ Chronological record of setup and implementation changes for the visual-refresh 
 - These jokes remain bespoke; reusable disclosure/motion mechanics may be extracted during the D028 design-system pass.
 - Source: `6f4d8bba8b1d76b63c2d9938cecff399553b3700`. Preview run `35000985503`: build **success**, deploy **success**.
 - Production remains untouched.
+
+### Homepage interaction wit compressed after mobile review
+- **APPROVED — KEEP** as D031; supersedes D030 presentation details.
+- Removed the three standalone explanation paragraphs so the problem labels carry the meaning themselves.
+- Renamed `Leaky conversion path` to `No clear next step`.
+- Final reveals: `Exactly. Just like this one.` / `And… now what?` / compact timer → `That was only a second. Some leads wait days.`
+- Reduced reveal footprint, removed the heavy boxed disclosure cue, shrank the path demo and timer, and kept the timer as the strongest interaction.
+- Accessibility and reduced-motion behaviour remain intact.
+- Production remains untouched.

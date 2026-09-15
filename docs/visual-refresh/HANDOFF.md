@@ -152,14 +152,14 @@ Approved public growth-system model (D029):
 
 Social Media, SEO, Paid Ads, and Process Automation are work areas/capabilities used to improve that system; they are not the system stages. Avoid `acquisition`, `conversion`, and `handoff` as the primary public taxonomy.
 
-Approved interaction-wit principle (D030):
-- keep important copy clear and visible
-- use interface behaviour itself as the joke, selectively
-- `Unclear message` expands to `Exactly. Just like this one.`
-- `Leaky conversion path` visually stops short
-- `Slow follow-up` runs a ~1.25 second millisecond timer, then reveals `That was only a second.` / `Some leads wait days.`
+Approved compact interaction-wit pattern (D031; supersedes D030 presentation details):
+- remove the standalone explanation paragraphs from the three `Where things usually go wrong` items
+- `Unclear message` → `Exactly. Just like this one.`
+- `No clear next step` → compact path stops short → `And… now what?`
+- `Slow follow-up` → compact ~1.25 second timer → `That was only a second. Some leads wait days.`
+- reveals stay visually subordinate to the headings; no second mini-section and no large diamond controls
 - preserve semantic disclosure controls, keyboard access, screen-reader clarity and reduced-motion fallbacks
-- keep the joke bespoke; only shared accessibility/motion mechanics belong in the design system
+- keep the jokes bespoke; only shared accessibility/motion mechanics belong in the design system
 
 Homepage content-density rule:
 **one headline + one layer of supporting information, not two.**
@@ -254,7 +254,7 @@ Build the reusable **Digitful design system layer** from the patterns that survi
 Homepage status:
 - whole-page composition refinement: **APPROVED — KEEP** (D027)
 - Instant Snapshot result-state treatment: **APPROVED — KEEP** (D026)
-- situational homepage interaction wit: **APPROVED — KEEP** (D030)
+- compact situational homepage interaction wit: **APPROVED — KEEP** (D031)
 - final hero support line: `Marketing works better when the whole journey works together.`
 - current approved homepage source: `6f4d8bba8b1d76b63c2d9938cecff399553b3700`
 - current homepage preview run `35000985503`: build success, deploy success

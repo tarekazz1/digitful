@@ -110,31 +110,21 @@ Do **not** add a separate section-summary paragraph below this headline on the h
 
 ### Unclear message
 
-People shouldn’t need a committee meeting to understand what you do.
+No standalone explanation paragraph on the homepage.
 
-Approved optional reveal:
+Optional interaction reveal: `Exactly. Just like this one.`
 
-`Exactly. Just like this one.`
+### No clear next step
 
-### Leaky conversion path
+No standalone explanation paragraph on the homepage.
 
-Interest is useful. A clear next step is better.
-
-Approved interaction: the path animation stops short of its target, then reveals:
-
-`It was almost there.`
+Optional interaction: a small path moves toward a target but stops short, then reveals `And… now what?`
 
 ### Slow follow-up
 
-If the next step relies on memory, it probably needs a system.
+No standalone explanation paragraph on the homepage.
 
-Approved interaction: clicking starts a short millisecond timer for about 1.25 seconds, then reveals:
-
-`That was only a second.`
-
-`Some leads wait days.`
-
-The timer is demonstrative, not a real delay in access to important information. Reduced-motion users should receive the final state without the counting animation. The animated timer itself should not be repeatedly announced to screen readers; announce only the final message.
+Optional interaction: a compact millisecond timer runs for about 1.25 seconds, then reveals `That was only a second. Some leads wait days.`
 
 ---
 
