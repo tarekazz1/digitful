@@ -13,10 +13,22 @@
 - Preview pins exact source SHAs.
 - One material implementation change at a time: preview → KEEP / ADJUST / REJECT.
 
+## Authority and reconciliation — 2026-09-17
+
+The owner approved reconciliation of the supplied `DIGITFUL-FULL-HANDOFF.md` with the repository records on 2026-09-17. This section and D034–D037 record that resolution; they do not grant final KEEP to the Social Media implementation.
+
+- Latest explicit owner instructions take precedence. This handoff governs current status; `DECISIONS.md` records decisions, the brand documents govern approved identity/copy/logo, and `DELTA-LOC-INVARIANT.md` governs counting.
+- The newer `visual-refresh` → exact-SHA preview → owner KEEP / ADJUST / REJECT workflow supersedes the older local management package's phase routing and per-step preview release gates for approved visual-refresh tasks. Prefer GitHub-native repository operations for those tasks; refetch affected files, branch tip and preview pin before writes. Do not create temporary Actions workflows for routine writes.
+- The older local-only management package remains private historical material. Do not copy it into public Git history. Its obsolete branch/phase checkpoints are not current state.
+- Production changes require separate explicit owner approval. Never use the source repository's production deployment workflow for preview work.
+- The initial reconciliation was documentation-only. The owner subsequently supplied the three Social Media PNG references, explicitly authorized inspection, and approved focused responsive correction using the existing design system. D038 records that implementation and preview scope. Production publication remains separately gated.
+- Browser inspection is now explicitly authorized for this correction. Rendered checks support verification but do not replace final owner KEEP.
+- Historical approvals quoted below are retained as history. Build/deploy success, design approval and final implementation KEEP are distinct states.
+
 ## Baseline
 Production baseline: `c8fac4f78295d2576af0e92b04329f4e938c7b6f`.
 
-Mobile PSI baseline:
+Historical mobile PSI baseline (not remeasured during this reconciliation):
 - Performance 69
 - Accessibility 91
 - Best Practices 100
@@ -37,7 +49,7 @@ Main performance findings remain: render-blocking CSS/legacy font path, Bootstra
 - noindex/nofollow/noarchive
 - robots disallow-all
 - production GTM stripped
-- FormSubmit blocked
+- Ordinary FormSubmit submissions are intercepted by a JavaScript submit guard; the external form action remains. This is not a server-side block.
 - theme-switch preview bug fixed in preview repo commit `1d0d972211ca0a1dc551adff22a1463d39ef9260`
 - preview build uses Node 22 + `npm ci`
 
@@ -220,7 +232,7 @@ D028 added `src/assets/_design-system.scss` for proven repeated mechanics and vi
 
 Important ownership rules:
 - do not turn homepage compositions into rigid site-wide components
-- `HomeIcon.astro` stays homepage-specific until another page proves the exact reuse need
+- D028 originally kept `HomeIcon.astro` homepage-specific pending reuse; Social Media now imports it. Record that reuse without treating the binocular fix as permission for a component refactor.
 - D031 jokes and expressive timing remain bespoke
 - centralize a pattern only when another page will need it or centralization prevents inconsistent future changes
 
@@ -236,36 +248,48 @@ Use the canonical `GoogleCloudPlatform/open-knowledge-format` project, not the f
 
 Do not implement OKF while page copy/URLs are moving. Add a small Digitful knowledge bundle after the homepage and primary service/page architecture is stable, then validate it before the final agent/SEO/QA pass. It complements rather than replaces semantic HTML, Schema.org, sitemap and normal SEO metadata.
 
-## Current preview state
-Homepage + D028 are **APPROVED — KEEP**.
+## Preview state before responsive correction — verified 2026-09-17
 
-Current approved rendered source:
-`637d4cc84c1452ef1cdbfecda505e8f6bb9ae0ba`
+- Production `main`: `c8fac4f78295d2576af0e92b04329f4e938c7b6f`. Unchanged source does not establish current runtime health.
+- Implementation branch tip before this documentation checkpoint: `fbe9528562af61fcf40ad5b1ae97c4fb701326ce` (`tmp`). Its sole addition is `public/assets/collage/social/social-binoculars.webp`, containing literal `placeholder` text, not image data.
+- Preview source pin: `62c5f42ed473ceae11a2bf0660d9d2f826212f22`.
+- Preview run: [35094784512](https://github.com/tarekazz1/digitful-preview/actions/runs/35094784512), completed successfully. This verifies workflow completion, not visual acceptance.
+- The placeholder commit is not the preview pin and must not be deployed as-is.
+- The preview workflow consumes `source-ref.txt` but does not itself enforce SHA syntax. Exact-SHA validation remains an operator obligation.
+- Homepage + D028 remain APPROVED — KEEP at historical reviewed source `637d4cc84c1452ef1cdbfecda505e8f6bb9ae0ba`, run `35012284588`. That is not the current preview pin.
 
-Current validated preview run:
-`35012284588` — build success, deploy success.
+## Social Media status and next implementation task
 
-The preview repo remains intentionally pinned to the rendered source SHA rather than later docs-only commits.
+Social Media is already the first service-page implementation. Do not restart page selection or redesign it from zero.
 
-Current approved hero pair:
-- Headline: `Marketing works better when the parts talk to each other.`
-- Support: `What people see, where they find you, what they do next, and how you follow up.`
+Approval provenance: the owner-supplied full handoff reports approval of the mobile design/composition and exact copy, excluding decorative handwritten side notes. The owner subsequently supplied `Social_megaphone.png`, `Social_binoculars.png`, and `Social_before_after.png`; use the right-hand After panel as the mobile reference. The supplied binocular cutout differs from the compact object in that mockup; the implementation uses the supplied PNG without claiming an exact photographic match. Final rendered implementation KEEP remains pending.
 
-Production `main` remains untouched.
+Preserve the approved section grammar: photographic megaphone hero; open staggered problems; continuous teal outcome path; numbered 01–04 process; sparse mustard CTA. Only the process uses numbered steps. Preserve current copy in `src/pages/social-media.astro` at `ac39a6de5ea9c5d79d81fd332055889b9424b07a`, which matches the supplied handoff. Do not restore the removed CTA sentence or the four handwritten graphic annotations.
 
-## Immediate next step
-Begin the **service-page type** pass.
+Current correction candidate (D038):
+- Removes hidden legacy object SVGs, decorative Unicode arrows, and the invalid `.webp` placeholder.
+- Uses an exact copy of the supplied transparent `Social_binoculars.png` as `social-binoculars.png`; the earlier AVIF remains unused. This supersedes the earlier in-place AVIF plan and avoids altering the supplied artwork.
+- Restores outlined CTAs and arrow alignment; uses a staggered desktop grid to prevent problem-block overlap; keeps outcome markers and their curve in one SVG; makes connector arrows visible in dark mode; restores mobile CTA text width and places its image below the copy.
+- Retains existing stylesheet order, D028 tokens, page copy, homepage freeze, and section grammar. The mobile hero remains stacked; this correction is not a pixel-for-pixel reproduction of the mockup.
+- Local build passes with Astro 7.3.2 and six font files. Browser review covered 320/390/768/1440 widths, light and dark themes, mobile navigation and theme switching. No browser warnings/errors were captured. Final exact-SHA preview deployment and owner KEEP are separate milestones; the preview repository's `source-ref.txt` is authoritative for the deployed pin.
+- Pre-existing issue: builds produce 13 pages and warn that the blog collection is empty. The earlier successful preview run has the same warning; blog content configuration needs a separate scoped correction.
 
-Before changing code:
-- inspect the current service-page routes and shared structure (`social-media`, `seo`, `paid-ads`, `automation`)
-- determine what is truly shared versus page-specific
-- choose the first representative service page for adaptation
-- consume D028 neutral primitives where they genuinely fit; do not force homepage composition onto service pages
-- generalize `HomeIcon.astro` only if the service-page work proves the same SVG/icon treatment is actually shared
-- discuss the proposed service-page structure/copy direction before implementation; then use the same exact-SHA preview → KEEP / ADJUST / REJECT process
+Task budget:
+- N = 150, carried from the supplied handoff for the whole collage correction.
+- Baseline: `75e130dd6060c8e305011fcd99cca7b672871837`.
+- Previewed correction: 113 added / 0 removed implementation lines.
+- Final responsive candidate: 166 added / 60 removed implementation lines, net +106; N=150 PASS. Removed lines are hidden decorative SVG markup and replaced positioning/marker markup, not public copy.
+- Documentation and binary assets are excluded under `DELTA-LOC-INVARIANT.md`; do not reset the task baseline or budget per commit. Report additions, removals, net LOC and unusual churn.
+
+## Unresolved evidence and future scope
+
+- Owner review of the responsive candidate remains pending; supplied assets are now available.
+- Current Worker origin configuration and live production health were not retested; D026 records the historical preview-origin fix.
+- Photographic collage fidelity and annotation removal are Social Media refinements, not global bans on SVG diagrams or meaningful annotations.
+- Later collage adoption on other service pages is a direction for subsequent scoped work. Homepage collage changes remain proposals requiring a specific decision under D019; the homepage freeze remains active.
 
 ## Later implementation sequence
-1. adapt and validate the service page type
+1. finish Social Media and obtain final KEEP, then adapt the remaining service pages with distinct compositions
 2. adapt contact and thank-you page types
 3. adapt blog index/article while preserving editorial reading priority
 4. once homepage + primary service/page architecture and canonical URLs are stable, add the Digitful OKF bundle

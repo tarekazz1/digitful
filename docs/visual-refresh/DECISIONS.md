@@ -521,6 +521,49 @@ Production remains untouched.
 
 ---
 
-## Current pending decisions
+## Historical pending decisions at D033
 - Exact section compositions for non-home page types.
 - Final implementation choices for deferred blog/mobile/tablet layout observations.
+
+## D034 — Reconciled visual-refresh workflow and authority
+**Status:** Approved documentation reconciliation — 2026-09-17
+
+The owner approved the discrepancy-review recommendation in the current task. Use the current visual-refresh documents and exact-SHA preview → owner KEEP / ADJUST / REJECT workflow for approved redesign tasks, superseding the older private package's phase routing and individual preview release gates. Prefer GitHub-native operations, refresh current state before writes, and do not create temporary Actions workflows for routine writes. Keep the private management package out of public Git history.
+
+Production approval remains separate. This checkpoint authorizes documentation reconciliation only; it is not approval to implement the binocular change, change the preview pin, commit/push this checkpoint, or publish production. Browser automation still requires an explicit request. Owner visual review remains necessary; successful Actions runs are not KEEP.
+
+## D035 — Social Media design versus implementation status
+**Status:** Design approval reported by supplied handoff; implementation pending final KEEP
+
+Provenance: owner-supplied `DIGITFUL-FULL-HANDOFF.md`, reconciled on 2026-09-17. Earlier approval quotations are reported history, not independently recovered conversation evidence.
+
+Preserve the existing copy and composition: photographic megaphone hero, staggered open problems, continuous teal outcome path, numbered process, sparse mustard binocular CTA. Only the process uses 01–04. Do not restore removed handwritten graphic annotations or the deleted CTA sentence. The current page source matches the handoff's wording.
+
+The exact approved reference image/crop is not included in the Markdown and has not been located in the reviewed repository files. It is required before a fidelity claim. The binocular asset remains unresolved; do not describe the deployed implementation as final KEEP.
+
+## D036 — Collage correction scope and invariant
+**Status:** Carried forward from supplied handoff; verified source baseline
+
+Use transparent photographic cutouts for the Social Media objects that require reference fidelity. This refines the constitution for this page; it does not prohibit SVG icons/diagrams or meaningful annotations elsewhere. Social Media already reuses `HomeIcon.astro`; do not bundle a component generalization with the binocular fix.
+
+The task baseline remains `75e130dd6060c8e305011fcd99cca7b672871837`, with N=150. The previewed correction adds 113 implementation lines; the later invalid `.webp` adds one raw text line. Remove that placeholder during the next approved correction, replace the existing AVIF in place, and keep CSS changes minimal and evidence-driven. Documentation and binaries are excluded under the invariant. Do not reset the budget per commit.
+
+## D037 — Homepage freeze and later collage roadmap
+**Status:** Reaffirmed in approved reconciliation — 2026-09-17
+
+D019 and the approved homepage through D033 remain in force. The supplied handoff's future homepage collage direction is a proposal for a later specific decision, not approval to reopen the homepage during Social Media work. Other service pages may adopt the collage philosophy without cloning Social Media's composition. Preserve the existing contact/blog/OKF/final-QA/performance sequence.
+
+## D038 — Focused Social Media responsive correction
+**Status:** Owner authorized implementation and browser inspection; final visual KEEP pending — 2026-09-17
+
+After supplying the three Social Media PNG references, the owner approved focused responsive correction using the existing design system. This supersedes the initial documentation-only scope in D034 and resolves D035's missing-reference gap. Use the right-hand After panel as mobile guidance; retain copy, section grammar, homepage freeze, foundation tokens and layer order.
+
+The correction restores CTA outlines/alignment, replaces overlapping desktop positioning with a staggered grid, joins outcome markers to their SVG curve, fixes dark connector visibility, and gives the mobile CTA readable full-width copy with the supplied binocular cutout below it. Remove hidden legacy object SVGs and the invalid placeholder. Use the supplied PNG unchanged instead of re-encoding/replacing the AVIF; the previous AVIF is unused. This supersedes D036's asset-path detail, not its N=150 task budget. No exact match to the mockup's different binocular object is claimed.
+
+Publish the approved correction on `visual-refresh`, pin preview to its exact SHA, and obtain owner KEEP / ADJUST / REJECT. Production remains untouched. Local build and rendered verification do not grant KEEP. The existing empty-blog build warning is recorded for separate work.
+
+## Current pending items — 2026-09-17
+- Publish and review the D038 responsive candidate through the exact-SHA preview workflow.
+- Obtain final rendered Social Media KEEP / ADJUST / REJECT from the owner.
+- Record scoped decisions for remaining service pages and any future material homepage change.
+- Complete deferred cross-page visual, accessibility and functional verification; no new runtime verification is claimed by this documentation checkpoint.

@@ -6,6 +6,7 @@
     height: 0.8rem;
     margin-left: 0.65rem;
     font-size: 0;
+    flex: 0 0 1.15rem;
   }
   .social-button-arrow::before {
     content: "";
@@ -56,7 +57,7 @@
     position: absolute;
     z-index: 2;
     inset: 0;
-    background: url("/assets/collage/social/social-binoculars.avif") center / 84% auto no-repeat;
+    background: url("/assets/collage/social/social-binoculars.png") center / contain no-repeat;
     filter: drop-shadow(0.22rem 0.32rem 0 rgb(25 26 27 / 0.24));
     transform: rotate(-3deg);
   }
@@ -86,14 +87,13 @@
       transform: rotate(72deg);
     }
 
-    .social-cta__copy-block { padding-right: 34%; }
-    .social-cta__visual {
-      position: absolute;
-      top: 4.9rem;
-      right: 0.85rem;
-      width: 35%;
-      min-height: 9rem;
-      margin: 0;
+    &.social-page .social-cta__copy-block { padding-right: 0; max-width: none; }
+    &.social-page .social-cta__visual {
+      position: relative;
+      inset: auto;
+      width: min(60%, 15rem);
+      min-height: 11rem;
+      margin: 1.5rem 0 0 auto;
     }
     .social-cta__orb {
       width: 7.3rem;
@@ -101,9 +101,33 @@
       right: 0;
     }
     .social-cta__visual::after {
-      inset: 0.8rem -0.2rem auto 0;
-      height: 8rem;
-      background-size: 96% auto;
+      inset: 0;
+      background-size: contain;
     }
   }
+}
+
+// Consume existing control and typography tokens; override legacy page-theme specificity.
+html[data-theme] .social-page.page-theme .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: var(--ds-rule-width) solid var(--site-border);
+}
+html[data-theme] .social-page.page-theme .social-cta .btn { border-color: var(--brand-ink); }
+.social-page.social-page .social-good__path { padding-top: calc(10% + 1.25rem); min-height: 0; }
+.social-page.social-page .social-good__line { height: auto; aspect-ratio: 10; stroke-width: 2; }
+.social-page.social-page .social-good__stage { margin-top: 0; padding-top: 0; }
+.social-page.social-page .social-good__stage h3 { min-height: 2em; }
+@media (max-width: 767.98px) {
+  .social-page.social-page .social-problem::after { top: auto; bottom: -2.15rem; }
+  .social-page.social-page .social-good__stage p { font-size: 0.8rem; }
+  .social-page.social-page .social-cta h2 { max-width: 15ch; }
+}
+
+.social-page .social-good__line > * { vector-effect: non-scaling-stroke; }
+html[data-theme="dark"] .social-page .social-problem::after,
+html[data-theme="dark"] .social-page .social-method__step::after { filter: invert(0.9); }
+@media (max-width: 767.98px) {
+  .social-page .social-good__line circle { r: 20px; }
 }

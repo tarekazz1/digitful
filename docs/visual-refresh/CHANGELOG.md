@@ -305,3 +305,31 @@ Chronological record of setup and implementation changes for the visual-refresh 
 - Preview remains pinned to that exact rendered source; later documentation commits are intentionally not preview pins.
 - Next implementation phase: inspect and adapt the representative service-page type using D028 primitives only where they genuinely fit.
 - Production remains untouched.
+
+
+## 2026-09-17 — Documentation reconciliation (no implementation changes)
+
+Owner approved reconciling the supplied `DIGITFUL-FULL-HANDOFF.md` against repository state and the older private workflow. Earlier entries above are historical; their “current” preview and “next phase” wording is superseded by this checkpoint.
+
+Verified source history after the last recorded service-page planning step:
+- `088750d`: adapt Social Media service page.
+- `d1eba4a`: refine Social Media composition.
+- `f5f9ccc`: rebuild from approved mockup (commit description; not new proof of owner acceptance).
+- `ac39a6d`: bring mobile composition closer to approved mockup.
+- `75e130d`: add the ΔLOC invariant; baseline for the collage correction.
+- `62c5f42`: add collage AVIF assets, connector SVG, 109-line stylesheet and import; 113 added implementation lines.
+- `fbe9528`: add invalid `social-binoculars.webp` containing `placeholder`; not previewed.
+
+Preview remains pinned to `62c5f42ed473ceae11a2bf0660d9d2f826212f22`; GitHub run `35094784512` completed successfully. Production remains at `c8fac4f78295d2576af0e92b04329f4e938c7b6f`. Neither fact establishes current live visual/runtime health.
+
+Updated HANDOFF current status, workflow precedence, Social Media approval provenance, reference gap, invariant counting, and preview-safeguard qualifications. Added D034–D037 without changing historical decisions. The Social Media design approval is reported from the supplied handoff; final implementation KEEP remains pending. Homepage/constitution/copy/logo remain unchanged.
+
+Preview safeguards were inspected in source: FormSubmit is guarded by client JavaScript, and exact-SHA pin syntax is not automatically enforced. No safeguard code was changed. No browser review, build, asset correction, preview-pin change, commit, push or deployment was performed for this checkpoint.
+
+## 2026-09-17 — Social Media responsive correction candidate
+
+Owner subsequently supplied the three PNG references and authorized inspection and focused responsive correction (D038). Restored CTA outlines/alignment, removed overlapping desktop positioning, aligned SVG outcome markers with their path, restored dark-mode connector visibility, and gave the mobile CTA full-width copy with the supplied binocular PNG below it. Removed hidden legacy object SVGs and invalid placeholder; public copy, homepage, shared design-system foundations and dependencies are unchanged.
+
+Validation: `npm run build` passes with Astro 7.3.2 and six font files; `git diff --check` passes. Browser checks covered 320/390/768/1440 widths, light/dark appearance, menu and theme controls; no captured browser warnings/errors. Local Node is 24.13; preview CI uses Node 22. Existing blog-empty warnings (also present in prior preview run 35094784512) remain a separate issue. No form submission or full-site functional audit is claimed.
+
+Whole-task baseline `75e130dd6060c8e305011fcd99cca7b672871837`: 166 added / 60 removed, net +106; N=150 PASS, excluding documentation and binary assets. Final owner KEEP remains pending. Exact deployed source is recorded in the preview repository's `source-ref.txt`; production remains unchanged.
