@@ -563,7 +563,8 @@ The correction restores CTA outlines/alignment, replaces overlapping desktop pos
 Publish the approved correction on `visual-refresh`, pin preview to its exact SHA, and obtain owner KEEP / ADJUST / REJECT. Production remains untouched. Local build and rendered verification do not grant KEEP. The existing empty-blog build warning is recorded for separate work.
 
 ## Current pending items — 2026-09-17
-- Publish and review the D038 responsive candidate through the exact-SHA preview workflow.
+- D038 deployed from `cbbf870a17b055de6126e805f21fb83aab1f2ec1`; run `35226449410` build/deploy passed. Owner visual review remains pending.
+- Separately correct the existing empty-blog collection and preview script's failure to override an existing robots meta tag (`index,follow` observed live).
 - Obtain final rendered Social Media KEEP / ADJUST / REJECT from the owner.
 - Record scoped decisions for remaining service pages and any future material homepage change.
 - Complete deferred cross-page visual, accessibility and functional verification; no new runtime verification is claimed by this documentation checkpoint.

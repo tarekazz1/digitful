@@ -46,7 +46,7 @@ Main performance findings remain: render-blocking CSS/legacy font path, Bootstra
 - Namecheap CNAME: `preview` → `tarekazz1.github.io`
 - GitHub Pages via Actions
 - custom domain/DNS/HTTPS working
-- noindex/nofollow/noarchive
+- Intended noindex/nofollow/noarchive: live Social Media inspection on 2026-09-17 found `index,follow` retained. The preview preparation script only inserts robots metadata when absent; fix separately before treating this safeguard as verified.
 - robots disallow-all
 - production GTM stripped
 - Ordinary FormSubmit submissions are intercepted by a JavaScript submit guard; the external form action remains. This is not a server-side block.
@@ -247,6 +247,14 @@ Decision D022.
 Use the canonical `GoogleCloudPlatform/open-knowledge-format` project, not the frozen `knowledge-catalog/okf` snapshot.
 
 Do not implement OKF while page copy/URLs are moving. Add a small Digitful knowledge bundle after the homepage and primary service/page architecture is stable, then validate it before the final agent/SEO/QA pass. It complements rather than replaces semantic HTML, Schema.org, sitemap and normal SEO metadata.
+
+## Current preview — responsive correction deployed 2026-09-17
+
+- Exact rendered source: `cbbf870a17b055de6126e805f21fb83aab1f2ec1` on `visual-refresh`.
+- Preview pin commit: `cb57a4b53c65064d74f97e6d46200dd71da3f8f4`.
+- [Run 35226449410](https://github.com/tarekazz1/digitful-preview/actions/runs/35226449410): build and deploy success. Live desktop light and mobile dark rendering verified; four outcome markers, supplied PNG, outlined CTAs and no horizontal document overflow confirmed. Browser logs captured no warnings/errors.
+- Owner KEEP / ADJUST / REJECT remains pending. Subsequent documentation-only commits do not change the preview pin.
+- Separate existing issues: empty blog collection; preview robots metadata is not overridden when already present. No production publication occurred.
 
 ## Preview state before responsive correction — verified 2026-09-17
 
