@@ -554,17 +554,17 @@ The task baseline remains `75e130dd6060c8e305011fcd99cca7b672871837`, with N=150
 D019 and the approved homepage through D033 remain in force. The supplied handoff's future homepage collage direction is a proposal for a later specific decision, not approval to reopen the homepage during Social Media work. Other service pages may adopt the collage philosophy without cloning Social Media's composition. Preserve the existing contact/blog/OKF/final-QA/performance sequence.
 
 ## D038 — Focused Social Media responsive correction
-**Status:** Owner authorized implementation and browser inspection; final visual KEEP pending — 2026-09-17
+**Status:** APPROVED — KEEP by owner — 2026-09-17
 
 After supplying the three Social Media PNG references, the owner approved focused responsive correction using the existing design system. This supersedes the initial documentation-only scope in D034 and resolves D035's missing-reference gap. Use the right-hand After panel as mobile guidance; retain copy, section grammar, homepage freeze, foundation tokens and layer order.
 
 The correction restores CTA outlines/alignment, replaces overlapping desktop positioning with a staggered grid, joins outcome markers to their SVG curve, fixes dark connector visibility, and gives the mobile CTA readable full-width copy with the supplied binocular cutout below it. Remove hidden legacy object SVGs and the invalid placeholder. Use the supplied PNG unchanged instead of re-encoding/replacing the AVIF; the previous AVIF is unused. This supersedes D036's asset-path detail, not its N=150 task budget. No exact match to the mockup's different binocular object is claimed.
 
-Publish the approved correction on `visual-refresh`, pin preview to its exact SHA, and obtain owner KEEP / ADJUST / REJECT. Production remains untouched. Local build and rendered verification do not grant KEEP. The existing empty-blog build warning is recorded for separate work.
+The owner explicitly replied “keep” after reviewing the correction preview. Accepted rendered source: `cbbf870a17b055de6126e805f21fb83aab1f2ec1`, preview run `35226449410`. This is visual acceptance of D038; production remains untouched. The empty-blog and preview robots findings remain separate open work.
 
 ## Current pending items — 2026-09-17
-- D038 deployed from `cbbf870a17b055de6126e805f21fb83aab1f2ec1`; run `35226449410` build/deploy passed. Owner visual review remains pending.
+- D038 is APPROVED — KEEP at rendered source `cbbf870a17b055de6126e805f21fb83aab1f2ec1`; preview pin remains unchanged.
 - Separately correct the existing empty-blog collection and preview script's failure to override an existing robots meta tag (`index,follow` observed live).
-- Obtain final rendered Social Media KEEP / ADJUST / REJECT from the owner.
+- Social Media visual acceptance is complete; continue remaining work only within its approved scope.
 - Record scoped decisions for remaining service pages and any future material homepage change.
 - Complete deferred cross-page visual, accessibility and functional verification; no new runtime verification is claimed by this documentation checkpoint.

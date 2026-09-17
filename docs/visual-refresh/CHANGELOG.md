@@ -335,3 +335,7 @@ Validation: `npm run build` passes with Astro 7.3.2 and six font files; `git dif
 Whole-task baseline `75e130dd6060c8e305011fcd99cca7b672871837`: 166 added / 60 removed, net +106; N=150 PASS, excluding documentation and binary assets. Final owner KEEP remains pending. Exact deployed source is recorded in the preview repository's `source-ref.txt`; production remains unchanged.
 
 Deployment evidence: source `cbbf870a17b055de6126e805f21fb83aab1f2ec1`, preview pin commit `cb57a4b53c65064d74f97e6d46200dd71da3f8f4`, run `35226449410` build/deploy success. Live desktop light/mobile dark rendering verified. Follow-up documentation does not move the pin. Live inspection also exposed a pre-existing preview safeguard gap: `prepare-preview.mjs` inserts robots metadata only when absent, so this page retains `index,follow`. Record for separate correction; do not claim verified noindex.
+
+## 2026-09-17 — Social Media APPROVED — KEEP
+
+Owner explicitly replied “keep” to the responsive correction preview. D038 is accepted at rendered source `cbbf870a17b055de6126e805f21fb83aab1f2ec1`, successful preview run `35226449410`. Updated current handoff/decision status. Preview pin and production remain unchanged. Empty-blog and preview robots findings remain open separate work.

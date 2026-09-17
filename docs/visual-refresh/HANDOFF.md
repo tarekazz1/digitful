@@ -253,7 +253,7 @@ Do not implement OKF while page copy/URLs are moving. Add a small Digitful knowl
 - Exact rendered source: `cbbf870a17b055de6126e805f21fb83aab1f2ec1` on `visual-refresh`.
 - Preview pin commit: `cb57a4b53c65064d74f97e6d46200dd71da3f8f4`.
 - [Run 35226449410](https://github.com/tarekazz1/digitful-preview/actions/runs/35226449410): build and deploy success. Live desktop light and mobile dark rendering verified; four outcome markers, supplied PNG, outlined CTAs and no horizontal document overflow confirmed. Browser logs captured no warnings/errors.
-- Owner KEEP / ADJUST / REJECT remains pending. Subsequent documentation-only commits do not change the preview pin.
+- Owner explicitly approved KEEP on 2026-09-17 for this rendered source (D038). Subsequent documentation-only commits do not change the preview pin.
 - Separate existing issues: empty blog collection; preview robots metadata is not overridden when already present. No production publication occurred.
 
 ## Preview state before responsive correction — verified 2026-09-17
@@ -270,7 +270,7 @@ Do not implement OKF while page copy/URLs are moving. Add a small Digitful knowl
 
 Social Media is already the first service-page implementation. Do not restart page selection or redesign it from zero.
 
-Approval provenance: the owner-supplied full handoff reports approval of the mobile design/composition and exact copy, excluding decorative handwritten side notes. The owner subsequently supplied `Social_megaphone.png`, `Social_binoculars.png`, and `Social_before_after.png`; use the right-hand After panel as the mobile reference. The supplied binocular cutout differs from the compact object in that mockup; the implementation uses the supplied PNG without claiming an exact photographic match. Final rendered implementation KEEP remains pending.
+Approval provenance: the owner-supplied full handoff reports approval of the mobile design/composition and exact copy, excluding decorative handwritten side notes. The owner subsequently supplied `Social_megaphone.png`, `Social_binoculars.png`, and `Social_before_after.png`; use the right-hand After panel as the mobile reference. The supplied binocular cutout differs from the compact object in that mockup; the implementation uses the supplied PNG without claiming an exact photographic match. Final rendered implementation is APPROVED — KEEP under D038 at source `cbbf870a17b055de6126e805f21fb83aab1f2ec1`.
 
 Preserve the approved section grammar: photographic megaphone hero; open staggered problems; continuous teal outcome path; numbered 01–04 process; sparse mustard CTA. Only the process uses numbered steps. Preserve current copy in `src/pages/social-media.astro` at `ac39a6de5ea9c5d79d81fd332055889b9424b07a`, which matches the supplied handoff. Do not restore the removed CTA sentence or the four handwritten graphic annotations.
 
@@ -291,13 +291,13 @@ Task budget:
 
 ## Unresolved evidence and future scope
 
-- Owner review of the responsive candidate remains pending; supplied assets are now available.
+- Social Media responsive correction is APPROVED — KEEP; separate blog and preview robots findings remain open.
 - Current Worker origin configuration and live production health were not retested; D026 records the historical preview-origin fix.
 - Photographic collage fidelity and annotation removal are Social Media refinements, not global bans on SVG diagrams or meaningful annotations.
 - Later collage adoption on other service pages is a direction for subsequent scoped work. Homepage collage changes remain proposals requiring a specific decision under D019; the homepage freeze remains active.
 
 ## Later implementation sequence
-1. finish Social Media and obtain final KEEP, then adapt the remaining service pages with distinct compositions
+1. Social Media is APPROVED — KEEP (D038); next adapt remaining service pages with distinct compositions under scoped approval
 2. adapt contact and thank-you page types
 3. adapt blog index/article while preserving editorial reading priority
 4. once homepage + primary service/page architecture and canonical URLs are stable, add the Digitful OKF bundle
