@@ -1,24 +1,24 @@
 # Implementation queue and review prompts
 
-Prepared 2026-09-18. Only the two tasks below are queued. This document prepares work; it does not start implementation or grant production approval.
+Updated 2026-09-18. Tasks 01 and 02 are accepted. Task 03 records the approved homepage direction; its N and missing assets must be resolved before implementation. No production approval is granted.
 
 ## Roles and workflow
 
 - Implementing agent: investigate, make the bounded change, verify it, and submit evidence.
 - Managing agent (this task): maintain scope and records, independently review the diff and evidence, request corrections, and record technical signoff. Do not implement the fixes on the worker's behalf.
 - Owner: sets each task's N, authorizes execution, retains visual KEEP / ADJUST / REJECT and production-release approval. Technical signoff is not production permission.
-- Work sequentially: task 01, review/signoff, then task 02. Do not combine unrelated fixes. No new task boards, workflows, dependencies, or management framework.
+- Work sequentially: tasks 01 and 02 are closed; task 03 is next. Do not combine unrelated fixes. No new task boards, workflows, dependencies, or management framework.
 - Status values: Planned → In progress → Ready for review → Changes requested / Signed off. Record exact reviewed SHAs and remaining issues, not just “done.”
 
-## Mandatory rules for both prompts
+## Mandatory rules for all prompts
 
-When assigning a task, provide this entire file or instruct the implementing agent to read it before the selected task. These rules are part of both prompts.
+When assigning a task, provide this entire file or instruct the implementing agent to read it before the selected task. These rules are part of every prompt.
 
 1. Read the current `HANDOFF.md`, `DECISIONS.md`, `CHANGELOG.md`, and `DELTA-LOC-INVARIANT.md` in this directory, plus `docs/brand/VISUAL-CONSTITUTION.md` and `docs/brand/HOMEPAGE-COPY.md`. Follow applicable repository instructions. Current explicit owner instructions prevail; D034 records why the older private phase workflow is superseded. Do not copy private management material into public Git history.
 2. Recheck repository, branch, working tree, remote tip, affected files and preview pin before writes. Preserve other people's changes. Source implementation belongs on `tarekazz1/digitful:visual-refresh`; preview configuration belongs in `tarekazz1/digitful-preview`. Prefer GitHub-native operations; never create temporary Actions workflows to perform routine writes.
 3. N must be explicitly set by the owner before implementation. The suggested budgets below are proposals, not approved limits. Do not reuse Social Media's completed N=150 allowance. Record the actual starting SHA in every changed repository and count the whole task across repositories/commits, including verification code. Exclude only what the invariant permits. Report additions, removals, net and PASS/FAIL; stop before exceeding N.
-4. Preserve the approved homepage, Social Media D038, existing design-system foundations, copy, URLs, content, forms, tracking and functional behavior outside the stated fix. No visual redesign, broad cleanup, dependency upgrade or unrelated repair. Do not invent requirements or claim checks that were not run. Escalate a material conflict or required scope expansion to the managing agent/owner.
-5. Use the existing exact-source-SHA preview process for authorized execution. Never push/merge source to production `main`, invoke production deployment, or alter production configuration. Task 01 keeps the source pin unchanged; task 02 changes it only to the verified implementation SHA. Keep build success, rendered verification, technical signoff and owner acceptance distinct. Respect the handoff's browser-authorization requirement; prior permission for the Social Media correction is not blanket permission for all future tasks.
+4. Preserve the approved homepage except for the explicit task 03 exception below, Social Media D038, existing design-system foundations, copy, URLs, content, forms, tracking and functional behavior outside the stated fix. No visual redesign outside the selected task, broad cleanup, dependency upgrade or unrelated repair. Do not invent requirements or claim checks that were not run. Escalate a material conflict or required scope expansion to the managing agent/owner.
+5. Use the existing exact-source-SHA preview process for authorized execution. Never push/merge source to production `main`, invoke production deployment, or alter production configuration. Task 01 keeps the source pin unchanged; tasks 02 and 03 change it only to the verified implementation SHA. Keep build success, rendered verification, technical signoff and owner acceptance distinct. Respect the handoff's browser-authorization requirement; prior permission for the Social Media correction is not blanket permission for all future tasks.
 6. Verify proportionately. Use small, meaningful checks; no testing framework or refactor solely for these fixes. Use the repository's pinned Astro version and Node 22 CI workflow. Report environment differences and warnings. Stop task-owned preview servers and remove disposable artifacts after verification; preserve review evidence.
 7. Return: root cause; exact changed paths and SHAs; concise diff summary; commands/results; relevant preview run and URL; acceptance evidence; N/added/removed/net/PASS; known limitations. Update the project handoff/changelog with facts and mark Ready for review, never self-award managing-agent signoff or owner KEEP.
 
@@ -75,6 +75,43 @@ Review/signoff: Technical signoff granted on 2026-09-18 following independent di
 
 For each task, inspect the actual candidate diff and its exact baseline; check the mandatory rules and acceptance evidence; reproduce the consequential checks where access permits. Return either **Changes requested** with specific defects or **Technical signoff** with reviewed SHA(s), evidence and limitations. Keep unresolved findings open. Update this file and the project records without implementing follow-on work or treating signoff as production permission.
 
+## 03 — Homepage composition and responsive collage
 
+Status: Direction approved by owner; implementation awaits owner-set N and suitable laptop/scenery assets. Tasks 01 and 02 have technical signoff and owner KEEP.
 
+Suggested model: **Sol, medium effort**. The composition is specified; the work is bounded Astro/CSS layout and rendered verification. Escalate effort only for a concrete unresolved problem.
 
+Proposed N: **200 net implementation lines**, including verification code and preview-pin configuration; not yet approved. Measure from the actual source and preview baselines recorded before edits, across the whole task.
+
+### Implementation prompt
+
+Read this entire queue and all mandatory project rules. Execute task 03 only once its N is explicitly authorized. The owner approved reopening the homepage for this bounded composition pass; this is a specific exception to the homepage freeze, not permission to redesign shared foundations or other pages. The latest owner direction replaces the earlier proposal to retain a connected four-step hero diagram.
+
+First inspect the current preview, source, and supplied early homepage mockup. Preserve the current approved headline, support copy, section copy, navigation, CTAs, links and interactions; the mockup's older wording is not copy authority. Do not restore its old navigation, benefit checklist or removed explanations.
+
+Asset prerequisite:
+- Reuse the existing transparent binocular PNG at public/assets/collage/social/social-binoculars.png, unchanged; do not use the superseded AVIF or modify Social Media.
+- Suitable separate laptop and scenery assets have not been confirmed. The only supplied homepage reference is the full-page early mockup. Ask the owner for the originals if unavailable; a screenshot crop, newly generated substitute or invented stock image is not approved. Do not ship placeholders. Asset editing/generation or extraction requires an explicit owner decision.
+- The desired laptop asset must have no screen slogan. Neither laptop nor scenery may have embedded text, handwritten annotations, sticky notes, decorative labels or captions on or next to the artwork. Normal page copy belongs in a clearly separate content area. If available originals contain text, report that before altering them.
+- Inspect alpha, resolution and actual appearance. Preserve proportions. Background treatment follows the reference's restrained coral behind the laptop and teal/mustard behind the landscape using existing brand tokens; avoid duplicating shapes already present in the supplied asset.
+
+Implement these changes:
+1. Hero: replace the boxed four-step signal-map illustration with the laptop and its background. The old illustrated map and its decorative annotations are superseded; do not move its four tiles elsewhere or invent replacement prose. Keep approved hero copy and CTAs. On desktop use separate text/art columns. On mobile place headline, copy and CTAs first, then compact artwork; do not recreate the previous approximately 1,552px hero at 390px width.
+2. Services: replace narrow desktop table-like columns with open editorial rows and light separators, giving descriptions readable width. Preserve all four links and their copy. Keep mobile rows clear, with arrows separated from text.
+3. Good-fit section: remove the enclosing rectangle and tall internal columns. Retain teal emphasis with three open statements and the existing content. Remove decorative handwritten-style annotation from the revised art/composition; no new text.
+4. Site check: retain a clear boundary around the working tool but reduce the oversized introduction and decorative instrument labels. Reuse small binoculars beside the heading on desktop, above the input area on mobile. They are decorative and secondary: do not squeeze controls or create a large extra block. Preserve the field labels, radio controls, validation, loading/results/error behavior and diagnostic-to-contact handoff. Do not change APIs or request behavior.
+5. Closing CTA: incorporate scenery with its background beside the existing CTA content on desktop. On mobile make it a shallow image band with a deliberate crop that preserves the recognizable landscape. Keep copy and buttons on their own clear surface, never over the image. No graphic captions or annotations.
+
+Keep the palette, type system, button outlines, useful section rules and problem-section interactions. Reuse current foundations and tokens; do not add another override stylesheet, dependency or generic component framework. Edit existing homepage-owned styles; any site-check styling must remain bounded to this approved composition. No changes to Social Media, blog content/loading, preview safeguards or production.
+
+### Responsive and functional acceptance
+
+- Capture before/after views at 390px and a desktop width; verify 320, 390, 768, 1024 and 1440px in both light and dark themes for overflow, overlap, reading order, legible copy, correct image proportions and clear controls.
+- Report before/after mobile hero height at the same width, fonts and state. Reduce excess illustration height through composition, not smaller body text, clipped copy or hidden essential content.
+- Reserve image space with dimensions/aspect ratio; use fit/crop intentionally and keep artwork secondary to CTAs. Decorative images use empty alt text or equivalent semantics. Avoid unnecessary mobile image payload; document any asset optimization rather than silently replacing artwork.
+- Verify navigation, theme switching, problem reveals and site-check controls. Check diagnostic states with existing safe verification methods; do not submit personal data or trigger paid/external diagnostics without the relevant authorization. Report any untested live flow honestly.
+- Successful pinned-version build and diff checks; exact-SHA preview deployment; verify homepage and a Social Media/blog sample for unintended shared-style regressions and retained preview noindex safeguards.
+- No framework error overlay, relevant console errors, horizontal overflow or new visible layout jumps at checked sizes. Provide screenshots and actual measured evidence; build success alone is insufficient.
+- Return paths, source/preview baseline and final SHAs, workflow URL, asset provenance, responsive/functional results, limitations, and N/added/removed/net/PASS. Update records to Ready for review. Managing-agent technical signoff and owner KEEP remain separate.
+
+Review/signoff: not started. Do not broaden this task into the next service page or production publication.
