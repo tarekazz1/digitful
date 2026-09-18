@@ -387,3 +387,11 @@ Owner explicitly replied **KEEP** after the managing-agent report that both task
 - Task 02: source implementation af00d12bf5b5b7b3f1d449cadf4c811dd5f5b990; preview pin commit d9fd03f8909a842b52b5960fc344b8a21b3bf02a; reviewed run 35315415672. This preview retains task 01 safeguards.
 
 Acceptance does not change the recorded verification limitations or grant production publication. No implementation, preview-pin or production changes were made in recording this decision. No further implementation task has been assigned.
+
+## 2026-09-19 — Task 03 homepage composition — Ready for review
+
+Recomposed the homepage at source `277facb676814e4a72146f53f2de0b9e25fa8fe9` with the approved laptop hero, open services/good-fit sections, the existing unchanged binoculars beside the site check, and scenery beside the closing CTA. Preserved approved copy, links, form contracts and homepage interactions. With the owner's explicit direction after confirming standalone originals were unavailable, isolated transparent laptop and scenery assets from the supplied clearer mockup; removed all embedded mockup wording, labels and annotations from those assets.
+
+Preview baseline `d9fd03f8909a842b52b5960fc344b8a21b3bf02a`; exact source-pin commit `b9fd297ffe6a89a59781499adc5c989ad08474b8`; workflow [35343714484](https://github.com/tarekazz1/digitful-preview/actions/runs/35343714484) succeeded. Live verification at 320/390/768/1024/1440 in both themes found zero horizontal overflow, no framework overlay and no console/page errors. Navigation, theme switching, all three problem interactions, site-check selection and native invalid-URL blocking passed. Social Media/blog samples and preview safeguards remained intact. The 390px hero is 989.921875px versus 1552.21875px before, down 562.296875px (36.2%); 1440px remains 844.921875px.
+
+Task-wide implementation/config accounting: 206 added / 402 removed / net -196 against approved N=200, PASS, excluding binary assets and documentation. The build generated 23 pages with only the existing 232 repetitive Bootstrap/Dart Sass deprecation warnings. Safe verification did not invoke paid/external diagnostics. Production remains unchanged at `c8fac4f78295d2576af0e92b04329f4e938c7b6f`. Technical signoff and owner KEEP remain pending.

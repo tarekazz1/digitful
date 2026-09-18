@@ -1,6 +1,6 @@
 # Implementation queue and review prompts
 
-Updated 2026-09-18. Tasks 01 and 02 are accepted. Task 03 records the approved homepage direction; its N and missing assets must be resolved before implementation. No production approval is granted.
+Updated 2026-09-19. Tasks 01 and 02 are accepted. Task 03 is Ready for review at the exact preview pin recorded below. No production approval is granted.
 
 ## Roles and workflow
 
@@ -77,11 +77,11 @@ For each task, inspect the actual candidate diff and its exact baseline; check t
 
 ## 03 — Homepage composition and responsive collage
 
-Status: Direction approved by owner; implementation awaits owner-set N and suitable laptop/scenery assets. Tasks 01 and 02 have technical signoff and owner KEEP.
+Status: **Ready for review.** Implementation and exact-SHA preview verification are complete; managing-agent technical signoff and owner KEEP remain pending. Tasks 01 and 02 have technical signoff and owner KEEP.
 
 Suggested model: **Sol, medium effort**. The composition is specified; the work is bounded Astro/CSS layout and rendered verification. Escalate effort only for a concrete unresolved problem.
 
-Proposed N: **200 net implementation lines**, including verification code and preview-pin configuration; not yet approved. Measure from the actual source and preview baselines recorded before edits, across the whole task.
+Approved N: **200 net implementation lines**, including verification code and preview-pin configuration. Measure from the actual source and preview baselines recorded before edits, across the whole task.
 
 ### Implementation prompt
 
@@ -114,4 +114,8 @@ Keep the palette, type system, button outlines, useful section rules and problem
 - No framework error overlay, relevant console errors, horizontal overflow or new visible layout jumps at checked sizes. Provide screenshots and actual measured evidence; build success alone is insufficient.
 - Return paths, source/preview baseline and final SHAs, workflow URL, asset provenance, responsive/functional results, limitations, and N/added/removed/net/PASS. Update records to Ready for review. Managing-agent technical signoff and owner KEEP remain separate.
 
-Review/signoff: not started. Do not broaden this task into the next service page or production publication.
+Review/signoff: **Ready for review** at rendered source `277facb676814e4a72146f53f2de0b9e25fa8fe9`, pinned by preview commit `b9fd297ffe6a89a59781499adc5c989ad08474b8`; workflow run [35343714484](https://github.com/tarekazz1/digitful-preview/actions/runs/35343714484) completed successfully. Owner authorized N=200, responsive browser verification, the exact-SHA workflow, and deriving the laptop/scenery from the supplied clearer mockup because standalone originals were unavailable. The resulting transparent PNGs contain no embedded copy or annotations; the existing binocular PNG remains unchanged.
+
+Browser verification covered 320/390/768/1024/1440 in light and dark themes on the deployed preview. All ten states had zero horizontal overflow, correct intrinsic artwork dimensions, no framework overlay, and no console/page errors. Navigation expansion, theme switching, all three problem interactions, site-check radio selection and native invalid-URL blocking passed. Social Media, blog index and a representative article retained zero overflow, no browser errors and the preview safeguards. Every sampled page had `noindex,nofollow,noarchive`, no GTM, and the form guard; `robots.txt` remained disallow-all. At 390px the hero reduced from 1552.21875px to 989.921875px (562.296875px / 36.2%); at 1440px it remained 844.921875px.
+
+Task-wide implementation/config delta from source baseline `0cdd60cbbbcc1703db81de0a044369831210d95d` and preview baseline `d9fd03f8909a842b52b5960fc344b8a21b3bf02a`: **206 added / 402 removed / net -196; N=200 PASS**. Binary assets and documentation are excluded under the invariant. The local pinned build generated 23 pages; the existing 232 repetitive Bootstrap/Dart Sass deprecation warnings remain. Safe browser methods verified validation and result-adjacent controls without submitting personal data or invoking a paid/external diagnostic. Production remains unchanged at `c8fac4f78295d2576af0e92b04329f4e938c7b6f`. Do not broaden this task into the next service page or production publication.
