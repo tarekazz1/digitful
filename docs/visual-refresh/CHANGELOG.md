@@ -372,3 +372,18 @@ Source baseline `daacaf79e8882733d46c19ef802c415e77606668`; implementation `af00
 Validation: clean local build generated 23 pages with ten article routes and no empty-collection warning. Expected/generated URLs match 10/10; index order is descending by date; all ten current entries are `draft: false`; unchanged index/static-path filters still exclude drafts. Fifty-seven internal article links resolve. Representative output retains article body, canonical, BlogPosting/date metadata and navigation. Live desktop/mobile Playwright checks covered the index, SEO filter (three results), article navigation, console and mobile overflow; no browser warnings/errors or horizontal overflow were observed. Live homepage/blog/article metadata retains task 01's single `noindex,nofollow,noarchive` tag, GTM removal, form guard and disallow-all `robots.txt`. Production `main` remains unchanged.
 
 Task-wide implementation/config delta across both repositories: 3 added / 2 removed, net +1; N=150 PASS. Local Node was 24.13.0; the successful preview workflow used the required Node 22. Remaining build output is the pre-existing Bootstrap/Dart Sass deprecation set (232 repetitive warnings omitted). No current `draft: true` fixture exists, and external destinations were not crawled. Technical signoff and owner KEEP remain pending.
+
+## Task 02 managing-agent technical signoff — 2026-09-18
+
+**Signed off** at source af00d12bf5b5b7b3f1d449cadf4c811dd5f5b990 and preview pin commit d9fd03f8909a842b52b5960fc344b8a21b3bf02a, superseding task 02 review-pending status. Independently reviewed the baseline-to-implementation source diff (only the loader import/declaration) and preview diff (only source-ref.txt), verified successful workflow 35315415672, rebuilt 23 pages without the empty-collection warning, and compared 10/10 article routes. All ten generated article bodies are present and internal article links resolve. All ten live article URLs return successfully with canonical/BlogPosting metadata, one correct preview robots tag, no production GTM ID and the form guard; representative live article body headings match the source. Unchanged consumers retain draft filtering and newest-first ordering. Production main remains c8fac4f78295d2576af0e92b04329f4e938c7b6f.
+
+Task-wide accounting independently confirmed: 3 added / 2 removed / net +1; N=150 PASS. No implementation edits by managing agent. Browser filter, mobile overflow and console checks remain implementing-agent evidence, not independently repeated browser checks. No runtime draft:true fixture was added; external links were not crawled. These limitations do not block this bounded loader correction. Owner KEEP and production approval remain separate; no next implementation task is authorized by this signoff.
+
+## Owner acceptance — Tasks 01 and 02 — 2026-09-18
+
+Owner explicitly replied **KEEP** after the managing-agent report that both tasks had technical signoff. Both tasks are now accepted and closed, superseding their earlier owner-acceptance-pending statuses.
+
+- Task 01: preview safeguard implementation f471bbc36c464c92819eb459e62eb7b3cafa1c1b; reviewed run 35313241957.
+- Task 02: source implementation af00d12bf5b5b7b3f1d449cadf4c811dd5f5b990; preview pin commit d9fd03f8909a842b52b5960fc344b8a21b3bf02a; reviewed run 35315415672. This preview retains task 01 safeguards.
+
+Acceptance does not change the recorded verification limitations or grant production publication. No implementation, preview-pin or production changes were made in recording this decision. No further implementation task has been assigned.

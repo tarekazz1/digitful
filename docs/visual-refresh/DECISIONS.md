@@ -568,3 +568,12 @@ The owner explicitly replied “keep” after reviewing the correction preview. 
 - Social Media visual acceptance is complete; continue remaining work only within its approved scope.
 - Record scoped decisions for remaining service pages and any future material homepage change.
 - Complete deferred cross-page visual, accessibility and functional verification; no new runtime verification is claimed by this documentation checkpoint.
+
+## Owner acceptance — Tasks 01 and 02 — 2026-09-18
+
+Owner explicitly replied **KEEP** after the managing-agent report that both tasks had technical signoff. Both tasks are now accepted and closed, superseding their earlier owner-acceptance-pending statuses.
+
+- Task 01: preview safeguard implementation f471bbc36c464c92819eb459e62eb7b3cafa1c1b; reviewed run 35313241957.
+- Task 02: source implementation af00d12bf5b5b7b3f1d449cadf4c811dd5f5b990; preview pin commit d9fd03f8909a842b52b5960fc344b8a21b3bf02a; reviewed run 35315415672. This preview retains task 01 safeguards.
+
+Acceptance does not change the recorded verification limitations or grant production publication. No implementation, preview-pin or production changes were made in recording this decision. No further implementation task has been assigned.
