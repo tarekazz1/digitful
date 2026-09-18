@@ -248,13 +248,13 @@ Use the canonical `GoogleCloudPlatform/open-knowledge-format` project, not the f
 
 Do not implement OKF while page copy/URLs are moving. Add a small Digitful knowledge bundle after the homepage and primary service/page architecture is stable, then validate it before the final agent/SEO/QA pass. It complements rather than replaces semantic HTML, Schema.org, sitemap and normal SEO metadata.
 
-## Current preview — responsive correction deployed 2026-09-17
+## Current preview — task 02 blog restoration candidate deployed 2026-09-18
 
-- Exact rendered source: `cbbf870a17b055de6126e805f21fb83aab1f2ec1` on `visual-refresh`.
-- Preview pin commit: `cb57a4b53c65064d74f97e6d46200dd71da3f8f4`.
-- [Run 35226449410](https://github.com/tarekazz1/digitful-preview/actions/runs/35226449410): build and deploy success. Live desktop light and mobile dark rendering verified; four outcome markers, supplied PNG, outlined CTAs and no horizontal document overflow confirmed. Browser logs captured no warnings/errors.
-- Owner explicitly approved KEEP on 2026-09-17 for this rendered source (D038). Subsequent documentation-only commits do not change the preview pin.
-- Separate existing issues: empty blog collection; preview robots metadata is not overridden when already present. No production publication occurred.
+- Exact rendered source: `af00d12bf5b5b7b3f1d449cadf4c811dd5f5b990` on `visual-refresh`.
+- Preview pin commit: `d9fd03f8909a842b52b5960fc344b8a21b3bf02a`.
+- [Run 35315415672](https://github.com/tarekazz1/digitful-preview/actions/runs/35315415672): build and deploy success on Node 22. Live index/article and desktop/mobile checks confirm the ten expected article routes, date order, SEO filter, representative body/metadata, clean console and no mobile overflow.
+- Task 02 is Ready for review. Managing-agent technical signoff and owner KEEP remain separate and pending; the earlier D038 Social Media KEEP remains historical and unchanged.
+- Task 01's signed-off preview safeguards remain effective on restored article pages. Production was not modified.
 
 ## Preview state before responsive correction — verified 2026-09-17
 
@@ -291,7 +291,7 @@ Task budget:
 
 ## Unresolved evidence and future scope
 
-- Social Media responsive correction is APPROVED — KEEP; separate blog and preview robots findings remain open.
+- Social Media responsive correction remains APPROVED — KEEP. The blog and preview robots findings now have separate verified candidates; task 02 is Ready for review, while its managing-agent technical signoff and owner KEEP remain pending.
 - Current Worker origin configuration and live production health were not retested; D026 records the historical preview-origin fix.
 - Photographic collage fidelity and annotation removal are Social Media refinements, not global bans on SVG diagrams or meaningful annotations.
 - Later collage adoption on other service pages is a direction for subsequent scoped work. Homepage collage changes remain proposals requiring a specific decision under D019; the homepage freeze remains active.
@@ -308,3 +308,29 @@ Task budget:
 
 ## Functional behaviours that must not break
 Mobile navbar, Services dropdown, theme toggle, navigation, blog filters, homepage diagnostic, diagnostic→Contact handoff, contact toggles/hidden fields, production FormSubmit/thank-you redirect, logos, responsive layouts, production GTM/GA, SEO output and CLS stability.
+
+## Task 01 status — preview robots metadata correction
+
+Ready for managing-agent review after corrective revision. The preview-only `scripts/prepare-preview.mjs` correction is committed in `tarekazz1/digitful-preview` at `f471bbc36c464c92819eb459e62eb7b3cafa1c1b`. It replaces existing robots meta tags with exactly one `noindex,nofollow,noarchive` tag, removes duplicates, preserves unrelated metadata including empty `name` attributes, and is idempotent. Regression fixture: `scripts/fixtures/empty-name-meta.html`. The source pin remains `cbbf870a17b055de6126e805f21fb83aab1f2ec1`; task 01 did not change production source or configuration.
+
+Evidence: targeted fixture/syntax checks passed, including empty-name preservation and idempotence; preview workflow [35313241957](https://github.com/tarekazz1/digitful-preview/actions/runs/35313241957) build and deploy succeeded; live homepage, Social Media and blog index each have one correct robots tag, no `index,follow`, no production GTM ID, and the preview form guard; `robots.txt` remains disallow-all. Cumulative delta from the original baseline is 14 added / 2 removed, net +12 against N=60 (PASS). Owner KEEP and managing-agent technical signoff are pending. Do not begin task 02.
+
+Managing-agent review (2026-09-18): **Changes requested**, superseding Ready for review above. Standard absent/index/noindex/duplicate fixtures and repeat-run idempotence pass; live metadata/safeguards and workflow success independently confirmed. The candidate crashes on unrelated empty-name metadata: <meta name="" content="unused"> triggers undefined.toLowerCase() at line 45. Request a bounded normalization guard and regression check; no implementation edits made by reviewer. Technical signoff withheld; task 02 remains pending.
+
+Corrective revision (2026-09-18): empty-name metadata is preserved unchanged through optional capture normalization. Regression fixture and standard/idempotence checks pass. Revised preview commit `f471bbc36c464c92819eb459e62eb7b3cafa1c1b`; workflow `35313241957` build/deploy success. Whole-task delta from original baseline is 14 added / 2 removed, net +12; N=60 PASS. Technical signoff and owner KEEP remain pending.
+
+## Task 01 managing-agent technical signoff — 2026-09-18
+
+**Signed off** at preview commit f471bbc36c464c92819eb459e62eb7b3cafa1c1b, superseding the earlier Changes requested and review-pending statuses for task 01. Independently ran the exact revised script against five fixtures: absent robots tag, existing index, mixed-case/attribute-order noindex, duplicates and empty-name metadata. All pass, preserve unrelated metadata/theme script, and remain identical on second execution. Independently confirmed live homepage/Social Media/blog robots tags, GTM removal, form guard, disallow-all robots.txt, and successful workflow 35313241957 at the reviewed SHA. Source pin remains cbbf870a17b055de6126e805f21fb83aab1f2ec1; production main remains c8fac4f78295d2576af0e92b04329f4e938c7b6f.
+
+Counting correction: direct baseline-to-final diff cb57a4b53c65064d74f97e6d46200dd71da3f8f4..f471bbc36c464c92819eb459e62eb7b3cafa1c1b is **13 added / 1 removed / net +12; N=60 PASS**, including the one-line regression fixture. The reported 14/2 summed intermediate commit churn; its net was correct. No implementation edits made by reviewer. Owner acceptance remains separate; task 02 technical dependency is cleared, but execution/N authorization is still required.
+
+## Task 02 status — Ready for review — 2026-09-18
+
+Root cause confirmed: after the Astro 7.3.2 upgrade, `src/content.config.ts` still used the legacy `type: 'content'` declaration, so the ten Markdown files under `src/content/blog/` were not registered in the `blog` collection. The source candidate replaces that declaration with Astro's installed `glob` loader while preserving the existing schema and consumers.
+
+Source baseline `daacaf79e8882733d46c19ef802c415e77606668`; implementation commit `af00d12bf5b5b7b3f1d449cadf4c811dd5f5b990` on `visual-refresh`. Preview baseline/task 01 signoff `f471bbc36c464c92819eb459e62eb7b3cafa1c1b`; preview pin commit `d9fd03f8909a842b52b5960fc344b8a21b3bf02a`. Preview workflow [35315415672](https://github.com/tarekazz1/digitful-preview/actions/runs/35315415672) completed successfully with Node 22 and deployed to `https://preview.digitful.ca`.
+
+Acceptance evidence: clean build produces 23 pages, including ten expected article routes, with no empty-collection warning. Expected and generated article counts/URLs match 10/10; all current entries are explicitly `draft: false`, and the unchanged draft filters remain in both index and article generation. Index order remains descending by `publishDate`; live SEO filtering shows three matching articles. Fifty-seven internal article links resolve to generated pages. Representative articles retain their H1, canonical URL, BlogPosting/date metadata, long-form body and internal navigation. Live desktop/mobile checks found no browser warnings/errors or mobile horizontal overflow. Homepage, blog index and representative article each have exactly one `noindex,nofollow,noarchive` robots tag, no production GTM ID, and the preview form guard; `robots.txt` remains disallow-all. Production `main` remains `c8fac4f78295d2576af0e92b04329f4e938c7b6f`.
+
+Task-wide implementation/config delta across source and preview repositories: 3 added / 2 removed, net +1; N=150 PASS. Documentation is excluded by the invariant. Known limitations: no `draft: true` file exists in the current inventory, so draft behavior is supported by the preserved filters rather than a runtime draft fixture; external destinations were not crawled. Managing-agent technical signoff and owner KEEP remain pending; production was not modified.

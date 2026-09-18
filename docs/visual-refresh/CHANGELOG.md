@@ -339,3 +339,36 @@ Deployment evidence: source `cbbf870a17b055de6126e805f21fb83aab1f2ec1`, preview 
 ## 2026-09-17 — Social Media APPROVED — KEEP
 
 Owner explicitly replied “keep” to the responsive correction preview. D038 is accepted at rendered source `cbbf870a17b055de6126e805f21fb83aab1f2ec1`, successful preview run `35226449410`. Updated current handoff/decision status. Preview pin and production remain unchanged. Empty-blog and preview robots findings remain open separate work.
+
+## 2026-09-18 — Task 01 preview robots metadata correction — Ready for review
+
+Confirmed the preview defect: `scripts/prepare-preview.mjs` preserved existing robots tags because it only inserted metadata when `name="robots"` was absent. Updated the preview-only script to replace existing robots tags, remove duplicate robots tags, preserve unrelated metadata, and remain idempotent without adding a parser dependency.
+
+Validation: Node syntax check and targeted fixtures passed for no tag, existing `index,follow`, existing mixed-case `noindex`, duplicate tags, unrelated metadata, and second-run idempotence. Preview commit `caf10698905cc344c1e35b0f6ad1376632ff9a54`; source pin remained `cbbf870a17b055de6126e805f21fb83aab1f2ec1`. Workflow run `35310472701`: build success, deploy success. Live homepage, Social Media and blog index each returned exactly one `noindex,nofollow,noarchive` tag; GTM was absent, the FormSubmit preview guard remained, and `robots.txt` returned `User-agent: *` / `Disallow: /`.
+
+Task-wide implementation delta: 11 added / 1 removed, net +10; N=60 PASS. Production remains untouched. Owner KEEP and managing-agent technical signoff remain pending.
+
+### Managing-agent review — Changes requested
+Independently reviewed preview diff cb57a4b..caf1069 (one script, +11/-1), workflow 35310472701, live homepage/Social Media/blog index metadata, GTM removal, form guard and robots.txt. Standard fixtures and second-run idempotence pass. Reproduced a failure on unrelated <meta name="" content="unused">: TypeError at prepare-preview.mjs:45 aborts preparation. Requested a small guard and regression fixture from the implementing agent; no fix implemented here. Production main remains c8fac4f78295d2576af0e92b04329f4e938c7b6f. Technical signoff withheld.
+
+### Task 01 corrective revision — empty-name metadata
+
+Handled empty `name` attributes without altering those tags by safely normalizing the optional capture. Added `scripts/fixtures/empty-name-meta.html` and reran syntax, the four standard fixtures, empty-name preservation, unrelated metadata preservation, and second-run idempotence.
+
+Revised preview commit: `f471bbc36c464c92819eb459e62eb7b3cafa1c1b`. Preview workflow [35313241957](https://github.com/tarekazz1/digitful-preview/actions/runs/35313241957) build/deploy succeeded. The source pin remains `cbbf870a17b055de6126e805f21fb83aab1f2ec1`; live homepage, Social Media and blog index checks still show one correct robots tag, no contradictory directive, no GTM, and the form guard; `robots.txt` remains disallow-all. Whole-task delta from the original baseline: 14 added / 2 removed, net +12; N=60 PASS. Technical signoff and owner KEEP remain pending. Do not begin task 02.
+
+## Task 01 managing-agent technical signoff — 2026-09-18
+
+**Signed off** at preview commit f471bbc36c464c92819eb459e62eb7b3cafa1c1b, superseding the earlier Changes requested and review-pending statuses for task 01. Independently ran the exact revised script against five fixtures: absent robots tag, existing index, mixed-case/attribute-order noindex, duplicates and empty-name metadata. All pass, preserve unrelated metadata/theme script, and remain identical on second execution. Independently confirmed live homepage/Social Media/blog robots tags, GTM removal, form guard, disallow-all robots.txt, and successful workflow 35313241957 at the reviewed SHA. Source pin remains cbbf870a17b055de6126e805f21fb83aab1f2ec1; production main remains c8fac4f78295d2576af0e92b04329f4e938c7b6f.
+
+Counting correction: direct baseline-to-final diff cb57a4b53c65064d74f97e6d46200dd71da3f8f4..f471bbc36c464c92819eb459e62eb7b3cafa1c1b is **13 added / 1 removed / net +12; N=60 PASS**, including the one-line regression fixture. The reported 14/2 summed intermediate commit churn; its net was correct. No implementation edits made by reviewer. Owner acceptance remains separate; task 02 technical dependency is cleared, but execution/N authorization is still required.
+
+## 2026-09-18 — Task 02 restore blog collection and article generation — Ready for review
+
+Confirmed that Astro 7.3.2 did not register the ten Markdown posts because `src/content.config.ts` still declared the legacy `type: 'content'` collection. Replaced only that declaration with Astro's installed `glob` loader and kept the existing schema, content files, consumers, routes, draft filters, metadata and design unchanged.
+
+Source baseline `daacaf79e8882733d46c19ef802c415e77606668`; implementation `af00d12bf5b5b7b3f1d449cadf4c811dd5f5b990`. Preview baseline/task 01 signoff `f471bbc36c464c92819eb459e62eb7b3cafa1c1b`; preview pin `d9fd03f8909a842b52b5960fc344b8a21b3bf02a`. Workflow [35315415672](https://github.com/tarekazz1/digitful-preview/actions/runs/35315415672) built and deployed successfully on Node 22.
+
+Validation: clean local build generated 23 pages with ten article routes and no empty-collection warning. Expected/generated URLs match 10/10; index order is descending by date; all ten current entries are `draft: false`; unchanged index/static-path filters still exclude drafts. Fifty-seven internal article links resolve. Representative output retains article body, canonical, BlogPosting/date metadata and navigation. Live desktop/mobile Playwright checks covered the index, SEO filter (three results), article navigation, console and mobile overflow; no browser warnings/errors or horizontal overflow were observed. Live homepage/blog/article metadata retains task 01's single `noindex,nofollow,noarchive` tag, GTM removal, form guard and disallow-all `robots.txt`. Production `main` remains unchanged.
+
+Task-wide implementation/config delta across both repositories: 3 added / 2 removed, net +1; N=150 PASS. Local Node was 24.13.0; the successful preview workflow used the required Node 22. Remaining build output is the pre-existing Bootstrap/Dart Sass deprecation set (232 repetitive warnings omitted). No current `draft: true` fixture exists, and external destinations were not crawled. Technical signoff and owner KEEP remain pending.
