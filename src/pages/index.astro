@@ -15,28 +15,34 @@ const pageCanonical = 'https://digitful.ca/';
     <section class="home-hero">
       <div class="container">
         <div class="home-hero__grid">
-          <div class="home-hero__copy">
-            <span class="eyebrow">Growth systems</span>
-            <h1>Marketing works better when the parts talk to each other.</h1>
-            <p class="lead">
-              What people see, where they find you, what they do next, and how you follow up.
-            </p>
-            <div class="home-hero__actions">
-              <a href="/contact/" class="btn btn-primary btn-lg px-4">Tell us what’s stuck</a>
-              <a href="/what-we-build/" class="btn btn-link-quiet btn-lg">See what we build</a>
-            </div>
-          </div>
+          <h1 class="home-hero__headline">Marketing works better when the parts talk to each other.</h1>
+          <p class="home-hero__lead">
+            What people see, where they find you, what they do next, and how you follow up.
+          </p>
 
           <div class="home-hero__visual" aria-hidden="true">
             <span class="home-hero__orb"></span>
-            <img
-              src="/assets/collage/home/home-laptop.png"
-              width="1536"
-              height="1024"
-              alt=""
-              class="home-hero__laptop"
-              decoding="async"
-            />
+            <picture class="home-hero__picture">
+              <source
+                type="image/webp"
+                srcset="/assets/collage/home/home-laptop-768.webp 768w, /assets/collage/home/home-laptop-1536.webp 1536w"
+                sizes="(max-width: 767px) 42vw, (max-width: 991px) 38vw, 50vw"
+              />
+              <img
+                src="/assets/collage/home/home-laptop.png"
+                width="1536"
+                height="1024"
+                alt=""
+                class="home-hero__laptop"
+                decoding="async"
+                fetchpriority="high"
+              />
+            </picture>
+          </div>
+
+          <div class="home-hero__actions">
+            <a href="/contact/" class="btn btn-primary btn-lg px-4">Tell us what’s stuck</a>
+            <a href="/what-we-build/" class="btn btn-link-quiet btn-lg">See what we build</a>
           </div>
         </div>
       </div>
@@ -183,7 +189,21 @@ const pageCanonical = 'https://digitful.ca/';
         <div class="home-cta__grid">
           <div class="home-cta__art" aria-hidden="true">
             <span class="home-cta__sun"></span>
-            <img src="/assets/collage/home/home-scenery.png" width="2079" height="756" alt="" decoding="async" />
+            <picture>
+              <source
+                type="image/webp"
+                srcset="/assets/collage/home/home-scenery-1040.webp 1040w, /assets/collage/home/home-scenery-2079.webp 2079w"
+                sizes="(max-width: 991px) 110vw, 61vw"
+              />
+              <img
+                src="/assets/collage/home/home-scenery.png"
+                width="2079"
+                height="756"
+                alt=""
+                decoding="async"
+                loading="lazy"
+              />
+            </picture>
           </div>
           <div class="home-cta__content">
             <header>
