@@ -411,3 +411,12 @@ Confirmed from deployed computed styles that the desktop services selector had h
 Source `a84e537a8cedd33d046223962d0f9ac54569fdcf`; exact-SHA preview pin `843ba9b34daec17c0bf2ff66dbc3edc02de4bb12`; workflow [35453486507](https://github.com/tarekazz1/digitful-preview/actions/runs/35453486507) succeeded. Live light/dark checks covered 320/360/375/390/414/480/600/768/1024/1440 after full-page scrolling and image decode. No service clipping/overlap, laptop overlap, horizontal overflow, framework overlay, console errors or page errors occurred; all lazy artwork loaded. At 390px services reduced to 739.09375px with 254px descriptions. Site-check hierarchy, binoculars, scenery, copy, interactions and lazy loading remain unchanged.
 
 Cumulative Task 03 accounting is 329 added / 433 removed / net -104 against N=200, PASS. Production is unchanged; no technical signoff or owner KEEP is awarded.
+
+## 2026-09-19 — Task 03 site-check hierarchy correction — Ready for review
+
+- Removed the obsolete site-check explanatory paragraph and its residual spacing.
+- Preserved one supporting line under the `Quick site check` heading, plus the binoculars and all existing form controls/behavior.
+- Source implementation: `360f218949e693df8cd7aea8fe301a5056f614f9`.
+- Exact-SHA preview pin: `423813d0376abe27c7fdb5e6c66cb559e7720095`; successful workflow [35457359961](https://github.com/tarekazz1/digitful-preview/actions/runs/35457359961).
+- Verified and visually inspected the deployed full page and site-check close-ups at 390/1024/1440 in light and dark after scrolling and decoding lazy artwork: exact hierarchy, one supporting-text occurrence, zero deleted-sentence occurrences, loaded scenery/binoculars, no overlap/overflow, and no console/page errors.
+- Cumulative Task 03 implementation/config delta: 326 added / 441 removed / net -115; N=200 PASS. Production unchanged; technical signoff and owner KEEP remain pending.
