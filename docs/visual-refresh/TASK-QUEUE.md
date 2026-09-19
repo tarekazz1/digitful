@@ -1,6 +1,6 @@
 # Implementation queue and review prompts
 
-Updated 2026-09-19. Tasks 01 and 02 are accepted. Task 03 corrections are Ready for review at the exact preview pin recorded below. No production approval is granted.
+Updated 2026-09-19. Tasks 01, 02 and 03 are accepted. Task 03 has managing-agent technical signoff and owner KEEP at the final revision recorded below. No production approval is granted.
 
 ## Roles and workflow
 
@@ -77,7 +77,7 @@ For each task, inspect the actual candidate diff and its exact baseline; check t
 
 ## 03 — Homepage composition and responsive collage
 
-Status: **Ready for review.** The corrective scope below is implemented and exact-SHA preview verification is complete. Managing-agent technical signoff and owner KEEP remain pending. Tasks 01 and 02 have technical signoff and owner KEEP.
+Status: **Signed off. Owner APPROVED — KEEP.** Final accepted source: `360f218949e693df8cd7aea8fe301a5056f614f9`. See the acceptance record below. Earlier submission entries are historical.
 
 Suggested model: **Sol, medium effort**. The composition is specified; the work is bounded Astro/CSS layout and rendered verification. Escalate effort only for a concrete unresolved problem.
 
@@ -165,3 +165,11 @@ The owner's latest instruction supersedes the earlier requirement to retain the 
 Exact-SHA preview pin `423813d0376abe27c7fdb5e6c66cb559e7720095`; workflow [35457359961](https://github.com/tarekazz1/digitful-preview/actions/runs/35457359961) succeeded. Deployed Chromium verification at 390, 1024 and 1440px in both themes scrolled through the full page, awaited every image load/decode, and visually inspected the hero, services, site check and scenery. All six states have the exact heading/support hierarchy, one supporting-text occurrence, zero removed-sentence occurrences, loaded binoculars/scenery, no binocular/text overlap, zero horizontal overflow, and no console/page errors. Problem reveal, desktop radio selection and native invalid-URL blocking pass; Social Media/blog samples retain the preview safeguards.
 
 Cumulative Task 03 implementation/config delta from original source baseline `0cdd60cbbbcc1703db81de0a044369831210d95d` and preview baseline `d9fd03f8909a842b52b5960fc344b8a21b3bf02a`: **326 added / 441 removed / net -115; N=200 PASS**. Binary assets, documentation and external evidence are excluded under the invariant. Production remains unchanged at `c8fac4f78295d2576af0e92b04329f4e938c7b6f`. Managing-agent technical signoff and owner KEEP remain pending.
+
+## Task 03 acceptance — managing-agent signoff and owner KEEP — 2026-09-19
+
+Owner explicitly approved KEEP. Task 03 is closed at source `360f218949e693df8cd7aea8fe301a5056f614f9`, with reported exact-SHA preview pin `423813d0376abe27c7fdb5e6c66cb559e7720095` and successful workflow `35457359961`. Managing-agent technical signoff follows source-diff review and independent inspection of all six submitted full-page screenshots and six site-check close-ups at 390/1024/1440px in light/dark themes. The approved site-check heading/supporting text is present and the obsolete explanatory paragraph is removed. Services, hero, binoculars and scenery were reviewed on mobile and desktop.
+
+Verification boundary: live interaction, deployment, safeguard and build results are implementing-agent evidence; the managing agent did not independently rerun those checks or reverify the live pin. The dark desktop close-up discrepancy was not treated as a live defect: the full-page capture showed the button label, and the owner confirmed it was visible. No unresolved defect was identified in the accepted review scope. Reported cumulative accounting: 326 added / 441 removed / net -115; N=200 PASS.
+
+This acceptance supersedes earlier pending-review statuses for Task 03. Owner KEEP and technical signoff do not authorize production release. No production change was performed in recording this acceptance.

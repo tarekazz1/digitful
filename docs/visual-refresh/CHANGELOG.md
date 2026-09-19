@@ -420,3 +420,11 @@ Cumulative Task 03 accounting is 329 added / 433 removed / net -104 against N=20
 - Exact-SHA preview pin: `423813d0376abe27c7fdb5e6c66cb559e7720095`; successful workflow [35457359961](https://github.com/tarekazz1/digitful-preview/actions/runs/35457359961).
 - Verified and visually inspected the deployed full page and site-check close-ups at 390/1024/1440 in light and dark after scrolling and decoding lazy artwork: exact hierarchy, one supporting-text occurrence, zero deleted-sentence occurrences, loaded scenery/binoculars, no overlap/overflow, and no console/page errors.
 - Cumulative Task 03 implementation/config delta: 326 added / 441 removed / net -115; N=200 PASS. Production unchanged; technical signoff and owner KEEP remain pending.
+
+## Task 03 acceptance — managing-agent signoff and owner KEEP — 2026-09-19
+
+Owner explicitly approved KEEP. Task 03 is closed at source `360f218949e693df8cd7aea8fe301a5056f614f9`, with reported exact-SHA preview pin `423813d0376abe27c7fdb5e6c66cb559e7720095` and successful workflow `35457359961`. Managing-agent technical signoff follows source-diff review and independent inspection of all six submitted full-page screenshots and six site-check close-ups at 390/1024/1440px in light/dark themes. The approved site-check heading/supporting text is present and the obsolete explanatory paragraph is removed. Services, hero, binoculars and scenery were reviewed on mobile and desktop.
+
+Verification boundary: live interaction, deployment, safeguard and build results are implementing-agent evidence; the managing agent did not independently rerun those checks or reverify the live pin. The dark desktop close-up discrepancy was not treated as a live defect: the full-page capture showed the button label, and the owner confirmed it was visible. No unresolved defect was identified in the accepted review scope. Reported cumulative accounting: 326 added / 441 removed / net -115; N=200 PASS.
+
+This acceptance supersedes earlier pending-review statuses for Task 03. Owner KEEP and technical signoff do not authorize production release. No production change was performed in recording this acceptance.
