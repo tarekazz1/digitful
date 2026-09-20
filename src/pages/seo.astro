@@ -4,53 +4,311 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle = 'SEO - Digitful';
 const pageDescription = 'Digitful approaches SEO as a demand capture and clarity system, not a reporting exercise.';
 const pageCanonical = 'https://digitful.ca/seo/';
+
+const journey = [
+  { name: 'Search', lead: 'They look. You’re nowhere to be found.', detail: 'Your competitors appear. Your business doesn’t.' },
+  { name: 'Discover', lead: 'They find you. But not what they need.', detail: 'Your page doesn’t answer their questions or make your offer clear.' },
+  { name: 'Act', lead: 'They visit. Nothing happens next.', detail: 'The next step is unclear, so the opportunity slips away.' }
+];
+
+const workAreas = [
+  { title: 'Search intent & content', summary: 'Get found for what your customers are actually looking for.', detail: 'Keyword strategy · Content · AI-assisted discovery' },
+  { title: 'Technical foundations', summary: 'Make your website easier for search engines to find, understand, and index.', detail: 'Technical SEO · Site structure · Page performance' },
+  { title: 'Local visibility', summary: 'Help nearby customers find your business when they need it.', detail: 'Local SEO · Google Business Profile · Local pages' },
+  { title: 'Measurement & improvement', summary: 'Know which searches bring useful visitors and what they do next.', detail: 'Search performance · Analytics · Visitor actions' }
+];
+
+const problems = [
+  { label: 'People cannot find my business', response: 'Your business may be missing from the searches that matter. Start with your search visibility and the pages customers need to find.' },
+  { label: 'My website gets traffic but few inquiries', response: 'The issue may be who visits, what they find, or what happens next. Find out where that connection breaks.' },
+  { label: 'My Google Business Profile needs attention', response: 'Your local presence may be making it harder for nearby customers to find or contact you. Start with your profile and local visibility.' },
+  { label: 'I am not sure what is working', response: 'Connect your search traffic to what visitors actually do. See what’s creating useful interest and what needs attention.' }
+];
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription} canonicalUrl={pageCanonical}>
-  <main class="page-theme page-theme--seo">
-    <section class="service-hero text-center">
-      <div class="container">
-        <span class="eyebrow mb-3">SEO</span>
-        <h1 class="mb-3">SEO built for the right buyer.</h1>
-        <p class="lead mb-0">
-          Ranking matters only if the traffic helps the business.
-        </p>
+  <main class="page-theme page-theme--seo seo-page">
+    <section class="seo-hero" aria-labelledby="seo-hero-heading">
+      <div class="container seo-hero__inner">
+        <h1 id="seo-hero-heading">
+          Your next <span class="seo-hero__line">customer is searching.</span>{' '}
+          <span class="seo-hero__line">Can they find you?</span>
+        </h1>
+
+        <figure class="seo-hero__art">
+          <picture>
+            <source media="(max-width: 767.98px)" type="image/avif" srcset="/assets/collage/seo/seo-loupe-mobile.avif" />
+            <source media="(max-width: 767.98px)" type="image/webp" srcset="/assets/collage/seo/seo-loupe-mobile.webp" />
+            <source type="image/avif" srcset="/assets/collage/seo/seo-loupe-desktop.avif" />
+            <source type="image/webp" srcset="/assets/collage/seo/seo-loupe-desktop.webp" />
+            <img
+              src="/assets/collage/seo/seo-loupe-desktop.webp"
+              width="1200"
+              height="939"
+              alt="Editorial collage of a magnifying glass enlarging the letters SEO."
+              loading="eager"
+              decoding="async"
+              fetchpriority="high"
+            />
+          </picture>
+        </figure>
+
+        <div class="seo-hero__intro">
+          <p>People are looking for answers, products, and services. AI-powered search tools are helping them discover their options. We help your business become easier to find, understand, and choose, wherever the search begins.</p>
+          <a class="btn btn-primary btn-lg seo-cta" href="/contact/?service=seo">Tell us what’s stuck →</a>
+        </div>
       </div>
     </section>
 
-    <section class="service-info py-6">
+    <section class="seo-section seo-journey" aria-labelledby="seo-journey-heading">
       <div class="container">
-        <div class="service-shell">
-          <h2 class="mb-3">What we solve</h2>
-          <ul>
-            <li>You rank, but for searches that do not lead to serious intent.</li>
-            <li>Traffic arrives, but the next step is confusing or weak.</li>
-            <li>Reports look active, but the business impact is still missing.</li>
-          </ul>
-
-          <div class="process-grid mt-4">
-            <div class="process-step">
-              <span class="process-step__number">01</span>
-              <strong>Audit intent</strong>
-              <p class="mb-0">Map search demand to business goals.</p>
-            </div>
-            <div class="process-step">
-              <span class="process-step__number">02</span>
-              <strong>Fix structure</strong>
-              <p class="mb-0">Improve hierarchy, metadata, and crawl clarity.</p>
-            </div>
-            <div class="process-step">
-              <span class="process-step__number">03</span>
-              <strong>Strengthen conversion</strong>
-              <p class="mb-0">Make sure the page turns intent into action.</p>
-            </div>
-          </div>
-
-          <div class="mt-4">
-            <a href="/contact/?service=seo" class="btn btn-primary btn-lg px-4">Talk SEO</a>
-          </div>
+        <header class="seo-section__head seo-journey__head">
+          <span class="eyebrow">The search journey</span>
+          <h2 id="seo-journey-heading">Getting found is only the beginning.</h2>
+        </header>
+        <div class="seo-journey__track" role="list">
+          {journey.map((step, index) => (
+            <article class="seo-journey__step" role="listitem">
+              <span class="seo-journey__number">{String(index + 1).padStart(2, '0')}</span>
+              <h3>{step.name}</h3>
+              <p class="seo-journey__lead">{step.lead}</p>
+              <p>{step.detail}</p>
+            </article>
+          ))}
         </div>
+      </div>
+    </section>
+
+    <section class="seo-section seo-work" aria-labelledby="seo-work-heading">
+      <div class="container">
+        <header class="seo-section__head seo-work__head">
+          <span class="eyebrow">What we work on</span>
+          <h2 id="seo-work-heading">Different searches. One connected strategy.</h2>
+        </header>
+        <div class="seo-work__list">
+          {workAreas.map((area, index) => (
+            <details open={index === 0}>
+              <summary>
+                <h3>{area.title}</h3>
+                <p>{area.summary}</p>
+                <span class="seo-work__state" aria-hidden="true"></span>
+              </summary>
+              <p class="seo-work__detail">{area.detail}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="seo-section seo-management" aria-labelledby="seo-management-heading">
+      <div class="container">
+        <header class="seo-management__head">
+          <div>
+            <span class="eyebrow">Ongoing SEO management</span>
+            <h2 id="seo-management-heading">SEO is not a one-time fix.</h2>
+          </div>
+          <p>Search behavior changes. Your competitors adapt. Your business evolves. Your SEO needs to keep up.</p>
+        </header>
+        <div class="seo-management__loop" role="list">
+          <article role="listitem"><h3>Monitor</h3><p>Know what’s happening.</p></article>
+          <article role="listitem"><h3>Improve</h3><p>Fix what holds you back.</p></article>
+          <article role="listitem"><h3>Measure</h3><p>See what’s making a difference.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="seo-section seo-selector" aria-labelledby="seo-selector-heading">
+      <div class="container seo-selector__layout">
+        <header class="seo-selector__copy">
+          <span class="eyebrow">The next step</span>
+          <h2 id="seo-selector-heading">Where is your search visibility getting stuck?</h2>
+          <p>Choose the problem that sounds familiar.</p>
+        </header>
+
+        <fieldset class="seo-selector__panel" data-seo-selector>
+          <legend class="visually-hidden">Choose one search visibility problem</legend>
+          {problems.map((problem, index) => (
+            <label class="seo-selector__choice" for={`seo-problem-${index + 1}`}>
+              <input id={`seo-problem-${index + 1}`} type="radio" name="seo-problem" value={String(index + 1)} data-response={problem.response} />
+              <span>{problem.label}</span>
+            </label>
+          ))}
+          <div class="seo-selector__response" data-seo-response aria-live="polite" aria-atomic="true" hidden>
+            <p data-seo-response-copy></p>
+            <a class="btn btn-primary seo-response-cta" href="/contact/?service=seo">Discuss your SEO →</a>
+          </div>
+        </fieldset>
       </div>
     </section>
   </main>
 </BaseLayout>
+
+<script is:inline>
+  document.querySelectorAll('[data-seo-selector]').forEach((selector) => {
+    const response = selector.querySelector('[data-seo-response]');
+    const responseCopy = selector.querySelector('[data-seo-response-copy]');
+    selector.addEventListener('change', (event) => {
+      const input = event.target;
+      if (!(input instanceof HTMLInputElement) || input.name !== 'seo-problem') return;
+      if (!(response instanceof HTMLElement) || !(responseCopy instanceof HTMLElement)) return;
+      responseCopy.textContent = input.dataset.response || '';
+      response.hidden = false;
+    });
+  });
+</script>
+
+<style>
+  .seo-page {
+    --seo-rule: var(--ds-rule-strong);
+    --seo-journey-bg: color-mix(in srgb, var(--site-teal) 16%, var(--site-bg));
+    overflow: clip;
+  }
+  :global(html[data-theme="light"]) .seo-page { --seo-journey-bg: color-mix(in srgb, var(--site-teal) 13%, var(--site-bg)); }
+  .seo-page :is(h1, h2, h3, p) { margin: 0; }
+  .seo-section { padding-block: var(--space-section); border-bottom: var(--seo-rule); }
+  .seo-section__head .eyebrow,
+  .seo-management__head .eyebrow,
+  .seo-selector__copy .eyebrow { margin-bottom: 1rem; }
+  .seo-section__head h2,
+  .seo-management h2,
+  .seo-selector h2 { font-size: var(--type-display-lg); line-height: 0.92; letter-spacing: -0.04em; }
+
+  .seo-hero { overflow: hidden; border-bottom: var(--seo-rule); }
+  .seo-hero__inner { position: relative; min-height: 51.25rem; }
+  .seo-hero h1 {
+    position: relative;
+    z-index: 2;
+    max-width: 35rem;
+    padding-top: clamp(4rem, 6vw, 5.5rem);
+    font-size: clamp(4.75rem, 6.7vw, 6.125rem);
+    line-height: 0.88;
+    letter-spacing: -0.045em;
+  }
+  .seo-hero__line { display: block; }
+  .seo-hero__art { position: absolute; z-index: 1; top: 2.125rem; right: -6rem; width: min(78vw, 56rem); margin: 0; pointer-events: none; }
+  .seo-hero__art picture,
+  .seo-hero__art img { display: block; width: 100%; height: auto; }
+  .seo-hero__intro { position: absolute; z-index: 2; bottom: 4rem; left: calc(var(--bs-gutter-x) * 0.5); max-width: 27rem; }
+  .seo-hero__intro p { color: var(--site-text-muted); font-size: 1.125rem; line-height: 1.55; }
+  .seo-cta,
+  .seo-response-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.5rem;
+    color: var(--brand-ink) !important;
+    background: var(--site-accent) !important;
+    border: 2px solid var(--brand-ink) !important;
+    border-radius: 0;
+    box-shadow: 6px 6px 0 var(--site-mustard);
+    font-weight: 700;
+  }
+
+  .seo-journey { background: var(--seo-journey-bg); }
+  .seo-journey__head h2 { max-width: 10ch; }
+  .seo-journey__track { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: clamp(2rem, 3vw, 2.75rem); border-top: 3px solid var(--site-border); }
+  .seo-journey__step { position: relative; padding: 1.8rem 2rem 0.25rem 0; }
+  .seo-journey__step + .seo-journey__step { padding-left: 2rem; border-left: var(--ds-rule-subtle); }
+  .seo-journey__number {
+    position: absolute;
+    top: -1.05rem;
+    left: -1px;
+    padding: 0.3rem 0.5rem;
+    color: var(--brand-ink);
+    background: var(--site-accent);
+    border: 2px solid var(--brand-ink);
+    font-size: 0.7rem;
+    font-weight: 800;
+  }
+  .seo-journey__step + .seo-journey__step .seo-journey__number { left: 1.9rem; }
+  .seo-journey h3 { margin-top: 0.55rem; font-size: 2.15rem; line-height: 1; }
+  .seo-journey__lead { max-width: 17ch; margin-top: 0.8rem !important; color: var(--site-text); font-size: 1.1rem; font-weight: 700; line-height: 1.35; }
+  .seo-journey__step > p:last-child { max-width: 31ch; margin-top: 0.6rem; color: var(--site-text-muted); }
+
+  .seo-work__head { margin-bottom: 2.75rem; }
+  .seo-work__head h2 { max-width: 10ch; }
+  .seo-work details { border-top: 2px solid var(--site-border); }
+  .seo-work details:last-child { border-bottom: 2px solid var(--site-border); }
+  .seo-work summary { display: grid; grid-template-columns: minmax(14rem, 0.75fr) minmax(0, 1.25fr) 2.75rem; gap: 1.5rem; align-items: center; min-height: 5.2rem; padding: 1.1rem 0; cursor: pointer; list-style: none; }
+  .seo-work summary::-webkit-details-marker { display: none; }
+  .seo-work summary h3 { font-size: 1.8rem; line-height: 1; }
+  .seo-work summary p { color: var(--site-text-muted); }
+  .seo-work__state { display: grid; width: 2.4rem; height: 2.4rem; place-items: center; justify-self: end; color: var(--brand-ink); background: var(--site-mustard); border: 2px solid var(--brand-ink); font-weight: 800; }
+  .seo-work details[open] { padding-left: 1rem; border-left: 6px solid var(--site-accent); background: color-mix(in srgb, var(--site-accent) 14%, transparent); }
+  .seo-work details[open] .seo-work__state::before { content: "−"; }
+  .seo-work details:not([open]) .seo-work__state::before { content: "+"; }
+  .seo-work__detail { margin: 0 4.5rem 1.35rem 15.75rem !important; padding-top: 1rem; border-top: var(--ds-rule-subtle); color: var(--site-text); font-weight: 700; }
+
+  .seo-management { color: var(--brand-ink); background: var(--site-mustard); border-color: var(--brand-ink); }
+  .seo-management :is(h2, h3, p, .eyebrow) { color: var(--brand-ink); }
+  .seo-management__head { display: grid; grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.22fr); gap: clamp(2rem, 5vw, 4.5rem); align-items: end; }
+  .seo-management__head h2 { max-width: 9ch; }
+  .seo-management__head > p { max-width: 38rem; font-size: 1.1rem; }
+  .seo-management__loop { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 3rem; border-block: 3px solid var(--brand-ink); }
+  .seo-management__loop article { position: relative; min-height: 7.5rem; padding: 1.5rem 2.75rem 1.35rem 0; }
+  .seo-management__loop article + article { padding-left: 2.75rem; border-left: 1px solid rgb(25 26 27 / 0.32); }
+  .seo-management__loop article:not(:last-child)::after { content: "→"; position: absolute; top: 2.15rem; right: -1rem; z-index: 1; display: grid; width: 2rem; height: 2rem; place-items: center; background: var(--site-mustard); font-size: 1.6rem; font-weight: 800; }
+  .seo-management__loop h3 { font-size: 1.8rem; line-height: 1; }
+  .seo-management__loop p { margin-top: 0.55rem; font-weight: 600; }
+
+  .seo-selector__layout { display: grid; grid-template-columns: minmax(0, 0.88fr) minmax(31rem, 1.12fr); gap: clamp(2rem, 3vw, 3rem); align-items: start; }
+  .seo-selector__copy h2 { max-width: 9ch; }
+  .seo-selector__copy > p { margin-top: 1.15rem; color: var(--site-text-muted); font-size: 1.05rem; }
+  .seo-selector__panel { min-width: 0; margin: 0; padding: 1.5rem; background: var(--site-surface); border: 3px solid var(--site-border); box-shadow: 8px 8px 0 var(--site-teal); }
+  .seo-selector__choice { display: grid; grid-template-columns: 1.4rem minmax(0, 1fr); gap: 0.85rem; align-items: center; min-height: 3.5rem; padding: 0.75rem 0.85rem; border-top: 2px solid var(--site-border); color: var(--site-text); font-weight: 700; cursor: pointer; }
+  .seo-selector__choice:first-of-type { border-top: 0; }
+  .seo-selector__choice input { width: 1.25rem; height: 1.25rem; margin: 0; accent-color: var(--site-teal); }
+  .seo-selector__choice:has(input:checked) { color: var(--brand-ink); background: var(--site-teal); }
+  .seo-selector__response { margin-top: 1.25rem; padding: 1.35rem; color: var(--brand-ink); background: var(--site-mustard); border: 2px solid var(--brand-ink); }
+  .seo-selector__response[hidden] { display: none; }
+  .seo-selector__response p { color: var(--brand-ink); line-height: 1.55; }
+  .seo-response-cta { margin-top: 1rem; background: var(--brand-paper) !important; box-shadow: 5px 5px 0 var(--brand-ink); }
+
+  @media (max-width: 991.98px) {
+    .seo-hero__inner { display: flex; min-height: 0; flex-direction: column; }
+    .seo-hero h1 { order: 1; max-width: 8ch; padding-top: 3.5rem; font-size: clamp(4rem, 11vw, 5.5rem); }
+    .seo-hero__line { display: inline; }
+    .seo-hero__art { position: relative; top: auto; right: auto; order: 2; align-self: center; width: min(112%, 48rem); margin-top: 1.5rem; }
+    .seo-hero__intro { position: relative; bottom: auto; left: auto; order: 3; max-width: 38rem; padding: 1.75rem 0 3.75rem; }
+    .seo-management__head,
+    .seo-selector__layout { grid-template-columns: 1fr; }
+    .seo-selector__layout { gap: 2rem; }
+  }
+
+  @media (max-width: 767.98px) {
+    .seo-section { padding-block: 3.75rem; }
+    .seo-section__head h2,
+    .seo-management h2,
+    .seo-selector h2 { font-size: 3rem; }
+    .seo-hero h1 { max-width: 7.4ch; padding-top: 2.75rem; font-size: 3.7rem; }
+    .seo-hero__art { width: min(116%, 27rem); margin-top: 1.25rem; }
+    .seo-hero__intro { padding: 1.35rem 0 3.4rem; }
+    .seo-hero__intro p { font-size: 1rem; line-height: 1.5; }
+    .seo-journey__track { grid-template-columns: 1fr; margin-top: 2.4rem; }
+    .seo-journey__step,
+    .seo-journey__step + .seo-journey__step { padding: 1.6rem 0 1.35rem; border-left: 0; border-bottom: var(--ds-rule-subtle); }
+    .seo-journey__step + .seo-journey__step .seo-journey__number { left: 0; }
+    .seo-journey__lead,
+    .seo-journey__step > p:last-child { max-width: none; }
+    .seo-work__head { margin-bottom: 2.15rem; }
+    .seo-work summary { grid-template-columns: minmax(0, 1fr) 2.6rem; gap: 0.75rem; padding: 1.2rem 0; }
+    .seo-work summary h3 { grid-column: 1; font-size: 1.7rem; }
+    .seo-work summary p { grid-column: 1 / -1; grid-row: 2; }
+    .seo-work__state { grid-column: 2; grid-row: 1; }
+    .seo-work details[open] { padding-left: 0.75rem; }
+    .seo-work__detail { margin: 0 0.6rem 1.25rem 0 !important; }
+    .seo-management__head { gap: 1rem; }
+    .seo-management__head > p { font-size: 1rem; }
+    .seo-management__loop { grid-template-columns: 1fr; margin-top: 2rem; }
+    .seo-management__loop article,
+    .seo-management__loop article + article { min-height: 0; padding: 1.1rem 2.25rem 1.1rem 0; border-left: 0; border-bottom: 1px solid rgb(25 26 27 / 0.34); }
+    .seo-management__loop article:not(:last-child)::after { content: "↓"; top: 1.4rem; right: 0; }
+    .seo-selector__panel { padding: 0.85rem; box-shadow: 6px 6px 0 var(--site-teal); }
+    .seo-selector__choice { min-height: 3.4rem; padding-inline: 0.5rem; }
+    .seo-selector__response { padding: 1.1rem; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .seo-page * { scroll-behavior: auto !important; }
+  }
+</style>
