@@ -3,764 +3,168 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow,noarchive" />
     <link rel="icon" href="data:," />
-    <title>Task 04 SEO proposal mockup</title>
+    <title>Task 04 corrected SEO proposal</title>
     <style>
-      @font-face {
-        font-family: "Digitful Inter";
-        src: url("../../../dist/_astro/fonts/e868cdf4720e9ea5.woff2") format("woff2");
-        font-weight: 400 700;
-        font-display: swap;
-      }
-
-      @font-face {
-        font-family: "Digitful Barlow";
-        src: url("../../../dist/_astro/fonts/4138793c36ba9af3.woff2") format("woff2");
-        font-weight: 800;
-        font-display: swap;
-      }
-
-      :root {
-        --paper: #f0e7d5;
-        --paper-light: #f6eedd;
-        --ink: #191a1b;
-        --coral: #e95849;
-        --coral-strong: #d94739;
-        --teal: #569699;
-        --mustard: #e4c58f;
-        --muted: #4e4b45;
-        --surface: #f6eedd;
-        --rule: #191a1b;
-        --subtle: rgba(25, 26, 27, 0.28);
-        --max: 1176px;
-      }
-
-      html[data-theme="dark"] {
-        --paper: #191a1b;
-        --paper-light: #232425;
-        --ink: #f0e7d5;
-        --coral: #e95849;
-        --coral-strong: #f06d5f;
-        --teal: #569699;
-        --mustard: #e4c58f;
-        --muted: #cec3af;
-        --surface: #232425;
-        --rule: rgba(240, 231, 213, 0.82);
-        --subtle: rgba(240, 231, 213, 0.28);
-      }
-
-      * { box-sizing: border-box; }
-
-      html { background: var(--paper); }
-
-      body {
-        margin: 0;
-        overflow-x: hidden;
-        color: var(--ink);
-        background:
-          radial-gradient(circle at 15% 10%, color-mix(in srgb, var(--ink) 3%, transparent) 0 1px, transparent 1.5px) 0 0 / 9px 9px,
-          var(--paper);
-        font-family: "Digitful Inter", Inter, Arial, sans-serif;
-        font-size: 16px;
-        line-height: 1.55;
-      }
-
-      a { color: inherit; }
-
-      .container {
-        width: min(calc(100% - 48px), var(--max));
-        margin-inline: auto;
-      }
-
-      .eyebrow {
-        margin: 0 0 18px;
-        font-size: 12px;
-        font-weight: 700;
-        letter-spacing: 0.15em;
-        text-transform: uppercase;
-      }
-
-      h1, h2, h3 {
-        margin: 0;
-        font-family: "Digitful Barlow", "Arial Narrow", Arial, sans-serif;
-        font-weight: 800;
-        letter-spacing: -0.035em;
-      }
-
-      h2 {
-        font-size: clamp(54px, 5.35vw, 78px);
-        line-height: 0.93;
-      }
-
-      h3 {
-        font-size: 29px;
-        line-height: 1;
-      }
-
-      p { margin: 0; }
-
-      .site-header {
-        position: relative;
-        z-index: 10;
-        border-bottom: 2px solid var(--rule);
-        background: var(--paper);
-      }
-
-      .site-nav {
-        min-height: 78px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
-
-      .brand-logo {
-        display: block;
-        width: 145px;
-        height: auto;
-      }
-
-      .logo-dark { display: none; }
-      html[data-theme="dark"] .logo-light { display: none; }
-      html[data-theme="dark"] .logo-dark { display: block; }
-
-      .nav-links {
-        display: flex;
-        align-items: center;
-        gap: 29px;
-        font-size: 12px;
-        font-weight: 700;
-        letter-spacing: 0.07em;
-        text-transform: uppercase;
-      }
-
-      .nav-links a { text-decoration: none; }
-
-      .nav-cta {
-        padding: 11px 18px;
-        color: #191a1b;
-        background: var(--coral);
-        border: 2px solid var(--rule);
-        letter-spacing: 0;
-        text-transform: none;
-      }
-
-      .nav-menu {
-        display: none;
-        width: 44px;
-        height: 44px;
-        border: 2px solid var(--rule);
-        background: transparent;
-      }
-
-      .nav-menu::before,
-      .nav-menu::after,
-      .nav-menu span {
-        content: "";
-        display: block;
-        width: 21px;
-        height: 2px;
-        margin: 5px auto;
-        background: var(--ink);
-      }
-
-      .hero {
-        min-height: 705px;
-        overflow: hidden;
-        border-bottom: 2px solid var(--rule);
-      }
-
-      .hero-grid {
-        position: relative;
-        display: grid;
-        grid-template-columns: minmax(0, 0.98fr) minmax(0, 1.02fr);
-        min-height: 705px;
-        align-items: center;
-      }
-
-      .hero-copy {
-        position: relative;
-        z-index: 3;
-        padding-block: 86px;
-      }
-
-      .hero h1 {
-        max-width: 8.8ch;
-        font-size: clamp(76px, 7.5vw, 108px);
-        line-height: 0.88;
-      }
-
-      .hero-copy p {
-        max-width: 600px;
-        margin-top: 25px;
-        color: var(--muted);
-        font-size: 19px;
-        line-height: 1.58;
-      }
-
-      .hero-cta,
-      .response-cta {
-        display: inline-flex;
-        min-height: 52px;
-        align-items: center;
-        margin-top: 30px;
-        padding: 12px 20px;
-        color: #191a1b;
-        background: var(--coral);
-        border: 2px solid var(--rule);
-        font-weight: 700;
-        text-decoration: none;
-        box-shadow: 6px 6px 0 var(--mustard);
-      }
-
-      .hero-art {
-        position: relative;
-        align-self: stretch;
-        min-width: 0;
-      }
-
-      .hero-art::before {
-        content: "";
-        position: absolute;
-        width: 390px;
-        height: 390px;
-        top: 106px;
-        left: 44px;
-        border: 2px solid var(--rule);
-        border-radius: 50%;
-        background: var(--mustard);
-      }
-
-      .hero-loupe {
-        position: absolute;
-        z-index: 2;
-        width: 820px;
-        max-width: none;
-        top: 74px;
-        left: -53px;
-        transform: rotate(-3deg);
-      }
-
-      .section {
-        padding-block: 100px;
-        border-bottom: 2px solid var(--rule);
-      }
-
-      .split-head {
-        display: grid;
-        grid-template-columns: minmax(0, 0.73fr) minmax(0, 1.27fr);
-        gap: 75px;
-        align-items: start;
-      }
-
-      .section-intro {
-        max-width: 650px;
-        margin-top: 23px;
-        color: var(--muted);
-        font-size: 18px;
-      }
-
-      .journey {
-        background: var(--paper-light);
-      }
-
-      .journey-grid {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        margin-top: 66px;
-        border-top: 3px solid var(--rule);
-      }
-
-      .journey-step {
-        position: relative;
-        padding: 28px 31px 16px 0;
-        border-right: 1px solid var(--subtle);
-      }
-
-      .journey-step + .journey-step { padding-left: 31px; }
-      .journey-step:last-child { border-right: 0; }
-
-      .journey-step:not(:last-child)::after {
-        content: "→";
-        position: absolute;
-        top: -26px;
-        right: -17px;
-        display: grid;
-        width: 34px;
-        height: 34px;
-        place-items: center;
-        color: #191a1b;
-        background: var(--coral);
-        border: 2px solid var(--rule);
-        font-weight: 800;
-      }
-
-      .journey-step h3 { margin-bottom: 14px; }
-      .journey-step p { color: var(--muted); }
-
-      .journey-close {
-        margin-top: 37px;
-        padding-top: 22px;
-        border-top: 1px solid var(--subtle);
-        font-weight: 700;
-      }
-
-      .work-head { margin-bottom: 56px; }
-
-      .work-list { border-top: 3px solid var(--rule); }
-
-      .work-row { border-bottom: 2px solid var(--rule); }
-
-      .work-summary {
-        display: grid;
-        grid-template-columns: minmax(220px, 0.72fr) minmax(0, 1.28fr) 44px;
-        gap: 28px;
-        align-items: center;
-        padding: 25px 0;
-      }
-
-      .work-summary p { color: var(--muted); }
-
-      .work-state {
-        display: grid;
-        width: 42px;
-        height: 42px;
-        place-items: center;
-        color: #191a1b;
-        background: var(--mustard);
-        border: 2px solid var(--rule);
-        font-size: 24px;
-        font-weight: 800;
-      }
-
-      .work-row.is-open {
-        padding-left: 22px;
-        border-left: 8px solid var(--coral);
-        background: color-mix(in srgb, var(--coral) 8%, transparent);
-      }
-
-      .work-detail {
-        max-width: 740px;
-        margin: 0 0 27px calc(220px + 28px);
-        color: var(--muted);
-        font-size: 16px;
-      }
-
-      .management {
-        color: #191a1b;
-        background: var(--mustard);
-      }
-
-      html[data-theme="dark"] .management {
-        color: var(--ink);
-        background: #242525;
-      }
-
-      .management .section-intro,
-      .management-step p { color: currentColor; opacity: 0.78; }
-
-      .management-flow {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        margin-top: 64px;
-        border-top: 3px solid currentColor;
-      }
-
-      .management-step {
-        position: relative;
-        padding: 28px 38px 0 0;
-      }
-
-      .management-step + .management-step { padding-left: 38px; }
-      .management-step h3 { margin-bottom: 12px; }
-
-      .management-step:not(:last-child)::after {
-        content: "→";
-        position: absolute;
-        top: 18px;
-        right: 0;
-        font-size: 31px;
-        font-weight: 800;
-      }
-
-      .selector-wrap {
-        display: grid;
-        grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
-        gap: 78px;
-        align-items: start;
-      }
-
-      .selector-copy {
-        position: sticky;
-        top: 24px;
-      }
-
-      .selector-copy p {
-        margin-top: 24px;
-        color: var(--muted);
-        font-size: 18px;
-      }
-
-      .selector-panel {
-        padding: 30px;
-        background: var(--surface);
-        border: 3px solid var(--rule);
-        box-shadow: 9px 9px 0 var(--teal);
-      }
-
-      .choice {
-        display: grid;
-        grid-template-columns: 26px minmax(0, 1fr);
-        gap: 16px;
-        align-items: center;
-        min-height: 62px;
-        padding: 14px 16px;
-        border-top: 2px solid var(--rule);
-        font-weight: 700;
-      }
-
-      .choice:first-child { border-top: 0; }
-
-      .choice-dot {
-        display: grid;
-        width: 24px;
-        height: 24px;
-        place-items: center;
-        border: 2px solid var(--rule);
-        border-radius: 50%;
-      }
-
-      .choice.is-selected {
-        color: #191a1b;
-        background: var(--teal);
-      }
-
-      .choice.is-selected .choice-dot {
-        background: #191a1b;
-        border-color: #191a1b;
-      }
-
-      .choice.is-selected .choice-dot::after {
-        content: "";
-        width: 8px;
-        height: 8px;
-        background: var(--paper-light);
-        border-radius: 50%;
-      }
-
-      .response {
-        margin-top: 24px;
-        padding: 25px;
-        color: #191a1b;
-        background: var(--mustard);
-        border: 2px solid var(--rule);
-      }
-
-      .response .eyebrow { margin-bottom: 10px; }
-      .response p { line-height: 1.58; }
-
-      .response-cta {
-        margin-top: 22px;
-        color: #191a1b;
-        background: #f6eedd;
-        border-color: #191a1b;
-        box-shadow: 5px 5px 0 #191a1b;
-      }
-
-      .site-footer {
-        padding-block: 32px;
-        background: var(--paper);
-      }
-
-      .footer-row {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 30px;
-      }
-
-      .footer-row p { color: var(--muted); font-size: 13px; }
-
-      @media (max-width: 767px) {
-        .container { width: min(calc(100% - 32px), var(--max)); }
-        .nav-links { display: none; }
-        .nav-menu { display: block; }
-        .site-nav { min-height: 72px; }
-        .brand-logo { width: 126px; }
-
-        .hero,
-        .hero-grid { min-height: 0; }
-
-        .hero-grid {
-          display: block;
-          padding-top: 58px;
-        }
-
-        .hero-copy { padding: 0; }
-
-        .hero h1 {
-          max-width: 8.7ch;
-          font-size: 61px;
-          line-height: 0.89;
-        }
-
-        .hero-copy p {
-          margin-top: 21px;
-          font-size: 16px;
-          line-height: 1.55;
-        }
-
-        .hero-cta {
-          min-height: 50px;
-          margin-top: 24px;
-          padding: 11px 16px;
-        }
-
-        .hero-art {
-          height: 270px;
-          margin-top: 16px;
-        }
-
-        .hero-art::before {
-          width: 220px;
-          height: 220px;
-          top: 17px;
-          left: 7px;
-        }
-
-        .hero-loupe {
-          width: 535px;
-          top: 8px;
-          left: -85px;
-          transform: rotate(-5deg);
-        }
-
-        .section { padding-block: 68px; }
-        .split-head,
-        .selector-wrap { grid-template-columns: 1fr; gap: 0; }
-        h2 { font-size: 49px; }
-        h3 { font-size: 26px; }
-        .section-intro { margin-top: 20px; font-size: 16px; }
-
-        .journey-grid {
-          grid-template-columns: 1fr;
-          margin-top: 42px;
-          border-top: 3px solid var(--rule);
-        }
-
-        .journey-step,
-        .journey-step + .journey-step {
-          padding: 24px 0;
-          border-right: 0;
-          border-bottom: 1px solid var(--subtle);
-        }
-
-        .journey-step:not(:last-child)::after {
-          content: "↓";
-          top: auto;
-          right: 8px;
-          bottom: -17px;
-        }
-
-        .journey-close { margin-top: 28px; }
-        .work-head { margin-bottom: 40px; }
-
-        .work-summary {
-          grid-template-columns: minmax(0, 1fr) 42px;
-          gap: 14px;
-          padding: 22px 0;
-        }
-
-        .work-summary h3 { grid-column: 1; }
-        .work-summary p { grid-column: 1 / -1; grid-row: 2; }
-        .work-state { grid-column: 2; grid-row: 1; }
-
-        .work-row.is-open { padding-left: 14px; border-left-width: 6px; }
-        .work-detail { margin: 0 0 24px; padding-right: 12px; }
-
-        .management-flow {
-          grid-template-columns: 1fr;
-          margin-top: 42px;
-        }
-
-        .management-step,
-        .management-step + .management-step {
-          padding: 24px 0;
-          border-bottom: 1px solid currentColor;
-        }
-
-        .management-step:not(:last-child)::after {
-          content: "↓";
-          top: 22px;
-          right: 8px;
-        }
-
-        .selector-copy { position: static; }
-        .selector-panel { margin-top: 38px; padding: 16px; box-shadow: 7px 7px 0 var(--teal); }
-        .choice { min-height: 66px; padding: 13px 8px; }
-        .response { padding: 20px; }
-
-        .footer-row { align-items: flex-start; flex-direction: column; }
+      @font-face { font-family: "Digitful Inter"; src: url("../../../dist/_astro/fonts/e868cdf4720e9ea5.woff2") format("woff2"); font-weight: 400 700; font-display: swap; }
+      @font-face { font-family: "Digitful Barlow"; src: url("../../../dist/_astro/fonts/4138793c36ba9af3.woff2") format("woff2"); font-weight: 800; font-display: swap; }
+      :root { --paper:#f0e7d5; --paper-2:#f6eedd; --ink:#191a1b; --muted:#4e4b45; --coral:#e95849; --teal:#569699; --mustard:#e4c58f; --rule:#191a1b; --soft-rule:rgba(25,26,27,.28); --max:1180px; }
+      html[data-theme="dark"] { --paper:#191a1b; --paper-2:#232425; --ink:#f0e7d5; --muted:#cec3af; --rule:rgba(240,231,213,.88); --soft-rule:rgba(240,231,213,.28); }
+      * { box-sizing:border-box; }
+      html { background:var(--paper); }
+      body { margin:0; overflow-x:hidden; color:var(--ink); background:radial-gradient(circle at 12% 7%,color-mix(in srgb,var(--ink) 3%,transparent) 0 1px,transparent 1.4px) 0 0/10px 10px,var(--paper); font:16px/1.55 "Digitful Inter",Inter,Arial,sans-serif; }
+      a { color:inherit; }
+      button,input { font:inherit; }
+      .container { width:min(calc(100% - 48px),var(--max)); margin-inline:auto; }
+      .eyebrow { margin:0 0 14px; font-size:12px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; }
+      h1,h2,h3,p { margin:0; }
+      h1,h2,h3 { font-family:"Digitful Barlow","Arial Narrow",Arial,sans-serif; font-weight:800; letter-spacing:-.035em; }
+      h1 { font-size:clamp(76px,7.1vw,104px); line-height:.88; }
+      h2 { font-size:clamp(54px,5vw,74px); line-height:.92; }
+      h3 { font-size:28px; line-height:1; }
+      .site-header { border-bottom:2px solid var(--rule); background:var(--paper); }
+      .site-nav { min-height:76px; display:flex; align-items:center; justify-content:space-between; gap:30px; }
+      .brand-logo { width:132px; height:auto; }
+      .logo-dark { display:none; }
+      html[data-theme="dark"] .logo-light { display:none; }
+      html[data-theme="dark"] .logo-dark { display:block; }
+      .nav-links { display:flex; align-items:center; gap:28px; font-size:12px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; }
+      .nav-links a { text-decoration:none; }
+      .nav-cta { padding:10px 17px; color:#191a1b; background:var(--coral); border:2px solid var(--rule); text-transform:none; letter-spacing:0; }
+      .nav-menu { display:none; width:44px; height:44px; border:2px solid var(--rule); background:transparent; }
+      .nav-menu::before,.nav-menu::after,.nav-menu span { content:""; display:block; width:20px; height:2px; margin:5px auto; background:var(--ink); }
+      .hero { overflow:hidden; border-bottom:2px solid var(--rule); }
+      .hero-grid { position:relative; display:grid; grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr); min-height:660px; align-items:center; }
+      .hero-copy { position:relative; z-index:3; padding-block:72px; }
+      .hero h1 { max-width:8.8ch; }
+      .hero-copy p { max-width:590px; margin-top:24px; color:var(--muted); font-size:18px; line-height:1.55; }
+      .primary-cta,.response-cta { display:inline-flex; min-height:50px; align-items:center; margin-top:26px; padding:11px 18px; color:#191a1b; background:var(--coral); border:2px solid #191a1b; font-weight:700; text-decoration:none; box-shadow:6px 6px 0 var(--mustard); }
+      .hero-art { position:relative; align-self:stretch; min-width:0; }
+      .hero-art::before { content:""; position:absolute; width:270px; height:430px; right:58px; bottom:0; background:var(--mustard); border-inline:2px solid var(--rule); }
+      .hero-art::after { content:""; position:absolute; width:165px; height:22px; right:-18px; top:115px; background:var(--teal); border:2px solid var(--rule); transform:rotate(-5deg); }
+      .hero-loupe { position:absolute; z-index:2; width:830px; max-width:none; top:58px; left:-82px; transform:rotate(2deg); }
+      .section { padding-block:82px; border-bottom:2px solid var(--rule); }
+      .journey { background:var(--paper-2); }
+      .section-head { display:grid; grid-template-columns:minmax(0,.76fr) minmax(0,1.24fr); gap:72px; align-items:end; }
+      .section-head h2 { max-width:9.2ch; }
+      .journey-track { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); margin-top:56px; border-top:3px solid var(--rule); }
+      .journey-step { position:relative; padding:28px 32px 4px 0; }
+      .journey-step + .journey-step { padding-left:32px; border-left:1px solid var(--soft-rule); }
+      .step-number { position:absolute; top:-17px; left:-1px; padding:5px 8px; color:#191a1b; background:var(--coral); border:2px solid #191a1b; font-size:11px; font-weight:800; }
+      .journey-step + .journey-step .step-number { left:30px; }
+      .journey-step h3 { margin-top:10px; font-size:34px; }
+      .journey-lead { margin-top:13px; max-width:15ch; font-weight:700; font-size:18px; line-height:1.35; }
+      .journey-detail { margin-top:10px; color:var(--muted); max-width:31ch; }
+      .work-head { margin-bottom:48px; }
+      .work-head h2 { max-width:10ch; }
+      details { border-top:2px solid var(--rule); }
+      details:last-child { border-bottom:2px solid var(--rule); }
+      summary { display:grid; grid-template-columns:minmax(210px,.72fr) minmax(0,1.28fr) 44px; gap:28px; align-items:center; min-height:82px; padding:18px 0; cursor:pointer; list-style:none; }
+      summary::-webkit-details-marker { display:none; }
+      summary p { color:var(--muted); }
+      .work-state { display:grid; width:38px; height:38px; place-items:center; justify-self:end; color:#191a1b; background:var(--mustard); border:2px solid #191a1b; font-weight:800; }
+      details[open] { padding-left:16px; border-left:6px solid var(--coral); background:color-mix(in srgb,var(--coral) 8%,transparent); }
+      details[open] .work-state::before { content:"−"; }
+      details:not([open]) .work-state::before { content:"+"; }
+      .work-detail { margin:0 72px 22px 238px; padding:18px 0 2px; border-top:1px solid var(--soft-rule); font-weight:700; letter-spacing:.01em; }
+      .management { color:#191a1b; background:var(--mustard); }
+      .management-head { display:grid; grid-template-columns:minmax(0,.76fr) minmax(0,1.24fr); gap:72px; align-items:end; }
+      .management-head h2 { max-width:8.8ch; }
+      .management-head > p { max-width:610px; font-size:18px; }
+      .loop { display:grid; grid-template-columns:repeat(3,1fr); margin-top:48px; border-block:3px solid #191a1b; }
+      .loop-step { position:relative; min-height:120px; padding:24px 44px 22px 0; }
+      .loop-step + .loop-step { padding-left:44px; border-left:1px solid rgba(25,26,27,.32); }
+      .loop-step:not(:last-child)::after { content:"→"; position:absolute; top:37px; right:-16px; z-index:2; display:grid; width:32px; height:32px; place-items:center; background:var(--mustard); font-size:26px; font-weight:800; }
+      .loop-step p { margin-top:9px; font-weight:600; }
+      .selector-wrap { display:grid; grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr); gap:74px; align-items:start; }
+      .selector-copy h2 { max-width:9ch; }
+      .selector-copy > p:last-child { margin-top:20px; color:var(--muted); font-size:18px; }
+      .selector-panel { min-width:0; margin:0; padding:26px; background:var(--paper-2); border:3px solid var(--rule); box-shadow:9px 9px 0 var(--teal); }
+      .choice { display:grid; grid-template-columns:24px minmax(0,1fr); gap:14px; align-items:center; min-height:56px; padding:12px 14px; border-top:2px solid var(--rule); font-weight:700; cursor:pointer; }
+      .choice:first-of-type { border-top:0; }
+      .choice input { width:20px; height:20px; margin:0; accent-color:var(--teal); }
+      .choice:has(input:checked) { color:#191a1b; background:var(--teal); }
+      .response { margin-top:20px; padding:22px; color:#191a1b; background:var(--mustard); border:2px solid #191a1b; }
+      .response p { line-height:1.55; }
+      .response-cta { margin-top:18px; background:#f6eedd; box-shadow:5px 5px 0 #191a1b; }
+      .site-footer { padding-block:28px; }
+      .footer-row { display:flex; align-items:center; justify-content:space-between; gap:28px; }
+      .footer-row p { color:var(--muted); font-size:12px; }
+      @media (max-width:767px) {
+        .container { width:min(calc(100% - 32px),var(--max)); }
+        .site-nav { min-height:70px; }
+        .brand-logo { width:122px; }
+        .nav-links { display:none; }
+        .nav-menu { display:block; }
+        .hero-grid { display:block; min-height:0; padding-top:48px; }
+        .hero-copy { padding:0; }
+        .hero h1 { max-width:8.8ch; font-size:59px; line-height:.89; }
+        .hero-copy p { margin-top:19px; font-size:16px; line-height:1.5; }
+        .primary-cta { margin-top:22px; }
+        .hero-art { height:220px; margin-top:8px; }
+        .hero-art::before { width:130px; height:182px; right:24px; border-inline-width:1px; }
+        .hero-art::after { width:90px; height:15px; top:39px; right:-23px; }
+        .hero-loupe { width:455px; top:5px; left:-76px; transform:rotate(4deg); }
+        .section { padding-block:62px; }
+        h2 { font-size:48px; }
+        .section-head,.management-head,.selector-wrap { grid-template-columns:1fr; gap:0; }
+        .journey-track { grid-template-columns:1fr; margin-top:44px; }
+        .journey-step,.journey-step + .journey-step { padding:26px 0 22px; border-left:0; border-bottom:1px solid var(--soft-rule); }
+        .journey-step + .journey-step .step-number { left:0; }
+        .journey-step h3 { margin-top:8px; }
+        .journey-lead,.journey-detail { max-width:none; }
+        .work-head { margin-bottom:36px; }
+        summary { grid-template-columns:minmax(0,1fr) 42px; gap:12px; min-height:0; padding:20px 0; }
+        summary h3 { grid-column:1; font-size:27px; }
+        summary p { grid-column:1/-1; grid-row:2; }
+        .work-state { grid-column:2; grid-row:1; }
+        details[open] { padding-left:12px; }
+        .work-detail { margin:0 10px 20px 0; padding-top:15px; }
+        .management-head > p { margin-top:18px; font-size:16px; }
+        .loop { grid-template-columns:1fr; margin-top:34px; }
+        .loop-step,.loop-step + .loop-step { min-height:0; padding:18px 36px 18px 0; border-left:0; border-bottom:1px solid rgba(25,26,27,.38); }
+        .loop-step:not(:last-child)::after { content:"↓"; top:23px; right:0; }
+        .selector-copy > p:last-child { margin-top:17px; font-size:16px; }
+        .selector-panel { margin-top:34px; padding:14px; box-shadow:6px 6px 0 var(--teal); }
+        .choice { min-height:54px; padding:11px 8px; }
+        .response { padding:18px; }
+        .footer-row { align-items:flex-start; flex-direction:column; }
       }
     </style>
-    <script>
-      const params = new URLSearchParams(location.search);
-      document.documentElement.dataset.theme = params.get('theme') === 'dark' ? 'dark' : 'light';
-    </script>
   </head>
   <body>
     <header class="site-header">
-      <div class="container site-nav">
+      <nav class="container site-nav" aria-label="Primary proposal navigation">
         <img class="brand-logo logo-light" src="../../../public/assets/brand/digitful-wordmark-on-light.svg" alt="Digitful" />
         <img class="brand-logo logo-dark" src="../../../public/assets/brand/digitful-wordmark-on-dark.svg" alt="Digitful" />
-        <nav class="nav-links" aria-label="Proposal navigation">
-          <a href="#">About</a>
-          <a href="#work">What we build</a>
-          <a href="#">Blog</a>
-          <a href="#">Services</a>
-          <a class="nav-cta" href="#selector">Talk to Digitful</a>
-        </nav>
-        <button class="nav-menu" type="button" aria-label="Open navigation"><span></span></button>
-      </div>
+        <div class="nav-links"><a href="#journey">About</a><a href="#work">What we build</a><a href="#selector">Services</a><a class="nav-cta" href="#selector">Talk to Digitful</a></div>
+        <button class="nav-menu" type="button" aria-label="Open menu"><span></span></button>
+      </nav>
     </header>
-
     <main>
-      <section class="hero">
-        <div class="container hero-grid">
-          <div class="hero-copy">
-            <h1>Your next customer is searching. Can they find you?</h1>
-            <p>People are looking for answers, products, and services. AI-powered search tools are helping them discover their options. We help your business become easier to find, understand, and choose, wherever the search begins.</p>
-            <a class="hero-cta" href="#selector">Tell us what's stuck →</a>
-          </div>
-          <div class="hero-art" aria-hidden="true">
-            <img class="hero-loupe" src="../candidates/task-04-seo-loupe-clean-edge.png" alt="" />
-          </div>
-        </div>
-      </section>
-
-      <section class="section journey">
-        <div class="container">
-          <div class="split-head">
-            <div>
-              <p class="eyebrow">The search journey</p>
-              <h2>Getting found is only the beginning.</h2>
-            </div>
-            <p class="section-intro">A search can begin in a search engine, on a map, or in an AI-powered answer. The useful path is still connected: help the right person find the business, understand the answer, and know what to do next.</p>
-          </div>
-          <div class="journey-grid">
-            <article class="journey-step">
-              <h3>Search</h3>
-              <p>People cannot find the business when they look.</p>
-            </article>
-            <article class="journey-step">
-              <h3>Discover</h3>
-              <p>They find it, but not the answers they need.</p>
-            </article>
-            <article class="journey-step">
-              <h3>Act</h3>
-              <p>They arrive, but the next step is unclear.</p>
-            </article>
-          </div>
-          <p class="journey-close">SEO has to support the whole journey, not stop at a ranking report.</p>
-        </div>
-      </section>
-
-      <section class="section" id="work">
-        <div class="container">
-          <div class="split-head work-head">
-            <div>
-              <p class="eyebrow">The work</p>
-              <h2>Different searches. One connected strategy.</h2>
-            </div>
-            <p class="section-intro">The work changes with the problem, but each part should make the same business easier to find, understand, and choose.</p>
-          </div>
-          <div class="work-list">
-            <article class="work-row is-open">
-              <div class="work-summary">
-                <h3>Search intent &amp; content</h3>
-                <p>Match useful pages to the questions and decisions that matter to the business.</p>
-                <span class="work-state" aria-label="Expanded">−</span>
-              </div>
-              <p class="work-detail">Review which searches deserve a page, whether existing pages answer the real question, and where the route from information to service is missing. AI can help surface patterns and gaps; people still decide what is accurate, useful, and worth publishing.</p>
-            </article>
-            <article class="work-row">
-              <div class="work-summary">
-                <h3>Technical foundations</h3>
-                <p>Remove the structural obstacles that keep useful pages from being found or understood.</p>
-                <span class="work-state" aria-label="Collapsed">+</span>
-              </div>
-            </article>
-            <article class="work-row">
-              <div class="work-summary">
-                <h3>Local visibility</h3>
-                <p>Make the business details people rely on clear and consistent where local search matters.</p>
-                <span class="work-state" aria-label="Collapsed">+</span>
-              </div>
-            </article>
-            <article class="work-row">
-              <div class="work-summary">
-                <h3>Measurement &amp; improvement</h3>
-                <p>Connect visibility and visits to useful actions, then improve what the evidence supports.</p>
-                <span class="work-state" aria-label="Collapsed">+</span>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section management">
-        <div class="container">
-          <div class="split-head">
-            <div>
-              <p class="eyebrow">Ongoing management</p>
-              <h2>SEO is not a one-time fix.</h2>
-            </div>
-            <p class="section-intro">Search behaviour, competitors, content, and websites change. Useful SEO needs a review loop, not a launch-and-forget checklist.</p>
-          </div>
-          <div class="management-flow">
-            <article class="management-step">
-              <h3>Monitor</h3>
-              <p>Watch search visibility, page performance, and meaningful actions for material changes.</p>
-            </article>
-            <article class="management-step">
-              <h3>Improve</h3>
-              <p>Fix the clearest constraint, strengthen weak pages, and test the next useful opportunity.</p>
-            </article>
-            <article class="management-step">
-              <h3>Measure</h3>
-              <p>Compare what changed with the baseline, then decide what to keep, revise, or stop.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="selector">
-        <div class="container selector-wrap">
-          <div class="selector-copy">
-            <p class="eyebrow">Choose a starting point</p>
-            <h2>Where is your search visibility getting stuck?</h2>
-            <p>Choose the problem that sounds familiar.</p>
-          </div>
-          <div class="selector-panel" role="group" aria-label="Problem selector proposal">
-            <div class="choice"><span class="choice-dot"></span><span>People cannot find my business</span></div>
-            <div class="choice"><span class="choice-dot"></span><span>My website gets traffic but few inquiries</span></div>
-            <div class="choice"><span class="choice-dot"></span><span>My Google Business Profile needs attention</span></div>
-            <div class="choice is-selected"><span class="choice-dot"></span><span>I am not sure what is working</span></div>
-            <div class="response">
-              <p class="eyebrow">Where to start</p>
-              <p>Start with a simple measurement map. List the searches and pages meant to create demand, the actions that show progress, and the business outcomes that matter. Then review search performance, technical health, and visitor actions against the same baseline.</p>
-              <a class="response-cta" href="#">Discuss your SEO →</a>
-            </div>
-          </div>
-        </div>
-      </section>
+      <section class="hero"><div class="container hero-grid"><div class="hero-copy"><h1>Your next customer is searching. Can they find you?</h1><p>People are looking for answers, products, and services. AI-powered search tools are helping them discover their options. We help your business become easier to find, understand, and choose, wherever the search begins.</p><a class="primary-cta" href="/contact/?service=seo">Tell us what’s stuck →</a></div><div class="hero-art" aria-hidden="true"><img class="hero-loupe" src="../candidates/task-04-seo-loupe-photographic-v2.png" alt="" /></div></div></section>
+      <section class="section journey" id="journey"><div class="container"><div class="section-head"><div><p class="eyebrow">The search journey</p><h2>Getting found is only the beginning.</h2></div></div><div class="journey-track">
+        <article class="journey-step"><span class="step-number">01</span><h3>Search</h3><p class="journey-lead">They look. You’re nowhere to be found.</p><p class="journey-detail">Your competitors appear. Your business doesn’t.</p></article>
+        <article class="journey-step"><span class="step-number">02</span><h3>Discover</h3><p class="journey-lead">They find you. But not what they need.</p><p class="journey-detail">Your page doesn’t answer their questions or make your offer clear.</p></article>
+        <article class="journey-step"><span class="step-number">03</span><h3>Act</h3><p class="journey-lead">They visit. Nothing happens next.</p><p class="journey-detail">The next step is unclear, so the opportunity slips away.</p></article>
+      </div></div></section>
+      <section class="section" id="work"><div class="container"><div class="work-head"><p class="eyebrow">What we work on</p><h2>Different searches. One connected strategy.</h2></div><div class="work-list">
+        <details open><summary><h3>Search intent &amp; content</h3><p>Get found for what your customers are actually looking for.</p><span class="work-state" aria-hidden="true"></span></summary><p class="work-detail">Keyword strategy · Content · AI-assisted discovery</p></details>
+        <details><summary><h3>Technical foundations</h3><p>Make your website easier for search engines to find, understand, and index.</p><span class="work-state" aria-hidden="true"></span></summary><p class="work-detail">Technical SEO · Site structure · Page performance</p></details>
+        <details><summary><h3>Local visibility</h3><p>Help nearby customers find your business when they need it.</p><span class="work-state" aria-hidden="true"></span></summary><p class="work-detail">Local SEO · Google Business Profile · Local pages</p></details>
+        <details><summary><h3>Measurement &amp; improvement</h3><p>Know which searches bring useful visitors and what they do next.</p><span class="work-state" aria-hidden="true"></span></summary><p class="work-detail">Search performance · Analytics · Visitor actions</p></details>
+      </div></div></section>
+      <section class="section management"><div class="container"><div class="management-head"><div><p class="eyebrow">Ongoing SEO management</p><h2>SEO is not a one-time fix.</h2></div><p>Search behavior changes. Your competitors adapt. Your business evolves. Your SEO needs to keep up.</p></div><div class="loop"><article class="loop-step"><h3>Monitor</h3><p>Know what’s happening.</p></article><article class="loop-step"><h3>Improve</h3><p>Fix what holds you back.</p></article><article class="loop-step"><h3>Measure</h3><p>See what’s making a difference.</p></article></div></div></section>
+      <section class="section" id="selector"><div class="container selector-wrap"><div class="selector-copy"><p class="eyebrow">The next step</p><h2>Where is your search visibility getting stuck?</h2><p>Choose the problem that sounds familiar.</p></div><fieldset class="selector-panel"><legend style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Choose one search visibility problem</legend>
+        <label class="choice"><input type="radio" name="problem" value="Your business may be missing from the searches that matter. Start with your search visibility and the pages customers need to find." /><span>People cannot find my business</span></label>
+        <label class="choice"><input type="radio" name="problem" value="The issue may be who visits, what they find, or what happens next. Find out where that connection breaks." /><span>My website gets traffic but few inquiries</span></label>
+        <label class="choice"><input type="radio" name="problem" value="Your local presence may be making it harder for nearby customers to find or contact you. Start with your profile and local visibility." /><span>My Google Business Profile needs attention</span></label>
+        <label class="choice"><input type="radio" name="problem" checked value="Connect your search traffic to what visitors actually do. See what’s creating useful interest and what needs attention." /><span>I am not sure what is working</span></label>
+        <div class="response" aria-live="polite" aria-atomic="true"><p id="response-copy">Connect your search traffic to what visitors actually do. See what’s creating useful interest and what needs attention.</p><a class="response-cta" href="/contact/?service=seo">Discuss your SEO →</a></div>
+      </fieldset></div></section>
     </main>
-
-    <footer class="site-footer">
-      <div class="container footer-row">
-        <img class="brand-logo logo-light" src="../../../public/assets/brand/digitful-wordmark-on-light.svg" alt="Digitful" />
-        <img class="brand-logo logo-dark" src="../../../public/assets/brand/digitful-wordmark-on-dark.svg" alt="Digitful" />
-        <p>Proposal-only visual artifact · Task 04 Stage 1 · Not implementation</p>
-      </div>
-    </footer>
+    <footer class="site-footer"><div class="container footer-row"><img class="brand-logo logo-light" src="../../../public/assets/brand/digitful-wordmark-on-light.svg" alt="Digitful" /><img class="brand-logo logo-dark" src="../../../public/assets/brand/digitful-wordmark-on-dark.svg" alt="Digitful" /><p>Proposal-only visual artifact · Task 04 correction · Not implementation</p></div></footer>
+    <script>const theme=new URLSearchParams(location.search).get("theme");document.documentElement.dataset.theme=theme==="dark"?"dark":"light";document.querySelectorAll('input[name="problem"]').forEach((input)=>input.addEventListener("change",()=>{document.getElementById("response-copy").textContent=input.value;}));</script>
   </body>
 </html>
