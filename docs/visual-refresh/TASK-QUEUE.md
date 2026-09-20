@@ -226,3 +226,9 @@ Plan native accessible disclosures for work rows and keyboard-operable single-ch
 ## Manager transition — 2026-09-20 — current Task 04 status
 
 Read `docs/visual-refresh/MANAGER-START-HERE.md` first. Task 04 proposal and four mockups exist locally; implementation and N=600 are NOT approved. The owner objected that the loupe looks awful and out of spirit, and rejected the adequacy of the prior managing-agent review, particularly its neglect of content. Current loupe is not accepted; substantive content/brand review and corrective proposal remain outstanding. No general approval of the remaining proposal should be inferred. Task 03 remains accepted. The owner subsequently authorized committing and pushing the Task 04 proposal, candidates, mockups and handover together. Fetch the updated visual-refresh branch for these artifacts; original user attachments remain device-local.
+
+## Task 04 implementation — Ready for managing-agent review — 2026-09-20
+
+The owner subsequently authorized implementation, N=600 and isolated preview deployment, superseding the proposal-only status above. Implemented source: `ce76d9ba98ea3ae394d6e36f10f0e58a75673bb7`. Exact preview pin: `475efa8d3d312cc86fef158510bb14faa9e24f5e`. Successful workflow: [35530239653](https://github.com/tarekazz1/digitful-preview/actions/runs/35530239653). Review URL: `https://preview.digitful.ca/seo/`.
+
+Build and live verification cover the five-section copy/layout, artwork transparency and responsive AVIF selection, 320/390/768/1024/1440 light/dark rendering, zero horizontal overflow, all disclosure/selector states, keyboard operation, CTA targets, clean console results, preview isolation and shared-site smoke checks. Task-wide source plus preview-pin accounting is 294 added / 36 removed / net +258; N=600 PASS. Binary assets and documentation are excluded. Main and production remain unchanged. Do not infer managing-agent technical signoff, owner KEEP or production authorization.
