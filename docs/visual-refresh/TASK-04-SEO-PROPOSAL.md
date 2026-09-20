@@ -1,52 +1,36 @@
-# Task 04 correction — SEO copy, photographic loupe and guided selector
+# Task 04 correction — SEO copy, owner artwork and guided selector
 
-Status: **Hero-composition alternatives for managing-agent review. Implementation is not authorized.**
+Status: **Revised owner-artwork proposal for managing-agent review. Implementation is not authorized.**
 
 Prepared: 2026-09-20  
 Source repository/branch: `tarekazz1/digitful:visual-refresh`
-Source HEAD before this hero-composition correction: `cfd52b4f9e678cc9a1d248e6861c2db51aed39a1`
+Source HEAD before this owner-artwork correction: `1b0e06ae2c88311364f1eab1dde04ccefabf4b12`
 Recorded production baseline: `c8fac4f78295d2576af0e92b04329f4e938c7b6f` — not modified
 Preview checkout: `423813d0376abe27c7fdb5e6c66cb559e7720095`; `source-ref.txt` remains `360f218949e693df8cd7aea8fe301a5056f614f9` — not modified or deployed
 
 ## 1. Correction scope and authority
 
-This revision replaces the longer Task 04 copy proposal and rejects the earlier magnifying-glass direction. The owner-supplied wording below is the complete public page copy authority for this proposal. It is reproduced without substantive additions, introductory paragraphs, closing summaries or a separate final CTA section.
+This revision preserves the approved five-section wording and replaces the previous photographic loupe and hero alternatives A, B and C with the owner-supplied SEO collage. The wording below remains the complete public page copy authority. It is reproduced without substantive additions, introductory paragraphs, closing summaries or a separate final CTA section.
 
 Proposal-only changed artifacts are confined to `docs/visual-refresh/`:
 
 - this corrected proposal;
 - an editable HTML composition;
-- a new, unshipped photographic loupe candidate and background edge checks;
-- twelve full-page hero-alternative renders.
+- a byte-identical archive of the owner-supplied source and four cropped responsive derivatives;
+- four revised full-page renders.
 
 No application source, shared design-system code, accepted page, preview configuration, preview pin, production branch or production deployment was changed. No build or deployed-page validation is claimed.
 
 ### Review artifacts
 
-Editable composition: `docs/visual-refresh/mockups/task-04-seo-proposal.html` with `?variant=a|b|c&theme=light|dark`.
+Editable composition: `docs/visual-refresh/mockups/task-04-seo-proposal.html` with `?theme=light` or `?theme=dark`.
 
-**Alternative A — Lens notch**
+- `docs/visual-refresh/mockups/task-04-seo-owner-artwork-desktop-1440-light.png` — 1440 × 4005.
+- `docs/visual-refresh/mockups/task-04-seo-owner-artwork-desktop-1440-dark.png` — 1440 × 4005.
+- `docs/visual-refresh/mockups/task-04-seo-owner-artwork-mobile-390-light.png` — 390 × 4893.
+- `docs/visual-refresh/mockups/task-04-seo-owner-artwork-mobile-390-dark.png` — 390 × 4893.
 
-- `docs/visual-refresh/mockups/task-04-seo-hero-a-desktop-1440-light.png` — 1440 × 3997.
-- `docs/visual-refresh/mockups/task-04-seo-hero-a-desktop-1440-dark.png` — 1440 × 3997.
-- `docs/visual-refresh/mockups/task-04-seo-hero-a-mobile-390-light.png` — 390 × 4649.
-- `docs/visual-refresh/mockups/task-04-seo-hero-a-mobile-390-dark.png` — 390 × 4649.
-
-**Alternative B — Split headline orbit**
-
-- `docs/visual-refresh/mockups/task-04-seo-hero-b-desktop-1440-light.png` — 1440 × 3867.
-- `docs/visual-refresh/mockups/task-04-seo-hero-b-desktop-1440-dark.png` — 1440 × 3867.
-- `docs/visual-refresh/mockups/task-04-seo-hero-b-mobile-390-light.png` — 390 × 4912.
-- `docs/visual-refresh/mockups/task-04-seo-hero-b-mobile-390-dark.png` — 390 × 4912.
-
-**Alternative C — Panoramic lens underline**
-
-- `docs/visual-refresh/mockups/task-04-seo-hero-c-desktop-1440-light.png` — 1440 × 3947.
-- `docs/visual-refresh/mockups/task-04-seo-hero-c-desktop-1440-dark.png` — 1440 × 3947.
-- `docs/visual-refresh/mockups/task-04-seo-hero-c-mobile-390-light.png` — 390 × 4770.
-- `docs/visual-refresh/mockups/task-04-seo-hero-c-mobile-390-dark.png` — 390 × 4770.
-
-Every render retains all five sections, one expanded work row and one selected selector response. The lower four sections and all approved copy are identical across alternatives.
+Every render retains all five sections, one expanded work row and one selected selector response. The lower four sections and all approved copy are unchanged from the preceding proposal.
 
 ## 2. Complete approved page copy
 
@@ -205,52 +189,42 @@ Discuss your SEO →
 
 Only the selected response is displayed. The selector is the closing conversion section; there is no FAQ, separate final CTA, scan, diagnostic, score, API or additional contact-state handoff.
 
-## 3. New magnifying-glass candidate
+## 3. Owner-supplied artwork and responsive derivatives
 
-Proposed artwork: `docs/visual-refresh/candidates/task-04-seo-loupe-photographic-v2.png`
+Status: **owner-supplied visual source; responsive crop and composition remain proposal-only and unshipped.**
 
-Status: **new proposal candidate; unapproved and unshipped.**
+The supplied 1280 × 960 JPG is preserved byte-for-byte as:
 
-The rejected loupe was not used as an input and is not referenced by the corrected mockup. Its files remain only as historical review evidence.
+- `docs/visual-refresh/candidates/task-04-seo-owner-artwork-original.jpg`
+- 315,504 bytes; SHA-256 `1BE9D89F16341A7EBB19E5248BAE9380BEA7D9007816D21392D08F42187387AF`.
 
-### Provenance and visual brief
+No generative edit, background replacement, text addition, identity change or in-image retouching was performed. The source was cropped mechanically to 1210 × 910 at `x=40, y=30`, removing only peripheral empty paper while preserving the complete magnifying glass, readable `SEO` lettering and essential collage marks.
 
-- Generated from scratch with the built-in image-generation capability on 2026-09-20.
-- Style references only: the accepted `public/assets/collage/home/home-laptop.png` and `public/assets/collage/social/social-binoculars.png`.
-- The references establish photographic material detail, high-contrast black/cream processing and printed texture. They were not composited into the candidate.
-- Subject: one contemporary magnifying glass with recognizable glass reflections, metal rim and textured black grip in a diagonal three-quarter view.
-- Required exclusions: engraving/etching, sepia, antique brass or wood, circular badge, background frame, baked-in text, annotations, hands, fake results, stock-tech effects, glow, shadow and watermark.
-- Output: 1536 × 1024 RGBA PNG with a genuinely transparent background.
-- File size: 2,167,524 bytes.
-- Alpha inventory: 1,070,447 fully transparent pixels and 502,417 partially transparent photographic/print pixels; no fully opaque pixels, with maximum alpha 254.
-- SHA-256: `451B1C39848D844770DEC9E85C71565A67D5B2202B60BAEFE4B0396FBCE61759`.
+Responsive derivatives:
 
-### Transparency and edge review
+- Desktop AVIF: `task-04-seo-owner-artwork-desktop.avif` — 1200 × 902, 89,293 bytes, SHA-256 `577693636E3A9E811EFCE37A60BE37F796221196FFCC3120369D69427E9E4F07`.
+- Desktop WebP: `task-04-seo-owner-artwork-desktop.webp` — 1200 × 902, 168,400 bytes, SHA-256 `920AA0FCC4C993626E8E7628D7DA62AF8BCD865CE2CAAEF32D7AA48D541ADB9F`.
+- Mobile AVIF: `task-04-seo-owner-artwork-mobile.avif` — 760 × 572, 42,218 bytes, SHA-256 `59977E4161517B4FECC4DF08ECE6BE8DE6FFD93DF4B8E87B6A56AEC52A461853`.
+- Mobile WebP: `task-04-seo-owner-artwork-mobile.webp` — 760 × 572, 73,352 bytes, SHA-256 `CAB2985A92451C7BA264CA658E0532E2817D8229AE86EE037DB361E4920123ED`.
 
-The source candidate was flattened at full resolution onto the approved paper `#F0E7D5` and ink `#191A1B` backgrounds:
+The mockup uses `<picture>` to select AVIF first with WebP fallback and switches to the 760px derivative below 768px. Intrinsic dimensions and the source aspect ratio are reserved.
 
-- `docs/visual-refresh/candidates/task-04-seo-loupe-v2-edge-check-light.png`
-- `docs/visual-refresh/candidates/task-04-seo-loupe-v2-edge-check-dark.png`
+## 4. Revised hero composition
 
-The exterior silhouette is clean on both surfaces without the rejected candidate’s soft pale halo. Lens highlights, metal reflections and grip texture remain visibly photographic. The fine black/cream variation is internal print treatment, not an exterior glow.
+### Desktop
 
-## 4. Hero composition alternatives
+- The headline occupies the left negative space while the artwork receives the larger right-hand field and overlaps the central compositional boundary.
+- The supporting paragraph and CTA remain together in a narrower, unobstructed reading area beneath the headline.
+- The artwork is an image element, not a hero background. It uses `object-fit: contain`, so its proportions and full `SEO` lettering are preserved.
+- In dark mode, the artwork sits in an angled, full-height cream editorial field that extends beyond the viewport. The field color matches the source paper, eliminating the appearance of a pasted rectangular image without recoloring or altering the artwork.
 
-The three directions use the same approved wording and the same photographic loupe. They change the structural relationship between headline and artwork rather than merely changing size, rotation or background color.
+### Mobile
 
-### Alternative A — Lens notch
+- The reading order is headline → artwork → supporting paragraph → CTA.
+- The artwork becomes a full-bleed editorial band rather than a reduced desktop column. The magnifying glass and complete `SEO` lettering remain prominent.
+- The paragraph and CTA stay in normal flow below the artwork; no text overlays the lens.
 
-The headline forms a compact left-hand block and leaves an intentional right-edge notch for the lens. The lens is tangent to the headline’s negative space while its handle cuts through the open hero field. On mobile, the lens occupies the headline’s right-side notch rather than becoming a separate image below the CTA; paragraph and CTA remain in normal flow.
-
-### Alternative B — Split headline orbit
-
-The sentence is visually divided at its existing punctuation: the statement anchors the left, the question answers from the right, and the loupe occupies the central interval. The accessible heading remains one exact H1. On mobile, the statement, loupe sweep and question create a single top-to-bottom reading composition before the paragraph and CTA.
-
-### Alternative C — Panoramic lens underline
-
-The complete headline leads at the top while the loupe becomes a wide editorial underline between headline and body copy. The handle exits the right boundary on desktop. Mobile reserves a compact lens band immediately after the headline, so the artwork remains prominent without being stacked below the CTA.
-
-All three directions remove the prior separate illustration column and its supporting decorative fields. None adds a fake interface, lens text, badge, annotation or search-result effect. The artwork does not obstruct the headline, paragraph or CTA in the review renders.
+The composition adds no second `SEO` label, fake search interface, annotation or decorative shape. The previous photographic loupe and alternatives A, B and C are superseded and are not referenced by the revised mockup.
 
 ### Remaining sections
 
@@ -267,7 +241,7 @@ All three directions remove the prior separate illustration column and its suppo
 - Selection is communicated by the checked control plus a filled row, not color alone.
 - A single `aria-live="polite"` response region updates without moving focus. Its normal link remains the next keyboard stop and always targets `/contact/?service=seo`.
 - The proposal introduces no network request, persistence, scan, score, loading state or fabricated result.
-- Implementation should reserve intrinsic image space, load the hero artwork promptly and produce responsive derivatives only after the visual candidate is approved.
+- Implementation should preserve the intrinsic image dimensions, `<picture>` source order and prompt hero loading behavior if this proposal is approved.
 
 ## 6. Substantive changes from the rejected proposal
 
@@ -276,9 +250,9 @@ All three directions remove the prior separate illustration column and its suppo
 3. Moved technical service terminology entirely into disclosure content.
 4. Reduced ongoing management to a compact loop with one-line explanations.
 5. Shortened all four selector responses and removed the added `Where to start` label.
-6. Rejected rather than retouched the previous engraved-looking loupe; generated a new photographic candidate from accepted collage references.
-7. Removed the separate hero image column and decorative backing fields.
-8. Added three genuinely different headline/loupe relationships for owner selection while keeping the other four sections unchanged.
+6. Superseded the generated photographic loupe with the owner-supplied SEO collage.
+7. Replaced alternatives A, B and C with one desktop/mobile composition using the supplied artwork’s negative space and proportions.
+8. Added deterministic cropped AVIF/WebP derivatives and a dark-mode editorial field without changing the artwork itself.
 
 ## 7. Remaining owner/implementation issues
 
@@ -295,7 +269,7 @@ It does **not** define operational commitments. Implementation must not add any 
 
 Technical items still gated by later implementation approval:
 
-- responsive image formats/sizes and load strategy;
+- exact production integration and load strategy for the proposed responsive derivatives;
 - exact breakpoint tuning at 320/390/768/1024/1440 and boundaries;
 - keyboard, screen-reader announcement and reduced-motion verification;
 - preservation of metadata, contact behavior, accepted pages and preview safeguards;
@@ -307,8 +281,7 @@ The existing recommendation remains **N=600 net implementation lines**, but it i
 
 Before implementation, the owner/managing agent must explicitly decide:
 
-- corrected copy/composition: KEEP / ADJUST / REJECT;
-- new photographic loupe: KEEP / ADJUST / REJECT;
+- revised owner-artwork crop/composition: KEEP / ADJUST / REJECT;
 - interaction proposal: KEEP / ADJUST / REJECT;
 - implementation N=600: APPROVE / ADJUST / REJECT.
 

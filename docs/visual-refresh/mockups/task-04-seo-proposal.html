@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noindex,nofollow,noarchive" />
     <link rel="icon" href="data:," />
-    <title>Task 04 corrected SEO proposal</title>
+    <title>Task 04 SEO owner-artwork proposal</title>
     <style>
       @font-face { font-family: "Digitful Inter"; src: url("../../../dist/_astro/fonts/e868cdf4720e9ea5.woff2") format("woff2"); font-weight: 400 700; font-display: swap; }
       @font-face { font-family: "Digitful Barlow"; src: url("../../../dist/_astro/fonts/4138793c36ba9af3.woff2") format("woff2"); font-weight: 800; font-display: swap; }
@@ -35,34 +35,14 @@
       .nav-menu { display:none; width:44px; height:44px; border:2px solid var(--rule); background:transparent; }
       .nav-menu::before,.nav-menu::after,.nav-menu span { content:""; display:block; width:20px; height:2px; margin:5px auto; background:var(--ink); }
       .hero { overflow:hidden; border-bottom:2px solid var(--rule); }
-      .hero-grid { position:relative; min-height:700px; }
-      .hero-copy { position:relative; z-index:3; padding-block:68px; }
-      .hero h1 { position:relative; z-index:2; }
-      .hero-copy p { position:relative; z-index:4; max-width:570px; margin-top:24px; color:var(--muted); font-size:18px; line-height:1.55; }
+      .hero-grid { position:relative; display:grid; grid-template-columns:minmax(0,.84fr) minmax(520px,1.16fr); grid-template-rows:auto 1fr; min-height:720px; }
+      .hero h1 { position:relative; z-index:3; grid-column:1; grid-row:1; max-width:7.4ch; padding-top:70px; }
+      .hero-intro { position:relative; z-index:3; grid-column:1; grid-row:2; align-self:end; max-width:430px; padding-bottom:72px; }
+      .hero-intro p { color:var(--muted); font-size:18px; line-height:1.55; }
       .primary-cta,.response-cta { display:inline-flex; min-height:50px; align-items:center; margin-top:26px; padding:11px 18px; color:#191a1b; background:var(--coral); border:2px solid #191a1b; font-weight:700; text-decoration:none; box-shadow:6px 6px 0 var(--mustard); }
-      .hero-art { position:absolute; z-index:1; inset:0; pointer-events:none; }
-      .hero-loupe { position:absolute; max-width:none; }
-      /* A — the headline leaves a deliberate lens-shaped notch. */
-      html[data-variant="a"] .hero-copy { padding-top:70px; }
-      html[data-variant="a"] .hero h1 { max-width:7.6ch; }
-      html[data-variant="a"] .hero-copy p { max-width:535px; }
-      html[data-variant="a"] .hero-loupe { width:760px; top:205px; left:31%; transform:rotate(7deg); }
-      /* B — the statement and question orbit opposite sides of the lens. */
-      html[data-variant="b"] .hero-grid { min-height:760px; }
-      html[data-variant="b"] .hero-copy { min-height:760px; padding-top:58px; }
-      html[data-variant="b"] .hero h1 { display:grid; grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr); column-gap:290px; max-width:none; }
-      html[data-variant="b"] .hero-statement { max-width:6.2ch; }
-      html[data-variant="b"] .hero-question { max-width:5.4ch; margin-top:205px; justify-self:end; text-align:right; }
-      html[data-variant="b"] .hero-copy p { position:absolute; left:0; bottom:105px; max-width:500px; }
-      html[data-variant="b"] .primary-cta { position:absolute; left:0; bottom:34px; }
-      html[data-variant="b"] .hero-loupe { width:700px; top:74px; left:29%; transform:rotate(19deg); }
-      /* C — the lens becomes a panoramic underline between headline and body. */
-      html[data-variant="c"] .hero-grid { min-height:840px; }
-      html[data-variant="c"] .hero-copy { padding-top:54px; }
-      html[data-variant="c"] .hero h1 { max-width:8.2ch; }
-      html[data-variant="c"] .hero-copy p { position:absolute; top:605px; left:0; max-width:450px; }
-      html[data-variant="c"] .primary-cta { position:absolute; top:735px; left:0; }
-      html[data-variant="c"] .hero-loupe { width:900px; top:300px; left:43%; transform:rotate(-4deg); }
+      .hero-art { position:relative; z-index:1; grid-column:2; grid-row:1/3; align-self:stretch; min-width:0; margin:34px -150px 34px -118px; background:#f6eee3; clip-path:polygon(12% 0,100% 0,100% 100%,8% 96%); }
+      .hero-art picture { position:absolute; inset:0; display:block; }
+      .hero-art img { width:100%; height:100%; object-fit:contain; object-position:center; }
       .section { padding-block:82px; border-bottom:2px solid var(--rule); }
       .journey { background:var(--paper-2); }
       .section-head { display:grid; grid-template-columns:minmax(0,.76fr) minmax(0,1.24fr); gap:72px; align-items:end; }
@@ -116,30 +96,14 @@
         .brand-logo { width:122px; }
         .nav-links { display:none; }
         .nav-menu { display:block; }
-        .hero-grid { min-height:0; }
-        .hero-copy { min-height:0; padding:46px 0 54px; }
-        .hero h1 { max-width:none; font-size:59px; line-height:.89; }
-        .hero-copy p { margin-top:19px; font-size:16px; line-height:1.5; }
+        .hero-grid { display:flex; min-height:0; flex-direction:column; }
+        .hero h1 { order:1; max-width:7.4ch; padding-top:44px; font-size:59px; line-height:.89; }
+        .hero-art { order:2; align-self:auto; width:100vw; aspect-ratio:760/572; margin:28px calc(50% - 50vw) 0; clip-path:none; }
+        .hero-art picture { position:static; }
+        .hero-art img { display:block; width:100%; height:auto; object-fit:contain; }
+        .hero-intro { order:3; max-width:none; padding:26px 0 54px; }
+        .hero-intro p { font-size:16px; line-height:1.5; }
         .primary-cta { margin-top:22px; }
-        html[data-variant="a"] .hero-grid { min-height:710px; }
-        html[data-variant="a"] .hero-copy { padding-top:44px; }
-        html[data-variant="a"] .hero h1 { max-width:7.5ch; }
-        html[data-variant="a"] .hero-copy p { margin-top:72px; }
-        html[data-variant="a"] .hero-loupe { width:380px; top:185px; left:53%; transform:rotate(25deg); }
-        html[data-variant="b"] .hero-grid { min-height:850px; }
-        html[data-variant="b"] .hero-copy { min-height:850px; padding-top:44px; }
-        html[data-variant="b"] .hero h1 { display:block; }
-        html[data-variant="b"] .hero-statement { display:block; max-width:5.2ch; }
-        html[data-variant="b"] .hero-question { display:block; max-width:5.5ch; margin:185px 0 0 auto; text-align:right; }
-        html[data-variant="b"] .hero-copy p { position:static; max-width:none; margin-top:24px; }
-        html[data-variant="b"] .primary-cta { position:static; margin-top:22px; }
-        html[data-variant="b"] .hero-loupe { width:370px; top:330px; left:-112px; transform:rotate(-12deg); }
-        html[data-variant="c"] .hero-grid { min-height:750px; }
-        html[data-variant="c"] .hero-copy { padding-top:44px; }
-        html[data-variant="c"] .hero h1 { max-width:none; }
-        html[data-variant="c"] .hero-copy p { position:static; max-width:none; margin-top:330px; }
-        html[data-variant="c"] .primary-cta { position:static; margin-top:22px; }
-        html[data-variant="c"] .hero-loupe { width:390px; top:355px; left:-20px; transform:rotate(-3deg); }
         .section { padding-block:62px; }
         h2 { font-size:48px; }
         .section-head,.management-head,.selector-wrap { grid-template-columns:1fr; gap:0; }
@@ -177,7 +141,7 @@
       </nav>
     </header>
     <main>
-      <section class="hero"><div class="container hero-grid"><div class="hero-copy"><h1><span class="hero-statement">Your next customer is searching.</span> <span class="hero-question">Can they find you?</span></h1><p>People are looking for answers, products, and services. AI-powered search tools are helping them discover their options. We help your business become easier to find, understand, and choose, wherever the search begins.</p><a class="primary-cta" href="/contact/?service=seo">Tell us what’s stuck →</a></div><div class="hero-art" aria-hidden="true"><img class="hero-loupe" src="../candidates/task-04-seo-loupe-photographic-v2.png" alt="" /></div></div></section>
+      <section class="hero"><div class="container hero-grid"><h1>Your next customer is searching. Can they find you?</h1><figure class="hero-art"><picture><source media="(max-width: 767px)" type="image/avif" srcset="../candidates/task-04-seo-owner-artwork-mobile.avif" /><source media="(max-width: 767px)" type="image/webp" srcset="../candidates/task-04-seo-owner-artwork-mobile.webp" /><source type="image/avif" srcset="../candidates/task-04-seo-owner-artwork-desktop.avif" /><source type="image/webp" srcset="../candidates/task-04-seo-owner-artwork-desktop.webp" /><img src="../candidates/task-04-seo-owner-artwork-desktop.webp" width="1200" height="902" alt="Editorial collage of a magnifying glass enlarging the letters SEO." /></picture></figure><div class="hero-intro"><p>People are looking for answers, products, and services. AI-powered search tools are helping them discover their options. We help your business become easier to find, understand, and choose, wherever the search begins.</p><a class="primary-cta" href="/contact/?service=seo">Tell us what’s stuck →</a></div></div></section>
       <section class="section journey" id="journey"><div class="container"><div class="section-head"><div><p class="eyebrow">The search journey</p><h2>Getting found is only the beginning.</h2></div></div><div class="journey-track">
         <article class="journey-step"><span class="step-number">01</span><h3>Search</h3><p class="journey-lead">They look. You’re nowhere to be found.</p><p class="journey-detail">Your competitors appear. Your business doesn’t.</p></article>
         <article class="journey-step"><span class="step-number">02</span><h3>Discover</h3><p class="journey-lead">They find you. But not what they need.</p><p class="journey-detail">Your page doesn’t answer their questions or make your offer clear.</p></article>
@@ -199,6 +163,6 @@
       </fieldset></div></section>
     </main>
     <footer class="site-footer"><div class="container footer-row"><img class="brand-logo logo-light" src="../../../public/assets/brand/digitful-wordmark-on-light.svg" alt="Digitful" /><img class="brand-logo logo-dark" src="../../../public/assets/brand/digitful-wordmark-on-dark.svg" alt="Digitful" /><p>Proposal-only visual artifact · Task 04 correction · Not implementation</p></div></footer>
-    <script>const params=new URLSearchParams(location.search);const theme=params.get("theme");const variant=params.get("variant");document.documentElement.dataset.theme=theme==="dark"?"dark":"light";document.documentElement.dataset.variant=["a","b","c"].includes(variant)?variant:"a";document.querySelectorAll('input[name="problem"]').forEach((input)=>input.addEventListener("change",()=>{document.getElementById("response-copy").textContent=input.value;}));</script>
+    <script>const theme=new URLSearchParams(location.search).get("theme");document.documentElement.dataset.theme=theme==="dark"?"dark":"light";document.querySelectorAll('input[name="problem"]').forEach((input)=>input.addEventListener("change",()=>{document.getElementById("response-copy").textContent=input.value;}));</script>
   </body>
 </html>
