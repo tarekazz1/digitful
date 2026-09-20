@@ -1,25 +1,29 @@
 # Task 04 correction — SEO copy, approved transparent artwork and guided selector
 
-Status: **Revised approved-artwork proposal for managing-agent review. Implementation is not authorized.**
+Status: **Implemented on the isolated preview; ready for managing-agent review. Final technical signoff and owner KEEP remain pending.**
 
 Prepared: 2026-09-20  
 Source repository/branch: `tarekazz1/digitful:visual-refresh`
-Source HEAD before this approved-artwork correction: `1156e5b992c79528a447df4a6fc5d9247a1fbec9`
+Proposal baseline: `648a7db11cc55a6f3cf71726df93149a3167be02`
+Previous implementation commit: `ce76d9ba98ea3ae394d6e36f10f0e58a75673bb7`
+Previous preview pin: `475efa8d3d312cc86fef158510bb14faa9e24f5e`
+Final correction source: `74effcb96b52c13e05f98c0d7fd397e983815a4c`
+Final correction preview pin: `d87ba5fe71d4aa2489c122fe168589fc8ceec0c8`; successful workflow [35531740178](https://github.com/tarekazz1/digitful-preview/actions/runs/35531740178)
+N=600 was authorized. Cumulative implementation/config LOC was net +258 before the final corrections and is net +257 after them.
 Recorded production baseline: `c8fac4f78295d2576af0e92b04329f4e938c7b6f` — not modified
-Preview checkout: `423813d0376abe27c7fdb5e6c66cb559e7720095`; `source-ref.txt` remains `360f218949e693df8cd7aea8fe301a5056f614f9` — not modified or deployed
 
 ## 1. Correction scope and authority
 
-This revision preserves the approved five-section wording and replaces every previous loupe, owner-artwork derivative and hero alternative A, B and C with the newly supplied SEO collage. The wording below remains the complete public page copy authority. It is reproduced without substantive additions, introductory paragraphs, closing summaries or a separate final CTA section.
+This revision preserves the approved five-section wording and replaces every previous loupe, owner-artwork derivative and hero alternative A, B and C with the newly supplied SEO collage. The wording below remains the complete public page copy authority. It is reproduced without substantive additions, introductory paragraphs, closing summaries or a separate final CTA section. The owner subsequently authorized implementation, N=600 and isolated preview deployment; that authorization supersedes the earlier proposal-only gate.
 
-Proposal-only changed artifacts are confined to `docs/visual-refresh/`:
+The original proposal artifacts remain confined to `docs/visual-refresh/`:
 
 - this corrected proposal;
 - an editable HTML composition;
 - a byte-identical archive of the newly supplied source and four transparent responsive derivatives;
 - four revised full-page renders.
 
-No application source, shared design-system code, accepted page, preview configuration, preview pin, production branch or production deployment was changed. No build or deployed-page validation is claimed.
+The implemented preview candidate adds the approved responsive derivatives and changes only `src/pages/seo.astro`; the final correction also remains confined to that page. No shared design-system file, accepted page, Main or production file changed. Build and deployed-page validation are recorded in sections 7 and 8.
 
 ### Review artifacts
 
@@ -191,7 +195,7 @@ Only the selected response is displayed. The selector is the closing conversion 
 
 ## 3. Approved artwork and responsive derivatives
 
-Status: **owner-supplied visual source; transparency preparation, responsive delivery and composition remain proposal-only and unshipped.**
+Status: **owner-supplied visual source; transparent responsive derivatives are integrated in the isolated preview candidate. Production remains unchanged.**
 
 The supplied file is a 1280 × 960 RGB JPEG, so it has no alpha channel and its white field is baked into the pixels. Its actual size is 238,293 bytes, not approximately 3.6 MB. It is preserved byte-for-byte as:
 
@@ -249,14 +253,14 @@ The four full-page PNGs were rendered from the revised HTML in Chromium and insp
 
 No unresolved visual defect was found in these proposal renders. This is artifact QA, not application, breakpoint-suite, screen-reader, build or deployed-preview verification.
 
-## 5. Proposed interaction and accessibility behavior
+## 5. Implemented interaction and accessibility behavior
 
 - Work rows use native `<details>` and `<summary>` elements with a full-row hit area, visible open/closed indicator, keyboard support and an exposed expanded state.
 - The selector uses a `<fieldset>`, legend and four native radio inputs. Native Tab/arrow behavior is retained.
 - Selection is communicated by the checked control plus a filled row, not color alone.
 - A single `aria-live="polite"` response region updates without moving focus. Its normal link remains the next keyboard stop and always targets `/contact/?service=seo`.
 - The proposal introduces no network request, persistence, scan, score, loading state or fabricated result.
-- Implementation should preserve the intrinsic image dimensions, `<picture>` source order and prompt hero loading behavior if this proposal is approved.
+- The implementation preserves the intrinsic image dimensions, `<picture>` source order and prompt hero loading behavior.
 
 ## 6. Substantive changes from the rejected proposal
 
@@ -270,7 +274,7 @@ No unresolved visual defect was found in these proposal renders. This is artifac
 8. Replaced alternatives A, B and C with one responsive composition that uses the supplied artwork’s transparent silhouette directly on both approved backgrounds.
 9. Added optimized responsive AVIF/WebP delivery and removed the earlier cream/angled dark-mode field.
 
-## 7. Remaining owner/implementation issues
+## 7. Remaining owner and service-scope issues
 
 The page wording itself is owner-approved. It establishes that these topics may be named publicly: content, AI-assisted discovery, Local SEO, Google Business Profile, analytics and ongoing SEO management.
 
@@ -283,22 +287,10 @@ It does **not** define operational commitments. Implementation must not add any 
 - a monitoring cadence, reporting cadence, response time or retainer deliverable;
 - guaranteed ranking, traffic, inquiry, citation or AI-answer outcomes.
 
-Technical items still gated by later implementation approval:
+The preview implementation has completed responsive artwork delivery, breakpoint checks, keyboard control checks, metadata/contact preservation, preview safeguards, exact-SHA deployment and LOC accounting. The final correction changed only the Search Journey's page-scoped color treatment and the SEO metadata; prior interaction, artwork and regression evidence remains applicable. Production integration is not authorized. Final managing-agent technical signoff and owner KEEP remain pending.
 
-- exact production integration and load strategy for the proposed responsive derivatives;
-- exact breakpoint tuning at 320/390/768/1024/1440 and boundaries;
-- keyboard, screen-reader announcement and reduced-motion verification;
-- preservation of metadata, contact behavior, accepted pages and preview safeguards;
-- exact-source-SHA preview deployment and task-wide LOC accounting.
+## 8. N, implementation and approval boundary
 
-## 8. N and approval boundary
+The owner authorized **N=600 net implementation lines**, application implementation and isolated preview deployment. The previous implementation was 294 added / 36 removed / net +258. The final page correction is +9 / -10 relative to that candidate, and the preview source-ref replacement is zero-net. Cumulative implementation/config accounting from the original source and preview baselines is **295 added / 38 removed / net +257; N=600 PASS**. Binary assets and documentation are excluded under the established invariant.
 
-The existing recommendation remains **N=600 net implementation lines**, but it is **not approved**. It is a ceiling proposal, not a target, and this correction does not authorize application work.
-
-Before implementation, the owner/managing agent must explicitly decide:
-
-- revised approved-artwork transparency/crop/composition: KEEP / ADJUST / REJECT;
-- interaction proposal: KEEP / ADJUST / REJECT;
-- implementation N=600: APPROVE / ADJUST / REJECT.
-
-No technical signoff, owner KEEP or production authorization is claimed.
+Final managing-agent technical signoff, owner KEEP and any production authorization remain separate and are not claimed.

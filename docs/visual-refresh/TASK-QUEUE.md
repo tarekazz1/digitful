@@ -176,7 +176,7 @@ This acceptance supersedes earlier pending-review statuses for Task 03. Owner KE
 
 ## 04 — SEO copy, integrated loupe and guided problem selector
 
-Updated 2026-09-20. Status: **Proposal stage authorized; implementation NOT authorized.** Model: **Sol, medium effort**. Task 03 is accepted. Read the mandatory queue rules and referenced project documents before starting. This section supersedes the earlier Task 04 draft that preserved all copy, required a compact mobile loupe and omitted interaction.
+Updated 2026-09-20. Status: **Implementation and N=600 authorized; final preview correction Ready for managing-agent review. Technical signoff and owner KEEP pending.** Model: **Sol, medium effort**. Task 03 is accepted. Read the mandatory queue rules and referenced project documents before starting. The later implementation records supersede this section's original proposal-only gate.
 
 ### Stage 1 prompt — execute now
 
@@ -225,10 +225,16 @@ Plan native accessible disclosures for work rows and keyboard-operable single-ch
 
 ## Manager transition — 2026-09-20 — current Task 04 status
 
-Read `docs/visual-refresh/MANAGER-START-HERE.md` first. Task 04 proposal and four mockups exist locally; implementation and N=600 are NOT approved. The owner objected that the loupe looks awful and out of spirit, and rejected the adequacy of the prior managing-agent review, particularly its neglect of content. Current loupe is not accepted; substantive content/brand review and corrective proposal remain outstanding. No general approval of the remaining proposal should be inferred. Task 03 remains accepted. The owner subsequently authorized committing and pushing the Task 04 proposal, candidates, mockups and handover together. Fetch the updated visual-refresh branch for these artifacts; original user attachments remain device-local.
+Historical transition note, now superseded: at that point implementation and N=600 were not approved. The owner later authorized both plus isolated preview deployment; the current Task 04 status is recorded below.
 
 ## Task 04 implementation — Ready for managing-agent review — 2026-09-20
 
 The owner subsequently authorized implementation, N=600 and isolated preview deployment, superseding the proposal-only status above. Implemented source: `ce76d9ba98ea3ae394d6e36f10f0e58a75673bb7`. Exact preview pin: `475efa8d3d312cc86fef158510bb14faa9e24f5e`. Successful workflow: [35530239653](https://github.com/tarekazz1/digitful-preview/actions/runs/35530239653). Review URL: `https://preview.digitful.ca/seo/`.
 
 Build and live verification cover the five-section copy/layout, artwork transparency and responsive AVIF selection, 320/390/768/1024/1440 light/dark rendering, zero horizontal overflow, all disclosure/selector states, keyboard operation, CTA targets, clean console results, preview isolation and shared-site smoke checks. Task-wide source plus preview-pin accounting is 294 added / 36 removed / net +258; N=600 PASS. Binary assets and documentation are excluded. Main and production remain unchanged. Do not infer managing-agent technical signoff, owner KEEP or production authorization.
+
+### Final SEO preview corrections — Ready for review — 2026-09-20
+
+Previous implementation source `ce76d9ba98ea3ae394d6e36f10f0e58a75673bb7`; previous preview pin `475efa8d3d312cc86fef158510bb14faa9e24f5e`; cumulative LOC before corrections net +258. Final source `74effcb96b52c13e05f98c0d7fd397e983815a4c` uses solid system teal `#569699` for Search Journey and updates only the page metadata. Exact preview pin `d87ba5fe71d4aa2489c122fe168589fc8ceec0c8`; workflow [35531740178](https://github.com/tarekazz1/digitful-preview/actions/runs/35531740178) succeeded.
+
+Targeted live verification confirms the exact teal, readable established ink/divider/marker treatment in both themes, updated title/description, unchanged canonical, zero overflow and clean console results. Only `src/pages/seo.astro` changed; shared styles, components, accepted pages, artwork, visible copy and interactions did not. Cumulative implementation/config accounting is 295 added / 38 removed / net +257; N=600 PASS. Main and production remain unchanged. Technical signoff and owner KEEP remain pending.
