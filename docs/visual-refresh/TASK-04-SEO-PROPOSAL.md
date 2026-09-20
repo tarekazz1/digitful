@@ -1,10 +1,10 @@
 # Task 04 correction — SEO copy, photographic loupe and guided selector
 
-Status: **Corrected proposal for managing-agent review. Implementation is not authorized.**
+Status: **Hero-composition alternatives for managing-agent review. Implementation is not authorized.**
 
 Prepared: 2026-09-20  
 Source repository/branch: `tarekazz1/digitful:visual-refresh`
-Verified source HEAD and remote tip before correction: `a8996a759cc9196040f4615044c353aa1e9be33e`
+Source HEAD before this hero-composition correction: `cfd52b4f9e678cc9a1d248e6861c2db51aed39a1`
 Recorded production baseline: `c8fac4f78295d2576af0e92b04329f4e938c7b6f` — not modified
 Preview checkout: `423813d0376abe27c7fdb5e6c66cb559e7720095`; `source-ref.txt` remains `360f218949e693df8cd7aea8fe301a5056f614f9` — not modified or deployed
 
@@ -17,19 +17,36 @@ Proposal-only changed artifacts are confined to `docs/visual-refresh/`:
 - this corrected proposal;
 - an editable HTML composition;
 - a new, unshipped photographic loupe candidate and background edge checks;
-- four corrected full-page renders.
+- twelve full-page hero-alternative renders.
 
 No application source, shared design-system code, accepted page, preview configuration, preview pin, production branch or production deployment was changed. No build or deployed-page validation is claimed.
 
 ### Review artifacts
 
-- Editable composition: `docs/visual-refresh/mockups/task-04-seo-proposal.html` (`?theme=light` or `?theme=dark`).
-- Desktop light: `docs/visual-refresh/mockups/task-04-seo-desktop-1440-light.png` — 1440 × 3913.
-- Desktop dark: `docs/visual-refresh/mockups/task-04-seo-desktop-1440-dark.png` — 1440 × 3913.
-- Mobile light: `docs/visual-refresh/mockups/task-04-seo-mobile-390-light.png` — 390 × 4690.
-- Mobile dark: `docs/visual-refresh/mockups/task-04-seo-mobile-390-dark.png` — 390 × 4690.
+Editable composition: `docs/visual-refresh/mockups/task-04-seo-proposal.html` with `?variant=a|b|c&theme=light|dark`.
 
-The previous proposal measured 4259px at 1440px and 5258px at 390px. The corrected composition is 346px shorter on desktop and 568px shorter on mobile while retaining all five sections, one expanded work row and one selected selector response.
+**Alternative A — Lens notch**
+
+- `docs/visual-refresh/mockups/task-04-seo-hero-a-desktop-1440-light.png` — 1440 × 3997.
+- `docs/visual-refresh/mockups/task-04-seo-hero-a-desktop-1440-dark.png` — 1440 × 3997.
+- `docs/visual-refresh/mockups/task-04-seo-hero-a-mobile-390-light.png` — 390 × 4649.
+- `docs/visual-refresh/mockups/task-04-seo-hero-a-mobile-390-dark.png` — 390 × 4649.
+
+**Alternative B — Split headline orbit**
+
+- `docs/visual-refresh/mockups/task-04-seo-hero-b-desktop-1440-light.png` — 1440 × 3867.
+- `docs/visual-refresh/mockups/task-04-seo-hero-b-desktop-1440-dark.png` — 1440 × 3867.
+- `docs/visual-refresh/mockups/task-04-seo-hero-b-mobile-390-light.png` — 390 × 4912.
+- `docs/visual-refresh/mockups/task-04-seo-hero-b-mobile-390-dark.png` — 390 × 4912.
+
+**Alternative C — Panoramic lens underline**
+
+- `docs/visual-refresh/mockups/task-04-seo-hero-c-desktop-1440-light.png` — 1440 × 3947.
+- `docs/visual-refresh/mockups/task-04-seo-hero-c-desktop-1440-dark.png` — 1440 × 3947.
+- `docs/visual-refresh/mockups/task-04-seo-hero-c-mobile-390-light.png` — 390 × 4770.
+- `docs/visual-refresh/mockups/task-04-seo-hero-c-mobile-390-dark.png` — 390 × 4770.
+
+Every render retains all five sections, one expanded work row and one selected selector response. The lower four sections and all approved copy are identical across alternatives.
 
 ## 2. Complete approved page copy
 
@@ -217,15 +234,23 @@ The source candidate was flattened at full resolution onto the approved paper `#
 
 The exterior silhouette is clean on both surfaces without the rejected candidate’s soft pale halo. Lens highlights, metal reflections and grip texture remain visibly photographic. The fine black/cream variation is internal print treatment, not an exterior glow.
 
-## 4. Corrected composition
+## 4. Hero composition alternatives
 
-### Hero
+The three directions use the same approved wording and the same photographic loupe. They change the structural relationship between headline and artwork rather than merely changing size, rotation or background color.
 
-- Desktop uses an open two-column editorial composition: the locked copy occupies the left field; the large photographic loupe cuts diagonally through the right field.
-- A narrow mustard vertical field supports the handle and a short teal rule gives the composition a controlled irregular accent. Neither encloses the lens or turns it into a circular badge.
-- The new asset remains the dominant hero object without covering letters or controls.
-- Mobile keeps the headline, full paragraph and CTA in normal flow. The artwork follows in a shallow reserved band, with the handle and lens cropped at page edges but still recognizable. It does not squeeze the copy column or crowd the CTA.
-- This composition is distinct from Social Media: it does not reuse that page’s hero arrangement, problem grid, outcome path or CTA layout.
+### Alternative A — Lens notch
+
+The headline forms a compact left-hand block and leaves an intentional right-edge notch for the lens. The lens is tangent to the headline’s negative space while its handle cuts through the open hero field. On mobile, the lens occupies the headline’s right-side notch rather than becoming a separate image below the CTA; paragraph and CTA remain in normal flow.
+
+### Alternative B — Split headline orbit
+
+The sentence is visually divided at its existing punctuation: the statement anchors the left, the question answers from the right, and the loupe occupies the central interval. The accessible heading remains one exact H1. On mobile, the statement, loupe sweep and question create a single top-to-bottom reading composition before the paragraph and CTA.
+
+### Alternative C — Panoramic lens underline
+
+The complete headline leads at the top while the loupe becomes a wide editorial underline between headline and body copy. The handle exits the right boundary on desktop. Mobile reserves a compact lens band immediately after the headline, so the artwork remains prominent without being stacked below the CTA.
+
+All three directions remove the prior separate illustration column and its supporting decorative fields. None adds a fake interface, lens text, badge, annotation or search-result effect. The artwork does not obstruct the headline, paragraph or CTA in the review renders.
 
 ### Remaining sections
 
@@ -252,8 +277,8 @@ The exterior silhouette is clean on both surfaces without the rejected candidate
 4. Reduced ongoing management to a compact loop with one-line explanations.
 5. Shortened all four selector responses and removed the added `Where to start` label.
 6. Rejected rather than retouched the previous engraved-looking loupe; generated a new photographic candidate from accepted collage references.
-7. Replaced the circular badge-like hero backing with a narrow vertical field and rule.
-8. Reduced desktop and mobile section depth while preserving five distinct sections and useful content.
+7. Removed the separate hero image column and decorative backing fields.
+8. Added three genuinely different headline/loupe relationships for owner selection while keeping the other four sections unchanged.
 
 ## 7. Remaining owner/implementation issues
 
