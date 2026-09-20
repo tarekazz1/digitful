@@ -1,0 +1,766 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="data:," />
+    <title>Task 04 SEO proposal mockup</title>
+    <style>
+      @font-face {
+        font-family: "Digitful Inter";
+        src: url("../../../dist/_astro/fonts/e868cdf4720e9ea5.woff2") format("woff2");
+        font-weight: 400 700;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Digitful Barlow";
+        src: url("../../../dist/_astro/fonts/4138793c36ba9af3.woff2") format("woff2");
+        font-weight: 800;
+        font-display: swap;
+      }
+
+      :root {
+        --paper: #f0e7d5;
+        --paper-light: #f6eedd;
+        --ink: #191a1b;
+        --coral: #e95849;
+        --coral-strong: #d94739;
+        --teal: #569699;
+        --mustard: #e4c58f;
+        --muted: #4e4b45;
+        --surface: #f6eedd;
+        --rule: #191a1b;
+        --subtle: rgba(25, 26, 27, 0.28);
+        --max: 1176px;
+      }
+
+      html[data-theme="dark"] {
+        --paper: #191a1b;
+        --paper-light: #232425;
+        --ink: #f0e7d5;
+        --coral: #e95849;
+        --coral-strong: #f06d5f;
+        --teal: #569699;
+        --mustard: #e4c58f;
+        --muted: #cec3af;
+        --surface: #232425;
+        --rule: rgba(240, 231, 213, 0.82);
+        --subtle: rgba(240, 231, 213, 0.28);
+      }
+
+      * { box-sizing: border-box; }
+
+      html { background: var(--paper); }
+
+      body {
+        margin: 0;
+        overflow-x: hidden;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at 15% 10%, color-mix(in srgb, var(--ink) 3%, transparent) 0 1px, transparent 1.5px) 0 0 / 9px 9px,
+          var(--paper);
+        font-family: "Digitful Inter", Inter, Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.55;
+      }
+
+      a { color: inherit; }
+
+      .container {
+        width: min(calc(100% - 48px), var(--max));
+        margin-inline: auto;
+      }
+
+      .eyebrow {
+        margin: 0 0 18px;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+      }
+
+      h1, h2, h3 {
+        margin: 0;
+        font-family: "Digitful Barlow", "Arial Narrow", Arial, sans-serif;
+        font-weight: 800;
+        letter-spacing: -0.035em;
+      }
+
+      h2 {
+        font-size: clamp(54px, 5.35vw, 78px);
+        line-height: 0.93;
+      }
+
+      h3 {
+        font-size: 29px;
+        line-height: 1;
+      }
+
+      p { margin: 0; }
+
+      .site-header {
+        position: relative;
+        z-index: 10;
+        border-bottom: 2px solid var(--rule);
+        background: var(--paper);
+      }
+
+      .site-nav {
+        min-height: 78px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .brand-logo {
+        display: block;
+        width: 145px;
+        height: auto;
+      }
+
+      .logo-dark { display: none; }
+      html[data-theme="dark"] .logo-light { display: none; }
+      html[data-theme="dark"] .logo-dark { display: block; }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 29px;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+      }
+
+      .nav-links a { text-decoration: none; }
+
+      .nav-cta {
+        padding: 11px 18px;
+        color: #191a1b;
+        background: var(--coral);
+        border: 2px solid var(--rule);
+        letter-spacing: 0;
+        text-transform: none;
+      }
+
+      .nav-menu {
+        display: none;
+        width: 44px;
+        height: 44px;
+        border: 2px solid var(--rule);
+        background: transparent;
+      }
+
+      .nav-menu::before,
+      .nav-menu::after,
+      .nav-menu span {
+        content: "";
+        display: block;
+        width: 21px;
+        height: 2px;
+        margin: 5px auto;
+        background: var(--ink);
+      }
+
+      .hero {
+        min-height: 705px;
+        overflow: hidden;
+        border-bottom: 2px solid var(--rule);
+      }
+
+      .hero-grid {
+        position: relative;
+        display: grid;
+        grid-template-columns: minmax(0, 0.98fr) minmax(0, 1.02fr);
+        min-height: 705px;
+        align-items: center;
+      }
+
+      .hero-copy {
+        position: relative;
+        z-index: 3;
+        padding-block: 86px;
+      }
+
+      .hero h1 {
+        max-width: 8.8ch;
+        font-size: clamp(76px, 7.5vw, 108px);
+        line-height: 0.88;
+      }
+
+      .hero-copy p {
+        max-width: 600px;
+        margin-top: 25px;
+        color: var(--muted);
+        font-size: 19px;
+        line-height: 1.58;
+      }
+
+      .hero-cta,
+      .response-cta {
+        display: inline-flex;
+        min-height: 52px;
+        align-items: center;
+        margin-top: 30px;
+        padding: 12px 20px;
+        color: #191a1b;
+        background: var(--coral);
+        border: 2px solid var(--rule);
+        font-weight: 700;
+        text-decoration: none;
+        box-shadow: 6px 6px 0 var(--mustard);
+      }
+
+      .hero-art {
+        position: relative;
+        align-self: stretch;
+        min-width: 0;
+      }
+
+      .hero-art::before {
+        content: "";
+        position: absolute;
+        width: 390px;
+        height: 390px;
+        top: 106px;
+        left: 44px;
+        border: 2px solid var(--rule);
+        border-radius: 50%;
+        background: var(--mustard);
+      }
+
+      .hero-loupe {
+        position: absolute;
+        z-index: 2;
+        width: 820px;
+        max-width: none;
+        top: 74px;
+        left: -53px;
+        transform: rotate(-3deg);
+      }
+
+      .section {
+        padding-block: 100px;
+        border-bottom: 2px solid var(--rule);
+      }
+
+      .split-head {
+        display: grid;
+        grid-template-columns: minmax(0, 0.73fr) minmax(0, 1.27fr);
+        gap: 75px;
+        align-items: start;
+      }
+
+      .section-intro {
+        max-width: 650px;
+        margin-top: 23px;
+        color: var(--muted);
+        font-size: 18px;
+      }
+
+      .journey {
+        background: var(--paper-light);
+      }
+
+      .journey-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        margin-top: 66px;
+        border-top: 3px solid var(--rule);
+      }
+
+      .journey-step {
+        position: relative;
+        padding: 28px 31px 16px 0;
+        border-right: 1px solid var(--subtle);
+      }
+
+      .journey-step + .journey-step { padding-left: 31px; }
+      .journey-step:last-child { border-right: 0; }
+
+      .journey-step:not(:last-child)::after {
+        content: "→";
+        position: absolute;
+        top: -26px;
+        right: -17px;
+        display: grid;
+        width: 34px;
+        height: 34px;
+        place-items: center;
+        color: #191a1b;
+        background: var(--coral);
+        border: 2px solid var(--rule);
+        font-weight: 800;
+      }
+
+      .journey-step h3 { margin-bottom: 14px; }
+      .journey-step p { color: var(--muted); }
+
+      .journey-close {
+        margin-top: 37px;
+        padding-top: 22px;
+        border-top: 1px solid var(--subtle);
+        font-weight: 700;
+      }
+
+      .work-head { margin-bottom: 56px; }
+
+      .work-list { border-top: 3px solid var(--rule); }
+
+      .work-row { border-bottom: 2px solid var(--rule); }
+
+      .work-summary {
+        display: grid;
+        grid-template-columns: minmax(220px, 0.72fr) minmax(0, 1.28fr) 44px;
+        gap: 28px;
+        align-items: center;
+        padding: 25px 0;
+      }
+
+      .work-summary p { color: var(--muted); }
+
+      .work-state {
+        display: grid;
+        width: 42px;
+        height: 42px;
+        place-items: center;
+        color: #191a1b;
+        background: var(--mustard);
+        border: 2px solid var(--rule);
+        font-size: 24px;
+        font-weight: 800;
+      }
+
+      .work-row.is-open {
+        padding-left: 22px;
+        border-left: 8px solid var(--coral);
+        background: color-mix(in srgb, var(--coral) 8%, transparent);
+      }
+
+      .work-detail {
+        max-width: 740px;
+        margin: 0 0 27px calc(220px + 28px);
+        color: var(--muted);
+        font-size: 16px;
+      }
+
+      .management {
+        color: #191a1b;
+        background: var(--mustard);
+      }
+
+      html[data-theme="dark"] .management {
+        color: var(--ink);
+        background: #242525;
+      }
+
+      .management .section-intro,
+      .management-step p { color: currentColor; opacity: 0.78; }
+
+      .management-flow {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        margin-top: 64px;
+        border-top: 3px solid currentColor;
+      }
+
+      .management-step {
+        position: relative;
+        padding: 28px 38px 0 0;
+      }
+
+      .management-step + .management-step { padding-left: 38px; }
+      .management-step h3 { margin-bottom: 12px; }
+
+      .management-step:not(:last-child)::after {
+        content: "→";
+        position: absolute;
+        top: 18px;
+        right: 0;
+        font-size: 31px;
+        font-weight: 800;
+      }
+
+      .selector-wrap {
+        display: grid;
+        grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+        gap: 78px;
+        align-items: start;
+      }
+
+      .selector-copy {
+        position: sticky;
+        top: 24px;
+      }
+
+      .selector-copy p {
+        margin-top: 24px;
+        color: var(--muted);
+        font-size: 18px;
+      }
+
+      .selector-panel {
+        padding: 30px;
+        background: var(--surface);
+        border: 3px solid var(--rule);
+        box-shadow: 9px 9px 0 var(--teal);
+      }
+
+      .choice {
+        display: grid;
+        grid-template-columns: 26px minmax(0, 1fr);
+        gap: 16px;
+        align-items: center;
+        min-height: 62px;
+        padding: 14px 16px;
+        border-top: 2px solid var(--rule);
+        font-weight: 700;
+      }
+
+      .choice:first-child { border-top: 0; }
+
+      .choice-dot {
+        display: grid;
+        width: 24px;
+        height: 24px;
+        place-items: center;
+        border: 2px solid var(--rule);
+        border-radius: 50%;
+      }
+
+      .choice.is-selected {
+        color: #191a1b;
+        background: var(--teal);
+      }
+
+      .choice.is-selected .choice-dot {
+        background: #191a1b;
+        border-color: #191a1b;
+      }
+
+      .choice.is-selected .choice-dot::after {
+        content: "";
+        width: 8px;
+        height: 8px;
+        background: var(--paper-light);
+        border-radius: 50%;
+      }
+
+      .response {
+        margin-top: 24px;
+        padding: 25px;
+        color: #191a1b;
+        background: var(--mustard);
+        border: 2px solid var(--rule);
+      }
+
+      .response .eyebrow { margin-bottom: 10px; }
+      .response p { line-height: 1.58; }
+
+      .response-cta {
+        margin-top: 22px;
+        color: #191a1b;
+        background: #f6eedd;
+        border-color: #191a1b;
+        box-shadow: 5px 5px 0 #191a1b;
+      }
+
+      .site-footer {
+        padding-block: 32px;
+        background: var(--paper);
+      }
+
+      .footer-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+      }
+
+      .footer-row p { color: var(--muted); font-size: 13px; }
+
+      @media (max-width: 767px) {
+        .container { width: min(calc(100% - 32px), var(--max)); }
+        .nav-links { display: none; }
+        .nav-menu { display: block; }
+        .site-nav { min-height: 72px; }
+        .brand-logo { width: 126px; }
+
+        .hero,
+        .hero-grid { min-height: 0; }
+
+        .hero-grid {
+          display: block;
+          padding-top: 58px;
+        }
+
+        .hero-copy { padding: 0; }
+
+        .hero h1 {
+          max-width: 8.7ch;
+          font-size: 61px;
+          line-height: 0.89;
+        }
+
+        .hero-copy p {
+          margin-top: 21px;
+          font-size: 16px;
+          line-height: 1.55;
+        }
+
+        .hero-cta {
+          min-height: 50px;
+          margin-top: 24px;
+          padding: 11px 16px;
+        }
+
+        .hero-art {
+          height: 270px;
+          margin-top: 16px;
+        }
+
+        .hero-art::before {
+          width: 220px;
+          height: 220px;
+          top: 17px;
+          left: 7px;
+        }
+
+        .hero-loupe {
+          width: 535px;
+          top: 8px;
+          left: -85px;
+          transform: rotate(-5deg);
+        }
+
+        .section { padding-block: 68px; }
+        .split-head,
+        .selector-wrap { grid-template-columns: 1fr; gap: 0; }
+        h2 { font-size: 49px; }
+        h3 { font-size: 26px; }
+        .section-intro { margin-top: 20px; font-size: 16px; }
+
+        .journey-grid {
+          grid-template-columns: 1fr;
+          margin-top: 42px;
+          border-top: 3px solid var(--rule);
+        }
+
+        .journey-step,
+        .journey-step + .journey-step {
+          padding: 24px 0;
+          border-right: 0;
+          border-bottom: 1px solid var(--subtle);
+        }
+
+        .journey-step:not(:last-child)::after {
+          content: "↓";
+          top: auto;
+          right: 8px;
+          bottom: -17px;
+        }
+
+        .journey-close { margin-top: 28px; }
+        .work-head { margin-bottom: 40px; }
+
+        .work-summary {
+          grid-template-columns: minmax(0, 1fr) 42px;
+          gap: 14px;
+          padding: 22px 0;
+        }
+
+        .work-summary h3 { grid-column: 1; }
+        .work-summary p { grid-column: 1 / -1; grid-row: 2; }
+        .work-state { grid-column: 2; grid-row: 1; }
+
+        .work-row.is-open { padding-left: 14px; border-left-width: 6px; }
+        .work-detail { margin: 0 0 24px; padding-right: 12px; }
+
+        .management-flow {
+          grid-template-columns: 1fr;
+          margin-top: 42px;
+        }
+
+        .management-step,
+        .management-step + .management-step {
+          padding: 24px 0;
+          border-bottom: 1px solid currentColor;
+        }
+
+        .management-step:not(:last-child)::after {
+          content: "↓";
+          top: 22px;
+          right: 8px;
+        }
+
+        .selector-copy { position: static; }
+        .selector-panel { margin-top: 38px; padding: 16px; box-shadow: 7px 7px 0 var(--teal); }
+        .choice { min-height: 66px; padding: 13px 8px; }
+        .response { padding: 20px; }
+
+        .footer-row { align-items: flex-start; flex-direction: column; }
+      }
+    </style>
+    <script>
+      const params = new URLSearchParams(location.search);
+      document.documentElement.dataset.theme = params.get('theme') === 'dark' ? 'dark' : 'light';
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container site-nav">
+        <img class="brand-logo logo-light" src="../../../public/assets/brand/digitful-wordmark-on-light.svg" alt="Digitful" />
+        <img class="brand-logo logo-dark" src="../../../public/assets/brand/digitful-wordmark-on-dark.svg" alt="Digitful" />
+        <nav class="nav-links" aria-label="Proposal navigation">
+          <a href="#">About</a>
+          <a href="#work">What we build</a>
+          <a href="#">Blog</a>
+          <a href="#">Services</a>
+          <a class="nav-cta" href="#selector">Talk to Digitful</a>
+        </nav>
+        <button class="nav-menu" type="button" aria-label="Open navigation"><span></span></button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <h1>Your next customer is searching. Can they find you?</h1>
+            <p>People are looking for answers, products, and services. AI-powered search tools are helping them discover their options. We help your business become easier to find, understand, and choose, wherever the search begins.</p>
+            <a class="hero-cta" href="#selector">Tell us what's stuck →</a>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <img class="hero-loupe" src="../candidates/task-04-seo-loupe-clean-edge.png" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <section class="section journey">
+        <div class="container">
+          <div class="split-head">
+            <div>
+              <p class="eyebrow">The search journey</p>
+              <h2>Getting found is only the beginning.</h2>
+            </div>
+            <p class="section-intro">A search can begin in a search engine, on a map, or in an AI-powered answer. The useful path is still connected: help the right person find the business, understand the answer, and know what to do next.</p>
+          </div>
+          <div class="journey-grid">
+            <article class="journey-step">
+              <h3>Search</h3>
+              <p>People cannot find the business when they look.</p>
+            </article>
+            <article class="journey-step">
+              <h3>Discover</h3>
+              <p>They find it, but not the answers they need.</p>
+            </article>
+            <article class="journey-step">
+              <h3>Act</h3>
+              <p>They arrive, but the next step is unclear.</p>
+            </article>
+          </div>
+          <p class="journey-close">SEO has to support the whole journey, not stop at a ranking report.</p>
+        </div>
+      </section>
+
+      <section class="section" id="work">
+        <div class="container">
+          <div class="split-head work-head">
+            <div>
+              <p class="eyebrow">The work</p>
+              <h2>Different searches. One connected strategy.</h2>
+            </div>
+            <p class="section-intro">The work changes with the problem, but each part should make the same business easier to find, understand, and choose.</p>
+          </div>
+          <div class="work-list">
+            <article class="work-row is-open">
+              <div class="work-summary">
+                <h3>Search intent &amp; content</h3>
+                <p>Match useful pages to the questions and decisions that matter to the business.</p>
+                <span class="work-state" aria-label="Expanded">−</span>
+              </div>
+              <p class="work-detail">Review which searches deserve a page, whether existing pages answer the real question, and where the route from information to service is missing. AI can help surface patterns and gaps; people still decide what is accurate, useful, and worth publishing.</p>
+            </article>
+            <article class="work-row">
+              <div class="work-summary">
+                <h3>Technical foundations</h3>
+                <p>Remove the structural obstacles that keep useful pages from being found or understood.</p>
+                <span class="work-state" aria-label="Collapsed">+</span>
+              </div>
+            </article>
+            <article class="work-row">
+              <div class="work-summary">
+                <h3>Local visibility</h3>
+                <p>Make the business details people rely on clear and consistent where local search matters.</p>
+                <span class="work-state" aria-label="Collapsed">+</span>
+              </div>
+            </article>
+            <article class="work-row">
+              <div class="work-summary">
+                <h3>Measurement &amp; improvement</h3>
+                <p>Connect visibility and visits to useful actions, then improve what the evidence supports.</p>
+                <span class="work-state" aria-label="Collapsed">+</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section management">
+        <div class="container">
+          <div class="split-head">
+            <div>
+              <p class="eyebrow">Ongoing management</p>
+              <h2>SEO is not a one-time fix.</h2>
+            </div>
+            <p class="section-intro">Search behaviour, competitors, content, and websites change. Useful SEO needs a review loop, not a launch-and-forget checklist.</p>
+          </div>
+          <div class="management-flow">
+            <article class="management-step">
+              <h3>Monitor</h3>
+              <p>Watch search visibility, page performance, and meaningful actions for material changes.</p>
+            </article>
+            <article class="management-step">
+              <h3>Improve</h3>
+              <p>Fix the clearest constraint, strengthen weak pages, and test the next useful opportunity.</p>
+            </article>
+            <article class="management-step">
+              <h3>Measure</h3>
+              <p>Compare what changed with the baseline, then decide what to keep, revise, or stop.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="selector">
+        <div class="container selector-wrap">
+          <div class="selector-copy">
+            <p class="eyebrow">Choose a starting point</p>
+            <h2>Where is your search visibility getting stuck?</h2>
+            <p>Choose the problem that sounds familiar.</p>
+          </div>
+          <div class="selector-panel" role="group" aria-label="Problem selector proposal">
+            <div class="choice"><span class="choice-dot"></span><span>People cannot find my business</span></div>
+            <div class="choice"><span class="choice-dot"></span><span>My website gets traffic but few inquiries</span></div>
+            <div class="choice"><span class="choice-dot"></span><span>My Google Business Profile needs attention</span></div>
+            <div class="choice is-selected"><span class="choice-dot"></span><span>I am not sure what is working</span></div>
+            <div class="response">
+              <p class="eyebrow">Where to start</p>
+              <p>Start with a simple measurement map. List the searches and pages meant to create demand, the actions that show progress, and the business outcomes that matter. Then review search performance, technical health, and visitor actions against the same baseline.</p>
+              <a class="response-cta" href="#">Discuss your SEO →</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <img class="brand-logo logo-light" src="../../../public/assets/brand/digitful-wordmark-on-light.svg" alt="Digitful" />
+        <img class="brand-logo logo-dark" src="../../../public/assets/brand/digitful-wordmark-on-dark.svg" alt="Digitful" />
+        <p>Proposal-only visual artifact · Task 04 Stage 1 · Not implementation</p>
+      </div>
+    </footer>
+  </body>
+</html>

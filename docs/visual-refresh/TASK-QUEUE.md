@@ -173,3 +173,56 @@ Owner explicitly approved KEEP. Task 03 is closed at source `360f218949e693df8cd
 Verification boundary: live interaction, deployment, safeguard and build results are implementing-agent evidence; the managing agent did not independently rerun those checks or reverify the live pin. The dark desktop close-up discrepancy was not treated as a live defect: the full-page capture showed the button label, and the owner confirmed it was visible. No unresolved defect was identified in the accepted review scope. Reported cumulative accounting: 326 added / 441 removed / net -115; N=200 PASS.
 
 This acceptance supersedes earlier pending-review statuses for Task 03. Owner KEEP and technical signoff do not authorize production release. No production change was performed in recording this acceptance.
+
+## 04 — SEO copy, integrated loupe and guided problem selector
+
+Updated 2026-09-20. Status: **Proposal stage authorized; implementation NOT authorized.** Model: **Sol, medium effort**. Task 03 is accepted. Read the mandatory queue rules and referenced project documents before starting. This section supersedes the earlier Task 04 draft that preserved all copy, required a compact mobile loupe and omitted interaction.
+
+### Stage 1 prompt — execute now
+
+Inspect the current SEO page, accepted homepage/Social Media visual system, existing brand/copy rules and current source/branch state. Complete a rendered desktop/mobile audit in both themes where browser access permits; distinguish inspected source from actual rendered evidence. The managing agent previously had no browser available, so that audit remains outstanding. If access is still unavailable, continue the proposal but report the gap explicitly; do not claim rendered verification.
+
+Prepare a reviewable copy-and-composition proposal in `docs/visual-refresh/TASK-04-SEO-PROPOSAL.md`. Do not edit application code, change the preview pin, deploy or modify production. Only proposal documentation and clearly separated candidate visual artifacts are within this stage. Return to the managing agent/owner for approval before implementation.
+
+### Locked owner-approved hero copy
+
+Use these words exactly; do not silently shorten, rewrite or add a second hero CTA:
+
+Headline: Your next customer is searching. Can they find you?
+
+Supporting paragraph: People are looking for answers, products, and services. AI-powered search tools are helping them discover their options. We help your business become easier to find, understand, and choose, wherever the search begins.
+
+CTA: Tell us what's stuck →
+
+Retain the contact destination `/contact/?service=seo`. The arrow may be a separate decorative element. No fake search input or extra “Looking for a business like yours…” line. Do not add promises of rankings, AI recommendations or citations.
+
+### Proposed page structure and copy work
+
+Use five sections, with the selector serving as the closing conversion section rather than a redundant separate FAQ plus CTA:
+1. Hero: exact copy above and a large loupe integrated into its composition.
+2. Search journey: “Getting found is only the beginning.” Keep Search → Discover → Act visible. Explain the three breaks: people cannot find the business; they find it but not the answers they need; they arrive but lack a clear next step. Keep essential explanations visible rather than requiring clicks to understand the journey.
+3. The work: “Different searches. One connected strategy.” Four expandable editorial rows: Search intent & content; Technical foundations; Local visibility; Measurement & improvement. Visible summaries must make sense when collapsed; expansions hold useful details, not repeated filler.
+4. Ongoing management: “SEO is not a one-time fix.” A compact Monitor → Improve → Measure sequence, with concise explanations.
+5. Guided closing selector: “Where is your search visibility getting stuck?” / “Choose the problem that sounds familiar.” Four choices: “People cannot find my business”; “My website gets traffic but few inquiries”; “My Google Business Profile needs attention”; “I am not sure what is working”. Each reveals its own useful “Where to start” response and “Discuss your SEO →” contact link. Draft all four distinct responses. This is guidance based on a selection, not a scan or assessment: no URL input, score, network diagnostic, API or fabricated results. Keep the existing contact query; do not invent a new contact-state handoff.
+
+Propose the full remaining copy with brief reasons for substantive changes. Confirm service claims against existing project evidence: Google Business Profile work, listings, content creation, analytics and ongoing management must not be silently invented as offerings. Flag unsupported commitments for owner confirmation. Keep AI integrated naturally in relevant content; no separate AI SEO/GEO sales section. Source-check any new factual platform claims using primary documentation. Owner-provided hero copy remains locked; report concerns rather than altering it.
+
+### Loupe and visual direction
+
+The owner has no loupe original and wants a BIG magnifying glass that is part of the hero, not a small accessory like the homepage laptop. Propose a monochrome photographic halftone cutout with transparent background, matching the existing collage artwork. No baked-in text, slogans, annotations, sticky notes, stock-tech effects or fake results. A restrained mustard field/shape may sit behind it using current tokens.
+
+Desktop concept: the loupe occupies roughly half the hero, with its handle extending toward the section edge and the headline composed alongside the lens. This is a starting composition, not a rigid ratio. Mobile: preserve its strong visual presence using a deliberate edge crop, while keeping text and CTA readable and avoiding squeezed text columns or excessive hero height. Do not default to shrinking it into an icon. Layering decorative space is acceptable; covering text or controls is not.
+
+Prepare one generated candidate asset using the available image-generation capability and its skill instructions, plus a desktop/mobile placement proposal. Keep the candidate outside shipped assets until approved. If generation is unavailable, supply the exact visual brief and report that the candidate remains outstanding; do not substitute binoculars or a generic icon. Asset generation is proposal work, not permission to integrate an unapproved visual.
+
+Treat the supplied wireframes as structure, not a rounded-card design to copy. Use the approved typography, hard-edged controls, rules, restrained colour and open composition. Reference images are available locally under `C:/Users/tarek.azzi/.codex/codex-remote-attachments/01a0ae53-e8af-7181-85da-dc4c0ced41e8/B4A5B1CE-6CFC-4C73-9E12-576C2913AF36/`: `1-Pasted-Image-1.jpg` (selector), `2-Photo-2.jpg` and `3-Photo-3.jpg` (wireframe). Inspect these files; another conversation's attachments are not automatically inherited.
+
+### Proposal deliverables / later implementation gate
+
+Return the audit findings and limits, exact full proposed copy, four selector responses, loupe candidate/provenance, desktop/mobile composition and interaction behavior, unresolved service confirmations and a justified implementation N recommendation. Suggested N=200 from the earlier narrower draft is UNAPPROVED and must be reassessed for this expanded scope. Do not begin code changes until the owner approves the proposal, visual and N.
+
+Plan native accessible disclosures for work rows and keyboard-operable single-choice controls with a clear selected state and announced response for the selector; avoid dependencies. Plan optimized responsive artwork with reserved dimensions and prompt hero loading. Future verification must cover 320/390/768/1024/1440 plus breakpoint boundaries in both themes, actual legibility/clipping/overlap and functional controls, not overflow alone. Capture fully loaded desktop/mobile full pages and close-ups. Preserve metadata, accepted pages and preview safeguards; use the existing exact-SHA preview workflow only once implementation is authorized. Managing-agent signoff, owner KEEP and production release remain distinct.
+
+## Manager transition — 2026-09-20 — current Task 04 status
+
+Read `docs/visual-refresh/MANAGER-START-HERE.md` first. Task 04 proposal and four mockups exist locally; implementation and N=600 are NOT approved. The owner objected that the loupe looks awful and out of spirit, and rejected the adequacy of the prior managing-agent review, particularly its neglect of content. Current loupe is not accepted; substantive content/brand review and corrective proposal remain outstanding. No general approval of the remaining proposal should be inferred. Task 03 remains accepted. The owner subsequently authorized committing and pushing the Task 04 proposal, candidates, mockups and handover together. Fetch the updated visual-refresh branch for these artifacts; original user attachments remain device-local.
