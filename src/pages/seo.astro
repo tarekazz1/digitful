@@ -1,8 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const pageTitle = 'SEO - Digitful';
-const pageDescription = 'Digitful approaches SEO as a demand capture and clarity system, not a reporting exercise.';
+const pageTitle = 'SEO & Local Search Visibility | Digitful';
+const pageDescription = 'SEO and local search visibility for businesses that want to be easier to find, understand, and choose wherever the search begins.';
 const pageCanonical = 'https://digitful.ca/seo/';
 
 const journey = [
@@ -160,10 +160,8 @@ const problems = [
 <style>
   .seo-page {
     --seo-rule: var(--ds-rule-strong);
-    --seo-journey-bg: color-mix(in srgb, var(--site-teal) 16%, var(--site-bg));
     overflow: clip;
   }
-  :global(html[data-theme="light"]) .seo-page { --seo-journey-bg: color-mix(in srgb, var(--site-teal) 13%, var(--site-bg)); }
   .seo-page :is(h1, h2, h3, p) { margin: 0; }
   .seo-section { padding-block: var(--space-section); border-bottom: var(--seo-rule); }
   .seo-section__head .eyebrow,
@@ -204,11 +202,12 @@ const problems = [
     font-weight: 700;
   }
 
-  .seo-journey { background: var(--seo-journey-bg); }
+  .seo-journey { color: var(--brand-ink); background: var(--site-teal); }
+  .seo-journey :is(.eyebrow, h2, h3) { color: var(--brand-ink); }
   .seo-journey__head h2 { max-width: 10ch; }
-  .seo-journey__track { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: clamp(2rem, 3vw, 2.75rem); border-top: 3px solid var(--site-border); }
+  .seo-journey__track { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: clamp(2rem, 3vw, 2.75rem); border-top: 3px solid var(--brand-ink); }
   .seo-journey__step { position: relative; padding: 1.8rem 2rem 0.25rem 0; }
-  .seo-journey__step + .seo-journey__step { padding-left: 2rem; border-left: var(--ds-rule-subtle); }
+  .seo-journey__step + .seo-journey__step { padding-left: 2rem; border-left: var(--ds-rule-thin-width) solid var(--brand-ink); }
   .seo-journey__number {
     position: absolute;
     top: -1.05rem;
@@ -222,8 +221,8 @@ const problems = [
   }
   .seo-journey__step + .seo-journey__step .seo-journey__number { left: 1.9rem; }
   .seo-journey h3 { margin-top: 0.55rem; font-size: 2.15rem; line-height: 1; }
-  .seo-journey__lead { max-width: 17ch; margin-top: 0.8rem !important; color: var(--site-text); font-size: 1.1rem; font-weight: 700; line-height: 1.35; }
-  .seo-journey__step > p:last-child { max-width: 31ch; margin-top: 0.6rem; color: var(--site-text-muted); }
+  .seo-journey__lead { max-width: 17ch; margin-top: 0.8rem !important; color: var(--brand-ink); font-size: 1.1rem; font-weight: 700; line-height: 1.35; }
+  .seo-journey__step > p:last-child { max-width: 31ch; margin-top: 0.6rem; color: var(--brand-ink); }
 
   .seo-work__head { margin-bottom: 2.75rem; }
   .seo-work__head h2 { max-width: 10ch; }
@@ -286,7 +285,7 @@ const problems = [
     .seo-hero__intro p { font-size: 1rem; line-height: 1.5; }
     .seo-journey__track { grid-template-columns: 1fr; margin-top: 2.4rem; }
     .seo-journey__step,
-    .seo-journey__step + .seo-journey__step { padding: 1.6rem 0 1.35rem; border-left: 0; border-bottom: var(--ds-rule-subtle); }
+    .seo-journey__step + .seo-journey__step { padding: 1.6rem 0 1.35rem; border-left: 0; border-bottom: var(--ds-rule-thin-width) solid var(--brand-ink); }
     .seo-journey__step + .seo-journey__step .seo-journey__number { left: 0; }
     .seo-journey__lead,
     .seo-journey__step > p:last-child { max-width: none; }
