@@ -1,22 +1,22 @@
-# Task 04 correction — SEO copy, owner artwork and guided selector
+# Task 04 correction — SEO copy, approved transparent artwork and guided selector
 
-Status: **Revised owner-artwork proposal for managing-agent review. Implementation is not authorized.**
+Status: **Revised approved-artwork proposal for managing-agent review. Implementation is not authorized.**
 
 Prepared: 2026-09-20  
 Source repository/branch: `tarekazz1/digitful:visual-refresh`
-Source HEAD before this owner-artwork correction: `1b0e06ae2c88311364f1eab1dde04ccefabf4b12`
+Source HEAD before this approved-artwork correction: `1156e5b992c79528a447df4a6fc5d9247a1fbec9`
 Recorded production baseline: `c8fac4f78295d2576af0e92b04329f4e938c7b6f` — not modified
 Preview checkout: `423813d0376abe27c7fdb5e6c66cb559e7720095`; `source-ref.txt` remains `360f218949e693df8cd7aea8fe301a5056f614f9` — not modified or deployed
 
 ## 1. Correction scope and authority
 
-This revision preserves the approved five-section wording and replaces the previous photographic loupe and hero alternatives A, B and C with the owner-supplied SEO collage. The wording below remains the complete public page copy authority. It is reproduced without substantive additions, introductory paragraphs, closing summaries or a separate final CTA section.
+This revision preserves the approved five-section wording and replaces every previous loupe, owner-artwork derivative and hero alternative A, B and C with the newly supplied SEO collage. The wording below remains the complete public page copy authority. It is reproduced without substantive additions, introductory paragraphs, closing summaries or a separate final CTA section.
 
 Proposal-only changed artifacts are confined to `docs/visual-refresh/`:
 
 - this corrected proposal;
 - an editable HTML composition;
-- a byte-identical archive of the owner-supplied source and four cropped responsive derivatives;
+- a byte-identical archive of the newly supplied source and four transparent responsive derivatives;
 - four revised full-page renders.
 
 No application source, shared design-system code, accepted page, preview configuration, preview pin, production branch or production deployment was changed. No build or deployed-page validation is claimed.
@@ -25,10 +25,10 @@ No application source, shared design-system code, accepted page, preview configu
 
 Editable composition: `docs/visual-refresh/mockups/task-04-seo-proposal.html` with `?theme=light` or `?theme=dark`.
 
-- `docs/visual-refresh/mockups/task-04-seo-owner-artwork-desktop-1440-light.png` — 1440 × 4005.
-- `docs/visual-refresh/mockups/task-04-seo-owner-artwork-desktop-1440-dark.png` — 1440 × 4005.
-- `docs/visual-refresh/mockups/task-04-seo-owner-artwork-mobile-390-light.png` — 390 × 4893.
-- `docs/visual-refresh/mockups/task-04-seo-owner-artwork-mobile-390-dark.png` — 390 × 4893.
+- `docs/visual-refresh/mockups/task-04-seo-approved-artwork-desktop-1440-light.png` — 1440 × 3927.
+- `docs/visual-refresh/mockups/task-04-seo-approved-artwork-desktop-1440-dark.png` — 1440 × 3927.
+- `docs/visual-refresh/mockups/task-04-seo-approved-artwork-mobile-390-light.png` — 390 × 4912.
+- `docs/visual-refresh/mockups/task-04-seo-approved-artwork-mobile-390-dark.png` — 390 × 4912.
 
 Every render retains all five sections, one expanded work row and one selected selector response. The lower four sections and all approved copy are unchanged from the preceding proposal.
 
@@ -189,42 +189,44 @@ Discuss your SEO →
 
 Only the selected response is displayed. The selector is the closing conversion section; there is no FAQ, separate final CTA, scan, diagnostic, score, API or additional contact-state handoff.
 
-## 3. Owner-supplied artwork and responsive derivatives
+## 3. Approved artwork and responsive derivatives
 
-Status: **owner-supplied visual source; responsive crop and composition remain proposal-only and unshipped.**
+Status: **owner-supplied visual source; transparency preparation, responsive delivery and composition remain proposal-only and unshipped.**
 
-The supplied 1280 × 960 JPG is preserved byte-for-byte as:
+The supplied file is a 1280 × 960 RGB JPEG, so it has no alpha channel and its white field is baked into the pixels. Its actual size is 238,293 bytes, not approximately 3.6 MB. It is preserved byte-for-byte as:
 
-- `docs/visual-refresh/candidates/task-04-seo-owner-artwork-original.jpg`
-- 315,504 bytes; SHA-256 `1BE9D89F16341A7EBB19E5248BAE9380BEA7D9007816D21392D08F42187387AF`.
+- `docs/visual-refresh/candidates/task-04-seo-approved-artwork-original.jpg`
+- 238,293 bytes; SHA-256 `F3F7497882601EFB9A0DB253C5CD9DC887B0114393858FB1AF7B97AC961A5908`.
 
-No generative edit, background replacement, text addition, identity change or in-image retouching was performed. The source was cropped mechanically to 1210 × 910 at `x=40, y=30`, removing only peripheral empty paper while preserving the complete magnifying glass, readable `SEO` lettering and essential collage marks.
+No generative edit, recreation, restyling, text addition or in-image retouching was performed. A deterministic edge-connected selection removed only the outer near-white field. A narrow white-to-alpha boundary matte removed the JPEG fringe; enclosed pale areas inside the lens were not selected. The transparent working crop uses source bounds `x=83–1245, y=51–960`, producing a 1162 × 909 master before resizing. The complete magnifying glass, `SEO` lettering and essential collage marks remain visible.
 
 Responsive derivatives:
 
-- Desktop AVIF: `task-04-seo-owner-artwork-desktop.avif` — 1200 × 902, 89,293 bytes, SHA-256 `577693636E3A9E811EFCE37A60BE37F796221196FFCC3120369D69427E9E4F07`.
-- Desktop WebP: `task-04-seo-owner-artwork-desktop.webp` — 1200 × 902, 168,400 bytes, SHA-256 `920AA0FCC4C993626E8E7628D7DA62AF8BCD865CE2CAAEF32D7AA48D541ADB9F`.
-- Mobile AVIF: `task-04-seo-owner-artwork-mobile.avif` — 760 × 572, 42,218 bytes, SHA-256 `59977E4161517B4FECC4DF08ECE6BE8DE6FFD93DF4B8E87B6A56AEC52A461853`.
-- Mobile WebP: `task-04-seo-owner-artwork-mobile.webp` — 760 × 572, 73,352 bytes, SHA-256 `CAB2985A92451C7BA264CA658E0532E2817D8229AE86EE037DB361E4920123ED`.
+- Desktop AVIF: `task-04-seo-approved-artwork-desktop.avif` — 1200 × 939, 140,174 bytes, SHA-256 `ED1F9F993D5AAEFD4A7CB0AF47E6B79271BB5E1F1D9922B12A63AA2171567228`.
+- Desktop WebP: `task-04-seo-approved-artwork-desktop.webp` — 1200 × 939, 177,368 bytes, SHA-256 `5D33F087544BBF1D9D38ABADD842039F02E869DA110D4CAA9C81DF47829686F8`.
+- Mobile AVIF: `task-04-seo-approved-artwork-mobile.avif` — 760 × 595, 61,592 bytes, SHA-256 `ABAB5BAED2A2DAC3ABE5C5253DD4100B1DE6BBC2D5DCF2772DB6C51E47D835C3`.
+- Mobile WebP: `task-04-seo-approved-artwork-mobile.webp` — 760 × 595, 77,606 bytes, SHA-256 `0ECF6804751A016EB8EEFA4761E2CB6456614E00C934F56D4B944A01E2F7847E`.
 
-The mockup uses `<picture>` to select AVIF first with WebP fallback and switches to the 760px derivative below 768px. Intrinsic dimensions and the source aspect ratio are reserved.
+All four derivatives decode as RGBA with alpha values from 0 to 255. They meet the requested size bands. Close inspection on paper and ink backgrounds found no remaining rectangular field or soft white silhouette halo. Fine print texture, lens reflections and lettering edges remain legible; no visible quality compromise was found at the rendered desktop or mobile sizes, although AVIF and WebP are necessarily lossy encodes.
+
+The mockup uses `<picture>` to select AVIF first with WebP fallback and switches to the 760px derivative below 768px. Browser inspection confirmed the 1200px AVIF is selected at 1440px and the 760px AVIF at 390px. Intrinsic dimensions and the transparent crop aspect ratio are reserved, so the browser downloads only the relevant viewport asset.
 
 ## 4. Revised hero composition
 
 ### Desktop
 
-- The headline occupies the left negative space while the artwork receives the larger right-hand field and overlaps the central compositional boundary.
+- The headline and artwork share one open hero canvas. The lens occupies the upper-right focal field while the coral collage edge crosses the central grid boundary toward the headline; there is no image column, card or backing panel.
 - The supporting paragraph and CTA remain together in a narrower, unobstructed reading area beneath the headline.
-- The artwork is an image element, not a hero background. It uses `object-fit: contain`, so its proportions and full `SEO` lettering are preserved.
-- In dark mode, the artwork sits in an angled, full-height cream editorial field that extends beyond the viewport. The field color matches the source paper, eliminating the appearance of a pasted rectangular image without recoloring or altering the artwork.
+- The transparent artwork is an image element, not a hero background. It is rendered directly on the paper or ink surface with its proportions and full `SEO` lettering preserved; the handle extends toward the lower-right hero boundary.
+- Light and dark modes use the same transparent asset without a cream rectangle, angled field, badge or decorative workaround.
 
 ### Mobile
 
 - The reading order is headline → artwork → supporting paragraph → CTA.
-- The artwork becomes a full-bleed editorial band rather than a reduced desktop column. The magnifying glass and complete `SEO` lettering remain prominent.
+- The artwork is recomposed between the headline and paragraph at a deliberately oversized width. The magnifying glass and complete `SEO` lettering remain prominent without reproducing the desktop positioning.
 - The paragraph and CTA stay in normal flow below the artwork; no text overlays the lens.
 
-The composition adds no second `SEO` label, fake search interface, annotation or decorative shape. The previous photographic loupe and alternatives A, B and C are superseded and are not referenced by the revised mockup.
+The composition adds no second `SEO` label, fake search interface, annotation or decorative shape. Previous loupes, owner-artwork derivatives and alternatives A, B and C are superseded and are not referenced by the revised mockup.
 
 ### Remaining sections
 
@@ -233,6 +235,19 @@ The composition adds no second `SEO` label, fake search interface, annotation or
 - Ongoing management: one mustard band with a compact connected loop and one-line descriptions.
 - Selector: one bounded technical instrument because it is interactive. Choice 4 is selected in the renders to expose one response and CTA for review.
 - The overall page is deliberately shorter and lighter than the rejected proposal: fewer paragraphs, smaller section padding, a shallower mobile hero and no redundant conclusion.
+
+### Render inspection
+
+The four full-page PNGs were rendered from the revised HTML in Chromium and inspected after all images decoded. The review covered artwork edges and lettering, headline/paragraph separation, CTA clearance, section density, one expanded work row, one selected problem response, paper/ink consistency and the complete 390px mobile flow.
+
+- Exact hero headline and paragraph text matched the approved wording; both CTAs resolve to `/contact/?service=seo`.
+- Desktop headline and paragraph bounds are separated by 47px in both modes.
+- Desktop and mobile each reported zero horizontal overflow; all images decoded with non-zero intrinsic dimensions.
+- The artwork wrapper is transparent. Actual mockups show no panel, cream rectangle or soft white edge halo on either background.
+- One `<details>` row is open, one radio choice is selected and exactly one response is displayed. Changing the choice updated the response and returning to choice 4 restored the review state.
+- Browser inspection reported no console errors or warnings.
+
+No unresolved visual defect was found in these proposal renders. This is artifact QA, not application, breakpoint-suite, screen-reader, build or deployed-preview verification.
 
 ## 5. Proposed interaction and accessibility behavior
 
@@ -250,9 +265,10 @@ The composition adds no second `SEO` label, fake search interface, annotation or
 3. Moved technical service terminology entirely into disclosure content.
 4. Reduced ongoing management to a compact loop with one-line explanations.
 5. Shortened all four selector responses and removed the added `Where to start` label.
-6. Superseded the generated photographic loupe with the owner-supplied SEO collage.
-7. Replaced alternatives A, B and C with one desktop/mobile composition using the supplied artwork’s negative space and proportions.
-8. Added deterministic cropped AVIF/WebP derivatives and a dark-mode editorial field without changing the artwork itself.
+6. Superseded every prior loupe and owner-artwork version with the newly supplied SEO collage.
+7. Removed the baked white background by edge-connected transparency preparation, without changing the collage identity or enclosed lens detail.
+8. Replaced alternatives A, B and C with one responsive composition that uses the supplied artwork’s transparent silhouette directly on both approved backgrounds.
+9. Added optimized responsive AVIF/WebP delivery and removed the earlier cream/angled dark-mode field.
 
 ## 7. Remaining owner/implementation issues
 
@@ -281,7 +297,7 @@ The existing recommendation remains **N=600 net implementation lines**, but it i
 
 Before implementation, the owner/managing agent must explicitly decide:
 
-- revised owner-artwork crop/composition: KEEP / ADJUST / REJECT;
+- revised approved-artwork transparency/crop/composition: KEEP / ADJUST / REJECT;
 - interaction proposal: KEEP / ADJUST / REJECT;
 - implementation N=600: APPROVE / ADJUST / REJECT.
 
