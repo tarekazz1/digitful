@@ -1,63 +1,39 @@
-# START HERE — managing-agent transition
+# START HERE — managing-agent handover
 
-Updated 2026-09-20. Read this before interpreting older Ready for review entries.
+Updated 2026-09-22. This current summary supersedes the original proposal-stage handover retained in Git history.
 
-## Role and authority
+## Current state
 
-You are the replacement managing agent / technical lead and reviewer. Another agent implements. Your responsibility includes content, scope, brand consistency, functional correctness, desktop/mobile evidence, risk, records and technical signoff—not merely design opinions. Do not implement fixes yourself or self-award owner KEEP. User instructions prevail. Do not invent offerings, claim unseen verification, over-engineer or make the owner perform your QA. Production requires separate explicit authorization.
+Tasks 01–04 have owner KEEP. Task 04 SEO was subsequently revised, implemented and reviewed; the owner explicitly accepted source `74effcb96b52c13e05f98c0d7fd397e983815a4c`. Recorded preview repository commit: `d87ba5fe71d4aa2489c122fe168589fc8ceec0c8`; workflow `35531740178`. Documentation HEAD before this update: `b455669`. Approved N=600; recorded cumulative implementation/config delta: 295 added / 38 removed / net +257, PASS.
 
-## Workspace and exact state
+Task 04's earlier rejected loupe and proposal-only gate are historical, not the current accepted state. Read the revised TASK-04-SEO-PROPOSAL.md and final implementation records rather than treating old mockups as the shipped design. Owner acceptance does not authorize production or imply a new independent technical signoff by the agent recording it. The owner confirms the latest changes were reviewed; prior build/browser evidence remains attributed to its original reports.
 
-Use the existing local checkout:
-`C:/Users/tarek.azzi/OneDrive - Université Saint-Esprit de Kaslik/Documents/GitHub/digitful`
+## Workspace and workflow
 
-Source: `tarekazz1/digitful`, working branch `visual-refresh`. Local HEAD verified at transition: `ccc88d00204eeb8b710d53fc24e172017e3715ab` (Task 03 acceptance documentation; previously pushed). Recheck current state before any writes. Preview: `https://preview.digitful.ca`, separate repo `tarekazz1/digitful-preview`. Last recorded preview main commit `423813d0376abe27c7fdb5e6c66cb559e7720095`, source pin `360f218949e693df8cd7aea8fe301a5056f614f9`. Last recorded production main `c8fac4f78295d2576af0e92b04329f4e938c7b6f`. Remote/preview/production tips were not freshly queried for this handover.
+Existing checkout: `C:/Users/tarek.azzi/OneDrive - Université Saint-Esprit de Kaslik/Documents/GitHub/digitful`.
+Source repository: `tarekazz1/digitful`, branch `visual-refresh`.
+Preview repository: `tarekazz1/digitful-preview`; URL `https://preview.digitful.ca`.
+Last recorded production main: `c8fac4f78295d2576af0e92b04329f4e938c7b6f`. Recheck remote state before writes; this documentation update did not perform a production audit. No production release is authorized.
 
-IMPORTANT: The owner authorized committing and pushing this handover together with the Task 04 proposal, candidates and mockups. These artifacts are included in the handover commit; fetch the updated visual-refresh branch before using a fresh checkout. Earlier notes describing these artifacts as local-only are historical. Original user attachments referenced by absolute paths remain device-local. No Task 04 application implementation or deployment is authorized.
+The managing agent owns scope, content/brand review, evidence, records and technical signoff; a separate implementing agent executes approved work. Owner KEEP, technical signoff and production permission are distinct. Follow explicit user instructions, do not invent offerings, and do not ask the owner to substitute for your QA.
 
-## Where we came from
+## Read first
 
-The supplied DIGITFUL-FULL-HANDOFF.md was reconciled with older workflow/data/decisions; D034–D037 and HANDOFF.md explain authority. Older private management material is historical, not for public Git. Social Media received focused responsive corrections using the new design system (D038). The owner then separated implementing-agent work from managing-agent review.
+1. HANDOFF.md: reconciled authority and chronological implementation/acceptance records.
+2. DECISIONS.md and CHANGELOG.md: decisions and history.
+3. TASK-QUEUE.md: accepted tasks and established implementation/review rules. Earlier prompts remain historical, not new instructions to execute.
+4. DELTA-LOC-INVARIANT.md: owner-set task-wide N before new implementation.
+5. docs/brand/VISUAL-CONSTITUTION.md and docs/brand/HOMEPAGE-COPY.md: design/copy authority.
+6. TASK-04-SEO-PROPOSAL.md: revised SEO copy, approved artwork, implementation and operational-service boundaries.
 
-Task 01: preview-only robots normalization, corrected empty-name metadata handling; technical signoff and owner KEEP. Task 02: Astro blog loader restored article generation; technical signoff and owner KEEP. Task 03: homepage composition, laptop/scenery, optimized image delivery, mobile services specificity fix and simplified site check; technical signoff and owner KEEP, recorded in commit ccc88d0. Do not reopen accepted work without cause/authorization. Exact history and evidence are in HANDOFF, CHANGELOG and TASK-QUEUE.
+## History and lessons
 
-Task 03 review lessons: zero overflow missed squeezed mobile service columns; off-screen lazy artwork could be absent in captures; one close-up differed from the full-page button label. Inspect full desktop AND mobile evidence, await image decoding, distinguish artifacts from live defects, and review exact requested copy. Previous managing-agent signoff was based on source and worker screenshots, not an independent rerun of all live checks. Preserve that limitation.
+The supplied full handoff was reconciled with older private workflow material under D034–D037; do not publish private historical management files. Social Media corrections were accepted under D038. Task 01 corrected preview robots metadata; Task 02 restored Astro blog generation; Task 03 revised homepage collage/responsiveness and site-check hierarchy. Tasks 01–03 have recorded technical signoff and owner KEEP. Task 04 added the SEO page and later exact-system-teal/metadata corrections, now owner KEEP.
 
-## Where Task 04 is now
+The original Task 04 manager review was insufficient: it endorsed the first loupe and neglected substantive content review. Subsequent revisions supersede that proposal. Review full content and desktop/mobile renders, not only layout opinions. Zero overflow does not prove readable columns; scroll and await lazy-image decoding before captures. Distinguish capture artifacts from live defects and worker evidence from independently reproduced checks.
 
-Task 04 is SEO, at PROPOSAL stage. Sol medium produced:
-- `TASK-04-SEO-PROPOSAL.md`: current-page audit, full proposed copy, four selector responses, behavior, composition, service questions and recommended N=600.
-- `candidates/`: original and clean-edge loupe plus background checks.
-- `mockups/task-04-seo-proposal.html`: editable proposal only.
-- `mockups/task-04-seo-{desktop-1440,mobile-390}-{light,dark}.png`: four actual proposed page renders.
+## Next step
 
-Worker reports original SEO audit in local Chromium and proposal overflow/asset checks. These are not deployed new-page checks. The live SEO page remains the old implementation. Neither copy as a whole, loupe, final composition nor N=600 has owner approval. Earlier suggested N=200 was also never approved. Stage 1 preparation was authorized; implementation remains gated.
+No next implementation task is authorized in the current queue. Preserve accepted pages and ask the owner for the next scope when needed. Do not restart Task 04 from rejected mockups, rerun obsolete proposal gates or expand public service promises into operational commitments. Any new work needs a bounded prompt, explicit N, implementation evidence and the existing preview/review/KEEP process. Production remains a separate decision.
 
-LATEST OWNER FEEDBACK: The owner said the loupe “looks awful and out of spirit” and criticized the managing agent for superficial design-only feedback and neglecting content review. The owner requested a replacement manager. Treat the current loupe as NOT ACCEPTED and requiring rework; do not treat the previous manager's “good direction” or mobile-only adjustment suggestion as owner approval. A thorough content and brand review remains outstanding. Do not claim the rest of the proposal was rejected or accepted: that decision has not been made.
-
-## Accepted Task 04 direction (not implementation permission)
-
-Five sections: hero; visible Search → Discover → Act journey; expandable work rows; Monitor → Improve → Measure ongoing loop; guided problem selector as closing conversion section instead of FAQ/redundant CTA. Selector is a choice-based starting point, not a scanner, score or assessment. No new API/paid diagnostic. Preserve `/contact/?service=seo`; no invented contact-state handoff.
-
-The loupe must be LARGE and part of the hero, not a small icon or accessory. Text-free artwork, no slogans/annotations, consistent with accepted collage/brand spirit; no original was available, so generating a candidate was authorized. Previous suggestions such as a half-width lens, mustard shape or edge crop are proposals—not immutable owner requirements. Mobile integration and art direction need actual visual judgment, not blind adherence to those suggestions.
-
-LOCKED hero copy, supplied by owner:
-
-Your next customer is searching. Can they find you?
-
-People are looking for answers, products, and services. AI-powered search tools are helping them discover their options. We help your business become easier to find, understand, and choose, wherever the search begins.
-
-Tell us what's stuck →
-
-Keep exactly unless the owner authorizes a change. No extra hero CTA or fake search bar.
-
-## Where we are heading / first assignment
-
-1. Read this file, HANDOFF.md, DECISIONS.md, CHANGELOG.md, TASK-QUEUE.md, DELTA-LOC-INVARIANT.md, docs/brand/VISUAL-CONSTITUTION.md and docs/brand/HOMEPAGE-COPY.md. Inspect applicable repository instructions. Current explicit owner direction supersedes historical entries.
-2. Read the entire Task 04 proposal and inspect all four mockups, candidate visuals and original supplied wireframes (paths in TASK-QUEUE). Assess full copy, service claims, repetition, clarity, page journey and interactions as well as visual identity. Compare to accepted site assets/design, not a generic aesthetic. Do not repeat a superficial KEEP recommendation.
-3. Return a concise evidence-backed review and a bounded corrective brief to Sol medium. Identify why the current loupe fails before asking for another random generation. Separate locked owner requirements, manager recommendations and unresolved owner decisions.
-4. Resolve service scope: GBP review versus management; listings audits versus updates; content advice versus production; existing-data interpretation versus analytics configuration; whether ongoing management is offered. Repo silence is not proof these services are absent. Ask the owner only what evidence cannot establish. Do not publish assumed commitments.
-5. Obtain owner approval for final copy, visual/composition and an explicit task-wide N before implementation. Evaluate the worker's N=600 recommendation; it is not approved and a claimed 450–525 target is not a requirement to spend lines. Keep implementation simple.
-6. Then oversee bounded implementation on visual-refresh, exact-source-SHA preview, source/content/functional and rendered desktop/mobile review, technical signoff and owner KEEP. Production remains separate. Update records, clearly separating reported checks from independently reproduced checks.
-
-No need to start a new architecture, board or workflow. Continue Task 04. The first response should demonstrate understanding and substantive review, not ask the owner to reconstruct this history.
+Proposal assets and mockups are tracked; original user attachments referenced by absolute paths may remain device-local. Check availability rather than assume a fresh task inherits conversation attachments.

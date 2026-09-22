@@ -1,13 +1,13 @@
 # Implementation queue and review prompts
 
-Updated 2026-09-19. Tasks 01, 02 and 03 are accepted. Task 03 has managing-agent technical signoff and owner KEEP at the final revision recorded below. No production approval is granted.
+Updated 2026-09-22. Tasks 01–04 have owner KEEP. Tasks 01–03 have recorded managing-agent technical signoff; Task 04 acceptance records the owner-reported review without a new independent technical signoff. No production approval is granted.
 
 ## Roles and workflow
 
 - Implementing agent: investigate, make the bounded change, verify it, and submit evidence.
 - Managing agent (this task): maintain scope and records, independently review the diff and evidence, request corrections, and record technical signoff. Do not implement the fixes on the worker's behalf.
 - Owner: sets each task's N, authorizes execution, retains visual KEEP / ADJUST / REJECT and production-release approval. Technical signoff is not production permission.
-- Work sequentially: tasks 01 and 02 are closed; task 03 is next. Do not combine unrelated fixes. No new task boards, workflows, dependencies, or management framework.
+- Work sequentially: tasks 01–04 have owner KEEP; no next implementation task has been authorized in this queue. Do not combine unrelated fixes. No new task boards, workflows, dependencies, or management framework.
 - Status values: Planned → In progress → Ready for review → Changes requested / Signed off. Record exact reviewed SHAs and remaining issues, not just “done.”
 
 ## Mandatory rules for all prompts
@@ -176,7 +176,7 @@ This acceptance supersedes earlier pending-review statuses for Task 03. Owner KE
 
 ## 04 — SEO copy, integrated loupe and guided problem selector
 
-Updated 2026-09-20. Status: **Implementation and N=600 authorized; final preview correction Ready for managing-agent review. Technical signoff and owner KEEP pending.** Model: **Sol, medium effort**. Task 03 is accepted. Read the mandatory queue rules and referenced project documents before starting. The later implementation records supersede this section's original proposal-only gate.
+Updated 2026-09-22. Status: **Owner APPROVED / KEEP at final source 74effcb96b52c13e05f98c0d7fd397e983815a4c.** No new independent technical signoff is claimed. The prompts below are historical; do not re-execute them. Model: **Sol, medium effort**. Task 03 is accepted. Read the mandatory queue rules and referenced project documents before starting. The later implementation records supersede this section's original proposal-only gate.
 
 ### Stage 1 prompt — execute now
 
@@ -238,3 +238,9 @@ Build and live verification cover the five-section copy/layout, artwork transpar
 Previous implementation source `ce76d9ba98ea3ae394d6e36f10f0e58a75673bb7`; previous preview pin `475efa8d3d312cc86fef158510bb14faa9e24f5e`; cumulative LOC before corrections net +258. Final source `74effcb96b52c13e05f98c0d7fd397e983815a4c` uses solid system teal `#569699` for Search Journey and updates only the page metadata. Exact preview pin `d87ba5fe71d4aa2489c122fe168589fc8ceec0c8`; workflow [35531740178](https://github.com/tarekazz1/digitful-preview/actions/runs/35531740178) succeeded.
 
 Targeted live verification confirms the exact teal, readable established ink/divider/marker treatment in both themes, updated title/description, unchanged canonical, zero overflow and clean console results. Only `src/pages/seo.astro` changed; shared styles, components, accepted pages, artwork, visible copy and interactions did not. Cumulative implementation/config accounting is 295 added / 38 removed / net +257; N=600 PASS. Main and production remain unchanged. Technical signoff and owner KEEP remain pending.
+
+## Task 04 — owner APPROVED / KEEP — 2026-09-20
+
+The owner confirms the latest Task 04 changes were reviewed and explicitly directs recording KEEP. This acceptance applies to final SEO source `74effcb96b52c13e05f98c0d7fd397e983815a4c`, recorded exact preview pin `d87ba5fe71d4aa2489c122fe168589fc8ceec0c8`, workflow `35531740178`, and documentation HEAD `b455669` at the time of recording. It supersedes earlier owner-KEEP-pending entries and the historical proposal objections for this final revision.
+
+This is a record of the owner's acceptance, not a new technical review or independently awarded technical signoff by this recording agent. Existing verification evidence remains as documented. No application, preview or production change was made. KEEP does not authorize production release.
