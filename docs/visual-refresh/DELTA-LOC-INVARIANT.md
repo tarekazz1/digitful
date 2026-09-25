@@ -1,59 +1,56 @@
-# ΔLOC Invariant
+# Change Budget & Scope Control
 
 Status: **Active**
 
-This file defines a hard implementation constraint for the Digitful project.
+1. Before implementation, inspect the working tree and establish:
+   - The task baseline.
+   - The authorized files or areas.
+   - N = maximum net LOC increase (added − removed).
+   - M = maximum total changed LOC (added + removed).
 
-## Rule
+   Measure N and M from the original task baseline to the final result.
 
-For every approved implementation, feature, or refactor:
+   Preserve pre-existing changes and do not include them in the task's change budget.
 
-```text
-ΔLOC ≤ N
-```
+   If no scope or budget is provided, propose one before implementation changes; wait for explicit approval. Inspection and preparing a proposal can proceed. Do not assume approval.
 
-where:
+2. Both limits apply to the entire task across all affected repositories.
 
-```text
-ΔLOC = LOC(added) - LOC(removed)
-```
+   Count source code, styles, tests, scripts, and configuration.
+   Exclude documentation text and binary assets.
 
-`N` is the maximum net increase in lines of code allowed for that task.
+   Do not reset or evade the baseline or budget through commits, file moves, formatting changes, generated code, reversions, or splitting the work.
 
-The value of `N` is set by the user for each task. It is not a suggestion, target, or guideline. It is a hard invariant.
+   Ordinary revisions and reversions are allowed. Budgets always use the original baseline-to-final diff, not the sum of intermediate edits.
 
-Examples of possible task budgets:
+3. Make only changes necessary to complete the requested task.
 
-- normal feature or refactor: `N ≈ 300`
-- larger implementation: `N ≈ 600–700`
+   Do not perform unrelated refactoring, dependency updates, file deletion, or behavior changes without explicit approval.
 
-These are examples only, not automatic defaults.
+   If necessary work falls outside the authorized scope or would exceed N or M, stop before doing it, explain why, and request approval for the revised scope or budget.
 
-## Enforcement
+4. Do not sacrifice correctness, readability, tests, or necessary functionality to satisfy the budget.
 
-1. **N must be known before implementation starts.** If the user has not specified `N`, ask for it rather than silently choosing one.
-2. **Measure the whole approved task, not individual commits.** Compare the task's agreed base state with the final implementation candidate.
-3. **Do not game the invariant by splitting one logical change across multiple commits.** The task-level ΔLOC is what matters.
-4. **Verify the actual diff before calling the task complete.** If `ΔLOC > N`, the implementation does not satisfy the task even if it builds, deploys, or looks correct.
-5. **If the requested result cannot reasonably fit within N, stop and say so before expanding scope.** Do not silently exceed the limit.
-6. **Large churn is still worth flagging.** A small ΔLOC can hide substantial additions and removals, so total added/removed lines should also be reported when unusually high.
+5. Protect existing functionality.
 
-## Counting scope
+   Before changing existing behavior, identify functionality that could reasonably be affected and note any relevant pre-existing failures.
 
-Use the Git diff for the full approved task as the source of truth.
+   After implementation, verify the requested change and reasonably affected existing functionality using available tests and targeted checks.
 
-Count implementation code that is part of the change, including source, styles, templates, tests, scripts, and configuration code. Documentation text and binary assets are not LOC. Generated or machine-managed text files are not silently exempted: if excluding one materially changes the measurement, agree that exclusion before implementation.
+   Do not claim a check passed if it was not performed or could not be verified.
 
-## Completion report
+6. At completion, report:
+   - Added LOC.
+   - Removed LOC.
+   - Net LOC change.
+   - Total changed LOC.
+   - Modified files.
+   - Any approved scope or budget changes.
+   - PASS/FAIL against N, M, and authorized scope.
+   - Tests and validation performed.
+   - Pre-existing failures and remaining verification limitations.
+   - Whether any unrelated functionality was intentionally changed.
 
-Every implementation/refactor completion report should include:
+7. Passing the change budget does not establish functional correctness.
 
-```text
-N: <task limit>
-LOC added: <A>
-LOC removed: <R>
-ΔLOC: <A - R>
-Invariant: PASS | FAIL
-```
-
-A task is not complete when the invariant is `FAIL`.
+   Do not declare the task complete if required functionality is broken or verification has failed. If verification is incomplete, report that explicitly.

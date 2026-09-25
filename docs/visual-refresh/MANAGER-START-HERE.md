@@ -1,6 +1,6 @@
 # START HERE — managing-agent handover
 
-Updated 2026-09-22. This current summary supersedes the original proposal-stage handover retained in Git history.
+Updated 2026-09-23. This current summary supersedes the original proposal-stage handover retained in Git history.
 
 ## Current state
 
@@ -34,6 +34,8 @@ The original Task 04 manager review was insufficient: it endorsed the first loup
 
 ## Next step
 
-No next implementation task is authorized in the current queue. Preserve accepted pages and ask the owner for the next scope when needed. Do not restart Task 04 from rejected mockups, rerun obsolete proposal gates or expand public service promises into operational commitments. Any new work needs a bounded prompt, explicit N, implementation evidence and the existing preview/review/KEEP process. Production remains a separate decision.
+Task 05 Paid Ads is at the visual-proposal stage. The owner selected “A clever ad is not a campaign” as the hero, confirmed ad creation, setup, ongoing campaign/budget management and landing-page delivery, and approved the business-priorities paragraph and page structure. Section 16 of TASK-05-PAID-ADS-PROPOSAL.md is the consolidated current copy; earlier rejected drafts are historical. Proof still needs a real example.
+
+Use TASK-05-VISUAL-PROPOSAL-PROMPT.md for the next worker assignment: Sol, medium effort, proposal-only desktop/mobile light/dark compositions exploring a halftone billboard and curved comic road. The brief is prepared; no worker has been dispatched and no Task 05 renders have been produced by this checkpoint. Files remain local and uncommitted. No Task 05 implementation or N is authorized. Preserve accepted pages. Production remains a separate decision.
 
 Proposal assets and mockups are tracked; original user attachments referenced by absolute paths may remain device-local. Check availability rather than assume a fresh task inherits conversation attachments.

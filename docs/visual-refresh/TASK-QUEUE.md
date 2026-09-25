@@ -1,6 +1,6 @@
 # Implementation queue and review prompts
 
-Updated 2026-09-22. Tasks 01–04 have owner KEEP. Tasks 01–03 have recorded managing-agent technical signoff; Task 04 acceptance records the owner-reported review without a new independent technical signoff. No production approval is granted.
+Updated 2026-09-23. Tasks 01–04 have owner KEEP. Tasks 01–03 have recorded managing-agent technical signoff; Task 04 acceptance records the owner-reported review without a new independent technical signoff. No production approval is granted.
 
 ## Roles and workflow
 
@@ -244,3 +244,29 @@ Targeted live verification confirms the exact teal, readable established ink/div
 The owner confirms the latest Task 04 changes were reviewed and explicitly directs recording KEEP. This acceptance applies to final SEO source `74effcb96b52c13e05f98c0d7fd397e983815a4c`, recorded exact preview pin `d87ba5fe71d4aa2489c122fe168589fc8ceec0c8`, workflow `35531740178`, and documentation HEAD `b455669` at the time of recording. It supersedes earlier owner-KEEP-pending entries and the historical proposal objections for this final revision.
 
 This is a record of the owner's acceptance, not a new technical review or independently awarded technical signoff by this recording agent. Existing verification evidence remains as documented. No application, preview or production change was made. KEEP does not authorize production release.
+
+## 05 — Paid Ads — inspection and proposal
+
+Status: **Content structure and business-priorities paragraph approved, 2026-09-22; visuals, implementation and N not approved.** Owner authorized desktop/mobile inspection and a content-and-visual proposal. Current content checkpoint: section 16 of `TASK-05-PAID-ADS-PROPOSAL.md`; section 15 records the owner-specified hero and confirmed full delivery scope. Section 14's full-page draft was rejected; earlier checkpoints below are chronological history. Independent live 1440/390 light/dark findings remain in section 1. Model suggestion for proposal renders: Sol, medium effort. Do not reuse Task 04's N or automatically copy its selector, artwork or page structure. Next: proposal-only desktop/mobile compositions using the concise approved structure and exploring the billboard/curved-road concept. Proof needs actual evidence; no client example has been supplied or verified. No application or deployment changes are authorized by this entry.
+
+Task 05 correction: owner rejected the initial cliched direction. Sections 3–4 of the first proposal are superseded, not a brief for Sol to implement/render. Section 7 records a fresh comparison with the completed Social Media and SEO pages and the required content-direction correction. No replacement headline or artwork has been approved.
+
+Task 05 latest editorial checkpoint: owner remains skeptical of the later conversational copy suggestion; it is unapproved. The approved homepage Paid Ads line ('Put budget behind the right message, audience, and next step.') is the source for a revised content brief. See section 8 of TASK-05-PAID-ADS-PROPOSAL.md. Billboard/road is an owner-suggested visual exploration, not copy approval. Do not render or implement until full copy and service scope are reviewed.
+
+Task 05 content draft: Section 9 of TASK-05-PAID-ADS-PROPOSAL.md is the current full-page copy candidate, grounded in the approved homepage Paid Ads line. It replaces the withdrawn drafts. Owner review and service-scope confirmation remain pending; visual renders and implementation are not yet authorized.
+
+Task 05 plain-language correction: Section 9 copy was rejected as too technical and is superseded. Section 10 contains a new, unapproved candidate; it must receive full content review, including possible repetition between sections 2 and 3, before renders or implementation.
+
+Task 05 system-first correction: owner said the page should focus on building a paid ad system that delivers, with much less explanation; the post-click path is only one part. Section 11 of TASK-05-PAID-ADS-PROPOSAL.md is the current short, unapproved candidate. Earlier copy sections 3, 9 and 10 are superseded.
+
+Task 05 buyer-question correction: owner rejects section 11 as stiff and unoriginal and suggests fitting ad messages to different searches/people in consumer language. Section 12 records the exploratory direction; it supersedes section 11 and is not approved final copy. Do not render or implement it as-is.
+
+Task 05 working copy checkpoint: owner responded positively (“Much better”) to section 13's “One ad can’t answer every question” hero and explicit, deliberate testing language. Section 13 supersedes the section 12 hero. Full-page copy, operational service scope, visual renders, N and implementation remain pending; positive feedback on this passage is not whole-task KEEP.
+
+Task 05 current copy proposal: Section 14 of TASK-05-PAID-ADS-PROPOSAL.md now contains the complete suggested public page, built around the owner-positive hero. Sections 3, 9, 10, 11 and 12 are historical/superseded copy; section 13 remains the accepted direction for the hero only. Section 14's remaining sections and visual treatment await owner review. No app code, N or deployment is authorized by this draft.
+
+Task 05 latest owner direction: section 14 was rejected as superficial. Owner confirmed ad creation, campaign setup, ongoing campaign/budget management and landing-page recommendations/implementation, and requested “A clever ad is not a campaign” plus its exact supporting paragraph as the replacement hero. Section 15 governs. The rest of the page needs a new commercial proposition based on this confirmed work; hero selection is not whole-page approval or KEEP.
+
+Task 05 approval checkpoint: owner explicitly approved “Start with the business you want more of” and its paragraph, plus the hero / business priorities / delivery / testing structure. Section 16 is now the consolidated content reference. A real campaign example remains an evidence gap, not permission to fabricate proof. Next is the visual proposal; this approval is not implementation permission or owner KEEP of Task 05.
+
+Task 05 worker brief prepared, 2026-09-23: `TASK-05-VISUAL-PROPOSAL-PROMPT.md` gives a fresh local Sol task (medium effort) the current copy authority, confirmed service scope, billboard/road exploration, proposal-only write scope, actual render requirements and review boundary. The brief has not been dispatched; no new renders, application edits or deployments were performed. Current Task 05 records are local/uncommitted and must be available in the selected checkout.
