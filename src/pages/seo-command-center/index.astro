@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const pageTitle = 'Local SEO Command Center - Digitful';
+const pageDescription = 'Digitful’s locally operated reporting application for Google Search Console, Google Analytics 4 and Google Ads.';
+---
+<BaseLayout title={pageTitle} description={pageDescription} canonicalUrl="https://digitful.ca/seo-command-center/">
+  <main>
+    <section class="service-hero text-center">
+      <div class="container">
+        <span class="eyebrow mb-3">Digitful</span>
+        <h1 class="mb-3">Local SEO Command Center</h1>
+        <p class="lead mb-0">Search, website and advertising performance reporting.</p>
+      </div>
+    </section>
+    <section class="privacy-content py-6">
+      <div class="container">
+        <div class="legal-shell mx-auto" style="max-width: 52rem;">
+          <p>Local SEO Command Center is Digitful’s locally operated reporting application. It brings together Google Search Console, Google Analytics 4 and Google Ads data to review search visibility, website engagement and advertising performance, and prepare client reports.</p>
+          <h2>How it uses Google data</h2>
+          <p>Search Console and GA4 reporting use service accounts granted access to the relevant properties, with read-only API permissions. Live Google Ads reporting uses OAuth authorization. The application also supports reporting-file imports.</p>
+          <p>These sources provide the metrics used to compare reporting periods, identify performance changes and prepare reports.</p>
+          <h2>Runs locally</h2>
+          <p>Only Digitful’s owner operates the application. It runs on the owner’s PC, where application data is stored. Reports are shared only with their intended clients.</p>
+          <h2>Contact and privacy</h2>
+          <p>For support, email <a href="mailto:ping@digitful.ca">ping@digitful.ca</a>.</p>
+          <p class="mb-0"><a href="/seo-command-center/privacy/">Local SEO Command Center privacy policy</a> · <a href="/">About Digitful</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

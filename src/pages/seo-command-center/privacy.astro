@@ -1,0 +1,49 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const pageTitle = 'Local SEO Command Center Privacy Policy - Digitful';
+const pageDescription = 'How Digitful handles Google reporting data, local storage, access, sharing and deletion in Local SEO Command Center.';
+---
+<BaseLayout title={pageTitle} description={pageDescription} canonicalUrl="https://digitful.ca/seo-command-center/privacy/">
+  <main>
+    <section class="service-hero text-center">
+      <div class="container">
+        <span class="eyebrow mb-3">Local SEO Command Center</span>
+        <h1 class="mb-3">Privacy Policy</h1>
+        <p class="lead mb-0">How Digitful handles information through the application.</p>
+      </div>
+    </section>
+    <section class="privacy-content py-6">
+      <div class="container">
+        <div class="legal-shell mx-auto" style="max-width: 52rem;">
+          <p class="text-muted-light mb-4">Last updated: 22 October 2026</p>
+          <p>This policy explains how Digitful handles information through Local SEO Command Center, a reporting application operated only by Digitful’s owner.</p>
+          <h2>Data accessed</h2>
+          <p>Depending on the configured sources and imported files, the application processes:</p>
+          <ul class="mb-4">
+            <li><strong>Google Search Console:</strong> search queries, page URLs, devices, dates, clicks, impressions, click-through rates and average positions.</li>
+            <li><strong>Google Analytics 4:</strong> landing-page URLs, including query strings, dates, users, sessions, engaged sessions, engagement rates and conversion metrics.</li>
+            <li><strong>Google Ads:</strong> account identifiers and names, currency, campaigns, ad groups, search terms, landing-page URLs, impressions, clicks, costs, conversions and conversion-action details.</li>
+          </ul>
+          <p>It also stores client reporting configuration, source identifiers and connection credentials needed for configured Google access.</p>
+          <h2>Access and use</h2>
+          <p>Search Console and GA4 use service accounts granted access to the relevant properties, with read-only API permissions. Google Ads uses OAuth authorization for live reporting. Reporting files can also be imported.</p>
+          <p>Digitful uses this information to analyse search, website and advertising performance, compare reporting periods and prepare client reports. The implemented Google API operations retrieve reporting data.</p>
+          <h2>Storage, operator access and sharing</h2>
+          <p>Application data, configuration, credentials and generated reports are stored on the owner’s PC. Only the owner operates the application and reviews its reporting data. Reports are shared only with their intended clients.</p>
+          <h2>Retention and deletion</h2>
+          <p>The application automatically deletes locally stored reporting data, derived analysis and generated reports older than seven days whenever it runs. Connection credentials are retained separately while authorized access is needed.</p>
+          <p>This policy covers copies held by Digitful for the application. It does not delete source data held by Google or copies already received by clients.</p>
+          <p>Connection credentials are not subject to the seven-day reporting-data period. When a connection is no longer needed or access is withdrawn, the owner removes its saved credentials from the application’s configuration.</p>
+          <p>To request earlier deletion, contact <a href="mailto:ping@digitful.ca">ping@digitful.ca</a>.</p>
+          <h2>Withdrawing access</h2>
+          <p>Google Ads OAuth access can be revoked through the authorising Google Account’s third-party connections settings. Search Console and GA4 access can be withdrawn by removing the service account’s permissions from the relevant property.</p>
+          <p>Withdrawing access stops future retrieval through that access; it does not automatically delete previously stored data. Contact Digitful to request deletion of those copies.</p>
+          <h2>Contact</h2>
+          <p>For privacy, support or deletion requests, email <a href="mailto:ping@digitful.ca">ping@digitful.ca</a>.</p>
+          <p class="mb-0"><a href="/seo-command-center/">Back to Local SEO Command Center</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

@@ -1,5 +1,11 @@
 # Digitful Visual Refresh — Handoff
 
+## Local SEO Command Center — approved task, 2026-10-22
+
+Earlier Digitful plans, including Task 05 Paid Ads, are paused by the owner. Preserve all existing Task 05 proposal changes. The owner approved two information pages, their copy, N=200/M=250 baseline-to-final budgets, scoped source commits/pushes and exact-SHA preview publication. Source baseline: `c1901584aeed0e11418614b6c72cf63e3e811b11`; preview baseline: `d87ba5fe71d4aa2489c122fe168589fc8ceec0c8` (source pin `74effcb96b52c13e05f98c0d7fd397e983815a4c`).
+
+The owner supplied the automatic seven-day deletion paragraph and explicitly confirmed it is verified for publication. That behavior is owner-confirmed, not independently demonstrated by this website task; the earlier source inspection found no automatic cleanup. Credential retention remains separate. No reporting-application changes are authorized or made. Reuse the existing layout and legal-page styling; preserve preview safeguards and leave production untouched. Build/browser evidence and final SHAs follow in the completion entry. Stop at Ready for managing-agent review; no technical signoff or owner KEEP is awarded.
+
 Current status checked 2026-09-22: Task 04 has owner APPROVED / KEEP at source `74effcb96b52c13e05f98c0d7fd397e983815a4c`; recorded preview pin `d87ba5fe71d4aa2489c122fe168589fc8ceec0c8`, workflow `35531740178`. N=600 was authorized; recorded cumulative delta is +257 (PASS). The owner confirms review was completed. This documentation update does not independently award technical signoff or authorize production. Earlier proposal/pending-KEEP entries are historical.
 
 ## New-chat instruction

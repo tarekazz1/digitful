@@ -2,6 +2,10 @@
 
 Chronological record of setup and implementation changes for the visual-refresh project.
 
+## 2026-10-22 — Local SEO Command Center information pages
+
+Owner approved the two app-specific pages, copy, N=200/M=250 baseline-to-final budgets and exact-SHA preview publication, and paused all earlier plans including Task 05. Added `/seo-command-center/` and `/seo-command-center/privacy/` using BaseLayout and existing legal styling. Automatic deletion wording is owner-supplied and owner-confirmed for publication; no reporting-application changes or independent deletion verification are part of this website task. Source inspection verified source-specific Google access methods and reporting fields. Local `npm run build` passed (25 routes), with font-provider network/certificate warnings and existing Sass deprecations; deployed visual verification is pending. Production remains untouched.
+
 ## 2026-09-15
 
 ### Project control / preview setup
