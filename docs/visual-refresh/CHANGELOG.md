@@ -1,5 +1,9 @@
 # Digitful Visual Refresh — Change Log
 
+## Task 04 — SEO text-only revision deployed — 2026-10-23
+
+Owner-authorized customer-first copy was applied only in `src/pages/seo.astro`; the final hero reads “People are searching for what you sell. Can they find you?” with no CSS change. Source `d4df671724888071a845d1da03073b4a34403210` was deployed by exact pin `851cfbeac082d83d2bdac2daaaa9dd55a675aca2`; workflow [39909972786](https://github.com/tarekazz1/digitful-preview/actions/runs/39909972786) succeeded. Exact-commit build and deployed Chromium checks at 1440/390px in both themes passed for copy, wrapping, artwork selection, disclosures, all selector responses, keyboard behavior, CTA targets, overflow and preview safeguards. Counted source plus preview pin: +22/-22, net 0 (N10 PASS), changed 44 (M100 PASS). Production/Main unchanged; ready for managing-agent review with no new technical signoff or owner KEEP.
+
 ## Task 05 — source commit/push authorized — 2026-10-23
 
 The owner explicitly directed “commit and push” after approving the local implementation. Publish only the approved Paid Ads source, artwork, proposal/evidence and Task 05 records to `visual-refresh`. An unrelated local SEO copy commit `88cc69f2475fc99a1ec4da4cd47f2ab7191524b7` and other pre-existing edits are excluded. The publication parent is the verified remote tip `7662b894454c11406c1fd47b1a5b166bbc1f6170`; the existing local branch and working tree are preserved. No preview pin, deployment workflow or production branch changes are authorized by this instruction.

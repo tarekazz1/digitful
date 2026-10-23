@@ -1,6 +1,6 @@
 # Task 04 correction — SEO copy, approved transparent artwork and guided selector
 
-Status: **Implemented on isolated preview; owner APPROVED / KEEP at final source 74effcb96b52c13e05f98c0d7fd397e983815a4c.** Owner confirms the latest changes were reviewed; this record does not independently award technical signoff. Production remains separately gated.
+Status: **2026-10-23 owner-authorized text-only revision deployed for managing-agent review.** Source `d4df671724888071a845d1da03073b4a34403210`; preview pin `851cfbeac082d83d2bdac2daaaa9dd55a675aca2`; workflow [39909972786](https://github.com/tarekazz1/digitful-preview/actions/runs/39909972786). No new technical signoff or owner KEEP is claimed. Production remains separately gated.
 
 Prepared: 2026-09-20  
 Source repository/branch: `tarekazz1/digitful:visual-refresh`
@@ -36,18 +36,20 @@ Editable composition: `docs/visual-refresh/mockups/task-04-seo-proposal.html` wi
 
 Every render retains all five sections, one expanded work row and one selected selector response. The lower four sections and all approved copy are unchanged from the preceding proposal.
 
-## 2. Complete approved page copy
+## 2. Current owner-supplied page copy
+
+This 2026-10-23 text-only revision supersedes the preceding locked wording for matching visible strings. Artwork, metadata, layout, styles, expanded technical terms, selector responses, CTA URLs and interaction logic remain unchanged.
 
 ### Section 01 — Hero
 
 **Headline**  
-Your next customer is searching. Can they find you?
+People are searching for what you sell. Can they find you?
 
 **Supporting paragraph**  
-People are looking for answers, products, and services. AI-powered search tools are helping them discover their options. We help your business become easier to find, understand, and choose, wherever the search begins.
+We help your business show up on Google, in Google Maps, and in AI answers, then make sure the page people land on gives them a reason to get in touch.
 
 **CTA**  
-Tell us what’s stuck →
+Tell us what's stuck →
 
 **Destination**  
 `/contact/?service=seo`
@@ -60,27 +62,27 @@ The hero has no eyebrow, second CTA, fake search input or additional line.
 THE SEARCH JOURNEY
 
 **Heading**  
-Getting found is only the beginning.
+Getting found is the first problem, not the only one.
 
 **01 / SEARCH**
 
-They look. You’re nowhere to be found.
+You don't show up.
 
-Your competitors appear. Your business doesn’t.
+People search for what you do and find your competitors.
 
-**02 / DISCOVER**
+**02 / VISIT**
 
-They find you. But not what they need.
+The page doesn't help.
 
-Your page doesn’t answer their questions or make your offer clear.
+They land on it but can't tell what you offer or why they should pick you.
 
 **03 / ACT**
 
-They visit. Nothing happens next.
+Nothing happens next.
 
-The next step is unclear, so the opportunity slips away.
+There's no clear next step, so they leave and keep searching.
 
-The composition keeps Search → Discover → Act visually connected. There is no introductory or closing paragraph.
+The composition keeps Search → Visit → Act visually connected. There is no introductory or closing paragraph.
 
 ### Section 03 — What we work on
 
@@ -88,32 +90,32 @@ The composition keeps Search → Discover → Act visually connected. There is n
 WHAT WE WORK ON
 
 **Heading**  
-Different searches. One connected strategy.
+Four parts, one goal: more of the right inquiries.
 
-#### Search intent & content
+#### Search intent and content
 
-Get found for what your customers are actually looking for.
+Pages built around what customers type into Google and ask AI tools, written so both people and search engines understand them.
 
 Expanded content:
 Keyword strategy · Content · AI-assisted discovery
 
 #### Technical foundations
 
-Make your website easier for search engines to find, understand, and index.
+A site Google can crawl, understand, and load quickly on a phone.
 
 Expanded content:
 Technical SEO · Site structure · Page performance
 
 #### Local visibility
 
-Help nearby customers find your business when they need it.
+A Google Business Profile and local pages that bring in customers nearby.
 
 Expanded content:
 Local SEO · Google Business Profile · Local pages
 
-#### Measurement & improvement
+#### Measurement
 
-Know which searches bring useful visitors and what they do next.
+Knowing which searches bring visitors who call, book, or buy.
 
 Expanded content:
 Search performance · Analytics · Visitor actions
@@ -123,13 +125,13 @@ Only the row heading and supporting sentence appear when collapsed. The technica
 ### Section 04 — Ongoing SEO management
 
 **Eyebrow**
-ONGOING SEO MANAGEMENT
+ONGOING MANAGEMENT
 
 **Heading**  
-SEO is not a one-time fix.
+Rankings move. Someone has to keep watching.
 
 **Supporting paragraph**
-Search behavior changes. Your competitors adapt. Your business evolves. Your SEO needs to keep up.
+Competitors publish, Google changes how it ranks pages, and your services change. We track where you show up, fix what slips, and report on the searches that bring in business.
 
 **Monitor**  
 Know what’s happening.
@@ -145,18 +147,18 @@ Monitor → Improve → Measure is presented as one compact loop, not three larg
 ### Section 05 — Guided closing selector
 
 **Eyebrow**
-THE NEXT STEP
+NEXT STEP
 
 **Heading**  
 Where is your search visibility getting stuck?
 
 **Instruction**  
-Choose the problem that sounds familiar.
+Pick the one that sounds familiar.
 
 #### Choice 1
 
 **Choice**  
-People cannot find my business
+People can't find my business
 
 **Response**
 Your business may be missing from the searches that matter. Start with your search visibility and the pages customers need to find.
@@ -164,7 +166,7 @@ Your business may be missing from the searches that matter. Start with your sear
 #### Choice 2
 
 **Choice**  
-My website gets traffic but few inquiries
+I get traffic but few inquiries
 
 **Response**
 The issue may be who visits, what they find, or what happens next. Find out where that connection breaks.
@@ -172,7 +174,7 @@ The issue may be who visits, what they find, or what happens next. Find out wher
 #### Choice 3
 
 **Choice**  
-My Google Business Profile needs attention
+My Google Business Profile needs work
 
 **Response**
 Your local presence may be making it harder for nearby customers to find or contact you. Start with your profile and local visibility.
@@ -180,7 +182,7 @@ Your local presence may be making it harder for nearby customers to find or cont
 #### Choice 4
 
 **Choice**  
-I am not sure what is working
+I don't know what's working
 
 **Response**
 Connect your search traffic to what visitors actually do. See what’s creating useful interest and what needs attention.

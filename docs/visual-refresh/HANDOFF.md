@@ -1,5 +1,13 @@
 # Digitful Visual Refresh — Handoff
 
+## Task 04 — SEO text-only revision deployed — 2026-10-23
+
+The owner authorized the supplied customer-first SEO wording, N=10, M=100 and exact-SHA preview publication, then replaced only the proposed hero ending with “Can they find you?” after the longer headline did not fit without CSS changes. Source `d4df671724888071a845d1da03073b4a34403210` changes only `src/pages/seo.astro`; it preserves metadata, artwork, CSS, structure, disclosures, selector logic, response text and both `/contact/?service=seo` targets. The concurrent Paid Ads source commit `2381bce11cdf8a5aaab8a3e0ce4fd3b9f86e2de9` was preserved as the publication parent.
+
+Preview pin `851cfbeac082d83d2bdac2daaaa9dd55a675aca2`; workflow [39909972786](https://github.com/tarekazz1/digitful-preview/actions/runs/39909972786) succeeded. Local exact-commit build produced 25 pages with existing Sass deprecation warnings. Deployed Chromium checks passed at 1440px and 390px in light/dark: exact copy, responsive AVIF selection, loaded fonts, no overlap/clipping/horizontal overflow, disclosure keyboard toggle, all four matching selector responses, native radio keyboard behavior, CTA targets and zero SEO-page console warnings/errors. Canonical remained `https://digitful.ca/seo/`; preview retained `noindex,nofollow,noarchive`, no production GTM and robots disallow-all. Four full-page deployed renders were inspected.
+
+Original task baseline `7662b894454c11406c1fd47b1a5b166bbc1f6170`; original preview baseline `5853b104c5135054256db05c33b403079ef1945e`. Counted source +21/-21 and preview pin +1/-1: **+22/-22, net 0 (N10 PASS), changed 44 (M100 PASS)**. Documentation and screenshots excluded; no saved verification code. Production/Main unchanged. Ready for managing-agent review; no new technical signoff or owner KEEP.
+
 ## Task 05 — source commit/push authorized — 2026-10-23
 
 The owner explicitly directed “commit and push” after approving the local implementation. Publish only the approved Paid Ads source, artwork, proposal/evidence and Task 05 records to `visual-refresh`. An unrelated local SEO copy commit `88cc69f2475fc99a1ec4da4cd47f2ab7191524b7` and other pre-existing edits are excluded. The publication parent is the verified remote tip `7662b894454c11406c1fd47b1a5b166bbc1f6170`; the existing local branch and working tree are preserved. No preview pin, deployment workflow or production branch changes are authorized by this instruction.
