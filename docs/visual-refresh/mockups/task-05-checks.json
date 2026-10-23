@@ -1,0 +1,706 @@
+[
+  {
+    "width": 1440,
+    "theme": "light",
+    "overflow": 0,
+    "height": 2298,
+    "fontsLoaded": "loaded",
+    "headingFont": "\"Barlow Condensed-c22f3e92d3224b3a\", \"Barlow Condensed-c22f3e92d3224b3a fallback: Arial Bold\", \"Arial Narrow\", sans-serif",
+    "hero": {
+      "x": 0,
+      "y": 72,
+      "width": 1440,
+      "height": 500
+    },
+    "copy": {
+      "x": 132,
+      "y": 142.40625,
+      "width": 570,
+      "height": 367.171875
+    },
+    "art": {
+      "x": 738,
+      "y": 136,
+      "width": 570,
+      "height": 380
+    },
+    "ctas": [
+      {
+        "text": "Tell us what's stuck →",
+        "href": "/contact/?service=paid-ads",
+        "width": 261.71875,
+        "height": 52
+      },
+      {
+        "text": "Talk about your campaign →",
+        "href": "/contact/?service=paid-ads",
+        "width": 322.234375,
+        "height": 52
+      }
+    ],
+    "images": [
+      {
+        "width": 300,
+        "height": 85,
+        "loaded": true
+      },
+      {
+        "width": 300,
+        "height": 85,
+        "loaded": true
+      },
+      {
+        "width": 1536,
+        "height": 1024,
+        "loaded": true
+      },
+      {
+        "width": 300,
+        "height": 85,
+        "loaded": true
+      },
+      {
+        "width": 300,
+        "height": 85,
+        "loaded": true
+      }
+    ],
+    "copyText": "A clever ad is not a campaign.\n\nAds work when the offer makes sense to the people seeing it and the page they land on backs it up. We build Google and Meta campaigns around both.\n\nTell us what's stuck →\n\nWhere it gets stuck\n\nSpending is easy. Knowing what it bought is harder.\nClicks, not customers.\n\nThe ads get attention. The leads aren't worth calling.\n\nThe offer is vague.\n\nIf people can't tell what you're selling, they keep scrolling.\n\nThe page breaks the promise.\n\nThe ad says one thing. The landing page says another.\n\nNobody decides anything.\n\nThe budget renews every month. The decisions don't.\n\nBusiness priorities\n\nStart with the business you want more of.\n\nBefore we make an ad, we work out what you want to sell, which customers you want more of, and what you can afford to pay to win each one. That decides the offer, the audience, and where the money goes.\n\nHow we work\nSet the target.\n\nAgree on what a good customer is worth and what you'll pay to get one.\n\nBuild the campaign.\n\nAds, targeting, and landing pages that all say the same thing.\n\nRun it.\n\nManage the budget as the campaign runs, not once a quarter.\n\nKeep what works.\n\nTest messages, track which leads become customers, and move money to what earns it.\n\nNext step\n\nSpending money and not sure what it's buying?\n\nBring what you're running now. We'll work out what to keep, what to change, and what to stop.\n\nTalk about your campaign →",
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 1440,
+    "theme": "dark",
+    "overflow": 0,
+    "height": 2290,
+    "fontsLoaded": "loaded",
+    "headingFont": "\"Barlow Condensed-c22f3e92d3224b3a\", \"Barlow Condensed-c22f3e92d3224b3a fallback: Arial Bold\", \"Arial Narrow\", sans-serif",
+    "hero": {
+      "x": 0,
+      "y": 72,
+      "width": 1440,
+      "height": 500
+    },
+    "copy": {
+      "x": 132,
+      "y": 142.40625,
+      "width": 570,
+      "height": 367.171875
+    },
+    "art": {
+      "x": 738,
+      "y": 136,
+      "width": 570,
+      "height": 380
+    },
+    "ctas": [
+      {
+        "text": "Tell us what's stuck →",
+        "href": "/contact/?service=paid-ads",
+        "width": 261.71875,
+        "height": 52
+      },
+      {
+        "text": "Talk about your campaign →",
+        "href": "/contact/?service=paid-ads",
+        "width": 322.234375,
+        "height": 52
+      }
+    ],
+    "images": [
+      {
+        "width": 300,
+        "height": 85,
+        "loaded": true
+      },
+      {
+        "width": 300,
+        "height": 85,
+        "loaded": true
+      },
+      {
+        "width": 1536,
+        "height": 1024,
+        "loaded": true
+      },
+      {
+        "width": 300,
+        "height": 85,
+        "loaded": true
+      },
+      {
+        "width": 300,
+        "height": 85,
+        "loaded": true
+      }
+    ],
+    "copyText": "A clever ad is not a campaign.\n\nAds work when the offer makes sense to the people seeing it and the page they land on backs it up. We build Google and Meta campaigns around both.\n\nTell us what's stuck →\n\nWhere it gets stuck\n\nSpending is easy. Knowing what it bought is harder.\nClicks, not customers.\n\nThe ads get attention. The leads aren't worth calling.\n\nThe offer is vague.\n\nIf people can't tell what you're selling, they keep scrolling.\n\nThe page breaks the promise.\n\nThe ad says one thing. The landing page says another.\n\nNobody decides anything.\n\nThe budget renews every month. The decisions don't.\n\nBusiness priorities\n\nStart with the business you want more of.\n\nBefore we make an ad, we work out what you want to sell, which customers you want more of, and what you can afford to pay to win each one. That decides the offer, the audience, and where the money goes.\n\nHow we work\nSet the target.\n\nAgree on what a good customer is worth and what you'll pay to get one.\n\nBuild the campaign.\n\nAds, targeting, and landing pages that all say the same thing.\n\nRun it.\n\nManage the budget as the campaign runs, not once a quarter.\n\nKeep what works.\n\nTest messages, track which leads become customers, and move money to what earns it.\n\nNext step\n\nSpending money and not sure what it's buying?\n\nBring what you're running now. We'll work out what to keep, what to change, and what to stop.\n\nTalk about your campaign →",
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 390,
+    "theme": "light",
+    "overflow": 0,
+    "height": 3191,
+    "fontsLoaded": "loaded",
+    "headingFont": "\"Barlow Condensed-c22f3e92d3224b3a\", \"Barlow Condensed-c22f3e92d3224b3a fallback: Arial Bold\", \"Arial Narrow\", sans-serif",
+    "hero": {
+      "x": 0,
+      "y": 62,
+      "width": 390,
+      "height": 658.5
+    },
+    "copy": {
+      "x": 12,
+      "y": 96,
+      "width": 366,
+      "height": 326.5
+    },
+    "art": {
+      "x": 12,
+      "y": 446.5,
+      "width": 366,
+      "height": 244
+    },
+    "ctas": [
+      {
+        "text": "Tell us what's stuck →",
+        "href": "/contact/?service=paid-ads",
+        "width": 261.71875,
+        "height": 52
+      },
+      {
+        "text": "Talk about your campaign →",
+        "href": "/contact/?service=paid-ads",
+        "width": 322.234375,
+        "height": 52
+      }
+    ],
+    "images": [
+      {
+        "width": 300,
+        "height": 85,
+        "loaded": true
+      },
+      {
+        "width": 300,
+        "height": 85,
+        "loaded": true
+      },
+      {
+        "width": 1536,
+        "height": 1024,
+        "loaded": true
+      },
+      {
+        "width": 300,
+        "height": 85,
+        "loaded": true
+      },
+      {
+        "width": 300,
+        "height": 85,
+        "loaded": true
+      }
+    ],
+    "copyText": "A clever ad is not a campaign.\n\nAds work when the offer makes sense to the people seeing it and the page they land on backs it up. We build Google and Meta campaigns around both.\n\nTell us what's stuck →\n\nWhere it gets stuck\n\nSpending is easy. Knowing what it bought is harder.\nClicks, not customers.\n\nThe ads get attention. The leads aren't worth calling.\n\nThe offer is vague.\n\nIf people can't tell what you're selling, they keep scrolling.\n\nThe page breaks the promise.\n\nThe ad says one thing. The landing page says another.\n\nNobody decides anything.\n\nThe budget renews every month. The decisions don't.\n\nBusiness priorities\n\nStart with the business you want more of.\n\nBefore we make an ad, we work out what you want to sell, which customers you want more of, and what you can afford to pay to win each one. That decides the offer, the audience, and where the money goes.\n\nHow we work\nSet the target.\n\nAgree on what a good customer is worth and what you'll pay to get one.\n\nBuild the campaign.\n\nAds, targeting, and landing pages that all say the same thing.\n\nRun it.\n\nManage the budget as the campaign runs, not once a quarter.\n\nKeep what works.\n\nTest messages, track which leads become customers, and move money to what earns it.\n\nNext step\n\nSpending money and not sure what it's buying?\n\nBring what you're running now. We'll work out what to keep, what to change, and what to stop.\n\nTalk about your campaign →",
+    "outside": [],
+    "openMenuOverflow": 0,
+    "themeToggleWorked": true,
+    "errors": []
+  },
+  {
+    "width": 390,
+    "theme": "dark",
+    "overflow": 0,
+    "height": 3184,
+    "fontsLoaded": "loaded",
+    "headingFont": "\"Barlow Condensed-c22f3e92d3224b3a\", \"Barlow Condensed-c22f3e92d3224b3a fallback: Arial Bold\", \"Arial Narrow\", sans-serif",
+    "hero": {
+      "x": 0,
+      "y": 62,
+      "width": 390,
+      "height": 658.5
+    },
+    "copy": {
+      "x": 12,
+      "y": 96,
+      "width": 366,
+      "height": 326.5
+    },
+    "art": {
+      "x": 12,
+      "y": 446.5,
+      "width": 366,
+      "height": 244
+    },
+    "ctas": [
+      {
+        "text": "Tell us what's stuck →",
+        "href": "/contact/?service=paid-ads",
+        "width": 261.71875,
+        "height": 52
+      },
+      {
+        "text": "Talk about your campaign →",
+        "href": "/contact/?service=paid-ads",
+        "width": 322.234375,
+        "height": 52
+      }
+    ],
+    "images": [
+      {
+        "width": 300,
+        "height": 85,
+        "loaded": true
+      },
+      {
+        "width": 300,
+        "height": 85,
+        "loaded": true
+      },
+      {
+        "width": 1536,
+        "height": 1024,
+        "loaded": true
+      },
+      {
+        "width": 300,
+        "height": 85,
+        "loaded": true
+      },
+      {
+        "width": 300,
+        "height": 85,
+        "loaded": true
+      }
+    ],
+    "copyText": "A clever ad is not a campaign.\n\nAds work when the offer makes sense to the people seeing it and the page they land on backs it up. We build Google and Meta campaigns around both.\n\nTell us what's stuck →\n\nWhere it gets stuck\n\nSpending is easy. Knowing what it bought is harder.\nClicks, not customers.\n\nThe ads get attention. The leads aren't worth calling.\n\nThe offer is vague.\n\nIf people can't tell what you're selling, they keep scrolling.\n\nThe page breaks the promise.\n\nThe ad says one thing. The landing page says another.\n\nNobody decides anything.\n\nThe budget renews every month. The decisions don't.\n\nBusiness priorities\n\nStart with the business you want more of.\n\nBefore we make an ad, we work out what you want to sell, which customers you want more of, and what you can afford to pay to win each one. That decides the offer, the audience, and where the money goes.\n\nHow we work\nSet the target.\n\nAgree on what a good customer is worth and what you'll pay to get one.\n\nBuild the campaign.\n\nAds, targeting, and landing pages that all say the same thing.\n\nRun it.\n\nManage the budget as the campaign runs, not once a quarter.\n\nKeep what works.\n\nTest messages, track which leads become customers, and move money to what earns it.\n\nNext step\n\nSpending money and not sure what it's buying?\n\nBring what you're running now. We'll work out what to keep, what to change, and what to stop.\n\nTalk about your campaign →",
+    "outside": [],
+    "openMenuOverflow": 0,
+    "themeToggleWorked": true,
+    "errors": []
+  },
+  {
+    "width": 320,
+    "theme": "light",
+    "overflow": 0,
+    "height": 3454,
+    "fontsLoaded": "loaded",
+    "headingFont": "\"Barlow Condensed-c22f3e92d3224b3a\", \"Barlow Condensed-c22f3e92d3224b3a fallback: Arial Bold\", \"Arial Narrow\", sans-serif",
+    "hero": {
+      "x": 0,
+      "y": 67,
+      "width": 320,
+      "height": 627.0625
+    },
+    "copy": {
+      "x": 12,
+      "y": 101,
+      "width": 296,
+      "height": 341.734375
+    },
+    "art": {
+      "x": 12,
+      "y": 466.734375,
+      "width": 296,
+      "height": 197.328125
+    },
+    "ctas": [
+      {
+        "text": "Tell us what's stuck →",
+        "href": "/contact/?service=paid-ads",
+        "width": 261.71875,
+        "height": 52
+      },
+      {
+        "text": "Talk about your campaign →",
+        "href": "/contact/?service=paid-ads",
+        "width": 296,
+        "height": 84
+      }
+    ],
+    "images": [
+      {
+        "width": 300,
+        "height": 85,
+        "loaded": true
+      },
+      {
+        "width": 300,
+        "height": 85,
+        "loaded": true
+      },
+      {
+        "width": 1536,
+        "height": 1024,
+        "loaded": true
+      },
+      {
+        "width": 300,
+        "height": 85,
+        "loaded": true
+      },
+      {
+        "width": 300,
+        "height": 85,
+        "loaded": true
+      }
+    ],
+    "copyText": "A clever ad is not a campaign.\n\nAds work when the offer makes sense to the people seeing it and the page they land on backs it up. We build Google and Meta campaigns around both.\n\nTell us what's stuck →\n\nWhere it gets stuck\n\nSpending is easy. Knowing what it bought is harder.\nClicks, not customers.\n\nThe ads get attention. The leads aren't worth calling.\n\nThe offer is vague.\n\nIf people can't tell what you're selling, they keep scrolling.\n\nThe page breaks the promise.\n\nThe ad says one thing. The landing page says another.\n\nNobody decides anything.\n\nThe budget renews every month. The decisions don't.\n\nBusiness priorities\n\nStart with the business you want more of.\n\nBefore we make an ad, we work out what you want to sell, which customers you want more of, and what you can afford to pay to win each one. That decides the offer, the audience, and where the money goes.\n\nHow we work\nSet the target.\n\nAgree on what a good customer is worth and what you'll pay to get one.\n\nBuild the campaign.\n\nAds, targeting, and landing pages that all say the same thing.\n\nRun it.\n\nManage the budget as the campaign runs, not once a quarter.\n\nKeep what works.\n\nTest messages, track which leads become customers, and move money to what earns it.\n\nNext step\n\nSpending money and not sure what it's buying?\n\nBring what you're running now. We'll work out what to keep, what to change, and what to stop.\n\nTalk about your campaign →",
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 320,
+    "theme": "dark",
+    "overflow": 0,
+    "height": 3447,
+    "fontsLoaded": "loaded",
+    "headingFont": "\"Barlow Condensed-c22f3e92d3224b3a\", \"Barlow Condensed-c22f3e92d3224b3a fallback: Arial Bold\", \"Arial Narrow\", sans-serif",
+    "hero": {
+      "x": 0,
+      "y": 67,
+      "width": 320,
+      "height": 627.0625
+    },
+    "copy": {
+      "x": 12,
+      "y": 101,
+      "width": 296,
+      "height": 341.734375
+    },
+    "art": {
+      "x": 12,
+      "y": 466.734375,
+      "width": 296,
+      "height": 197.328125
+    },
+    "ctas": [
+      {
+        "text": "Tell us what's stuck →",
+        "href": "/contact/?service=paid-ads",
+        "width": 261.71875,
+        "height": 52
+      },
+      {
+        "text": "Talk about your campaign →",
+        "href": "/contact/?service=paid-ads",
+        "width": 296,
+        "height": 84
+      }
+    ],
+    "images": [
+      {
+        "width": 300,
+        "height": 85,
+        "loaded": true
+      },
+      {
+        "width": 300,
+        "height": 85,
+        "loaded": true
+      },
+      {
+        "width": 1536,
+        "height": 1024,
+        "loaded": true
+      },
+      {
+        "width": 300,
+        "height": 85,
+        "loaded": true
+      },
+      {
+        "width": 300,
+        "height": 85,
+        "loaded": true
+      }
+    ],
+    "copyText": "A clever ad is not a campaign.\n\nAds work when the offer makes sense to the people seeing it and the page they land on backs it up. We build Google and Meta campaigns around both.\n\nTell us what's stuck →\n\nWhere it gets stuck\n\nSpending is easy. Knowing what it bought is harder.\nClicks, not customers.\n\nThe ads get attention. The leads aren't worth calling.\n\nThe offer is vague.\n\nIf people can't tell what you're selling, they keep scrolling.\n\nThe page breaks the promise.\n\nThe ad says one thing. The landing page says another.\n\nNobody decides anything.\n\nThe budget renews every month. The decisions don't.\n\nBusiness priorities\n\nStart with the business you want more of.\n\nBefore we make an ad, we work out what you want to sell, which customers you want more of, and what you can afford to pay to win each one. That decides the offer, the audience, and where the money goes.\n\nHow we work\nSet the target.\n\nAgree on what a good customer is worth and what you'll pay to get one.\n\nBuild the campaign.\n\nAds, targeting, and landing pages that all say the same thing.\n\nRun it.\n\nManage the budget as the campaign runs, not once a quarter.\n\nKeep what works.\n\nTest messages, track which leads become customers, and move money to what earns it.\n\nNext step\n\nSpending money and not sure what it's buying?\n\nBring what you're running now. We'll work out what to keep, what to change, and what to stop.\n\nTalk about your campaign →",
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 768,
+    "theme": "light",
+    "overflow": 0,
+    "height": 2386,
+    "fontsLoaded": "loaded",
+    "headingFont": "\"Barlow Condensed-c22f3e92d3224b3a\", \"Barlow Condensed-c22f3e92d3224b3a fallback: Arial Bold\", \"Arial Narrow\", sans-serif",
+    "hero": {
+      "x": 0,
+      "y": 72,
+      "width": 768,
+      "height": 524.296875
+    },
+    "copy": {
+      "x": 36,
+      "y": 116,
+      "width": 336,
+      "height": 436.296875
+    },
+    "art": {
+      "x": 396,
+      "y": 222.140625,
+      "width": 336,
+      "height": 224
+    },
+    "ctas": [
+      {
+        "text": "Tell us what's stuck →",
+        "href": "/contact/?service=paid-ads",
+        "width": 261.71875,
+        "height": 52
+      },
+      {
+        "text": "Talk about your campaign →",
+        "href": "/contact/?service=paid-ads",
+        "width": 322.234375,
+        "height": 52
+      }
+    ],
+    "images": [
+      {
+        "width": 300,
+        "height": 85,
+        "loaded": true
+      },
+      {
+        "width": 300,
+        "height": 85,
+        "loaded": true
+      },
+      {
+        "width": 1536,
+        "height": 1024,
+        "loaded": true
+      },
+      {
+        "width": 300,
+        "height": 85,
+        "loaded": true
+      },
+      {
+        "width": 300,
+        "height": 85,
+        "loaded": true
+      }
+    ],
+    "copyText": "A clever ad is not a campaign.\n\nAds work when the offer makes sense to the people seeing it and the page they land on backs it up. We build Google and Meta campaigns around both.\n\nTell us what's stuck →\n\nWhere it gets stuck\n\nSpending is easy. Knowing what it bought is harder.\nClicks, not customers.\n\nThe ads get attention. The leads aren't worth calling.\n\nThe offer is vague.\n\nIf people can't tell what you're selling, they keep scrolling.\n\nThe page breaks the promise.\n\nThe ad says one thing. The landing page says another.\n\nNobody decides anything.\n\nThe budget renews every month. The decisions don't.\n\nBusiness priorities\n\nStart with the business you want more of.\n\nBefore we make an ad, we work out what you want to sell, which customers you want more of, and what you can afford to pay to win each one. That decides the offer, the audience, and where the money goes.\n\nHow we work\nSet the target.\n\nAgree on what a good customer is worth and what you'll pay to get one.\n\nBuild the campaign.\n\nAds, targeting, and landing pages that all say the same thing.\n\nRun it.\n\nManage the budget as the campaign runs, not once a quarter.\n\nKeep what works.\n\nTest messages, track which leads become customers, and move money to what earns it.\n\nNext step\n\nSpending money and not sure what it's buying?\n\nBring what you're running now. We'll work out what to keep, what to change, and what to stop.\n\nTalk about your campaign →",
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 768,
+    "theme": "dark",
+    "overflow": 0,
+    "height": 2379,
+    "fontsLoaded": "loaded",
+    "headingFont": "\"Barlow Condensed-c22f3e92d3224b3a\", \"Barlow Condensed-c22f3e92d3224b3a fallback: Arial Bold\", \"Arial Narrow\", sans-serif",
+    "hero": {
+      "x": 0,
+      "y": 72,
+      "width": 768,
+      "height": 524.296875
+    },
+    "copy": {
+      "x": 36,
+      "y": 116,
+      "width": 336,
+      "height": 436.296875
+    },
+    "art": {
+      "x": 396,
+      "y": 222.140625,
+      "width": 336,
+      "height": 224
+    },
+    "ctas": [
+      {
+        "text": "Tell us what's stuck →",
+        "href": "/contact/?service=paid-ads",
+        "width": 261.71875,
+        "height": 52
+      },
+      {
+        "text": "Talk about your campaign →",
+        "href": "/contact/?service=paid-ads",
+        "width": 322.234375,
+        "height": 52
+      }
+    ],
+    "images": [
+      {
+        "width": 300,
+        "height": 85,
+        "loaded": true
+      },
+      {
+        "width": 300,
+        "height": 85,
+        "loaded": true
+      },
+      {
+        "width": 1536,
+        "height": 1024,
+        "loaded": true
+      },
+      {
+        "width": 300,
+        "height": 85,
+        "loaded": true
+      },
+      {
+        "width": 300,
+        "height": 85,
+        "loaded": true
+      }
+    ],
+    "copyText": "A clever ad is not a campaign.\n\nAds work when the offer makes sense to the people seeing it and the page they land on backs it up. We build Google and Meta campaigns around both.\n\nTell us what's stuck →\n\nWhere it gets stuck\n\nSpending is easy. Knowing what it bought is harder.\nClicks, not customers.\n\nThe ads get attention. The leads aren't worth calling.\n\nThe offer is vague.\n\nIf people can't tell what you're selling, they keep scrolling.\n\nThe page breaks the promise.\n\nThe ad says one thing. The landing page says another.\n\nNobody decides anything.\n\nThe budget renews every month. The decisions don't.\n\nBusiness priorities\n\nStart with the business you want more of.\n\nBefore we make an ad, we work out what you want to sell, which customers you want more of, and what you can afford to pay to win each one. That decides the offer, the audience, and where the money goes.\n\nHow we work\nSet the target.\n\nAgree on what a good customer is worth and what you'll pay to get one.\n\nBuild the campaign.\n\nAds, targeting, and landing pages that all say the same thing.\n\nRun it.\n\nManage the budget as the campaign runs, not once a quarter.\n\nKeep what works.\n\nTest messages, track which leads become customers, and move money to what earns it.\n\nNext step\n\nSpending money and not sure what it's buying?\n\nBring what you're running now. We'll work out what to keep, what to change, and what to stop.\n\nTalk about your campaign →",
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 1024,
+    "theme": "light",
+    "overflow": 0,
+    "height": 2184,
+    "fontsLoaded": "loaded",
+    "headingFont": "\"Barlow Condensed-c22f3e92d3224b3a\", \"Barlow Condensed-c22f3e92d3224b3a fallback: Arial Bold\", \"Arial Narrow\", sans-serif",
+    "hero": {
+      "x": 0,
+      "y": 72,
+      "width": 1024,
+      "height": 437.265625
+    },
+    "copy": {
+      "x": 34,
+      "y": 136,
+      "width": 460,
+      "height": 317.265625
+    },
+    "art": {
+      "x": 530,
+      "y": 141.296875,
+      "width": 460,
+      "height": 306.65625
+    },
+    "ctas": [
+      {
+        "text": "Tell us what's stuck →",
+        "href": "/contact/?service=paid-ads",
+        "width": 261.71875,
+        "height": 52
+      },
+      {
+        "text": "Talk about your campaign →",
+        "href": "/contact/?service=paid-ads",
+        "width": 322.234375,
+        "height": 52
+      }
+    ],
+    "images": [
+      {
+        "width": 300,
+        "height": 85,
+        "loaded": true
+      },
+      {
+        "width": 300,
+        "height": 85,
+        "loaded": true
+      },
+      {
+        "width": 1536,
+        "height": 1024,
+        "loaded": true
+      },
+      {
+        "width": 300,
+        "height": 85,
+        "loaded": true
+      },
+      {
+        "width": 300,
+        "height": 85,
+        "loaded": true
+      }
+    ],
+    "copyText": "A clever ad is not a campaign.\n\nAds work when the offer makes sense to the people seeing it and the page they land on backs it up. We build Google and Meta campaigns around both.\n\nTell us what's stuck →\n\nWhere it gets stuck\n\nSpending is easy. Knowing what it bought is harder.\nClicks, not customers.\n\nThe ads get attention. The leads aren't worth calling.\n\nThe offer is vague.\n\nIf people can't tell what you're selling, they keep scrolling.\n\nThe page breaks the promise.\n\nThe ad says one thing. The landing page says another.\n\nNobody decides anything.\n\nThe budget renews every month. The decisions don't.\n\nBusiness priorities\n\nStart with the business you want more of.\n\nBefore we make an ad, we work out what you want to sell, which customers you want more of, and what you can afford to pay to win each one. That decides the offer, the audience, and where the money goes.\n\nHow we work\nSet the target.\n\nAgree on what a good customer is worth and what you'll pay to get one.\n\nBuild the campaign.\n\nAds, targeting, and landing pages that all say the same thing.\n\nRun it.\n\nManage the budget as the campaign runs, not once a quarter.\n\nKeep what works.\n\nTest messages, track which leads become customers, and move money to what earns it.\n\nNext step\n\nSpending money and not sure what it's buying?\n\nBring what you're running now. We'll work out what to keep, what to change, and what to stop.\n\nTalk about your campaign →",
+    "outside": [],
+    "errors": []
+  },
+  {
+    "width": 1024,
+    "theme": "dark",
+    "overflow": 0,
+    "height": 2176,
+    "fontsLoaded": "loaded",
+    "headingFont": "\"Barlow Condensed-c22f3e92d3224b3a\", \"Barlow Condensed-c22f3e92d3224b3a fallback: Arial Bold\", \"Arial Narrow\", sans-serif",
+    "hero": {
+      "x": 0,
+      "y": 72,
+      "width": 1024,
+      "height": 437.265625
+    },
+    "copy": {
+      "x": 34,
+      "y": 136,
+      "width": 460,
+      "height": 317.265625
+    },
+    "art": {
+      "x": 530,
+      "y": 141.296875,
+      "width": 460,
+      "height": 306.65625
+    },
+    "ctas": [
+      {
+        "text": "Tell us what's stuck →",
+        "href": "/contact/?service=paid-ads",
+        "width": 261.71875,
+        "height": 52
+      },
+      {
+        "text": "Talk about your campaign →",
+        "href": "/contact/?service=paid-ads",
+        "width": 322.234375,
+        "height": 52
+      }
+    ],
+    "images": [
+      {
+        "width": 300,
+        "height": 85,
+        "loaded": true
+      },
+      {
+        "width": 300,
+        "height": 85,
+        "loaded": true
+      },
+      {
+        "width": 1536,
+        "height": 1024,
+        "loaded": true
+      },
+      {
+        "width": 300,
+        "height": 85,
+        "loaded": true
+      },
+      {
+        "width": 300,
+        "height": 85,
+        "loaded": true
+      }
+    ],
+    "copyText": "A clever ad is not a campaign.\n\nAds work when the offer makes sense to the people seeing it and the page they land on backs it up. We build Google and Meta campaigns around both.\n\nTell us what's stuck →\n\nWhere it gets stuck\n\nSpending is easy. Knowing what it bought is harder.\nClicks, not customers.\n\nThe ads get attention. The leads aren't worth calling.\n\nThe offer is vague.\n\nIf people can't tell what you're selling, they keep scrolling.\n\nThe page breaks the promise.\n\nThe ad says one thing. The landing page says another.\n\nNobody decides anything.\n\nThe budget renews every month. The decisions don't.\n\nBusiness priorities\n\nStart with the business you want more of.\n\nBefore we make an ad, we work out what you want to sell, which customers you want more of, and what you can afford to pay to win each one. That decides the offer, the audience, and where the money goes.\n\nHow we work\nSet the target.\n\nAgree on what a good customer is worth and what you'll pay to get one.\n\nBuild the campaign.\n\nAds, targeting, and landing pages that all say the same thing.\n\nRun it.\n\nManage the budget as the campaign runs, not once a quarter.\n\nKeep what works.\n\nTest messages, track which leads become customers, and move money to what earns it.\n\nNext step\n\nSpending money and not sure what it's buying?\n\nBring what you're running now. We'll work out what to keep, what to change, and what to stop.\n\nTalk about your campaign →",
+    "outside": [],
+    "errors": []
+  }
+]

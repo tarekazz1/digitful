@@ -453,3 +453,7 @@ Approved structure and distinct section purposes: hero establishes the point of 
 Proof remains an evidence gap: a real campaign example could show the problem, Digitful's decision and the outcome. No such example was supplied or verified in this exchange. Do not invent client stories, numbers or testimonials, and do not put a proof placeholder on the public page. A sourced example can be considered if available.
 
 Next proposal stage: desktop/mobile composition using this content structure and the existing visual system, exploring the owner-suggested halftone billboard with a curved comic road. Artwork and renders still need review before implementation. Preserve the confirmed service scope in section 15.
+
+## 17. Owner-supplied replacement copy — 2026-10-23
+
+The owner supplied new full-page copy in the Task 05 conversation and explicitly directed “Use this copy.” It supersedes section 16 for the current mockup: hero; Where it gets stuck; Business priorities; How we work; Next step. The exact wording, including Google/Meta campaigns and tracking which leads become customers, is retained in `mockups/task-05-paid-ads.html`. Both CTAs retain `/contact/?service=paid-ads`. The existing billboard/road candidate is unchanged. Updated 1440px/390px light/dark renders and 320/768/1024px fit checks are recorded in `mockups/task-05-review.md` and `mockups/task-05-checks.json`. This authorizes the proposal copy revision only; visual acceptance, implementation N/M, deployment and signoff remain separate.

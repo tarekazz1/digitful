@@ -1,0 +1,71 @@
+/* Task 05: one editable page direction. Shared navigation/footer live in the
+   adjacent snapshot; these rules apply only to proposal content. */
+.paid-proposal { color: var(--site-text); }
+.paid-proposal h1, .paid-proposal h2 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -.025em;
+  margin: 0;
+}
+.paid-proposal p { font-size: 1.125rem; line-height: 1.6; margin: 0; }
+.paid-hero { padding-block: 64px 56px; }
+.paid-hero__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 36px;
+}
+.paid-hero h1 { font-size: clamp(64px, 6.25vw, 90px); line-height: .96; max-width: 580px; }
+.paid-hero__copy p { max-width: 510px; margin-block: 28px; }
+.paid-cta { border: 2px solid var(--site-border); white-space: normal; }
+.paid-hero__art { margin: 0; }
+.paid-hero__art img { display: block; width: 100%; height: auto; }
+.paid-business {
+  background: var(--site-teal);
+  border-block: 2px solid #191a1b;
+  padding-block: 48px;
+}
+.paid-business__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  gap: 60px;
+}
+.paid-business h2, .paid-business p { color: #191a1b; }
+.paid-proposal h2 { font-size: clamp(40px, 3.7vw, 54px); line-height: 1.02; max-width: 500px; }
+.paid-business p { max-width: 500px; padding-top: 3px; }
+.paid-proposal h3 { font-family: var(--font-display); font-size: 30px; font-weight: 800; line-height: 1.1; margin: 0 0 10px; letter-spacing: -.015em; }
+.paid-proposal .paid-label { font-size: 13px; font-weight: 700; margin-bottom: 18px; letter-spacing: .06em; }
+.paid-problems { padding-block: 42px 48px; border-top: 1px solid var(--site-border-subtle); }
+.paid-problems h2 { max-width: 700px; }
+.paid-problems__list, .paid-work__list { display: grid; grid-template-columns: 1fr 1fr; gap: 28px 60px; margin: 30px 0 0; padding: 0; }
+.paid-problems__list { list-style: none; }
+.paid-problems__list li { border-top: 1px solid var(--site-border-subtle); padding-top: 20px; }
+.paid-problems__list p, .paid-work__list p { max-width: 500px; }
+.paid-work { padding-block: 48px; }
+.paid-work__list { list-style: none; counter-reset: paid-step; }
+.paid-work__list li { counter-increment: paid-step; display: flex; align-items: baseline; gap: 18px; border-top: 1px solid var(--site-border-subtle); padding-top: 20px; }
+.paid-work__list li::before { content: counter(paid-step) "."; font-size: 18px; font-weight: 700; flex: 0 0 20px; color: var(--site-text); }
+.paid-work__list li > div { min-width: 0; }
+.paid-close { padding-block: 42px 54px; background: var(--site-surface); border-top: 2px solid var(--site-border); }
+.paid-close h2 { max-width: 720px; }
+.paid-close p:not(.paid-label) { max-width: 680px; margin-block: 22px; }
+@media (max-width: 991.98px) {
+  .paid-hero { padding-block: 44px; }
+  .paid-hero__grid { gap: 24px; }
+  .paid-hero h1 { font-size: 64px; }
+  .paid-business__grid, .paid-problems__list, .paid-work__list { gap: 28px 30px; }
+}
+@media (max-width: 767.98px) {
+  .paid-hero { padding-block: 34px 30px; }
+  .paid-hero__grid { grid-template-columns: 1fr; gap: 24px; }
+  .paid-hero h1 { font-size: clamp(53px, 15.4vw, 66px); max-width: 440px; }
+  .paid-hero__copy p { margin-block: 22px; }
+  .paid-hero__art { width: min(100%, 400px); margin-inline: auto; }
+  .paid-business { padding-block: 32px; }
+  .paid-business__grid { grid-template-columns: 1fr; gap: 20px; }
+  .paid-proposal h2 { font-size: 42px; }
+  .paid-problems, .paid-work { padding-block: 32px; }
+  .paid-problems__list, .paid-work__list { grid-template-columns: 1fr; gap: 24px; margin-top: 24px; }
+  .paid-close { padding-block: 32px 36px; }
+}
