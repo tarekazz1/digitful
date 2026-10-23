@@ -6,23 +6,23 @@ const pageDescription = 'SEO and local search visibility for businesses that wan
 const pageCanonical = 'https://digitful.ca/seo/';
 
 const journey = [
-  { name: 'Search', lead: 'They look. You’re nowhere to be found.', detail: 'Your competitors appear. Your business doesn’t.' },
-  { name: 'Discover', lead: 'They find you. But not what they need.', detail: 'Your page doesn’t answer their questions or make your offer clear.' },
-  { name: 'Act', lead: 'They visit. Nothing happens next.', detail: 'The next step is unclear, so the opportunity slips away.' }
+  { name: 'Search', lead: 'You don\'t show up.', detail: 'People search for what you do and find your competitors.' },
+  { name: 'Visit', lead: 'The page doesn\'t help.', detail: 'They land on it but can\'t tell what you offer or why they should pick you.' },
+  { name: 'Act', lead: 'Nothing happens next.', detail: 'There\'s no clear next step, so they leave and keep searching.' }
 ];
 
 const workAreas = [
-  { title: 'Search intent & content', summary: 'Get found for what your customers are actually looking for.', detail: 'Keyword strategy · Content · AI-assisted discovery' },
-  { title: 'Technical foundations', summary: 'Make your website easier for search engines to find, understand, and index.', detail: 'Technical SEO · Site structure · Page performance' },
-  { title: 'Local visibility', summary: 'Help nearby customers find your business when they need it.', detail: 'Local SEO · Google Business Profile · Local pages' },
-  { title: 'Measurement & improvement', summary: 'Know which searches bring useful visitors and what they do next.', detail: 'Search performance · Analytics · Visitor actions' }
+  { title: 'Search intent and content', summary: 'Pages built around what customers type into Google and ask AI tools, written so both people and search engines understand them.', detail: 'Keyword strategy · Content · AI-assisted discovery' },
+  { title: 'Technical foundations', summary: 'A site Google can crawl, understand, and load quickly on a phone.', detail: 'Technical SEO · Site structure · Page performance' },
+  { title: 'Local visibility', summary: 'A Google Business Profile and local pages that bring in customers nearby.', detail: 'Local SEO · Google Business Profile · Local pages' },
+  { title: 'Measurement', summary: 'Knowing which searches bring visitors who call, book, or buy.', detail: 'Search performance · Analytics · Visitor actions' }
 ];
 
 const problems = [
-  { label: 'People cannot find my business', response: 'Your business may be missing from the searches that matter. Start with your search visibility and the pages customers need to find.' },
-  { label: 'My website gets traffic but few inquiries', response: 'The issue may be who visits, what they find, or what happens next. Find out where that connection breaks.' },
-  { label: 'My Google Business Profile needs attention', response: 'Your local presence may be making it harder for nearby customers to find or contact you. Start with your profile and local visibility.' },
-  { label: 'I am not sure what is working', response: 'Connect your search traffic to what visitors actually do. See what’s creating useful interest and what needs attention.' }
+  { label: 'People can\'t find my business', response: 'Your business may be missing from the searches that matter. Start with your search visibility and the pages customers need to find.' },
+  { label: 'I get traffic but few inquiries', response: 'The issue may be who visits, what they find, or what happens next. Find out where that connection breaks.' },
+  { label: 'My Google Business Profile needs work', response: 'Your local presence may be making it harder for nearby customers to find or contact you. Start with your profile and local visibility.' },
+  { label: 'I don\'t know what\'s working', response: 'Connect your search traffic to what visitors actually do. See what’s creating useful interest and what needs attention.' }
 ];
 ---
 
@@ -31,7 +31,7 @@ const problems = [
     <section class="seo-hero" aria-labelledby="seo-hero-heading">
       <div class="container seo-hero__inner">
         <h1 id="seo-hero-heading">
-          Your next <span class="seo-hero__line">customer is searching.</span>{' '}
+          <span class="seo-hero__line">People are searching for what you sell.</span>{' '}
           <span class="seo-hero__line">Can they find you?</span>
         </h1>
 
@@ -54,8 +54,8 @@ const problems = [
         </figure>
 
         <div class="seo-hero__intro">
-          <p>People are looking for answers, products, and services. AI-powered search tools are helping them discover their options. We help your business become easier to find, understand, and choose, wherever the search begins.</p>
-          <a class="btn btn-primary btn-lg seo-cta" href="/contact/?service=seo">Tell us what’s stuck →</a>
+          <p>We help your business show up on Google, in Google Maps, and in AI answers, then make sure the page people land on gives them a reason to get in touch.</p>
+          <a class="btn btn-primary btn-lg seo-cta" href="/contact/?service=seo">Tell us what's stuck →</a>
         </div>
       </div>
     </section>
@@ -64,7 +64,7 @@ const problems = [
       <div class="container">
         <header class="seo-section__head seo-journey__head">
           <span class="eyebrow">The search journey</span>
-          <h2 id="seo-journey-heading">Getting found is only the beginning.</h2>
+          <h2 id="seo-journey-heading">Getting found is the first problem, not the only one.</h2>
         </header>
         <div class="seo-journey__track" role="list">
           {journey.map((step, index) => (
@@ -83,7 +83,7 @@ const problems = [
       <div class="container">
         <header class="seo-section__head seo-work__head">
           <span class="eyebrow">What we work on</span>
-          <h2 id="seo-work-heading">Different searches. One connected strategy.</h2>
+          <h2 id="seo-work-heading">Four parts, one goal: more of the right inquiries.</h2>
         </header>
         <div class="seo-work__list">
           {workAreas.map((area, index) => (
@@ -104,10 +104,10 @@ const problems = [
       <div class="container">
         <header class="seo-management__head">
           <div>
-            <span class="eyebrow">Ongoing SEO management</span>
-            <h2 id="seo-management-heading">SEO is not a one-time fix.</h2>
+            <span class="eyebrow">Ongoing management</span>
+            <h2 id="seo-management-heading">Rankings move. Someone has to keep watching.</h2>
           </div>
-          <p>Search behavior changes. Your competitors adapt. Your business evolves. Your SEO needs to keep up.</p>
+          <p>Competitors publish, Google changes how it ranks pages, and your services change. We track where you show up, fix what slips, and report on the searches that bring in business.</p>
         </header>
         <div class="seo-management__loop" role="list">
           <article role="listitem"><h3>Monitor</h3><p>Know what’s happening.</p></article>
@@ -120,9 +120,9 @@ const problems = [
     <section class="seo-section seo-selector" aria-labelledby="seo-selector-heading">
       <div class="container seo-selector__layout">
         <header class="seo-selector__copy">
-          <span class="eyebrow">The next step</span>
+          <span class="eyebrow">Next step</span>
           <h2 id="seo-selector-heading">Where is your search visibility getting stuck?</h2>
-          <p>Choose the problem that sounds familiar.</p>
+          <p>Pick the one that sounds familiar.</p>
         </header>
 
         <fieldset class="seo-selector__panel" data-seo-selector>
