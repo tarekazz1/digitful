@@ -1,5 +1,10 @@
 # Implementation queue and review prompts
 
+## Homepage surgical text fixes — 2026-10-23
+
+Applied the six owner-approved homepage string replacements and matching brand-copy/metadata documentation only. Original source baseline: remote `ca03e85425a9df0e73a7e2ace85aede155ceb91e` (local HEAD `d4df671724888071a845d1da03073b4a34403210`); original preview baseline `851cfbeac082d83d2bdac2daaaa9dd55a675aca2`, pin `d4df671724888071a845d1da03073b4a34403210`. Source diff +6/-6; authorized pin adds +1/-1: combined +7/-7, net 0/N0 PASS, total 14/M20 PASS. Existing build passed (25 pages; pre-existing Sass warnings; local Node 24, CI Node 22). Exact-SHA preview publication and live checks follow. Earlier pending review notes and local changes are preserved and excluded from publication; Automation waits for review. No technical signoff or owner KEEP awarded.
+
+
 Updated 2026-09-23. Tasks 01–04 have owner KEEP. Tasks 01–03 have recorded managing-agent technical signoff; Task 04 acceptance records the owner-reported review without a new independent technical signoff. No production approval is granted.
 
 ## Roles and workflow

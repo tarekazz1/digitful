@@ -1,5 +1,10 @@
 # Digitful Visual Refresh — Handoff
 
+## Homepage surgical text fixes — 2026-10-23
+
+Applied the six owner-approved homepage string replacements and matching brand-copy/metadata documentation only. Original source baseline: remote `ca03e85425a9df0e73a7e2ace85aede155ceb91e` (local HEAD `d4df671724888071a845d1da03073b4a34403210`); original preview baseline `851cfbeac082d83d2bdac2daaaa9dd55a675aca2`, pin `d4df671724888071a845d1da03073b4a34403210`. Source diff +6/-6; authorized pin adds +1/-1: combined +7/-7, net 0/N0 PASS, total 14/M20 PASS. Existing build passed (25 pages; pre-existing Sass warnings; local Node 24, CI Node 22). Exact-SHA preview publication and live checks follow. Earlier pending review notes and local changes are preserved and excluded from publication; Automation waits for review. No technical signoff or owner KEEP awarded.
+
+
 ## Task 04 — SEO text-only revision deployed — 2026-10-23
 
 The owner authorized the supplied customer-first SEO wording, N=10, M=100 and exact-SHA preview publication, then replaced only the proposed hero ending with “Can they find you?” after the longer headline did not fit without CSS changes. Source `d4df671724888071a845d1da03073b4a34403210` changes only `src/pages/seo.astro`; it preserves metadata, artwork, CSS, structure, disclosures, selector logic, response text and both `/contact/?service=seo` targets. The concurrent Paid Ads source commit `2381bce11cdf8a5aaab8a3e0ce4fd3b9f86e2de9` was preserved as the publication parent.

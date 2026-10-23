@@ -104,7 +104,7 @@ Where things usually go wrong
 
 **Headline**
 
-More traffic won’t fix a messy system.
+Most marketing problems are connection problems.
 
 Do **not** add a separate section-summary paragraph below this headline on the homepage. The three problem labels and optional interactions provide the supporting layer.
 
@@ -136,13 +136,13 @@ What we actually do
 
 **Headline**
 
-This is where we usually get involved.
+Where we come in.
 
 Do **not** add a separate section-summary paragraph below this headline on the homepage. The four work-area descriptions provide the supporting layer.
 
 ### Social Media
 
-Make the brand clearer, more useful, and easier to remember.
+Give people a clear reason to remember you.
 
 ### SEO
 
@@ -150,7 +150,7 @@ Show up for the searches that can actually turn into business.
 
 ### Paid Ads
 
-Put budget behind the right message, audience, and next step.
+Spend on the customers you want more of.
 
 ### Process Automation
 
@@ -261,3 +261,9 @@ These words and content-density decisions are approved for the homepage redesign
 Latest approved hero-support implementation:
 - Rendered source: `637d4cc84c1452ef1cdbfecda505e8f6bb9ae0ba`
 - Preview run `35012284588`: build and deploy succeeded.
+
+## Approved homepage metadata — 2026-10-23
+
+Title: `Digitful | Digital Marketing, SEO & Paid Ads`
+
+Description: `Social media, SEO, paid ads, and automation that work together, so attention turns into customers.`

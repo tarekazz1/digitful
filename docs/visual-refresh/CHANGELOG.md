@@ -1,5 +1,10 @@
 # Digitful Visual Refresh — Change Log
 
+## Homepage surgical text fixes — 2026-10-23
+
+Applied the six owner-approved homepage string replacements and matching brand-copy/metadata documentation only. Original source baseline: remote `ca03e85425a9df0e73a7e2ace85aede155ceb91e` (local HEAD `d4df671724888071a845d1da03073b4a34403210`); original preview baseline `851cfbeac082d83d2bdac2daaaa9dd55a675aca2`, pin `d4df671724888071a845d1da03073b4a34403210`. Source diff +6/-6; authorized pin adds +1/-1: combined +7/-7, net 0/N0 PASS, total 14/M20 PASS. Existing build passed (25 pages; pre-existing Sass warnings; local Node 24, CI Node 22). Exact-SHA preview publication and live checks follow. Earlier pending review notes and local changes are preserved and excluded from publication; Automation waits for review. No technical signoff or owner KEEP awarded.
+
+
 ## Task 04 — SEO text-only revision deployed — 2026-10-23
 
 Owner-authorized customer-first copy was applied only in `src/pages/seo.astro`; the final hero reads “People are searching for what you sell. Can they find you?” with no CSS change. Source `d4df671724888071a845d1da03073b4a34403210` was deployed by exact pin `851cfbeac082d83d2bdac2daaaa9dd55a675aca2`; workflow [39909972786](https://github.com/tarekazz1/digitful-preview/actions/runs/39909972786) succeeded. Exact-commit build and deployed Chromium checks at 1440/390px in both themes passed for copy, wrapping, artwork selection, disclosures, all selector responses, keyboard behavior, CTA targets, overflow and preview safeguards. Counted source plus preview pin: +22/-22, net 0 (N10 PASS), changed 44 (M100 PASS). Production/Main unchanged; ready for managing-agent review with no new technical signoff or owner KEEP.
