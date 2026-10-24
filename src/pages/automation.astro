@@ -7,50 +7,222 @@ const pageCanonical = 'https://digitful.ca/automation/';
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription} canonicalUrl={pageCanonical}>
-  <main class="page-theme page-theme--automation">
-    <section class="service-hero text-center">
-      <div class="container">
-        <span class="eyebrow mb-3">Process automation</span>
-        <h1 class="mb-3">Automation that removes drag.</h1>
-        <p class="lead mb-0">
-          If follow-up breaks or repetitive work piles up, automation is leverage.
-        </p>
-      </div>
-    </section>
-
-    <section class="service-info py-6">
-      <div class="container">
-        <div class="service-shell">
-          <h2 class="mb-3">What we solve</h2>
-          <ul>
-            <li>Leads arrive, but follow-up depends on who happened to notice.</li>
-            <li>Your team is losing time to repetitive tasks that should already be systemized.</li>
-            <li>The tools exist, but the workflow between them is weak or manual.</li>
-          </ul>
-
-          <div class="process-grid mt-4">
-            <div class="process-step">
-              <span class="process-step__number">01</span>
-              <strong>Map the workflow</strong>
-              <p class="mb-0">Map the flow and find the lag.</p>
-            </div>
-            <div class="process-step">
-              <span class="process-step__number">02</span>
-              <strong>Design the automation</strong>
-              <p class="mb-0">Create rules, routing, and follow-up logic.</p>
-            </div>
-            <div class="process-step">
-              <span class="process-step__number">03</span>
-              <strong>Protect the handoff</strong>
-              <p class="mb-0">Keep the system visible and easy to run.</p>
-            </div>
-          </div>
-
-          <div class="mt-4">
-            <a href="/contact/?service=automation" class="btn btn-primary btn-lg px-4">Talk Automation</a>
-          </div>
-        </div>
-      </div>
-    </section>
+  <main class="automation-proposal">
+  <section class="auto-hero">
+  <div class="container auto-hero-grid">
+  <div>
+  <h1>Your business shouldn’t depend on someone remembering.</h1>
+  <p>We connect the tools you already use so leads get answered and tasks get done, every time.</p>
+  <a class="btn btn-primary btn-lg auto-cta" href="/contact/?service=automation">Tell us what’s stuck →</a>
+  </div>
+  <figure class="auto-hero-art" aria-hidden="true">
+  <picture>
+  <source media="(max-width: 767.98px)" srcset="/assets/collage/automation/automation-finger-reminder-mobile.webp" type="image/webp" />
+  <img src="/assets/collage/automation/automation-finger-reminder-desktop.webp" width="1254" height="1254" alt="" decoding="async" fetchpriority="high" />
+  </picture>
+  </figure>
+  </div>
+  </section>
+  <section class="auto-stuck">
+  <div class="container">
+  <p class="auto-label">Where it gets stuck</p>
+  <div class="stuck-grid">
+  <h2>The work gets done. Just slowly, by hand, and not always.</h2>
+  <figure class="system-diagram before">
+  <figcaption>Before</figcaption>
+  <svg viewBox="0 0 400 340" role="img" aria-label="Before: five tools with broken connections; a person in the middle routes the work between them.">
+  <g class="routes">
+  <path d="M80 70 160 133M245 83 240 126M320 70 240 133M78 190 162 163M322 190 238 163" stroke-dasharray="9 12"/>
+  </g>
+  <g class="tool" transform="translate(55 55)"><g class="symbol"><rect x="-16" y="-20" width="32" height="40"/><path d="M-8-10H8M-8 0H8M-8 10H2"/></g><text y="55">Form</text></g>
+  <g class="tool" transform="translate(200 55)"><g class="symbol"><ellipse cy="-14" rx="19" ry="7"/><path d="M-19-14V14C-19 24 19 24 19 14V-14M-19 0C-19 10 19 10 19 0"/></g><text y="55">CRM</text></g>
+  <g class="tool" transform="translate(345 55)"><g class="symbol"><rect x="-22" y="-16" width="44" height="32"/><path d="m-22-16 22 18 22-18"/></g><text y="55">Email</text></g>
+  <g class="tool" transform="translate(55 205)"><g class="symbol"><rect x="-20" y="-20" width="40" height="40"/><path d="M-20-6H20M-20 7H20M-6-20V20M7-20V20"/></g><text y="55">Sheet</text></g>
+  <g class="tool" transform="translate(345 205)"><g class="symbol"><rect x="-20" y="-17" width="40" height="37"/><path d="M-20-5H20M-10-24V-11M10-24V-11m-20 24 6 6 13-13"/></g><text y="55">Calendar</text></g>
+  <g class="person" transform="translate(200 155)">
+  <circle cy="-14" r="9"/>
+  <path d="M-18 17V9C-18-5 18-5 18 9V17"/>
+  </g>
+  <text x="200" y="201">Routing</text>
+  </svg>
+  </figure>
+  </div>
+  </div>
+  </section>
+  <section class="auto-services">
+  <div class="container">
+  <div class="services-head">
+  <div>
+  <p class="auto-label">What we automate</p>
+  <h2>Small fixes that add up every week.</h2>
+  </div>
+  <figure class="system-diagram after">
+  <figcaption>After</figcaption>
+  <svg viewBox="0 0 400 330" role="img" aria-label="After: one form entry updates the CRM, sends the email, books the calendar and fills the sheet. The person is no longer routing anything.">
+  <g class="routes">
+  <path d="M74 150H146M194 150H255M255 50V250M255 50H312M255 150H312M255 250H312"/>
+  <path d="m306 44 6 6-6 6m0 88 6 6-6 6m0 88 6 6-6 6"/>
+  </g>
+  <g class="tool" transform="translate(50 150)"><g class="symbol"><rect x="-16" y="-20" width="32" height="40"/><path d="M-8-10H8M-8 0H8M-8 10H2"/></g><text y="55">Form</text></g>
+  <g class="tool" transform="translate(170 150)"><g class="symbol"><ellipse cy="-14" rx="19" ry="7"/><path d="M-19-14V14C-19 24 19 24 19 14V-14M-19 0C-19 10 19 10 19 0"/></g><text y="55">CRM</text></g>
+  <g class="tool" transform="translate(340 50)"><g class="symbol"><rect x="-22" y="-16" width="44" height="32"/><path d="m-22-16 22 18 22-18"/></g><text y="55">Email</text></g>
+  <g class="tool" transform="translate(340 150)"><g class="symbol"><rect x="-20" y="-17" width="40" height="37"/><path d="M-20-5H20M-10-24V-11M10-24V-11m-20 24 6 6 13-13"/></g><text y="55">Calendar</text></g>
+  <g class="tool" transform="translate(340 250)"><g class="symbol"><rect x="-20" y="-20" width="40" height="40"/><path d="M-20-6H20M-20 7H20M-6-20V20M7-20V20"/></g><text y="55">Sheet</text></g>
+  <g class="person" transform="translate(50 270)">
+  <circle cy="-14" r="9"/>
+  <path d="M-18 17V9C-18-5 18-5 18 9V17"/>
+  </g>
+  <text x="20" y="320" style="text-anchor:start">Back to real work</text>
+  </svg>
+  </figure>
+  </div>
+  <div class="service-rows">
+  <article class="service-row">
+  <h3>Lead follow-up.</h3>
+  <div class="comparison">
+  <p>
+  <span>Before</span>Friday's inquiry gets answered Monday</p>
+  <p>
+  <span>After</span>Reply sent in minutes, sales gets a ping</p>
+  </div>
+  </article>
+  <article class="service-row">
+  <h3>Booking and reminders.</h3>
+  <div class="comparison">
+  <p>
+  <span>Before</span>Someone emails every confirmation</p>
+  <p>
+  <span>After</span>Confirmed and reminded automatically</p>
+  </div>
+  </article>
+  <article class="service-row">
+  <h3>Data entry.</h3>
+  <div class="comparison">
+  <p>
+  <span>Before</span>Copying form details into the CRM</p>
+  <p>
+  <span>After</span>Details land there on their own</p>
+  </div>
+  </article>
+  <article class="service-row">
+  <h3>Reporting.</h3>
+  <div class="comparison">
+  <p>
+  <span>Before</span>Rebuilding the same spreadsheet every Monday</p>
+  <p>
+  <span>After</span>Numbers arrive in your inbox</p>
+  </div>
+  </article>
+  <article class="service-row">
+  <h3>Internal handoffs.</h3>
+  <div class="comparison">
+  <p>
+  <span>Before</span>Chasing whoever's next</p>
+  <p>
+  <span>After</span>They're notified when it's their turn</p>
+  </div>
+  </article>
+  </div>
+  </div>
+  </section>
+  <section class="auto-work">
+  <div class="container">
+  <p class="auto-label">How we work</p>
+  <h2>Map it first. Automate second.</h2>
+  <ol>
+  <li>
+  <span class="step-number">01</span>
+  <div>
+  <h3>Map the workflow.</h3>
+  <p>Walk through how the work happens today and where it stalls.</p>
+  </div>
+  </li>
+  <li>
+  <span class="step-number">02</span>
+  <div>
+  <h3>Pick what to automate.</h3>
+  <p>Start with the steps that cost the most time or lose the most leads.</p>
+  </div>
+  </li>
+  <li>
+  <span class="step-number">03</span>
+  <div>
+  <h3>Build it.</h3>
+  <p>Connect your tools with clear rules for what happens, when, and who gets told.</p>
+  </div>
+  </li>
+  <li>
+  <span class="step-number">04</span>
+  <div>
+  <h3>Hand it over.</h3>
+  <p>Document the system so your team can see it, run it, and change it.</p>
+  </div>
+  </li>
+  </ol>
+  </div>
+  </section>
+  <section class="auto-close">
+  <div class="container">
+  <p class="auto-label">Next step</p>
+  <h2>What does your team do by hand every week?</h2>
+  <p>Tell us the task. We’ll tell you whether it’s worth automating.</p>
+  <a class="btn btn-primary btn-lg auto-cta" href="/contact/?service=automation">Talk about your workflow →</a>
+  </div>
+  </section>
   </main>
 </BaseLayout>
+
+<style>
+  /* Page-local proposal styles; actual inspected shared system in task-06-shared.css. */
+  .automation-proposal { color:var(--site-text); }
+  .automation-proposal h1,.automation-proposal h2,.automation-proposal h3 {font-family:var(--font-display);font-weight:800;letter-spacing:-.025em;margin:0;}
+  .automation-proposal h1 {font-size:clamp(64px,6.25vw,90px);line-height:.96;max-width:650px;}
+  .automation-proposal h2 {font-size:clamp(42px,3.75vw,54px);line-height:1.03;max-width:790px;}
+  .automation-proposal h3 {font-size:30px;line-height:1.1;margin-bottom:9px;}
+  .automation-proposal p {font-size:18px;line-height:1.6;margin:0;}
+  .automation-proposal .auto-label {font-size:13px;font-weight:700;letter-spacing:.06em;margin-bottom:18px;}
+  .auto-hero {padding:64px 0 58px;}
+  .auto-hero-grid {display:grid;grid-template-columns:1.12fr 1fr;gap:58px;align-items:center;}
+  .auto-hero p {max-width:550px;margin:28px 0;}
+  .auto-cta {border:2px solid var(--site-border);white-space:normal;}
+  .auto-stuck,.auto-services,.auto-work {padding:52px 0; border-top:1px solid var(--site-border-subtle);}
+  .stuck-grid {display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start;margin-top:34px;}
+  .system-diagram {margin:0;width:100%;max-width:480px;justify-self:center;}
+  .system-diagram figcaption {font-size:13px;font-weight:700;letter-spacing:.06em; margin-bottom:8px;}
+  .system-diagram svg {width:100%;height:auto;display:block;overflow:visible;}
+  .system-diagram text {fill:currentColor;font-family:var(--font-inter);font-size:14px;font-weight:600;text-anchor:middle;stroke:none;}
+  .symbol,.person,.routes {fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:square;stroke-linejoin:miter;}
+  .routes {stroke-width:2;}
+  .person circle {fill:var(--site-accent);stroke:currentColor;}
+  .after .person circle {fill:var(--site-mustard);}
+  .auto-services {background:var(--site-teal);color:#191a1b;border-block:2px solid #191a1b;}
+  .auto-services h2,.auto-services h3,.auto-services p {color:inherit;}
+  .services-head {display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start;}
+  .service-rows {margin-top:32px;}
+  .service-row {display:grid;grid-template-columns:1fr 2fr;align-items:baseline;gap:70px;border-top:1px solid #191a1b66;padding:22px 0;}
+  .service-row:last-child {padding-bottom:0;}
+  .comparison {display:grid;grid-template-columns:1fr 1fr;gap:24px;align-content:start;padding-top:3px;}
+  .comparison span {display:block;font-size:12px;font-weight:700;letter-spacing:.05em;margin-bottom:5px;}
+  .comparison p {font-size:18px;line-height:1.5;}
+  .comparison p:last-child {font-weight:700;}
+  .auto-work ol {list-style:none;margin:32px 0 0;padding:0;}
+  .auto-work li {display:grid;grid-template-columns:32px 1fr;gap:24px;padding:24px 0;border-top:1px solid var(--site-border-subtle);align-items:baseline;}
+  .auto-work li>div {max-width:530px;}
+  .step-number {font-weight:700;font-size:14px;}
+  .auto-close {background:var(--site-surface);padding:48px 0 56px;border-top:2px solid var(--site-border);}
+  .auto-close h2 {max-width:740px;}
+  .auto-close p:not(.auto-label) {margin:24px 0;}
+  
+  @media(max-width:991.98px){.auto-hero h1{font-size:64px;}.stuck-grid,.service-row{gap:32px;}.comparison{gap:16px;}}
+  @media(max-width:767.98px){.auto-hero{padding:34px 0 32px;}.auto-hero h1{font-size:clamp(49px,14.4vw,62px);}.auto-hero p{margin:22px 0;}.auto-stuck,.auto-services,.auto-work{padding:34px 0;}.automation-proposal h2{font-size:42px;}.stuck-grid{grid-template-columns:1fr;gap:30px;margin-top:26px;}.services-head{grid-template-columns:1fr;gap:24px;align-items:center;}.services-head .after{max-width:400px;}.service-row{grid-template-columns:1fr;gap:8px;padding:22px 0;}.comparison{grid-template-columns:1fr;gap:6px;}.comparison p{display:grid;grid-template-columns:64px 1fr;gap:0;}.comparison span{margin-bottom:0;text-transform:uppercase;align-self:baseline;}.auto-work li{gap:14px;grid-template-columns:28px 1fr;align-items:baseline;}.auto-close{padding:34px 0 40px;}.system-diagram{max-width:400px;}}
+  /* Static finger-reminder artwork, matching the approved proposal. */
+  .auto-hero-grid {grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:20px;align-items:center;}
+  .auto-hero-art {position:relative;isolation:isolate;width:100%;aspect-ratio:1;margin:0;overflow:visible;}
+  .auto-hero-art::before {content:"";position:absolute;width:68%;height:auto;aspect-ratio:1;left:28%;right:auto;top:6%;border-radius:50%;background:var(--site-mustard);z-index:-1;}
+  .auto-hero-art::after {content:none;}
+  .auto-hero-art img {position:absolute;display:block;width:104%;height:auto;max-width:none;left:0;top:-2%;object-fit:contain;clip-path:none;}
+  @media(max-width:1199.98px){.auto-hero-art img{width:100%;left:0;top:0;}}
+  @media(max-width:991.98px){.auto-hero-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;}}
+  @media(max-width:767.98px){.auto-hero-grid{grid-template-columns:1fr;gap:18px;}.auto-hero-art{width:100%;max-width:440px;justify-self:center;}.auto-hero-art img{width:100%;left:0;top:0;}}
+  
+</style>
