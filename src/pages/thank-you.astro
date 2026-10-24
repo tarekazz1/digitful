@@ -7,18 +7,33 @@ const pageCanonical = 'https://digitful.ca/thank-you/';
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription} canonicalUrl={pageCanonical}>
-  <main>
-    <section class="thank-you py-6 d-flex align-items-center justify-content-center">
-      <div class="container text-center">
-        <div class="mb-4">
-          <i class="bi bi-check-circle-fill text-primary display-1" aria-hidden="true"></i>
-        </div>
-        <span class="eyebrow mb-3">Message received</span>
-        <h1 class="mb-3">Thanks for reaching out.</h1>
-        <p class="lead mb-3">We will review what you shared and reply within 1 to 2 business days.</p>
-        <p class="text-muted-light mb-4">You will hear from us soon.</p>
-        <a href="/" class="btn btn-primary btn-lg">Back To Home</a>
-      </div>
+  <main id="thank-you-content" class="thanks-proposal">
+    <section class="container thanks-content" aria-labelledby="thanks-title">
+      <svg class="confirmation-mark" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="32" fill="#E4C58F"/><path d="m19 32 9 9 18-20" fill="none" stroke="#191A1B" stroke-width="5" stroke-linecap="square" stroke-linejoin="miter"/></svg>
+      <span class="eyebrow">Message received</span>
+      <h1 id="thanks-title">Thanks for reaching out.</h1>
+      <p>We will review what you shared and reply within 1 to 2 business days.</p>
+      <a href="/" class="btn btn-outline-light btn-lg thanks-home">Back To Home</a>
     </section>
   </main>
 </BaseLayout>
+
+<style>
+  :global(#main-content) { display: flex; flex-direction: column; }
+  .thanks-proposal { flex: 1; display: grid; align-items: center; padding-block: 64px 80px; color: var(--site-text); }
+  .thanks-content { text-align: center; }
+  .confirmation-mark { display: block; width: 64px; height: 64px; margin: 0 auto 28px; }
+  .thanks-content .eyebrow { display: block; margin-bottom: 20px; }
+  .thanks-content h1 { font-family: var(--font-display); font-weight: 800; font-size: clamp(54px, 5vw, 72px); line-height: 0.98; letter-spacing: -0.025em; margin: 0; }
+  .thanks-content p { max-width: 640px; margin: 24px auto 30px; font-size: 18px; line-height: 1.65; }
+  .thanks-home { border: 2px solid var(--site-text); min-height: 48px; font-size: 16px; padding: 11px 22px; color: var(--site-text); background: transparent; }
+  .thanks-home:hover { background: var(--site-text); color: var(--site-bg); }
+  .thanks-home:focus-visible { outline: 2px solid var(--site-text); outline-offset: 4px; }
+  @media (max-width: 575.98px) {
+    .thanks-proposal { padding-block: 48px 56px; }
+    .thanks-content { padding-inline: 24px; }
+    .confirmation-mark { width: 56px; height: 56px; margin-bottom: 24px; }
+    .thanks-content h1 { font-size: 52px; }
+    .thanks-content p { margin-block: 22px 28px; font-size: 16px; }
+  }
+</style>

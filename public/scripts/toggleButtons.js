@@ -34,7 +34,6 @@ export function initToggleButtons() {
       const isPressed = this.classList.toggle('selected');
       this.setAttribute('aria-pressed', String(isPressed));
       syncSelectedServices();
-      this.blur();
     });
   });
 
@@ -64,16 +63,15 @@ export function initToggleButtons() {
   }
 
   if (messageInput && !messageInput.value && siteUrlParam) {
-    const serviceLine = serviceParam && serviceLabels[serviceParam] ? `Primary focus: ${serviceLabels[serviceParam]}.` : '';
-    const strategyLine = strategyParam ? `Priority view: ${strategyParam}.` : '';
+    const serviceLine = serviceParam && serviceLabels[serviceParam] ? `Help with: ${serviceLabels[serviceParam]}` : '';
+    const strategyLine = strategyParam ? `Device: ${strategyParam}` : '';
 
     messageInput.value = [
-      `Website to review: ${siteUrlParam}`,
+      `Website: ${siteUrlParam}`,
       serviceLine,
       strategyLine,
-      'Current bottleneck:',
-      'What feels unclear or expensive right now:',
-      'What outcome would make this engagement worthwhile:'
+      'What’s not working:',
+      'What I’d like to change:'
     ]
       .filter(Boolean)
       .join('\n');

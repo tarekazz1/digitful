@@ -1,5 +1,10 @@
 # Implementation queue and review prompts
 
+## Task 07 — implementation authorized; local checks passed — 2026-10-24
+
+Owner approved N180/M400, scoped commit/push and exact-SHA preview publication, including removing `_captcha=false` to restore FormSubmit CAPTCHA. The reviewed composition and exact revised copy/prefill are implemented only in contact.astro, thank-you.astro and toggleButtons.js; BaseLayout/shared code and prior work are preserved. Local build (25 pages) and 20 width/theme states, six keyboard states, form contracts/validation/context and safeguards pass. Total including retained checker/preview pin: +250/-90/net160/changed340, scope/N/M PASS. Preview publication is in progress; see TASK-07-IMPLEMENTATION.md for the immutable baselines and subsequent release receipt. No form/diagnostic submitted; CAPTCHA completion, delivery and post-submit redirect unverified. No managing-agent signoff, owner KEEP or production change.
+
+
 ## Homepage surgical text fix — technical signoff and owner APPROVED / KEEP — 2026-10-24
 
 Owner explicitly accepted the reviewed six-string homepage text fix and authorized committing its acceptance records and refreshing preview. Accepted implementation: `0464d05de77e33f23cdd9a60ab0aa348b21056bf`, preserved unchanged in the later Automation preview sources. Current acceptance supersedes earlier homepage text-fix review/KEEP-pending statuses; original Task 03 KEEP remains intact.

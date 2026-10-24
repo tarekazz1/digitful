@@ -2,34 +2,23 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const pageTitle = 'Contact Digitful';
-const pageDescription = 'Start a conversation with Digitful about strategy, acquisition, or automation.';
+const pageDescription = 'Talk to Digitful about social media, SEO, paid ads, or process automation. Tell us what’s stuck.';
 const pageCanonical = 'https://digitful.ca/contact/';
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription} canonicalUrl={pageCanonical}>
-  <main>
-    <section class="contact-hero text-center">
-      <div class="container">
-        <span class="eyebrow mb-3">Contact</span>
-        <h1 class="mb-3">Tell us where growth feels stuck.</h1>
-        <p class="lead mb-0">
-          Share what is working, what is unclear, and what needs attention.
-        </p>
+  <main class="contact-proposal">
+    <section class="container contact-layout" aria-labelledby="contact-title">
+      <div class="contact-intro">
+        <span class="eyebrow">Contact</span>
+        <h1 id="contact-title">Tell us what’s stuck.</h1>
+        <p class="contact-lead">The messy version is fine. Tell us what you’d like to change.</p>
+        <p class="contact-reply">We reply within 1 to 2 business days.</p>
       </div>
-    </section>
-
-    <section class="contact-form py-6">
-      <div class="container">
-        <div class="contact-shell">
-          <div class="section-intro">
-            <h2 class="mb-3">Start the conversation</h2>
-            <p class="contact-form__intro mb-0">
-              Share what is working, what is unclear, and what needs attention.
-            </p>
-          </div>
-
-          <form action="https://formsubmit.co/73c5ec076cc55c4aefd536c5f88c3526" method="POST" id="contactForm">
-            <div class="row g-4">
+      <div class="contact-worksheet">
+        <h2>Start the conversation</h2>
+        <form action="https://formsubmit.co/73c5ec076cc55c4aefd536c5f88c3526" method="POST" id="contactForm">
+            <div class="row g-3">
               <div class="col-md-6">
                 <div class="form-floating">
                   <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required />
@@ -49,25 +38,24 @@ const pageCanonical = 'https://digitful.ca/contact/';
                 </div>
               </div>
               <div class="col-12">
-                <p class="mb-2 text-muted-light">What services are you interested in?</p>
-                <div class="row g-2">
-                  <div class="col-12 col-md-auto">
+                <p id="service-label" class="service-label">What would you like help with? Select any that fit.</p>
+                <div class="service-options" role="group" aria-labelledby="service-label">
+                  <div class="service-option">
                     <button type="button" class="btn btn-outline-light btn-lg w-100 toggle-btn" data-service="social-media">Social Media</button>
                   </div>
-                  <div class="col-12 col-md-auto">
+                  <div class="service-option">
                     <button type="button" class="btn btn-outline-light btn-lg w-100 toggle-btn" data-service="seo">SEO</button>
                   </div>
-                  <div class="col-12 col-md-auto">
+                  <div class="service-option">
                     <button type="button" class="btn btn-outline-light btn-lg w-100 toggle-btn" data-service="paid-ads">Paid Ads</button>
                   </div>
-                  <div class="col-12 col-md-auto">
+                  <div class="service-option">
                     <button type="button" class="btn btn-outline-light btn-lg w-100 toggle-btn" data-service="automation">Automation</button>
                   </div>
                 </div>
                 <input type="hidden" name="services" id="servicesInput" />
               </div>
               <input type="hidden" name="_next" value="https://digitful.ca/thank-you/" />
-              <input type="hidden" name="_captcha" value="false" />
               <input type="hidden" name="source" id="sourceInput" />
               <input type="hidden" name="snapshot_url" id="snapshotUrlInput" />
               <input type="hidden" name="snapshot_strategy" id="snapshotStrategyInput" />
@@ -78,18 +66,18 @@ const pageCanonical = 'https://digitful.ca/contact/';
                     class="form-control"
                     id="message"
                     name="message"
-                    placeholder="Tell us about your goals"
-                    style="height: 170px"
+                    placeholder="What’s getting in the way?"
+                    style="height: 160px"
                     required
                   ></textarea>
-                  <label for="message">Tell us about your goals</label>
+                  <label for="message">What’s getting in the way?</label>
                 </div>
               </div>
               <div class="col-12">
-                <div class="form-check">
+                <div class="form-check privacy-check">
                   <input class="form-check-input" type="checkbox" id="privacy" name="privacy" required />
                   <label class="form-check-label" for="privacy">
-                    I agree to the <a href="/privacy/" class="link-primary text-decoration-none">Privacy Policy</a>
+                    I agree to the <a href="/privacy/" class="privacy-link">Privacy Policy</a>
                   </label>
                 </div>
               </div>
@@ -98,45 +86,124 @@ const pageCanonical = 'https://digitful.ca/contact/';
               </div>
             </div>
           </form>
-
-          <p class="text-muted-light small mb-0 mt-4">We reply within 1 to 2 business days.</p>
-        </div>
       </div>
-    </section>
-
-    <section class="py-6">
-      <div class="container">
-        <div class="service-shell service-shell--narrow">
-          <div class="contact-grid">
-            <div class="contact-card">
-              <span class="contact-card__icon"><i class="bi bi-envelope" aria-hidden="true"></i></span>
-              <strong>Email</strong>
-              <p class="mb-0"><a href="mailto:ping@digitful.ca" class="contact-card__link text-decoration-none">ping@digitful.ca</a></p>
-            </div>
-            <div class="contact-card">
-              <span class="contact-card__icon"><i class="bi bi-telephone" aria-hidden="true"></i></span>
-              <strong>Call</strong>
-              <p class="mb-0"><a href="tel:+15797797779" class="contact-card__link text-decoration-none">+1 (579) 779-7779</a></p>
-            </div>
-            <div class="contact-card">
-              <span class="contact-card__icon"><i class="bi bi-globe2" aria-hidden="true"></i></span>
-              <strong>Location</strong>
-              <p class="mb-0">Remote-first, serving teams across Canada and beyond.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <dl class="contact-details">
+        <div><dt>Email</dt><dd><a href="mailto:ping@digitful.ca">ping@digitful.ca</a></dd></div>
+        <div><dt>Call</dt><dd><a href="tel:+15797797779">+1 (579) 779-7779</a></dd></div>
+        <div><dt>Location</dt><dd>Remote-first, serving teams across Canada and beyond.</dd></div>
+      </dl>
     </section>
   </main>
 </BaseLayout>
 
 <style>
-  .contact-card__link {
-    color: var(--site-text);
-  }
-
-  .contact-card__link:hover,
-  .contact-card__link:focus {
-    color: var(--site-accent-soft);
-  }
+.contact-proposal { flex: 1; color: var(--site-text); }
+.contact-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  grid-template-areas: "intro form" "details form";
+  align-content: start;
+  align-items: start;
+  gap: 36px 80px;
+  padding-block: 64px 72px;
+}
+.contact-intro { grid-area: intro; }
+.contact-intro .eyebrow { display: block; margin-bottom: 20px; }
+.contact-intro h1 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(64px, 5.85vw, 84px);
+  line-height: 0.98;
+  letter-spacing: -0.025em;
+  margin: 0;
+}
+.contact-lead { max-width: 400px; font-size: 18px; line-height: 1.6; margin: 24px 0 14px; }
+.contact-reply { font-size: 14px; line-height: 1.6; margin: 0; }
+.contact-worksheet { grid-area: form; min-width: 0; border-top: 2px solid var(--site-text); padding-top: 18px; }
+.contact-worksheet h2 {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+  margin: 0 0 24px;
+}
+.contact-worksheet .form-control {
+  background: var(--site-bg);
+  border: 2px solid var(--site-text);
+  border-radius: 3px;
+  color: var(--site-text);
+  box-shadow: none;
+  font-size: 16px;
+}
+.contact-worksheet .form-floating > label { color: var(--site-text); }
+.contact-worksheet .form-floating > label::after { background: var(--site-bg) !important; }
+.service-label { font-size: 15px; margin-bottom: 10px; line-height: 1.5; }
+.service-options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.service-option { min-width: 0; }
+.service-options .toggle-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 46px;
+  padding: 9px 10px;
+  border: 2px solid var(--site-text);
+  border-radius: 3px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+  white-space: normal;
+  color: var(--site-text);
+  background: transparent;
+  box-shadow: none;
+}
+:global(html[data-theme]) .contact-proposal .service-options .toggle-btn.selected { background: var(--site-text); color: var(--site-bg); border-color: var(--site-text); }
+.service-options .toggle-btn.selected::before { content: "✓"; font-size: 15px; font-weight: 700; }
+.service-options .toggle-btn:not(.selected):hover { background: var(--site-surface); }
+.contact-worksheet .privacy-check { display: flex; align-items: flex-start; gap: 10px; padding-left: 0; margin: 2px 0; }
+.privacy-check .form-check-input {
+  float: none;
+  flex: 0 0 20px;
+  width: 20px;
+  height: 20px;
+  margin: 2px 0 0;
+  border: 2px solid var(--site-text);
+  background-color: var(--site-bg);
+  border-radius: 3px;
+}
+.privacy-check .form-check-input:checked { background-color: #191A1B; border-color: var(--site-text); }
+:global(html[data-theme]) .contact-proposal .privacy-check label { font-size: 14px; line-height: 1.7; color: var(--site-text); }
+.contact-worksheet .privacy-link { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+.contact-worksheet .btn-primary { border: 2px solid var(--site-text); border-radius: 3px; min-height: 52px; font-size: 18px; }
+.contact-details { grid-area: details; margin: 0; }
+.contact-details > div { padding-block: 13px 14px; border-top: 1px solid var(--site-border-subtle); }
+.contact-details dt { font-size: 13px; font-weight: 600; margin-bottom: 4px; }
+.contact-details dd { margin: 0; max-width: 380px; font-size: 16px; line-height: 1.55; }
+.contact-details a { color: inherit; text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; }
+.contact-proposal :focus-visible {
+  outline: 2px solid var(--site-text);
+  outline-offset: 4px;
+  box-shadow: none;
+}
+.contact-proposal input:focus, .contact-proposal textarea:focus { outline: 2px solid var(--site-text); outline-offset: 3px; box-shadow: none; }
+@media (max-width: 1199.98px) { .contact-layout { gap: 32px 48px; } }
+@media (max-width: 991.98px) {
+  .contact-layout { grid-template-columns: minmax(0, 1fr); grid-template-areas: "intro" "form" "details"; gap: 28px; padding-block: 40px 44px; }
+  .contact-intro h1 { max-width: 600px; font-size: 64px; }
+  .contact-lead { max-width: 560px; margin-block: 20px 12px; }
+  .contact-details { display: grid; grid-template-columns: 1fr 1fr; column-gap: 30px; }
+  .contact-details > div:last-child { grid-column: 1 / -1; }
+}
+@media (max-width: 575.98px) {
+  .contact-layout { padding-inline: 20px; padding-block: 32px 32px; gap: 28px; }
+  .contact-intro .eyebrow { margin-bottom: 16px; }
+  .contact-intro h1 { font-size: clamp(49px, 14.35vw, 56px); max-width: 360px; }
+  .contact-lead { font-size: 16px; line-height: 1.6; margin-block: 18px 12px; }
+  .contact-reply { font-size: 13px; }
+  .contact-worksheet { padding-top: 16px; }
+  .contact-worksheet h2 { font-size: 31px; margin-bottom: 20px; }
+  .contact-details { display: block; }
+  .contact-details > div { padding-block: 12px; }
+}
 </style>
