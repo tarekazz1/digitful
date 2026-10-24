@@ -1,5 +1,15 @@
 # Implementation queue and review prompts
 
+## Homepage surgical text fix — technical signoff and owner APPROVED / KEEP — 2026-10-24
+
+Owner explicitly accepted the reviewed six-string homepage text fix and authorized committing its acceptance records and refreshing preview. Accepted implementation: `0464d05de77e33f23cdd9a60ab0aa348b21056bf`, preserved unchanged in the later Automation preview sources. Current acceptance supersedes earlier homepage text-fix review/KEEP-pending statuses; original Task 03 KEEP remains intact.
+
+Independent managing-agent review verified that exactly the six approved one-occurrence substitutions reproduce the current homepage source; unmarked copy, CSS, URLs, artwork and behavior are unchanged. GitHub source and original preview comparisons confirm +7/-7/net0/changed14, N0/M20/scope PASS. Original deployment run 39945823557 succeeded. Fresh live Chromium checks at 320/390/1024/1440px in light/dark passed copy/title/description, decoded artwork, no horizontal overflow/browser errors, all three keyboard reveals, URL validity, device radio controls and preview safeguards. Four fresh full-page desktop/mobile renders were inspected. Menu/theme and accessible labels passed after waiting for Bootstrap transitions.
+
+Evidence: `C:/Users/tarek.azzi/.codex/visualizations/2026/09/17/01a0ae53-e8af-7181-85da-dc4c0ced41e8/contact-next-review/REVIEW.md`, `checks.json`, `menu-followup.json` and adjacent homepage PNGs. Initial early menu-close flags are retained and explained as test-timing artifacts. Chromium emulation only; no real diagnostic or external form submitted.
+
+This publication changes only the homepage acceptance documentation. Application content is already accepted and deployed; the requested preview refresh retains that content and existing safeguards. No production publication is authorized. Other pending local records/proposals are excluded.
+
 ## Task 06 — acceptance records published; preview refreshed — 2026-10-24
 
 Acceptance/signoff records were committed and pushed to `visual-refresh` as [`997b0e0761a23cfe679a1a9680d8ff348eaa9def`](https://github.com/tarekazz1/digitful/commit/997b0e0761a23cfe679a1a9680d8ff348eaa9def). Preview commit [`874ef13b78c8a4fa16f1a810fc093bbba935ca4d`](https://github.com/tarekazz1/digitful-preview/commit/874ef13b78c8a4fa16f1a810fc093bbba935ca4d) pins that exact source. [Deployment run 40106186770](https://github.com/tarekazz1/digitful-preview/actions/runs/40106186770) completed successfully.
