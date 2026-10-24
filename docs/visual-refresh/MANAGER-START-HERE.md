@@ -1,5 +1,12 @@
 # START HERE — managing-agent handover
 
+## Latest accepted page — Task 06 Automation — 2026-10-24
+
+Task 06 is implemented, independently technically signed off and owner APPROVED / KEEP at source `95b8664338c69e9aff9504f4d65cf38293c4f802`, reviewed preview `fc79ee63cd8d0b71b36983737ca482fe4d4998ef`. N450/M600 PASS. See current HANDOFF and TASK-06-IMPLEMENTATION for review evidence and limits.
+
+Owner authorized publication of Task 06 acceptance records and a preview refresh with unchanged application content. No further Task 06 implementation is needed. Earlier proposal/review-pending descriptions are historical. Do not restart completed pages from old briefs; consult current HANDOFF and queue records before selecting more work. Production release remains separate. Unrelated pending local records are not included in this Task 06 publication.
+
+
 Updated 2026-09-23. This current summary supersedes the original proposal-stage handover retained in Git history.
 
 ## Current state
