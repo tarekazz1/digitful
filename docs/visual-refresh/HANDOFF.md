@@ -1,5 +1,13 @@
 # Digitful Visual Refresh — Handoff
 
+## Task 06 — acceptance records published; preview refreshed — 2026-10-24
+
+Acceptance/signoff records were committed and pushed to `visual-refresh` as [`997b0e0761a23cfe679a1a9680d8ff348eaa9def`](https://github.com/tarekazz1/digitful/commit/997b0e0761a23cfe679a1a9680d8ff348eaa9def). Preview commit [`874ef13b78c8a4fa16f1a810fc093bbba935ca4d`](https://github.com/tarekazz1/digitful-preview/commit/874ef13b78c8a4fa16f1a810fc093bbba935ca4d) pins that exact source. [Deployment run 40106186770](https://github.com/tarekazz1/digitful-preview/actions/runs/40106186770) completed successfully.
+
+Application files are identical to the accepted implementation `95b8664338c69e9aff9504f4d65cf38293c4f802`; only documentation changed in source. Fresh deployed Chromium checks at 390px light and 1440px dark passed heading/body (“every time”), loaded artwork, no horizontal overflow/browser errors, both contact targets, robots metadata, GTM removal and form guard; robots.txt remains disallow-all. Existing technical signoff and owner APPROVED / KEEP stand. Task totals remain +304/-45/net259/changed349, N450/M600 PASS. Production main rechecked unchanged at `c8fac4f78295d2576af0e92b04329f4e938c7b6f`. Unrelated pending local work was excluded; the local checkout was not reset.
+
+Release evidence: `C:/Users/tarek.azzi/.codex/visualizations/2026/09/17/01a0ae53-e8af-7181-85da-dc4c0ced41e8/task-06-manager-review/release-smoke.json`. This receipt is a documentation-only follow-up to the deployed source, requiring no application redeployment.
+
 ## Task 06 — technical signoff and owner APPROVED / KEEP — 2026-10-24
 
 Accepted implementation: `95b8664338c69e9aff9504f4d65cf38293c4f802`. Reviewed preview pin: `fc79ee63cd8d0b71b36983737ca482fe4d4998ef`; [successful deployment run 40094624004](https://github.com/tarekazz1/digitful-preview/actions/runs/40094624004). [Automation preview](https://preview.digitful.ca/automation/).
