@@ -1,5 +1,12 @@
 # Implementation queue and review prompts
 
+## Task 06 — Automation implementation — Ready for managing-agent review — 2026-10-24
+
+Owner approved N450/M600, scoped commit/push and exact-SHA preview publication. Implemented the complete finger-reminder proposal with the exact latest hero copy, static transparent artwork/one mustard circle and unchanged latest lower sections. Final source `95b8664338c69e9aff9504f4d65cf38293c4f802`; preview pin `fc79ee63cd8d0b71b36983737ca482fe4d4998ef`; [successful run 40094624004](https://github.com/tarekazz1/digitful-preview/actions/runs/40094624004); [review page](https://preview.digitful.ca/automation/).
+
+Build and local/deployed Chromium checks passed at 320/390/768/1024/1440px in both themes after fonts/lazy images loaded. Exact copy, artwork/labels, two CTA targets, menu/theme keyboard operation, preview safeguards, overflow and browser errors checked; final desktop/mobile renders and fit states inspected. Cumulative original-baseline totals: **+304/-45, net +259/N450 PASS; changed349/M600 PASS; scope PASS**. Full accounting, evidence and limits: [TASK-06-IMPLEMENTATION.md](TASK-06-IMPLEMENTATION.md). Pre-existing work and production main preserved. No managing-agent signoff or owner KEEP awarded. Earlier Automation proposal-only/flow/timer instructions are historical; this completed scope follows the latest owner-supplied finger-reminder version.
+
+
 ## Homepage surgical text fixes — Ready for managing-agent review — 2026-10-23
 
 Published exactly the six owner-approved strings in `src/pages/index.astro`, the four matching visible-copy lines and approved metadata note in `docs/brand/HOMEPAGE-COPY.md`. Rendered source `0464d05de77e33f23cdd9a60ab0aa348b21056bf`; preview pin commit `ac8b92c527681924995b30a461f34196abe5f197`; existing [Deploy Digitful Preview run 39945823557](https://github.com/tarekazz1/digitful-preview/actions/runs/39945823557) build/deploy succeeded. Original baselines: source remote `ca03e85425a9df0e73a7e2ace85aede155ceb91e`, local HEAD `d4df671724888071a845d1da03073b4a34403210`; preview `851cfbeac082d83d2bdac2daaaa9dd55a675aca2` pinning `d4df671724888071a845d1da03073b4a34403210`. Source +6/-6 plus pin +1/-1 = **+7/-7, net 0/N0 PASS, total 14/M20 PASS; scope PASS**. Documentation/binaries excluded; no retained verification code.
