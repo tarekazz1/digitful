@@ -1,5 +1,14 @@
 # Digitful Visual Refresh — Change Log
 
+## Task 07 — Ready for managing-agent review — 2026-10-24
+
+Implemented the latest wording-revised Contact/Thank-you proposal and owner-approved CAPTCHA configuration. Rendered source `6997cf9a6b75d8ce40a0fc1c2e50b53c393d2e68`; preview pin commit `11d69bfa73e5fc4ab9453525a8780aafc31760dd`; [Deploy Digitful Preview run 40114656154](https://github.com/tarekazz1/digitful-preview/actions/runs/40114656154) succeeded with the existing Node 22 workflow. Review: https://preview.digitful.ca/contact/ and https://preview.digitful.ca/thank-you/.
+
+Local build and local/deployed Chromium checks pass both routes at 320/390/768/1024/1440px in both themes. Eight final 1440/390 full-page images and 320/768/1024 spot states inspected; keyboard focus/multi-selection/preselection, editable diagnostic context, native validation, exact copy/metadata, contrast, overflow and preview safeguards pass. All fields/contracts are preserved except explicitly removing `_captcha=false`; honeypot, endpoint, absolute redirect and preview submission guard remain. No forms or diagnostics submitted. CAPTCHA completion, email delivery and post-submit redirect are unverified; Chromium emulation only.
+
+Original-baseline cumulative totals across source plus preview: **+250/-90/net160/changed340; N180 PASS, M400 PASS, scope PASS**, including the retained 80-line checker. No dependencies or unrelated source changes. Pre-existing work and older local HEAD are preserved; scoped publication used GitHub-native commits without resetting the checkout. Production main remains `c8fac4f78295d2576af0e92b04329f4e938c7b6f`. Full accounting/baselines: TASK-07-IMPLEMENTATION.md. This follow-up changes records only; preview continues to pin the exact verified implementation source above. No managing-agent signoff or owner KEEP awarded.
+
+
 ## Task 07 — implementation authorized; local checks passed — 2026-10-24
 
 Owner approved N180/M400, scoped commit/push and exact-SHA preview publication, including removing `_captcha=false` to restore FormSubmit CAPTCHA. The reviewed composition and exact revised copy/prefill are implemented only in contact.astro, thank-you.astro and toggleButtons.js; BaseLayout/shared code and prior work are preserved. Local build (25 pages) and 20 width/theme states, six keyboard states, form contracts/validation/context and safeguards pass. Total including retained checker/preview pin: +250/-90/net160/changed340, scope/N/M PASS. Preview publication is in progress; see TASK-07-IMPLEMENTATION.md for the immutable baselines and subsequent release receipt. No form/diagnostic submitted; CAPTCHA completion, delivery and post-submit redirect unverified. No managing-agent signoff, owner KEEP or production change.

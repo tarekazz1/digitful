@@ -1,6 +1,6 @@
 # Task 07 — Contact and Thank-you implementation
 
-2026-10-24. Owner approved implementation, N180/M400, scoped commit/push and exact-SHA preview publication. Local verification passed; publication evidence follows below. No managing-agent signoff or owner KEEP is awarded.
+2026-10-24. **Ready for managing-agent review.** Owner approved implementation, N180/M400, scoped commit/push and exact-SHA preview publication. Local and deployed verification passed. No managing-agent signoff or owner KEEP is awarded.
 
 ## Approved result and scope
 
@@ -24,7 +24,7 @@ No standalone shell/controller, dependency, shared-style/component, diagnostic o
 | public/scripts/toggleButtons.js | 5 | 7 | -2 | 12 |
 | docs/visual-refresh/task-07-implementation-check.cjs | 80 | 0 | 80 | 80 |
 | digitful-preview/source-ref.txt | 1 | 1 | 0 | 2 |
-| **Task total including planned preview pin** | **250** | **90** | **160** | **340** |
+| **Final task total including preview pin** | **250** | **90** | **160** | **340** |
 
 **N180 PASS / M400 PASS / authorized scope PASS.** Original-baseline-to-final accounting across both repositories; pre-existing proposal code/changes are excluded and not published. Documentation and binary evidence are excluded. Any revision remains measured against these original baselines.
 
@@ -39,3 +39,11 @@ Local QA uses existing bundled Bootstrap for the shell; deployed QA uses its exi
 Evidence: `C:/Users/tarek.azzi/.codex/visualizations/2026/10/24/01a16ea5-9c48-7ec0-9465-d0ca41fc5d0f/task-07-implementation/` (baseline/preservation receipts, build.log, local/live checks and full-page images). Browsers close after checking; no persistent server is needed.
 
 **Unverified:** CAPTCHA completion, email delivery and post-submit redirect. No real forms submitted or diagnostics run. Chromium viewport emulation only; no physical-device, Safari or Firefox verification. Production release is outside this approval.
+
+## Published source and deployed verification
+
+Rendered source: `6997cf9a6b75d8ce40a0fc1c2e50b53c393d2e68`. Exact preview pin commit: `11d69bfa73e5fc4ab9453525a8780aafc31760dd`. [Deploy Digitful Preview run 40114656154](https://github.com/tarekazz1/digitful-preview/actions/runs/40114656154) completed build and deploy successfully using the existing Node 22 workflow and unchanged safeguard script. Review URLs: https://preview.digitful.ca/contact/ and https://preview.digitful.ca/thank-you/.
+
+Deployed self-contained checker PASS: 20 width/theme/page states, six keyboard width/theme states, contract/labels/validation, four service preselection values, multi-selection/deselection, all diagnostic context/editability/optional-line cases, exact approved copy/metadata, contrast, canonical/robots/guard/GTM and shared route fit. Zero captured browser errors or unexpected requests. All eight final desktop/mobile light/dark images were viewed; 320/768/1024 fit images and 320px focus/selection were spot-checked. See `live/checks.json` and `live/{contact|thank-you}-{width}-{theme}.png` in the evidence folder above. Browsers closed; no server remains.
+
+GitHub comparisons independently confirm only the three application files, retained checker and Task 07 records changed in source; only source-ref.txt changed in preview. Original scoped blobs matched local source exactly before editing. Production main rechecked unchanged at `c8fac4f78295d2576af0e92b04329f4e938c7b6f`. This completion receipt is a documentation-only follow-up; the preview remains pinned to the exact verified application source. Existing local HEAD and every unrelated pre-existing file are preserved, with task-created Chromium log appends removed after verification.
