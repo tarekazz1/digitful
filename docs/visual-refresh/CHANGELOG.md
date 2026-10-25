@@ -1,8 +1,8 @@
 # Digitful Visual Refresh — Change Log
 
-## Command Center logo and privacy link — authorized preview publication — 2026-10-25
+## Command Center logo and privacy link — deployed and verified — 2026-10-25
 
-Owner approved the original Command Center logo, removal of the separate visible title with the subtitle retained, and the link from Digitful's Privacy Policy to the Command Center privacy policy, then explicitly requested commit and preview deployment. Source scope: two pages and the original SVG; policy wording and reporting application unchanged. N60/M90 task-wide accounting including the preview pin: +27/-3/net24/changed30 PASS. Initial build and local responsive/theme checks passed; final live checks pending deployment. See [task record](COMMAND-CENTER-LOGO-UPDATE.md). Production release and broader Task 11 work remain excluded.
+Owner-authorized application source `37e4ec7400a4f658db8a258e225bb9af63607e2f` is deployed by exact-SHA preview pin `add640fa0ffdc9af7c592cc459002b8a0b04ba7f`; [workflow 40214883284](https://github.com/tarekazz1/digitful-preview/actions/runs/40214883284) succeeded. Logo present, separate title removed, subtitle retained, and Digitful Privacy Policy links to the Command Center privacy policy. Existing policy wording/reporting application unchanged. Live Chromium checks pass both pages at 320/390/1440px in both themes, keyboard privacy navigation, original logo hash and preview safeguards; zero overflow/browser errors. N60/M90 task-wide +27/-3/net24/changed30 PASS. Production main remains c8fac4f78295d2576af0e92b04329f4e938c7b6f. See [task record and evidence limits](COMMAND-CENTER-LOGO-UPDATE.md). Broader Task 11 remains unapproved.
 
 
 ## Task 10 — About implementation approved; preview publication in progress — 2026-10-25

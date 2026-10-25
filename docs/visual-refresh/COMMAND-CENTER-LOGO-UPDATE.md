@@ -1,6 +1,10 @@
 # Command Center logo and privacy cross-link — 2026-10-25
 
-Status: **Owner-authorized commit and preview deployment in progress.** The owner explicitly requested “Commit and deploy” after removing the duplicate heading. Production publication remains excluded.
+Status: **Committed, pushed and deployed to preview; live checks passed.** The owner explicitly requested “Commit and deploy” after removing the duplicate heading. Production publication remains excluded.
+
+Pushed application source: `37e4ec7400a4f658db8a258e225bb9af63607e2f`; exact-SHA preview pin commit: `add640fa0ffdc9af7c592cc459002b8a0b04ba7f`; workflow [40214883284](https://github.com/tarekazz1/digitful-preview/actions/runs/40214883284) completed successfully, including the Node 22 build, safeguards and deployment. A follow-up commit preserved the original privacy page's LF line endings; original-baseline-to-final totals remain +27/-3/net24/changed30 across source and preview.
+
+Final deployed Chromium checks pass 12 page/width/theme states (320/390/1440px, both changed pages, both themes), plus keyboard navigation to the Command Center privacy policy. The separate title is absent; exact subtitle, loaded logo/fonts, original logo SHA-256 and zero horizontal overflow pass. Zero browser/page errors or blocked non-GET requests. All preview safeguards pass: one noindex,nofollow,noarchive meta tag, GTM absent, submission guard present and disallow-all robots.txt. Eight fresh deployed screenshots were captured and representative mobile/desktop renders visually inspected. These checks supersede the local checks' blocked-external-resource limitation and earlier screenshots with the removed heading. Chromium emulation only; TLS validation bypassed for the environment, no physical-device/other-browser checks or submissions. Browser closed; no server started. Evidence: live-checks.json and live-*.png in the evidence directory below.
 
 Owner revision: removed the separate visible “Local SEO Command Center” heading; the logo and existing subtitle remain. Metadata and policy wording are unchanged. Revised original-baseline accounting: **26 additions / 2 removals / net +24 / total changed 28**, N60/M90 PASS. The earlier screenshots show the superseded heading; this one-line revision was checked directly in source without repeating the full browser/build matrix.
 
@@ -26,4 +30,4 @@ Pre-edit hashes covered 605 existing files. Outside the two authorized pages and
 
 Publication baseline: remote `visual-refresh` at `24c8086c4335ed4d5a6615ebfa26a898849c171e`; preview at `71e5903e7853461d67427407cd9e07b9d0457d09`, pinning `4f64402f0705f7621beb69f6faacd31306e7956e`. Publish only this task's two pages, original logo and scoped records, preserving unrelated local work. Production main was independently checked at `c8fac4f78295d2576af0e92b04329f4e938c7b6f` and will not be changed.
 
-Evidence: `C:/Users/tarek.azzi/.codex/visualizations/2026/09/17/01a0ae53-e8af-7181-85da-dc4c0ced41e8/command-center-logo-update/` — baseline.json, build.log, checks.json, preservation.json and eight initial screenshots. Deployment and final live verification will be recorded separately; earlier local-only status is superseded by the owner's publication request.
+Evidence: `C:/Users/tarek.azzi/.codex/visualizations/2026/09/17/01a0ae53-e8af-7181-85da-dc4c0ced41e8/command-center-logo-update/` — baseline.json, build.log, checks.json, preservation.json and eight initial screenshots. Final deployment and live evidence above supersede earlier local-only notes.
