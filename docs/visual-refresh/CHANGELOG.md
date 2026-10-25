@@ -1,5 +1,15 @@
 # Digitful Visual Refresh — Change Log
 
+## Task 09 — preview deployed; independent technical signoff — 2026-10-25
+
+The owner authorized commit, push and preview publication. Approved application source `a67195072fd9576e40c4092f47ea8673a81159c9` is deployed by preview pin `2847f8615cd732b692ff8489b4ff296b797081ee`; [workflow 40196956679](https://github.com/tarekazz1/digitful-preview/actions/runs/40196956679) independently confirms successful build and deployment. This supersedes older local-only/publication-pending statuses. Only the approved What We Build page, retained checker and factual Task 09 records were published.
+
+Independent live Chromium verification reused the existing checker with an in-memory live-URL adapter; no checker/application file was changed for this review. Sixteen width/theme states, 20 keyboard targets, four navigation/theme states and five service/Contact destinations pass. Exact approved copy/title/description/canonical, loaded assets, fit, focus, preview noindex/nofollow/noarchive, GTM absence, submission guard and disallow-all robots.txt pass. No browser errors or unexpected requests; minimum sampled text contrast 4.94:1. All four final deployed renders are SHA-256-identical to the approved mockups and were directly inspected. No blocking defect found; managing-agent technical signoff granted.
+
+Original baseline `653fc67c83f72d4bb056de8d80253b5fb1c7acc8` to final source plus preview: **+203/-61/net142/changed264; N180/M320/scope PASS**, including the +1/-1 preview pin. Subsequent completion records change documentation only and require no redeployment. Unrelated local work, including other tasks' pending records, remains preserved and excluded.
+
+Production main remains `c8fac4f78295d2576af0e92b04329f4e938c7b6f`. Owner implementation KEEP remains separate and pending; it is not inferred from publication authorization. Chromium emulation only; no physical-device/Safari/Firefox tests, forms or diagnostics. Evidence: `C:/Users/tarek.azzi/.codex/visualizations/2026/09/17/01a0ae53-e8af-7181-85da-dc4c0ced41e8/task-09-publication-review/` (checks.json, visual-comparison.json and fresh renders).
+
 ## Task 09 — preview publication authorized — 2026-10-25
 
 The owner explicitly authorized scoped commit, push and preview deployment after the local Task 09 implementation. This supersedes the earlier local-only publication boundary; production remains excluded. The approved short copy and visual proposal are implemented in src/pages/what-we-build.astro, with a self-contained retained checker. Existing local build evidence records 25 pages, 16 width/theme states, 20 keyboard targets, four navigation/theme states, five destinations and four renders identical to the approved mockups.
