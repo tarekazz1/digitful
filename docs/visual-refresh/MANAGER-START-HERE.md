@@ -1,5 +1,11 @@
 # START HERE — managing-agent handover
 
+## Task 10 — About implementation approved; preview publication in progress — 2026-10-25
+
+Owner approved the visual proposal, then implementation, N120/M260 and publication. The About page preserves the exact approved team introduction, title and canonical, with the approved metadata description and page-scoped paper/ink/mustard composition. Shared source, dependencies and other pages are unchanged.
+
+Isolated current-source build passes (25 pages); 16 Chromium width/theme states, four keyboard/navigation states and Contact target pass. All four final 1440/390 light/dark renders are byte-identical to the approved mockups. No browser errors; minimum main-text contrast 7.08:1. Preview safeguards pass locally. Counted source plus preview-pin delta: +99/-61/net38/changed160; N120/M260/scope PASS. Publication is authorized but is not implementation KEEP or independent technical signoff. Production remains excluded. See TASK-10-IMPLEMENTATION.md.
+
 ## Task 09 — owner APPROVED / KEEP recorded for publication — 2026-10-25
 
 Owner explicitly accepted the reviewed What We Build preview and subsequently authorized committing/pushing its acceptance records and refreshing preview. Acceptance applies to application source `a67195072fd9576e40c4092f47ea8673a81159c9`, reviewed preview pin `2847f8615cd732b692ff8489b4ff296b797081ee`, successful workflow 40196956679. Existing independent technical signoff and its evidence are preserved. This supersedes earlier owner-KEEP-pending and acceptance-uncommitted statuses.

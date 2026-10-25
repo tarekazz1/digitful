@@ -3,70 +3,35 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 const pageTitle = 'About Digitful';
 const pageDescription =
-  'Learn how Digitful approaches strategy, acquisition, and automation for long-term growth.';
+  'Meet Digitful, a team with backgrounds in agency work, in-house marketing, and technical operations.';
 const pageCanonical = 'https://digitful.ca/about/';
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription} canonicalUrl={pageCanonical}>
-  <main>
-    <section class="service-hero text-center">
-      <div class="container">
-        <span class="eyebrow mb-3">About Digitful</span>
-        <h1 class="mb-3">Built for clarity.</h1>
-        <p class="lead mb-0">
-          We help businesses build a clearer path to growth.
-        </p>
-      </div>
-    </section>
-
-    <section class="about-content py-6">
-      <div class="container">
-        <div class="service-shell service-shell--narrow">
-          <div class="section-intro">
-            <h2 class="mb-3">What we do</h2>
-            <p class="mb-0">
-              We connect message, demand, conversion, and operations so growth is easier to run.
-            </p>
-          </div>
-
-          <div class="story-grid">
-            <div class="story-card">
-              <strong>What we care about</strong>
-              <p class="mb-0">Revenue quality, speed, and usable systems.</p>
-            </div>
-            <div class="story-card">
-              <strong>What we avoid</strong>
-              <p class="mb-0">Vanity metrics, bloat, and busywork.</p>
-            </div>
-            <div class="story-card">
-              <strong>How we show up</strong>
-              <p class="mb-0">Direct, collaborative, and honest.</p>
-            </div>
-          </div>
-
-          <div class="process-grid mt-4">
-            <div class="process-step">
-              <span class="process-step__number">01</span>
-              <strong>Strategy first</strong>
-              <p class="mb-0">We find the real constraint first.</p>
-            </div>
-            <div class="process-step">
-              <span class="process-step__number">02</span>
-              <strong>Systems over stunts</strong>
-              <p class="mb-0">We prefer durable systems to short-lived campaigns.</p>
-            </div>
-            <div class="process-step">
-              <span class="process-step__number">03</span>
-              <strong>Clarity over theater</strong>
-              <p class="mb-0">You should always know what is working and what comes next.</p>
-            </div>
-          </div>
-
-          <div class="mt-4">
-            <a href="/contact/" class="btn btn-primary btn-lg px-4">Talk To Us</a>
-          </div>
+  <main class="about-proposal">
+    <div class="container">
+      <section class="about-intro" aria-labelledby="about-title">
+        <h1 id="about-title">About Digitful.</h1>
+        <div class="about-copy">
+          <p class="about-lead">Digitful is a team with backgrounds in agency work, in-house marketing, and technical operations.</p>
+          <p>We work across social media, SEO, paid ads, and process automation. That mix of experience helps us consider both what customers see and the work a business needs behind the scenes.</p>
+          <a class="about-contact" href="/contact/">Talk to Digitful →</a>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   </main>
 </BaseLayout>
+
+<style>
+.about-proposal { color:var(--site-text); }
+.about-intro { display:grid; grid-template-columns: .9fr 1.2fr; gap:80px; padding:64px 0 60px; }
+.about-intro h1 { font-family:var(--font-display); font-weight:800; font-size:clamp(72px,7vw,100px); letter-spacing:-.025em; line-height:.98; margin:0; }
+.about-copy { border-top:1px solid var(--site-text); padding-top:24px; max-width:640px; }
+.about-copy p { font-size:18px; line-height:1.65; margin:0 0 26px; }
+.about-copy .about-lead { font-size:24px; line-height:1.45; letter-spacing:-.015em; margin-bottom:24px; }
+.about-contact { display:inline-flex; min-height:52px; align-items:center; padding:13px 20px; border:2px solid #191a1b; border-radius:2px; background:#e4c58f; color:#191a1b; font-size:16px; font-weight:700; text-decoration:none; }
+.about-contact:hover { color:#191a1b; background:#f0e7d5; text-decoration:underline; text-underline-offset:4px; }
+.about-proposal .about-contact:focus-visible { outline:3px solid var(--site-text); outline-offset:5px; color:#191a1b; }
+@media(max-width:991.98px) { .about-intro { gap:40px; grid-template-columns:.8fr 1.2fr; padding:44px 0; } .about-intro h1 { font-size:76px; } .about-copy .about-lead { font-size:22px; } }
+@media(max-width:767.98px) { .about-intro { display:block; padding:32px 0 36px; } .about-intro h1 { font-size:clamp(52px,14.5vw,72px); max-width:none; line-height:1; margin-bottom:26px; } .about-copy { padding-top:22px; } .about-copy .about-lead { font-size:22px; margin-bottom:20px; } .about-copy p { font-size:17px; line-height:1.6; margin-bottom:24px; } }
+</style>
