@@ -1,6 +1,6 @@
 # Task 08 — Blog index and article implementation
 
-2026-10-25. Owner approved the colour-revised proposal, four exact wording changes, N450/M600, scoped source publication and the existing exact-SHA preview workflow. Implementation is locally verified; preview publication and deployed verification follow. Implementation technical signoff and owner KEEP remain pending. Production is outside this authorization.
+2026-10-25. **Ready for managing-agent review.** Owner-approved design, four exact wording changes and N450/M600 implemented, committed/pushed and published through the existing preview workflow. Local and deployed verification passed. Implementation technical signoff and owner KEEP are pending; production remains untouched.
 
 ## Implemented scope
 
@@ -26,10 +26,10 @@ The preserved local HEAD remains `d4df671724888071a845d1da03073b4a34403210`. Ori
 | src/assets/_blog-editorial.scss | 287 | 0 | 287 | 287 |
 | docs/visual-refresh/task-08-implementation-check.cjs | 80 | 0 | 80 | 80 |
 | Source subtotal | 375 | 5 | 370 | 380 |
-| Reserved preview/source-ref.txt change | 1 | 1 | 0 | 2 |
+| digitful-preview/source-ref.txt | 1 | 1 | 0 | 2 |
 | Total including preview pin | 376 | 6 | 370 | 382 |
 
-N450/M600 remain within the approved ceilings, including the reserved pin change. Documentation text and binaries are excluded. No baseline reset or additional scope/budget change is used.
+**N450 PASS / M600 PASS / authorized scope PASS.** Actual task-wide original-baseline totals include the preview pin. Documentation text and binaries are excluded. No baseline reset or additional scope/budget change is used.
 
 ## Local verification
 
@@ -42,3 +42,20 @@ Local noindex/nofollow/noarchive, disallow-all robots, GTM removal and form guar
 Evidence root: `C:/Users/tarek.azzi/.codex/visualizations/2026/10/25/01a171a2-5dca-7cc1-91ff-2bfd8c4f1110/task-08-implementation/`. Frozen local/source receipts, `before/baseline.json`, `build.log`, `local/checks.json` and adjacent renders record verification. Checker usage: `TASK08_BASELINE=<before/baseline.json> node docs/visual-refresh/task-08-implementation-check.cjs <local|base URL> <evidence directory> [isolated source root]`.
 
 Chromium emulation only; no physical-device, Safari or Firefox verification. The Browser plugin is absent, so existing bundled Playwright was used without installation. No forms or diagnostics submitted; external article evidence links were not crawled. Task-owned browsers close on completion; local verification uses intercepted static responses and no persistent server.
+
+## Published source and deployed verification
+
+Rendered source: `d479a6b8278c6ca874ced72a664d0753bfaa0997`. Preview commit: `3f56377f735668672833d5de7a1f67f14646e0fb`, pinning that exact source. [Deployment 40172743518](https://github.com/tarekazz1/digitful-preview/actions/runs/40172743518) completed successfully, including Node 22 build, existing safeguards and GitHub Pages publication.
+
+The deployed checker passes the same 20 page states, four keyboard states, ten article contracts and 12 shared-page smoke states. Fonts/images loaded before all eight final captures; full-page sequential sheets and readable top/fit/focus details were inspected. No blocking layout defect observed. Minimum sampled text contrast 4.94:1; filters/announcements/empty state, FAQ, theme accessible names, menu/services and preview safeguards pass. Visible Tab focus was additionally checked on article entries and closing CTAs in both sizes/themes. One earlier deployed attempt timed out navigating the index; an unchanged rerun completed without errors or unexpected requests. This is a network/check-run limitation, not an unresolved application failure.
+
+GitHub comparisons confirm only the approved four application paths, checker and Task 08 records changed in source, and only `source-ref.txt` changed in preview. Totals above are confirmed from those comparisons. Line endings were normalized to the remote baseline before publication; no whole-file churn was published. Production main was rechecked unchanged. Completion records are a documentation-only follow-up; the preview pin stays on the verified application source. Existing proposal/mockup versions and every unrelated local file remain preserved. Task-owned browsers are closed; no server persists.
+
+Final deployed renders:
+
+| Page | 1440 light | 1440 dark | 390 light | 390 dark |
+| --- | --- | --- | --- | --- |
+| Index | [View](<C:/Users/tarek.azzi/.codex/visualizations/2026/10/25/01a171a2-5dca-7cc1-91ff-2bfd8c4f1110/task-08-implementation/live/index-1440-light.png>) | [View](<C:/Users/tarek.azzi/.codex/visualizations/2026/10/25/01a171a2-5dca-7cc1-91ff-2bfd8c4f1110/task-08-implementation/live/index-1440-dark.png>) | [View](<C:/Users/tarek.azzi/.codex/visualizations/2026/10/25/01a171a2-5dca-7cc1-91ff-2bfd8c4f1110/task-08-implementation/live/index-390-light.png>) | [View](<C:/Users/tarek.azzi/.codex/visualizations/2026/10/25/01a171a2-5dca-7cc1-91ff-2bfd8c4f1110/task-08-implementation/live/index-390-dark.png>) |
+| Article | [View](<C:/Users/tarek.azzi/.codex/visualizations/2026/10/25/01a171a2-5dca-7cc1-91ff-2bfd8c4f1110/task-08-implementation/live/article-1440-light.png>) | [View](<C:/Users/tarek.azzi/.codex/visualizations/2026/10/25/01a171a2-5dca-7cc1-91ff-2bfd8c4f1110/task-08-implementation/live/article-1440-dark.png>) | [View](<C:/Users/tarek.azzi/.codex/visualizations/2026/10/25/01a171a2-5dca-7cc1-91ff-2bfd8c4f1110/task-08-implementation/live/article-390-light.png>) | [View](<C:/Users/tarek.azzi/.codex/visualizations/2026/10/25/01a171a2-5dca-7cc1-91ff-2bfd8c4f1110/task-08-implementation/live/article-390-dark.png>) |
+
+Full live results: `C:/Users/tarek.azzi/.codex/visualizations/2026/10/25/01a171a2-5dca-7cc1-91ff-2bfd8c4f1110/task-08-implementation/live/checks.json`; visual inspection receipt: `C:/Users/tarek.azzi/.codex/visualizations/2026/10/25/01a171a2-5dca-7cc1-91ff-2bfd8c4f1110/task-08-implementation/visual-review.json`; preservation and source/preview comparison receipts are adjacent. Verification is Chromium viewport emulation, not physical-device or cross-browser assurance. No form delivery or external diagnostic/evidence-source verification was attempted. Stop at Ready for managing-agent review; no implementation signoff or owner KEEP is awarded.

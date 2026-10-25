@@ -1,12 +1,14 @@
 # Digitful Visual Refresh — Handoff
 
-## Task 08 — approved implementation; local verification complete — 2026-10-25
+## Task 08 — Ready for managing-agent review — 2026-10-25
 
-Owner approved the colour-revised blog proposal, its four exact wording changes, N450/M600, scoped publication and the existing exact-SHA preview workflow. The open index/teal masthead/category fills and mustard-header/704px-reading/ruled-FAQ/coral-CTA article are implemented using existing components, fonts and filtering. Only the two blog templates, scoped stylesheet/import, retained checker and Task 08 records are included.
+Implemented the owner-approved colour-revised blog proposal, four wording changes and N450/M600. Rendered source `d479a6b8278c6ca874ced72a664d0753bfaa0997`; exact preview pin commit `3f56377f735668672833d5de7a1f67f14646e0fb`; [Deploy Digitful Preview run 40172743518](https://github.com/tarekazz1/digitful-preview/actions/runs/40172743518) succeeded using the existing Node 22 workflow. Review https://preview.digitful.ca/blog/ and https://preview.digitful.ca/blog/ai-is-making-marketing-faster/.
 
-An isolated build of remote baseline `a15da3e355c2b036e915ea0aed27fc36065dea89` plus the patch passed (25 pages; existing Sass warnings). Local Chromium checks pass 20 width/theme/page states, four keyboard states, all ten body/metadata/FAQ/CTA contracts and 12 accepted-page smoke states; minimum sampled contrast 4.94:1. Temporary draft fixture exclusion passed. Eight local full-page renders inspected. No forms or diagnostics submitted; Chromium emulation only.
+Local build and deployed Chromium verification pass 20 page/width/theme states at 320/390/768/1024/1440, four keyboard width/theme states, all ten article contracts and 12 accepted-page smoke states. All eight final deployed 1440/390 light/dark full-page renders were inspected, with fit/focus detail checks. Minimum tested text contrast 4.94:1. Existing filters/empty state, FAQ, navigation/theme, routes/order, article bodies/individual metadata/schemas/author information and article-specific CTAs pass. Draft exclusion passed with a temporary isolated-build fixture. No page/console errors or unexpected requests in the completed runs.
 
-Source subtotal +375/-5/net370/changed380; reserving the existing preview pin gives +376/-6/net370/changed382, within approved N450/M600. Preview publication/deployed verification follow. The lagging checkout and unrelated local work are preserved and excluded. Production remains outside scope. See TASK-08-IMPLEMENTATION.md for original baselines, validation and limits. Proposal approval is recorded; implementation technical signoff and owner KEEP are pending.
+Original-baseline task total across source plus preview: **+376/-6/net370/changed382; N450 PASS / M600 PASS / scope PASS**, including the retained 80-line checker and +1/-1 preview pin. No dependency, shared-controller/component, content or unrelated source change. Existing preview noindex/nofollow/noarchive, robots disallow-all, GTM removal and form guard pass. No forms or diagnostics submitted.
+
+Production main remains `c8fac4f78295d2576af0e92b04329f4e938c7b6f`. The lagging local HEAD and pre-existing changes are preserved and excluded from publication. This completion update changes task records only; preview remains pinned to the verified implementation source. Detailed baselines/accounting, eight clickable renders, evidence and limits: TASK-08-IMPLEMENTATION.md. Chromium emulation only; no physical-device/Safari/Firefox or external article-source checks. Proposal approval is recorded; implementation technical signoff and owner KEEP remain pending.
 
 
 ## Task 07 — technical signoff and owner APPROVED / KEEP — 2026-10-24
