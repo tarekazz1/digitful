@@ -1,5 +1,11 @@
 # Implementation queue and review prompts
 
+## Task 08 — owner APPROVED / KEEP — 2026-10-25
+
+Owner explicitly accepted the implemented colour-revised blog index/article and authorized commit/push ("Keep, commit/push"). This records owner APPROVED / KEEP for application source `d479a6b8278c6ca874ced72a664d0753bfaa0997`, deployed by preview `3f56377f735668672833d5de7a1f67f14646e0fb`; [deployment 40172743518](https://github.com/tarekazz1/digitful-preview/actions/runs/40172743518) succeeded. This acceptance supersedes earlier owner-KEEP-pending entries; independent implementation technical signoff remains pending.
+
+The reviewed build, 20 deployed width/theme/page states, ten article contracts, keyboard/contrast/filter/FAQ checks, 12 accepted-page smoke states and eight inspected final renders remain recorded in TASK-08-IMPLEMENTATION.md. Original-baseline totals remain **+376/-6/net370/changed382; N450 PASS / M600 PASS / scope PASS**. This follow-up changes task records only. Preview remains pinned to the verified application source; no redeployment or production change is included. Unrelated local work and the lagging checkout remain preserved. Chromium emulation limitations still apply.
+
 ## Task 08 — Ready for managing-agent review — 2026-10-25
 
 Implemented the owner-approved colour-revised blog proposal, four wording changes and N450/M600. Rendered source `d479a6b8278c6ca874ced72a664d0753bfaa0997`; exact preview pin commit `3f56377f735668672833d5de7a1f67f14646e0fb`; [Deploy Digitful Preview run 40172743518](https://github.com/tarekazz1/digitful-preview/actions/runs/40172743518) succeeded using the existing Node 22 workflow. Review https://preview.digitful.ca/blog/ and https://preview.digitful.ca/blog/ai-is-making-marketing-faster/.
