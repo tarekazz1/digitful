@@ -5,7 +5,7 @@ const pageTitle = 'Local SEO Command Center - Digitful';
 const pageDescription = 'Digitful’s locally operated reporting application for Google Search Console, Google Analytics 4 and Google Ads.';
 ---
 <BaseLayout title={pageTitle} description={pageDescription} canonicalUrl="https://digitful.ca/seo-command-center/">
-  <main>
+  <main class="utility-page">
     <section class="service-hero text-center">
       <div class="container">
         <div class="command-center-logo mx-auto mb-4">
@@ -45,4 +45,21 @@ const pageDescription = 'Digitful’s locally operated reporting application for
     width: 100%;
     height: auto;
   }
+
+  main.utility-page {color:var(--site-text);padding:48px 24px 64px;}
+  main.utility-page .container {width:100%;max-width:48rem;padding:0;margin-inline:auto;}
+  main.utility-page .service-hero {padding:0 0 28px;text-align:left!important;background:none;border:0;}
+  main.utility-page .service-hero h1 {font-size:clamp(2.75rem,5vw,3.75rem);line-height:1.02;margin:0 0 16px!important;}
+  main.utility-page .service-hero .eyebrow {color:var(--site-text-muted);margin-bottom:12px!important;}
+  main.utility-page .service-hero .lead {max-width:none;margin:0!important;font-size:1.125rem;line-height:1.6;}
+  main.utility-page section+section {max-width:48rem;margin-inline:auto;padding:28px 0 0!important;border-top:1px solid var(--site-border-subtle);}
+  main.utility-page .legal-shell {max-width:none!important;padding:0;border:0;border-radius:0;background:transparent!important;box-shadow:none;}
+  main.utility-page .legal-shell h2 {font-size:1.625rem;line-height:1.2;margin:28px 0 12px;}
+  main.utility-page .legal-shell h2:first-child {margin-top:0;}
+  main.utility-page .legal-shell p,main.utility-page .legal-shell li {font-size:1rem;line-height:1.7;}
+  main.utility-page .legal-shell a {color:var(--site-text)!important;text-decoration:underline!important;text-underline-offset:.2em;text-decoration-thickness:1px;}
+  main.utility-page .legal-shell a:hover {text-decoration-thickness:2px;}
+  main.utility-page .legal-shell a:focus-visible {outline:3px solid currentColor;outline-offset:3px;}
+  main.utility-page .command-center-logo {margin-left:0!important;margin-right:0!important;}
+  @media(max-width:575px){main.utility-page {padding:32px 24px 48px;}main.utility-page .service-hero {padding-bottom:24px;}main.utility-page section+section {padding-top:24px!important;}}
 </style>

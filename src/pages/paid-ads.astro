@@ -101,7 +101,9 @@ const pageCanonical = 'https://digitful.ca/paid-ads/';
   .paid-work__list li { counter-increment: paid-step; display: flex; align-items: baseline; gap: 18px; border-top: 1px solid var(--site-border-subtle); padding-top: 20px; }
   .paid-work__list li::before { content: counter(paid-step) "."; font-size: 18px; font-weight: 700; flex: 0 0 20px; color: var(--site-text); }
   .paid-work__list li > div { min-width: 0; }
-  .paid-close { padding-block: 42px 54px; background: var(--site-surface); border-top: 2px solid var(--site-border); }
+  .paid-close { padding-block: 42px 54px; background: var(--site-mustard); border-top: 2px solid var(--site-border); --site-text:var(--brand-ink);--site-text-muted:var(--brand-ink);--site-border:var(--brand-ink);color:var(--brand-ink);}
+  .paid-close .btn:focus-visible {outline:3px solid var(--brand-ink);outline-offset:3px;}
+  .paid-close .btn:active {color:var(--brand-ink);background:var(--site-accent-bright);border-color:var(--brand-ink);}
   .paid-close h2 { max-width: 720px; }
   .paid-close p:not(.paid-label) { max-width: 680px; margin-block: 22px; }
   @media (max-width: 991.98px) {

@@ -1,5 +1,10 @@
 # Implementation queue and review prompts
 
+## Task 11 — owner APPROVED / KEEP; preview publication authorized — 2026-10-25
+
+Owner explicitly requested “Keep/commit/deploy” for the complete Task 11 implementation, including the revised 404/circles and Paid Ads/Automation mustard closing sections. Consolidated technical signoff is preserved. Task-wide N240/M360: +242/-13/net229/changed255 before pin; +243/-14/net229/changed257 including the authorized pin. Scoped commit/push and exact-SHA preview deployment are in progress; production release is excluded. Reuse reviewed evidence and verify only publication-specific live behavior, including actual missing-route 404 status, specimen exclusion, changed sections and preview safeguards. Earlier owner/publication-pending entries are superseded. See TASK-11-IMPLEMENTATION.md.
+
+
 ## Task 10 — About implementation approved; preview publication in progress — 2026-10-25
 
 Owner approved the visual proposal, then implementation, N120/M260 and publication. The About page preserves the exact approved team introduction, title and canonical, with the approved metadata description and page-scoped paper/ink/mustard composition. Shared source, dependencies and other pages are unchanged.

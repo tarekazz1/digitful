@@ -32,7 +32,7 @@ const pageCanonical = 'https://digitful.ca/automation/';
   <figcaption>Before</figcaption>
   <svg viewBox="0 0 400 340" role="img" aria-label="Before: five tools with broken connections; a person in the middle routes the work between them.">
   <g class="routes">
-  <path d="M80 70 160 133M245 83 240 126M320 70 240 133M78 190 162 163M322 190 238 163" stroke-dasharray="9 12"/>
+  <path d="M80 70 160 133M200 83V91M200 118V126M320 70 240 133M78 190 162 163M322 190 238 163" stroke-dasharray="9 12"/>
   </g>
   <g class="tool" transform="translate(55 55)"><g class="symbol"><rect x="-16" y="-20" width="32" height="40"/><path d="M-8-10H8M-8 0H8M-8 10H2"/></g><text y="55">Form</text></g>
   <g class="tool" transform="translate(200 55)"><g class="symbol"><ellipse cy="-14" rx="19" ry="7"/><path d="M-19-14V14C-19 24 19 24 19 14V-14M-19 0C-19 10 19 10 19 0"/></g><text y="55">CRM</text></g>
@@ -209,7 +209,9 @@ const pageCanonical = 'https://digitful.ca/automation/';
   .auto-work li {display:grid;grid-template-columns:32px 1fr;gap:24px;padding:24px 0;border-top:1px solid var(--site-border-subtle);align-items:baseline;}
   .auto-work li>div {max-width:530px;}
   .step-number {font-weight:700;font-size:14px;}
-  .auto-close {background:var(--site-surface);padding:48px 0 56px;border-top:2px solid var(--site-border);}
+  .auto-close {background:var(--site-mustard);padding:48px 0 56px;border-top:2px solid var(--site-border);--site-text:var(--brand-ink);--site-text-muted:var(--brand-ink);--site-border:var(--brand-ink);color:var(--brand-ink);}
+  .auto-close .btn:focus-visible {outline:3px solid var(--brand-ink);outline-offset:3px;}
+  .auto-close .btn:active {color:var(--brand-ink);background:var(--site-accent-bright);border-color:var(--brand-ink);}
   .auto-close h2 {max-width:740px;}
   .auto-close p:not(.auto-label) {margin:24px 0;}
 

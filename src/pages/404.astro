@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Page not found - Digitful" description="Page not found." canonicalUrl="https://digitful.ca/404.html">
+  <main class="not-found container">
+    <div class="not-found__copy">
+      <p class="eyebrow">404</p>
+      <h1>Nothing on this frequency.</h1>
+      <p>We couldn’t find a page at this address.</p>
+      <a href="/">Back to Digitful →</a>
+    </div>
+    <div class="not-found__circles" aria-hidden="true">
+      <span class="circle coral"></span>
+      <span class="circle mustard"></span>
+      <span class="circle teal"></span>
+    </div>
+  </main>
+</BaseLayout>
+
+<style>
+  .not-found {position:relative;isolation:isolate;min-height:clamp(34rem,60vh,42rem);padding-block:clamp(3rem,7vw,6rem);color:var(--site-text);}
+  .not-found__copy {max-width:34rem;}
+  .not-found h1 {font-size:clamp(2.75rem,5vw,3.75rem);margin:1rem 0 1.5rem;}
+  .not-found__copy > p:not(.eyebrow) {margin-bottom:2rem;}
+  .not-found a {color:inherit;text-decoration:underline;text-underline-offset:.2em;}
+  .not-found a:focus-visible {outline:3px solid currentColor;outline-offset:3px;}
+  .not-found__circles {position:absolute;inset:0;z-index:-1;pointer-events:none;}
+  .circle {position:absolute;display:block;border-radius:50%;aspect-ratio:1;}
+  .coral {width:clamp(7rem,14vw,12rem);right:8%;top:15%;background:var(--site-accent);}
+  .mustard {width:clamp(4rem,9vw,7rem);right:24%;bottom:14%;background:var(--site-mustard);}
+  .teal {width:clamp(2.5rem,5vw,4rem);left:42%;bottom:25%;background:var(--site-teal);}
+  @media(max-width:767px){.not-found {min-height:40rem;}.coral {top:auto;bottom:5rem;right:9%;}.mustard {right:58%;bottom:2rem;}.teal {left:20%;bottom:11rem;}}
+</style>
