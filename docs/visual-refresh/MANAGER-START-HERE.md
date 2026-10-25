@@ -1,5 +1,13 @@
 # START HERE — managing-agent handover
 
+## Task 09 — preview publication authorized — 2026-10-25
+
+The owner explicitly authorized scoped commit, push and preview deployment after the local Task 09 implementation. This supersedes the earlier local-only publication boundary; production remains excluded. The approved short copy and visual proposal are implemented in src/pages/what-we-build.astro, with a self-contained retained checker. Existing local build evidence records 25 pages, 16 width/theme states, 20 keyboard targets, four navigation/theme states, five destinations and four renders identical to the approved mockups.
+
+Publication uses original remote baseline `653fc67c83f72d4bb056de8d80253b5fb1c7acc8` and the exact reviewed application/checker files. Only this page, checker and factual Task 09 records are included; unrelated local changes and other tasks' pending records are excluded. Source +202/-60/net142/changed262; including the planned preview pin +203/-61/net142/changed264, within approved N180/M320. GitHub diff verification, existing preview CI and deployed checks will confirm the published result. No new runtime JavaScript, shared-style/controller, dependency or asset changes.
+
+Implementation technical signoff and owner KEEP are not self-awarded by this publication note. Deployed verification and remaining limits will be recorded after the existing preview workflow completes. No production release, form submission or external diagnostic is authorized.
+
 ## Task 08 — owner APPROVED / KEEP — 2026-10-25
 
 Owner explicitly accepted the implemented colour-revised blog index/article and authorized commit/push ("Keep, commit/push"). This records owner APPROVED / KEEP for application source `d479a6b8278c6ca874ced72a664d0753bfaa0997`, deployed by preview `3f56377f735668672833d5de7a1f67f14646e0fb`; [deployment 40172743518](https://github.com/tarekazz1/digitful-preview/actions/runs/40172743518) succeeded. This acceptance supersedes earlier owner-KEEP-pending entries; independent implementation technical signoff remains pending.

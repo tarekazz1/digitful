@@ -1,75 +1,140 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const pageTitle = 'What We Build - Digitful';
-const pageDescription = 'Digitful builds growth systems that connect strategy, acquisition, and automation.';
+const pageTitle = 'What We Build | Digitful';
+const pageDescription = 'See what Digitful creates and improves across social media, SEO, Google and Meta ads, and process automation.';
 const pageCanonical = 'https://digitful.ca/what-we-build/';
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription} canonicalUrl={pageCanonical}>
-  <main>
-    <section class="service-hero text-center">
+  <main class="wwb">
+    <section class="wwb-hero">
       <div class="container">
-        <span class="eyebrow mb-3">What we build</span>
-        <h1 class="mb-3">Systems built to work.</h1>
-        <p class="lead mb-0">
-          We build the structure behind the marketing so performance is easier to manage.
-        </p>
+        <h1>What we build.</h1>
+        <p>Content, campaigns, search improvements, and connected tools for your business.</p>
       </div>
     </section>
-
-    <section class="service-info py-6">
+    <section class="wwb-work" aria-label="Services">
       <div class="container">
-        <div class="service-shell">
-          <div class="section-intro">
-            <h2 class="mb-3">We build systems, not disconnected campaigns.</h2>
-            <p class="mb-0">
-              The mix changes by business. The principle does not.
-            </p>
-          </div>
-
-          <div class="service-grid">
-            <div class="service-item p-4">
-              <h3><i class="bi bi-chat-square-text" aria-hidden="true"></i> Messaging systems</h3>
-              <p class="mb-0">Offers and messaging that make the business easier to understand.</p>
-            </div>
-            <div class="service-item p-4">
-              <h3><i class="bi bi-bullseye" aria-hidden="true"></i> Acquisition systems</h3>
-              <p class="mb-0">Channels organized around qualified demand.</p>
-            </div>
-            <div class="service-item p-4">
-              <h3><i class="bi bi-funnel" aria-hidden="true"></i> Conversion systems</h3>
-              <p class="mb-0">Clearer buyer journeys and stronger handoff.</p>
-            </div>
-            <div class="service-item p-4">
-              <h3><i class="bi bi-diagram-3" aria-hidden="true"></i> Automation systems</h3>
-              <p class="mb-0">Workflow logic that reduces lag and protects follow-up.</p>
-            </div>
-          </div>
-
-          <div class="process-grid mt-4">
-            <div class="process-step">
-              <span class="process-step__number">01</span>
-              <strong>Audit the current chain</strong>
-              <p class="mb-0">Find the bottleneck.</p>
-            </div>
-            <div class="process-step">
-              <span class="process-step__number">02</span>
-              <strong>Design the operating model</strong>
-              <p class="mb-0">Clarify the handoffs and priorities.</p>
-            </div>
-            <div class="process-step">
-              <span class="process-step__number">03</span>
-              <strong>Build and refine</strong>
-              <p class="mb-0">Build the pages, workflows, and automations.</p>
-            </div>
-          </div>
-
-          <div class="mt-4">
-            <a href="/contact/" class="btn btn-primary btn-lg px-4">Discuss Your System</a>
-          </div>
-        </div>
+        <article class="wwb-row">
+          <h2>Social Media</h2>
+          <p>We shape your message into repeatable content themes, formats, and a publishing rhythm.</p>
+          <a href="/social-media/">Explore Social Media <span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="wwb-row">
+          <h2>SEO</h2>
+          <p>We create search-focused pages and improve your site and Google Business Profile.</p>
+          <a href="/seo/">Explore SEO <span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="wwb-row">
+          <h2>Paid Ads</h2>
+          <p>We build and manage Google and Meta campaigns, with ads and landing pages built around the same offer.</p>
+          <a href="/paid-ads/">Explore Paid Ads <span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="wwb-row">
+          <h2>Process Automation</h2>
+          <p>We connect your existing tools to handle lead replies, booking reminders, and routine data entry.</p>
+          <a href="/automation/">Explore Process Automation <span aria-hidden="true">↗</span></a>
+        </article>
+      </div>
+    </section>
+    <section class="wwb-close" aria-label="Contact Digitful">
+      <div class="container wwb-ending">
+        <p>Tell us what you’d like to build or improve.</p>
+        <a class="wwb-button" href="/contact/">Talk to Digitful <span aria-hidden="true">↗</span></a>
       </div>
     </section>
   </main>
 </BaseLayout>
+
+<style>
+  .wwb { color: var(--site-text); }
+  .wwb h1, .wwb h2 {
+    letter-spacing: -.025em;
+    margin: 0;
+  }
+  .wwb p { font-size: 18px; line-height: 1.6; margin: 0; }
+  .wwb-hero { padding: 50px 0 40px; }
+  .wwb h1 { font-size: clamp(64px, 6.7vw, 96px); line-height: 1; }
+  .wwb-hero p { margin-top: 22px; max-width: 580px; }
+  .wwb-work { padding: 0 0 40px; }
+  .wwb-row {
+    display: grid;
+    grid-template-columns: 1fr 1.65fr 1fr;
+    gap: 36px;
+    align-items: center;
+    padding: 26px 0;
+    border-top: 1px solid var(--site-border);
+  }
+  .wwb-row:last-child { border-bottom: 1px solid var(--site-border); }
+  .wwb h2 { font-size: 36px; line-height: 1.1; }
+  .wwb-row a {
+    justify-self: end;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    min-height: 44px;
+    color: var(--site-text);
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+  .wwb-row a:hover { color: var(--site-text); text-decoration-thickness: 2px; }
+  .wwb .wwb-row a:focus, .wwb .wwb-row a:focus-visible {
+    color: var(--site-text);
+    outline: 3px solid var(--site-text);
+    outline-offset: 5px;
+  }
+  .wwb-close {
+    padding: 28px 0;
+    background: var(--site-teal);
+    color: #191a1b;
+    border-block: 2px solid #191a1b;
+  }
+  .wwb-ending { display: flex; justify-content: space-between; align-items: center; gap: 28px; }
+  .wwb .wwb-ending p { color: #191a1b; font-size: 22px; }
+  .wwb-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+    padding: 13px 20px;
+    color: #191a1b;
+    background: var(--site-accent);
+    border: 2px solid #191a1b;
+    border-radius: 2px;
+    font-size: 16px;
+    line-height: 1.35;
+    font-weight: 700;
+    text-decoration: none;
+    min-height: 50px;
+  }
+  .wwb-button:hover { background: var(--site-mustard); color: #191a1b; }
+  .wwb .wwb-button:focus, .wwb .wwb-button:focus-visible {
+    color: #191a1b;
+    outline: 3px solid #191a1b;
+    outline-offset: 5px;
+  }
+  @media (max-width: 1199.98px) {
+    .wwb-row { grid-template-columns: 1fr 1.5fr 1fr; gap: 24px; }
+    .wwb h2 { font-size: 32px; }
+  }
+  @media (max-width: 991.98px) {
+    .wwb-row { grid-template-columns: 1fr 1.6fr; gap: 10px 28px; }
+    .wwb-row h2 { grid-row: span 2; }
+    .wwb-row a { justify-self: start; }
+  }
+  @media (max-width: 767.98px) {
+    .wwb-hero { padding: 32px 0 28px; }
+    .wwb h1 { font-size: clamp(52px, 14.5vw, 72px); }
+    .wwb-hero p { margin-top: 18px; }
+    .wwb-work { padding-bottom: 28px; }
+    .wwb-row { grid-template-columns: 1fr; gap: 10px; padding: 22px 0; }
+    .wwb-row h2 { grid-row: auto; }
+    .wwb-ending { flex-direction: column; align-items: stretch; gap: 18px; }
+    .wwb-close { padding: 26px 0; }
+    .wwb .wwb-ending p { font-size: 20px; }
+    .wwb-button { width: 100%; }
+  }
+</style>
