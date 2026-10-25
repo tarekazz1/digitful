@@ -1,6 +1,6 @@
 # Task 11 — Utility pages, route cleanup and Automation connector
 
-Current status (2026-10-25): proposal implemented with the subsequently approved 404 and closing-colour amendments; consolidated technical signoff and owner APPROVED / KEEP recorded. Owner explicitly authorized commit/push and preview deployment. See TASK-11-IMPLEMENTATION.md for current results; the original proposal-stage approval limits below are historical. Production release remains excluded.
+Current status (2026-10-25): Task 11 is closed with owner APPROVED / KEEP and consolidated technical signoff, including the approved 404 and closing-colour amendments. Application source 8ab616ea510f730af41a354d945c9ca4f9f97ea0 is deployed by preview pin 0d717f9115f063e02c7b6851232bd5aeca93d1fe; workflow 40223384147 and focused live publication checks passed. See TASK-11-IMPLEMENTATION.md for results and limits. Original proposal-stage approval restrictions below are historical. Production remains unchanged.
 
 ## Implementation approval and result — 2026-10-25
 
