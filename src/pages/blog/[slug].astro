@@ -18,7 +18,7 @@ const canonicalUrl = `https://digitful.ca/blog/${slug}/`;
 const title = post.data.seoTitle ?? `${post.data.title} | Digitful`;
 const publishedTime = post.data.publishDate.toISOString();
 const modifiedTime = (post.data.updatedDate ?? post.data.publishDate).toISOString();
-const ctaHeading = post.data.cta.heading ?? 'Before you add more tools, find the real bottleneck.';
+const ctaHeading = post.data.cta.heading ?? 'Not sure what to fix first?';
 const getCategoryChipClass = (category: string) => {
   const normalizedCategory = category.toLowerCase();
 

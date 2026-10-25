@@ -29,18 +29,18 @@ const getCategoryFilter = (category: string) => {
 
 const pageTitle = 'Blog - Digitful';
 const pageDescription =
-  'Digitful articles on AI-era marketing strategy, qualified demand, SEO, paid acquisition, social trust, and automation systems.';
+  'Articles on marketing strategy, AI, search, paid ads, social media, and automation.';
 const pageCanonical = 'https://digitful.ca/blog/';
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription} canonicalUrl={pageCanonical}>
-  <main>
+  <main class="blog-index-page">
     <section class="blog-hero text-center">
       <div class="container">
         <span class="eyebrow mb-3">Digitful Blog</span>
-        <h1 class="mb-3">Sharper thinking for growth systems.</h1>
+        <h1 class="mb-3">Make better marketing decisions.</h1>
         <p class="lead mb-0">
-          Strategy, acquisition, AI, and automation notes for teams that want clearer revenue decisions.
+          Articles on search, ads, content, and automation—and how they work together.
         </p>
         <div class="blog-filters" role="group" aria-label="Filter articles by service">
           <button class="blog-filter category-chip category-chip--growth is-active" type="button" data-blog-filter="all" aria-pressed="true">

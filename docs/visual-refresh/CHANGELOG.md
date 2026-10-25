@@ -1,5 +1,14 @@
 # Digitful Visual Refresh — Change Log
 
+## Task 08 — approved implementation; local verification complete — 2026-10-25
+
+Owner approved the colour-revised blog proposal, its four exact wording changes, N450/M600, scoped publication and the existing exact-SHA preview workflow. The open index/teal masthead/category fills and mustard-header/704px-reading/ruled-FAQ/coral-CTA article are implemented using existing components, fonts and filtering. Only the two blog templates, scoped stylesheet/import, retained checker and Task 08 records are included.
+
+An isolated build of remote baseline `a15da3e355c2b036e915ea0aed27fc36065dea89` plus the patch passed (25 pages; existing Sass warnings). Local Chromium checks pass 20 width/theme/page states, four keyboard states, all ten body/metadata/FAQ/CTA contracts and 12 accepted-page smoke states; minimum sampled contrast 4.94:1. Temporary draft fixture exclusion passed. Eight local full-page renders inspected. No forms or diagnostics submitted; Chromium emulation only.
+
+Source subtotal +375/-5/net370/changed380; reserving the existing preview pin gives +376/-6/net370/changed382, within approved N450/M600. Preview publication/deployed verification follow. The lagging checkout and unrelated local work are preserved and excluded. Production remains outside scope. See TASK-08-IMPLEMENTATION.md for original baselines, validation and limits. Proposal approval is recorded; implementation technical signoff and owner KEEP are pending.
+
+
 ## Task 07 — technical signoff and owner APPROVED / KEEP — 2026-10-24
 
 Owner explicitly accepted the reviewed Contact and Thank-you implementation and authorized committing its acceptance records and refreshing preview. Accepted application source: `6997cf9a6b75d8ce40a0fc1c2e50b53c393d2e68`; reviewed preview pin `11d69bfa73e5fc4ab9453525a8780aafc31760dd`, successful [run 40114656154](https://github.com/tarekazz1/digitful-preview/actions/runs/40114656154). This acceptance preserves independent technical signoff and supersedes earlier Task 07 proposal/review/KEEP-pending statuses.
