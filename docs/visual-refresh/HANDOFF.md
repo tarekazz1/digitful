@@ -1,5 +1,10 @@
 # Digitful Visual Refresh — Handoff
 
+## Command Center logo and privacy link — authorized preview publication — 2026-10-25
+
+Owner approved the original Command Center logo, removal of the separate visible title with the subtitle retained, and the link from Digitful's Privacy Policy to the Command Center privacy policy, then explicitly requested commit and preview deployment. Source scope: two pages and the original SVG; policy wording and reporting application unchanged. N60/M90 task-wide accounting including the preview pin: +27/-3/net24/changed30 PASS. Initial build and local responsive/theme checks passed; final live checks pending deployment. See [task record](COMMAND-CENTER-LOGO-UPDATE.md). Production release and broader Task 11 work remain excluded.
+
+
 ## Task 10 — About implementation approved; preview publication in progress — 2026-10-25
 
 Owner approved the visual proposal, then implementation, N120/M260 and publication. The About page preserves the exact approved team introduction, title and canonical, with the approved metadata description and page-scoped paper/ink/mustard composition. Shared source, dependencies and other pages are unchanged.

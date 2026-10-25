@@ -8,8 +8,9 @@ const pageDescription = 'Digitful’s locally operated reporting application for
   <main>
     <section class="service-hero text-center">
       <div class="container">
-        <span class="eyebrow mb-3">Digitful</span>
-        <h1 class="mb-3">Local SEO Command Center</h1>
+        <div class="command-center-logo mx-auto mb-4">
+          <img src="/assets/brand/seo-command-center.svg" width="2048" height="704" alt="Digitful SEO Command Center" />
+        </div>
         <p class="lead mb-0">Search, website and advertising performance reporting.</p>
       </div>
     </section>
@@ -30,3 +31,18 @@ const pageDescription = 'Digitful’s locally operated reporting application for
     </section>
   </main>
 </BaseLayout>
+
+<style>
+  .command-center-logo {
+    max-width: 26rem;
+    padding: 1.25rem;
+    background: #172224;
+    border-radius: 0.25rem;
+  }
+
+  .command-center-logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+</style>
