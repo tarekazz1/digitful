@@ -1,5 +1,11 @@
 # START HERE — managing-agent handover
 
+## Task 09 — owner APPROVED / KEEP recorded for publication — 2026-10-25
+
+Owner explicitly accepted the reviewed What We Build preview and subsequently authorized committing/pushing its acceptance records and refreshing preview. Acceptance applies to application source `a67195072fd9576e40c4092f47ea8673a81159c9`, reviewed preview pin `2847f8615cd732b692ff8489b4ff296b797081ee`, successful workflow 40196956679. Existing independent technical signoff and its evidence are preserved. This supersedes earlier owner-KEEP-pending and acceptance-uncommitted statuses.
+
+Only five Task 09 acceptance records change in source; the preview refresh uses identical accepted application content. Original-baseline task totals remain +203/-61/net142/changed264, N180/M320/scope PASS. Unrelated local contents and other tasks' pending records are excluded. Existing Chromium-only verification limits remain; no forms or diagnostics are submitted. Production main remains excluded and unchanged. Task 10 About remains the next proposed page, without implementation authorization.
+
 ## Task 09 — preview deployed; independent technical signoff — 2026-10-25
 
 The owner authorized commit, push and preview publication. Approved application source `a67195072fd9576e40c4092f47ea8673a81159c9` is deployed by preview pin `2847f8615cd732b692ff8489b4ff296b797081ee`; [workflow 40196956679](https://github.com/tarekazz1/digitful-preview/actions/runs/40196956679) independently confirms successful build and deployment. This supersedes older local-only/publication-pending statuses. Only the approved What We Build page, retained checker and factual Task 09 records were published.
