@@ -1,5 +1,26 @@
 # Digitful Visual Refresh — Handoff
 
+## New Digitful site is live; old site backed up — 2026-10-26
+
+Owner explicitly approved saving the old site and replacing digitful.ca with the accepted redesign (“go ahead”). The old production source is preserved on `backup/old-production` at `c8fac4f78295d2576af0e92b04329f4e938c7b6f`. Main was fast-forwarded from that revision to the accepted visual-refresh source `7b0b98607a142bd05bdc6529dfbe6e7cdf94fa4d`, whose application content is identical to reviewed preview source `3c785fa6067fb9809aa7d082ffc8ccca5aa38cc0`. [Production workflow 40329759813](https://github.com/tarekazz1/digitful/actions/runs/40329759813) passed build/deployment under Node 22.23.3 with 25 pages and six fonts. No new application code/configuration or dependency was introduced for launch.
+
+Live production checks pass: all 23 sitemap routes return 200 with correct production canonicals, one index/follow robots tag and one H1; production robots permits crawling and references the sitemap. Eight knowledge documents and three optimized images match reviewed bytes. New thank-you and branded missing-page HTTP 404 work; specimen routes remain excluded. Production pages include GTM and no preview submission guard. Browser checks pass desktop/mobile navigation, theme persistence, homepage interactions, native contact/diagnostic URL validation and GTM container/script loading. No page/console errors. GTM load does not prove GA dashboard receipt or conversion tracking. No new form, CAPTCHA, email or live diagnostic was submitted; prior owner integration evidence was reused. No screenshot or broad QA/performance rerun. Normal TLS validation succeeded.
+
+The separate preview remains blocked with its noindex/GTM/form safeguards and disallow-all robots unchanged. Backup/main/source branch identities were rechecked. All pre-existing local work and the lagging checkout were preserved; no reset/clean. Release-specific counted application/tooling change is +0/-0/net0/changed0: previously approved source was promoted, not reimplemented or recounted. This completion updates documentation only and will be synchronized to main/visual-refresh with a docs-only skip-CI commit to avoid rebuilding identical application content.
+
+This supersedes earlier production-unapproved/pending-launch statuses. Details, verification boundaries and rollback instructions: [PRODUCTION-LAUNCH-2026-10-26.md](./PRODUCTION-LAUNCH-2026-10-26.md). Evidence: C:/Users/tarek.azzi/.codex/visualizations/2026/09/17/01a0ae53-e8af-7181-85da-dc4c0ced41e8/production-launch/. The saved backup is source/history, not a second hosted site. Browser closed; no local server started.
+
+
+## Owner confirms final audit correction; next is production launch — 2026-10-26
+
+Owner reports the deployed correction worked after new performance tests. Record this as owner confirmation of resolution; no exact replacement score, test URL or device-mode pair was supplied, so do not invent those details. Existing source/live markup verification remains passed. Contact CAPTCHA/delivery/redirect is owner-verified, and live diagnostic responses/audit results are owner-observed. No additional design or broad QA cycle is proposed.
+
+Next is one production-release operation after explicit owner authorization: recheck the current remote source/production baselines, preserve the existing production revision for rollback, publish the approved refreshed source via the existing production workflow, and perform focused live checks of main routes/contact/diagnostic behavior, canonicals, production indexing/sitemap/robots and GTM loading. Keep the separate preview blocked and preserve unrelated local work. Do not infer external analytics events or conversions from GTM presence alone. No new implementation or repeat external diagnostic is authorized by this status update.
+
+Production launch remains unapproved. This record changes documentation only; no application edit, commit, push, deployment or production action. Earlier wholly-unverified diagnostic/contact and unresolved markup statuses are superseded only to the extent of the stated owner evidence. Physical-device/other-browser and field-performance limitations remain recorded; no new failure is asserted.
+
+
+
 ## Agent-accessibility correction — committed and deployed to preview — 2026-10-26
 
 Owner-authorized publication is complete. Corrected application source `3c785fa6067fb9809aa7d082ffc8ccca5aa38cc0` is deployed by exact preview pin commit `5397ff92d85ebd30a7f8f35e8cc3e053546fbf0e`. [Workflow 40326107721](https://github.com/tarekazz1/digitful-preview/actions/runs/40326107721) build/deploy succeeded under Node 22.23.3: 25 pages, six fonts and unchanged preview preparation. Existing deprecation warnings remain.
