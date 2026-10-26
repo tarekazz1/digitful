@@ -1,5 +1,29 @@
 # Implementation queue and review prompts
 
+## Hidden H1 and image optimization — preview publication authorized — 2026-10-26
+
+Owner explicitly requested “commit, push and preview deployment” for the reviewed hidden H1 and compressed-artwork bundle. Publish only the three source changes, three new binary derivatives and scoped QA/performance records to visual-refresh; preserve all originals and unrelated work. Existing technical verification is complete; publication uses the exact-SHA preview workflow and clean CI. Final shared-pin accounting is +5/-4/net1/changed9 across H1 N5/M10 and image N10/M20, with the pin counted once. Production release is excluded. Live publication checks will cover the hidden heading, optimized resources, image layout and preview safeguards; do not repeat full-site QA or simulated backend tests.
+
+
+## Final image optimization — implemented and verified locally — 2026-10-26
+
+Owner approved the image-only N10/M20 scope. Added same-dimension, identical-alpha WebP derivatives and changed only three references in Social Media collage CSS and Automation. Original artwork files are byte-identical. Binoculars: 1,955,595 to 374,262 bytes (80.9% smaller); Automation mobile: 295,776 to 137,740 (53.4%); desktop: 834,986 to 322,598 (61.4%). Existing hidden H1 work is preserved as a separate task.
+
+Fresh 25-page build and eight focused desktop/mobile light/dark appearance/geometry checks pass; full QA was not repeated. Controlled local HTTP A/B comparison shows Automation mobile median LCP 2.90 to 2.12 s (three runs/version), and Social Media initial transfer 2,132 to 588 KiB. No deployed performance claim; TLS bypass and local font DNS/Sass limits are disclosed. Browser and temporary mirror closed.
+
+**+3/-3/net0/changed6; N10/M20/scope PASS**, including all retained code (none added beyond the three reference replacements). Original images/pre-existing work preserved. Technical verification complete; owner acceptance/publication pending. No commit, push, pin change or deployment. The hidden H1 and approved images can share one later authorized preview publication. See [FINAL-IMAGE-OPTIMIZATION-2026-10-26.md](./FINAL-IMAGE-OPTIMIZATION-2026-10-26.md) for evidence and shared-pin accounting. Existing real CAPTCHA/email/redirect and live diagnostic checks remain outstanding before production release. This supersedes image-scope-unapproved/implementation-pending entries below.
+
+
+## Final QA follow-up — hidden H1 corrected; performance measured — 2026-10-26
+
+Owner authorized the proposed F01 correction and read-only performance work with “can you do it”. Added one visually hidden H1 using the existing logo-alt wording; the approved visible logo/subtitle composition stays unchanged. Local fresh build passes (25 pages), generated output contains one H1, and four live-CSS semantic/geometry checks at 390/1440 light/dark pass. These used the exact built heading inserted into the current preview DOM; the corrected source is local, not deployed. **+1/-0/net1/changed1; N5/M10/scope PASS**, no retained test code. Separate publication/pin remains unapproved. This supersedes F01 implementation-pending entries; local font DNS/Sass and real integration-verification limits remain disclosed.
+
+Read-only performance checks completed: 18 initial mobile/desktop lab measurements over nine representative routes plus two Automation repeats. Social Media's 1.95 MB closing PNG loads eagerly; Automation's 296 KB mobile hero yields 2.81/2.91 s repeat LCP under the defined synthetic mobile profile. An initial Automation run had a 30.32 s document response delay and is retained as an outlier, not attributed to a reproducible application fault. Other initial mobile LCP samples were 1.52–1.84 s; desktop 0.50–1.59 s; maximum observed CLS 0.0044. No Lighthouse/field-CWV/INP pass is claimed. Browser closed, no server, forms or diagnostics invoked; full QA was not repeated.
+
+See [FINAL-PERFORMANCE-2026-10-26.md](./FINAL-PERFORMANCE-2026-10-26.md) for methods, raw evidence and the proposed small two-image optimization (N10/M20, unapproved). No performance code or artwork changed. Commit/push, preview and production deployments were not performed. Existing real CAPTCHA/email/redirect and diagnostic-backend verification remain outstanding before production release. A later scoped publication can combine approved image changes and this H1 correction; do not repeat unaffected QA.
+
+
+
 ## Task 13 — closed: owner KEEP, committed and deployed to preview — 2026-10-26
 
 Owner explicitly authorized commit, push and preview deployment. Technical signoff and owner APPROVED / KEEP are preserved. Accepted application source `4a4ee27ced58dbedb1bcc66e81d24b6ded5ce108` is pinned by preview commit `242e1d5e1f9314741a7308a971a7585722b74f60`. [Workflow 40275467493](https://github.com/tarekazz1/digitful-preview/actions/runs/40275467493) succeeded with Node 22.23.3, a clean 25-page build and unchanged preview preparation. Earlier publication-pending entries below are superseded. A follow-up source commit preserved upstream line endings; the final diff is measured against the original task baseline.
