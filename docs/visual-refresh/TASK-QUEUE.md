@@ -1,5 +1,18 @@
 # Implementation queue and review prompts
 
+## Hidden H1 and optimized images — committed and deployed to preview — 2026-10-26
+
+Owner-authorized combined publication is complete. Reviewed application source `542101273e017e2ec8b9a9646d2848c7dba11190` is deployed by preview pin commit `5728d0796cea4a770cf8241c07a770b9ce6fcdcb`. [Workflow 40295683747](https://github.com/tarekazz1/digitful-preview/actions/runs/40295683747) completed both build and deployment successfully: clean Node 22 workflow, 25 generated pages, six fonts and normal preview preparation. Existing Sass/Actions deprecation warnings remain; the local font-download limitation is resolved for this publication.
+
+Live HTTP checks pass on all three changed pages: exactly one correct preview robots meta, production GTM removed and submission guard retained. Deployed stylesheet uses the optimized Social Media derivative; Automation selects the optimized mobile/desktop sources; Command Center has one accessible, visually hidden H1 while the visible logo/subtitle remain. All three optimized assets and all three original assets are byte-identical to their reviewed local files; all six deployed font files load. Preview robots remains exactly disallow-all. Normal certificate validation succeeded for the publication HTTP/browser checks.
+
+Six focused live Chromium states (390 dark / 1440 light on the three changed pages) pass heading, image and layout checks. Four cold mobile lab samples reuse the earlier 1.6 Mbps / 150 ms / 4x CPU profile: Social Media LCP 1.64 s with about 548 KiB transferred; Automation median LCP 2.01 s across three samples with about 302 KiB transferred. These are focused browser lab observations, not Lighthouse or field Core Web Vitals. Previous full QA was reused; no forms, email, CAPTCHA or live diagnostic was submitted. Browser closed, no server started.
+
+Final source diff is +4/-3, plus one shared preview pin +1/-1: **combined +5/-4/net1/changed9**. Image scope is +4/-4/net0/changed8 under N10/M20 including that pin; separate H1 scope is +1/-0/net1/changed1 under N5/M10. Both budgets and scope PASS. Original artwork and unrelated local work are preserved; the lagging local checkout was not reset. No production deployment or production-branch update was performed.
+
+This supersedes earlier acceptance/publication-pending notes for these reviewed fixes. Evidence: C:/Users/tarek.azzi/.codex/visualizations/2026/09/17/01a0ae53-e8af-7181-85da-dc4c0ced41e8/image-performance/publication/ (live-http.json, browser-checks.json, live-performance.json and publication.json). Remaining pre-launch work is real CAPTCHA/email/redirect and live diagnostic verification under relevant authorization, then the separate production-release decision.
+
+
 ## Hidden H1 and image optimization — preview publication authorized — 2026-10-26
 
 Owner explicitly requested “commit, push and preview deployment” for the reviewed hidden H1 and compressed-artwork bundle. Publish only the three source changes, three new binary derivatives and scoped QA/performance records to visual-refresh; preserve all originals and unrelated work. Existing technical verification is complete; publication uses the exact-SHA preview workflow and clean CI. Final shared-pin accounting is +5/-4/net1/changed9 across H1 N5/M10 and image N10/M20, with the pin counted once. Production release is excluded. Live publication checks will cover the hidden heading, optimized resources, image layout and preview safeguards; do not repeat full-site QA or simulated backend tests.
