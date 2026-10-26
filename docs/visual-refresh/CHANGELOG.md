@@ -1,5 +1,22 @@
 # Digitful Visual Refresh — Change Log
 
+## Agent-accessibility correction — preview publication authorized — 2026-10-26
+
+Owner requested “commit/deploy” for the reviewed, focused correction. Publish only the three corrected source files and scoped records to visual-refresh, then update the exact preview pin using the existing workflow. No production release. Prior focused build/semantics/keyboard/styling evidence is reused; publication checks are limited to deployed corrected list roles, homepage controls and preview safeguards. No screenshots, broad retest or external audit. Task-wide totals including one pin replacement are +48/-48/net0/changed96; N5/M110 PASS. Preserve existing indexing restrictions, artwork and all unrelated work.
+
+
+## Agent-accessibility markup correction — implemented and verified locally — 2026-10-26
+
+Owner explicitly approved one focused correction, with no major retests/rendering. The three authorized pages now use div role=listitem wrappers instead of invalid article role=listitem overrides. All list parents, classes, copy, artwork, control attributes and interaction code are preserved. Only SEO management-loop article type selectors changed to equivalent div selectors so its padding, borders, geometry and arrows remain identical. Preview indexing restrictions are unchanged.
+
+One fresh build passes (25 pages). Focused built-HTML checks validate all 24 rendered list items and their list parents: Home 6, SEO 6, Social Media 12. Narrow local browser checks confirm the three homepage keyboard toggles, accessible list roles, and unchanged SEO loop computed geometry/styles/arrows at 390/1440. No screenshot, render gallery, theme matrix, full QA/performance repeat, external audit, form or diagnostic request. An initial page-wide list count included navigation/footer items; the assertion was scoped to the affected content lists and then passed, without an application change. Task-owned browser/server are closed. Existing local font DNS/Sass warnings remain; no new agentic score is claimed.
+
+Actual task-wide diff: **+47/-47/net0/changed94; N5/M110/scope PASS**. No retained executable helper was added. A separately authorized later preview pin would make +48/-48/net0/changed96. All pre-existing work, including the earlier hidden H1 and optimized images, is preserved. Technical verification is complete; commit, push, preview-pin update, deployment and production release have not been authorized or performed for this correction. This supersedes proposal/implementation-pending entries below; no extra design or content decision is needed.
+
+Evidence: C:/Users/tarek.azzi/.codex/visualizations/2026/09/17/01a0ae53-e8af-7181-85da-dc4c0ced41e8/aria-list-correction/ (baseline.json, accounting.json, build.log/build-dist, semantics.json, focused-checks.json and preservation.json). Reuse unaffected QA for any later publication; only verify the changed semantics and controls after deployment.
+
+
+
 ## Hidden H1 and optimized images — committed and deployed to preview — 2026-10-26
 
 Owner-authorized combined publication is complete. Reviewed application source `542101273e017e2ec8b9a9646d2848c7dba11190` is deployed by preview pin commit `5728d0796cea4a770cf8241c07a770b9ce6fcdcb`. [Workflow 40295683747](https://github.com/tarekazz1/digitful-preview/actions/runs/40295683747) completed both build and deployment successfully: clean Node 22 workflow, 25 generated pages, six fonts and normal preview preparation. Existing Sass/Actions deprecation warnings remain; the local font-download limitation is resolved for this publication.

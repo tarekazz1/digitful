@@ -1,5 +1,47 @@
 # Digitful Visual Refresh — Handoff
 
+## Agent-accessibility correction — preview publication authorized — 2026-10-26
+
+Owner requested “commit/deploy” for the reviewed, focused correction. Publish only the three corrected source files and scoped records to visual-refresh, then update the exact preview pin using the existing workflow. No production release. Prior focused build/semantics/keyboard/styling evidence is reused; publication checks are limited to deployed corrected list roles, homepage controls and preview safeguards. No screenshots, broad retest or external audit. Task-wide totals including one pin replacement are +48/-48/net0/changed96; N5/M110 PASS. Preserve existing indexing restrictions, artwork and all unrelated work.
+
+
+## Agent-accessibility markup correction — implemented and verified locally — 2026-10-26
+
+Owner explicitly approved one focused correction, with no major retests/rendering. The three authorized pages now use div role=listitem wrappers instead of invalid article role=listitem overrides. All list parents, classes, copy, artwork, control attributes and interaction code are preserved. Only SEO management-loop article type selectors changed to equivalent div selectors so its padding, borders, geometry and arrows remain identical. Preview indexing restrictions are unchanged.
+
+One fresh build passes (25 pages). Focused built-HTML checks validate all 24 rendered list items and their list parents: Home 6, SEO 6, Social Media 12. Narrow local browser checks confirm the three homepage keyboard toggles, accessible list roles, and unchanged SEO loop computed geometry/styles/arrows at 390/1440. No screenshot, render gallery, theme matrix, full QA/performance repeat, external audit, form or diagnostic request. An initial page-wide list count included navigation/footer items; the assertion was scoped to the affected content lists and then passed, without an application change. Task-owned browser/server are closed. Existing local font DNS/Sass warnings remain; no new agentic score is claimed.
+
+Actual task-wide diff: **+47/-47/net0/changed94; N5/M110/scope PASS**. No retained executable helper was added. A separately authorized later preview pin would make +48/-48/net0/changed96. All pre-existing work, including the earlier hidden H1 and optimized images, is preserved. Technical verification is complete; commit, push, preview-pin update, deployment and production release have not been authorized or performed for this correction. This supersedes proposal/implementation-pending entries below; no extra design or content decision is needed.
+
+Evidence: C:/Users/tarek.azzi/.codex/visualizations/2026/09/17/01a0ae53-e8af-7181-85da-dc4c0ced41e8/aria-list-correction/ (baseline.json, accounting.json, build.log/build-dist, semantics.json, focused-checks.json and preservation.json). Reuse unaffected QA for any later publication; only verify the changed semantics and controls after deployment.
+
+
+## Agent-accessibility finding — proposal pending approval — 2026-10-26
+
+Owner identifies the SEO score reduction as the preview's intended non-indexing behavior and explicitly requests leaving it unchanged. Preserve all preview indexing safeguards. Owner supplied a real audit screenshot reporting “ARIA role should be appropriate for the element” on `article.home-issue`. Source confirms an invalid article/listitem override; this is separate from preview noindex and should be corrected before launch. [W3C ARIA in HTML, article role allowances](https://www.w3.org/TR/html-aria/#el-article).
+
+The same pattern occurs in homepage (six wrappers), SEO (four source templates, six rendered items) and Social Media (twelve wrappers). Proposed application scope: only `src/pages/index.astro`, `src/pages/seo.astro` and `src/pages/social-media.astro`. Replace these article wrappers with div wrappers while retaining role=listitem, list parents, classes and all content. Update only SEO management-loop type selectors from article to div so its existing presentation remains identical; homepage/Social styles and interaction code use class/data selectors. Preserve all copy, layout, artwork, controls and behavior.
+
+Inspection-only candidate accounting: 47 added / 47 removed / net0 / changed94; reserved later preview pin gives +48/-48/net0/changed96. Proposed task-wide **N5/M110**, including any retained tooling and later pin, is unapproved. No implementation edits yet. After approval, use one build, focused list/ARIA semantics and unchanged layout/controls checks on these three pages in desktop/mobile light/dark; reuse unaffected QA. No new dependency, retained test script, broad redesign, full-site matrix or automatic external re-audit. Commit/push/deployment remain separately unapproved.
+
+The returned real scores and supplied audit demonstrate that at least one live diagnostic request returned results; both strategy modes are not explicitly confirmed. Do not treat this markup finding as a backend transport failure or claim a corrected agentic score before verification. No new live audit request, application edit or publication was performed while inspecting this finding.
+
+
+## Contact integration — owner-verified PASS — 2026-10-26
+
+Owner explicitly confirmed receipt of the latest CAPTCHA-protected test submission: “yes, got it”. Combined with the observed CAPTCHA and expected production thank-you redirect, normal end-to-end contact delivery is now verified by the owner. This supersedes latest-message-delivery-pending and contact-integration-unverified entries below. Public preview guard, endpoint, honeypot and configured redirect remain unchanged; no claim is made that CAPTCHA eliminates all spam.
+
+Remaining integration check before the production-release decision: the real site-check/diagnostic backend. Earlier simulated response/UI checks do not establish live backend operation. This update records human verification only; no application change, additional submission, commit, push, preview deployment or production action.
+
+
+## Contact integration — owner-observed CAPTCHA and redirect — 2026-10-26
+
+Owner completed FormSubmit activation and reported receiving an email. On a subsequent normal resubmission, owner reported CAPTCHA appeared and supplied a screenshot of the production thank-you page. Source independently confirms `_next` is `https://digitful.ca/thank-you/`; the production redirect and old production design are therefore expected, not a preview routing defect. Preserve this destination: after production replacement it will serve the refreshed thank-you page. Public preview submission protection remains unchanged; no code change is needed.
+
+CAPTCHA appearance and the post-submission destination are now owner-observed evidence, superseding their earlier wholly-unverified status. Receipt of the actual message from this latest CAPTCHA-protected resubmission still needs explicit owner confirmation before closing the complete contact integration check; do not confuse the earlier activation/email report with that specific delivery. Live diagnostic backend verification remains outstanding. No form was submitted by the managing agent, and no application edit, commit, push or deployment was performed in recording this result.
+
+
+
 ## Hidden H1 and optimized images — committed and deployed to preview — 2026-10-26
 
 Owner-authorized combined publication is complete. Reviewed application source `542101273e017e2ec8b9a9646d2848c7dba11190` is deployed by preview pin commit `5728d0796cea4a770cf8241c07a770b9ce6fcdcb`. [Workflow 40295683747](https://github.com/tarekazz1/digitful-preview/actions/runs/40295683747) completed both build and deployment successfully: clean Node 22 workflow, 25 generated pages, six fonts and normal preview preparation. Existing Sass/Actions deprecation warnings remain; the local font-download limitation is resolved for this publication.

@@ -68,12 +68,12 @@ const problems = [
         </header>
         <div class="seo-journey__track" role="list">
           {journey.map((step, index) => (
-            <article class="seo-journey__step" role="listitem">
+            <div class="seo-journey__step" role="listitem">
               <span class="seo-journey__number">{String(index + 1).padStart(2, '0')}</span>
               <h3>{step.name}</h3>
               <p class="seo-journey__lead">{step.lead}</p>
               <p>{step.detail}</p>
-            </article>
+            </div>
           ))}
         </div>
       </div>
@@ -110,9 +110,9 @@ const problems = [
           <p>Competitors publish, Google changes how it ranks pages, and your services change. We track where you show up, fix what slips, and report on the searches that bring in business.</p>
         </header>
         <div class="seo-management__loop" role="list">
-          <article role="listitem"><h3>Monitor</h3><p>Know what’s happening.</p></article>
-          <article role="listitem"><h3>Improve</h3><p>Fix what holds you back.</p></article>
-          <article role="listitem"><h3>Measure</h3><p>See what’s making a difference.</p></article>
+          <div role="listitem"><h3>Monitor</h3><p>Know what’s happening.</p></div>
+          <div role="listitem"><h3>Improve</h3><p>Fix what holds you back.</p></div>
+          <div role="listitem"><h3>Measure</h3><p>See what’s making a difference.</p></div>
         </div>
       </div>
     </section>
@@ -244,9 +244,9 @@ const problems = [
   .seo-management__head h2 { max-width: 9ch; }
   .seo-management__head > p { max-width: 38rem; font-size: 1.1rem; }
   .seo-management__loop { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 3rem; border-block: 3px solid var(--brand-ink); }
-  .seo-management__loop article { position: relative; min-height: 7.5rem; padding: 1.5rem 2.75rem 1.35rem 0; }
-  .seo-management__loop article + article { padding-left: 2.75rem; border-left: 1px solid rgb(25 26 27 / 0.32); }
-  .seo-management__loop article:not(:last-child)::after { content: "→"; position: absolute; top: 2.15rem; right: -1rem; z-index: 1; display: grid; width: 2rem; height: 2rem; place-items: center; background: var(--site-mustard); font-size: 1.6rem; font-weight: 800; }
+  .seo-management__loop div { position: relative; min-height: 7.5rem; padding: 1.5rem 2.75rem 1.35rem 0; }
+  .seo-management__loop div + div { padding-left: 2.75rem; border-left: 1px solid rgb(25 26 27 / 0.32); }
+  .seo-management__loop div:not(:last-child)::after { content: "→"; position: absolute; top: 2.15rem; right: -1rem; z-index: 1; display: grid; width: 2rem; height: 2rem; place-items: center; background: var(--site-mustard); font-size: 1.6rem; font-weight: 800; }
   .seo-management__loop h3 { font-size: 1.8rem; line-height: 1; }
   .seo-management__loop p { margin-top: 0.55rem; font-weight: 600; }
 
@@ -299,9 +299,9 @@ const problems = [
     .seo-management__head { gap: 1rem; }
     .seo-management__head > p { font-size: 1rem; }
     .seo-management__loop { grid-template-columns: 1fr; margin-top: 2rem; }
-    .seo-management__loop article,
-    .seo-management__loop article + article { min-height: 0; padding: 1.1rem 2.25rem 1.1rem 0; border-left: 0; border-bottom: 1px solid rgb(25 26 27 / 0.34); }
-    .seo-management__loop article:not(:last-child)::after { content: "↓"; top: 1.4rem; right: 0; }
+    .seo-management__loop div,
+    .seo-management__loop div + div { min-height: 0; padding: 1.1rem 2.25rem 1.1rem 0; border-left: 0; border-bottom: 1px solid rgb(25 26 27 / 0.34); }
+    .seo-management__loop div:not(:last-child)::after { content: "↓"; top: 1.4rem; right: 0; }
     .seo-selector__panel { padding: 0.85rem; box-shadow: 6px 6px 0 var(--site-teal); }
     .seo-selector__choice { min-height: 3.4rem; padding-inline: 0.5rem; }
     .seo-selector__response { padding: 1.1rem; }
