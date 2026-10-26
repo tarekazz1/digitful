@@ -1,5 +1,30 @@
 # Implementation queue and review prompts
 
+## Task 13 — preview publication authorized — 2026-10-26
+
+Owner explicitly requested 'Commit, push, deploy' for the accepted Task 13 implementation. Existing technical signoff and owner APPROVED / KEEP are preserved. Scoped source commit/push and the exact-SHA preview pin/deployment are authorized and in progress; production release remains excluded. Publish only Task 13 files and status additions over the current remote branch, preserving the lagging checkout and all pre-existing work. Use a clean CI build, then verify deployed sitemap, crawler exclusions and preview safeguards. Original-baseline +105/-0 becomes +106/-1/net105/changed107 including the authorized pin; N120/M180 remains the ceiling.
+
+
+## Task 13 — owner APPROVED / KEEP — 2026-10-26
+
+Owner explicitly replied 'Keep' for the current Task 13 sitemap/robots implementation. Existing managing-agent technical signoff is preserved. This supersedes owner-KEEP-pending entries below; acceptance applies to the reviewed local implementation.
+
+Original-baseline accounting remains **+105/-0/net105/changed105; N120/M180/scope PASS**. No application or verifier changes and no checks repeated. Commit, push, preview-pin update, preview deployment and production release remain separately unapproved. Publication must use a clean build of retained source, never the fixture-bearing verification output.
+
+
+## Task 13 — managing-agent technical signoff — 2026-10-26
+
+Technical signoff granted for the current local implementation. Independent review inspected the integration, production robots, retained verifier, saved build/check logs and generated artifacts. XML parsing and an independent HTML metadata/canonical comparison confirm exactly 23 eligible URLs, including all 10 current published articles, with error/thank-you/noindex fixtures excluded and the draft fixture absent. Production robots matches the approved content. Submitted successful fresh-build and preview safeguard/idempotence evidence was inspected and reused; no full build, browser matrix, form or diagnostic was repeated.
+
+Original-baseline hashes independently confirm all 703 original files remain present, with only the config and three authorized records changed. Counted diff is **+105/-0/net105/changed105; N120/M180/scope PASS**, including 66 retained verifier lines. The reserved future preview pin would make +106/-1/net105/changed107; it has not changed. No blocking defect found. Evidence: C:/Users/tarek.azzi/.codex/visualizations/2026/09/17/01a0ae53-e8af-7181-85da-dc4c0ced41e8/task-13-independent-review/review.json.
+
+This supersedes technical-review-pending entries for this snapshot. Owner KEEP and commit/push/preview publication remain pending; production is unchanged. Node 22 CI, normal font generation and deployed crawler-file/safeguard checks remain publication-stage verification. Use a clean CI build of retained source, never the saved fixture-bearing verification output. Only these review records were updated locally; no application edit, pin change, commit, push or deployment during this review.
+
+
+## Task 13 — Ready for managing-agent review — 2026-10-26
+
+Owner approved the exact three-file scope and N120/M180. Implemented the completed-build XML sitemap hook, production robots and focused PowerShell verifier. One fresh isolated build passes with 23 sitemap URLs/all 10 published articles; parsed XML/canonical completeness, required exclusions, draft/noindex fixtures and unchanged preview safeguard/idempotence checks pass. **+105/-0/net105/changed105; N120/M180/scope PASS**; later preview pin remains unused/unapproved. Pre-existing work and Task 12 bundle are preserved. See [TASK-13-IMPLEMENTATION.md](./TASK-13-IMPLEMENTATION.md). Local Node 24/CI Node 22 difference and known font DNS/Sass warnings are disclosed. Next: managing-agent review; no self-awarded signoff/KEEP, commit, push, deployment or production release. Earlier Task 13 planning entries are superseded by this checkpoint.
+
 ## Task 12 — closed: owner KEEP, committed and deployed to preview — 2026-10-26
 
 Owner explicitly authorized commit, push and preview deployment. Accepted stable bundle and scoped records are committed on visual-refresh at `7ce91634096bede957c3b3c00420e2b632e44e83`; preview pin commit `5389d2455ea09febe44f21ecafbfa08e07ac00ba` deploys that exact source. [Workflow 40270282129](https://github.com/tarekazz1/digitful-preview/actions/runs/40270282129) completed successfully. Technical signoff and owner APPROVED / KEEP are complete; earlier draft/publication-pending notes are historical and superseded.
