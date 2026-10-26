@@ -22,3 +22,15 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# internal project records live in tarekazz1/digitful-internal
+/docs/visual-refresh/
+
+# local credentials
+.env.*
+!.env.example
+!.env.*.example
+credentials*.json
+*service-account*.json
+*.pem
+*.key
