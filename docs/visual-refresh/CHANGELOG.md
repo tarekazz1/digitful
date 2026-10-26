@@ -1,5 +1,16 @@
 # Digitful Visual Refresh — Change Log
 
+## Agent-accessibility correction — committed and deployed to preview — 2026-10-26
+
+Owner-authorized publication is complete. Corrected application source `3c785fa6067fb9809aa7d082ffc8ccca5aa38cc0` is deployed by exact preview pin commit `5397ff92d85ebd30a7f8f35e8cc3e053546fbf0e`. [Workflow 40326107721](https://github.com/tarekazz1/digitful-preview/actions/runs/40326107721) build/deploy succeeded under Node 22.23.3: 25 pages, six fonts and unchanged preview preparation. Existing deprecation warnings remain.
+
+Focused live HTTP parsing confirms all 24 list items and their list parents are valid on Home (6), SEO (6) and Social Media (12). Three narrow live Chromium DOM checks pass; the three homepage keyboard toggles and SEO narrow-screen arrow styling remain functional. Preview noindex/nofollow/noarchive, GTM removal, form guard and disallow-all robots are preserved. Normal TLS validation succeeded. No screenshots, render gallery, theme/full-QA matrix, performance rerun, external agentic audit, form or diagnostic request. Existing local styling/geometry evidence was reused; browser closed. No corrected external agentic score is claimed.
+
+Final task-wide accounting includes one preview pin: **+48/-48/net0/changed96; N5/M110/scope PASS**. GitHub verifies the three-page source diff +47/-47 and pin +1/-1; records are additive and excluded. All prior artwork, copy, interactions and pre-existing work remain preserved. Local lagging checkout was not reset; no production release or production-branch update was performed. This supersedes earlier implementation/publication-pending statuses for this correction.
+
+Evidence: C:/Users/tarek.azzi/.codex/visualizations/2026/09/17/01a0ae53-e8af-7181-85da-dc4c0ced41e8/aria-list-correction/publication/ (live-http.json, live-browser.json and receipt.json). Owner-verified contact delivery/CAPTCHA/redirect remains passed. At least one real diagnostic response is owner-observed; both device modes have not been explicitly confirmed. Production publication remains a separate owner decision; retain preview indexing restrictions.
+
+
 ## Agent-accessibility correction — preview publication authorized — 2026-10-26
 
 Owner requested “commit/deploy” for the reviewed, focused correction. Publish only the three corrected source files and scoped records to visual-refresh, then update the exact preview pin using the existing workflow. No production release. Prior focused build/semantics/keyboard/styling evidence is reused; publication checks are limited to deployed corrected list roles, homepage controls and preview safeguards. No screenshots, broad retest or external audit. Task-wide totals including one pin replacement are +48/-48/net0/changed96; N5/M110 PASS. Preserve existing indexing restrictions, artwork and all unrelated work.
