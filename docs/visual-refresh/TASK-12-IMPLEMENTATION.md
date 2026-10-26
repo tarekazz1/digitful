@@ -1,5 +1,16 @@
 # Task 12 — OKF implementation
 
+## Task 12 — closed: owner KEEP, committed and deployed to preview — 2026-10-26
+
+Owner explicitly authorized commit, push and preview deployment. Accepted stable bundle and scoped records are committed on visual-refresh at `7ce91634096bede957c3b3c00420e2b632e44e83`; preview pin commit `5389d2455ea09febe44f21ecafbfa08e07ac00ba` deploys that exact source. [Workflow 40270282129](https://github.com/tarekazz1/digitful-preview/actions/runs/40270282129) completed successfully. Technical signoff and owner APPROVED / KEEP are complete; earlier draft/publication-pending notes are historical and superseded.
+
+Focused live HTTP GET review passes: homepage discovery hint leads to the index and all seven concepts; all eight raw Markdown files are HTTP 200 text/markdown, strict UTF-8 and byte-identical to the accepted source. Homepage-only hint was sampled on homepage/SEO/Contact. Existing noindex,nofollow,noarchive, GTM removal, submission guard and disallow-all robots remain effective. CI copied six fonts; all six deployed WOFF2 resources return 200 with valid signatures, resolving the local font-download verification limitation. No visual matrix, forms or diagnostics were repeated. TLS certificate validation was bypassed for the environment chain, so TLS authenticity was not verified. Existing Sass/Actions deprecation warnings remain.
+
+Final original-baseline totals including the actual preview pin: **+133/-1/net132/changed134; N180/M220/scope PASS**. GitHub comparison confirms only the Task 12 allowlist, three layout additions and one pin replacement. Pre-existing work and lagging local checkout were preserved. Production main remains `c8fac4f78295d2576af0e92b04329f4e938c7b6f`; no production release. Evidence: C:/Users/tarek.azzi/.codex/visualizations/2026/09/17/01a0ae53-e8af-7181-85da-dc4c0ced41e8/task-12-independent-review/publication-live.json.
+
+Next: [Task 13 prompt](./TASK-13-SITEMAP-ROBOTS-PROMPT.md), XML sitemap and production robots.txt with preview still blocked. Sol medium; inspection/short proposal first, suggested N120/M180 unapproved. No Task 13 application change is authorized or performed. Final site-wide QA/performance and production-release approval follow acceptance of the remaining crawler-file work.
+
+
 ## Task 12 — scoped commit/push and preview deployment authorized — 2026-10-26
 
 Owner explicitly requested “Commit, push, deploy. Then 13 prompt”. Publish only the accepted Task 12 bundle, discovery hint, validator and scoped records to visual-refresh, then update the preview repository's exact source pin and use its existing deployment. Preserve unrelated work and production main. Task 12 owner KEEP and technical signoff remain in force; no further content revision is authorized. Final totals with pin are +133/-1/net132/changed134, N180/M220 PASS. Verify deployed discovery/retrieval and preview safeguards, including CI font generation; reuse previous evidence. Task 13 is prompt preparation only; its implementation scope/budget require approval.
