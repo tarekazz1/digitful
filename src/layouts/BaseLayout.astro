@@ -116,6 +116,9 @@ const schemas = [organizationSchema, websiteSchema, ...pageSchemas].filter(Boole
       })();
     </script>
     <link rel="canonical" href={canonicalUrl} />
+    {canonicalUrl === 'https://digitful.ca/' && (
+      <link rel="describedby" type="text/markdown" href="/knowledge/index.md" title="Digitful knowledge" />
+    )}
     <link rel="manifest" href="/site.webmanifest" />
     <title>{title}</title>
     <meta property="og:type" content={ogType} />

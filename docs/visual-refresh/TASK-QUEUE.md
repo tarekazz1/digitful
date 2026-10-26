@@ -1,5 +1,48 @@
 # Implementation queue and review prompts
 
+## Task 12 — scoped commit/push and preview deployment authorized — 2026-10-26
+
+Owner explicitly requested “Commit, push, deploy. Then 13 prompt”. Publish only the accepted Task 12 bundle, discovery hint, validator and scoped records to visual-refresh, then update the preview repository's exact source pin and use its existing deployment. Preserve unrelated work and production main. Task 12 owner KEEP and technical signoff remain in force; no further content revision is authorized. Final totals with pin are +133/-1/net132/changed134, N180/M220 PASS. Verify deployed discovery/retrieval and preview safeguards, including CI font generation; reuse previous evidence. Task 13 is prompt preparation only; its implementation scope/budget require approval.
+
+
+## Task 12 — owner APPROVED / KEEP; stable bundle — 2026-10-26
+
+Owner explicitly replied “Keep” after the managing-agent technical review. Task 12's reviewed bundle is accepted; existing technical signoff is preserved. Seven concepts now use status: stable, the index draft notice is removed, and the validator requires stable status. These are acceptance-state changes only; summaries, provenance, resource URLs and discovery markup remain unchanged.
+
+Focused validator passes for eight files and seven stable concepts. Original-baseline accounting remains **+132/-0/net132/changed132; N180/M220/scope PASS**; the unused later preview-pin allowance is separately +1/-1. All 691 original files remain present with no unexpected changes against the task baseline. No build or visual checks were repeated. Existing local-build font/DNS limitation remains a publication-stage check. Evidence: C:/Users/tarek.azzi/.codex/visualizations/2026/09/17/01a0ae53-e8af-7181-85da-dc4c0ced41e8/task-12-independent-review/owner-keep.json.
+
+This supersedes earlier draft, owner-KEEP-pending and technical-review-pending statuses. Commit/push, preview pin and deployment remain unapproved; production is unchanged. Next planned work remains Task 13: XML sitemap and production robots.txt, keeping preview blocked. Task 13 scope/N/M approval is still required before implementation.
+
+
+## Task 12 — managing-agent draft technical review passed — 2026-10-26
+
+Independent review inspected all eight bundle files, their source mappings, validator and original-baseline layout change; reran `node scripts/check-okf.mjs` successfully. Original-baseline hashes confirm only the four authorized records and BaseLayout changed among the 691 pre-existing files, with no missing original files. BaseLayout is exactly three added lines with surrounding bytes preserved. Independently counted 69 YAML/delimiter lines + 60 validator lines + 3 markup lines = **+132/-0/net132/changed132; N180/M220/scope PASS**. No blocking defect found in the drafted bundle. Technical signoff is for the local draft; owner bundle KEEP and publication remain pending. This supersedes draft technical-signoff-pending entries below, not the separate owner/publication gates.
+
+Submitted fresh-build and local HTTP discovery evidence was inspected and reused; no build, visual matrix or screenshots were repeated. The local build's font-metadata DNS failure and zero copied fonts remain a verification limitation: authorized preview publication must confirm normal font generation in CI, raw Markdown retrieval and unchanged preview safeguards. No external AI discovery or live-preview verification is claimed. On owner KEEP, replace the seven draft statuses with stable, remove the index draft notice and update the validator's draft-only expectation within the original Task 12 scope/budget; rerun the focused validator and recalculate totals before publication. No application change, commit, push, pin change, deployment or production release in this review.
+
+## Next — Task 13: XML sitemap and production robots.txt — 2026-10-26
+
+Recorded the owner's reminder to include both missing crawler files before launch. Inspect and propose a small implementation scope and N/M budget first; Task 13 implementation is not yet approved. Add a sitemap of canonical, indexable public HTML routes, including published blog articles, and production robots.txt referencing that sitemap. Exclude error/specimen routes, drafts, raw knowledge Markdown/assets and other non-indexable pages. Preserve the preview repository's disallow-all robots.txt and existing noindex/GTM/form safeguards; adding production source files must not open preview crawling. No new dependency or production publication is authorized by this planning entry. Reuse existing visual evidence; validate generated URLs, exclusions and preview protection with focused checks. After Tasks 12/13 acceptance and preview publication, proceed to final site-wide QA/performance and a separate production-release decision.
+
+
+## Task 12 — Ready for managing-agent review — 2026-10-26
+
+Implemented the approved eight-file draft OKF bundle, homepage-only discovery hint and existing js-yaml validator on visual-refresh. Review the complete bundle and validation/accounting in [TASK-12-IMPLEMENTATION.md](./TASK-12-IMPLEMENTATION.md), starting at [knowledge index](../../public/knowledge/index.md). All concepts remain draft; managing-agent technical signoff and owner KEEP remain pending. This implementation entry supersedes earlier proposal-only/not-started statuses below.
+
+Original-baseline actual totals: **+132/-0/net132/changed132; N180/M220/scope PASS**, including all YAML/delimiters, 60 retained validator lines and three discovery lines. Unused preview-pin allowance is separately reserved at +1/-1 (net0/changed2); no pin change. YAML/content/link checks, one completed fresh 25-page build and deterministic local HTTP homepage-to-index-to-seven-concepts walk pass. Eight intact UTF-8 Markdown responses serve as text/markdown; hint is homepage-only across all 25 pages; canonical paths, Contact/privacy links and snapshot anchor pass locally. Build font-metadata DNS and Bootstrap/Sass warnings are disclosed; no deployed-preview or external AI uptake claim.
+
+Pre-existing source/documentation contents and lagging local HEAD are preserved against the original 691-file snapshot. Package manifests/lockfile are unchanged; clean-install verification incidentally refreshed ignored node_modules after a temporary-directory switch failed, as disclosed in the implementation record. No visual matrix, screenshots, new dependencies or agent infrastructure. No commit, push, preview-pin change, deployment or production release.
+
+
+## Task 12 — implementation scope and N180/M220 approved — 2026-10-25
+
+Owner replied “Approved” to TASK-12-OKF-PROPOSAL.md: eight static bundle files, homepage-only discovery hint and small existing-parser validator; task-wide N180/M220 including retained tooling/configuration and any later authorized preview-pin change. Implementation may proceed under that scope. Sol medium is the recommended worker. Preserve the existing working tree, approved site content and preview safeguards. Review the actual drafted bundle before bundle KEEP; do not invent human verification metadata. Commit/push, preview-pin update, deployment and production release remain separately unapproved. Implementation handoff is prepared; no worker has been dispatched by the managing agent and no application/bundle files have been written in this approval-record step.
+
+## Task 12 — OKF inspection/proposal ready — 2026-10-25
+
+Owner requested proceeding to the D022 inspection/proposal after Task 11. Read the canonical OKF v0.2 specification at upstream ad30107c31c06aec8a7d5636e0d1058118604e6f and the approved current source/preview content. Recommend eight static files under public/knowledge (index plus Digitful, four services and two existing tools), one homepage-only nonvisual discovery hint, and a small validator reusing existing js-yaml. Proposed N180/M220; implementation and publication remain unapproved. See TASK-12-OKF-PROPOSAL.md for source mapping, provenance, discovery limits, exact scope and checks. No public/application edits, packages, build, commit/push or deployment in this stage. Task 11 remains closed and deployed; next site-wide QA/performance and production approval stay separate.
+
+
 ## Task 11 — owner KEEP, committed and deployed to preview — 2026-10-25
 
 Task 11 is closed with owner APPROVED / KEEP and consolidated managing-agent technical signoff, including the approved 404/circles and mustard service closing sections. Application source `8ab616ea510f730af41a354d945c9ca4f9f97ea0` is deployed by exact-SHA preview pin `0d717f9115f063e02c7b6851232bd5aeca93d1fe`; [workflow 40223384147](https://github.com/tarekazz1/digitful-preview/actions/runs/40223384147) succeeded, including the fresh Node 22 build, safeguards and deployment. Earlier owner/publication-pending notes are superseded.
