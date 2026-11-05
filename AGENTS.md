@@ -9,7 +9,7 @@ Before planning or implementing project work, use authenticated GitHub access to
 - DECISIONS.md
 - DELTA-LOC-INVARIANT.md
 
-Follow the recorded scope, approval gates and original-baseline N/M change-budget rule. If those private records are unavailable, report the missing context before implementing governed work. Do not invent decisions or treat historical proposals as current approval.
+Follow the recorded scope and approval gates and, from Task 14 onward, the working rules in [section 2 of the performance cleanup plan](https://github.com/tarekazz1/digitful-internal/blob/main/docs/visual-refresh/PERFORMANCE-CLEANUP-PLAN-2026-11-05.md#2-working-rules-for-this-round-owner-decision-2026-11-05). If those private records are unavailable, report the missing context before implementing governed work. Do not invent decisions or treat historical proposals as current approval.
 
 Preserve pre-existing working-tree changes. Inspect current remote branch tips before committing or publishing; existing local checkouts may lag the deployed source. Local docs/visual-refresh/ copies are ignored working material and can be stale; verify them against the private repository before relying on them.
 
