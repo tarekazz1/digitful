@@ -7,7 +7,7 @@
 @use "./_custom-variables" as custom;
 
 // 3. Load Bootstrap with custom variables
-@use "bootstrap/scss/bootstrap" with (
+@use "./_bootstrap-subset" with (
   // Theme colors
   $theme-colors: custom.$theme-colors,
 
