@@ -1304,7 +1304,7 @@ blockquote {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .site-nav .navbar-collapse {
+  .site-nav .navbar-nav {
     margin-top: 1rem;
     padding: 1rem;
     border: 1px solid var(--site-border);
@@ -2040,7 +2040,7 @@ html[data-theme="light"] .footer-meta {
 }
 
 @media (max-width: 991.98px) {
-  html[data-theme="light"] .site-nav .navbar-collapse {
+  html[data-theme="light"] .site-nav .navbar-nav {
     background: var(--site-surface);
     border-color: var(--site-border);
   }

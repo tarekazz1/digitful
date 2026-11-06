@@ -520,8 +520,8 @@ html[data-theme="light"] .dropdown-menu-dark {
 }
 
 @media (max-width: 991.98px) {
-  .site-nav .navbar-collapse,
-  html[data-theme="light"] .site-nav .navbar-collapse {
+  .site-nav .navbar-nav,
+  html[data-theme="light"] .site-nav .navbar-nav {
     margin-top: 0.75rem;
     padding: 1rem;
     color: var(--site-text);
