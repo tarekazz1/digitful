@@ -127,11 +127,16 @@ const schemas = [organizationSchema, websiteSchema, ...pageSchemas].filter(Boole
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content="https://digitful.ca/assets/brand/digitful-share.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Digitful. Marketing works better when the parts talk to each other." />
     {publishedTime && <meta property="article:published_time" content={publishedTime} />}
     {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
-    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="https://digitful.ca/assets/brand/digitful-share.png" />
     <Font
       cssVariable="--font-inter"
       preload={[
